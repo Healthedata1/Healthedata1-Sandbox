@@ -8,5 +8,5 @@
 /bin/
 /target/
 #/docs/
-publish.sh
+#publish.sh
 SUSHI-GENERATED-FILES.md
