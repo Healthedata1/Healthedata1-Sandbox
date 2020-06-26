@@ -1,0 +1,30 @@
+{
+  "name": "healthedatainc.sushi-sandbox",
+  "version": "0.1.0",
+  "canonical": "http://www.fhir.org/guides/sushi-sandbox",
+  "url": "http://hl7.org/fhir/us/sushi-sandbox",
+  "title": "Sushi Sandbox",
+  "description": "This is a sushi sandbox for creation of resources and examples.",
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "keywords": [
+    "Sandbox",
+    "Test Bed",
+    "Heath eData Inc"
+
+  ],
+  "language": "en",
+  "author": "Health eData Inc",
+  "maintainers": [
+    {
+      "name": "Health eData Inc",
+      "url": "mailto:ehaas@healthedatainc.com"
+    },
+    {
+      "name": "Eric Haas",
+      "email": "mailto:ehaas@healthedatainc.com"
+    }
+  ],
+  "license": "CC0-1.0"
+}

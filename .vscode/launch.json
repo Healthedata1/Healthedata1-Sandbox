@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "name": "Build and View",
+      "preLaunchTask": "${defaultBuildTask}",
+      "type": "edge",
+      "request": "launch",
+      "url": "http://localhost:8181/index.html"
+    }
+  ]
+}
