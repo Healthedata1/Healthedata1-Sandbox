@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="b1a7caa9-7f6b-4318-84b8-c460f3179b78"/>
+  <meta>
+    <lastUpdated value="2020-06-25T17:32:25.036-07:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type"/>
+    <resource>
+      <ValueSet>
+        <id value="update-type"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-update-type.html">DEQM Update Type Code System v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>All codes from system 
+              <a href="CodeSystem-update-type.html">
+                <code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-update-type-incremental"> </a>
+                  <a href="CodeSystem-update-type.html#update-type-incremental">incremental</a>
+                </td>
+                <td>Incremental</td>
+                <td>In contrast to the Snapshot Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains only the new and updated DEQM and QI Core Profiles since the last transaction. If the Consumer supports incremental updates, the contents of the updated payload updates the previous payload data.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-update-type-snapshot"> </a>
+                  <a href="CodeSystem-update-type.html#update-type-snapshot">snapshot</a>
+                </td>
+                <td>Snapshot</td>
+                <td>In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains all the DEQM and QI Core Profiles for each transaction.  If the Consumer supports snapshot updates, the contents of the updated payload entirely replaces the previous payload</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type"/>
+        <version value="0.1.0"/>
+        <name value="DEQMUpdateTypeValueSet"/>
+        <title value="DEQM Update Type Value Set"/>
+        <status value="active"/>
+        <date value="2020-06-25T17:32:25-07:00"/>
+        <publisher value="Health eData Inc"/>
+        <contact>
+          <telecom>
+            <system value="email"/>
+            <value value="mailto:ehaas@healthedatainc.com"/>
+          </telecom>
+        </contact>
+        <description value="Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates"/>
+        <expansion>
+          <identifier value="urn:uuid:291437c7-6651-4fac-a868-4a6be1d33c60"/>
+          <timestamp value="2020-06-25T17:32:39-07:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type"/>
+            <code value="incremental"/>
+            <display value="Incremental"/>
+          </contains>
+          <contains>
+            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type"/>
+            <code value="snapshot"/>
+            <display value="Snapshot"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"/>
+    <resource>
+      <ValueSet>
+        <id value="argo-group-characteristic"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 1 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-argo-group-characteristic.html">Argonaut Group Characteristic Code System v0.1.0 (CodeSystem)</a>
+            </p>
+            <p>All codes from system 
+              <a href="CodeSystem-argo-group-characteristic.html">
+                <code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-location"> </a>
+                  <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-location">location</a>
+                </td>
+                <td>Location</td>
+                <td>Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"/>
+        <version value="0.1.0"/>
+        <name value="ArgonautGroupCharacteristicValueSet"/>
+        <title value="Argonaut Group Characteristic Value Set"/>
+        <status value="active"/>
+        <date value="2020-06-25T17:32:25-07:00"/>
+        <publisher value="Health eData Inc"/>
+        <contact>
+          <telecom>
+            <system value="email"/>
+            <value value="mailto:ehaas@healthedatainc.com"/>
+          </telecom>
+        </contact>
+        <description value="Used to define group characteristic and limited to &#39;location&#39;|...."/>
+        <expansion>
+          <identifier value="urn:uuid:29eace56-3fd5-4414-b80e-13d63aad6684"/>
+          <timestamp value="2020-06-25T17:32:39-07:00"/>
+          <total value="1"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <code value="location"/>
+            <display value="Location"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

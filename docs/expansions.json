@@ -1,0 +1,99 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "b1a7caa9-7f6b-4318-84b8-c460f3179b78",
+  "meta" : {
+    "lastUpdated" : "2020-06-25T17:32:25.036-07:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "update-type",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-update-type.html\">DEQM Update Type Code System v0.1.0 (CodeSystem)</a></p><p>All codes from system <a href=\"CodeSystem-update-type.html\"><code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-sushi-sandbox-CodeSystem-update-type-incremental\"> </a><a href=\"CodeSystem-update-type.html#update-type-incremental\">incremental</a></td><td>Incremental</td><td>In contrast to the Snapshot Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains only the new and updated DEQM and QI Core Profiles since the last transaction. If the Consumer supports incremental updates, the contents of the updated payload updates the previous payload data.</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-sushi-sandbox-CodeSystem-update-type-snapshot\"> </a><a href=\"CodeSystem-update-type.html#update-type-snapshot\">snapshot</a></td><td>Snapshot</td><td>In contrast to the Incremental Update, the FHIR Parameters resource used in a Submit Data or the Collect Data scenario contains all the DEQM and QI Core Profiles for each transaction.  If the Consumer supports snapshot updates, the contents of the updated payload entirely replaces the previous payload</td></tr></table></div>"
+      },
+      "url" : "http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type",
+      "version" : "0.1.0",
+      "name" : "DEQMUpdateTypeValueSet",
+      "title" : "DEQM Update Type Value Set",
+      "status" : "active",
+      "date" : "2020-06-25T17:32:25-07:00",
+      "publisher" : "Health eData Inc",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:ehaas@healthedatainc.com"
+        }]
+      }],
+      "description" : "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
+      "expansion" : {
+        "identifier" : "urn:uuid:291437c7-6651-4fac-a868-4a6be1d33c60",
+        "timestamp" : "2020-06-25T17:32:39-07:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type",
+          "code" : "incremental",
+          "display" : "Incremental"
+        },
+        {
+          "system" : "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type",
+          "code" : "snapshot",
+          "display" : "Snapshot"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "argo-group-characteristic",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-argo-group-characteristic.html\">Argonaut Group Characteristic Code System v0.1.0 (CodeSystem)</a></p><p>All codes from system <a href=\"CodeSystem-argo-group-characteristic.html\"><code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-location\"> </a><a href=\"CodeSystem-argo-group-characteristic.html#argo-group-characteristic-location\">location</a></td><td>Location</td><td>Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr></table></div>"
+      },
+      "url" : "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic",
+      "version" : "0.1.0",
+      "name" : "ArgonautGroupCharacteristicValueSet",
+      "title" : "Argonaut Group Characteristic Value Set",
+      "status" : "active",
+      "date" : "2020-06-25T17:32:25-07:00",
+      "publisher" : "Health eData Inc",
+      "contact" : [{
+        "telecom" : [{
+          "system" : "email",
+          "value" : "mailto:ehaas@healthedatainc.com"
+        }]
+      }],
+      "description" : "Used to define group characteristic and limited to 'location'|....",
+      "expansion" : {
+        "identifier" : "urn:uuid:29eace56-3fd5-4414-b80e-13d63aad6684",
+        "timestamp" : "2020-06-25T17:32:39-07:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic|0.1.0"
+        }],
+        "contains" : [{
+          "system" : "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic",
+          "code" : "location",
+          "display" : "Location"
+        }]
+      }
+    }
+  }]
+}

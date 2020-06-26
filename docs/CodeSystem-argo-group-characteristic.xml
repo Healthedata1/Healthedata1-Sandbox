@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="argo-group-characteristic"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">location<a name="argo-group-characteristic-location"> </a></td><td>Location</td><td>Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr></table></div>
+  </text>
+  <url value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+  <version value="0.1.0"/>
+  <name value="ArgonautGroupCharacteristicCodeSystem"/>
+  <title value="Argonaut Group Characteristic Code System"/>
+  <status value="active"/>
+  <date value="2020-06-25T17:32:25-07:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="Used to define group characteristic and limited to &#39;location&#39;|..."/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="location"/>
+    <display value="Location"/>
+    <definition value="Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)"/>
+  </concept>
+</CodeSystem>

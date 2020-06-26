@@ -1,0 +1,46 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "argo-group-characteristic"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">location<a name=\"argo-group-characteristic-location\"> </a></td><td>Location</td><td>Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "ArgonautGroupCharacteristicCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "Argonaut Group Characteristic Code System"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2020-06-25T17:32:25-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "Health eData Inc"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:ehaas@healthedatainc.com" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Used to define group characteristic and limited to 'location'|..."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "1"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "location" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Location" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
