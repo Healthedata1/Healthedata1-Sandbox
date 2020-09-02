@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "b1a7caa9-7f6b-4318-84b8-c460f3179b78",
+  "id" : "8684a665-e290-44a7-b5d9-5a4cf87dea5e",
   "meta" : {
-    "lastUpdated" : "2020-06-25T17:32:25.036-07:00"
+    "lastUpdated" : "2020-09-02T12:28:23.040-07:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "DEQMUpdateTypeValueSet",
       "title" : "DEQM Update Type Value Set",
       "status" : "active",
-      "date" : "2020-06-25T17:32:25-07:00",
+      "date" : "2020-09-02T12:28:23-07:00",
       "publisher" : "Health eData Inc",
       "contact" : [{
         "telecom" : [{
@@ -29,8 +29,8 @@
       }],
       "description" : "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
       "expansion" : {
-        "identifier" : "urn:uuid:291437c7-6651-4fac-a868-4a6be1d33c60",
-        "timestamp" : "2020-06-25T17:32:39-07:00",
+        "identifier" : "urn:uuid:159754fc-7621-464c-bf91-13f7a6b62889",
+        "timestamp" : "2020-09-02T12:29:02-07:00",
         "total" : 2,
         "parameter" : [{
           "name" : "excludeNested",
@@ -67,7 +67,7 @@
       "name" : "ArgonautGroupCharacteristicValueSet",
       "title" : "Argonaut Group Characteristic Value Set",
       "status" : "active",
-      "date" : "2020-06-25T17:32:25-07:00",
+      "date" : "2020-09-02T12:28:23-07:00",
       "publisher" : "Health eData Inc",
       "contact" : [{
         "telecom" : [{
@@ -77,8 +77,8 @@
       }],
       "description" : "Used to define group characteristic and limited to 'location'|....",
       "expansion" : {
-        "identifier" : "urn:uuid:29eace56-3fd5-4414-b80e-13d63aad6684",
-        "timestamp" : "2020-06-25T17:32:39-07:00",
+        "identifier" : "urn:uuid:ac82265b-cd55-4d79-af36-b3b4b3d6dffd",
+        "timestamp" : "2020-09-02T12:29:03-07:00",
         "total" : 1,
         "parameter" : [{
           "name" : "excludeNested",

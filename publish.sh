@@ -32,7 +32,50 @@ echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find . -name '.DS_Store' -type f -delete
 sleep 1
-echo "================================================================="
+
+inpath=fsh/ig-data/input
+if ls $inpath/resources/yaml/*.yml; then
+echo "========================================================================"
+echo "convert all yml files in resources directory to json files"
+echo "Python 3.7 and PyYAML, json and sys modules are required"
+for yaml_file in $inpath/resources/yaml/*.yml
+do
+echo $yaml_file
+json_file=$inpath/resources/$(basename $yaml_file)
+json_file=${json_file%.*}.json
+echo $json_file
+python3.7 -c 'import sys, yaml, json; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4)' < $yaml_file > $json_file
+done
+fi
+
+if ls $inpath/examples/yaml/*.yml; then
+echo "========================================================================"
+echo "convert all yml files in examples directory to json files"
+echo "Python 3.7 and PyYAML, json and sys modules are required"
+for yaml_file in $inpath/examples/yaml/*.yml
+do
+echo $yaml_file
+json_file=$inpath/examples/$(basename $yaml_file)
+json_file=${json_file%.*}.json
+echo $json_file
+python3.7 -c 'import sys, yaml, json; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4)' < $yaml_file > $json_file
+done
+fi
+
+if ls $inpath/includes/yaml/*.yml; then
+echo "======================================================================="
+echo "convert all yml files in includes directory to json files"
+echo "Python 3.7 and PyYAML, json and sys modules are required"
+for yaml_file in $inpath/includes/yaml/*.yml
+do
+echo $yaml_file
+json_file=$inpath/includes/$(basename $yaml_file)
+json_file=${json_file%.*}.json
+echo $json_file
+python3.7 -c 'import sys, yaml, json; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4)' < $yaml_file > $json_file
+done
+echo "========================================================================"
+fi
 
 if [[ $UPDATE ]]; then
 echo "========================================================================"

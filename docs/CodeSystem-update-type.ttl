@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "DEQMUpdateTypeCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "DEQM Update Type Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2020-06-25T17:32:25-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2020-09-02T12:28:23-07:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Health eData Inc"];
   fhir:CodeSystem.contact [
      fhir:index 0;

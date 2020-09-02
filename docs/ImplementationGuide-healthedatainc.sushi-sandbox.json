@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2020-06-25T17:32:25-07:00",
+  "date": "2020-09-02T12:28:23-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -521,6 +521,24 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "SearchParameter"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "SearchParameter-Group-value-reference.html"
+          }
+        ],
+        "reference": {
+          "reference": "SearchParameter/Group-value-reference"
+        },
+        "name": "GroupValueReference",
+        "description": "Reference value held by characteristic",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           },
           {
@@ -554,6 +572,11 @@
         {
           "nameUrl": "guidance.html",
           "title": "Guidance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "utils-md.html",
+          "title": "Utils Md",
           "generation": "markdown"
         }
       ]
@@ -598,6 +621,10 @@
       {
         "code": "path-resource",
         "value": "input/testing"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/history"
       },
       {
         "code": "path-pages",

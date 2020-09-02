@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 12, errors = 0, warn = 4, info = 0 -->
+<head>
+  <title>SushiSandbox : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for SushiSandbox</h1>
+ <p>Generated Wed Sep 02 12:29:33 PDT 2020, FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = <a href="http://www.fhir.org/guides/sushi-sandbox">http://www.fhir.org/guides/sushi-sandbox</a> (<a href="http://www.fhir.org/guides/sushi-sandbox/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/sushi-sandbox/docs/qa.html">Full QA Report</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.17</span></td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Sushi-Sandbox/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> healthedatainc.sushi-sandbox</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://www.fhir.org/guides/sushi-sandbox</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Sushi-Sandbox/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.us.core</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">3.1.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/us/core</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/us/core/STU3.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table></td></tr>
+ <tr><td>HL7 Publication Rules:</td><td><ul>
+  <li>package-list.json: No category entry for the registry category (talk to FHIR product director on #IG Creation for assistance). Note: existing IGs already have a category in the <a href="http://www.fhir.org/guides/sushi-sandbox/package-list.json">existing package-list.json</a> - update your package-list.json from there</li>
+  <li>package-list.json: No entry found for version 0.1.0</li>
+</ul>
+</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Realm rules:</td><td><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/sushi-sandbox (Problem #1 with package-list.json at http://www.fhir.org/guides/sushi-sandbox: http://www.fhir.org/guides/sushi-sandbox/package-list.json)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 12, errors = 0, warn = 4, info = 0</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>12</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_extensions_StructureDefinition-extension-measureScoring"><b>/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/extensions/StructureDefinition-extension-measureScoring</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_extensions_StructureDefinition-extension-submitDataUpdateType"><b>/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/extensions/StructureDefinition-extension-submitDataUpdateType</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_profiles_StructureDefinition-argo-patientlist"><b>/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/profiles/StructureDefinition-argo-patientlist</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_resources_StructureDefinition-argo-patientlist2"><b>/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>1</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-measureScoring-definitions.html#64863698-4966-478a-b0a6-71452ae7b6e4">StructureDefinition-extension-measureScoring-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 276, column 115</a></b></td><td><b>error</b></td><td><b>The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for &quot;http:hl7.org/fhir/ValueSet/measure-scoring&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-measureScoring.html#3e49cf31-7c66-441a-8511-32810c1f1534">StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 240, column 1894</a></b></td><td><b>error</b></td><td><b>The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for &quot;http:hl7.org/fhir/ValueSet/measure-scoring&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-measureScoring.html#6be52453-c46a-4cb9-9498-43925711d868">StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 262, column 2295</a></b></td><td><b>error</b></td><td><b>The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for &quot;http:hl7.org/fhir/ValueSet/measure-scoring&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-measureScoring.html#1500086a-e5ec-4506-b98e-7d043f6508e9">StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 336, column 1894</a></b></td><td><b>error</b></td><td><b>The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for &quot;http:hl7.org/fhir/ValueSet/measure-scoring&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-measureScoring.html#bc2e1878-db46-4bb9-acc3-c66725e0a3ea">StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 2295</a></b></td><td><b>error</b></td><td><b>The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for &quot;http:hl7.org/fhir/ValueSet/measure-scoring&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-measureScoring.html#dcb5e491-eca0-461a-b503-f09a21c8a017">StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 408, column 178</a></b></td><td><b>error</b></td><td><b>The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for &quot;http:hl7.org/fhir/ValueSet/measure-scoring&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-submitDataUpdateType.html#e666bb16-dca0-4f5d-a241-4571b7f07cf2">StructureDefinition-extension-submitDataUpdateType.html#/html/body/div/div/div/div/div/p/p/a at Line 149, column 177</a></b></td><td><b>error</b></td><td><b>The link 'index.html#incremental-update' for &quot;snapshot&quot; cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-submitDataUpdateType.html#e666bb16-dca0-4f5d-a241-4571b7f07cf2">StructureDefinition-extension-submitDataUpdateType.html#/html/body/div/div/div/div/div/p/p/a at Line 149, column 233</a></b></td><td><b>error</b></td><td><b>The link 'index.html#snapshot-update' for &quot;incremental&quot; cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-extension-submitDataUpdateType.html#e666bb16-dca0-4f5d-a241-4571b7f07cf2">StructureDefinition-extension-submitDataUpdateType.html#/html/body/div/div/div/div/div/p/p/a at Line 149, column 302</a></b></td><td><b>error</b></td><td><b>The link 'datax.html#submit-data' for &quot;DEQM Submit Data transaction&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#eef1ea52-74f8-42d4-a41f-9eb2e2913f6f">artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 211, column 172</a></b></td><td><b>error</b></td><td><b>The link 'index.html#incremental-update' for &quot;snapshot&quot; cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#eef1ea52-74f8-42d4-a41f-9eb2e2913f6f">artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 211, column 228</a></b></td><td><b>error</b></td><td><b>The link 'index.html#snapshot-update' for &quot;incremental&quot; cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#eef1ea52-74f8-42d4-a41f-9eb2e2913f6f">artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 211, column 297</a></b></td><td><b>error</b></td><td><b>The link 'datax.html#submit-data' for &quot;DEQM Submit Data transaction&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_extensions_StructureDefinition-extension-measureScoring"> </a>
+<h2><a href="StructureDefinition-extension-measureScoring.html">/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/extensions/StructureDefinition-extension-measureScoring.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/extension-measureScoring: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-measureScoring')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_extensions_StructureDefinition-extension-submitDataUpdateType"> </a>
+<h2><a href="StructureDefinition-extension-submitDataUpdateType.html">/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/extensions/StructureDefinition-extension-submitDataUpdateType.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/extension-submitDataUpdateType: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-submitDataUpdateType')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_profiles_StructureDefinition-argo-patientlist"> </a>
+<h2><a href="StructureDefinition-argo-patientlist.html">/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/profiles/StructureDefinition-argo-patientlist.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/argo-patientlist: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Sushi-Sandbox_input_resources_StructureDefinition-argo-patientlist2"> </a>
+<h2><a href="StructureDefinition-argo-patientlist2.html">/Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/argo-patientlist2: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+</body>
+</html>
