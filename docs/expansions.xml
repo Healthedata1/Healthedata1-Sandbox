@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="8684a665-e290-44a7-b5d9-5a4cf87dea5e"/>
+  <id value="79dd94b8-dee8-4ba7-a186-c65eefe14d61"/>
   <meta>
-    <lastUpdated value="2020-09-02T12:28:23.040-07:00"/>
+    <lastUpdated value="2020-09-16T21:26:13.486-07:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -59,7 +59,7 @@
         <name value="DEQMUpdateTypeValueSet"/>
         <title value="DEQM Update Type Value Set"/>
         <status value="active"/>
-        <date value="2020-09-02T12:28:23-07:00"/>
+        <date value="2020-09-16T21:26:13-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -69,8 +69,8 @@
         </contact>
         <description value="Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates"/>
         <expansion>
-          <identifier value="urn:uuid:159754fc-7621-464c-bf91-13f7a6b62889"/>
-          <timestamp value="2020-09-02T12:29:02-07:00"/>
+          <identifier value="urn:uuid:c768e722-b686-46b9-b09c-a394635f9c5e"/>
+          <timestamp value="2020-09-16T21:26:32-07:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -102,7 +102,7 @@
         <text>
           <status value="generated"/>
           <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 1 concepts</p>
+            <p>This value set contains 4 concepts</p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
               <a href="CodeSystem-argo-group-characteristic.html">Argonaut Group Characteristic Code System v0.1.0 (CodeSystem)</a>
             </p>
@@ -129,7 +129,31 @@
                   <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-location">location</a>
                 </td>
                 <td>Location</td>
-                <td>Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td>
+                <td>Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-team"> </a>
+                  <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-team">team</a>
+                </td>
+                <td>CareTeam</td>
+                <td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-organization"> </a>
+                  <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-organization">organization</a>
+                </td>
+                <td>Organization</td>
+                <td>Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-practitioner"> </a>
+                  <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-practitioner">practitioner</a>
+                </td>
+                <td>Practitioner</td>
+                <td>Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)</td>
               </tr>
             </table>
           </div>
@@ -139,7 +163,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2020-09-02T12:28:23-07:00"/>
+        <date value="2020-09-16T21:26:13-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -149,9 +173,9 @@
         </contact>
         <description value="Used to define group characteristic and limited to &#39;location&#39;|...."/>
         <expansion>
-          <identifier value="urn:uuid:ac82265b-cd55-4d79-af36-b3b4b3d6dffd"/>
-          <timestamp value="2020-09-02T12:29:03-07:00"/>
-          <total value="1"/>
+          <identifier value="urn:uuid:85211390-4293-472f-9a62-09d17eeb09e1"/>
+          <timestamp value="2020-09-16T21:26:32-07:00"/>
+          <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
             <valueBoolean value="false"/>
@@ -164,6 +188,21 @@
             <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
             <code value="location"/>
             <display value="Location"/>
+          </contains>
+          <contains>
+            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <code value="team"/>
+            <display value="CareTeam"/>
+          </contains>
+          <contains>
+            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <code value="organization"/>
+            <display value="Organization"/>
+          </contains>
+          <contains>
+            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <code value="practitioner"/>
+            <display value="Practitioner"/>
           </contains>
         </expansion>
       </ValueSet>

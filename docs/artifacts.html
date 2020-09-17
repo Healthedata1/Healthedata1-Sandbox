@@ -198,7 +198,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                   <a href="StructureDefinition-extension-submitDataUpdateType.html" title="StructureDefinition/extension-submitDataUpdateType">DEQM Submit Data Update Type Extension</a>
                </td>
                <td>
-<p><a name="eef1ea52-74f8-42d4-a41f-9eb2e2913f6f">​</a>This Extension supports the concepts ‘incremental’ and ‘snapshot’. The DEQM Consumer Server <strong>SHALL</strong> use this Extension to advertise whether it supports <a href="index.html#incremental-update">snapshot</a> or <a href="index.html#snapshot-update">incremental</a> updates for the <a href="datax.html#submit-data">DEQM Submit Data transaction</a>. The DEQM Producer <strong>SHALL</strong> use this Extension to indicate whether the payload is a snapshot or incremental update for Submit Data transactiosn.</p>
+<p><a name="8926030c-fe95-4524-9bd6-f7875240ac3c">​</a>This Extension supports the concepts ‘incremental’ and ‘snapshot’. The DEQM Consumer Server <strong>SHALL</strong> use this Extension to advertise whether it supports <a href="index.html#incremental-update">snapshot</a> or <a href="index.html#snapshot-update">incremental</a> updates for the <a href="datax.html#submit-data">DEQM Submit Data transaction</a>. The DEQM Producer <strong>SHALL</strong> use this Extension to indicate whether the payload is a snapshot or incremental update for Submit Data transactiosn.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-patientlistquestionnaire.html" title="StructureDefinition/patientlistquestionnaire">Argonaut Patient List Questionnaire</a>
+               </td>
+               <td>
+<p>A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-patientlistquestionnaireresponse.html" title="StructureDefinition/patientlistquestionnaireresponse">Argonaut Patient List QuestionnaireResponse</a>
+               </td>
+               <td>
+<p>A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member</p>
 </td>
             </tr>
          </tbody>
@@ -253,7 +269,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <tbody>
     <tr>
       <td>Used to define group characteristic and limited to ‘location’</td>
-      <td>…</td>
+      <td>‘team’</td>
+      <td>‘organization’</td>
+      <td>‘practitioner’</td>
     </tr>
   </tbody>
 </table>
@@ -292,7 +310,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2020 12:28-0700">2020-09-02</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 16, 2020 21:26-0700">2020-09-16</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

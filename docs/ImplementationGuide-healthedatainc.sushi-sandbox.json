@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2020-09-02T12:28:23-07:00",
+  "date": "2020-09-16T21:26:13-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -449,6 +449,42 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-patientlistquestionnaire.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/patientlistquestionnaire"
+        },
+        "name": "Argonaut Patient List Questionnaire",
+        "description": "A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+            "valueUri": "StructureDefinition-patientlistquestionnaireresponse.html"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/patientlistquestionnaireresponse"
+        },
+        "name": "Argonaut Patient List QuestionnaireResponse",
+        "description": "A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "ValueSet"
           },
           {
@@ -496,7 +532,7 @@
           "reference": "CodeSystem/argo-group-characteristic"
         },
         "name": "Argonaut Group Characteristic Code System",
-        "description": "Used to define group characteristic and limited to 'location'|...",
+        "description": "Used to define group characteristic and limited to 'location'| 'team' | 'organization' | 'practitioner'",
         "exampleBoolean": false
       },
       {

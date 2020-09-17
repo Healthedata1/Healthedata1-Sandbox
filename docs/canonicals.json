@@ -1,71 +1,85 @@
 [
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic",
     "id": "argo-group-characteristic",
     "type": "CodeSystem",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic",
     "version": "0.1.0",
     "name": "ArgonautGroupCharacteristicCodeSystem"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type",
     "id": "update-type",
     "type": "CodeSystem",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type",
     "version": "0.1.0",
     "name": "DEQMUpdateTypeCodeSystem"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox",
     "id": "healthedatainc.sushi-sandbox",
     "type": "ImplementationGuide",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox",
     "version": "0.1.0",
     "name": "SushiSandbox"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference",
     "id": "Group-value-reference",
     "type": "SearchParameter",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference",
     "version": "0.1.0",
     "name": "GroupValueReference"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist",
     "id": "argo-patientlist",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist",
     "version": "0.1.0",
     "name": "ArgonautPatientListProfile"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2",
     "id": "argo-patientlist2",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2",
     "version": "0.1.0",
     "name": "ArgonautPatientListProfile"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-measureScoring",
     "id": "extension-measureScoring",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-measureScoring",
     "version": "0.1.0",
     "name": "DEQMMeasureScoring"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-submitDataUpdateType",
     "id": "extension-submitDataUpdateType",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-submitDataUpdateType",
     "version": "0.1.0",
     "name": "DEQMSubmitDataUpdateType"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire",
+    "id": "patientlistquestionnaire",
+    "type": "StructureDefinition",
+    "version": "0.1.0",
+    "name": "PatientListQuestionnaire"
+  },
+  {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse",
+    "id": "patientlistquestionnaireresponse",
+    "type": "StructureDefinition",
+    "version": "0.1.0",
+    "name": "PatientListQuestionnaireResponse"
+  },
+  {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic",
     "id": "argo-group-characteristic",
     "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic",
     "version": "0.1.0",
     "name": "ArgonautGroupCharacteristicValueSet"
   },
   {
+    "url": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type",
     "id": "update-type",
     "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type",
     "version": "0.1.0",
     "name": "DEQMUpdateTypeValueSet"
   }

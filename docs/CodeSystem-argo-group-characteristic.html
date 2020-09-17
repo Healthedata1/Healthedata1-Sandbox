@@ -37,8 +37,8 @@
   </head>
   <body onload="document.body.style.opacity='1'">
 
-    <style type="text/css">h2{--heading-prefix:"5.8"}
-    h3,h4,h5,h6{--heading-prefix:"5.8"}</style>
+    <style type="text/css">h2{--heading-prefix:"5.10"}
+    h3,h4,h5,h6{--heading-prefix:"5.10"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -148,7 +148,7 @@
  <tr><td>Title:</td><td>Argonaut Group Characteristic Code System</td></tr>
  <tr><td>Status:</td><td>Active</td></tr>
  <tr><td>Content:</td><td>All the concepts defined by the code system are included in the code system resource</td></tr>
- <tr><td>Definition:</td><td><p>Used to define group characteristic and limited to 'location'|...</p>
+ <tr><td>Definition:</td><td><p>Used to define group characteristic and limited to 'location'| 'team' | 'organization' | 'practitioner'</p>
 </td></tr>
  <tr><td>Publisher:</td><td>Health eData Inc</td></tr>
  <tr><td>Content Mode:</td><td>Complete</td></tr>
@@ -166,7 +166,7 @@
 </ul>
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">location<a name="argo-group-characteristic-location"> </a></td><td>Location</td><td>Patients are all at the location specified by the value which names the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">location<a name="argo-group-characteristic-location"> </a></td><td>Location</td><td>Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr><tr><td style="white-space:nowrap">team<a name="argo-group-characteristic-team"> </a></td><td>CareTeam</td><td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td></tr><tr><td style="white-space:nowrap">organization<a name="argo-group-characteristic-organization"> </a></td><td>Organization</td><td>Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)</td></tr><tr><td style="white-space:nowrap">practitioner<a name="argo-group-characteristic-practitioner"> </a></td><td>Practitioner</td><td>Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)</td></tr></table></div>
 
   <!-- insert notes if present -->
   
@@ -195,7 +195,7 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 2, 2020 12:28-0700">2020-09-02</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 16, 2020 21:26-0700">2020-09-16</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

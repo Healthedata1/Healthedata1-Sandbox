@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "DEQMUpdateTypeValueSet"];
   fhir:ValueSet.title [ fhir:value "DEQM Update Type Value Set"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2020-09-02T12:28:23-07:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2020-09-16T21:26:13-07:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "Health eData Inc"];
   fhir:ValueSet.contact [
      fhir:index 0;

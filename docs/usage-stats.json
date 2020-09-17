@@ -29,6 +29,22 @@
         "code",
         "code"
       ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire",
+      "title": "Argonaut Patient List Questionnaire",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse",
+      "title": "Argonaut Patient List QuestionnaireResponse",
+      "types": [
+        "Reference",
+        "Reference"
+      ]
     }
   ],
   "profiles": {
@@ -70,6 +86,12 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire": [
+      "Group"
+    ],
+    "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse": [
+      "Group.member.entity"
     ]
   }
 }

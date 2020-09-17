@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SushiSandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Sushi Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-09-02T12:28:23-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-09-16T21:26:13-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -429,6 +429,42 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-patientlistquestionnaire.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patientlistquestionnaire" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Questionnaire" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/implementationguide-page" ];
+         fhir:Extension.valueUri [ fhir:value "StructureDefinition-patientlistquestionnaireresponse.html" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/patientlistquestionnaireresponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List QuestionnaireResponse" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "ValueSet" ]
        ], [
          fhir:index 1;
@@ -443,7 +479,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to define group characteristic and limited to 'location'|...." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 4;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -461,7 +497,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 5;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -476,10 +512,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/argo-group-characteristic" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Group Characteristic Code System" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to define group characteristic and limited to 'location'|..." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to define group characteristic and limited to 'location'| 'team' | 'organization' | 'practitioner'" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 6;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -497,7 +533,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -515,7 +551,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Reference value held by characteristic" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
