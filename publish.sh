@@ -33,12 +33,12 @@ echo getting rid of .DS_Store files since they gum up the igpublisher....
 find . -name '.DS_Store' -type f -delete
 sleep 1
 
-inpath=fsh/ig-data/input
-if ls $inpath/resources/yaml/*.yml; then
+inpath=input
+if ls $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
-echo "convert all yml files in resources directory to json files"
+echo "convert all yml files in resources-yaml directory to json files"
 echo "Python 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $inpath/resources/yaml/*.yml
+for yaml_file in $inpath/resources-yaml/*.yml
 do
 echo $yaml_file
 json_file=$inpath/resources/$(basename $yaml_file)
@@ -48,11 +48,11 @@ python3.7 -c 'import sys, yaml, json; json.dump(yaml.full_load(sys.stdin), sys.s
 done
 fi
 
-if ls $inpath/examples/yaml/*.yml; then
+if ls $inpath/examples-yaml/*.yml; then
 echo "========================================================================"
-echo "convert all yml files in examples directory to json files"
+echo "convert all yml files in examples-yaml directory to examples/json files"
 echo "Python 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $inpath/examples/yaml/*.yml
+for yaml_file in $inpath/examples-yaml/*.yml
 do
 echo $yaml_file
 json_file=$inpath/examples/$(basename $yaml_file)
@@ -62,11 +62,11 @@ python3.7 -c 'import sys, yaml, json; json.dump(yaml.full_load(sys.stdin), sys.s
 done
 fi
 
-if ls $inpath/includes/yaml/*.yml; then
+if ls $inpath/includes-yaml/*.yml; then
 echo "======================================================================="
-echo "convert all yml files in includes directory to json files"
+echo "convert all yml files in includes-yaml directory to json files"
 echo "Python 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $inpath/includes/yaml/*.yml
+for yaml_file in $inpath/includes-yaml/*.yml
 do
 echo $yaml_file
 json_file=$inpath/includes/$(basename $yaml_file)
@@ -121,7 +121,7 @@ echo "================================================================="
 if [[ $SUSHI ]]; then
 echo "================================================================="
 echo "start sushi ......................................................"
-rm -rf input output docs
+rm -rf output docs
 sushi fsh -o .
 echo "================================================================="
 
@@ -133,9 +133,10 @@ else
     echo "================================================================="
 
     echo "================================================================="
-    echo "=== rename the 'fsh' folder to '_fsh'  ==="
+    echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
     echo "================================================================="
-    [[ -d fsh ]] && mv fsh _fsh
+    trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
+    [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
     if [[ $WATCH ]]; then
       echo "================================================================="
@@ -151,10 +152,8 @@ else
       java -Xmx2G -jar ${path} -ig ig.ini -tx $NA
 
       echo "================================================================="
-      echo "=== rename the '-fsh' folder to 'fsh'  ==="
+      echo "=== rename the 'input/_fsh' folder to 'input/fsh'  ==="
       echo "================================================================="
-      [[ -d _fsh ]] && mv _fsh fsh
-
     fi
 
   else
@@ -162,7 +161,7 @@ else
     echo "=== run sushi and igpublisher (default) ===="
     echo "================================================================="
     echo "start sushi ......................................................"
-    rm -rf input output docs
+    rm -rf output docs
     sushi fsh -o .
     if [[ $WATCH ]]; then
       echo "================================================================="
