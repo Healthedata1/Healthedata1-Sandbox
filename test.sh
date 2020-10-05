@@ -27,7 +27,9 @@ echo "================================================================="
 
 if [ $var1 == "c" ]; then
   git commit -a
+  git push
 elif [ $var1 == "a" ]; then
   git add .
   git commit
+  git push
 fi
