@@ -9,4 +9,5 @@
 #/docs/
 #publish.sh
 SUSHI-GENERATED-FILES.md
-fsh-generated
+.DS_Store
+Thumbs.db

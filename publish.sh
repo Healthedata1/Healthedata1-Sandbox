@@ -119,11 +119,23 @@ echo $path
 echo "================================================================="
 
 if [[ $SUSHI ]]; then
-echo "================================================================="
-echo "start sushi ......................................................"
-rm -rf output docs
-sushi fsh -o .
-echo "================================================================="
+  echo "================================================================="
+  echo "start sushi ......................................................"
+  rm -rf output docs
+  sushi fsh -o .
+  inpath=fsh-generated/resources
+  echo "========================================================================"
+  echo "convert ig.json to ig.yml and copy to input/data"
+  echo "Python 3.7 and PyYAML, json and sys modules are required"
+  for ig_json in $inpath/ImplementationGuide*.json
+    do
+    echo "========== ig_json = $ig_json =========="
+    ig_yaml='input/data/ig.yml'
+    python3.7 -c 'import sys, yaml, json; yaml.dump(json.loads(sys.stdin.read()), sys.stdout, indent=4)' < $ig_json > $ig_yaml
+    echo "========== ig_yaml = $ig_yaml =========="
+    done
+
+  echo "================================================================="
 
 else
 
@@ -151,9 +163,6 @@ else
       echo java -jar ${path} -ig ig.ini -tx $NA
       java -Xmx2G -jar ${path} -ig ig.ini -tx $NA
 
-      echo "================================================================="
-      echo "=== rename the 'input/_fsh' folder to 'input/fsh'  ==="
-      echo "================================================================="
     fi
 
   else
@@ -163,6 +172,18 @@ else
     echo "start sushi ......................................................"
     rm -rf output docs
     sushi fsh -o .
+    inpath=fsh-generated/resources
+    echo "========================================================================"
+    echo "convert ig.json to ig.yml and copy to input/data"
+    echo "Python 3.7 and PyYAML, json and sys modules are required"
+    for ig_json in $inpath/ImplementationGuide*.json
+      do
+      echo "========== ig_json = $ig_json =========="
+      ig_yaml='input/data/ig.yml'
+      python3.7 -c 'import sys, yaml, json; yaml.dump(json.loads(sys.stdin.read()), sys.stdout, indent=4)' < $ig_json > $ig_yaml
+      echo "========== ig_yaml = $ig_yaml =========="
+      done
+
     if [[ $WATCH ]]; then
       echo "================================================================="
       echo === run most recent version of the igpublisher with watch on ===

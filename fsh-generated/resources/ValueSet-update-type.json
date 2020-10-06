@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DEQMUpdateTypeValueSet",
+  "id": "update-type",
+  "title": "DEQM Update Type Value Set",
+  "description": "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
+  "version": "0.1.0",
+  "url": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/update-type",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/update-type"
+      }
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "healthedatainc.sushi-sandbox",
+  "url": "http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox",
+  "version": "0.1.0",
+  "name": "SushiSandbox",
+  "title": "Sushi Sandbox",
+  "status": "active",
+  "publisher": "Health eData Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:ehaas@healthedatainc.com"
+        }
+      ]
+    }
+  ],
+  "description": "This is a sushi sandbox for creation of resources and examples",
+  "packageId": "healthedatainc.sushi-sandbox",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.us.core",
+      "version": "3.1.0",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "id": "hl7_fhir_us_core"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/argo-patientlist"
+        },
+        "name": "Argonaut Patient List (Group) Profile",
+        "description": "Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-measureScoring"
+        },
+        "name": "DEQM Measure Scoring Extension",
+        "description": "Indicates how the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional measure scoring types to be represented. It is expected to be the same as the scoring element on the referenced Measure",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/extension-submitDataUpdateType"
+        },
+        "name": "DEQM Submit Data Update Type Extension",
+        "description": "This Extension supports the concepts 'incremental' and 'snapshot'. The DEQM Consumer Server **SHALL** use this Extension to advertise whether it supports [snapshot](index.html#incremental-update) or [incremental](index.html#snapshot-update) updates for the [DEQM Submit Data transaction](datax.html#submit-data). The DEQM Producer **SHALL** use this Extension to indicate whether the payload is a snapshot or incremental update for Submit Data transactiosn.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patientlistquestionnaire"
+        },
+        "name": "Argonaut Patient List Questionnaire",
+        "description": "A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/patientlistquestionnaireresponse"
+        },
+        "name": "Argonaut Patient List QuestionnaireResponse",
+        "description": "A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/argo-group-characteristic"
+        },
+        "name": "Argonaut Group Characteristic Value Set",
+        "description": "Used to define group characteristic and limited to 'location'|....",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/update-type"
+        },
+        "name": "DEQM Update Type Value Set",
+        "description": "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/argo-group-characteristic"
+        },
+        "name": "Argonaut Group Characteristic Code System",
+        "description": "Used to define group characteristic and limited to 'location'| 'team' | 'organization' | 'practitioner'",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/update-type"
+        },
+        "name": "DEQM Update Type Code System",
+        "description": "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/Group-value-reference"
+        },
+        "description": "Reference value held by characteristic",
+        "exampleBoolean": false,
+        "name": "GroupValueReference"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/argo-patientlist2"
+        },
+        "description": "Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource",
+        "exampleBoolean": false,
+        "name": "Argonaut Patient List (Group) Profile"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      },
+      {
+        "code": "usage-stats-opt-out",
+        "value": "false"
+      },
+      {
+        "code": "path-output",
+        "value": "docs"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/pagecontent"
+      },
+      {
+        "code": "path-pages",
+        "value": "fsh-generated/includes"
+      },
+      {
+        "code": "excludexml",
+        "value": "true"
+      },
+      {
+        "code": "escludejsn",
+        "value": "false"
+      },
+      {
+        "code": "excludettl",
+        "value": "true"
+      },
+      {
+        "code": "excludemap",
+        "value": "true"
+      },
+      {
+        "code": "excludeexample",
+        "value": "true"
+      }
+    ]
+  }
+}
