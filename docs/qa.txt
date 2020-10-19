@@ -1,0 +1,68 @@
+﻿SushiSandbox : Validation Results
+=========================================
+
+err = 2, warn = 6, info = 1
+IG Publisher Version: 1.1.35
+Generated Mon Oct 19 14:29:05 PDT 2020. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+
+ Build Errors : 15 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-update-type : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-extension-measureScoring : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-extension-submitDataUpdateType : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-update-type : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
+</table>
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[31].value: Supressed messages file not found
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/downloads.html: Root node must be 'html' or 'div', but is p
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-measureScoring-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 279, column 115: The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for "http:hl7.org/fhir/ValueSet/measure-scoring" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 243, column 1894: The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for "http:hl7.org/fhir/ValueSet/measure-scoring" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 265, column 2148: The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for "http:hl7.org/fhir/ValueSet/measure-scoring" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 339, column 1894: The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for "http:hl7.org/fhir/ValueSet/measure-scoring" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 361, column 2148: The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for "http:hl7.org/fhir/ValueSet/measure-scoring" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-measureScoring.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 411, column 178: The link 'http:hl7.org/fhir/ValueSet/measure-scoring' for "http:hl7.org/fhir/ValueSet/measure-scoring" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-submitDataUpdateType.html#/html/body/div/div/div/div/div/p/p/a at Line 152, column 177: The link 'index.html#incremental-update' for "snapshot" cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-submitDataUpdateType.html#/html/body/div/div/div/div/div/p/p/a at Line 152, column 233: The link 'index.html#snapshot-update' for "incremental" cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/StructureDefinition-extension-submitDataUpdateType.html#/html/body/div/div/div/div/div/p/p/a at Line 152, column 302: The link 'datax.html#submit-data' for "DEQM Submit Data transaction" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 220, column 172: The link 'index.html#incremental-update' for "snapshot" cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 220, column 228: The link 'index.html#snapshot-update' for "incremental" cannot be resolved (valid targets: [ig-status, segment-header, publish-box, stripe, sushi-sandbox, segment-footer, segment-post-footer, segment-navbar, segment-content, segment-breadcrumb])
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 220, column 297: The link 'datax.html#submit-data' for "DEQM Submit Data transaction" cannot be resolved
+INFORMATION: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/downloads.html: The html source does not contain the publish box; this is recommended for publishing support
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/searchform.html#/html/body/div/div/a/img/div/div/nav/div/div/ul/li/a at Line 64, column 21: The link 'history.html' for "History" cannot be resolved
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
+INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-update-type.json ==
+INFORMATION: CodeSystem/update-type: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox.json ==
+INFORMATION: ImplementationGuide/healthedatainc.sushi-sandbox: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist.json ==
+INFORMATION: StructureDefinition/argo-patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist'): The Implementation Guide contains no examples for this profile
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-extension-measureScoring.json ==
+INFORMATION: StructureDefinition/extension-measureScoring: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-measureScoring'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-extension-submitDataUpdateType.json ==
+INFORMATION: StructureDefinition/extension-submitDataUpdateType: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-submitDataUpdateType'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire.json ==
+INFORMATION: StructureDefinition/patientlistquestionnaire: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse.json ==
+INFORMATION: StructureDefinition/patientlistquestionnaireresponse: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
+INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-update-type.json ==
+INFORMATION: ValueSet/update-type: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference.json ==
+INFORMATION: SearchParameter/Group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2.json ==
+INFORMATION: StructureDefinition/argo-patientlist2: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2'): The Implementation Guide contains no examples for this profile

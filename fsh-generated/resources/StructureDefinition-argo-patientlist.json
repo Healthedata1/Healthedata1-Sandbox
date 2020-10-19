@@ -166,7 +166,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-              "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist"
+              "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2"
             ]
           }
         ],

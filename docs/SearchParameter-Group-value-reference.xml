@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="Group-value-reference"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><h3>Ids</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr></table><p><b>url</b>: <a href="http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference">http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: GroupValueReference</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2020-09-02</p><p><b>publisher</b>: Health eData Inc</p><p><b>contact</b>: <a href="mailto:mailto:ehaas@healthedatainc.com">mailto:ehaas@healthedatainc.com</a></p><p><b>description</b>: Reference value held by characteristic</p><p><b>code</b>: value-reference</p><p><b>base</b>: Group</p><p><b>type</b>: reference</p><p><b>expression</b>: Group.characteristic.value as Reference</p><p><b>xpath</b>: f:Group/f:characteristic/f:valueReference</p><p><b>xpathUsage</b>: normal</p></div>
+  </text>
+  <url value="http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference"/>
+  <version value="0.1.0"/>
+  <name value="GroupValueReference"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2020-09-02"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="Reference value held by characteristic"/>
+  <code value="value-reference"/>
+  <base value="Group"/>
+  <type value="reference"/>
+  <expression value="Group.characteristic.value as Reference"/>
+  <xpath value="f:Group/f:characteristic/f:valueReference"/>
+  <xpathUsage value="normal"/>
+</SearchParameter>

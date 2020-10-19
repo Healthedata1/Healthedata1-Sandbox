@@ -3,8 +3,10 @@
   "name": "SushiSandbox",
   "package-id": "healthedatainc.sushi-sandbox",
   "ig-ver": "0.1.0",
-  "date": "Mon, 05 Oct, 2020 14:42:08 -0700",
-  "exception": "Process exited with an error: 1 (Exit value: 1)",
+  "date": "Mon, 19 Oct, 2020 14:27:56 -0700",
+  "errs": 2,
+  "warnings": 6,
+  "hints": 1,
   "version": "4.0.1",
   "tool": "4.5.0 (3)"
 }
