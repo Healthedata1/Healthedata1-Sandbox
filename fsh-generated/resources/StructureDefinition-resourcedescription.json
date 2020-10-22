@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "resourcedescription",
+  "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcedescription",
+  "version": "0.1.0",
+  "name": "ResourceDescription",
+  "title": "Resource Description",
+  "status": "active",
+  "description": "A markdown text natural language description of the resource instance and its use\n\n*Note: The Primary intent of this extension is to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*\n",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Resource.meta"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcedescription"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "markdown"
+          }
+        ]
+      }
+    ]
+  }
+}

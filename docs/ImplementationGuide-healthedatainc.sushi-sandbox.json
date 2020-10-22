@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2020-10-22T13:20:39-07:00",
+  "date": "2020-10-22T13:38:06-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -459,6 +459,34 @@
         },
         "name": "Argonaut Patient List QuestionnaireResponse",
         "description": "A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/resourcedescription"
+        },
+        "name": "Resource Description",
+        "description": "A markdown text natural language description of the resource instance and its use\n\n*Note: The Primary intent of this extension is to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*\n",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/resourcename"
+        },
+        "name": "Resource Name",
+        "description": "A natural language description of the resource instance\n\n*Note: The Primary intent of this extension is to provide natural language names for implementation guide examples. Production systems SHOULD NOT use this extension.*\n",
         "exampleBoolean": false
       },
       {
