@@ -87,6 +87,31 @@ definition:
         name: Argonaut Patient List QuestionnaireResponse
         reference:
             reference: StructureDefinition/patientlistquestionnaireresponse
+    -   description: 'A markdown text natural language description of the resource
+            instance and its use
+
+
+            *Note: The Primary intent of this extension is to illustrate to readers
+            how the implementation guide examples are intended to be used. Production
+            systems SHOULD NOT use this extension.*
+
+            '
+        exampleBoolean: false
+        name: Resource Description
+        reference:
+            reference: StructureDefinition/resourcedescription
+    -   description: 'A natural language description of the resource instance
+
+
+            *Note: The Primary intent of this extension is to provide natural language
+            names for implementation guide examples. Production systems SHOULD NOT
+            use this extension.*
+
+            '
+        exampleBoolean: false
+        name: Resource Name
+        reference:
+            reference: StructureDefinition/resourcename
     -   description: Used to define group characteristic and limited to 'location'|....
         exampleBoolean: false
         name: Argonaut Group Characteristic Value Set

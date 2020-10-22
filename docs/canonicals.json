@@ -70,6 +70,20 @@
     "name": "PatientListQuestionnaireResponse"
   },
   {
+    "id": "resourcedescription",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcedescription",
+    "version": "0.1.0",
+    "name": "ResourceDescription"
+  },
+  {
+    "id": "resourcename",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcename",
+    "version": "0.1.0",
+    "name": "ResourceName"
+  },
+  {
     "id": "argo-group-characteristic",
     "type": "ValueSet",
     "url": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic",

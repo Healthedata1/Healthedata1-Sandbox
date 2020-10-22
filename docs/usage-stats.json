@@ -45,6 +45,20 @@
         "Reference",
         "Reference"
       ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcedescription",
+      "title": "Resource Description",
+      "types": [
+        "markdown"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcename",
+      "title": "Resource Name",
+      "types": [
+        "markdown"
+      ]
     }
   ],
   "profiles": {

@@ -11,7 +11,7 @@
   <name value="SushiSandbox"/>
   <title value="Sushi Sandbox"/>
   <status value="active"/>
-  <date value="2020-10-19T14:27:56-07:00"/>
+  <date value="2020-10-22T11:58:42-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -298,6 +298,28 @@
       </reference>
       <name value="Argonaut Patient List QuestionnaireResponse"/>
       <description value="A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/resourcedescription"/>
+      </reference>
+      <name value="Resource Description"/>
+      <description value="A markdown text natural language description of the resource instance and its use&#xA;&#xA;*Note: The Primary intent of this extension is to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*&#xA;"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/resourcename"/>
+      </reference>
+      <name value="Resource Name"/>
+      <description value="A natural language description of the resource instance&#xA;&#xA;*Note: The Primary intent of this extension is to provide natural language names for implementation guide examples. Production systems SHOULD NOT use this extension.*&#xA;"/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>

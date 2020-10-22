@@ -1,19 +1,21 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 2, warn = 6, info = 1
+err = 2, warn = 10, info = 1
 IG Publisher Version: 1.1.35
-Generated Mon Oct 19 14:29:05 PDT 2020. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+Generated Thu Oct 22 12:00:26 PDT 2020. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
  Build Errors : 15 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-update-type : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 2 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-extension-measureScoring : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-extension-submitDataUpdateType : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-resourcedescription : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-resourcename : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-update-type : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
@@ -42,6 +44,8 @@ INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource
 INFORMATION: CodeSystem/update-type: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox.json ==
 INFORMATION: ImplementationGuide/healthedatainc.sushi-sandbox: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide
+WARNING: ImplementationGuide/healthedatainc.sushi-sandbox: ImplementationGuide.definition.resource[5].description: value should not start or finish with whitespace
+WARNING: ImplementationGuide/healthedatainc.sushi-sandbox: ImplementationGuide.definition.resource[6].description: value should not start or finish with whitespace
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist.json ==
 INFORMATION: StructureDefinition/argo-patientlist: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist'): The Implementation Guide contains no examples for this profile
@@ -57,6 +61,12 @@ WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandb
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse.json ==
 INFORMATION: StructureDefinition/patientlistquestionnaireresponse: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-resourcedescription.json ==
+INFORMATION: StructureDefinition/resourcedescription: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcedescription'): The Implementation Guide contains no examples for this extension
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-resourcename.json ==
+INFORMATION: StructureDefinition/resourcename: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/resourcename'): The Implementation Guide contains no examples for this extension
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
 INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-update-type.json ==
