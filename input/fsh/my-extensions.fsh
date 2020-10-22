@@ -49,24 +49,17 @@ Description: "A reference to a QuestionnaireResponse of prepopulated data based 
 * value[x] only Reference
 * valueReference only Reference(QuestionnaireResponse)
 
-Extension:   ResourceDescription
-Id:          resourcedescription
-Title:       "Resource Description"
-Description: "A markdown text natural language description of the resource instance and its use
+Extension:   ResourceNameAndDescription
+Id:          resourcenameanddescription
+Title:       "Resource Name And Description"
+Description: "A natural language name of the resource instance and a markdown text natural language description of the resource instance and its use
 
-*Note: The Primary intent of this extension is to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*
+*Note: The Primary intent of this extension is to provide natural language names for implementation guide examples and to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*
 "
 * ^context.type = #element
 * ^context.expression = "Resource.meta"
-* value[x] only markdown
-
-Extension:   ResourceName
-Id:          resourcename
-Title:       "Resource Name"
-Description: "A natural language description of the resource instance
-
-*Note: The Primary intent of this extension is to provide natural language names for implementation guide examples. Production systems SHOULD NOT use this extension.*
-"
-* ^context.type = #element
-* ^context.expression = "Resource.meta"
-* value[x] only string
+* extension contains
+    name 0..1 and
+    description 0..1
+* extension[name].value[x] only string
+* extension[description].value[x] only markdown

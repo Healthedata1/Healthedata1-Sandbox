@@ -75,18 +75,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/resourcedescription"
+          "reference": "StructureDefinition/resourcenameanddescription"
         },
-        "name": "Resource Description",
-        "description": "A markdown text natural language description of the resource instance and its use\n\n*Note: The Primary intent of this extension is to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*\n",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/resourcename"
-        },
-        "name": "Resource Name",
-        "description": "A natural language description of the resource instance\n\n*Note: The Primary intent of this extension is to provide natural language names for implementation guide examples. Production systems SHOULD NOT use this extension.*\n",
+        "name": "Resource Name And Description",
+        "description": "A natural language name of the resource instance and a markdown text natural language description of the resource instance and its use\n\n*Note: The Primary intent of this extension is to provide natural language names for and to illustrate to readers how the implementation guide examples are intended to be used. Production systems SHOULD NOT use this extension.*\n",
         "exampleBoolean": false
       },
       {

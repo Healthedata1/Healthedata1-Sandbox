@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="e081ead2-56ed-4c58-8653-864eeab93aaa"/>
+  <id value="93618dc8-344e-4218-b54c-aba1b65670ba"/>
   <meta>
-    <lastUpdated value="2020-10-22T11:58:42.761-07:00"/>
+    <lastUpdated value="2020-10-22T13:20:39.422-07:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -59,7 +59,7 @@
         <name value="DEQMUpdateTypeValueSet"/>
         <title value="DEQM Update Type Value Set"/>
         <status value="active"/>
-        <date value="2020-10-22T11:58:42-07:00"/>
+        <date value="2020-10-22T13:20:39-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -69,8 +69,8 @@
         </contact>
         <description value="Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates"/>
         <expansion>
-          <identifier value="urn:uuid:1df418d0-9c85-4015-8424-ca619744fb53"/>
-          <timestamp value="2020-10-22T11:59:39-07:00"/>
+          <identifier value="urn:uuid:71372a29-5fad-410c-bd68-c324c6766403"/>
+          <timestamp value="2020-10-22T13:21:22-07:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>
@@ -163,7 +163,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2020-10-22T11:58:42-07:00"/>
+        <date value="2020-10-22T13:20:39-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -173,8 +173,8 @@
         </contact>
         <description value="Used to define group characteristic and limited to &#39;location&#39;|...."/>
         <expansion>
-          <identifier value="urn:uuid:e4b55ae6-1248-4829-a2fc-a97c8255c452"/>
-          <timestamp value="2020-10-22T11:59:43-07:00"/>
+          <identifier value="urn:uuid:13ac0a21-5578-48a5-908c-af888eb78d6e"/>
+          <timestamp value="2020-10-22T13:21:24-07:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
