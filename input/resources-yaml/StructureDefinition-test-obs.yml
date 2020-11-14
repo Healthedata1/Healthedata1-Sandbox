@@ -1,0 +1,62 @@
+resourceType: StructureDefinition
+id: test-obs
+url: 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs'
+version: 3.1.1
+name: USCoreLaboratoryResultObservationProfile
+title: US Core Laboratory Result Observation Profile
+status: active
+experimental: false
+date: '2020-06-27'
+publisher: HL7 US Realm Steering Committee
+contact:
+  - telecom:
+      - system: url
+        value: 'http://www.healthit.gov'
+description: >-
+  Defines constraints and extensions on the Observation resource for the minimal
+  set of data to query and retrieve laboratory test results
+jurisdiction:
+  - coding:
+      - system: 'urn:iso:std:iso:3166'
+        code: US
+        display: United States of America
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: Observation
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Observation'
+derivation: constraint
+differential:
+  element:
+    - id: Observation
+      path: Observation
+    - id: 'Observation.effective[x]'
+      path: 'Observation.effective[x]'
+      definition: >-
+        For lab tests this is the specimen collection date.  For Ask at Order
+        Entry Questions (AOE)'s this is the date the question was asked.
+      min: 0
+      max: '1'
+      type:
+        - code: dateTime
+          extension:
+            - url: 'http://hl7.org/fhir/StructureDefinition/type-must-support'
+              valueBoolean: true
+        - code: Period
+        - code: Timing
+        - code: instant
+      condition:
+        - us-core-1
+      constraint:
+        - key: us-core-1
+          severity: error
+          human: Datetime must be at least to day.
+          expression: >-
+            Observation.effectiveDateTime.exists() implies
+            Observation.effectiveDateTime.toString().length() >= 8
+          xpath: >-
+            f:matches(effectiveDateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)
+      mustSupport: true
+      mapping:
+        - identity: argonaut-dq-dstu2
+          map: 'Observation.effective[x]'

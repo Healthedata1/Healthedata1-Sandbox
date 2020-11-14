@@ -1,3 +1,4 @@
+/*
 Extension:   DEQMMeasureScoring
 Id:          extension-measureScoring
 Title:       "DEQM Measure Scoring Extension"
@@ -30,6 +31,7 @@ Id:          update-type
 Title:       "DEQM Update Type Value Set"
 Description: "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates"
 * codes from system DEQMUpdateTypeCodeSystem
+*/
 
 Extension:   PatientListQuestionnaire
 Id:          patientlistquestionnaire
