@@ -51,6 +51,7 @@ Description: "A reference to a QuestionnaireResponse of prepopulated data based 
 * value[x] only Reference
 * valueReference only Reference(QuestionnaireResponse)
 
+/*
 Extension:   ResourceDescription
 Id:          resourcedescription
 Title:       "Resource Description"
@@ -62,7 +63,7 @@ Description: "A markdown text natural language description of the resource insta
 * ^context.expression = "Resource.meta"
 * value[x] only markdown
 
-Extension:   ResourceName
+Extension:   ResourceNames
 Id:          resourcename
 Title:       "Resource Name"
 Description: "A natural language description of the resource instance
@@ -72,3 +73,4 @@ Description: "A natural language description of the resource instance
 * ^context.type = #element
 * ^context.expression = "Resource.meta"
 * value[x] only string
+*/
