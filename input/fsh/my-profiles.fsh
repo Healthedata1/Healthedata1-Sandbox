@@ -19,7 +19,7 @@ Description: "Profile on the R4 Group resource to for [Argonaut Patient List Pro
 * code        ^comment = "although generally omitted for persons I think should be silent"
 * quantity MS
 * quantity   ^comment = "do we need to include or be silent? I think should be silent at least until we find a need for its inclusion"
-* managingEntity only Reference($USPractitioner | $USOrganization)
+* managingEntity only Reference($USPractitioner or $USOrganization)
 * managingEntity MS
 * managingEntity ^requirements = "Used for searching for user or system-maintained lists"
 * characteristic  ^requirements = "Used for searching for by group parameter such as location"
@@ -34,7 +34,7 @@ Description: "Profile on the R4 Group resource to for [Argonaut Patient List Pro
 * characteristic.period MS
 * member MS
 * member ^comment = "enumerated list of members"
-* member.entity only Reference($USPatient | ArgonautPatientListProfile)
+* member.entity only Reference($USPatient or ArgonautPatientListProfile)
  * member.entity ^comment = "Group with different characteristics can be combined to create a union of characteristic, for example a group of patients at location = Location1 or Location2 or a group of patients at location = Location1 or Practitioner = Practitioner2"
 * member.entity MS
 * member.entity.extension contains PatientListQuestionnaireResponse named qr-ref 1..1
@@ -50,7 +50,7 @@ Description: "Profile on the R4 Group resource to for [Argonaut Patient List Pro
 CodeSystem:  ArgonautGroupCharacteristicCodeSystem
 Id:          argo-group-characteristic
 Title:       "Argonaut Group Characteristic Code System"
-Description: "Used to define group characteristic and limited to 'location'| 'team' | 'organization' | 'practitioner'"
+Description: "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'"
 * #location         "Location"         "Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)"
 * #team         "CareTeam"         "Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)"
 * #organization         "Organization"         "Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)"
@@ -60,7 +60,7 @@ Description: "Used to define group characteristic and limited to 'location'| 'te
 ValueSet:  ArgonautGroupCharacteristicValueSet
 Id:          argo-group-characteristic
 Title:       "Argonaut Group Characteristic Value Set"
-Description: "Used to define group characteristic and limited to 'location'|...."
+Description: "Used to define group characteristic and limited to 'location'or...."
 * codes from system ArgonautGroupCharacteristicCodeSystem
 
 
