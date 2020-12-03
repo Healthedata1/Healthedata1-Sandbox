@@ -172,7 +172,7 @@
               CareTeam.participant, CareTeam.careteam-via-intermediary, Endpoint.endpoint-via-intermediary, HealthcareService.healthcareservice-via-intermediary, Location.location-via-intermediary, Organization.network-via-intermediary, Organization.organization-via-intermediary, OrganizationAffiliation.organizationaffiliation-via-intermediary, Practitioner.practitioner-via-intermediary, PractitionerRole.practitionerrole-via-intermediary
             </td><td>
 							
-						</td></tr><tr><td><a href="#organization">Organization</a></td><td><a name="11f96edd-fe9c-43a8-bccd-210a5657cfb6">​</a><a href="StructureDefinition-vhdir-organization.html">VhDir Organization</a>, 
+						</td></tr><tr><td><a href="#organization">Organization</a></td><td><a name="5dee02b2-b096-4d0d-95e2-4a9d5c20e462">​</a><a href="StructureDefinition-vhdir-organization.html">VhDir Organization</a>, 
 
 						<a href="StructureDefinition-vhdir-network.html">VhDir Network</a></td><td>
 							
@@ -237,7 +237,7 @@
               CareTeam.participant
             </td><td>
 							
-						</td></tr><tr><td><a href="#endpoint">Endpoint</a></td><td><a name="ebea5530-875f-46cb-887e-420108b2752a">​</a><a href="StructureDefinition-vhdir-endpoint.html">VhDir Endpoint</a></td><td>
+						</td></tr><tr><td><a href="#endpoint">Endpoint</a></td><td><a name="8f757a4f-26de-4251-9dae-8af305d3d815">​</a><a href="StructureDefinition-vhdir-endpoint.html">VhDir Endpoint</a></td><td>
 							
 							connection-type, identifier-assigner, identifier, mime-type, organization, payload-type, status, usecase-standard, usecase-type, via-intermediary
 							
@@ -261,7 +261,7 @@
               
             </td><td>
 							
-						</td></tr><tr><td><a href="#consent">Consent</a></td><td><a name="c0f5e42a-29b7-4f0b-bb58-ade1ec849ee0">​</a><a href="StructureDefinition-vhdir-restriction.html">VhDir Restriction</a></td><td>
+						</td></tr><tr><td><a href="#consent">Consent</a></td><td><a name="04f1da40-be94-483b-814d-e42562cb4720">​</a><a href="StructureDefinition-vhdir-restriction.html">VhDir Restriction</a></td><td>
 							
 						</td><td>
 							
@@ -315,35 +315,35 @@
 					
 						PractitionerRole.practitionerrole-practitioner - <code class="highlighter-rouge">GET [base]/Practitioner?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-practitioner</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a name="e1df617c-3085-4f56-84c3-8c11d8159e73">​</a><a href="SearchParameter-practitioner-endpoint.html">endpoint</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a name="d1217329-1630-4dd3-b982-ee4d6fe62d1b">​</a><a href="SearchParameter-practitioner-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?endpoint=[endpoint]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="969a94c7-bf38-45b0-abae-c4132baba1bd">​</a><a href="SearchParameter-practitioner-family-name.html">family</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?endpoint=[endpoint]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="f237774a-2d04-4801-83d9-d4265c33d599">​</a><a href="SearchParameter-practitioner-family-name.html">family</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?family=[family]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="5c965245-a67e-47f9-b6ba-f60b42217435">​</a><a href="SearchParameter-practitioner-given-name.html">given</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?family=[family]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="e7251aea-cf00-4eaf-8e57-b80583ea0bd4">​</a><a href="SearchParameter-practitioner-given-name.html">given</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?given=[given]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="99350d23-3189-4baf-a285-f92d6882a8bf">​</a><a href="SearchParameter-practitioner-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?given=[given]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="20759eb6-2d33-4ddb-93a7-35e4a5d74e4f">​</a><a href="SearchParameter-practitioner-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d5bd62c7-7170-4b80-8fdd-3a7b88d3267a">​</a><a href="SearchParameter-practitioner-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="5ce8575d-b249-40ec-922a-15bd9a202945">​</a><a href="SearchParameter-practitioner-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="4a5713a7-eb61-4653-a153-60a270f2418b">​</a><a href="SearchParameter-practitioner-name.html">name</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="33270ce8-e390-43de-99db-5303f00b7410">​</a><a href="SearchParameter-practitioner-name.html">name</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?name=[name]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="d5ee290b-c7c4-4f1a-a199-09e5087814b7">​</a><a href="SearchParameter-practitioner-qualification-code.html">qualification-code</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?name=[name]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="85f9d138-ab2c-4eb3-a769-c67ebcf1f3b7">​</a><a href="SearchParameter-practitioner-qualification-code.html">qualification-code</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="545ad013-7b09-449e-8d24-3931625e2b30">​</a><a href="SearchParameter-practitioner-qualification-issuer.html">qualification-issuer</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="902483f1-8051-4f19-86a2-1913c06506e5">​</a><a href="SearchParameter-practitioner-qualification-issuer.html">qualification-issuer</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-issuer=[qualification-issuer]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="6b1b5fee-a1db-49ed-aa60-c1bcfc87c706">​</a><a href="SearchParameter-practitioner-qualification-status.html">qualification-status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-issuer=[qualification-issuer]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="17949011-98c1-4adf-8dbe-7d2c64f08b50">​</a><a href="SearchParameter-practitioner-qualification-status.html">qualification-status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d80718c4-81a5-4703-880b-ed7c9a8be0f4">​</a><a href="SearchParameter-practitioner-qualification-period.html">qualification-period</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="4f6f1c06-b8e9-40f4-ae24-019bd9c1dda9">​</a><a href="SearchParameter-practitioner-qualification-period.html">qualification-period</a></td><td>
 							date
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-period=[qualification-period]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="d2104307-6e2a-4058-8098-90cdd12be96d">​</a><a href="SearchParameter-practitioner-qualification-wherevalid-code.html">qualification-wherevalid-code</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-period=[qualification-period]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="875cce2d-ed3b-4ff5-bfe0-f59aad491288">​</a><a href="SearchParameter-practitioner-qualification-wherevalid-code.html">qualification-wherevalid-code</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-wherevalid-code=[system]|[code]</code></td></tr><tr><td><strong>undefined</strong></td><td><a name="7fc36679-0ee0-4b90-a2ea-46880eabe08a">​</a><a href="SearchParameter-practitioner-qualification-wherevalid-location.html">qualification-wherevalid-location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-wherevalid-code=[system]|[code]</code></td></tr><tr><td><strong>undefined</strong></td><td><a name="112a17b7-8ff0-492d-a94c-89d5cfcd4ef4">​</a><a href="SearchParameter-practitioner-qualification-wherevalid-location.html">qualification-wherevalid-location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-wherevalid-location=[qualification-wherevalid-location]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="3f18aff6-5255-4934-a630-ecd87d3f8bb6">​</a><a href="SearchParameter-practitioner-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?qualification-wherevalid-location=[qualification-wherevalid-location]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="54ac32d7-2bcf-4c17-a370-746b0a0f809d">​</a><a href="SearchParameter-practitioner-via-intermediary.html">via-intermediary</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="16048332-50fe-4bca-9255-fd30ef697435">​</a><a href="null">active</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="8af62b32-b050-4af5-9eeb-a8b146f01077">​</a><a href="null">active</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?active=[system]|[code]</code></td></tr><tr><td><strong>undefined</strong></td><td><a name="b65d661e-44e5-46b4-8ad8-2b85be39780a">​</a><a href="SearchParameter-practitioner-phonetic.html">phonetic</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?active=[system]|[code]</code></td></tr><tr><td><strong>undefined</strong></td><td><a name="6acf7cae-e95d-4fa9-9203-7a361d13b59c">​</a><a href="SearchParameter-practitioner-phonetic.html">phonetic</a></td><td>
 							string
 						</td><td><code class="highlighter-rouge">GET [base]/Practitioner?phonetic=[phonetic]</code></td></tr></tbody></table><hr/><h4 id="practitionerrole" class="no_toc">PractitionerRole</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p>Reference Policy: <code>literal</code>, <code>local</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
 																							<code>read</code>, 
@@ -404,45 +404,45 @@
 					
 						PractitionerRole.practitionerrole-via-intermediary - <code class="highlighter-rouge">GET [base]/PractitionerRole?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-via-intermediary</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a name="fcd500f3-5445-4798-b644-0f6567235433">​</a><a href="SearchParameter-practitionerrole-endpoint.html">endpoint</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a name="a124ac9a-16fe-477b-841c-0e672b1e70aa">​</a><a href="SearchParameter-practitionerrole-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="263e2ba1-58a2-4aa5-919b-82fa2761b19c">​</a><a href="SearchParameter-practitionerrole-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="47821140-0080-4e55-80d3-da0b15f2ca0b">​</a><a href="SearchParameter-practitionerrole-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="100dde1e-3ddb-4f90-9415-afa6cbea06a4">​</a><a href="SearchParameter-practitionerrole-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="40b2da08-196a-49bb-b369-b62cff0a9e35">​</a><a href="SearchParameter-practitionerrole-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="aa9b24ec-49ea-4123-bc2c-69c635a30d6c">​</a><a href="SearchParameter-practitionerrole-location.html">location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="86231165-df29-40b5-9ccc-890346921773">​</a><a href="SearchParameter-practitionerrole-location.html">location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="edf45099-23e3-4146-b962-b5599bf946c9">​</a><a href="SearchParameter-practitionerrole-network.html">network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="d25539e8-3296-4c82-a261-1b54a93d3be2">​</a><a href="SearchParameter-practitionerrole-network.html">network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?network=[network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="70d6c981-4a86-4cd9-8048-77aca4a2229d">​</a><a href="SearchParameter-practitionerrole-new-patient-network.html">new-patient-network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?network=[network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b609e472-4112-43b5-8fc5-c2bbe5c17a71">​</a><a href="SearchParameter-practitionerrole-new-patient-network.html">new-patient-network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?new-patient-network=[new-patient-network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="3c37bd71-cb92-4cc5-be5b-7471f28e66fa">​</a><a href="SearchParameter-practitionerrole-new-patient.html">new-patient</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?new-patient-network=[new-patient-network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c3da5cf9-e287-409b-bd01-5609004daeb1">​</a><a href="SearchParameter-practitionerrole-new-patient.html">new-patient</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?new-patient=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="e631cc8f-440b-4c5a-9a5e-a21ba0b44ed6">​</a><a href="SearchParameter-practitionerrole-organization.html">organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?new-patient=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="87d029bf-da84-4bc3-a633-bc00eb4db030">​</a><a href="SearchParameter-practitionerrole-organization.html">organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?organization=[organization]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="400eeab7-d8a0-4298-a15a-6dfce11425e6">​</a><a href="SearchParameter-practitionerrole-practitioner.html">practitioner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?organization=[organization]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="76a48278-3284-405e-85fd-b2d2136e11df">​</a><a href="SearchParameter-practitionerrole-practitioner.html">practitioner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?practitioner=[practitioner]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c5d12fe4-8ca0-467c-a98f-363d8f1812df">​</a><a href="SearchParameter-practitionerrole-qualification-code.html">qualification-code</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?practitioner=[practitioner]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="6c8fad75-7c8e-4f60-8293-fc4df66cebc7">​</a><a href="SearchParameter-practitionerrole-qualification-code.html">qualification-code</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="4bab0f42-8966-4b97-a690-edf7f3f31222">​</a><a href="SearchParameter-practitionerrole-qualification-issuer.html">qualification-issuer</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="46b8e571-4686-47b9-9b9f-588d51e28f39">​</a><a href="SearchParameter-practitionerrole-qualification-issuer.html">qualification-issuer</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-issuer=[qualification-issuer]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d196726c-7a18-4a63-9262-dad9a7b5a6f5">​</a><a href="SearchParameter-practitionerrole-qualification-status.html">qualification-status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-issuer=[qualification-issuer]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="731d6b1c-223e-4feb-9bbe-9e0872e89898">​</a><a href="SearchParameter-practitionerrole-qualification-status.html">qualification-status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-status=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c4cc2bcc-e2e5-4f43-90d0-f7ebfd9c9d18">​</a><a href="SearchParameter-practitionerrole-qualification-wherevalid-code.html">qualification-wherevalid-code</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-status=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="8c6d4d19-2080-4f40-b3fb-25a3776c0fb4">​</a><a href="SearchParameter-practitionerrole-qualification-wherevalid-code.html">qualification-wherevalid-code</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-wherevalid-code=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="1e2dbaf1-fda4-47be-a881-4fe3ea00aba9">​</a><a href="SearchParameter-practitionerrole-qualification-wherevalid-location.html">qualification-wherevalid-location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-wherevalid-code=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="decfd424-d6df-4b69-8e5f-58e61f5dc3b9">​</a><a href="SearchParameter-practitionerrole-qualification-wherevalid-location.html">qualification-wherevalid-location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-wherevalid-location=[qualification-wherevalid-location]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="b24451a5-1227-4c3c-a471-85bd6f5e1c7e">​</a><a href="SearchParameter-practitionerrole-role.html">role</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?qualification-wherevalid-location=[qualification-wherevalid-location]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="c68e5670-e12b-4476-bc90-9c5c0b752962">​</a><a href="SearchParameter-practitionerrole-role.html">role</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?role=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="255df637-b202-49fb-a5ea-d0e80f5b9514">​</a><a href="SearchParameter-practitionerrole-service.html">service</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?role=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="fed92cba-8958-4e6a-95a5-bfffd8b8d8fd">​</a><a href="SearchParameter-practitionerrole-service.html">service</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?service=[service]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c82f77c2-94e4-44c2-9a89-024b39b1e16c">​</a><a href="SearchParameter-practitionerrole-specialty.html">specialty</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?service=[service]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="1d83ddb1-e4f2-4090-99df-9379efd86f1a">​</a><a href="SearchParameter-practitionerrole-specialty.html">specialty</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?specialty=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="86e121ad-c706-48e0-bbeb-e8b0e65e137b">​</a><a href="SearchParameter-practitionerrole-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?specialty=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="7e50f999-79b4-4c4e-bf90-d2257ef22dcb">​</a><a href="SearchParameter-practitionerrole-via-intermediary.html">via-intermediary</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="82097f73-e5f7-4219-b305-f700fe51d481">​</a><a href="null">active</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="8ae69708-fcc0-46d2-9fc9-33f3fb056d82">​</a><a href="null">active</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?active=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="organization" class="no_toc">Organization</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p><a name="1dab093b-fb34-4241-b936-7da897d4b0dc">​</a>Supported Profiles:
+						</td><td><code class="highlighter-rouge">GET [base]/PractitionerRole?active=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="organization" class="no_toc">Organization</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p><a name="c576597e-e426-45ee-b83e-89ac99acaf27">​</a>Supported Profiles:
 				
 											<a href="StructureDefinition-vhdir-organization.html">VhDir Organization</a>, 
 				
@@ -571,45 +571,45 @@
 					
 						PractitionerRole.practitionerrole-network - <code class="highlighter-rouge">GET [base]/Organization?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-network</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="c38ee417-087a-42c2-a5e1-d45d063a6d04">​</a><a href="null">active</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="c3cce7a4-4a53-4109-9410-f5446be01c11">​</a><a href="null">active</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?active=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="91a17e9a-47b4-4797-aa20-42663a9c06ad">​</a><a href="SearchParameter-organization-address-country.html">address-country</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?active=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="82d56c59-c611-4009-9bfc-1badff4c4de6">​</a><a href="SearchParameter-organization-address-country.html">address-country</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-country=[address-country]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="697953b3-4595-4a6f-bee1-32cb30e55ec2">​</a><a href="SearchParameter-organization-address-postalcode.html">address-postalcode</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-country=[address-country]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="fc42483f-4133-4ff6-986d-cf3ef362c9ef">​</a><a href="SearchParameter-organization-address-postalcode.html">address-postalcode</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-postalcode=[address-postalcode]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="f4b73380-2264-427e-8f7b-07109f9da422">​</a><a href="SearchParameter-organization-address-state.html">address-state</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-postalcode=[address-postalcode]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="96b84222-ad82-4f59-ae5f-8fc61463bbf6">​</a><a href="SearchParameter-organization-address-state.html">address-state</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-state=[address-state]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="c7081d06-46e8-4270-b7ea-b7d83933090d">​</a><a href="SearchParameter-organization-address.html">address</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-state=[address-state]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="9c9eace8-25c0-4717-a062-69487281d2a7">​</a><a href="SearchParameter-organization-address.html">address</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?address=[address]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="6c28b491-ac37-4a8c-b2eb-c3ac2e872ff5">​</a><a href="SearchParameter-organization-endpoint.html">endpoint</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address=[address]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="9229f7f3-6876-4322-b662-3288f370da68">​</a><a href="SearchParameter-organization-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="df030785-3bba-4aa3-8237-05f17a1a9601">​</a><a href="SearchParameter-organization-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="e5379f41-0515-44c0-afde-3fa0d8685d95">​</a><a href="SearchParameter-organization-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="2aac12e2-1406-4d27-857f-3c651b4ca1ae">​</a><a href="SearchParameter-organization-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="8644fcae-abd1-47d0-9e3b-678a12fe2aae">​</a><a href="SearchParameter-organization-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="225e41f9-88f5-45b8-83ed-aceb5931f0f2">​</a><a href="SearchParameter-organization-name.html">name</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="611a56ab-af46-413c-aab3-c03be7a34a99">​</a><a href="SearchParameter-organization-name.html">name</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="3974276e-1c46-4d15-bac1-c6f30943eba9">​</a><a href="SearchParameter-organization-partof.html">partof</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="cc68a13c-ff8a-4f45-9fe7-93c0e4c5e50a">​</a><a href="SearchParameter-organization-partof.html">partof</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?partof=[partof]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="de0e91b4-9d85-4bb7-9c55-c3d363a6a8d9">​</a><a href="SearchParameter-organization-qualification-code.html">qualification-code</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?partof=[partof]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="2b0aad02-4b68-44d4-b25c-c5032a82ec68">​</a><a href="SearchParameter-organization-qualification-code.html">qualification-code</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="13e46e04-6ae5-4dcc-8446-17e32795794c">​</a><a href="SearchParameter-organization-qualification-issuer.html">qualification-issuer</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-code=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="ccbf856e-2970-49a4-a16a-562c21d20f53">​</a><a href="SearchParameter-organization-qualification-issuer.html">qualification-issuer</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-issuer=[qualification-issuer]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="7738cfb4-6b9a-448c-8894-0982478af4e8">​</a><a href="SearchParameter-organization-qualification-status.html">qualification-status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-issuer=[qualification-issuer]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="3ef19c98-a560-4905-986b-9452d3f4592f">​</a><a href="SearchParameter-organization-qualification-status.html">qualification-status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-status=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="e3ee4fdf-132d-49ef-8619-62d0acd7b85f">​</a><a href="SearchParameter-organization-qualification-wherevalid-code.html">qualification-wherevalid-code</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-status=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="04c61131-2287-4609-8f60-4cd6514166e4">​</a><a href="SearchParameter-organization-qualification-wherevalid-code.html">qualification-wherevalid-code</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-wherevalid-code=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="91a36038-930f-4474-8d09-9cfa8e9d4b77">​</a><a href="SearchParameter-organization-qualification-wherevalid-location.html">qualification-wherevalid-location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-wherevalid-code=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="cad3e6f6-a17c-49fb-911c-c1e99fcd25db">​</a><a href="SearchParameter-organization-qualification-wherevalid-location.html">qualification-wherevalid-location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-wherevalid-location=[qualification-wherevalid-location]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="9f766ccc-01e2-42d6-91ce-9acffa5e996a">​</a><a href="SearchParameter-organization-type.html">type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?qualification-wherevalid-location=[qualification-wherevalid-location]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="7ff77b84-ef55-474d-83d1-45ce9733e1e4">​</a><a href="SearchParameter-organization-type.html">type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="f5aed865-4497-4c66-a872-94fefa1c22f3">​</a><a href="SearchParameter-organization-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="31a94b06-9a2a-485b-a234-2434c7f0f915">​</a><a href="SearchParameter-organization-via-intermediary.html">via-intermediary</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="3db10cb4-74e1-4d58-ae03-b472c1a93ff6">​</a><a href="null">address-use</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="737e8e52-5e6a-4623-b7db-296ae4bb4da2">​</a><a href="null">address-use</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-use=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="a6cb221d-47e1-46c1-94cd-c1ff31a8a50b">​</a><a href="SearchParameter-organization-address-city.html">address-city</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-use=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="77e9fce7-666a-4793-a426-4f7b33cb417a">​</a><a href="SearchParameter-organization-address-city.html">address-city</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-city=[address-city]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="1ddcb52d-6439-4977-8e74-fb49e525c505">​</a><a href="SearchParameter-organization-coverage-area.html">coverage-area</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Organization?address-city=[address-city]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="7f779f60-af7d-4482-8fe8-b45619002181">​</a><a href="SearchParameter-organization-coverage-area.html">coverage-area</a></td><td>
 							reference
 						</td><td><code class="highlighter-rouge">GET [base]/Organization?coverage-area=[coverage-area]</code></td></tr></tbody></table><hr/><h4 id="organizationaffiliation" class="no_toc">OrganizationAffiliation</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p>Reference Policy: <code>literal</code>, <code>local</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
 																							<code>read</code>, 
@@ -662,29 +662,29 @@
 					
 						PractitionerRole.practitionerrole-via-intermediary - <code class="highlighter-rouge">GET [base]/OrganizationAffiliation?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-via-intermediary</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a name="cace554f-8b6d-4a0e-9f88-e7259df24fea">​</a><a href="SearchParameter-organizationaffiliation-endpoint.html">endpoint</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a name="a63a1c26-3f0e-4ada-aaa6-93978069ada5">​</a><a href="SearchParameter-organizationaffiliation-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="82d0409a-45bc-4b21-ac02-aef509aae386">​</a><a href="SearchParameter-organizationaffiliation-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="f3a72b8a-7dd3-4682-92d9-a6d1e0439d08">​</a><a href="SearchParameter-organizationaffiliation-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="9d55204a-4c8d-411b-92dc-1bcb95cdfaa6">​</a><a href="SearchParameter-organizationaffiliation-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="1867a8f1-4e1d-4bf2-af1d-cbdd865658e3">​</a><a href="SearchParameter-organizationaffiliation-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="6440aca6-9c25-4b20-97aa-089ded50139e">​</a><a href="SearchParameter-organizationaffiliation-location.html">location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="9b098a5d-db7a-4f77-bae6-eda144121ebd">​</a><a href="SearchParameter-organizationaffiliation-location.html">location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="a555225f-d468-4e66-b31c-4b5145358dba">​</a><a href="SearchParameter-organizationaffiliation-network.html">network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="fb934570-853e-4270-b68d-a7dd62eef1b3">​</a><a href="SearchParameter-organizationaffiliation-network.html">network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?network=[network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="fd9e99b1-b84c-4929-8225-9c4414ff2eae">​</a><a href="SearchParameter-organizationaffiliation-participating-organization.html">participating-organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?network=[network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="26b24f86-280a-4a8c-8a61-2d4dce44c4ba">​</a><a href="SearchParameter-organizationaffiliation-participating-organization.html">participating-organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?participating-organization=[participating-organization]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="523a1988-c7bf-45ee-ba44-a0057fcd30e3">​</a><a href="SearchParameter-organizationaffiliation-primary-organization.html">primary-organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?participating-organization=[participating-organization]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="3dab38ef-cff2-45ff-944e-2756348c468c">​</a><a href="SearchParameter-organizationaffiliation-primary-organization.html">primary-organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?primary-organization=[primary-organization]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="1fb87672-f3cf-4a7a-bf09-076759ba399f">​</a><a href="SearchParameter-organizationaffiliation-role.html">role</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?primary-organization=[primary-organization]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="481ebfae-d365-4570-b814-9c7717fda787">​</a><a href="SearchParameter-organizationaffiliation-role.html">role</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?role=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="2aa3d1f9-5934-4668-bd02-d478722f2637">​</a><a href="SearchParameter-organizationaffiliation-service.html">service</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?role=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="70758a3a-91e4-4d33-bf0e-b07ca1a712e0">​</a><a href="SearchParameter-organizationaffiliation-service.html">service</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?service=[service]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="0f710f80-dc6c-4789-90c5-567cb27abdd7">​</a><a href="SearchParameter-organizationaffiliation-specialty.html">specialty</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?service=[service]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b074bd55-9790-45bc-9135-01ad4744dfb6">​</a><a href="SearchParameter-organizationaffiliation-specialty.html">specialty</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?specialty=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="7f081ce3-ab13-4dae-8cd1-19c7791614e1">​</a><a href="SearchParameter-organizationaffiliation-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?specialty=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="f084cec1-6b21-4247-ad0e-ef56839167eb">​</a><a href="SearchParameter-organizationaffiliation-via-intermediary.html">via-intermediary</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="326123e0-3353-4876-a886-62a5eab80477">​</a><a href="null">active</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="ae07ea98-ee89-49d8-b7e6-0e99da780bdb">​</a><a href="null">active</a></td><td>
 							token
 						</td><td><code class="highlighter-rouge">GET [base]/OrganizationAffiliation?active=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="healthcareservice" class="no_toc">HealthcareService</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p>Reference Policy: <code>literal</code>, <code>local</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
 																							<code>read</code>, 
@@ -723,37 +723,37 @@
 					
 						PractitionerRole.practitionerrole-service - <code class="highlighter-rouge">GET [base]/HealthcareService?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-service</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="c384ec1f-9379-4117-b649-78e02e5adecf">​</a><a href="SearchParameter-healthcareservice-service-category.html">service-category</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="a28f6df6-7f0f-43c2-b019-8c89d5185878">​</a><a href="SearchParameter-healthcareservice-service-category.html">service-category</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?service-category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="b868fda6-8c08-4d54-9228-b0439827e5d9">​</a><a href="SearchParameter-healthcareservice-characteristic.html">characteristic</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?service-category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="5a928a8d-2756-483a-9f4f-9c10729d4916">​</a><a href="SearchParameter-healthcareservice-characteristic.html">characteristic</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?characteristic=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="0970440a-0e88-428f-9028-ac51fcdd339e">​</a><a href="SearchParameter-healthcareservice-coverage-area.html">coverage-area</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?characteristic=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="708538aa-6d74-4b75-a8cb-fda995908361">​</a><a href="SearchParameter-healthcareservice-coverage-area.html">coverage-area</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?coverage-area=[coverage-area]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="5c143344-bf41-4de7-a02d-d3493fad802b">​</a><a href="SearchParameter-healthcareservice-eligibility.html">eligibility</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?coverage-area=[coverage-area]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="1f15ce3d-1409-482e-94f1-9c4187065039">​</a><a href="SearchParameter-healthcareservice-eligibility.html">eligibility</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?eligibility=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="90bc8f3a-5d29-4d82-a1fd-cf92bec392c1">​</a><a href="SearchParameter-healthcareservice-endpoint.html">endpoint</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?eligibility=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="784a37f8-df76-42fd-a8bf-158da109a71b">​</a><a href="SearchParameter-healthcareservice-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="77cd91da-66d5-4b3e-9694-9df0fee67382">​</a><a href="SearchParameter-healthcareservice-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="0022355b-5f25-4b91-93e0-3c69d7801d70">​</a><a href="SearchParameter-healthcareservice-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="fff93062-9cc5-46cd-970f-be95d78756b3">​</a><a href="SearchParameter-healthcareservice-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="bf453729-26be-4edb-8a3f-be37891f7ebe">​</a><a href="SearchParameter-healthcareservice-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="5685fe98-ce21-4c4a-9cbf-e9815239f254">​</a><a href="SearchParameter-healthcareservice-location.html">location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="782a99e7-0e57-4890-a69f-111c1d76c5ba">​</a><a href="SearchParameter-healthcareservice-location.html">location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="7cdaba0b-e746-4b2a-9379-4f37e1d8c312">​</a><a href="SearchParameter-healthcareservice-name.html">name</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b5d85720-8bd8-42d6-b02c-1c4be7109267">​</a><a href="SearchParameter-healthcareservice-name.html">name</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?name=[name]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="515ed1aa-5463-43a9-b3f1-61c23fa694a5">​</a><a href="SearchParameter-healthcareservice-new-patient-network.html">new-patient-network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?name=[name]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="004f4db2-ddda-4d30-90e4-5791092f1719">​</a><a href="SearchParameter-healthcareservice-new-patient-network.html">new-patient-network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?new-patient-network=[new-patient-network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="32109b56-3436-4df2-bbed-f395b4c7dba8">​</a><a href="SearchParameter-healthcareservice-new-patient.html">new-patient</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?new-patient-network=[new-patient-network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="1458ea6c-1fbe-44c4-9e7b-3ff7bcfd29ce">​</a><a href="SearchParameter-healthcareservice-new-patient.html">new-patient</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?new-patient=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="8649001c-0095-4d68-94e4-79cf4d3aefcf">​</a><a href="SearchParameter-healthcareservice-organization.html">organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?new-patient=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d446815b-eed6-4918-9b13-3dd459d89d26">​</a><a href="SearchParameter-healthcareservice-organization.html">organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="8cce67f6-e120-4fce-b60c-73c3c14ad31e">​</a><a href="SearchParameter-healthcareservice-specialty.html">specialty</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="19429a75-10d6-42bb-b484-dc8dd8ce274f">​</a><a href="SearchParameter-healthcareservice-specialty.html">specialty</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?specialty=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="109e5445-83eb-4d6f-81b5-7434bd708d7a">​</a><a href="SearchParameter-healthcareservice-service-type.html">service-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?specialty=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="cee079bf-f1bf-4b2d-8bc9-d1a5eb7c58b7">​</a><a href="SearchParameter-healthcareservice-service-type.html">service-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?service-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="f3689800-b320-40d9-9d3a-0a4ee0408d00">​</a><a href="SearchParameter-healthcareservice-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?service-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="afe61b08-74a0-4ccf-8576-944f3f8591f5">​</a><a href="SearchParameter-healthcareservice-via-intermediary.html">via-intermediary</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="3195a21c-8d9a-4968-a68b-6ec76352037b">​</a><a href="null">active</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="b7a75359-fc3e-4313-b4a4-93a856f90bca">​</a><a href="null">active</a></td><td>
 							token
 						</td><td><code class="highlighter-rouge">GET [base]/HealthcareService?active=[system]|[code]</code></td></tr></tbody></table><hr/><h4 id="location" class="no_toc">Location</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p>Reference Policy: <code>literal</code>, <code>local</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
 																							<code>read</code>, 
@@ -826,33 +826,33 @@
 					
 						PractitionerRole.practitionerrole-via-intermediary - <code class="highlighter-rouge">GET [base]/Location?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-via-intermediary</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a name="70d22f62-fd3a-4edc-9078-f5bd3c225cb0">​</a><a href="SearchParameter-location-accessibility.html">accessibility</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a name="88ad0e41-2fdc-4ea5-b4e9-02a4995a88a9">​</a><a href="SearchParameter-location-accessibility.html">accessibility</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Location?accessibility=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="1842fe91-374d-4e76-b6e3-21989a473035">​</a><a href="SearchParameter-location-address.html">address</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?accessibility=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="92ec02fa-67bc-49f7-8b7b-750b26b011ad">​</a><a href="SearchParameter-location-address.html">address</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/Location?address=[address]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="ce1b9c65-aac6-4b71-a8ff-0e75d42e7497">​</a><a href="SearchParameter-location-endpoint.html">endpoint</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?address=[address]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="966ae147-e86b-4ba3-8bac-9aaddc8ac906">​</a><a href="SearchParameter-location-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Location?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="8e2cfd88-777a-49d8-b638-31fe12fa5f23">​</a><a href="SearchParameter-location-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="f5a8dfa6-e526-4edf-aa1b-437612c1d615">​</a><a href="SearchParameter-location-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Location?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="aff59a2d-a265-4642-9b4b-4f8e5386114f">​</a><a href="SearchParameter-location-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d4ac6ed8-6ba9-4827-9c63-8722b575dd9f">​</a><a href="SearchParameter-location-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Location?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="9b3b373f-56a8-4435-b9b4-ad6481b309d4">​</a><a href="SearchParameter-location-new-patient-network.html">new-patient-network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="db183e73-4210-492f-a416-24cd0f0e0bad">​</a><a href="SearchParameter-location-new-patient-network.html">new-patient-network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Location?new-patient-network=[new-patient-network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="cf48658a-6842-4ba3-b741-6e73ab860318">​</a><a href="SearchParameter-location-new-patient.html">new-patient</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?new-patient-network=[new-patient-network]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="81fcaa9c-82f0-4814-81aa-718340286b75">​</a><a href="SearchParameter-location-new-patient.html">new-patient</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Location?new-patient=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="70d4400c-9f60-4248-a7b0-94adc7b721e9">​</a><a href="SearchParameter-location-organization.html">organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?new-patient=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="a884bdfa-c125-4d13-b253-cdcedcb4886d">​</a><a href="SearchParameter-location-organization.html">organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Location?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="e330ec83-7666-4336-9b6c-0f3c5020433c">​</a><a href="SearchParameter-location-partof.html">partof</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="61f9f5fb-a1e6-432f-bcf0-3e2679d8d266">​</a><a href="SearchParameter-location-partof.html">partof</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Location?partof=[partof]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="1e93859e-14ba-42ad-9640-a62afedf188f">​</a><a href="SearchParameter-location-contains.html">contains</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?partof=[partof]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="999513ce-e887-4a7f-b102-14cfdbf8b82a">​</a><a href="SearchParameter-location-contains.html">contains</a></td><td>
 							special
-						</td><td><code class="highlighter-rouge">GET [base]/Location?contains=[contains]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="87f38d61-282e-4c8e-8351-d357b63457df">​</a><a href="null">near</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?contains=[contains]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="6e28643c-cefc-4c0d-9118-2a9ee7822ea9">​</a><a href="null">near</a></td><td>
 							special
-						</td><td><code class="highlighter-rouge">GET [base]/Location?near=[near]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="02f09abb-3459-4eec-93db-06d36c127b8b">​</a><a href="SearchParameter-location-status.html">status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?near=[near]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="9ec0b9ac-0cab-4e78-b421-f0c359eb040d">​</a><a href="SearchParameter-location-status.html">status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Location?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="7725fdaf-e673-472c-8dbf-fad1a66865dd">​</a><a href="SearchParameter-location-type.html">type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?status=[status]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="c7f0ce1d-8f39-4ed0-b9b3-c74400aa7aba">​</a><a href="SearchParameter-location-type.html">type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Location?type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="882e1cd6-7d6c-4312-b1e1-6e0554031ecd">​</a><a href="SearchParameter-location-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Location?type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="ed11301c-d131-4533-a7dd-a0c62e49ea37">​</a><a href="SearchParameter-location-via-intermediary.html">via-intermediary</a></td><td>
 							reference
 						</td><td><code class="highlighter-rouge">GET [base]/Location?via-intermediary=[via-intermediary]</code></td></tr></tbody></table><hr/><h4 id="careteam" class="no_toc">CareTeam</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p>Reference Policy: <code>literal</code>, <code>local</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
 																							<code>read</code>, 
@@ -887,29 +887,29 @@
 					
 						CareTeam.participant - <code class="highlighter-rouge">GET [base]/CareTeam?[parameter=value]&amp;_revinclude=CareTeam.participant</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a name="f103f0b2-b57a-48c2-b886-e88de034ffe4">​</a><a href="SearchParameter-careteam-category.html">category</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>MAY</strong></td><td><a name="7b1519cb-864b-4902-b5ab-7d54b70e1098">​</a><a href="SearchParameter-careteam-category.html">category</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?category=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="8b73176d-1d12-4383-9fe1-aacceaff8602">​</a><a href="SearchParameter-careteam-endpoint.html">endpoint</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?category=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="0e02bba2-68d9-42f7-bb88-0187e623a1ed">​</a><a href="SearchParameter-careteam-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="e330f02a-98b4-4fb8-9466-c9eee6839d98">​</a><a href="SearchParameter-careteam-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="93e801e7-4a12-467e-9559-dc7c477e7480">​</a><a href="SearchParameter-careteam-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="36188456-20c8-4f83-8923-ff9da56d29fa">​</a><a href="SearchParameter-careteam-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d0625a52-68a0-4277-8fe1-9e869e477227">​</a><a href="SearchParameter-careteam-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="b1abb8ac-9ca0-4580-8230-7a1a92fc1644">​</a><a href="SearchParameter-careteam-location.html">location</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="7b016957-27ae-4a08-ad50-3e90451dbb73">​</a><a href="SearchParameter-careteam-location.html">location</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b5cb2d77-d5f5-428b-ba06-02b8b6a498c1">​</a><a href="SearchParameter-careteam-name.html">name</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?location=[location]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="29962248-aed3-4ace-9b3e-a8aa7faee9bd">​</a><a href="SearchParameter-careteam-name.html">name</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="93fc5121-dd67-4f12-970c-4728f46be74f">​</a><a href="SearchParameter-careteam-organization.html">organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="94d7c17c-2681-442a-8d5c-e69cb6fecc40">​</a><a href="SearchParameter-careteam-organization.html">organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="ece02dcd-e2d4-4307-9ffb-25451bea16eb">​</a><a href="SearchParameter-careteam-service.html">service</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="8f3275c0-86b6-44c6-be9d-5cc446404fcc">​</a><a href="SearchParameter-careteam-service.html">service</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?service=[service]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="a878d0f9-e00f-4283-ab48-31943562ce5c">​</a><a href="SearchParameter-careteam-status.html">status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?service=[service]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="49fbeebf-408b-4b79-a96b-a0b38fc21eea">​</a><a href="SearchParameter-careteam-status.html">status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?status=[status]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="aedb096a-2ee8-4293-ac04-91e3187357a1">​</a><a href="SearchParameter-careteam-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?status=[status]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="f15846ce-de8c-4ec1-ab12-555676fc25a6">​</a><a href="SearchParameter-careteam-via-intermediary.html">via-intermediary</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="72f91cc1-6073-498e-9b9d-6f7d9cb11449">​</a><a href="SearchParameter-careteam-participant.html">participant</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?via-intermediary=[via-intermediary]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="d8d1b02e-9f98-4ac2-abc1-0a2a028c3c6f">​</a><a href="SearchParameter-careteam-participant.html">participant</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?participant=[participant]</code></td></tr></tbody></table><hr/><h4 id="endpoint" class="no_toc">Endpoint</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p><a name="f8f87d38-9193-48f4-a0ef-7f402bb38659">​</a>Supported Profiles:
+						</td><td><code class="highlighter-rouge">GET [base]/CareTeam?participant=[participant]</code></td></tr></tbody></table><hr/><h4 id="endpoint" class="no_toc">Endpoint</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p><a name="2ab5dc05-da31-49f6-8538-cdcfe5e4f870">​</a>Supported Profiles:
 				
 											<a href="StructureDefinition-vhdir-endpoint.html">VhDir Endpoint</a>
 				
@@ -952,25 +952,25 @@
 					
 						PractitionerRole.practitionerrole-endpoint - <code class="highlighter-rouge">GET [base]/Endpoint?[parameter=value]&amp;_revinclude=PractitionerRole.practitionerrole-endpoint</code><br/>
 					
-				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="5f8d8077-bcd1-415f-8be2-5b1074599883">​</a><a href="SearchParameter-endpoint-connection-type.html">connection-type</a></td><td>
+				</li><br/></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="fe8b4866-b578-4606-8f0b-242f9cb71299">​</a><a href="SearchParameter-endpoint-connection-type.html">connection-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?connection-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="517f9ef2-70c0-4198-955c-6490642f6df0">​</a><a href="SearchParameter-endpoint-identifier-assigner.html">identifier-assigner</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?connection-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="80be8e09-f07e-41ac-aa31-3048da99ded7">​</a><a href="SearchParameter-endpoint-identifier-assigner.html">identifier-assigner</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="a0731d20-3408-462b-9973-7de31a68fa01">​</a><a href="SearchParameter-endpoint-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?identifier-assigner=[identifier-assigner]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="a09a1723-d1c7-4bf8-abf5-87d31c567fee">​</a><a href="SearchParameter-endpoint-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?identifier=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="da748d4a-b43a-4507-b78d-4ef1aeab8d8f">​</a><a href="SearchParameter-endpoint-mime-type.html">mime-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?identifier=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="24914243-cffc-4c49-a3b0-d41141ac4414">​</a><a href="SearchParameter-endpoint-mime-type.html">mime-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?mime-type=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="ea5909a3-2ba9-48a2-adde-edf172c620ca">​</a><a href="SearchParameter-endpoint-organization.html">organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?mime-type=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="ca62dda1-25bd-4994-bcb2-373ece0c0754">​</a><a href="SearchParameter-endpoint-organization.html">organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c5b4c6d9-c009-4d2c-8fab-b911c886f87a">​</a><a href="SearchParameter-endpoint-payload-type.html">payload-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?organization=[organization]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="e9dc8afe-4305-414a-9f26-7348d9908312">​</a><a href="SearchParameter-endpoint-payload-type.html">payload-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?payload-type=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="3629959a-8a4a-4db8-84b8-a78736ea805c">​</a><a href="SearchParameter-endpoint-status.html">status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?payload-type=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="02615985-df52-4f29-96f2-e8bae0133d06">​</a><a href="SearchParameter-endpoint-status.html">status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="92fbe71e-8ec9-49bb-b29b-b5e4de4969f2">​</a><a href="SearchParameter-endpoint-usecase-standard.html">usecase-standard</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?status=[status]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="91225c57-c7ab-433c-b7f8-43c5dee4f2d3">​</a><a href="SearchParameter-endpoint-usecase-standard.html">usecase-standard</a></td><td>
 							uri
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?usecase-standard=[uri]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="89d140ca-8bc3-4db9-87b0-2ea9d8252693">​</a><a href="SearchParameter-endpoint-usecase-type.html">usecase-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?usecase-standard=[uri]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="d0084ce8-8b8d-418e-a98d-06e31b68c448">​</a><a href="SearchParameter-endpoint-usecase-type.html">usecase-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?usecase-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="47e477ef-cfe0-4d2a-a7af-d8a45bbc457b">​</a><a href="SearchParameter-endpoint-via-intermediary.html">via-intermediary</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?usecase-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="6b949828-9c23-4196-887e-1bdc28cb2516">​</a><a href="SearchParameter-endpoint-via-intermediary.html">via-intermediary</a></td><td>
 							reference
 						</td><td><code class="highlighter-rouge">GET [base]/Endpoint?via-intermediary=[via-intermediary]</code></td></tr></tbody></table><hr/><h4 id="verificationresult" class="no_toc">VerificationResult</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p>Reference Policy: <code>literal</code>, <code>local</code></p><p>Versioning Policy: <code>versioned</code></p><p>Profile Interaction Summary:</p><ul><li><strong>SHALL</strong> support 
 																							<code>read</code>, 
@@ -995,27 +995,27 @@
 					
 						VerificationResult.verificationresult-validator-organization - <code class="highlighter-rouge">GET [base]/VerificationResult?[parameter=value]&amp;_include=VerificationResult.verificationresult-validator-organization</code><br/>
 					
-				</li><br/>    <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="83287807-1f75-4574-a800-5ef04ec4055e">​</a><a href="SearchParameter-verificationresult-attestation-who.html">attestation-who</a></td><td>
+				</li><br/>    <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHALL</strong></td><td><a name="3ec767a9-e2f1-4c45-b617-73026f0fd31e">​</a><a href="SearchParameter-verificationresult-attestation-who.html">attestation-who</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?attestation-who=[attestation-who]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="f17e4d3d-11fb-49ed-976d-04e245d9c007">​</a><a href="SearchParameter-verificationresult-attestation-method.html">attestation-method</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?attestation-who=[attestation-who]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="ad8d2d73-5d5f-43ee-aa3f-7e031861917c">​</a><a href="SearchParameter-verificationresult-attestation-method.html">attestation-method</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?attestation-method=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="14dcb3bb-ad3e-4203-a794-fddef1a1914f">​</a><a href="SearchParameter-verificationresult-attestation-onbehalfof.html">attestation-onbehalfof</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?attestation-method=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="5b7599ee-c8f8-4c58-a08d-e34f249b46bf">​</a><a href="SearchParameter-verificationresult-attestation-onbehalfof.html">attestation-onbehalfof</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?attestation-onbehalfof=[attestation-onbehalfof]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="81977e98-fddf-4182-b82c-af1742e86fcc">​</a><a href="SearchParameter-verificationresult-primarysource-date.html">primarysource-date</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?attestation-onbehalfof=[attestation-onbehalfof]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="118b96ce-8339-4b66-9d76-9307b0a1fae6">​</a><a href="SearchParameter-verificationresult-primarysource-date.html">primarysource-date</a></td><td>
 							date
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?primarysource-date=[primarysource-date]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="92676437-4d49-4621-8138-116b47ce2956">​</a><a href="SearchParameter-verificationresult-primarysource-who.html">primarysource-who</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?primarysource-date=[primarysource-date]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="3a4aec77-d8fc-4d24-879e-cefb688c5224">​</a><a href="SearchParameter-verificationresult-primarysource-who.html">primarysource-who</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?primarysource-who=[primarysource-who]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c5bf52e5-0c4a-4382-94b5-1351a821ab73">​</a><a href="SearchParameter-verificationresult-primarysource-type.html">primarysource-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?primarysource-who=[primarysource-who]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="e24a160f-fe69-4c81-a576-57c1b8f81dd3">​</a><a href="SearchParameter-verificationresult-primarysource-type.html">primarysource-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?primarysource-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="004810ec-7468-4af4-aff5-dec8ae1d6af2">​</a><a href="SearchParameter-verificationresult-status-date.html">status-date</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?primarysource-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="3a8b6841-bc78-4470-a5b5-a64211abf426">​</a><a href="SearchParameter-verificationresult-status-date.html">status-date</a></td><td>
 							date
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?status-date=[status-date]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="b8648789-a394-4428-952c-f69a00b6327d">​</a><a href="SearchParameter-verificationresult-validation-status.html">validation-status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?status-date=[status-date]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="6da4f0df-dbb8-4822-bf9e-68a6efa4fa8e">​</a><a href="SearchParameter-verificationresult-validation-status.html">validation-status</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?validation-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="da3e9e7d-eb00-42de-a90a-90a7b0343dcd">​</a><a href="SearchParameter-verificationresult-validator-organization.html">validator-organization</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?validation-status=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="66dc0ff8-fa27-4c29-9ee8-910a6df0e5d2">​</a><a href="SearchParameter-verificationresult-validator-organization.html">validator-organization</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?validator-organization=[validator-organization]</code></td></tr><tr><td><strong>undefined</strong></td><td><a name="ec580455-ee6e-4845-af76-d8a3bf3e7cc7">​</a><a href="SearchParameter-verificationresult-target.html">target</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?validator-organization=[validator-organization]</code></td></tr><tr><td><strong>undefined</strong></td><td><a name="a50ed039-3a10-4e8b-88a0-b3667776fd59">​</a><a href="SearchParameter-verificationresult-target.html">target</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?target=[target]</code></td></tr></tbody></table><hr/><h4 id="consent" class="no_toc">Consent</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p><a name="c95a5ca7-714b-4aff-b734-470d5add5801">​</a>Supported Profiles:
+						</td><td><code class="highlighter-rouge">GET [base]/VerificationResult?target=[target]</code></td></tr></tbody></table><hr/><h4 id="consent" class="no_toc">Consent</h4><p>Conformance Expectation:	<strong>undefined</strong></p><p><a name="96ad7948-9273-4368-82ea-e8f01918c927">​</a>Supported Profiles:
 				
 											<a href="StructureDefinition-vhdir-restriction.html">VhDir Restriction</a>
 				
@@ -1048,53 +1048,53 @@
 					
 						InsurancePlan.insuranceplan-network - <code class="highlighter-rouge">GET [base]/InsurancePlan?[parameter=value]&amp;_include=InsurancePlan.insuranceplan-network</code><br/>
 					
-				</li><br/>    <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a name="6b7825d3-b3a3-4a3f-827c-74f87a46fa9e">​</a><a href="SearchParameter-insuranceplan-administered-by.html">administered-by</a></td><td>
+				</li><br/>    <!-- Only SHALLs for revinclude for now the capability statement does not create the primitive extensios for this yet --></ul><p>Search Parameter Summary:</p><table class="grid"><thead><tr><th>Conformance</th><th>Parameter</th><th>Type</th><th>Example</th></tr></thead><tbody><tr><td><strong>SHOULD</strong></td><td><a name="5336cc40-f350-457d-8cf6-e7f9addd026c">​</a><a href="SearchParameter-insuranceplan-administered-by.html">administered-by</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?administered-by=[administered-by]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="92586788-18b2-427e-8f48-228f7b24768e">​</a><a href="SearchParameter-insuranceplan-coverage-benefit-type.html">coverage-benefit-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?administered-by=[administered-by]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="89e93ba8-a05f-4fbf-9efa-f9718f61a684">​</a><a href="SearchParameter-insuranceplan-coverage-benefit-type.html">coverage-benefit-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-benefit-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="e929cdf1-9f67-4bd8-b351-fbf6d9f28a74">​</a><a href="SearchParameter-insuranceplan-coverage-limit-value.html">coverage-limit-value</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-benefit-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="91ed0118-9630-4d1c-a119-ae8c53693207">​</a><a href="SearchParameter-insuranceplan-coverage-limit-value.html">coverage-limit-value</a></td><td>
 							quantity
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-limit-value=[coverage-limit-value]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="ee96e9b2-8458-4323-a23e-26b42d435cbc">​</a><a href="SearchParameter-insuranceplan-coverage-network.html">coverage-network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-limit-value=[coverage-limit-value]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="a8f2911c-a84b-4143-b54a-6037d6776ede">​</a><a href="SearchParameter-insuranceplan-coverage-network.html">coverage-network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-network=[coverage-network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="c01a9a0e-315f-47b2-9229-da0901b107b1">​</a><a href="SearchParameter-insuranceplan-coverage-type.html">coverage-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-network=[coverage-network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="1070dc40-fa98-485d-8688-b27e52e345a5">​</a><a href="SearchParameter-insuranceplan-coverage-type.html">coverage-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="3aff95f2-2a8e-40f6-a903-529505204c09">​</a><a href="SearchParameter-insuranceplan-endpoint.html">endpoint</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="c6b3f228-a42e-4a09-a888-62e316f56142">​</a><a href="SearchParameter-insuranceplan-endpoint.html">endpoint</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="4e13a9a2-06a5-48b8-a53d-de59f2da6996">​</a><a href="SearchParameter-insuranceplan-general-cost-groupsize.html">general-cost-groupsize</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?endpoint=[endpoint]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="750db262-cfdc-4a6a-b7dc-ed1a3d5012e3">​</a><a href="SearchParameter-insuranceplan-general-cost-groupsize.html">general-cost-groupsize</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?general-cost-groupsize=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="7ba88285-fd8b-4170-bd5e-bf7b7ae4d11a">​</a><a href="SearchParameter-insuranceplan-general-cost-type.html">general-cost-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?general-cost-groupsize=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="adecea69-ce54-4465-be47-18a29e50749c">​</a><a href="SearchParameter-insuranceplan-general-cost-type.html">general-cost-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?general-cost-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="c8da23d9-a963-4c58-bb62-64f1b20846d9">​</a><a href="SearchParameter-insuranceplan-general-cost-value.html">general-cost-value</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?general-cost-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="87d9cfef-9af9-47aa-b0e3-be82eb7d249a">​</a><a href="SearchParameter-insuranceplan-general-cost-value.html">general-cost-value</a></td><td>
 							quantity
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?general-cost-value=[general-cost-value]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="40f2eee3-3793-4f11-8f63-2f0e0af76998">​</a><a href="SearchParameter-insuranceplan-name.html">name</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?general-cost-value=[general-cost-value]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="a0c52f74-0946-487f-9566-5ae027727c9e">​</a><a href="SearchParameter-insuranceplan-name.html">name</a></td><td>
 							string
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="39439f37-c979-4f8f-8822-baf8d49717a9">​</a><a href="SearchParameter-insuranceplan-owned-by.html">owned-by</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?name=[name]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="7454b7a7-d095-4a99-8589-63d3551de6a1">​</a><a href="SearchParameter-insuranceplan-owned-by.html">owned-by</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?owned-by=[owned-by]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b4abc026-f885-4b56-9b34-bec846cfbf90">​</a><a href="SearchParameter-insuranceplan-plan-coverage-area.html">plan-coverage-area</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?owned-by=[owned-by]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="8a8ea2ec-b9c4-40ed-88cf-29711d762f7c">​</a><a href="SearchParameter-insuranceplan-plan-coverage-area.html">plan-coverage-area</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-coverage-area=[plan-coverage-area]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="507cbebf-1832-4b39-8d49-7a183ce53f2f">​</a><a href="SearchParameter-insuranceplan-plan-identifier.html">plan-identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-coverage-area=[plan-coverage-area]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="2eefd145-cfc8-4f34-bc94-f7a6fc3b7f7e">​</a><a href="SearchParameter-insuranceplan-plan-identifier.html">plan-identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="ff3f2b57-25a3-489a-987d-54e580ae29e1">​</a><a href="SearchParameter-insuranceplan-plan-network.html">plan-network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="4b4c9566-dbb1-46e9-a220-a2cfedfb7731">​</a><a href="SearchParameter-insuranceplan-plan-network.html">plan-network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-network=[plan-network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="2a40d4ac-f53b-4e39-9048-9d124a42e9ce">​</a><a href="SearchParameter-insuranceplan-plan-type.html">plan-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-network=[plan-network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="995e5b00-0625-4423-8e38-88547a014ee5">​</a><a href="SearchParameter-insuranceplan-plan-type.html">plan-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="d36728da-e43b-4125-9b62-9f7c5da7bbd0">​</a><a href="SearchParameter-insuranceplan-coverage-area.html">coverage-area</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?plan-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="e8d7e624-e27a-462f-ba70-677a589dd79d">​</a><a href="SearchParameter-insuranceplan-coverage-area.html">coverage-area</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-area=[coverage-area]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="7517ef07-14da-4c86-a3bc-40f7abbe6c32">​</a><a href="SearchParameter-insuranceplan-identifier.html">identifier</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?coverage-area=[coverage-area]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="a88a603b-a4f7-4906-904e-565be8186392">​</a><a href="SearchParameter-insuranceplan-identifier.html">identifier</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="888f5984-d304-4dc0-aa0c-1b6de3fed892">​</a><a href="SearchParameter-insuranceplan-network.html">network</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?identifier=[system]|[code]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="1b5e42be-da67-4da3-8762-fffddc8a5019">​</a><a href="SearchParameter-insuranceplan-network.html">network</a></td><td>
 							reference
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?network=[network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="0d015379-0559-4e93-8166-2fa7679e03bb">​</a><a href="SearchParameter-insuranceplan-type.html">type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?network=[network]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="179f5cd2-704c-45d3-b1ae-0b7cab715877">​</a><a href="SearchParameter-insuranceplan-type.html">type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b66e0e99-1566-412f-8170-31e8aefc562c">​</a><a href="SearchParameter-insuranceplan-specific-cost-benefit-type.html">specific-cost-benefit-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="b7c1a80d-f8ec-4b89-9461-1da846c8b863">​</a><a href="SearchParameter-insuranceplan-specific-cost-benefit-type.html">specific-cost-benefit-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-benefit-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="4d8e7139-8bcd-483d-8623-41595329e97f">​</a><a href="SearchParameter-insuranceplan-specific-cost-category.html">specific-cost-category</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-benefit-type=[system]|[code]</code></td></tr><tr><td><strong>SHOULD</strong></td><td><a name="4c1cb24b-a10b-4eae-944a-365ff71dc4c9">​</a><a href="SearchParameter-insuranceplan-specific-cost-category.html">specific-cost-category</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="7e019e94-f25c-45ae-9d91-9f2a396c8efb">​</a><a href="SearchParameter-insuranceplan-specific-cost-cost-type.html">specific-cost-cost-type</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-category=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="a266069f-b18a-4010-b4fb-e3d2846f648c">​</a><a href="SearchParameter-insuranceplan-specific-cost-cost-type.html">specific-cost-cost-type</a></td><td>
 							token
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-cost-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="ceff1fe7-c5d7-43b5-8610-136370d5eac0">​</a><a href="SearchParameter-insuranceplan-specific-cost-value.html">specific-cost-value</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-cost-type=[system]|[code]</code></td></tr><tr><td><strong>MAY</strong></td><td><a name="e9bbe3cd-939a-4f87-84cf-9281ac4718fd">​</a><a href="SearchParameter-insuranceplan-specific-cost-value.html">specific-cost-value</a></td><td>
 							quantity
-						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-value=[specific-cost-value]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="71902993-0ce5-4850-8d88-415f56e1cfe0">​</a><a href="SearchParameter-insuranceplan-status.html">status</a></td><td>
+						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?specific-cost-value=[specific-cost-value]</code></td></tr><tr><td><strong>SHALL</strong></td><td><a name="b8ed893e-eeb9-4365-bd6e-82242e7e21ff">​</a><a href="SearchParameter-insuranceplan-status.html">status</a></td><td>
 							token
 						</td><td><code class="highlighter-rouge">GET [base]/InsurancePlan?status=[status]</code></td></tr></tbody></table><hr/><br/></div>
 
@@ -1123,7 +1123,7 @@
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Dec 1, 2020 18:16-0800">2020-12-01</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 2, 2020 19:14-0800">2020-12-02</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

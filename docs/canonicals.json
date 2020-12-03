@@ -1,10 +1,10 @@
 [
   {
-    "id": "us-core-smokingstatus",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus",
+    "id": "pdex-server",
+    "type": "CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/pdex-server",
     "version": "0.1.0",
-    "name": "USCoreSmokingStatusProfile"
+    "name": "PdexServerCapabilityStatement"
   },
   {
     "id": "vhdir-server",

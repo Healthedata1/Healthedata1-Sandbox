@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2020-12-01T18:16:01-08:00",
+  "date": "2020-12-02T19:14:26-08:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -34,12 +34,6 @@
       "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
       "packageId": "hl7.fhir.us.core",
       "version": "3.1.1"
-    },
-    {
-      "id": "vsac",
-      "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "packageId": "us.nlm.vsac",
-      "version": "0.3.0"
     }
   ],
   "definition": {
@@ -513,15 +507,15 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "CapabilityStatement"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/us-core-smokingstatus"
+          "reference": "CapabilityStatement/pdex-server"
         },
-        "name": "US Core Smoking Status Observation Profile",
-        "description": "Defines constraints and extensions on the Observation  resource for the minimal set of data to query and retrieve patient's Smoking Status information.",
-        "exampleBoolean": false
+        "name": "pdex-server",
+        "description": "This Section describes the expected capabilities of the PDEX Server actor which is responsible for providing responses to the queries submitted by the PDEX Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by PDEX Servers are defined. PDEX Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements.",
+        "exampleBoolean": true
       },
       {
         "extension": [

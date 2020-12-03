@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SushiSandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Sushi Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2020-12-01T18:16:01-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2020-12-02T19:14:26-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -43,15 +43,6 @@
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.1" ]
-  ], [
-     fhir:index 1;
-     fhir:Element.id [ fhir:value "vsac" ];
-     fhir:ImplementationGuide.dependsOn.uri [
-       fhir:value "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac";
-       fhir:link <http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac>
-     ];
-     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "us.nlm.vsac" ];
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.3.0" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -496,15 +487,15 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+         fhir:Extension.valueString [ fhir:value "CapabilityStatement" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/us-core-smokingstatus>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-smokingstatus" ]
+         fhir:link <http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/pdex-server>;
+         fhir:Reference.reference [ fhir:value "CapabilityStatement/pdex-server" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Smoking Status Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints and extensions on the Observation  resource for the minimal set of data to query and retrieve patient's Smoking Status information." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "pdex-server" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Section describes the expected capabilities of the PDEX Server actor which is responsible for providing responses to the queries submitted by the PDEX Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by PDEX Servers are defined. PDEX Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
        fhir:index 9;
        fhir:Element.extension [

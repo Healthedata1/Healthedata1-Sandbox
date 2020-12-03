@@ -1,17 +1,18 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 167, warn = 8, info = 1
+err = 175, warn = 7, info = 50
 IG Publisher Version: 1.1.45
-Generated Tue Dec 01 18:21:41 PST 2020. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+Generated Wed Dec 02 19:15:54 PST 2020. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
- Build Errors : 164 / 3 / 1
+ Build Errors : 172 / 3 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/pdex-server-cs : 8 / 0 / 50
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test : 1 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test-cs : 158 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test2 : 1 / 0 / 1
@@ -20,13 +21,20 @@ Generated Tue Dec 01 18:21:41 PST 2020. FHIR version 4.0.1 for healthedatainc.su
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 4 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs2 : 0 / 1 / 1
 </table>
 == n/a ==
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/test2.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/test3.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/test4.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/downloads.html: Root node must be 'html' or 'div', but is p
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 149, column 4102: The link 'StructureDefinition-pdex-device.html' for "PDex Device" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 149, column 6966: The link 'StructureDefinition-pdex-medicationdispense.html' for "PDex MedicationDispense Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 149, column 9448: The link 'StructureDefinition-pdex-provenance.html' for "PDex Provenance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/p/a at Line 149, column 19340: The link 'StructureDefinition-pdex-device.html' for "PDex Device" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/p/a at Line 149, column 41716: The link 'StructureDefinition-pdex-medicationdispense.html' for "PDex MedicationDispense Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 149, column 43936: The link 'SearchParameter-pdex-medicationdispense-status.html' for "status" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 149, column 44105: The link 'SearchParameter-pdex-medicationdispense-patient.html' for "patient" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-pdex-server.html#/html/body/div/div/div/div/div/div/p/a at Line 149, column 57423: The link 'StructureDefinition-pdex-provenance.html' for "PDex Provenance" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-vhdir-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 175, column 75: The link 'StructureDefinition-vhdir-organization.html' for "VhDir Organization" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-vhdir-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 177, column 8: The link 'StructureDefinition-vhdir-network.html' for "VhDir Network" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/CapabilityStatement-vhdir-server.html#/html/body/div/div/div/div/div/div/table/tbody/tr/td/a at Line 240, column 67: The link 'StructureDefinition-vhdir-endpoint.html' for "VhDir Endpoint" cannot be resolved
@@ -206,6 +214,65 @@ INFORMATION: StructureDefinition/patientlistquestionnaireresponse: StructureDefi
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
 INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/pdex-server-cs.json ==
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.implementationGuide[0]: URL value 'http://hl7.org/fhir/us/davinci-pdex/ImplementationGuide/hl7.fhir.us.davinci-pdex|1.0.0' does not resolve
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[0].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[1].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[1].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[1].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[1].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[2].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[3].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[3].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[3].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[3].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[4].supportedProfile[0]: URL value 'http://hl7.org/fhir/us/davinci-hrex/StructureDefinition/hrex-coverage' does not resolve
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[5].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[5].supportedProfile[0]: URL value 'http://hl7.org/fhir/us/davinci-pdex/StructureDefinition/pdex-device' does not resolve
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[6].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[6].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[6].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[6].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[6].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[7].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[7].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[7].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[7].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[7].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[8].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[8].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[8].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[8].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[9].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[9].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[10].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[10].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[13].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[13].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[13].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[13].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].supportedProfile[0]: URL value 'http://hl7.org/fhir/us/davinci-pdex/StructureDefinition/pdex-medicationdispense' does not resolve
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].searchParam[0].definition: URL value 'http://hl7.org/fhir/us/davinci-pdex/SearchParameter/pdex-medicationdispense-status' does not resolve
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[14].searchParam[1].definition: URL value 'http://hl7.org/fhir/us/davinci-pdex/SearchParameter/pdex-medicationdispense-patient' does not resolve
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[15].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[15].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[15].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[15].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[15].extension[5].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[17].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[17].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[17].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[17].extension[4].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[17].operation[0].definition: URL value 'http://hl7.org/fhir/us/davinci-hrex/OperationDefinition/member-match' does not resolve
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[20].extension[1].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[20].extension[2].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+INFORMATION: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[20].extension[3].extension[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
+ERROR: CapabilityStatement/pdex-server: CapabilityStatement.rest[0].resource[21].supportedProfile[0]: URL value 'http://hl7.org/fhir/us/davinci-pdex/StructureDefinition/pdex-provenance' does not resolve
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test.json ==
 INFORMATION: Observation/test: Observation: Validate resource against profile http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
@@ -389,6 +456,3 @@ ERROR: StructureDefinition/test-obs: StructureDefinition.snapshot.element[18].ty
 ERROR: StructureDefinition/test-obs: StructureDefinition.snapshot.element[18].type[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/type-must-support' does not resolve
 ERROR: StructureDefinition/test-obs: StructureDefinition.differential.element[1].type[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/type-must-support is unknown, and not allowed here
 ERROR: StructureDefinition/test-obs: StructureDefinition.differential.element[1].type[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/type-must-support' does not resolve
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs2.json ==
-INFORMATION: StructureDefinition/us-core-smokingstatus: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-smokingstatus'): The Implementation Guide contains no examples for this profile

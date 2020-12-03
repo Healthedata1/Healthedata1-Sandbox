@@ -21,12 +21,6 @@
     }
   ],
   "profiles": {
-    "Observation": [
-      {
-        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs",
-        "title": "US Core Laboratory Result Observation Profile"
-      }
-    ],
     "Group": [
       {
         "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist",
@@ -36,14 +30,25 @@
         "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2",
         "title": "Argonaut Patient List (Group) Profile"
       }
+    ],
+    "Observation": [
+      {
+        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs",
+        "title": "US Core Laboratory Result Observation Profile"
+      }
     ]
   },
   "usage": {
     "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
       "CapabilityStatement.rest.interaction",
+      "CapabilityStatement.rest.resource",
       "CapabilityStatement.rest.resource.interaction",
+      "CapabilityStatement.rest.resource.operation",
       "CapabilityStatement.rest.resource.searchParam",
       "CapabilityStatement.rest.searchParam"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination": [
+      "CapabilityStatement.rest.resource"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
@@ -58,7 +63,6 @@
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
-      "StructureDefinition.differential.element.binding",
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
