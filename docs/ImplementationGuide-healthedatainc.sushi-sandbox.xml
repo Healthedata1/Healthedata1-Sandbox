@@ -11,7 +11,7 @@
   <name value="SushiSandbox"/>
   <title value="Sushi Sandbox"/>
   <status value="active"/>
-  <date value="2020-12-02T19:14:26-08:00"/>
+  <date value="2021-02-22T11:12:02-08:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -335,28 +335,6 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/pdex-server"/>
-      </reference>
-      <name value="pdex-server"/>
-      <description value="This Section describes the expected capabilities of the PDEX Server actor which is responsible for providing responses to the queries submitted by the PDEX Requestors. The complete list of FHIR profiles, RESTful operations, and search parameters supported by PDEX Servers are defined. PDEX Clients have the option of choosing from this list to access necessary data based on their local use cases and other contextual requirements."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CapabilityStatement"/>
-      </extension>
-      <reference>
-        <reference value="CapabilityStatement/vhdir-server"/>
-      </reference>
-      <name value="vhdir-server"/>
-      <description value="This Capability Statement defines the expected capabilities of a validated healthcare directory FHIR server conforming to the Validated Healthcare Directory Implementation Guide."/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Observation"/>
       </extension>
       <reference>
@@ -364,36 +342,6 @@
       </reference>
       <name value="FOO"/>
       <description value="###FOO&#xA;- bar"/>
-      <exampleCanonical value="http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/test2"/>
-      </reference>
-      <name value="test2"/>
-      <exampleCanonical value="http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/test3"/>
-      </reference>
-      <name value="test3"/>
-      <exampleCanonical value="http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/test4"/>
-      </reference>
-      <name value="test4"/>
       <exampleCanonical value="http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs"/>
     </resource>
     <page>

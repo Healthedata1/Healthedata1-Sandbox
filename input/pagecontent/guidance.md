@@ -1,9 +1,12 @@
-### Guidance
+### My Awesome Table
 
-**Profile specific implementation guidance:**
-- Note that *Previous Name* and *Suffix* are listed in the U.S. Core Data for Interoperability.
-  - Suffix is represented using the `Patient.name.suffix` element.
-  - Previous name is represented by providing an end date in the `Patient.name.period` element for a previous name.
-  - The patient example below demonstrates the usage of both of these elements.
-- \*The [FHIR Specification]({{site.data.fhir.path}}patient.html#gender) provides guidance and background for representing patient gender. The American Clinical Laboratory Association (ACLA) has published [best practice guidelines](http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/) for administrative and clinical gender related to laboratory testing and reporting which implementers may find helpful as well.
--  {:.new-content #F24903}The Patient's Social Security Numbers **SHOULD NOT** be used as a patient identifier in `Patient.identifier.value`. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.
+tadaa...
+
+| **Term** | **Definition** |
+| --- | --- |
+| **Batch File Format** | The file formats used to load data into PLR or receive distributions from PLR in bulk, on a delayed basis. See also Batch XML Format and Batch CSV Format. |
+| **Category** | A "super-role", a category of related Provider Role Types. For example, the category "Nurse" might contain many Provider Role Types such as "LPN", RN" and so on; the category "Doctors" might contain all Provider role types assigned to doctors, and so on. |
+{: .grid}
+
+
+more stuff here

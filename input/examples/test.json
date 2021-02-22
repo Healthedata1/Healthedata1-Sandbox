@@ -1,4 +1,18 @@
 {
+    "identifier": [
+        {
+            "system": "http://hl7.org/fhir/sid/us-ssn",
+            "value": "555-55-5555",
+            "_value": {
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/rendered-value",
+                        "valueString": "nnnn-nn-5555"
+                    }
+                ]
+            }
+        }
+    ],
     "status": "final",
     "category": [
         {

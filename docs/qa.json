@@ -3,10 +3,10 @@
   "name": "SushiSandbox",
   "package-id": "healthedatainc.sushi-sandbox",
   "ig-ver": "0.1.0",
-  "date": "Wed, 02 Dec, 2020 19:14:26 -0800",
-  "errs": 175,
-  "warnings": 7,
-  "hints": 50,
+  "date": "Mon, 22 Feb, 2021 11:12:02 -0800",
+  "errs": 6,
+  "warnings": 4,
+  "hints": 2,
   "version": "4.0.1",
   "tool": "4.5.0 (3)"
 }

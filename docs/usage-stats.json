@@ -39,17 +39,6 @@
     ]
   },
   "usage": {
-    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
-      "CapabilityStatement.rest.interaction",
-      "CapabilityStatement.rest.resource",
-      "CapabilityStatement.rest.resource.interaction",
-      "CapabilityStatement.rest.resource.operation",
-      "CapabilityStatement.rest.resource.searchParam",
-      "CapabilityStatement.rest.searchParam"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination": [
-      "CapabilityStatement.rest.resource"
-    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
     ],
@@ -73,6 +62,9 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
       "Observation.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/rendered-value": [
+      "Observation.identifier.value"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
       "StructureDefinition"

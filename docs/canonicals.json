@@ -1,19 +1,5 @@
 [
   {
-    "id": "pdex-server",
-    "type": "CapabilityStatement",
-    "url": "http://hl7.org/fhir/us/core/CapabilityStatement/pdex-server",
-    "version": "0.1.0",
-    "name": "PdexServerCapabilityStatement"
-  },
-  {
-    "id": "vhdir-server",
-    "type": "CapabilityStatement",
-    "url": "http://hl7.org/fhir/uv/vhdir/CapabilityStatement/vhdir-server",
-    "version": "0.1.0",
-    "name": "VhDir_server"
-  },
-  {
     "id": "argo-group-characteristic",
     "type": "CodeSystem",
     "url": "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic",

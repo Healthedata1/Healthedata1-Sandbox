@@ -128,20 +128,30 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
-<h3 id="guidance">Guidance</h3>
+<h3 id="my-awesome-table">My Awesome Table</h3>
 
-<p><strong>Profile specific implementation guidance:</strong></p>
-<ul>
-  <li>Note that <em>Previous Name</em> and <em>Suffix</em> are listed in the U.S. Core Data for Interoperability.
-    <ul>
-      <li>Suffix is represented using the <code class="highlighter-rouge">Patient.name.suffix</code> element.</li>
-      <li>Previous name is represented by providing an end date in the <code class="highlighter-rouge">Patient.name.period</code> element for a previous name.</li>
-      <li>The patient example below demonstrates the usage of both of these elements.</li>
-    </ul>
-  </li>
-  <li>*The <a href="http://hl7.org/fhir/R4/patient.html#gender">FHIR Specification</a> provides guidance and background for representing patient gender. The American Clinical Laboratory Association (ACLA) has published <a href="http://www.acla.com/acla-best-practice-recommendation-for-administrative-and-clinical-patient-gender-used-for-laboratory-testing-and-reporting/">best practice guidelines</a> for administrative and clinical gender related to laboratory testing and reporting which implementers may find helpful as well.</li>
-  <li class="new-content" id="F24903">The Patient’s Social Security Numbers <strong>SHOULD NOT</strong> be used as a patient identifier in <code class="highlighter-rouge">Patient.identifier.value</code>. There is increasing concern over the use of Social Security Numbers in healthcare due to the risk of identity theft and related issues. Many payers and providers have actively purged them from their systems and filter them out of incoming data.</li>
-</ul>
+<p>tadaa…</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>Definition</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Batch File Format</strong></td>
+      <td>The file formats used to load data into PLR or receive distributions from PLR in bulk, on a delayed basis. See also Batch XML Format and Batch CSV Format.</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>A “super-role”, a category of related Provider Role Types. For example, the category “Nurse” might contain many Provider Role Types such as “LPN”, RN” and so on; the category “Doctors” might contain all Provider role types assigned to doctors, and so on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>more stuff here</p>
 
 
 
@@ -166,7 +176,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Dec 2, 2020 19:14-0800">2020-12-02</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 22, 2021 11:12-0800">2021-02-22</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
