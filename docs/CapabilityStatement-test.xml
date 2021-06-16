@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CapabilityStatement xmlns="http://hl7.org/fhir">
+  <id value="test"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Test</h2><div><p>This CapabilityStatement is a test of implementationGuide</p>
+</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>This CapabilityStatement is a test of implementationGuide</p>
+</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title="GET a resource (read interaction)">Read</b></th><th><b title="GET all set of resources of the type (search interaction)">Search</b></th><th><b title="PUT a new resource version (update interaction)">Update</b></th><th><b title="POST a new resource (create interaction)">Create</b></th></tr></table></div>
+  </text>
+  <url value="http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test"/>
+  <version value="0.1.0"/>
+  <name value="Test"/>
+  <title value="Test"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2021-06-16T11:47:46-07:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="This CapabilityStatement is a test of implementationGuide"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="Used by permission of HL7 International all rights reserved Creative Commons License"/>
+  <kind value="requirements"/>
+  <fhirVersion value="4.0.1"/>
+  <format value="json"/>
+  <format value="xml"/>
+  <implementationGuide value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHALL"/>
+    </extension>
+  </implementationGuide>
+  <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/STU1.0.1/ImplementationGuide-hl7.fhir.uv.bulkdata">
+    <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
+      <valueCode value="SHOULD"/>
+    </extension>
+  </implementationGuide>
+  <rest>
+    <mode value="client"/>
+    <documentation value="This CapabilityStatement is a test of implementationGuide"/>
+  </rest>
+</CapabilityStatement>

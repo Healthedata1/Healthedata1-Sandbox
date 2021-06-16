@@ -1,0 +1,68 @@
+{
+    "resourceType": "CapabilityStatement",
+    "id": "test",
+    "url": "http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test",
+    "name": "Test",
+    "title": "Test",
+    "status": "active",
+    "experimental": false,
+    "date": "2021-06-16T11:47:46-07:00",
+    "publisher": "HL7 International - Patient Care Work Group",
+    "contact": [
+        {
+            "name": "HL7 International - Patient Care Work Group",
+            "telecom": [
+                {
+                    "system": "url",
+                    "value": "http://www.hl7.org/Special/committees/patientcare/index.cfm"
+                }
+            ]
+        }
+    ],
+    "description": "This CapabilityStatement is a test of implementationGuide",
+    "jurisdiction": [
+        {
+            "coding": [
+                {
+                    "system": "urn:iso:std:iso:3166",
+                    "code": "US"
+                }
+            ]
+        }
+    ],
+    "copyright": "Used by permission of HL7 International all rights reserved Creative Commons License",
+    "kind": "requirements",
+    "fhirVersion": "4.0.1",
+    "format": [
+        "json",
+        "xml"
+    ],
+    "implementationGuide": [
+        "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1",
+        "http://hl7.org/fhir/uv/bulkdata/STU1.0.1/ImplementationGuide-hl7.fhir.uv.bulkdata"
+    ],
+    "_implementationGuide": [
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHALL"
+                }
+            ]
+        },
+        {
+            "extension": [
+                {
+                    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                    "valueCode": "SHOULD"
+                }
+            ]
+        }
+    ],
+    "rest": [
+        {
+            "mode": "client",
+            "documentation": "This CapabilityStatement is a test of implementationGuide"
+        }
+    ]
+}

@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2021-03-31T19:13:25-07:00",
+  "date": "2021-06-16T12:29:56-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -459,6 +459,20 @@
         },
         "name": "Argonaut Group Characteristic Code System",
         "description": "Used to define group characteristic and limited to 'location'or 'team' or 'organization' or 'practitioner'",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CapabilityStatement"
+          }
+        ],
+        "reference": {
+          "reference": "CapabilityStatement/test"
+        },
+        "name": "Test",
+        "description": "This CapabilityStatement is a test of implementationGuide",
         "exampleBoolean": false
       },
       {

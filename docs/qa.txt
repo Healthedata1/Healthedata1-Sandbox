@@ -1,11 +1,11 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 6, warn = 4, info = 1
-IG Publisher Version: 1.1.65
-Generated Wed Mar 31 19:14:30 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+err = 6, warn = 4, info = 0
+IG Publisher Version: 1.1.73
+Generated Wed Jun 16 12:30:58 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
- Build Errors : 2 / 0 / 1
+ Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
@@ -13,14 +13,13 @@ Generated Wed Mar 31 19:14:30 PDT 2021. FHIR version 4.0.1 for healthedatainc.su
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test : 1 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/CapabilityStatement-test : 1 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 4 / 0 / 1
 </table>
 == n/a ==
-ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/downloads.html: Root node must be 'html' or 'div', but is p
-ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 149, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
-INFORMATION: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/downloads.html: The html source does not contain the publish box; this is recommended for publishing support
+ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
 INFORMATION: CodeSystem/argo-group-characteristic: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox.json ==
@@ -39,6 +38,9 @@ INFORMATION: ValueSet/argo-group-characteristic: ValueSet: Validate resource aga
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test.json ==
 INFORMATION: Observation/test: Observation: Validate resource against profile http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/CapabilityStatement-test.json ==
+INFORMATION: CapabilityStatement/test: CapabilityStatement: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement
+ERROR: CapabilityStatement/test: CapabilityStatement.implementationGuide[1]: Canonical URL 'http://hl7.org/fhir/uv/bulkdata/STU1.0.1/ImplementationGuide-hl7.fhir.uv.bulkdata' does not resolve
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference.json ==
 INFORMATION: SearchParameter/Group-value-reference: SearchParameter: Validate resource against profile http://hl7.org/fhir/StructureDefinition/SearchParameter
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2.json ==

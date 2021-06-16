@@ -80,6 +80,11 @@ definition:
         name: Argonaut Group Characteristic Code System
         reference:
             reference: CodeSystem/argo-group-characteristic
+    -   description: This CapabilityStatement is a test of implementationGuide
+        exampleBoolean: false
+        name: Test
+        reference:
+            reference: CapabilityStatement/test
     -   description: Reference value held by characteristic
         exampleBoolean: false
         name: GroupValueReference

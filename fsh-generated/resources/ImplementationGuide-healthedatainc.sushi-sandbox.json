@@ -75,6 +75,14 @@
       },
       {
         "reference": {
+          "reference": "CapabilityStatement/test"
+        },
+        "description": "This CapabilityStatement is a test of implementationGuide",
+        "exampleBoolean": false,
+        "name": "Test"
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/Group-value-reference"
         },
         "description": "Reference value held by characteristic",
