@@ -1,6 +1,7 @@
 #!/bin/bash
 # exit when any command fails
 set -e
+NA='http://tx.fhir.org'
 while getopts twoplisu: option
 do
  case "${option}"
@@ -144,6 +145,9 @@ else
   if [[ $IG_PUBLISH ]]; then
     echo "================================================================="
     echo "=== run the just the igpublisher ==="
+    echo "==To run in command line mode, run the IG Publisher like this:=="
+    echo "===java -jar publisher.jar -ig [source] (-tx [url]) (-packages [directory]) (-watch)
+parameters:==="
     echo "================================================================="
 
     echo "================================================================="

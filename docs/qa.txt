@@ -1,9 +1,9 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 6, warn = 4, info = 2
-IG Publisher Version: 1.1.59
-Generated Mon Feb 22 11:31:14 PST 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+err = 6, warn = 4, info = 1
+IG Publisher Version: 1.1.65
+Generated Wed Mar 31 19:14:30 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
  Build Errors : 2 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -15,7 +15,7 @@ Generated Mon Feb 22 11:31:14 PST 2021. FHIR version 4.0.1 for healthedatainc.su
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test : 1 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 4 / 0 / 2
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 4 / 0 / 1
 </table>
 == n/a ==
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/downloads.html: Root node must be 'html' or 'div', but is p
@@ -46,7 +46,6 @@ INFORMATION: StructureDefinition/argo-patientlist2: StructureDefinition: Validat
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2'): The Implementation Guide contains no examples for this profile
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs.json ==
 INFORMATION: StructureDefinition/test-obs: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-INFORMATION: StructureDefinition/test-obs: StructureDefinition.jurisdiction[0].coding[0]: Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
 ERROR: StructureDefinition/test-obs: StructureDefinition.snapshot.element[18].type[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/type-must-support is unknown, and not allowed here
 ERROR: StructureDefinition/test-obs: StructureDefinition.snapshot.element[18].type[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/type-must-support' does not resolve
 ERROR: StructureDefinition/test-obs: StructureDefinition.differential.element[1].type[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/type-must-support is unknown, and not allowed here
