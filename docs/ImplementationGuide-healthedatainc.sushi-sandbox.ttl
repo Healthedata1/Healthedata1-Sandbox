@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SushiSandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Sushi Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-06-16T12:29:56-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-08-04T17:06:29-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -42,7 +42,7 @@
        fhir:link <http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core>
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.1" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.0" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -459,6 +459,20 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/sushi-sandbox/OperationDefinition/unsolicited-claim>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/unsolicited-claim" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Unsolicited Claims Attachment Operation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to submit an unsolicited claims attachment as a single claim and other referenced resources as attachments for processing. The input parameters are:\n  1.  the X12 Attachment Control Number\n  1.  the claim either as:\n    1.  ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or\n    1.  Claim resource.\n  1. Attachments as FHIR Resources to support the claims review.\nThere are no output parameters." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "SearchParameter" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -469,7 +483,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Reference value held by characteristic" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -483,7 +497,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile on the R4 Group resource to for [Argonaut Patient List Project](https://confluence.hl7.org/display/AP/Argonaut+Project+Home).  Note that the [Group](http://hl7.org/fhir/group.html) resource is used for this patient **list** use case even though there is also a FHIR List resource" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -497,7 +511,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

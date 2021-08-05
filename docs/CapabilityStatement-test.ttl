@@ -57,14 +57,18 @@
        fhir:Extension.valueCode [ fhir:value "SHALL" ]
      ]
   ], [
-     fhir:value "http://hl7.org/fhir/uv/bulkdata/STU1.0.1/ImplementationGuide-hl7.fhir.uv.bulkdata";
+     fhir:value "http://fhir-registry.smarthealthit.org";
      fhir:index 1;
-     fhir:link <http://hl7.org/fhir/uv/bulkdata/STU1.0.1/ImplementationGuide-hl7.fhir.uv.bulkdata>;
+     fhir:link <http://fhir-registry.smarthealthit.org>;
      fhir:Element.extension [
        fhir:index 0;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation" ];
        fhir:Extension.valueCode [ fhir:value "SHOULD" ]
      ]
+  ], [
+     fhir:value "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata";
+     fhir:index 2;
+     fhir:link <http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata>
   ];
   fhir:CapabilityStatement.rest [
      fhir:index 0;

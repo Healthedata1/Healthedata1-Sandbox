@@ -1,5 +1,12 @@
 [
   {
+    "id": "unsolicited-claim",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim",
+    "version": "0.1.0",
+    "name": "Unsolicited Claims Attachment Operation"
+  },
+  {
     "id": "test",
     "type": "CapabilityStatement",
     "url": "http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test",

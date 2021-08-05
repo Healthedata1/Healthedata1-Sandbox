@@ -26,7 +26,8 @@ description: This is a sushi sandbox for creation of resources and examples
 license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
-  hl7.fhir.us.core: 3.1.1
+  hl7.fhir.us.core: 4.0.0
+  #hl7.fhir.uv.bulkdata: 1.0.1
   #us.nlm.vsac:
       #uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
       #version: 0.3.0
@@ -38,9 +39,9 @@ parameters:
   path-resource:
     - input/resources
     - fsh-generated/resources
-  path-pages:
-    - input/pagecontent
-    - fsh-generated/includes
+  #path-pages:
+    #- input/pagecontent
+    #- fsh-generated/includes
 #- code: path-liquid #yes
   #  value: #path #A relative path that contains liquid templates for generating narrative
   #path-liquid: input/images/liquid

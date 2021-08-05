@@ -38,11 +38,12 @@
       <valueCode value="SHALL"/>
     </extension>
   </implementationGuide>
-  <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/STU1.0.1/ImplementationGuide-hl7.fhir.uv.bulkdata">
+  <implementationGuide value="http://fhir-registry.smarthealthit.org">
     <extension url="http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation">
       <valueCode value="SHOULD"/>
     </extension>
   </implementationGuide>
+  <implementationGuide value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
   <rest>
     <mode value="client"/>
     <documentation value="This CapabilityStatement is a test of implementationGuide"/>

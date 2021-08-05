@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2021-06-16T12:29:56-07:00",
+  "date": "2021-08-04T17:06:29-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -33,7 +33,7 @@
       "id": "hl7_fhir_us_core",
       "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
       "packageId": "hl7.fhir.us.core",
-      "version": "3.1.1"
+      "version": "4.0.0"
     }
   ],
   "definition": {
@@ -473,6 +473,20 @@
         },
         "name": "Test",
         "description": "This CapabilityStatement is a test of implementationGuide",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/unsolicited-claim"
+        },
+        "name": "Unsolicited Claims Attachment Operation",
+        "description": "This operation is used to submit an unsolicited claims attachment as a single claim and other referenced resources as attachments for processing. The input parameters are:\n  1.  the X12 Attachment Control Number\n  1.  the claim either as:\n    1.  ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or\n    1.  Claim resource.\n  1. Attachments as FHIR Resources to support the claims review.\nThere are no output parameters.",
         "exampleBoolean": false
       },
       {

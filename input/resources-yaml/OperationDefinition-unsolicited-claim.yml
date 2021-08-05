@@ -1,0 +1,54 @@
+resourceType: OperationDefinition
+id: unsolicited-claim
+url: 'http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim'
+version: 4.0.1
+name: Unsolicited Claims Attachment Operation
+status: draft
+kind: operation
+date: '2021-08-04T16:29:11-07:00'
+description: >-
+  This operation is used to submit an unsolicited claims attachment
+  as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The
+  input parameters are:
+    1.  the X12 Attachment Control Number
+    1.  the claim either as:
+        1.  ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or
+        1.  Claim resource.
+    1. Attachments as FHIR Resources to support the claims review.
+
+  There are no output parameters.
+code: unsolicited-claim
+resource:
+  - Claim
+system: false
+type: true
+instance: false
+parameter:
+  - name: AttachmentControlNumber
+    use: in
+    min: 1
+    max: '1'
+    documentation: >-
+      The Attachment Control Number is assigned by the provider which will also be reported in the X12N 275 submission.
+    type: string
+  - name: X12Claim
+    use: in
+    min: 0
+    max: '1'
+    documentation: >-
+      An X12 ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) binary file or url.
+    type: DocumentReference
+  - name: FHIRClaim
+    use: in
+    min: 0
+    max: '1'
+    documentation: >-
+      A FHIR Claim resource.
+    type: Claim
+  - name: Attachment
+    use: in
+    min: 0
+    max: '*'
+    documentation: >-
+      Attachments as FHIR Resources to support the claims review.
+    type: Resource

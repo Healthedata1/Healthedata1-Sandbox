@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="unsolicited-claim"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>Unsolicited Claims Attachment Operation</h2><p>OPERATION: Unsolicited Claims Attachment Operation</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim</pre><div><p>This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:</p>
+<ol>
+<li>the X12 Attachment Control Number</li>
+<li>the claim either as:
+<ol>
+<li>ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or</li>
+<li>Claim resource.</li>
+</ol>
+</li>
+<li>Attachments as FHIR Resources to support the claims review.<br/>
+There are no output parameters.</li>
+</ol>
+</div><p>URL: [base]/Claim/$unsolicited-claim</p><p>Parameters</p><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AttachmentControlNumber</td><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#string">string</a></td><td/><td><div><p>The Attachment Control Number is assigned by the provider which will also be reported in the X12N 275 submission.</p>
+</div></td></tr><tr><td>IN</td><td>X12Claim</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/documentreference.html">DocumentReference</a></td><td/><td><div><p>An X12 ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) binary file or url.</p>
+</div></td></tr><tr><td>IN</td><td>FHIRClaim</td><td>0..1</td><td><a href="http://hl7.org/fhir/R4/claim.html">Claim</a></td><td/><td><div><p>A FHIR Claim resource.</p>
+</div></td></tr><tr><td>IN</td><td>Attachment</td><td>0..*</td><td><a href="http://hl7.org/fhir/R4/resource.html">Resource</a></td><td/><td><div><p>Attachments as FHIR Resources to support the claims review.</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim"/>
+  <version value="0.1.0"/>
+  <name value="Unsolicited Claims Attachment Operation"/>
+  <status value="draft"/>
+  <kind value="operation"/>
+  <date value="2021-08-04T16:29:11-07:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:&#xA;  1.  the X12 Attachment Control Number&#xA;  1.  the claim either as:&#xA;      1.  ASC X12N 278 (Health Care Services Review &#x2014; Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or&#xA;      1.  Claim resource.&#xA;  1. Attachments as FHIR Resources to support the claims review.  &#xA;There are no output parameters."/>
+  <code value="unsolicited-claim"/>
+  <resource value="Claim"/>
+  <system value="false"/>
+  <type value="true"/>
+  <instance value="false"/>
+  <parameter>
+    <name value="AttachmentControlNumber"/>
+    <use value="in"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The Attachment Control Number is assigned by the provider which will also be reported in the X12N 275 submission."/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="X12Claim"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="An X12 ASC X12N 278 (Health Care Services Review &#x2014; Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) binary file or url."/>
+    <type value="DocumentReference"/>
+  </parameter>
+  <parameter>
+    <name value="FHIRClaim"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="A FHIR Claim resource."/>
+    <type value="Claim"/>
+  </parameter>
+  <parameter>
+    <name value="Attachment"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="Attachments as FHIR Resources to support the claims review."/>
+    <type value="Resource"/>
+  </parameter>
+</OperationDefinition>
