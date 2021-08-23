@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SushiSandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Sushi Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-08-04T17:06:29-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-08-23T16:47:38-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;

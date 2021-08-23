@@ -3,7 +3,7 @@
   "id": "unsolicited-claim",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Unsolicited Claims Attachment Operation</h2><p>OPERATION: Unsolicited Claims Attachment Operation</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim</pre><div><p>This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:</p>\n<ol>\n<li>the X12 Attachment Control Number</li>\n<li>the claim either as:\n<ol>\n<li>ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or</li>\n<li>Claim resource.</li>\n</ol>\n</li>\n<li>Attachments as FHIR Resources to support the claims review.<br/>\nThere are no output parameters.</li>\n</ol>\n</div><p>URL: [base]/Claim/$unsolicited-claim</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AttachmentControlNumber</td><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>The Attachment Control Number is assigned by the provider which will also be reported in the X12N 275 submission.</p>\n</div></td></tr><tr><td>IN</td><td>X12Claim</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/documentreference.html\">DocumentReference</a></td><td/><td><div><p>An X12 ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) binary file or url.</p>\n</div></td></tr><tr><td>IN</td><td>FHIRClaim</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/claim.html\">Claim</a></td><td/><td><div><p>A FHIR Claim resource.</p>\n</div></td></tr><tr><td>IN</td><td>Attachment</td><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>Attachments as FHIR Resources to support the claims review.</p>\n</div></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Unsolicited Claims Attachment Operation</h2><p>OPERATION: Unsolicited Claims Attachment Operation</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim</pre><div><p>This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:</p>\n<ol>\n<li>\n<p>Data elements for reassociation to the Claim</p>\n<ol>\n<li>Attachment Control Number (ACN)</li>\n<li>Billed Amount/Charged Amount</li>\n<li>Claim #</li>\n<li>Patient</li>\n<li>Coverage</li>\n<li>Encounter</li>\n<li>Provider</li>\n<li>Organization</li>\n</ol>\n</li>\n<li>\n<p>the claim either as:</p>\n<ol>\n<li>ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or</li>\n<li>Claim resource.</li>\n</ol>\n<p>If a FHIR or X12 representation of Claim is sent with attachment, then these data elements not needed for reassociation.</p>\n</li>\n<li>\n<p>Attachments as FHIR Resources to support the claims review.</p>\n</li>\n</ol>\n<p>There are no output parameters.</p>\n</div><p>URL: [base]/Claim/$unsolicited-claim</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AttachmentControlNumber</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>The Attachment Control Number is assigned by the provider which will also be reported in the X12N 275 submission.</p>\n</div></td></tr><tr><td>IN</td><td>BilledAmount</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#decimal\">decimal</a></td><td/><td><div><p>Billed Amount/Charged Amount is the amount charged for each service performed by the provider., i.e., it is the total charge value of the claim.</p>\n</div></td></tr><tr><td>IN</td><td>ClaimNumber</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a></td><td/><td><div><p>A unique identifier assigned by either the provider’s system upon claim generation or a health plan upon receipt.</p>\n</div></td></tr><tr><td>IN</td><td>Patient</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/patient.html\">Patient</a></td><td/><td><div><p>A FHIR Pateint resource.</p>\n</div></td></tr><tr><td>IN</td><td>Coverage</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/coverage.html\">Coverage</a></td><td/><td><div><p>A FHIR Coverage resource.</p>\n</div></td></tr><tr><td>IN</td><td>Encounter</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/encounter.html\">Encounter</a></td><td/><td><div><p>A FHIR Encounter resource.</p>\n</div></td></tr><tr><td>IN</td><td>FHIRPractitioner</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/practitioner.html\">Practitioner</a></td><td/><td><div><p>A FHIR Practitioner resource.</p>\n</div></td></tr><tr><td>IN</td><td>FHIROrganization</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/organization.html\">Organization</a></td><td/><td><div><p>A FHIR Organization resource.</p>\n</div></td></tr><tr><td>IN</td><td>X12Claim</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/documentreference.html\">DocumentReference</a></td><td/><td><div><p>An X12 ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) binary file or url.</p>\n</div></td></tr><tr><td>IN</td><td>FHIRClaim</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/claim.html\">Claim</a></td><td/><td><div><p>A FHIR Claim resource.</p>\n</div></td></tr><tr><td>IN</td><td>Attachment</td><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>Attachments as FHIR Resources to support the claims review.</p>\n</div></td></tr></table></div>"
   },
   "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim",
   "version": "0.1.0",
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:\n  1.  the X12 Attachment Control Number\n  1.  the claim either as:\n      1.  ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or\n      1.  Claim resource.\n  1. Attachments as FHIR Resources to support the claims review.  \nThere are no output parameters.",
+  "description": "This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:\n  1.  Data elements for reassociation to the Claim\n      1. Attachment Control Number (ACN)\n      1. Billed Amount/Charged Amount\n      1. Claim #\n      1. Patient\n      1. Coverage\n      1. Encounter\n      1. Provider\n      1. Organization\n  1.  the claim either as:\n      1.  ASC X12N 278 (Health Care Services Review — Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or\n      1.  Claim resource.\n\n      If a FHIR or X12 representation of Claim is sent with attachment, then these data elements not needed for reassociation.\n  1. Attachments as FHIR Resources to support the claims review.\n\nThere are no output parameters.",
   "code": "unsolicited-claim",
   "resource": [
     "Claim"
@@ -34,10 +34,66 @@
     {
       "name": "AttachmentControlNumber",
       "use": "in",
-      "min": 1,
+      "min": 0,
       "max": "1",
       "documentation": "The Attachment Control Number is assigned by the provider which will also be reported in the X12N 275 submission.",
       "type": "string"
+    },
+    {
+      "name": "BilledAmount",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "Billed Amount/Charged Amount is the amount charged for each service performed by the provider., i.e., it is the total charge value of the claim.",
+      "type": "decimal"
+    },
+    {
+      "name": "ClaimNumber",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A unique identifier assigned by either the provider’s system upon claim generation or a health plan upon receipt.",
+      "type": "string"
+    },
+    {
+      "name": "Patient",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A FHIR Pateint resource.",
+      "type": "Patient"
+    },
+    {
+      "name": "Coverage",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A FHIR Coverage resource.",
+      "type": "Coverage"
+    },
+    {
+      "name": "Encounter",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A FHIR Encounter resource.",
+      "type": "Encounter"
+    },
+    {
+      "name": "FHIRPractitioner",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A FHIR Practitioner resource.",
+      "type": "Practitioner"
+    },
+    {
+      "name": "FHIROrganization",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A FHIR Organization resource.",
+      "type": "Organization"
     },
     {
       "name": "X12Claim",
