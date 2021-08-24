@@ -7,7 +7,7 @@
     "status": "draft",
     "kind": "operation",
     "date": "2021-08-04T16:29:11-07:00",
-    "description": "This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:\n  1.  Data elements for reassociation to the Claim\n      1. Attachment Control Number (ACN)\n      1. Billed Amount/Charged Amount\n      1. Claim #\n      1. Patient\n      1. Coverage\n      1. Encounter\n      1. Provider\n      1. Organization\n  1.  the claim either as:\n      1.  ASC X12N 278 (Health Care Services Review \u2014 Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or\n      1.  Claim resource.\n\n      If a FHIR or X12 representation of Claim is sent with attachment, then these data elements not needed for reassociation.\n  1. Attachments as FHIR Resources to support the claims review.\n\nThere are no output parameters.",
+    "description": "This operation is used to submit an unsolicited claims attachment as a single claim (or simply a reference to a claim) and other referenced resources as attachments for processing. The input parameters are:\n  1.  Data elements for reassociation to the Claim\n      1. Attachment Control Number (ACN)\n      1. Billed Amount/Charged Amount\n      1. Claim #\n      1. Patient\n      1. Coverage\n      1. Encounter\n      1. Provider\n      1. Organization\n\n      If a FHIR or X12 representation of Claim is sent with attachment, then these data elements are not needed for reassociation.\n\n  1.  the claim either as:\n      1.  ASC X12N 278 (Health Care Services Review \u2014 Notification and Acknowledgment) and an ASC X12N 275 (Additional Information to Support a Health Care Services Review) or\n      1.  Claim resource.\n\n  1. Attachments as FHIR Resources to support the claims review.\n\nThere are no output parameters.",
     "code": "unsolicited-claim",
     "resource": [
         "Claim"
@@ -45,7 +45,7 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "A FHIR Pateint resource.",
+            "documentation": "A FHIR Patient resource representing the party to whom the professional services and/or products have been supplied or are being considered and for whom actual or forecast reimbursement is sought.",
             "type": "Patient"
         },
         {
@@ -53,31 +53,31 @@
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "A FHIR Coverage resource.",
+            "documentation": "A FHIR Coverage resource representing the insurance card level information for the Patient o whom the professional services and/or products have been supplied.",
             "type": "Coverage"
         },
         {
             "name": "Encounter",
             "use": "in",
             "min": 0,
-            "max": "1",
-            "documentation": "A FHIR Encounter resource.",
+            "max": "*",
+            "documentation": "A FHIR Encounter resources during which this Claim was created or to which the creation of this record is tightly associated.",
             "type": "Encounter"
         },
         {
-            "name": "FHIRPractitioner",
+            "name": "Practitioner",
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "A FHIR Practitioner resource.",
+            "documentation": "A FHIR Practitioner resource representing the provider who submitted the claim.",
             "type": "Practitioner"
         },
         {
-            "name": "FHIROrganization",
+            "name": "Organization",
             "use": "in",
             "min": 0,
             "max": "1",
-            "documentation": "A FHIR Organization resource.",
+            "documentation": "A FHIR Organization resource representing the provider who submitted the claim.",
             "type": "Organization"
         },
         {
