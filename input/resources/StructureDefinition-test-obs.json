@@ -1,25 +1,25 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "test-obs",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs",
+    "id": "argo-write-observation",
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation",
     "version": "3.1.1",
     "name": "USCoreLaboratoryResultObservationProfile",
-    "title": "US Core Laboratory Result Observation Profile",
+    "title": "Argo Write Observation Profile",
     "status": "active",
     "experimental": false,
-    "date": "2020-06-27",
-    "publisher": "HL7 US Realm Steering Committee",
+    "date": "2021-08-25",
+    "publisher": "Argonaut Project",
     "contact": [
         {
             "telecom": [
                 {
                     "system": "url",
-                    "value": "http://www.healthit.gov"
+                    "value": "https://confluence.hl7.org/display/AP/Argonaut+Project+Home"
                 }
             ]
         }
     ],
-    "description": "Defines constraints and extensions on the Observation resource for the minimal set of data to query and retrieve laboratory test results",
+    "description": "Defines a \"mixin\" profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html). When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification.",
     "jurisdiction": [
         {
             "coding": [
@@ -35,7 +35,7 @@
     "kind": "resource",
     "abstract": false,
     "type": "Observation",
-    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-lab",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
     "derivation": "constraint",
     "differential": {
         "element": [
@@ -44,50 +44,253 @@
                 "path": "Observation"
             },
             {
-                "id": "Observation.effective[x]",
-                "path": "Observation.effective[x]",
-                "definition": "For lab tests this is the specimen collection date.  For Ask at Order Entry Questions (AOE)'s this is the date the question was asked.",
+                "id": "Observation.meta",
+                "path": "Observation.meta",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.security",
+                "path": "Observation.meta.security",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "this"
+                        }
+                    ],
+                    "ordered": false,
+                    "rules": "open"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.security.system",
+                "path": "Observation.meta.security.system",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.security.code",
+                "path": "Observation.meta.security.code",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.security:IntegrityLabel",
+                "path": "Observation.meta.security",
+                "sliceName": "IntegrityLabel",
+                "short": "Data Integrity Label",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://terminology.hl7.org/ValueSet/v3-SecurityIntegrityObservationValue"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.tag",
+                "path": "Observation.meta.tag",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "this"
+                        }
+                    ],
+                    "ordered": false,
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.tag.system",
+                "path": "Observation.meta.tag.system",
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.tag.code",
+                "path": "Observation.meta.tag.code",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.meta.tag:PatientSupplied",
+                "path": "Observation.meta.tag",
+                "sliceName": "PatientSupplied",
+                "short": "Patient Supplied Tag",
+                "min": 1,
+                "max": "1",
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags"
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.extension:Gateway",
+                "path": "Observation.extension",
+                "sliceName": "Gateway",
                 "min": 0,
                 "max": "1",
                 "type": [
                     {
-                        "code": "dateTime",
-                        "extension": [
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/StructureDefinition/observation-gatewayDevice"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.extension:Modality",
+                "path": "Observation.extension",
+                "sliceName": "Modality",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality"
+                        ]
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.basedOn",
+                "path": "Observation.basedOn",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest",
+                            "http://hl7.org/fhir/StructureDefinition/DeviceRequest",
+                            "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+                            "http://hl7.org/fhir/StructureDefinition/NutritionOrder"
+                        ],
+                        "_targetProfile": [
                             {
-                                "url": "http://hl7.org/fhir/StructureDefinition/type-must-support",
-                                "valueBoolean": true
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
                             }
                         ]
-                    },
-                    {
-                        "code": "Period"
-                    },
-                    {
-                        "code": "Timing"
-                    },
-                    {
-                        "code": "instant"
                     }
                 ],
-                "condition": [
-                    "us-core-1"
-                ],
-                "constraint": [
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.performer",
+                "path": "Observation.performer",
+                "type": [
                     {
-                        "key": "us-core-1",
-                        "severity": "error",
-                        "human": "Datetime must be at least to day.",
-                        "expression": "Observation.effectiveDateTime.exists() implies Observation.effectiveDateTime.toString().length() >= 8",
-                        "xpath": "f:matches(effectiveDateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+                            "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
+                            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-careteam"
+                        ],
+                        "_targetProfile": [
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": true
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                                        "valueBoolean": false
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ],
-                "mustSupport": true,
-                "mapping": [
-                    {
-                        "identity": "argonaut-dq-dstu2",
-                        "map": "Observation.effective[x]"
-                    }
-                ]
+                "mustSupport": true
+            },
+            {
+                "id": "Observation.device",
+                "path": "Observation.device",
+                "mustSupport": true
             }
         ]
     }

@@ -7,6 +7,13 @@
     "name": "Unsolicited Claims Attachment Operation"
   },
   {
+    "id": "extension-modality",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality",
+    "version": "0.1.0",
+    "name": "ModalityExtension"
+  },
+  {
     "id": "test",
     "type": "CapabilityStatement",
     "url": "http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test",
@@ -49,6 +56,13 @@
     "name": "ArgonautPatientListProfile"
   },
   {
+    "id": "argo-write-observation",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation",
+    "version": "0.1.0",
+    "name": "USCoreLaboratoryResultObservationProfile"
+  },
+  {
     "id": "patientlistquestionnaire",
     "type": "StructureDefinition",
     "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire",
@@ -61,13 +75,6 @@
     "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse",
     "version": "0.1.0",
     "name": "PatientListQuestionnaireResponse"
-  },
-  {
-    "id": "test-obs",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs",
-    "version": "0.1.0",
-    "name": "USCoreLaboratoryResultObservationProfile"
   },
   {
     "id": "argo-group-characteristic",

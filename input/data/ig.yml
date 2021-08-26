@@ -32,10 +32,6 @@ definition:
         value: input/resources
     -   code: path-resource
         value: fsh-generated/resources
-    -   code: path-pages
-        value: input/pagecontent
-    -   code: path-pages
-        value: fsh-generated/includes
     -   code: excludexml
         value: 'true'
     -   code: escludejsn
@@ -86,13 +82,19 @@ definition:
         reference:
             reference: CapabilityStatement/test
     -   description: "This operation is used to submit an unsolicited claims attachment\
-            \ as a single claim and other referenced resources as attachments for\
-            \ processing. The input parameters are:\n  1.  the X12 Attachment Control\
-            \ Number\n  1.  the claim either as:\n    1.  ASC X12N 278 (Health Care\
-            \ Services Review \u2014 Notification and Acknowledgment) and an ASC X12N\
-            \ 275 (Additional Information to Support a Health Care Services Review)\
-            \ or\n    1.  Claim resource.\n  1. Attachments as FHIR Resources to support\
-            \ the claims review.\nThere are no output parameters."
+            \ as a single claim (or simply a reference to a claim) and other referenced\
+            \ resources as attachments for processing. The input parameters are:\n\
+            \  1.  Data elements for reassociation to the Claim\n      1. Attachment\
+            \ Control Number (ACN)\n      1. Billed Amount/Charged Amount\n      1.\
+            \ Claim #\n      1. Patient\n      1. Coverage\n      1. Encounter\n \
+            \     1. Provider\n      1. Organization\n\n      If a FHIR or X12 representation\
+            \ of Claim is sent with attachment, then these data elements are not needed\
+            \ for reassociation.\n\n  1.  the claim either as:\n      1.  ASC X12N\
+            \ 278 (Health Care Services Review \u2014 Notification and Acknowledgment)\
+            \ and an ASC X12N 275 (Additional Information to Support a Health Care\
+            \ Services Review) or\n      1.  Claim resource.\n\n  1. Attachments as\
+            \ FHIR Resources to support the claims review.\n\nThere are no output\
+            \ parameters."
         exampleBoolean: false
         name: Unsolicited Claims Attachment Operation
         reference:
@@ -110,16 +112,30 @@ definition:
         name: Argonaut Patient List (Group) Profile
         reference:
             reference: StructureDefinition/argo-patientlist2
-    -   description: Defines constraints and extensions on the Observation resource
-            for the minimal set of data to query and retrieve laboratory test results
+    -   description: The modality whereby the measure is obtained.  Choice of sensed|self-reported.
+            This extension and concepts orginally created for Open mHealth (https://www.openmhealth.org/)
         exampleBoolean: false
-        name: US Core Laboratory Result Observation Profile
+        name: Modality Extension
         reference:
-            reference: StructureDefinition/test-obs
+            reference: StructureDefinition/extension-modality
+    -   description: Defines a "mixin" profile which constrains and extends the Observation
+            resource for the minimal set of data to support to writing patient submitted
+            Observations to an EHR.  This profile is intended to be used in addition
+            to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html).
+            When an application is creating content, it must create content that conforms
+            to both sets of profiles - that is, the intersection of the profiles.
+            When an application is consuming information, then it must be able to
+            consume content that conforms to either set of profiles - that is, the
+            union of the profiles. For additional guidance see [Supporting Multiple
+            Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification.
+        exampleBoolean: false
+        name: Argo Write Observation Profile
+        reference:
+            reference: StructureDefinition/argo-write-observation
     -   description: '###FOO
 
             - bar'
-        exampleCanonical: http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs
+        exampleBoolean: true
         name: FOO
         reference:
             reference: Observation/test

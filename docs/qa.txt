@@ -1,9 +1,9 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 7, warn = 5, info = 1
+err = 2, warn = 12, info = 0
 IG Publisher Version: 1.1.77
-Generated Mon Aug 23 17:10:13 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+Generated Wed Aug 25 17:00:24 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
  Build Errors : 4 / 0 / 0
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -12,12 +12,13 @@ Generated Mon Aug 23 17:10:13 PDT 2021. FHIR version 4.0.1 for healthedatainc.su
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test : 2 / 0 / 2
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test : 1 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/CapabilityStatement-test : 1 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/OperationDefinition-unsolicited-claim : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 4 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-extension-modality : 0 / 3 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 0 / 3 / 1
 </table>
 == n/a ==
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
@@ -34,9 +35,8 @@ WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandb
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test.json ==
-INFORMATION: Observation/test: Observation.category[0]: This element does not match any known slice defined in the profile http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs
-ERROR: Observation/test: Observation: Observation.category:Laboratory: minimum required = 1, but only found 0 (from http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs)
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
+WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/CapabilityStatement-test.json ==
 ERROR: CapabilityStatement/test: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1' does not resolve
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/OperationDefinition-unsolicited-claim.json ==
@@ -44,8 +44,11 @@ WARNING: OperationDefinition/unsolicited-claim: OperationDefinition: opd-0: 'Nam
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference.json ==
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2'): The Implementation Guide contains no examples for this profile
+== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-extension-modality.json ==
+WARNING: StructureDefinition/extension-modality: StructureDefinition.differential.element[2].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
+WARNING: StructureDefinition/extension-modality: StructureDefinition.snapshot.element[4].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality'): The Implementation Guide contains no examples for this extension
 == /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs.json ==
-ERROR: StructureDefinition/test-obs: StructureDefinition.snapshot.element[19].type[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/type-must-support is unknown, and not allowed here
-ERROR: StructureDefinition/test-obs: StructureDefinition.snapshot.element[19].type[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/type-must-support' does not resolve
-ERROR: StructureDefinition/test-obs: StructureDefinition.differential.element[1].type[0].extension[0]: The extension http://hl7.org/fhir/StructureDefinition/type-must-support is unknown, and not allowed here
-ERROR: StructureDefinition/test-obs: StructureDefinition.differential.element[1].type[0].extension[0].url: URL value 'http://hl7.org/fhir/StructureDefinition/type-must-support' does not resolve
+WARNING: StructureDefinition/argo-write-observation: StructureDefinition.differential.element[9].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
+WARNING: StructureDefinition/argo-write-observation: StructureDefinition.snapshot.element[26].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'): The Implementation Guide contains no examples for this profile

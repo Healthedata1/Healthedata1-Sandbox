@@ -4,6 +4,13 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
+      "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality",
+      "title": "Modality Extension",
+      "types": [
+        "code"
+      ]
+    },
+    {
       "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire",
       "title": "Argonaut Patient List Questionnaire",
       "types": [
@@ -33,8 +40,8 @@
     ],
     "Observation": [
       {
-        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs",
-        "title": "US Core Laboratory Result Observation Profile"
+        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation",
+        "title": "Argo Write Observation Profile"
       }
     ]
   },
@@ -61,13 +68,17 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
-      "StructureDefinition.snapshot.element.type"
+      "StructureDefinition.differential.element.type.targetProfile",
+      "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
       "Observation.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
       "Observation.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/observation-gatewayDevice": [
+      "Observation"
     ],
     "http://hl7.org/fhir/StructureDefinition/rendered-value": [
       "Observation.identifier.value"
@@ -87,15 +98,14 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
       "StructureDefinition.snapshot.element"
     ],
-    "http://hl7.org/fhir/StructureDefinition/type-must-support": [
-      "StructureDefinition.differential.element.type",
-      "StructureDefinition.snapshot.element.type"
-    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality": [
+      "Observation"
     ],
     "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire": [
       "Group"
