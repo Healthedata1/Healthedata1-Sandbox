@@ -14,7 +14,7 @@
   ];
   fhir:StructureDefinition.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation"];
   fhir:StructureDefinition.version [ fhir:value "0.1.0"];
-  fhir:StructureDefinition.name [ fhir:value "USCoreLaboratoryResultObservationProfile"];
+  fhir:StructureDefinition.name [ fhir:value "ArgoWriteObservationProfile"];
   fhir:StructureDefinition.title [ fhir:value "Argo Write Observation Profile"];
   fhir:StructureDefinition.status [ fhir:value "active"];
   fhir:StructureDefinition.experimental [ fhir:value "false"^^xsd:boolean];

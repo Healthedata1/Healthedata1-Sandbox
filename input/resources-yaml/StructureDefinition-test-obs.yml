@@ -2,7 +2,7 @@ resourceType: StructureDefinition
 id: argo-write-observation
 url: 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'
 version: 3.1.1
-name: USCoreLaboratoryResultObservationProfile
+name: ArgoWriteObservationProfile
 title: Argo Write Observation Profile
 status: active
 experimental: false

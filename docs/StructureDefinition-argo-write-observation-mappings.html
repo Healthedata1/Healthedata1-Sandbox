@@ -155,7 +155,7 @@
 
 
 <a name="root"> </a>
-<h2 id="root">Resource Profile: USCoreLaboratoryResultObservationProfile - Mappings</h2>
+<h2 id="root">Resource Profile: ArgoWriteObservationProfile - Mappings</h2>
 
 <p>Mappings for the argo-write-observation resource profile.</p>
 
@@ -165,7 +165,7 @@
 
 
   <a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreLaboratoryResultObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>ArgoWriteObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>Event</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Event.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Event.basedOn</td> </tr>
@@ -178,7 +178,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>Event.performer.actor</td> </tr>
 </table>
 <a name="sct-concept"> </a><h3>Mappings for SNOMED CT Concept Domain Binding (http://snomed.info/conceptdomain)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreLaboratoryResultObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>ArgoWriteObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>&lt; 363787002 |Observable entity|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>&lt; 445584004 |Report by finality status|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>&lt; 363787002 |Observable entity| OR &lt; 386053000 |Evaluation procedure|</td> </tr>
@@ -196,7 +196,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interpretation</td><td>&lt; 260245000 |Findings values|</td> </tr>
 </table>
 <a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreLaboratoryResultObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>ArgoWriteObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>OBX</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;security</td><td></td> </tr>
@@ -246,7 +246,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;referenceRange</td><td>OBX.7</td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreLaboratoryResultObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>ArgoWriteObservationProfile</b></td></tr>
  <tr><td>Observation</td><td>Entity. Role, or Act, Observation[classCode=OBS, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;meta</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
@@ -313,7 +313,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;referenceRange</td><td>outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]</td> </tr>
 </table>
 <a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreLaboratoryResultObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>ArgoWriteObservationProfile</b></td></tr>
  <tr><td>Observation</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
@@ -329,7 +329,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>FiveWs.what[x]</td> </tr>
 </table>
 <a name="sct-attr"> </a><h3>Mappings for SNOMED CT Attribute Binding (http://snomed.org/attributebinding)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreLaboratoryResultObservationProfile</b></td></tr>
+ <tr><td colspan="3"><b>ArgoWriteObservationProfile</b></td></tr>
  <tr><td>Observation</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>116680003 |Is a|</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;value[x]</td><td>363714003 |Interprets|</td> </tr>
@@ -394,7 +394,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 25, 2021 16:58-0700">2021-08-25</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 25, 2021 17:16-0700">2021-08-25</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

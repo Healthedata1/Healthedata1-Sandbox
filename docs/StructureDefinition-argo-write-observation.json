@@ -7,7 +7,7 @@
   },
   "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation",
   "version": "0.1.0",
-  "name": "USCoreLaboratoryResultObservationProfile",
+  "name": "ArgoWriteObservationProfile",
   "title": "Argo Write Observation Profile",
   "status": "active",
   "experimental": false,
