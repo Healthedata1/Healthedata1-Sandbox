@@ -78,7 +78,7 @@ groupIdentifier","",0,1,"","","Y","Identifier {[]} {[]}
 "ServiceRequest.quantity[x]","","","",0,1,"","","Y","Quantity {[]} {[]}
 Ratio {[]} {[]}Range {[]} {[]}","Service amount","An amount of service being requested which can be a quantity ( for example $1,500 home modification), a ratio ( for example, 20 half day visits per month), or a range (2.0 to 1.8 Gy per fraction).","","When ordering a service the number of service items may need to be specified separately from the the service item.","","","","","","","",,,,,"",,,,"ServiceRequest.quantity[x]",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","NTE",".quantity"
-"ServiceRequest.subject","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient]]}
+"ServiceRequest.subject","","","",1,1,"Y","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient]]}
 ","Individual or Entity the service is ordered for","On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).","","","","","","","","","",,,,,"",,,,"ServiceRequest.subject",1,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.subject","PID",".participation[typeCode=SBJ].role","FiveWs.subject[x]","FiveWs.subject","ClinicalStatement.subject"
 "ServiceRequest.encounter","","context

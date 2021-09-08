@@ -1,11 +1,11 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 4, warn = 17, info = 0
-IG Publisher Version: 1.1.77 Out of date - current version is 1.1.79
-Generated Wed Sep 08 16:09:39 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+err = 2, warn = 13, info = 0
+IG Publisher Version: 1.1.79
+Generated Wed Sep 08 16:52:13 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
- Build Errors : 4 / 0 / 0
+ Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
@@ -19,45 +19,36 @@ Generated Wed Sep 08 16:09:39 PDT 2021. FHIR version 4.0.1 for healthedatainc.su
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-extension-modality : 0 / 3 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 0 / 3 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-servicerequest : 2 / 5 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-servicerequest : 0 / 1 / 1
 </table>
 == n/a ==
 ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/index.html#/html/body/div/div/div/div/div/p/a at Line 141, column 5: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 160, column 8: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/index.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 183, column 12: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox.json ==
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist.json ==
+== fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
+== fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox.json ==
+== fsh-generated/resources/StructureDefinition-argo-patientlist.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist'): The Implementation Guide contains no examples for this profile
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire.json ==
+== fsh-generated/resources/StructureDefinition-patientlistquestionnaire.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire'): The Implementation Guide contains no examples for this extension
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse.json ==
+== fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test.json ==
+== fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
+== input/examples/test.json ==
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
 WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/CapabilityStatement-test.json ==
+== input/resources/CapabilityStatement-test.json ==
 ERROR: CapabilityStatement/test: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1' does not resolve
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/OperationDefinition-unsolicited-claim.json ==
+== input/resources/OperationDefinition-unsolicited-claim.json ==
 WARNING: OperationDefinition/unsolicited-claim: OperationDefinition: opd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference.json ==
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2.json ==
+== input/resources/SearchParameter-argo-characteristic-reference.json ==
+== input/resources/StructureDefinition-argo-patientlist2.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2'): The Implementation Guide contains no examples for this profile
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-extension-modality.json ==
+== input/resources/StructureDefinition-extension-modality.json ==
 WARNING: StructureDefinition/extension-modality: StructureDefinition.differential.element[2].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
 WARNING: StructureDefinition/extension-modality: StructureDefinition.snapshot.element[4].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality'): The Implementation Guide contains no examples for this extension
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs.json ==
+== input/resources/StructureDefinition-test-obs.json ==
 WARNING: StructureDefinition/argo-write-observation: StructureDefinition.differential.element[9].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
 WARNING: StructureDefinition/argo-write-observation: StructureDefinition.snapshot.element[26].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'): The Implementation Guide contains no examples for this profile
-== /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-servicerequest.json ==
-WARNING: http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest#ServiceRequest.subject: Cannot check whether the target profile http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient is valid constraint on the base because it is not known
-ERROR: StructureDefinition/uscore-servicerequest: StructureDefinition.snapshot.element[23].type[0].targetProfile[0]: Canonical URL 'http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient' does not resolve
-ERROR: StructureDefinition/uscore-servicerequest: StructureDefinition.differential.element[4].type[0].targetProfile[0]: Canonical URL 'http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient' does not resolve
-WARNING: StructureDefinition/uscore-servicerequest: StructureDefinition.differential.element.where(path = 'ServiceRequest.subject'): Cannot check whether the target profile http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient is valid constraint on the base because it is not known
-WARNING: StructureDefinition/uscore-servicerequest: StructureDefinition.differential.element[4].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient
-WARNING: StructureDefinition/uscore-servicerequest: StructureDefinition.snapshot.element[23].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient
+== input/resources/StructureDefinition-uscdiv2-servicerequest.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest'): The Implementation Guide contains no examples for this profile

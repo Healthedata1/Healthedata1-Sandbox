@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="110b4409-759e-4ae8-aa1c-3d2e0896e9e8"/>
+  <id value="ff39d685-7ec7-4e97-b8b7-408c30c843ca"/>
   <meta>
-    <lastUpdated value="2021-09-08T16:07:10.861-07:00"/>
+    <lastUpdated value="2021-09-08T16:49:28.503-07:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -18,7 +18,7 @@
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
               <a href="CodeSystem-argo-group-characteristic.html">Argonaut Group Characteristic Code System v0.1.0 (CodeSystem)</a>
             </p>
-            <p>All codes from system 
+            <p>All codes in this table are from the system 
               <a href="CodeSystem-argo-group-characteristic.html">
                 <code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic</code>
               </a>
@@ -75,7 +75,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2021-09-08T16:07:10-07:00"/>
+        <date value="2021-09-08T16:49:28-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -85,8 +85,8 @@
         </contact>
         <description value="Used to define group characteristic and limited to &#39;location&#39;or...."/>
         <expansion>
-          <identifier value="urn:uuid:6d460a73-feb6-450e-abab-42c1c0b60781"/>
-          <timestamp value="2021-09-08T16:09:12-07:00"/>
+          <identifier value="urn:uuid:4af0a0f7-8420-4708-b8b5-5a482b08938f"/>
+          <timestamp value="2021-09-08T16:51:41-07:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>

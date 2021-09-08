@@ -36,13 +36,12 @@ differential:
       binding:
         strength: extensible
         valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code'
-
     - id: ServiceRequest.subject
       path: ServiceRequest.subject
       type:
         - code: Reference
           targetProfile:
-            - 'http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-patient'
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
       mustSupport: true
 
     - id: 'ServiceRequest.occurrence[x]'
