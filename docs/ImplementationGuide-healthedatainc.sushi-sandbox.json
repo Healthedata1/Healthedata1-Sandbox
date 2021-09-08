@@ -10,7 +10,7 @@
   "name": "SushiSandbox",
   "title": "Sushi Sandbox",
   "status": "active",
-  "date": "2021-08-25T17:16:18-07:00",
+  "date": "2021-09-08T16:07:10-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -543,6 +543,20 @@
         },
         "name": "Argo Write Observation Profile",
         "description": "Defines a \"mixin\" profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html). When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/uscore-servicerequest"
+        },
+        "name": "US Core Service Request",
+        "description": "Defines constraints and extensions on the ServiceRequest resource for the minimal set of data to query and retrieve orders associated with diagnostic and clinical tests and clinical interventions for a patient",
         "exampleBoolean": false
       },
       {

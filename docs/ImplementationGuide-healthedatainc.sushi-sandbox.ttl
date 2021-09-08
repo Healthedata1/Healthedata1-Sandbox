@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "SushiSandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Sushi Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-08-25T17:16:18-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-09-08T16:07:10-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -526,6 +526,20 @@
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/uscore-servicerequest>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/uscore-servicerequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Service Request" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints and extensions on the ServiceRequest resource for the minimal set of data to query and retrieve orders associated with diagnostic and clinical tests and clinical interventions for a patient" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

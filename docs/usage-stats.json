@@ -28,6 +28,12 @@
     }
   ],
   "profiles": {
+    "ServiceRequest": [
+      {
+        "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest",
+        "title": "US Core Service Request"
+      }
+    ],
     "Group": [
       {
         "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist",

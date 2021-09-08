@@ -7,6 +7,13 @@
     "name": "Unsolicited Claims Attachment Operation"
   },
   {
+    "id": "uscore-servicerequest",
+    "type": "StructureDefinition",
+    "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest",
+    "version": "0.1.0",
+    "name": "USCoreServiceRequest"
+  },
+  {
     "id": "extension-modality",
     "type": "StructureDefinition",
     "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality",
