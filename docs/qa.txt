@@ -3,7 +3,7 @@
 
 err = 2, warn = 13, info = 0
 IG Publisher Version: 1.1.79
-Generated Wed Sep 08 16:52:13 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+Generated Thu Sep 09 07:48:27 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
  Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1

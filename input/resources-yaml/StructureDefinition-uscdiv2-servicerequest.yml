@@ -46,6 +46,14 @@ differential:
 
     - id: 'ServiceRequest.occurrence[x]'
       path: 'ServiceRequest.occurrence[x]'
+      type:
+        - extension:
+            - url: >-
+                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+              valueBoolean: true
+          code: dateTime
+        - code: Period
+        - code: Timing
       mustSupport: true
 
     - id: ServiceRequest.authoredOn

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="ff39d685-7ec7-4e97-b8b7-408c30c843ca"/>
+  <id value="8770e95d-33e2-43e2-9730-455b68e8a954"/>
   <meta>
-    <lastUpdated value="2021-09-08T16:49:28.503-07:00"/>
+    <lastUpdated value="2021-09-09T07:45:20.646-07:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -75,7 +75,7 @@
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2021-09-08T16:49:28-07:00"/>
+        <date value="2021-09-09T07:45:20-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -85,8 +85,8 @@
         </contact>
         <description value="Used to define group characteristic and limited to &#39;location&#39;or...."/>
         <expansion>
-          <identifier value="urn:uuid:4af0a0f7-8420-4708-b8b5-5a482b08938f"/>
-          <timestamp value="2021-09-08T16:51:41-07:00"/>
+          <identifier value="urn:uuid:cd465995-c66e-47f4-a3a0-ce2f9ae08d36"/>
+          <timestamp value="2021-09-09T07:47:36-07:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
