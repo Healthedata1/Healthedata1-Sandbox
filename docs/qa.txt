@@ -2,8 +2,8 @@
 =========================================
 
 err = 2, warn = 13, info = 0
-IG Publisher Version: 1.1.79
-Generated Thu Sep 09 07:48:27 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+IG Publisher Version: 1.1.79 Out of date - current version is 1.1.80
+Generated Sun Sep 12 16:53:43 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
  Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -47,8 +47,8 @@ WARNING: StructureDefinition/extension-modality: StructureDefinition.differentia
 WARNING: StructureDefinition/extension-modality: StructureDefinition.snapshot.element[4].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality'): The Implementation Guide contains no examples for this extension
 == input/resources/StructureDefinition-test-obs.json ==
-WARNING: StructureDefinition/argo-write-observation: StructureDefinition.differential.element[9].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
-WARNING: StructureDefinition/argo-write-observation: StructureDefinition.snapshot.element[26].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
+WARNING: StructureDefinition/argo-write-observation: StructureDefinition.differential.element[5].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
+WARNING: StructureDefinition/argo-write-observation: StructureDefinition.snapshot.element[18].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'): The Implementation Guide contains no examples for this profile
 == input/resources/StructureDefinition-uscdiv2-servicerequest.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest'): The Implementation Guide contains no examples for this profile
