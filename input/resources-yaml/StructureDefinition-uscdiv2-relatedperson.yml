@@ -1,5 +1,5 @@
 resourceType: StructureDefinition
-id: uscore-relatedperson
+id: us-core-relatedperson
 url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'
 version: 2.0.2
 name: USCoreRelatedPerson

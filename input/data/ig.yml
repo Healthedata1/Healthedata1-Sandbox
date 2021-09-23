@@ -138,14 +138,14 @@ definition:
         exampleBoolean: false
         name: US Core Related Person
         reference:
-            reference: StructureDefinition/uscore-relatedperson
+            reference: StructureDefinition/us-core-relatedperson
     -   description: Defines constraints and extensions on the ServiceRequest resource
             for the minimal set of data to query and retrieve orders associated with
             diagnostic and clinical tests and clinical interventions for a patient
         exampleBoolean: false
         name: US Core Service Request
         reference:
-            reference: StructureDefinition/uscore-servicerequest
+            reference: StructureDefinition/us-core-servicerequest
     -   description: '###FOO
 
             - bar'

@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "87c0fea7-7594-4cf3-be05-05b7ea5b9e5a",
+  "id" : "ad882462-3c38-4382-ab05-7104a2b44248",
   "meta" : {
-    "lastUpdated" : "2021-09-22T19:07:38.465-07:00"
+    "lastUpdated" : "2021-09-22T19:20:13.124-07:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "ArgonautGroupCharacteristicValueSet",
       "title" : "Argonaut Group Characteristic Value Set",
       "status" : "active",
-      "date" : "2021-09-22T19:07:38-07:00",
+      "date" : "2021-09-22T19:20:13-07:00",
       "publisher" : "Health eData Inc",
       "contact" : [{
         "telecom" : [{
@@ -29,8 +29,8 @@
       }],
       "description" : "Used to define group characteristic and limited to 'location'or....",
       "expansion" : {
-        "identifier" : "urn:uuid:86f64418-a725-423e-bb73-05e4e3e2b27c",
-        "timestamp" : "2021-09-22T19:10:12-07:00",
+        "identifier" : "urn:uuid:e2c7a1a6-9939-46d4-8a9b-3f63075233f0",
+        "timestamp" : "2021-09-22T19:22:36-07:00",
         "total" : 4,
         "parameter" : [{
           "name" : "excludeNested",

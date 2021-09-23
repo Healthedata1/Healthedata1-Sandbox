@@ -123,7 +123,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/uscore-relatedperson"
+          "reference": "StructureDefinition/us-core-relatedperson"
         },
         "description": "Defines constraints and extensions on the RelatedPerson resource on the patient resource for the minimal set of data to query and retrieve demographic information.",
         "exampleBoolean": false,
@@ -131,7 +131,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/uscore-servicerequest"
+          "reference": "StructureDefinition/us-core-servicerequest"
         },
         "description": "Defines constraints and extensions on the ServiceRequest resource for the minimal set of data to query and retrieve orders associated with diagnostic and clinical tests and clinical interventions for a patient",
         "exampleBoolean": false,

@@ -11,7 +11,7 @@
   <name value="SushiSandbox"/>
   <title value="Sushi Sandbox"/>
   <status value="active"/>
-  <date value="2021-09-22T19:07:38-07:00"/>
+  <date value="2021-09-22T19:20:13-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -371,7 +371,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/uscore-relatedperson"/>
+        <reference value="StructureDefinition/us-core-relatedperson"/>
       </reference>
       <name value="US Core Related Person"/>
       <description value="Defines constraints and extensions on the RelatedPerson resource on the patient resource for the minimal set of data to query and retrieve demographic information."/>
@@ -382,7 +382,7 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/uscore-servicerequest"/>
+        <reference value="StructureDefinition/us-core-servicerequest"/>
       </reference>
       <name value="US Core Service Request"/>
       <description value="Defines constraints and extensions on the ServiceRequest resource for the minimal set of data to query and retrieve orders associated with diagnostic and clinical tests and clinical interventions for a patient"/>
