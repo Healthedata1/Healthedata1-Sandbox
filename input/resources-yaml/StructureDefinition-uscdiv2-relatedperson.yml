@@ -1,0 +1,102 @@
+resourceType: StructureDefinition
+id: uscore-relatedperson
+url: 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'
+version: 2.0.2
+name: USCoreRelatedPerson
+title: US Core Related Person
+date: '2018-08-22T00:00:00+00:00'
+description: >-
+  Defines constraints and extensions on the RelatedPerson resource on the patient resource for the minimal set of data to query and retrieve demographic information.
+fhirVersion: 4.0.1
+kind: resource
+abstract: false
+type: RelatedPerson
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/RelatedPerson'
+derivation: constraint
+differential:
+  element:
+    - id: RelatedPerson
+      path: RelatedPerson
+      constraint: #from IPA
+        - key: us-core-14
+          severity: error
+          human: Either a name or a relationship SHALL be provided (or both)
+          expression: name.exists() or relationship.exists()
+    - id: RelatedPerson.active
+      path: RelatedPerson.active
+      min: 1  #from IPA
+      max: '1'
+      mustSupport: true
+    #
+    # - id: RelatedPerson.extension
+    #   path: RelatedPerson.extension
+    #   slicing:
+    #     discriminator:
+    #       - type: value
+    #         path: url
+    #     rules: open
+    # - id: 'RelatedPerson.extension:role'
+    #   path: RelatedPerson.extension
+    #   sliceName: role
+    #   short: Role
+    #   definition: Defines the role of the contact in relation to the patient.
+    #   alias:
+    #     - Rol
+    #   type:
+    #     - code: Extension
+    #       profile: 'http://fhir.nl/fhir/StructureDefinition/uscore-relatedperson-role'
+    # - id: 'RelatedPerson.extension:role.valueCodeableConcept:valueCodeableConcept'
+    #   path: RelatedPerson.extension.valueCodeableConcept
+    #   sliceName: valueCodeableConcept
+    #   binding:
+    #     strength: extensible
+    #     valueSetReference:
+    #       reference: >-
+    #         http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.2--20171231000000
+    #       display: RolCodelijst
+    #
+    # - id: RelatedPerson.identifier
+    #   path: RelatedPerson.identifier
+
+    - id: RelatedPerson.patient
+      path: RelatedPerson.patient
+      type:
+        - code: Reference
+          targetProfile:
+            - 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient'
+      mustSupport: true
+
+    - id: RelatedPerson.relationship
+      path: RelatedPerson.relationship
+      condition:
+        - us-core-14
+      mustSupport: true
+
+      # short: Relationship
+      # definition: Defines the contact’s familial relationship to the patient.
+      # binding:
+      #   extension:
+      #     - url: >-
+      #         http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName
+      #       valueString: PatientRelationshipType
+      #   strength: extensible
+      #   valueSetReference:
+      #     reference: >-
+      #       http://decor.nictiz.nl/fhir/ValueSet/2.16.840.1.113883.2.4.3.11.60.40.2.3.1.1--20171231000000
+      #     display: RelatieCodelijst
+
+    - id: RelatedPerson.name
+      path: RelatedPerson.name
+      condition:
+        - us-core-14
+      mustSupport: true
+
+    - id: RelatedPerson.telecom
+      path: RelatedPerson.telecom
+      mustSupport: true
+
+    - id: RelatedPerson.address
+      path: RelatedPerson.address
+      mustSupport: true
+    # - id: RelatedPerson.period
+    #   path: RelatedPerson.period

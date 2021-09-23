@@ -1,9 +1,9 @@
 ﻿SushiSandbox : Validation Results
 =========================================
 
-err = 2, warn = 13, info = 0
-IG Publisher Version: 1.1.79 Out of date - current version is 1.1.80
-Generated Sun Sep 12 16:53:43 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
+err = 2, warn = 14, info = 0
+IG Publisher Version: 1.1.80
+Generated Wed Sep 22 18:01:07 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
 
  Build Errors : 1 / 0 / 0
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
@@ -19,6 +19,7 @@ Generated Sun Sep 12 16:53:43 PDT 2021. FHIR version 4.0.1 for healthedatainc.su
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-extension-modality : 0 / 3 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 0 / 3 / 1
+ /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-relatedperson : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-servicerequest : 0 / 1 / 1
 </table>
 == n/a ==
@@ -50,5 +51,7 @@ WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/ar
 WARNING: StructureDefinition/argo-write-observation: StructureDefinition.differential.element[5].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
 WARNING: StructureDefinition/argo-write-observation: StructureDefinition.snapshot.element[18].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'): The Implementation Guide contains no examples for this profile
+== input/resources/StructureDefinition-uscdiv2-relatedperson.json ==
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'): The Implementation Guide contains no examples for this profile
 == input/resources/StructureDefinition-uscdiv2-servicerequest.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest'): The Implementation Guide contains no examples for this profile

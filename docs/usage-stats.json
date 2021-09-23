@@ -28,9 +28,15 @@
     }
   ],
   "profiles": {
+    "RelatedPerson": [
+      {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
+        "title": "US Core Related Person"
+      }
+    ],
     "ServiceRequest": [
       {
-        "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/uscore-servicerequest",
+        "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest",
         "title": "US Core Service Request"
       }
     ],
