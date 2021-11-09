@@ -1,48 +1,66 @@
-﻿SushiSandbox : Validation Results
+﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 2, warn = 14, info = 0
-IG Publisher Version: 1.1.80
-Generated Wed Sep 22 19:23:36 PDT 2021. FHIR version 4.0.1 for healthedatainc.sushi-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/sushi-sandbox)
-
- Build Errors : 1 / 0 / 0
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/examples/test : 1 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/CapabilityStatement-test : 1 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/OperationDefinition-unsolicited-claim : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-extension-modality : 0 / 3 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-test-obs : 0 / 3 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-relatedperson : 0 / 1 / 1
- /Users/ehaas/Documents/FHIR/Sushi-Sandbox/input/resources/StructureDefinition-uscdiv2-servicerequest : 0 / 1 / 1
+err = 10, warn = 15, info = 0
+IG Publisher Version: 1.1.84
+Generated Tue Nov 09 10:21:29 PST 2021. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 8 / 0 / 0
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/CodeSystem-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/StructureDefinition-argo-patientlist : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ValueSet-argo-group-characteristic : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/test : 1 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/test_location_example : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/test_task : 7 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/CapabilityStatement-test : 1 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/OperationDefinition-unsolicited-claim : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/SearchParameter-argo-characteristic-reference : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-argo-patientlist2 : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-extension-modality : 0 / 3 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs : 0 / 3 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-test-vitals : 1 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-uscdiv2-servicerequest : 0 / 1 / 1
 </table>
 == n/a ==
-ERROR: /Users/ehaas/Documents/FHIR/Sushi-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Location-hospital.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 274: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/holy-healthcare/expansion' for "Holy Healthcare" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 98: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/CommunicationRequest/cdex-example1-authorization/expansion' for "http://example.org/fhir/CommunicationRequest/cdex-example1-authorization" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 600: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Patient/cdex-example-patient/expansion' for "http://example.org/fhir/Patient/cdex-example-patient" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 893: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/cdex-referred-to-provider/expansion' for "http://example.org/fhir/Organization/cdex-referred-to-provider" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 1100: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/cdex-referring-provider/expansion' for "http://example.org/fhir/Organization/cdex-referring-provider" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 1404: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Claim/cdex-example-claim/expansion' for "http://example.org/fhir/Claim/cdex-example-claim" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 151, column 2116: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Condition/858/expansion' for "http://example.org/fhir/Condition/858" cannot be resolved
 == fsh-generated/resources/CodeSystem-argo-group-characteristic.json ==
-== fsh-generated/resources/ImplementationGuide-healthedatainc.sushi-sandbox.json ==
+== fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json ==
 == fsh-generated/resources/StructureDefinition-argo-patientlist.json ==
-WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist'): The Implementation Guide contains no examples for this profile
 == fsh-generated/resources/StructureDefinition-patientlistquestionnaire.json ==
-WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse.json ==
-WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/ValueSet-argo-group-characteristic.json ==
 == input/examples/test.json ==
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
-WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== input/examples/test_location_example.json ==
+== input/examples/test_task.json ==
+ERROR: Task/cdex-example1-authorized-completed: Task.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-task-data-request' does not resolve
+ERROR: Task/cdex-example1-authorized-completed: Task.code.coding[0]: Unknown Code System 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp'
+ERROR: Task/cdex-example1-authorized-completed: Task.code.coding[0].system: URL value 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp' does not resolve
+ERROR: Task/cdex-example1-authorized-completed: Task.input[0].type.coding[0]: Unknown Code System 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp'
+ERROR: Task/cdex-example1-authorized-completed: Task.input[0].type.coding[0].system: URL value 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp' does not resolve
+ERROR: Task/cdex-example1-authorized-completed: Task.output[0].type.coding[0]: Unknown Code System 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp'
+ERROR: Task/cdex-example1-authorized-completed: Task.output[0].type.coding[0].system: URL value 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp' does not resolve
+WARNING: Task/cdex-example1-authorized-completed: Task.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-task-data-request' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == input/resources/CapabilityStatement-test.json ==
 ERROR: CapabilityStatement/test: CapabilityStatement.implementationGuide[0]: Canonical URL 'http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core|3.1.1' does not resolve
 == input/resources/OperationDefinition-unsolicited-claim.json ==
 WARNING: OperationDefinition/unsolicited-claim: OperationDefinition: opd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
 == input/resources/SearchParameter-argo-characteristic-reference.json ==
 == input/resources/StructureDefinition-argo-patientlist2.json ==
-WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2'): The Implementation Guide contains no examples for this profile
 == input/resources/StructureDefinition-extension-modality.json ==
 WARNING: StructureDefinition/extension-modality: StructureDefinition.differential.element[2].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
 WARNING: StructureDefinition/extension-modality: StructureDefinition.snapshot.element[4].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/modality-codes on element Extension.value[x] could not be resolved
@@ -50,8 +68,9 @@ WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/argonaut/ar
 == input/resources/StructureDefinition-test-obs.json ==
 WARNING: StructureDefinition/argo-write-observation: StructureDefinition.differential.element[5].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
 WARNING: StructureDefinition/argo-write-observation: StructureDefinition.snapshot.element[18].binding: The valueSet reference http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags on element Observation.meta.tag could not be resolved
-WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'): The Implementation Guide contains no examples for this profile
-== input/resources/StructureDefinition-uscdiv2-relatedperson.json ==
-WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson'): The Implementation Guide contains no examples for this profile
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation'): The Implementation Guide contains no examples for this profile
+== input/resources/StructureDefinition-test-vitals.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: us-core-vital-signs/http://www.fhir.org/guides/healthedata1-sandbox/vital-signs
+WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/vital-signs'): The Implementation Guide contains no examples for this profile
 == input/resources/StructureDefinition-uscdiv2-servicerequest.json ==
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest'): The Implementation Guide contains no examples for this profile

@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/OperationDefinition/unsolicited-claim> a fhir:OperationDefinition;
+<http://www.fhir.org/guides/healthedata1-sandbox/OperationDefinition/unsolicited-claim> a fhir:OperationDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "unsolicited-claim"];
   fhir:DomainResource.text [
@@ -128,7 +128,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/OperationDefinition/unsolicited-claim.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/OperationDefinition/unsolicited-claim.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

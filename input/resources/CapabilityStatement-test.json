@@ -1,7 +1,7 @@
 {
     "resourceType": "CapabilityStatement",
     "id": "test",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test",
     "name": "Test",
     "title": "Test",
     "status": "active",

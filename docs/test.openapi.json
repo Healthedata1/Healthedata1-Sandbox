@@ -13,7 +13,7 @@
     }
   },
   "externalDocs": {
-    "url": "http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test",
     "description": "FHIR CapabilityStatement"
   },
   "components": {

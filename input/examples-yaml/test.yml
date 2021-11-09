@@ -30,7 +30,7 @@ meta:
 
         - bar
   profile:
-    - 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs'
+    - 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/test-obs'
 valueCodeableConcept:
   text: Current some day smoker
   coding:

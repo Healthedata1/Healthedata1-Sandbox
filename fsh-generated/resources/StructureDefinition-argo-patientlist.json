@@ -11,7 +11,7 @@
       "valueCode": "business"
     }
   ],
-  "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist",
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist",
   "version": "0.1.0",
   "name": "ArgonautPatientListProfile",
   "title": "Argonaut Patient List (Group) Profile",
@@ -62,7 +62,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire"
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire"
             ]
           }
         ],
@@ -130,7 +130,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"
+          "valueSet": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic"
         }
       },
       {
@@ -166,7 +166,7 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-              "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2"
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2"
             ]
           }
         ],
@@ -187,7 +187,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse"
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse"
             ]
           }
         ],

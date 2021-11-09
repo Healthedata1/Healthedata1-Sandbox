@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="ad882462-3c38-4382-ab05-7104a2b44248"/>
+  <id value="6e803823-4a76-453e-a386-ae332f495da0"/>
   <meta>
-    <lastUpdated value="2021-09-22T19:20:13.124-07:00"/>
+    <lastUpdated value="2021-11-09T10:18:17.655-08:00"/>
   </meta>
   <type value="collection"/>
   <entry>
-    <fullUrl value="http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"/>
+    <fullUrl value="http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic"/>
     <resource>
       <ValueSet>
         <id value="argo-group-characteristic"/>
@@ -20,7 +20,7 @@
             </p>
             <p>All codes in this table are from the system 
               <a href="CodeSystem-argo-group-characteristic.html">
-                <code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic</code>
+                <code>http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic</code>
               </a>
             </p>
             <table class="codes">
@@ -37,7 +37,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-location"> </a>
+                  <a name="http---www.fhir.org-guides-healthedata1-sandbox-CodeSystem-argo-group-characteristic-location"> </a>
                   <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-location">location</a>
                 </td>
                 <td>Location</td>
@@ -45,7 +45,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-team"> </a>
+                  <a name="http---www.fhir.org-guides-healthedata1-sandbox-CodeSystem-argo-group-characteristic-team"> </a>
                   <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-team">team</a>
                 </td>
                 <td>CareTeam</td>
@@ -53,7 +53,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-organization"> </a>
+                  <a name="http---www.fhir.org-guides-healthedata1-sandbox-CodeSystem-argo-group-characteristic-organization"> </a>
                   <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-organization">organization</a>
                 </td>
                 <td>Organization</td>
@@ -61,7 +61,7 @@
               </tr>
               <tr>
                 <td style="white-space:nowrap">
-                  <a name="http---www.fhir.org-guides-sushi-sandbox-CodeSystem-argo-group-characteristic-practitioner"> </a>
+                  <a name="http---www.fhir.org-guides-healthedata1-sandbox-CodeSystem-argo-group-characteristic-practitioner"> </a>
                   <a href="CodeSystem-argo-group-characteristic.html#argo-group-characteristic-practitioner">practitioner</a>
                 </td>
                 <td>Practitioner</td>
@@ -70,12 +70,12 @@
             </table>
           </div>
         </text>
-        <url value="http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"/>
+        <url value="http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic"/>
         <version value="0.1.0"/>
         <name value="ArgonautGroupCharacteristicValueSet"/>
         <title value="Argonaut Group Characteristic Value Set"/>
         <status value="active"/>
-        <date value="2021-09-22T19:20:13-07:00"/>
+        <date value="2021-11-09T10:18:17-08:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -85,8 +85,8 @@
         </contact>
         <description value="Used to define group characteristic and limited to &#39;location&#39;or...."/>
         <expansion>
-          <identifier value="urn:uuid:e2c7a1a6-9939-46d4-8a9b-3f63075233f0"/>
-          <timestamp value="2021-09-22T19:22:36-07:00"/>
+          <identifier value="urn:uuid:665440f2-408f-4075-be36-9872635cad7f"/>
+          <timestamp value="2021-11-09T10:20:43-08:00"/>
           <total value="4"/>
           <parameter>
             <name value="excludeNested"/>
@@ -94,25 +94,25 @@
           </parameter>
           <parameter>
             <name value="version"/>
-            <valueUri value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic|0.1.0"/>
+            <valueUri value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic|0.1.0"/>
           </parameter>
           <contains>
-            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <system value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic"/>
             <code value="location"/>
             <display value="Location"/>
           </contains>
           <contains>
-            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <system value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic"/>
             <code value="team"/>
             <display value="CareTeam"/>
           </contains>
           <contains>
-            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <system value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic"/>
             <code value="organization"/>
             <display value="Organization"/>
           </contains>
           <contains>
-            <system value="http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"/>
+            <system value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic"/>
             <code value="practitioner"/>
             <display value="Practitioner"/>
           </contains>

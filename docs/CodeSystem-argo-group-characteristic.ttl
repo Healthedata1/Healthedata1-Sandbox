@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic> a fhir:CodeSystem;
+<http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic> a fhir:CodeSystem;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "argo-group-characteristic"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">location<a name=\"argo-group-characteristic-location\"> </a></td><td>Location</td><td>Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr><tr><td style=\"white-space:nowrap\">team<a name=\"argo-group-characteristic-team\"> </a></td><td>CareTeam</td><td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td></tr><tr><td style=\"white-space:nowrap\">organization<a name=\"argo-group-characteristic-organization\"> </a></td><td>Organization</td><td>Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)</td></tr><tr><td style=\"white-space:nowrap\">practitioner<a name=\"argo-group-characteristic-practitioner\"> </a></td><td>Practitioner</td><td>Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)</td></tr></table></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">location<a name=\"argo-group-characteristic-location\"> </a></td><td>Location</td><td>Members (Patients) whose care is at the location specified by the value which references the Location resource representing the physical structures managed/operated by an organization (e.g., a ward, building, clinic, etc)</td></tr><tr><td style=\"white-space:nowrap\">team<a name=\"argo-group-characteristic-team\"> </a></td><td>CareTeam</td><td>Members (Patients) who are under the care of the care-team specified by the value which references the CareTeam resource representing the care-team. (e.g., Respiratory Therapy CareTeam, CareTeam blue , etc)</td></tr><tr><td style=\"white-space:nowrap\">organization<a name=\"argo-group-characteristic-organization\"> </a></td><td>Organization</td><td>Members (Patients) whose care is at the organization specified by the value which references the Organization resource representing the organization. (e.g., Burgess Medical Group)</td></tr><tr><td style=\"white-space:nowrap\">practitioner<a name=\"argo-group-characteristic-practitioner\"> </a></td><td>Practitioner</td><td>Members (Patients) who are under the care of the practitioner specified by the value which references the Practitioner resource representing the practitioner. (e.g., Dr Leung)</td></tr></table></div>"
   ];
-  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic"];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic"];
   fhir:CodeSystem.version [ fhir:value "0.1.0"];
   fhir:CodeSystem.name [ fhir:value "ArgonautGroupCharacteristicCodeSystem"];
   fhir:CodeSystem.title [ fhir:value "Argonaut Group Characteristic Code System"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-09-22T19:20:13-07:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2021-11-09T10:18:17-08:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "Health eData Inc"];
   fhir:CodeSystem.contact [
      fhir:index 0;
@@ -54,7 +54,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

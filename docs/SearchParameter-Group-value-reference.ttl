@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference> a fhir:SearchParameter;
+<http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference> a fhir:SearchParameter;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "Group-value-reference"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: GroupValueReference</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2020-09-02</p><p><b>publisher</b>: Health eData Inc</p><p><b>contact</b>: <a href=\"mailto:mailto:ehaas@healthedatainc.com\">mailto:ehaas@healthedatainc.com</a></p><p><b>description</b>: Reference value held by characteristic</p><p><b>code</b>: value-reference</p><p><b>base</b>: Group</p><p><b>type</b>: reference</p><p><b>expression</b>: Group.characteristic.value as Reference</p><p><b>xpath</b>: f:Group/f:characteristic/f:valueReference</p><p><b>xpathUsage</b>: normal</p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: GroupValueReference</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2020-09-02</p><p><b>publisher</b>: Health eData Inc</p><p><b>contact</b>: <a href=\"mailto:mailto:ehaas@healthedatainc.com\">mailto:ehaas@healthedatainc.com</a></p><p><b>description</b>: Reference value held by characteristic</p><p><b>code</b>: value-reference</p><p><b>base</b>: Group</p><p><b>type</b>: reference</p><p><b>expression</b>: Group.characteristic.value as Reference</p><p><b>xpath</b>: f:Group/f:characteristic/f:valueReference</p><p><b>xpathUsage</b>: normal</p></div>"
   ];
-  fhir:SearchParameter.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference"];
+  fhir:SearchParameter.url [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference"];
   fhir:SearchParameter.version [ fhir:value "0.1.0"];
   fhir:SearchParameter.name [ fhir:value "GroupValueReference"];
   fhir:SearchParameter.status [ fhir:value "draft"];
@@ -40,7 +40,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

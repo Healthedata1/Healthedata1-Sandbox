@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="healthedatainc.sushi-sandbox"/>
+  <id value="healthedata1-sandbox"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>SushiSandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox</pre><div><p>This is a sushi sandbox for creation of resources and examples</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>HealthEData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a Healthedata1 sandbox for creation of resources and examples</p>
 </div></div>
   </text>
-  <url value="http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox"/>
+  <url value="http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"/>
   <version value="0.1.0"/>
-  <name value="SushiSandbox"/>
-  <title value="Sushi Sandbox"/>
+  <name value="HealthEData_1Sandbox"/>
+  <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2021-09-22T19:20:13-07:00"/>
+  <date value="2021-11-09T10:18:17-08:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -19,14 +19,19 @@
       <value value="mailto:ehaas@healthedatainc.com"/>
     </telecom>
   </contact>
-  <description value="This is a sushi sandbox for creation of resources and examples"/>
-  <packageId value="healthedatainc.sushi-sandbox"/>
+  <description value="This is a Healthedata1 sandbox for creation of resources and examples"/>
+  <packageId value="healthedata1-sandbox"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7_fhir_us_core">
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
     <packageId value="hl7.fhir.us.core"/>
     <version value="4.0.0"/>
+  </dependsOn>
+  <dependsOn id="vsac">
+    <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
+    <packageId value="us.nlm.vsac"/>
+    <version value="0.3.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -162,7 +167,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://www.fhir.org/guides/sushi-sandbox/history.html"/>
+        <valueString value="http://www.fhir.org/guides/healthedata1-sandbox/history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -371,10 +376,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/us-core-relatedperson"/>
+        <reference value="StructureDefinition/us-core-vital-signs"/>
       </reference>
-      <name value="US Core Related Person"/>
-      <description value="Defines constraints and extensions on the RelatedPerson resource on the patient resource for the minimal set of data to query and retrieve demographic information."/>
+      <name value="Test Vital Signs Profile"/>
+      <description value="Defines constraints on the Observation resource to represent vital signs observations.  This profile is used as the base definition for the other US Core Vital Signs Profiles and based on the FHIR VitalSigns Profile."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -397,6 +402,28 @@
       </reference>
       <name value="FOO"/>
       <description value="###FOO&#xA;- bar"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Location"/>
+      </extension>
+      <reference>
+        <reference value="Location/hospital"/>
+      </reference>
+      <name value="Hospital Location"/>
+      <description value="This is an example hospital location for the *US Core Location Profile*."/>
+      <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Task"/>
+      </extension>
+      <reference>
+        <reference value="Task/cdex-example1-authorized-completed"/>
+      </reference>
+      <name value="Scenario 2 Completed Authorization Example"/>
+      <description value="Completed Task to seek a patient active conditions with a reference to a formal authorization."/>
       <exampleBoolean value="true"/>
     </resource>
     <page>

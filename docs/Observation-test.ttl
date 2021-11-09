@@ -7,7 +7,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/Observation/test> a fhir:Observation;
+<http://www.fhir.org/guides/healthedata1-sandbox/Observation/test> a fhir:Observation;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "test"];
   fhir:Resource.meta [
@@ -21,9 +21,9 @@
        fhir:Extension.valueMarkdown [ fhir:value "###FOO\n- bar" ]
      ];
      fhir:Meta.profile [
-       fhir:value "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs";
+       fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/test-obs";
        fhir:index 0;
-       fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs>
+       fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/test-obs>
      ]
   ];
   fhir:DomainResource.text [
@@ -64,7 +64,7 @@
      fhir:CodeableConcept.text [ fhir:value "Tobacco smoking status" ]
   ];
   fhir:Observation.subject [
-     fhir:link <http://www.fhir.org/guides/sushi-sandbox/Patient/example>;
+     fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Patient/example>;
      fhir:Reference.reference [ fhir:value "Patient/example" ];
      fhir:Reference.display [ fhir:value "Amy Shaw" ]
   ];
@@ -81,7 +81,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/Observation/test.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/Observation/test.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

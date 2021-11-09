@@ -1,7 +1,7 @@
 {
     "resourceType": "StructureDefinition",
     "id": "argo-patientlist2",
-    "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2",
     "version": "0.1.0",
     "name": "ArgonautPatientListProfile",
     "title": "Argonaut Patient List (Group) Profile",
@@ -87,7 +87,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "extensible",
-                    "valueSet": "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"
+                    "valueSet": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic"
                 }
             },
             {

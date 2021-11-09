@@ -1,6 +1,6 @@
 resourceType: StructureDefinition
 id: argo-write-observation
-url: 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation'
+url: 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation'
 version: 3.1.1
 name: ArgoWriteObservationProfile
 title: Argo Write Observation Profile

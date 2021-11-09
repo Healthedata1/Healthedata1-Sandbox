@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox> a fhir:ImplementationGuide;
+<http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox> a fhir:ImplementationGuide;
   fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "healthedatainc.sushi-sandbox"];
+  fhir:Resource.id [ fhir:value "healthedata1-sandbox"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>SushiSandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox</pre><div><p>This is a sushi sandbox for creation of resources and examples</p>\n</div></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HealthEData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a Healthedata1 sandbox for creation of resources and examples</p>\n</div></div>"
   ];
-  fhir:ImplementationGuide.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox"];
+  fhir:ImplementationGuide.url [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"];
   fhir:ImplementationGuide.version [ fhir:value "0.1.0"];
-  fhir:ImplementationGuide.name [ fhir:value "SushiSandbox"];
-  fhir:ImplementationGuide.title [ fhir:value "Sushi Sandbox"];
+  fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
+  fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-09-22T19:20:13-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-11-09T10:18:17-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -27,8 +27,8 @@
        fhir:ContactPoint.value [ fhir:value "mailto:ehaas@healthedatainc.com" ]
      ]
   ];
-  fhir:ImplementationGuide.description [ fhir:value "This is a sushi sandbox for creation of resources and examples"];
-  fhir:ImplementationGuide.packageId [ fhir:value "healthedatainc.sushi-sandbox"];
+  fhir:ImplementationGuide.description [ fhir:value "This is a Healthedata1 sandbox for creation of resources and examples"];
+  fhir:ImplementationGuide.packageId [ fhir:value "healthedata1-sandbox"];
   fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"];
   fhir:ImplementationGuide.fhirVersion [
      fhir:value "4.0.1";
@@ -43,6 +43,15 @@
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "vsac" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac";
+       fhir:link <http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "us.nlm.vsac" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.3.0" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -246,7 +255,7 @@
        ], [
          fhir:index 1;
          fhir:Extension.url [ fhir:value "value" ];
-         fhir:Extension.valueString [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/history.html" ]
+         fhir:Extension.valueString [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/history.html" ]
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
@@ -378,7 +387,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/argo-patientlist" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List (Group) Profile" ];
@@ -392,7 +401,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlistquestionnaire" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List Questionnaire" ];
@@ -406,7 +415,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/patientlistquestionnaireresponse" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List QuestionnaireResponse" ];
@@ -420,7 +429,7 @@
          fhir:Extension.valueString [ fhir:value "ValueSet" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic>;
          fhir:Reference.reference [ fhir:value "ValueSet/argo-group-characteristic" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Group Characteristic Value Set" ];
@@ -434,7 +443,7 @@
          fhir:Extension.valueString [ fhir:value "CodeSystem" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic>;
          fhir:Reference.reference [ fhir:value "CodeSystem/argo-group-characteristic" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Group Characteristic Code System" ];
@@ -448,7 +457,7 @@
          fhir:Extension.valueString [ fhir:value "CapabilityStatement" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test>;
          fhir:Reference.reference [ fhir:value "CapabilityStatement/test" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Test" ];
@@ -462,7 +471,7 @@
          fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/OperationDefinition/unsolicited-claim>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/OperationDefinition/unsolicited-claim>;
          fhir:Reference.reference [ fhir:value "OperationDefinition/unsolicited-claim" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Unsolicited Claims Attachment Operation" ];
@@ -476,7 +485,7 @@
          fhir:Extension.valueString [ fhir:value "SearchParameter" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference>;
          fhir:Reference.reference [ fhir:value "SearchParameter/Group-value-reference" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "GroupValueReference" ];
@@ -490,7 +499,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/argo-patientlist2" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Patient List (Group) Profile" ];
@@ -504,7 +513,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-modality>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/extension-modality>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/extension-modality" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Modality Extension" ];
@@ -518,7 +527,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/argo-write-observation" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argo Write Observation Profile" ];
@@ -532,11 +541,11 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/us-core-relatedperson>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-relatedperson" ]
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-vital-signs>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-vital-signs" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Related Person" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints and extensions on the RelatedPerson resource on the patient resource for the minimal set of data to query and retrieve demographic information." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Test Vital Signs Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints on the Observation resource to represent vital signs observations.  This profile is used as the base definition for the other US Core Vital Signs Profiles and based on the FHIR VitalSigns Profile." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 12;
@@ -546,7 +555,7 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/us-core-servicerequest>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-servicerequest>;
          fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-servicerequest" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Service Request" ];
@@ -560,11 +569,42 @@
          fhir:Extension.valueString [ fhir:value "Observation" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/sushi-sandbox/Observation/test>;
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Observation/test>;
          fhir:Reference.reference [ fhir:value "Observation/test" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "FOO" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "###FOO\n- bar" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Location" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Location/hospital>;
+         fhir:Reference.reference [ fhir:value "Location/hospital" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Hospital Location" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is an example hospital location for the *US Core Location Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
+       ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Task" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Task/cdex-example1-authorized-completed>;
+         fhir:Reference.reference [ fhir:value "Task/cdex-example1-authorized-completed" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Scenario 2 Completed Authorization Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Completed Task to seek a patient active conditions with a reference to a formal authorization." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
@@ -649,7 +689,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

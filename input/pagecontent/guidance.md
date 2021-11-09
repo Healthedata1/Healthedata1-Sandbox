@@ -1,3 +1,12 @@
+### List highlighting
+
+- {:.new-content}floor
+- bar
+- {:.new-content}baz
+  - 1
+  - 2
+
+
 ### My Awesome Table
 
 from this...

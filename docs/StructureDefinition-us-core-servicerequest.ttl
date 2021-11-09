@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/us-core-servicerequest> a fhir:StructureDefinition;
+<http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-servicerequest> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "us-core-servicerequest"];
   fhir:DomainResource.text [
@@ -2623,7 +2623,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/us-core-servicerequest.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-servicerequest.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

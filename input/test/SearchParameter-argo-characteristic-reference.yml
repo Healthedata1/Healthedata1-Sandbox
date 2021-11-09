@@ -1,6 +1,6 @@
 resourceType: SearchParameter
 id: Group-value-reference
-url: 'http://www.fhir.org/guides/sushi-sandbox/SearchParameter/Group-value-reference'
+url: 'http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference'
 version: 4.0.1
 name: GroupValueReference
 status: draft

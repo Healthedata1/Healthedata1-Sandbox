@@ -1,5 +1,3 @@
-<!-- get modelType -->
-
 
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -7,7 +5,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HEALTHEDATAINC.SUSHI-SANDBOX\US Core Related Person - Mappings - FHIR v4.0.1</title>
+    <title>HEALTHEDATA1-SANDBOX\Hospital Location - JSON Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -43,15 +41,15 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"4.7"}
-    h3,h4,h5,h6{--heading-prefix:"4.7"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.15"}
+    h3,h4,h5,h6{--heading-prefix:"4.15"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
 
 
         <div id="ig-status">
-          <p><span style="font-size:12pt;font-weight:bold">Sushi Sandbox</span><br/>0.1.0 - CI Build</p>
+          <p><span style="font-size:12pt;font-weight:bold">Health eData 1 Sandbox</span><br/>0.1.0 - CI Build</p>
         </div>
       </div> <!-- /container -->
     </div>  <!-- /segment-header -->
@@ -98,7 +96,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>US Core Related Person</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Hospital Location</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -110,13 +108,8 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div style="counter-reset: section 5" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Sushi Sandbox - Local Development build (v0.1.0). See the <a href="http://www.fhir.org/guides/sushi-sandbox/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  
-
-
-
-
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">Health eData 1 Sandbox - Local Development build (v0.1.0). See the <a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -127,27 +120,17 @@
 <ul class="nav nav-tabs">
 
   <li>
-    <a href="StructureDefinition-us-core-relatedperson.html">Content</a>
+    <a href="Location-hospital.html">Narrative Content</a>
   </li>
-
-
-
-  <li>
-    <a href="StructureDefinition-us-core-relatedperson-definitions.html">Detailed Descriptions</a>
-  </li>
-
-
-
-
-
 
 
 
   
-    <li>
-      <a href="StructureDefinition-us-core-relatedperson.profile.json.html">JSON</a>
+    <li class="active">
+      <a href="#">JSON</a>
     </li>
   
+
 
 
 
@@ -155,60 +138,62 @@
 
 
 <a name="root"> </a>
-<h2 id="root">Resource Profile: USCoreRelatedPerson - Mappings</h2>
 
-<p>Mappings for the us-core-relatedperson resource profile.</p>
+
+<h2 id="root">: Hospital Location - JSON Representation</h2>
+
+<p><a href="Location-hospital.json" no-download="true">Raw json</a> | <a href="Location-hospital.json" download>Download</a></p>
 
   <!-- insert intro if present -->
   
 
 
 
-  <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreRelatedPerson</b></td></tr>
- <tr><td>RelatedPerson</td><td>Entity. Role, or Act, role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>.statusCode</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>scoper[classCode=PSN|ANM and determinerCode='INSTANCE']/playedRole[classCode='PAT']/id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;relationship</td><td>code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>name</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>telecom</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;gender</td><td>administrativeGender</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;birthDate</td><td>player.birthTime</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;address</td><td>addr</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;photo</td><td>player[classCode='PSN' and determinerCode='INSTANCE']/desc</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>.effectiveTime</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;communication</td><td>LanguageCommunication</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language</td><td>player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preferred</td><td>preferenceInd</td> </tr>
-</table>
-<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreRelatedPerson</b></td></tr>
- <tr><td>RelatedPerson</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;active</td><td>FiveWs.status</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;relationship</td><td>FiveWs.class</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;period</td><td>FiveWs.done[x]</td> </tr>
-</table>
-<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
- <tr><td colspan="3"><b>USCoreRelatedPerson</b></td></tr>
- <tr><td>RelatedPerson</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>NK1-33</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>PID-3</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;relationship</td><td>NK1-3</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>NK1-2</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;telecom</td><td>NK1-5 / NK1-6 / NK1-40</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;gender</td><td>NK1-15</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;address</td><td>NK1-4</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;photo</td><td>OBX-5 - needs a profile</td> </tr>
-</table>
+  <pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/location.html#Location">resourceType</a>" : "Location",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.id">id</a>" : "hospital",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.extension">extension</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Hospital Location"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueMarkdown</a>" : "This is an example hospital location for the *US Core Location Profile*."
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Holy Family Hospital&lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: ph: 9786870156&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 70 EAST STREET METHUEN MA 01844 US &lt;/p&gt;&lt;p&gt;&lt;b&gt;managingOrganization&lt;/b&gt;: &lt;a href=\&quot;http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/holy-healthcare/expansion\&quot;&gt;Holy Healthcare&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.name">name</a>" : "Holy Family Hospital",
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.telecom">telecom</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "9786870156"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.address">address</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+      "70 EAST STREET"
+    ],
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "METHUEN",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.state">state</a>" : "MA",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "01844",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "US"
+  },
+  "<a href="http://hl7.org/fhir/R4/location.html#Location.managingOrganization">managingOrganization</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "http://example.org/fhir/Organization/holy-healthcare",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Holy Healthcare"
+  }
+}</code></pre>
 
 
   <!-- insert notes if present -->
@@ -217,7 +202,6 @@
 
 
 </div>
-
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
     </div>  <!-- /container -->
@@ -225,29 +209,6 @@
 
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
-
-  <script type="text/javascript">
-    try {
-      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
-    } catch(exception) {
-    }
-
-    if (!currentTabIndex)
-      currentTabIndex = '0';
-
-    $( '#tabs' ).tabs({
-      active: currentTabIndex,
-      activate: function( event, ui ) {
-        var active = $('.selector').tabs('option', 'active');
-        currentTabIndex = ui.newTab.index();
-        document.activeElement.blur();
-        try {
-          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
-        } catch(exception) {
-        }
-      }
-    });
-  </script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -262,7 +223,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedatainc.sushi-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 22, 2021 19:20-0700">2021-09-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Nov 9, 2021 10:18-0800">2021-11-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

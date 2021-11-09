@@ -1,0 +1,44 @@
+{
+  "resourceType": "Location",
+  "id": "hospital",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
+        "valueString": "Hospital Location"
+      },
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/instance-description",
+        "valueMarkdown": "This is an example hospital location for the *US Core Location Profile*."
+      }
+    ],
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>name</b>: Holy Family Hospital</p><p><b>telecom</b>: ph: 9786870156</p><p><b>address</b>: 70 EAST STREET METHUEN MA 01844 US </p><p><b>managingOrganization</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/holy-healthcare/expansion\">Holy Healthcare</a></p></div>"
+  },
+  "status": "active",
+  "name": "Holy Family Hospital",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "9786870156"
+    }
+  ],
+  "address": {
+    "line": [
+      "70 EAST STREET"
+    ],
+    "city": "METHUEN",
+    "state": "MA",
+    "postalCode": "01844",
+    "country": "US"
+  },
+  "managingOrganization": {
+    "reference": "http://example.org/fhir/Organization/holy-healthcare",
+    "display": "Holy Healthcare"
+  }
+}

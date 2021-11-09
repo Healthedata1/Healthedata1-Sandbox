@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-modality> a fhir:StructureDefinition;
+<http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/extension-modality> a fhir:StructureDefinition;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "extension-modality"];
   fhir:DomainResource.text [
@@ -303,7 +303,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/extension-modality.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/extension-modality.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

@@ -132,13 +132,14 @@ definition:
         name: Argo Write Observation Profile
         reference:
             reference: StructureDefinition/argo-write-observation
-    -   description: Defines constraints and extensions on the RelatedPerson resource
-            on the patient resource for the minimal set of data to query and retrieve
-            demographic information.
+    -   description: Defines constraints on the Observation resource to represent
+            vital signs observations.  This profile is used as the base definition
+            for the other US Core Vital Signs Profiles and based on the FHIR VitalSigns
+            Profile.
         exampleBoolean: false
-        name: US Core Related Person
+        name: Test Vital Signs Profile
         reference:
-            reference: StructureDefinition/us-core-relatedperson
+            reference: StructureDefinition/us-core-vital-signs
     -   description: Defines constraints and extensions on the ServiceRequest resource
             for the minimal set of data to query and retrieve orders associated with
             diagnostic and clinical tests and clinical interventions for a patient
@@ -153,21 +154,37 @@ definition:
         name: FOO
         reference:
             reference: Observation/test
+    -   description: This is an example hospital location for the *US Core Location
+            Profile*.
+        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+        name: Hospital Location
+        reference:
+            reference: Location/hospital
+    -   description: Completed Task to seek a patient active conditions with a reference
+            to a formal authorization.
+        exampleBoolean: true
+        name: Scenario 2 Completed Authorization Example
+        reference:
+            reference: Task/cdex-example1-authorized-completed
 dependsOn:
 -   id: hl7_fhir_us_core
     packageId: hl7.fhir.us.core
     uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
     version: 4.0.0
-description: This is a sushi sandbox for creation of resources and examples
+-   id: vsac
+    packageId: us.nlm.vsac
+    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
+    version: 0.3.0
+description: This is a Healthedata1 sandbox for creation of resources and examples
 fhirVersion:
 - 4.0.1
-id: healthedatainc.sushi-sandbox
+id: healthedata1-sandbox
 license: CC0-1.0
-name: SushiSandbox
-packageId: healthedatainc.sushi-sandbox
+name: HealthEData_1Sandbox
+packageId: healthedata1-sandbox
 publisher: Health eData Inc
 resourceType: ImplementationGuide
 status: active
-title: Sushi Sandbox
-url: http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox
+title: Health eData 1 Sandbox
+url: http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox
 version: 0.1.0

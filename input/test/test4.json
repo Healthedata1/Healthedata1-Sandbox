@@ -26,7 +26,7 @@
   "issued": "2016-03-18T05:27:04Z",
   "meta": {
     "profile": [
-      "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/test-obs"
+      "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/test-obs"
     ]
   },
   "valueCodeableConcept": {

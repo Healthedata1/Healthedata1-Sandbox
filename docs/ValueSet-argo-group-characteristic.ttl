@@ -5,19 +5,19 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic> a fhir:ValueSet;
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic> a fhir:ValueSet;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "argo-group-characteristic"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-argo-group-characteristic.html\"><code>http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic</code></a></li></ul></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-argo-group-characteristic.html\"><code>http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic</code></a></li></ul></div>"
   ];
-  fhir:ValueSet.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic"];
+  fhir:ValueSet.url [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic"];
   fhir:ValueSet.version [ fhir:value "0.1.0"];
   fhir:ValueSet.name [ fhir:value "ArgonautGroupCharacteristicValueSet"];
   fhir:ValueSet.title [ fhir:value "Argonaut Group Characteristic Value Set"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2021-09-22T19:20:13-07:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2021-11-09T10:18:17-08:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "Health eData Inc"];
   fhir:ValueSet.contact [
      fhir:index 0;
@@ -31,13 +31,13 @@
   fhir:ValueSet.compose [
      fhir:ValueSet.compose.include [
        fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/CodeSystem/argo-group-characteristic" ]
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic" ]
      ]
   ] .
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

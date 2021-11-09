@@ -1,0 +1,104 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/Task/cdex-example1-authorized-completed> a fhir:Task;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "cdex-example1-authorized-completed"];
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
+       fhir:Extension.valueString [ fhir:value "Scenario 2 Completed Authorization Example" ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];
+       fhir:Extension.valueMarkdown [ fhir:value "Completed Task to seek a patient active conditions with a reference to a formal authorization." ]
+     ];
+     fhir:Meta.versionId [ fhir:value "3" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-10-26T04:04:52.000+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#tgH2FoPFuCq0yjw5" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-task-data-request";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-task-data-request>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>basedOn</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/CommunicationRequest/cdex-example1-authorization/expansion\">http://example.org/fhir/CommunicationRequest/cdex-example1-authorization</a></p><p><b>status</b>: completed</p><p><b>businessStatus</b>: <span title=\"Codes: \">Results reviewed for release</span></p><p><b>intent</b>: order</p><p><b>code</b>: <span title=\"Codes: {http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp data-request}\">data-request</span></p><p><b>for</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Patient/cdex-example-patient/expansion\">http://example.org/fhir/Patient/cdex-example-patient</a></p><p><b>authoredOn</b>: Oct 25, 2020, 7:58:55 PM</p><p><b>lastModified</b>: Oct 25, 2020, 9:04:52 PM</p><p><b>requester</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/cdex-referred-to-provider/expansion\">http://example.org/fhir/Organization/cdex-referred-to-provider</a></p><p><b>owner</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/cdex-referring-provider/expansion\">http://example.org/fhir/Organization/cdex-referring-provider</a></p><p><b>reasonCode</b>: <span title=\"Codes: \">Support performing requested service</span></p><p><b>reasonReference</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Claim/cdex-example-claim/expansion\">http://example.org/fhir/Claim/cdex-example-claim</a></p><h3>Inputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp data-query}\">data-query</span></td><td>Condition?patient=cdex-example-patient&amp;clinical-status=active</td></tr></table><h3>Outputs</h3><table class=\"grid\"><tr><td>-</td><td><b>Type</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp data-value}\">data-value</span></td><td><a href=\"http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Condition/858/expansion\">http://example.org/fhir/Condition/858</a></td></tr></table></div>"
+  ];
+  fhir:Task.basedOn [
+     fhir:index 0;
+     fhir:link <http://example.org/fhir/CommunicationRequest/cdex-example1-authorization>;
+     fhir:Reference.reference [ fhir:value "http://example.org/fhir/CommunicationRequest/cdex-example1-authorization" ]
+  ];
+  fhir:Task.status [ fhir:value "completed"];
+  fhir:Task.businessStatus [
+     fhir:CodeableConcept.text [ fhir:value "Results reviewed for release" ]
+  ];
+  fhir:Task.intent [ fhir:value "order"];
+  fhir:Task.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp" ];
+       fhir:Coding.code [ fhir:value "data-request" ]
+     ]
+  ];
+  fhir:Task.for [
+     fhir:link <http://example.org/fhir/Patient/cdex-example-patient>;
+     fhir:Reference.reference [ fhir:value "http://example.org/fhir/Patient/cdex-example-patient" ]
+  ];
+  fhir:Task.authoredOn [ fhir:value "2020-10-26T02:58:55.179Z"^^xsd:dateTime];
+  fhir:Task.lastModified [ fhir:value "2020-10-26T04:04:52.019Z"^^xsd:dateTime];
+  fhir:Task.requester [
+     fhir:link <http://example.org/fhir/Organization/cdex-referred-to-provider>;
+     fhir:Reference.reference [ fhir:value "http://example.org/fhir/Organization/cdex-referred-to-provider" ]
+  ];
+  fhir:Task.owner [
+     fhir:link <http://example.org/fhir/Organization/cdex-referring-provider>;
+     fhir:Reference.reference [ fhir:value "http://example.org/fhir/Organization/cdex-referring-provider" ]
+  ];
+  fhir:Task.reasonCode [
+     fhir:CodeableConcept.text [ fhir:value "Support performing requested service" ]
+  ];
+  fhir:Task.reasonReference [
+     fhir:link <http://example.org/fhir/Claim/cdex-example-claim>;
+     fhir:Reference.reference [ fhir:value "http://example.org/fhir/Claim/cdex-example-claim" ]
+  ];
+  fhir:Task.input [
+     fhir:index 0;
+     fhir:Task.input.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp" ];
+         fhir:Coding.code [ fhir:value "data-query" ]
+       ]
+     ];
+     fhir:Task.input.valueString [ fhir:value "Condition?patient=cdex-example-patient&clinical-status=active" ]
+  ];
+  fhir:Task.output [
+     fhir:index 0;
+     fhir:Task.output.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp" ];
+         fhir:Coding.code [ fhir:value "data-value" ]
+       ]
+     ];
+     fhir:Task.output.valueReference [
+       fhir:link <http://example.org/fhir/Condition/858>;
+       fhir:Reference.reference [ fhir:value "http://example.org/fhir/Condition/858" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/Task/cdex-example1-authorized-completed.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

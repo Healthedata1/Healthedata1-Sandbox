@@ -12,8 +12,8 @@
   <sch:pattern>
     <sch:title>f:Group</sch:title>
     <sch:rule context="f:Group">
-      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire']) &gt;= 1">extension with URL = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire']) &gt;= 1">extension with URL = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire': maximum cardinality of 'extension' is 1</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -183,8 +183,8 @@
     <sch:title>f:Group/f:member/f:entity</sch:title>
     <sch:rule context="f:Group/f:member/f:entity">
       <sch:assert test="count(f:id) &lt;= 1">id: maximum cardinality of 'id' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse']) &gt;= 1">extension with URL = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse': minimum cardinality of 'extension' is 1</sch:assert>
-      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse': maximum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse']) &gt;= 1">extension with URL = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse': minimum cardinality of 'extension' is 1</sch:assert>
+      <sch:assert test="count(f:extension[@url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse']) &lt;= 1">extension with URL = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse': maximum cardinality of 'extension' is 1</sch:assert>
       <sch:assert test="count(f:reference) &lt;= 1">reference: maximum cardinality of 'reference' is 1</sch:assert>
       <sch:assert test="count(f:type) &lt;= 1">type: maximum cardinality of 'type' is 1</sch:assert>
       <sch:assert test="count(f:identifier) &lt;= 1">identifier: maximum cardinality of 'identifier' is 1</sch:assert>

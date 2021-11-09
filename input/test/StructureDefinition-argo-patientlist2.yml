@@ -1,6 +1,6 @@
 resourceType: StructureDefinition
 id: argo-patientlist2
-url: 'http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2'
+url: 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2'
 version: 0.1.0
 name: ArgonautPatientListProfile
 title: Argonaut Patient List (Group) Profile
@@ -72,7 +72,7 @@ differential:
       binding:
         strength: extensible
         valueSet: >-
-          http://www.fhir.org/guides/sushi-sandbox/ValueSet/argo-group-characteristic
+          http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic
     - id: 'Group.characteristic.value[x]'
       path: 'Group.characteristic.value[x]'
       comment: >-

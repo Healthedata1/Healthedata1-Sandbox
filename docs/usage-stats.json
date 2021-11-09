@@ -1,5 +1,5 @@
 {
-  "package": "healthedatainc.sushi-sandbox",
+  "package": "healthedata1-sandbox",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [
@@ -11,7 +11,7 @@
       ]
     },
     {
-      "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire",
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire",
       "title": "Argonaut Patient List Questionnaire",
       "types": [
         "Reference",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse",
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse",
       "title": "Argonaut Patient List QuestionnaireResponse",
       "types": [
         "Reference",
@@ -28,12 +28,6 @@
     }
   ],
   "profiles": {
-    "RelatedPerson": [
-      {
-        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson",
-        "title": "US Core Related Person"
-      }
-    ],
     "ServiceRequest": [
       {
         "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest",
@@ -42,18 +36,22 @@
     ],
     "Group": [
       {
-        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist",
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist",
         "title": "Argonaut Patient List (Group) Profile"
       },
       {
-        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-patientlist2",
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2",
         "title": "Argonaut Patient List (Group) Profile"
       }
     ],
     "Observation": [
       {
-        "url": "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/argo-write-observation",
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation",
         "title": "Argo Write Observation Profile"
+      },
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/vital-signs",
+        "title": "Test Vital Signs Profile"
       }
     ]
   },
@@ -86,10 +84,14 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
-      "Observation.meta"
+      "Location.meta",
+      "Observation.meta",
+      "Task.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
-      "Observation.meta"
+      "Location.meta",
+      "Observation.meta",
+      "Task.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/observation-gatewayDevice": [
       "Observation"
@@ -121,10 +123,10 @@
     "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality": [
       "Observation"
     ],
-    "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaire": [
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire": [
       "Group"
     ],
-    "http://www.fhir.org/guides/sushi-sandbox/StructureDefinition/patientlistquestionnaireresponse": [
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse": [
       "Group.member.entity"
     ]
   }

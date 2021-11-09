@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test> a fhir:CapabilityStatement;
+<http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test> a fhir:CapabilityStatement;
   fhir:nodeRole fhir:treeRoot;
   fhir:Resource.id [ fhir:value "test"];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "extensions" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Test</h2><div><p>This CapabilityStatement is a test of implementationGuide</p>\n</div><table><tr><td>Mode</td><td>CLIENT</td></tr><tr><td>Description</td><td><div><p>This CapabilityStatement is a test of implementationGuide</p>\n</div></td></tr><tr><td>Transaction</td><td></td></tr><tr><td>System History</td><td></td></tr><tr><td>System Search</td><td></td></tr></table><table><tr><th><b>Resource Type</b></th><th><b>Profile</b></th><th><b title=\"GET a resource (read interaction)\">Read</b></th><th><b title=\"GET all set of resources of the type (search interaction)\">Search</b></th><th><b title=\"PUT a new resource version (update interaction)\">Update</b></th><th><b title=\"POST a new resource (create interaction)\">Create</b></th></tr></table></div>"
   ];
-  fhir:CapabilityStatement.url [ fhir:value "http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test"];
+  fhir:CapabilityStatement.url [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test"];
   fhir:CapabilityStatement.version [ fhir:value "0.1.0"];
   fhir:CapabilityStatement.name [ fhir:value "Test"];
   fhir:CapabilityStatement.title [ fhir:value "Test"];
@@ -78,7 +78,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<http://www.fhir.org/guides/sushi-sandbox/CapabilityStatement/test.ttl> a owl:Ontology;
+<http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test.ttl> a owl:Ontology;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

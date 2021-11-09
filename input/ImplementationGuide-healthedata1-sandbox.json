@@ -1,10 +1,10 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "healthedatainc.sushi-sandbox",
-  "url": "http://www.fhir.org/guides/sushi-sandbox/ImplementationGuide/healthedatainc.sushi-sandbox",
+  "id": "healthedata1-sandbox",
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
   "version": "0.1.0",
-  "name": "SushiSandbox",
-  "title": "Sushi Sandbox",
+  "name": "HealthEData_1Sandbox",
+  "title": "Health eData 1 Sandbox",
   "status": "active",
   "publisher": "Health eData Inc",
   "contact": [
@@ -17,8 +17,8 @@
       ]
     }
   ],
-  "description": "This is a sushi sandbox for creation of resources and examples",
-  "packageId": "healthedatainc.sushi-sandbox",
+  "description": "This is a Healthedata1 sandbox for creation of resources and examples",
+  "packageId": "healthedata1-sandbox",
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
