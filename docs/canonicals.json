@@ -1,38 +1,10 @@
 [
   {
-    "id": "unsolicited-claim",
-    "type": "OperationDefinition",
-    "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/unsolicited-claim",
-    "version": "0.1.0",
-    "name": "Unsolicited Claims Attachment Operation"
-  },
-  {
-    "id": "us-core-servicerequest",
+    "id": "us-core-diagnosticreport-note",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
     "version": "0.1.0",
-    "name": "USCoreServiceRequest"
-  },
-  {
-    "id": "extension-modality",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality",
-    "version": "0.1.0",
-    "name": "ModalityExtension"
-  },
-  {
-    "id": "test",
-    "type": "CapabilityStatement",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CapabilityStatement/test",
-    "version": "0.1.0",
-    "name": "Test"
-  },
-  {
-    "id": "argo-group-characteristic",
-    "type": "CodeSystem",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/argo-group-characteristic",
-    "version": "0.1.0",
-    "name": "ArgonautGroupCharacteristicCodeSystem"
+    "name": "USCoreDiagnosticReportProfileNoteExchange"
   },
   {
     "id": "healthedata1-sandbox",
@@ -40,34 +12,6 @@
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
     "version": "0.1.0",
     "name": "HealthEData_1Sandbox"
-  },
-  {
-    "id": "Group-value-reference",
-    "type": "SearchParameter",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/Group-value-reference",
-    "version": "0.1.0",
-    "name": "GroupValueReference"
-  },
-  {
-    "id": "argo-patientlist",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist",
-    "version": "0.1.0",
-    "name": "ArgonautPatientListProfile"
-  },
-  {
-    "id": "argo-patientlist2",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2",
-    "version": "0.1.0",
-    "name": "ArgonautPatientListProfile"
-  },
-  {
-    "id": "argo-write-observation",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation",
-    "version": "0.1.0",
-    "name": "ArgoWriteObservationProfile"
   },
   {
     "id": "patientlistquestionnaire",
@@ -82,19 +26,5 @@
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse",
     "version": "0.1.0",
     "name": "PatientListQuestionnaireResponse"
-  },
-  {
-    "id": "argo-group-characteristic",
-    "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/argo-group-characteristic",
-    "version": "0.1.0",
-    "name": "ArgonautGroupCharacteristicValueSet"
-  },
-  {
-    "id": "us-core-vital-signs",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/vital-signs",
-    "version": "0.1.0",
-    "name": "TestVitalSignsProfile"
   }
 ]

@@ -4,13 +4,6 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
-      "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality",
-      "title": "Modality Extension",
-      "types": [
-        "code"
-      ]
-    },
-    {
       "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire",
       "title": "Argonaut Patient List Questionnaire",
       "types": [
@@ -28,36 +21,16 @@
     }
   ],
   "profiles": {
-    "ServiceRequest": [
+    "DiagnosticReport": [
       {
-        "url": "http://hl7.org/fhir/us/uscore/StructureDefinition/us-core-servicerequest",
-        "title": "US Core Service Request"
-      }
-    ],
-    "Group": [
-      {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist",
-        "title": "Argonaut Patient List (Group) Profile"
-      },
-      {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-patientlist2",
-        "title": "Argonaut Patient List (Group) Profile"
-      }
-    ],
-    "Observation": [
-      {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation",
-        "title": "Argo Write Observation Profile"
-      },
-      {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/vital-signs",
-        "title": "Test Vital Signs Profile"
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+        "title": "US Core DiagnosticReport Profile for Report and Note exchange"
       }
     ]
   },
   "usage": {
-    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
-      "CapabilityStatement.implementationGuide"
+    "http://hl7.org/fhir/5.0.0/StructureDefinition/extension-DiagnosticReport.media": [
+      "DiagnosticReport"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.snapshot.element.constraint"
@@ -73,9 +46,6 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
-      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
       "StructureDefinition.differential.element.type",
@@ -93,41 +63,17 @@
       "Observation.meta",
       "Task.meta"
     ],
-    "http://hl7.org/fhir/StructureDefinition/observation-gatewayDevice": [
-      "Observation"
-    ],
     "http://hl7.org/fhir/StructureDefinition/rendered-value": [
       "Observation.identifier.value"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.snapshot.element"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
-      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
-    ],
-    "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/extension-modality": [
-      "Observation"
-    ],
-    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire": [
-      "Group"
-    ],
-    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse": [
-      "Group.member.entity"
     ]
   }
 }
