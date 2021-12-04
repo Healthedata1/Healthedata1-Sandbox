@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BackportNotificationTypeValueSet",
+  "id": "backport-notification-type-value-set",
+  "title": "R5 Subscription Notification Type Value Set",
+  "description": "Codes to represent types of notification bundles.",
+  "version": "0.1.0",
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-notification-type-value-set",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system"
+      }
+    ]
+  }
+}

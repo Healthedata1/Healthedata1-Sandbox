@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2021-11-09T23:17:11-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2021-12-03T21:52:00-08:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -45,6 +45,24 @@
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.0" ]
   ], [
      fhir:index 1;
+     fhir:Element.id [ fhir:value "hl7_fhir_uv_bulkdata" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata";
+       fhir:link <http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.bulkdata" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.0.0" ]
+  ], [
+     fhir:index 2;
+     fhir:Element.id [ fhir:value "hl7_fhir_uv_smart_app_launch" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch";
+       fhir:link <http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.smart-app-launch" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.0.0" ]
+  ], [
+     fhir:index 3;
      fhir:Element.id [ fhir:value "vsac" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac";
@@ -412,6 +430,132 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-heartbeat-period" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backport R5 Subscription Heartbeat Period" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Interval in seconds to send 'heartbeat' notifications." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-payload-content" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backport R5 Subscription Payload Content Information" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-timeout" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backport R5 Subscription Timeout" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Timeout in seconds to attempt notification delivery." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-topic-canonical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backport R5 Subscription Topic Canonical" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Canonical reference to the subscription topic being subscribed to." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-subscription-notification" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backported R5 Subscription Notification Bundle" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile on the R4 Bundle resource to enable R5-style topic-based subscription notifications in FHIR R4." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-subscription-status" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backported R5 Subscription Notification Status" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile on the Parameters resource to enable R5-style topic-based subscription notifications in FHIR R4." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/backport-subscription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backported R5 Subscription" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile on the R4 Subscription resource to enable R5-style topic-based subscriptions in FHIR R4." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/tags>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/tags" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Write Tag Code System" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to tag patient submitted resources for writing and searching from EHRs" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "OperationDefinition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/OperationDefinition/attachment>;
+         fhir:Reference.reference [ fhir:value "OperationDefinition/attachment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Attachment Operation" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This operation is used to submit attachments for Claims or Prior Authorization. This operation accepts the clinical attachments and the necessary information needed to re-attach them to the claim or prior authorization, and returns a transaction layer http response.  This operation can be used by any HTTP end-point, not just FHIR RESTful servers.\n\nThe input parameters are:\n1. One or more Attachments as FHIR Resources\n1. Data elements for reassociation to the Claim/Prior Authorization\n    - Reason for Attachments:\n      - Unsolicited claim\n      - Solicited claim\n      - Prior Authorization\n    - A unique claim/prior authorization identifier (named \"TargetId\")\n    - One or more unique claim line item identifiers\n    - A unique organization/location identifier (e.g., NPI)\n    - A unique provider identifier (e.g., NPI)\n    - A unique Patient member identifier\n\nThere are no output parameters.\n\nNote that Unsolicited Claim implies that the *provider* assigns the claim identifier (in other words, a \"placer identifier\") upon claim generation. Solicited Claim and Prior Authorization imply that the *payer* assigned the Claim/Prior Authorization identifier (in other words, a \"filler identifier\") a upon receipt of a claim or prior authorization.\n" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -422,7 +566,139 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 3;
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/cdex-attachment-reason>;
+         fhir:Reference.reference [ fhir:value "ValueSet/cdex-attachment-reason" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDex Attachment Reason Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The set of codes is used in the [`$attachment`](http://build.fhir.org/ig/HL7/davinci-ecdx/todo.html) operation for identifying the reason for attachments" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/tags>;
+         fhir:Reference.reference [ fhir:value "ValueSet/tags" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argonaut Write Tag Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Used to tag patient submitted resources for writing and searching from EHRs" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/backport-content-code-system" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backported R5 Subscription Content Code System" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes to represent how much resource content to send in the notification payload." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/backport-notification-type-code-system" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "R5 Subscription Notification Type Code System" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes to represent types of notification bundles." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-content-value-set>;
+         fhir:Reference.reference [ fhir:value "ValueSet/backport-content-value-set" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Backported R5 Subscription Content Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes to represent how much resource content to send in the notification payload." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-notification-type-value-set>;
+         fhir:Reference.reference [ fhir:value "ValueSet/backport-notification-type-value-set" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "R5 Subscription Notification Type Value Set" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Codes to represent types of notification bundles." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Bundle/3945182f-d315-4dbf-9259-09d863c7e7da>;
+         fhir:Reference.reference [ fhir:value "Bundle/3945182f-d315-4dbf-9259-09d863c7e7da" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "3945182f-d315-4dbf-9259-09d863c7e7da" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification";
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification>
+       ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Bundle/9601c07a-e34f-4945-93ca-6efb5394c995>;
+         fhir:Reference.reference [ fhir:value "Bundle/9601c07a-e34f-4945-93ca-6efb5394c995" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "9601c07a-e34f-4945-93ca-6efb5394c995" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification";
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification>
+       ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Subscription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Subscription/admission>;
+         fhir:Reference.reference [ fhir:value "Subscription/admission" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "admission" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription";
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription>
+       ]
+     ], [
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -436,7 +712,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "###FOO\n- bar" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ], [
-       fhir:index 4;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -453,7 +729,7 @@
          fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-location>
        ]
      ], [
-       fhir:index 5;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -499,49 +775,53 @@
      ], [
        fhir:index 2;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/intro-notes" ]
      ], [
        fhir:index 3;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
      ], [
        fhir:index 4;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
      ], [
        fhir:index 5;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
      ], [
        fhir:index 6;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
      ], [
        fhir:index 7;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
      ], [
        fhir:index 8;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
      ], [
        fhir:index 9;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
      ], [
        fhir:index 10;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
      ], [
        fhir:index 11;
-       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
      ], [
        fhir:index 12;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
-       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
      ], [
        fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 14;
        fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
        fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
      ]

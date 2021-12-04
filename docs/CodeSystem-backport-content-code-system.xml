@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="backport-content-code-system"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">empty<a name="backport-content-code-system-empty"> </a></td><td>Empty</td><td>No resource content is transacted in the notification payload.</td></tr><tr><td style="white-space:nowrap">id-only<a name="backport-content-code-system-id-only"> </a></td><td>Id Only</td><td>Only the resource id is transacted in the notification payload.</td></tr><tr><td style="white-space:nowrap">full-resource<a name="backport-content-code-system-full-resource"> </a></td><td>Full Resource</td><td>The entire resource is transacted in the notification payload.</td></tr></table></div>
+  </text>
+  <url value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system"/>
+  <version value="0.1.0"/>
+  <name value="BackportContentCodeSystem"/>
+  <title value="Backported R5 Subscription Content Code System"/>
+  <status value="active"/>
+  <date value="2021-12-03T21:52:00-08:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="Codes to represent how much resource content to send in the notification payload."/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="empty"/>
+    <display value="Empty"/>
+    <definition value="No resource content is transacted in the notification payload."/>
+  </concept>
+  <concept>
+    <code value="id-only"/>
+    <display value="Id Only"/>
+    <definition value="Only the resource id is transacted in the notification payload."/>
+  </concept>
+  <concept>
+    <code value="full-resource"/>
+    <display value="Full Resource"/>
+    <definition value="The entire resource is transacted in the notification payload."/>
+  </concept>
+</CodeSystem>

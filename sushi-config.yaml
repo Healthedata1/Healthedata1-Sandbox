@@ -27,7 +27,8 @@ license: CC0-1.0
 fhirVersion: 4.0.1
 dependencies:
   hl7.fhir.us.core: 4.0.0
-  #hl7.fhir.uv.bulkdata: 1.0.1
+  hl7.fhir.uv.bulkdata: 2.0.0
+  hl7.fhir.uv.smart-app-launch: 2.0.0
   us.nlm.vsac:
       uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
       version: 0.3.0
@@ -39,6 +40,7 @@ parameters:
   path-resource:
     - input/resources
     - fsh-generated/resources
+    - input/intro-notes
   #path-pages:
     #- input/pagecontent
     #- fsh-generated/includes
@@ -52,6 +54,12 @@ parameters:
   excludeexample: true
   # custom parameter also possible too
   #foo: bar
+  # no-narrative:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
+  # no-validate:
+  #   - '*/*'  # does not seems to work
+  #   - 'StructureDefinition/*'
 copyrightYear: 2020+
 releaseLabel: CI Build
 

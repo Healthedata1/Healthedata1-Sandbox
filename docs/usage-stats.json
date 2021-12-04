@@ -4,6 +4,36 @@
   "fhirVersion": "4.0.1",
   "extensions": [
     {
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period",
+      "title": "Backport R5 Subscription Heartbeat Period",
+      "types": [
+        "unsignedInt"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content",
+      "title": "Backport R5 Subscription Payload Content Information",
+      "types": [
+        "code",
+        "code"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout",
+      "title": "Backport R5 Subscription Timeout",
+      "types": [
+        "unsignedInt"
+      ]
+    },
+    {
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical",
+      "title": "Backport R5 Subscription Topic Canonical",
+      "types": [
+        "uri",
+        "uri"
+      ]
+    },
+    {
       "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire",
       "title": "Argonaut Patient List Questionnaire",
       "types": [
@@ -25,6 +55,24 @@
       {
         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
         "title": "US Core DiagnosticReport Profile for Report and Note exchange"
+      }
+    ],
+    "Subscription": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription",
+        "title": "Backported R5 Subscription"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification",
+        "title": "Backported R5 Subscription Notification Bundle"
+      }
+    ],
+    "Parameters": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status",
+        "title": "Backported R5 Subscription Notification Status"
       }
     ]
   },
@@ -63,17 +111,41 @@
       "Observation.meta",
       "Task.meta"
     ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
     "http://hl7.org/fhir/StructureDefinition/rendered-value": [
       "Observation.identifier.value"
     ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
+      "StructureDefinition"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period": [
+      "Subscription.channel"
+    ],
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content": [
+      "Subscription.channel.payload"
+    ],
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout": [
+      "Subscription.channel"
+    ],
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical": [
+      "Subscription"
     ]
   }
 }

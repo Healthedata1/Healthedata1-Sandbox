@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "tags",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p>All codes in this table are from the system <a href=\"CodeSystem-tags.html\"><code>http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-argonaut-argo-write-CodeSystem-tags-uploaded-data\"> </a><a href=\"CodeSystem-tags.html#tags-uploaded-data\">uploaded-data</a></td><td>FOO</td><td>Data is supplied by a client facing app. For example, patient generated or mediated data that is supplied by patient or other patient designee (such as a parent or spouse) rather than by a healthcare provider.</td></tr></table></div>"
+  },
+  "url": "http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags",
+  "version": "0.1.0",
+  "name": "ArgonautWriteTagValueSet",
+  "title": "Argonaut Write Tag Value Set",
+  "status": "active",
+  "date": "2021-12-03T21:52:00-08:00",
+  "publisher": "Health eData Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:ehaas@healthedatainc.com"
+        }
+      ]
+    }
+  ],
+  "description": "Used to tag patient submitted resources for writing and searching from EHRs",
+  "copyright": "This Content is created by the Argonaut Project and HL7. No copyright acknowledgement is needed, nor are there any license terms to adhere to.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "my_temporary_expansion",
+    "timestamp": "2015-06-22T13:56:07Z",
+    "contains": [
+      {
+        "system": "http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags",
+        "code": "uploaded-data",
+        "display": "FOO",
+        "designation": [
+          {
+            "value": "my designation - could put definition here?"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "resourceType": "Subscription",
+  "id": "admission",
+  "meta": {
+    "profile": [
+      "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"admission\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-backport-subscription.html\">Backported R5 Subscription</a></p></div><p><b>status</b>: active</p><p><b>end</b>: Dec 31, 2020, 4:00:00 AM</p><p><b>reason</b>: Example Backported Subscription for Patient Admission</p><p><b>criteria</b>: Encounter?patient=Patient/123</p><h3>Channels</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Type</b></td><td><b>Endpoint</b></td><td><b>Payload</b></td><td><b>Header</b></td></tr><tr><td>*</td><td>, </td><td>rest-hook</td><td><a href=\"https://example.org/Endpoints/eae3806a-f7fb-4e3f-a14d-c4c58ca9c038\">https://example.org/Endpoints/eae3806a-f7fb-4e3f-a14d-c4c58ca9c038</a></td><td>application/fhir+json</td><td>Authorization: Bearer secret-token-abc-123</td></tr></table></div>"
+  },
+  "modifierExtension": [
+    {
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical",
+      "valueUri": "http://hl7.org/SubscriptionTopic/admission"
+    }
+  ],
+  "status": "active",
+  "end": "2020-12-31T12:00:00Z",
+  "reason": "Example Backported Subscription for Patient Admission",
+  "criteria": "Encounter?patient=Patient/123",
+  "channel": {
+    "extension": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period",
+        "valueUnsignedInt": 86400
+      },
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout",
+        "valueUnsignedInt": 60
+      }
+    ],
+    "type": "rest-hook",
+    "endpoint": "https://example.org/Endpoints/eae3806a-f7fb-4e3f-a14d-c4c58ca9c038",
+    "payload": "application/fhir+json",
+    "_payload": {
+      "extension": [
+        {
+          "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content",
+          "valueCode": "id-only"
+        }
+      ]
+    },
+    "header": [
+      "Authorization: Bearer secret-token-abc-123"
+    ]
+  }
+}

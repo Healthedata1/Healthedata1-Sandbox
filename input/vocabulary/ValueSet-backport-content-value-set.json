@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BackportContentValueSet",
+  "id": "backport-content-value-set",
+  "title": "Backported R5 Subscription Content Value Set",
+  "description": "Codes to represent how much resource content to send in the notification payload.",
+  "version": "0.1.0",
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-content-value-set",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="backport-notification-type-value-set"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-backport-notification-type-code-system.html"><code>http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system</code></a></li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-notification-type-value-set"/>
+  <version value="0.1.0"/>
+  <name value="BackportNotificationTypeValueSet"/>
+  <title value="R5 Subscription Notification Type Value Set"/>
+  <status value="active"/>
+  <date value="2021-12-03T21:52:00-08:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="Codes to represent types of notification bundles."/>
+  <compose>
+    <include>
+      <system value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="backport-notification-type-code-system"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">handshake<a name="backport-notification-type-code-system-handshake"> </a></td><td>Handshake</td><td>The notification is being sent as part of the setup or verification of a communications channel.</td></tr><tr><td style="white-space:nowrap">heartbeat<a name="backport-notification-type-code-system-heartbeat"> </a></td><td>Heartbeat</td><td>The notification is being sent because there has not been a notification generated over an extended period of time.</td></tr><tr><td style="white-space:nowrap">event-notification<a name="backport-notification-type-code-system-event-notification"> </a></td><td>Event Notification</td><td>The notification is being sent due to an event for the subscriber.</td></tr><tr><td style="white-space:nowrap">query-status<a name="backport-notification-type-code-system-query-status"> </a></td><td>Query Status</td><td>The notification is being sent due to a client request or query for Subscription status.</td></tr></table></div>
+  </text>
+  <url value="http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system"/>
+  <version value="0.1.0"/>
+  <name value="BackportNotificationTypeCodeSystem"/>
+  <title value="R5 Subscription Notification Type Code System"/>
+  <status value="active"/>
+  <date value="2021-12-03T21:52:00-08:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="Codes to represent types of notification bundles."/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="handshake"/>
+    <display value="Handshake"/>
+    <definition value="The notification is being sent as part of the setup or verification of a communications channel."/>
+  </concept>
+  <concept>
+    <code value="heartbeat"/>
+    <display value="Heartbeat"/>
+    <definition value="The notification is being sent because there has not been a notification generated over an extended period of time."/>
+  </concept>
+  <concept>
+    <code value="event-notification"/>
+    <display value="Event Notification"/>
+    <definition value="The notification is being sent due to an event for the subscriber."/>
+  </concept>
+  <concept>
+    <code value="query-status"/>
+    <display value="Query Status"/>
+    <definition value="The notification is being sent due to a client request or query for Subscription status."/>
+  </concept>
+</CodeSystem>

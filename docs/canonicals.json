@@ -7,11 +7,102 @@
     "name": "USCoreDiagnosticReportProfileNoteExchange"
   },
   {
+    "id": "attachment",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/attachment",
+    "version": "0.1.0",
+    "name": "Attachment"
+  },
+  {
+    "id": "cdex-attachment-reason",
+    "type": "ValueSet",
+    "url": "http://hl7.org/fhir/us/davinci-cdex/ValueSet/cdex-attachment-reason",
+    "version": "0.1.0",
+    "name": "CDexAttachmentReasonValueSet"
+  },
+  {
+    "id": "tags",
+    "type": "CodeSystem",
+    "url": "http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags",
+    "version": "0.1.0",
+    "name": "ArgonautWriteTagCodeSystem"
+  },
+  {
+    "id": "tags",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags",
+    "version": "0.1.0",
+    "name": "ArgonautWriteTagValueSet"
+  },
+  {
+    "id": "backport-content-code-system",
+    "type": "CodeSystem",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system",
+    "version": "0.1.0",
+    "name": "BackportContentCodeSystem"
+  },
+  {
+    "id": "backport-notification-type-code-system",
+    "type": "CodeSystem",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system",
+    "version": "0.1.0",
+    "name": "BackportNotificationTypeCodeSystem"
+  },
+  {
     "id": "healthedata1-sandbox",
     "type": "ImplementationGuide",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
     "version": "0.1.0",
     "name": "HealthEData_1Sandbox"
+  },
+  {
+    "id": "backport-heartbeat-period",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period",
+    "version": "0.1.0",
+    "name": "BackportHeartbeatPeriod"
+  },
+  {
+    "id": "backport-payload-content",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content",
+    "version": "0.1.0",
+    "name": "BackportPayloadContent"
+  },
+  {
+    "id": "backport-subscription",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription",
+    "version": "0.1.0",
+    "name": "BackportSubscription"
+  },
+  {
+    "id": "backport-subscription-notification",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification",
+    "version": "0.1.0",
+    "name": "BackportSubscriptionNotification"
+  },
+  {
+    "id": "backport-subscription-status",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status",
+    "version": "0.1.0",
+    "name": "BackportSubscriptionStatus"
+  },
+  {
+    "id": "backport-timeout",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout",
+    "version": "0.1.0",
+    "name": "BackportTimeout"
+  },
+  {
+    "id": "backport-topic-canonical",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical",
+    "version": "0.1.0",
+    "name": "BackportTopicCanonical"
   },
   {
     "id": "patientlistquestionnaire",
@@ -26,5 +117,19 @@
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse",
     "version": "0.1.0",
     "name": "PatientListQuestionnaireResponse"
+  },
+  {
+    "id": "backport-content-value-set",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-content-value-set",
+    "version": "0.1.0",
+    "name": "BackportContentValueSet"
+  },
+  {
+    "id": "backport-notification-type-value-set",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-notification-type-value-set",
+    "version": "0.1.0",
+    "name": "BackportNotificationTypeValueSet"
   }
 ]

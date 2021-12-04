@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2021-11-09T23:17:11-08:00",
+  "date": "2021-12-03T21:52:00-08:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -34,6 +34,18 @@
       "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
       "packageId": "hl7.fhir.us.core",
       "version": "4.0.0"
+    },
+    {
+      "id": "hl7_fhir_uv_bulkdata",
+      "uri": "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata",
+      "packageId": "hl7.fhir.uv.bulkdata",
+      "version": "2.0.0"
+    },
+    {
+      "id": "hl7_fhir_uv_smart_app_launch",
+      "uri": "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch",
+      "packageId": "hl7.fhir.uv.smart-app-launch",
+      "version": "2.0.0"
     },
     {
       "id": "vsac",
@@ -429,6 +441,132 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-heartbeat-period"
+        },
+        "name": "Backport R5 Subscription Heartbeat Period",
+        "description": "Interval in seconds to send 'heartbeat' notifications.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-payload-content"
+        },
+        "name": "Backport R5 Subscription Payload Content Information",
+        "description": "How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-timeout"
+        },
+        "name": "Backport R5 Subscription Timeout",
+        "description": "Timeout in seconds to attempt notification delivery.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-topic-canonical"
+        },
+        "name": "Backport R5 Subscription Topic Canonical",
+        "description": "Canonical reference to the subscription topic being subscribed to.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-subscription-notification"
+        },
+        "name": "Backported R5 Subscription Notification Bundle",
+        "description": "Profile on the R4 Bundle resource to enable R5-style topic-based subscription notifications in FHIR R4.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-subscription-status"
+        },
+        "name": "Backported R5 Subscription Notification Status",
+        "description": "Profile on the Parameters resource to enable R5-style topic-based subscription notifications in FHIR R4.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/backport-subscription"
+        },
+        "name": "Backported R5 Subscription",
+        "description": "Profile on the R4 Subscription resource to enable R5-style topic-based subscriptions in FHIR R4.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/tags"
+        },
+        "name": "Argonaut Write Tag Code System",
+        "description": "Used to tag patient submitted resources for writing and searching from EHRs",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "OperationDefinition"
+          }
+        ],
+        "reference": {
+          "reference": "OperationDefinition/attachment"
+        },
+        "name": "Attachment Operation",
+        "description": "This operation is used to submit attachments for Claims or Prior Authorization. This operation accepts the clinical attachments and the necessary information needed to re-attach them to the claim or prior authorization, and returns a transaction layer http response.  This operation can be used by any HTTP end-point, not just FHIR RESTful servers.\n\nThe input parameters are:\n1. One or more Attachments as FHIR Resources\n1. Data elements for reassociation to the Claim/Prior Authorization\n    - Reason for Attachments:\n      - Unsolicited claim\n      - Solicited claim\n      - Prior Authorization\n    - A unique claim/prior authorization identifier (named \"TargetId\")\n    - One or more unique claim line item identifiers\n    - A unique organization/location identifier (e.g., NPI)\n    - A unique provider identifier (e.g., NPI)\n    - A unique Patient member identifier\n\nThere are no output parameters.\n\nNote that Unsolicited Claim implies that the *provider* assigns the claim identifier (in other words, a \"placer identifier\") upon claim generation. Solicited Claim and Prior Authorization imply that the *payer* assigned the Claim/Prior Authorization identifier (in other words, a \"filler identifier\") a upon receipt of a claim or prior authorization.\n",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -438,6 +576,129 @@
         "name": "US Core DiagnosticReport Profile for Report and Note exchange",
         "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient",
         "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/cdex-attachment-reason"
+        },
+        "name": "CDex Attachment Reason Value Set",
+        "description": "The set of codes is used in the [`$attachment`](http://build.fhir.org/ig/HL7/davinci-ecdx/todo.html) operation for identifying the reason for attachments",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/tags"
+        },
+        "name": "Argonaut Write Tag Value Set",
+        "description": "Used to tag patient submitted resources for writing and searching from EHRs",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/backport-content-code-system"
+        },
+        "name": "Backported R5 Subscription Content Code System",
+        "description": "Codes to represent how much resource content to send in the notification payload.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "CodeSystem"
+          }
+        ],
+        "reference": {
+          "reference": "CodeSystem/backport-notification-type-code-system"
+        },
+        "name": "R5 Subscription Notification Type Code System",
+        "description": "Codes to represent types of notification bundles.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/backport-content-value-set"
+        },
+        "name": "Backported R5 Subscription Content Value Set",
+        "description": "Codes to represent how much resource content to send in the notification payload.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/backport-notification-type-value-set"
+        },
+        "name": "R5 Subscription Notification Type Value Set",
+        "description": "Codes to represent types of notification bundles.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/3945182f-d315-4dbf-9259-09d863c7e7da"
+        },
+        "name": "3945182f-d315-4dbf-9259-09d863c7e7da",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Bundle"
+          }
+        ],
+        "reference": {
+          "reference": "Bundle/9601c07a-e34f-4945-93ca-6efb5394c995"
+        },
+        "name": "9601c07a-e34f-4945-93ca-6efb5394c995",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Subscription"
+          }
+        ],
+        "reference": {
+          "reference": "Subscription/admission"
+        },
+        "name": "admission",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription"
       },
       {
         "extension": [
@@ -512,6 +773,10 @@
       {
         "code": "path-resource",
         "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/intro-notes"
       },
       {
         "code": "path-resource",

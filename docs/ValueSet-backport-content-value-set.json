@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "backport-content-value-set",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-backport-content-code-system.html\"><code>http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system</code></a></li></ul></div>"
+  },
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-content-value-set",
+  "version": "0.1.0",
+  "name": "BackportContentValueSet",
+  "title": "Backported R5 Subscription Content Value Set",
+  "status": "active",
+  "date": "2021-12-03T21:52:00-08:00",
+  "publisher": "Health eData Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:ehaas@healthedatainc.com"
+        }
+      ]
+    }
+  ],
+  "description": "Codes to represent how much resource content to send in the notification payload.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "resourceType": "Bundle",
+  "id": "3945182f-d315-4dbf-9259-09d863c7e7da",
+  "meta": {
+    "profile": [
+      "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification"
+    ]
+  },
+  "type": "history",
+  "timestamp": "2020-05-29T11:44:13.1882432-05:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae",
+      "resource": {
+        "resourceType": "Parameters",
+        "id": "b21e4fae-ce73-45cb-8e37-1e203362b2ae",
+        "meta": {
+          "profile": [
+            "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status"
+          ]
+        },
+        "parameter": [
+          {
+            "name": "subscription-event-count",
+            "valueUnsignedInt": 310
+          },
+          {
+            "name": "bundle-event-count",
+            "valueUnsignedInt": 1
+          },
+          {
+            "name": "subscription-url",
+            "valueUri": "https://example.org/fhir/r4/Subscription/admission"
+          },
+          {
+            "name": "type",
+            "valueCode": "event-notification"
+          },
+          {
+            "name": "subscription-topic-url",
+            "valueUri": "http://hl7.org/SubscriptionTopic/admission"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/r4/Encounter/551683b3-1477-41d1-b58e-32fe8b0047b0",
+      "request": {
+        "method": "POST",
+        "url": "Encounter"
+      },
+      "response": {
+        "status": "201"
+      }
+    }
+  ]
+}

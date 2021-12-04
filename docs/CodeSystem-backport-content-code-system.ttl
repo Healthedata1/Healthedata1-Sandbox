@@ -1,0 +1,56 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "backport-content-code-system"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">empty<a name=\"backport-content-code-system-empty\"> </a></td><td>Empty</td><td>No resource content is transacted in the notification payload.</td></tr><tr><td style=\"white-space:nowrap\">id-only<a name=\"backport-content-code-system-id-only\"> </a></td><td>Id Only</td><td>Only the resource id is transacted in the notification payload.</td></tr><tr><td style=\"white-space:nowrap\">full-resource<a name=\"backport-content-code-system-full-resource\"> </a></td><td>Full Resource</td><td>The entire resource is transacted in the notification payload.</td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system"];
+  fhir:CodeSystem.version [ fhir:value "0.1.0"];
+  fhir:CodeSystem.name [ fhir:value "BackportContentCodeSystem"];
+  fhir:CodeSystem.title [ fhir:value "Backported R5 Subscription Content Code System"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2021-12-03T21:52:00-08:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "Health eData Inc"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:ehaas@healthedatainc.com" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Codes to represent how much resource content to send in the notification payload."];
+  fhir:CodeSystem.content [ fhir:value "complete"];
+  fhir:CodeSystem.count [ fhir:value "3"^^xsd:nonNegativeInteger];
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "empty" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Empty" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "No resource content is transacted in the notification payload." ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "id-only" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Id Only" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "Only the resource id is transacted in the notification payload." ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "full-resource" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Full Resource" ];
+     fhir:CodeSystem.concept.definition [ fhir:value "The entire resource is transacted in the notification payload." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

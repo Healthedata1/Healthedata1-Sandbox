@@ -1,0 +1,45 @@
+{
+  "resourceType": "Subscription",
+  "id": "admission",
+  "meta": {
+    "profile": [
+      "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription"
+    ]
+  },
+  "modifierExtension": [
+    {
+      "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical",
+      "valueUri": "http://hl7.org/SubscriptionTopic/admission"
+    }
+  ],
+  "channel": {
+    "extension": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period",
+        "valueUnsignedInt": 86400
+      },
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout",
+        "valueUnsignedInt": 60
+      }
+    ],
+    "type": "rest-hook",
+    "endpoint": "https://example.org/Endpoints/eae3806a-f7fb-4e3f-a14d-c4c58ca9c038",
+    "payload": "application/fhir+json",
+    "_payload": {
+      "extension": [
+        {
+          "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content",
+          "valueCode": "id-only"
+        }
+      ]
+    },
+    "header": [
+      "Authorization: Bearer secret-token-abc-123"
+    ]
+  },
+  "status": "active",
+  "end": "2020-12-31T12:00:00Z",
+  "reason": "Example Backported Subscription for Patient Admission",
+  "criteria": "Encounter?patient=Patient/123"
+}

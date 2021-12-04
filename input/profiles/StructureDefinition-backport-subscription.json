@@ -1,0 +1,155 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "backport-subscription",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Foundation.Other"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "business"
+    }
+  ],
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription",
+  "version": "0.1.0",
+  "name": "BackportSubscription",
+  "title": "Backported R5 Subscription",
+  "status": "active",
+  "description": "Profile on the R4 Subscription resource to enable R5-style topic-based subscriptions in FHIR R4.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Subscription",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Subscription",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Subscription.modifierExtension",
+        "path": "Subscription.modifierExtension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Subscription.modifierExtension:subscriptionTopic",
+        "path": "Subscription.modifierExtension",
+        "sliceName": "subscriptionTopic",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": true
+      },
+      {
+        "id": "Subscription.channel.extension",
+        "path": "Subscription.channel.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Subscription.channel.extension:heartbeatPeriod",
+        "path": "Subscription.channel.extension",
+        "sliceName": "heartbeatPeriod",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Subscription.channel.extension:timeout",
+        "path": "Subscription.channel.extension",
+        "sliceName": "timeout",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Subscription.channel.payload",
+        "path": "Subscription.channel.payload",
+        "min": 1
+      },
+      {
+        "id": "Subscription.channel.payload.extension",
+        "path": "Subscription.channel.payload.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1
+      },
+      {
+        "id": "Subscription.channel.payload.extension:content",
+        "path": "Subscription.channel.payload.extension",
+        "sliceName": "content",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": true
+      }
+    ]
+  }
+}

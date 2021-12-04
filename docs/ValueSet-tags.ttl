@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/tags> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "tags"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p>All codes in this table are from the system <a href=\"CodeSystem-tags.html\"><code>http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---www.fhir.org-guides-argonaut-argo-write-CodeSystem-tags-uploaded-data\"> </a><a href=\"CodeSystem-tags.html#tags-uploaded-data\">uploaded-data</a></td><td>FOO</td><td>Data is supplied by a client facing app. For example, patient generated or mediated data that is supplied by patient or other patient designee (such as a parent or spouse) rather than by a healthcare provider.</td></tr></table></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags"];
+  fhir:ValueSet.version [ fhir:value "0.1.0"];
+  fhir:ValueSet.name [ fhir:value "ArgonautWriteTagValueSet"];
+  fhir:ValueSet.title [ fhir:value "Argonaut Write Tag Value Set"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-12-03T21:52:00-08:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "Health eData Inc"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:ehaas@healthedatainc.com" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Used to tag patient submitted resources for writing and searching from EHRs"];
+  fhir:ValueSet.copyright [ fhir:value "This Content is created by the Argonaut Project and HL7. No copyright acknowledgement is needed, nor are there any license terms to adhere to."];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags" ]
+     ]
+  ];
+  fhir:ValueSet.expansion [
+     fhir:ValueSet.expansion.identifier [ fhir:value "my_temporary_expansion" ];
+     fhir:ValueSet.expansion.timestamp [ fhir:value "2015-06-22T13:56:07Z"^^xsd:dateTime ];
+     fhir:ValueSet.expansion.contains [
+       fhir:index 0;
+       fhir:ValueSet.expansion.contains.system [ fhir:value "http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags" ];
+       fhir:ValueSet.expansion.contains.code [ fhir:value "uploaded-data" ];
+       fhir:ValueSet.expansion.contains.display [ fhir:value "FOO" ];
+       fhir:ValueSet.expansion.contains.designation [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.designation.value [ fhir:value "my designation - could put definition here?" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/tags.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

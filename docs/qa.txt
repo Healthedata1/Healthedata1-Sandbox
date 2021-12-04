@@ -1,33 +1,60 @@
 ﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 18, warn = 17, info = 0
-IG Publisher Version: 1.1.84
-Generated Tue Nov 09 23:20:05 PST 2021. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
- Build Errors : 9 / 0 / 0
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
+err = 28, warn = 26, info = 2
+IG Publisher Version: 1.1.90 Out of date - current version is ?pub-ver-1?
+Generated Fri Dec 03 21:55:55 PST 2021. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 2 / 3 / 0
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaire : 0 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Bundle-3945182f-d315-4dbf-9259-09d863c7e7da : 3 / 0 / 5
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Bundle-9601c07a-e34f-4945-93ca-6efb5394c995 : 3 / 0 / 4
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Subscription-admission : 2 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/test : 1 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/test_location_example : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/test_task : 7 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/extensions/StructureDefinition-backport-heartbeat-period : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/extensions/StructureDefinition-backport-payload-content : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/extensions/StructureDefinition-backport-timeout : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/extensions/StructureDefinition-backport-topic-canonical : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/profiles/StructureDefinition-backport-subscription : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/profiles/StructureDefinition-backport-subscription-notification : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/profiles/StructureDefinition-backport-subscription-status : 0 / 0 / 2
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/CodeSystem-tags : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/OperationDefinition-attachment : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-uscdiv2-diagnosticreport : 9 / 13 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-cdex-attachment-type : 1 / 2 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-tags : 1 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/vocabulary/CodeSystem-backport-content-code-system : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/vocabulary/CodeSystem-backport-notification-type-code-system : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/vocabulary/ValueSet-backport-content-value-set : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/vocabulary/ValueSet-backport-notification-type-value-set : 0 / 0 / 1
 </table>
 == n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/3945182f-d315-4dbf-9259-09d863c7e7da.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/9601c07a-e34f-4945-93ca-6efb5394c995.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Subscription/admission.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: ?pkp-1?: The reference http://hl7.org/fhir/5.0.0/StructureDefinition/extension-DiagnosticReport.media could not be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Location-hospital.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 274: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/holy-healthcare/expansion' for "Holy Healthcare" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 382: The link 'Patient-example.html' for "Amy Shaw" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 98: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/CommunicationRequest/cdex-example1-authorization/expansion' for "http://example.org/fhir/CommunicationRequest/cdex-example1-authorization" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 600: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Patient/cdex-example-patient/expansion' for "http://example.org/fhir/Patient/cdex-example-patient" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 893: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/cdex-referred-to-provider/expansion' for "http://example.org/fhir/Organization/cdex-referred-to-provider" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 1100: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Organization/cdex-referring-provider/expansion' for "http://example.org/fhir/Organization/cdex-referring-provider" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 1404: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Claim/cdex-example-claim/expansion' for "http://example.org/fhir/Claim/cdex-example-claim" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Task-cdex-example1-authorized-completed.html#/html/body/div/div/div/div/div/div/table/tr/td/a at Line 151, column 2116: The link 'http://fhir.org/packages/us.nlm.vsac/http://example.org/fhir/Condition/858/expansion' for "http://example.org/fhir/Condition/858" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-test.html#/html/body/div/div/div/div/div/div/p/a at Line 151, column 961: The link 'Patient-example.html' for "Patient/example: Amy Shaw" cannot be resolved
 == fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json ==
+WARNING: ImplementationGuide/healthedata1-sandbox: ImplementationGuide.definition.resource[10].description: value should not start or finish with whitespace
 == fsh-generated/resources/StructureDefinition-patientlistquestionnaire.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire'): The Implementation Guide contains no examples for this extension
 == fsh-generated/resources/StructureDefinition-patientlistquestionnaireresponse.json ==
 WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse'): The Implementation Guide contains no examples for this extension
+== input/examples/Bundle-3945182f-d315-4dbf-9259-09d863c7e7da.json ==
+ERROR: Bundle/3945182f-d315-4dbf-9259-09d863c7e7da: Bundle: bdl-3: 'entry.request mandatory for batch/transaction/history, otherwise prohibited' Rule 'entry.request mandatory for batch/transaction/history, otherwise prohibited' Failed
+ERROR: Bundle/3945182f-d315-4dbf-9259-09d863c7e7da: Bundle: bdl-4: 'entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited' Rule 'entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited' Failed
+ERROR: Bundle/3945182f-d315-4dbf-9259-09d863c7e7da: Bundle: backport-notification-bundle-1: 'A notification bundle MUST have the BackportSubscriptionStatus as the first entry' Rule 'A notification bundle MUST have the BackportSubscriptionStatus as the first entry' Failed
+INFORMATION: Bundle/3945182f-d315-4dbf-9259-09d863c7e7da: Bundle.entry[1]: This element does not match any known slice defined in the profile http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification
+== input/examples/Bundle-9601c07a-e34f-4945-93ca-6efb5394c995.json ==
+ERROR: Bundle/9601c07a-e34f-4945-93ca-6efb5394c995: Bundle: bdl-3: 'entry.request mandatory for batch/transaction/history, otherwise prohibited' Rule 'entry.request mandatory for batch/transaction/history, otherwise prohibited' Failed
+ERROR: Bundle/9601c07a-e34f-4945-93ca-6efb5394c995: Bundle: bdl-4: 'entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited' Rule 'entry.response mandatory for batch-response/transaction-response/history, otherwise prohibited' Failed
+ERROR: Bundle/9601c07a-e34f-4945-93ca-6efb5394c995: Bundle: backport-notification-bundle-1: 'A notification bundle MUST have the BackportSubscriptionStatus as the first entry' Rule 'A notification bundle MUST have the BackportSubscriptionStatus as the first entry' Failed
+== input/examples/Subscription-admission.json ==
+ERROR: Subscription/admission: Subscription.modifierExtension[0][url='http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical']: Extension modifier mismatch: the extension element is labelled as a modifier, but the underlying extension is not
+ERROR: Subscription/admission: Subscription.modifierExtension[0][url='http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical']: The Extension 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical' must be used as a modifierExtension
 == input/examples/test.json ==
 ERROR: Observation/test: Observation.subject: Unable to resolve resource 'Patient/example'
 WARNING: Observation/test: Observation.meta.profile[0]: Profile reference 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/test-obs' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
@@ -41,6 +68,17 @@ ERROR: Task/cdex-example1-authorized-completed: Task.input[0].type.coding[0].sys
 ERROR: Task/cdex-example1-authorized-completed: Task.output[0].type.coding[0]: Unknown Code System 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp'
 ERROR: Task/cdex-example1-authorized-completed: Task.output[0].type.coding[0].system: URL value 'http://hl7.org/fhir/us/davinci-hrex/CodeSystem/hrex-temp' does not resolve
 WARNING: Task/cdex-example1-authorized-completed: Task.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-task-data-request' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== input/extensions/StructureDefinition-backport-heartbeat-period.json ==
+== input/extensions/StructureDefinition-backport-payload-content.json ==
+== input/extensions/StructureDefinition-backport-timeout.json ==
+== input/extensions/StructureDefinition-backport-topic-canonical.json ==
+== input/profiles/StructureDefinition-backport-subscription.json ==
+== input/profiles/StructureDefinition-backport-subscription-notification.json ==
+== input/profiles/StructureDefinition-backport-subscription-status.json ==
+INFORMATION: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status'): The Implementation Guide contains no explicitly linked examples for this profile
+== input/resources/CodeSystem-tags.json ==
+WARNING: CodeSystem/tags: CodeSystem: HL7 Defined CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly 
+== input/resources/OperationDefinition-attachment.json ==
 == input/resources/StructureDefinition-uscdiv2-diagnosticreport.json ==
 WARNING: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.result: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-clinical-test is valid constraint on the base because it is not known
 WARNING: http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note#DiagnosticReport.result: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging is valid constraint on the base because it is not known
@@ -64,3 +102,15 @@ ERROR: us-core-diagnosticreport-note: Unable to find Extension 'http://hl7.org/f
 ERROR: us-core-diagnosticreport-note: Unable to find Extension 'http://hl7.org/fhir/5.0.0/StructureDefinition/extension-DiagnosticReport.media' referenced at http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note snapshot DiagnosticReport.extension (r5media)
 ERROR: us-core-diagnosticreport-note: Unable to find Extension 'http://hl7.org/fhir/5.0.0/StructureDefinition/extension-DiagnosticReport.media' referenced at http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note snapshot DiagnosticReport.extension (r5media)
 WARNING: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note'): The Implementation Guide contains no examples for this profile
+== input/resources/ValueSet-cdex-attachment-type.json ==
+ERROR: ValueSet/cdex-attachment-reason: ValueSet.compose.include[0].system: URL value 'http://hl7.org/fhir/us/davinci-cdex/CodeSystem/cdex-temp' does not resolve
+WARNING: ValueSet/cdex-attachment-reason: ValueSet.compose[0].include[0]: Unknown System specified, so Concepts and Filters can''t be checked
+WARNING: ValueSet.where(id = 'cdex-attachment-reason'): Error from server: Unable to provide support for code system http://hl7.org/fhir/us/davinci-cdex/CodeSystem/cdex-temp
+== input/resources/ValueSet-tags.json ==
+ERROR: ValueSet: Unrecognised property '@content'
+== input/vocabulary/CodeSystem-backport-content-code-system.json ==
+WARNING: CodeSystem/backport-content-code-system: CodeSystem: HL7 Defined CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly 
+== input/vocabulary/CodeSystem-backport-notification-type-code-system.json ==
+WARNING: CodeSystem/backport-notification-type-code-system: CodeSystem: HL7 Defined CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly 
+== input/vocabulary/ValueSet-backport-content-value-set.json ==
+== input/vocabulary/ValueSet-backport-notification-type-value-set.json ==

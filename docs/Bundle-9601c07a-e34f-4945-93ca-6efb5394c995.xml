@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="9601c07a-e34f-4945-93ca-6efb5394c995"/>
+  <meta>
+    <profile value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification"/>
+  </meta>
+  <type value="history"/>
+  <timestamp value="2020-05-29T11:44:13.1882432-05:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:b21e4fae-ce73-45cb-8e37-1e203362b2ae"/>
+    <resource>
+      <Parameters>
+        <id value="b21e4fae-ce73-45cb-8e37-1e203362b2ae"/>
+        <meta>
+          <profile value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status"/>
+        </meta>
+        <parameter>
+          <name value="subscription-event-count"/>
+          <valueUnsignedInt value="310"/>
+        </parameter>
+        <parameter>
+          <name value="bundle-event-count"/>
+          <valueUnsignedInt value="1"/>
+        </parameter>
+        <parameter>
+          <name value="subscription-url"/>
+          <valueUri value="https://example.org/fhir/r4/Subscription/admission"/>
+        </parameter>
+        <parameter>
+          <name value="type"/>
+          <valueCode value="event-notification"/>
+        </parameter>
+        <parameter>
+          <name value="subscription-topic-url"/>
+          <valueUri value="http://hl7.org/SubscriptionTopic/admission"/>
+        </parameter>
+      </Parameters>
+    </resource>
+  </entry>
+</Bundle>

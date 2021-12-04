@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/OperationDefinition/attachment> a fhir:OperationDefinition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "attachment"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Attachment</h2><p>OPERATION: Attachment</p><p>The official URL for this operation definition is: </p><pre>http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/attachment</pre><div><p>This operation is used to submit attachments for Claims or Prior Authorization. This operation accepts the clinical attachments and the necessary information needed to re-attach them to the claim or prior authorization, and returns a transaction layer http response.  This operation can be used by any HTTP end-point, not just FHIR RESTful servers.</p>\n<p>The input parameters are:</p>\n<ol>\n<li>One or more Attachments as FHIR Resources</li>\n<li>Data elements for reassociation to the Claim/Prior Authorization\n<ul>\n<li>Reason for Attachments:\n<ul>\n<li>Unsolicited attachments for a claim</li>\n<li>Solicited attachments for a claim</li>\n<li>Additional information for prior authorization</li>\n</ul>\n</li>\n<li>A unique claim/prior authorization identifier (named &quot;TargetId&quot;)</li>\n<li>One or more unique claim line item identifiers</li>\n<li>A unique organization/location identifier (e.g., NPI)</li>\n<li>A unique provider identifier (e.g., NPI)</li>\n<li>A unique Patient member identifier</li>\n</ul>\n</li>\n</ol>\n<p>There are no output parameters.</p>\n<p>Note that Unsolicited Claim implies that the <em>provider</em> assigns the claim identifier (in other words, a &quot;placer identifier&quot;) upon claim generation. Solicited Claim and Prior Authorization imply that the <em>payer</em> assigned the Claim/Prior Authorization identifier (in other words, a &quot;filler identifier&quot;) a upon receipt of a claim or prior authorization.</p>\n</div><p>URL: [base]/$attachment</p><p>URL: [base]/Claim/$attachment</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>AttachmentReason</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#code\">code</a></td><td><a href=\"ValueSet-cdex-attachment-reason.html\">http://hl7.org/fhir/us/davinci-cdex/ValueSet/cdex-attachment-reason</a> (Required)</td><td><div><p>Whether the attachments submission is for an <em>unsolicited</em> claim,  <em>solicited</em> claim, or prior authorization.</p>\n</div></td></tr><tr><td>IN</td><td>ClaimId</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Claim/prior authorization identifier value. Reason for attachments determines whether this is a &quot;placer&quot; or &quot;filler&quot; identifier (see above).</p>\n</div></td></tr><tr><td>IN</td><td>ItemId</td><td>0..**</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Claim/prior authorization identifier that uniquely reference an line item in a claim or prior authorization.  Reason for attachments determines whether this is a &quot;placer&quot; or &quot;filler&quot; identifier (see above).</p>\n</div></td></tr><tr><td>IN</td><td>OrganizationId</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Sending organization/location Identifier (e.g., NPI)</p>\n</div></td></tr><tr><td>IN</td><td>ProviderId</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Sending provider identifier (e.g., NPI)</p>\n</div></td></tr><tr><td>IN</td><td>MemberId</td><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Identifier\">Identifier</a></td><td/><td><div><p>Patient member identifier</p>\n</div></td></tr><tr><td>IN</td><td>Attachment</td><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/resource.html\">Resource</a></td><td/><td><div><p>The actual attachments as FHIR resources for Claims or Prior Authorization.  Note that non-FHIR Non-FHIR data formats attached to or referenced by DocumentReference.</p>\n</div></td></tr></table><div><p>The following rules apply when using <code>$attachment</code>:</p>\n<ul>\n<li>The operation only accepts <code>POST</code> transactions - any other HTTP method will result in an HTTP error</li>\n<li>When processing messages, a server may return one of several status codes:\n<ul>\n<li><strong>200 OK</strong>: Indicates that the operation has been processed.</li>\n<li><strong>202 Accepted</strong>: Indicates that the receiving system has accepted custody\nof the message</li>\n<li><strong>4xx</strong>: Indicates some error in the submission. The client <strong>SHOULD</strong> interpret a 4xx response to indicate that there is no point resubmitting the unaltered message,</li>\n<li><strong>5xx</strong>: Indicates some system error. The client <strong>SHOULD</strong> interpret a 5xx response to indicate an unexpected error occurred on the part of the server, with the implication that it may be appropriate to resubmit the original message.</li>\n<li>The server <strong>MAY</strong> return an <a href=\"http://hl7.org/fhir/operationoutcome.html\">OperationOutcome</a> with additional information, and <strong>SHOULD</strong> do so if the response code is 400 or greater.</li>\n</ul>\n</li>\n</ul>\n</div></div>"
+  ];
+  fhir:OperationDefinition.url [ fhir:value "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/attachment"];
+  fhir:OperationDefinition.version [ fhir:value "0.1.0"];
+  fhir:OperationDefinition.name [ fhir:value "Attachment"];
+  fhir:OperationDefinition.title [ fhir:value "Attachment Operation"];
+  fhir:OperationDefinition.status [ fhir:value "draft"];
+  fhir:OperationDefinition.kind [ fhir:value "operation"];
+  fhir:OperationDefinition.date [ fhir:value "2021-12-02T20:24:41-08:00"^^xsd:dateTime];
+  fhir:OperationDefinition.publisher [ fhir:value "Health eData Inc"];
+  fhir:OperationDefinition.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:ehaas@healthedatainc.com" ]
+     ]
+  ];
+  fhir:OperationDefinition.description [ fhir:value "This operation is used to submit attachments for Claims or Prior Authorization. This operation accepts the clinical attachments and the necessary information needed to re-attach them to the claim or prior authorization, and returns a transaction layer http response.  This operation can be used by any HTTP end-point, not just FHIR RESTful servers.\n\nThe input parameters are:\n1. One or more Attachments as FHIR Resources\n1. Data elements for reassociation to the Claim/Prior Authorization\n    - Reason for Attachments:\n      - Unsolicited attachments for a claim\n      - Solicited attachments for a claim\n      - Additional information for prior authorization\n    - A unique claim/prior authorization identifier (named \"TargetId\")\n    - One or more unique claim line item identifiers\n    - A unique organization/location identifier (e.g., NPI)\n    - A unique provider identifier (e.g., NPI)\n    - A unique Patient member identifier\n\nThere are no output parameters.\n\nNote that Unsolicited Claim implies that the *provider* assigns the claim identifier (in other words, a \"placer identifier\") upon claim generation. Solicited Claim and Prior Authorization imply that the *payer* assigned the Claim/Prior Authorization identifier (in other words, a \"filler identifier\") a upon receipt of a claim or prior authorization.\n"];
+  fhir:OperationDefinition.code [ fhir:value "attachment"];
+  fhir:OperationDefinition.comment [ fhir:value "The following rules apply when using `$attachment`:\n* The operation only accepts `POST` transactions - any other HTTP method will result in an HTTP error\n* When processing messages, a server may return one of several status codes:\n  * **200 OK**: Indicates that the operation has been processed.\n  * **202 Accepted**: Indicates that the receiving system has accepted custody\n  of the message\n  * **4xx**: Indicates some error in the submission. The client **SHOULD** interpret a 4xx response to indicate that there is no point resubmitting the unaltered message,\n  * **5xx**: Indicates some system error. The client **SHOULD** interpret a 5xx response to indicate an unexpected error occurred on the part of the server, with the implication that it may be appropriate to resubmit the original message.\n  *  The server **MAY** return an [OperationOutcome](http://hl7.org/fhir/operationoutcome.html) with additional information, and **SHOULD** do so if the response code is 400 or greater.\n"];
+  fhir:OperationDefinition.resource [
+     fhir:value "Claim";
+     fhir:index 0
+  ];
+  fhir:OperationDefinition.system [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.type [ fhir:value "true"^^xsd:boolean];
+  fhir:OperationDefinition.instance [ fhir:value "false"^^xsd:boolean];
+  fhir:OperationDefinition.parameter [
+     fhir:index 0;
+     fhir:OperationDefinition.parameter.name [ fhir:value "AttachmentReason" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Whether the attachments submission is for an *unsolicited* claim,  *solicited* claim, or prior authorization." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "code" ];
+     fhir:OperationDefinition.parameter.binding [
+       fhir:OperationDefinition.parameter.binding.strength [ fhir:value "required" ];
+       fhir:OperationDefinition.parameter.binding.valueSet [
+         fhir:value "http://hl7.org/fhir/us/davinci-cdex/ValueSet/cdex-attachment-reason";
+         fhir:link <http://hl7.org/fhir/us/davinci-cdex/ValueSet/cdex-attachment-reason>
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:OperationDefinition.parameter.name [ fhir:value "ClaimId" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Claim/prior authorization identifier value. Reason for attachments determines whether this is a \"placer\" or \"filler\" identifier (see above)." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 2;
+     fhir:OperationDefinition.parameter.name [ fhir:value "ItemId" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "**" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Claim/prior authorization identifier that uniquely reference an line item in a claim or prior authorization.  Reason for attachments determines whether this is a \"placer\" or \"filler\" identifier (see above)." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 3;
+     fhir:OperationDefinition.parameter.name [ fhir:value "OrganizationId" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Sending organization/location Identifier (e.g., NPI)" ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 4;
+     fhir:OperationDefinition.parameter.name [ fhir:value "ProviderId" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Sending provider identifier (e.g., NPI)" ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 5;
+     fhir:OperationDefinition.parameter.name [ fhir:value "MemberId" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "1" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "Patient member identifier" ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Identifier" ]
+  ], [
+     fhir:index 6;
+     fhir:OperationDefinition.parameter.name [ fhir:value "Attachment" ];
+     fhir:OperationDefinition.parameter.use [ fhir:value "in" ];
+     fhir:OperationDefinition.parameter.min [ fhir:value "0"^^xsd:integer ];
+     fhir:OperationDefinition.parameter.max [ fhir:value "*" ];
+     fhir:OperationDefinition.parameter.documentation [ fhir:value "The actual attachments as FHIR resources for Claims or Prior Authorization.  Note that non-FHIR Non-FHIR data formats attached to or referenced by DocumentReference." ];
+     fhir:OperationDefinition.parameter.type [ fhir:value "Resource" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/OperationDefinition/attachment.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

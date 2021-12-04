@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="tags"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">uploaded-data<a name="tags-uploaded-data"> </a></td><td>Uploaded Data</td><td>Data is supplied by a client facing app. For example, patient generated or mediated data that is supplied by patient or other patient designee (such as a parent or spouse) rather than by a healthcare provider.</td></tr></table></div>
+  </text>
+  <url value="http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags"/>
+  <version value="0.1.0"/>
+  <name value="ArgonautWriteTagCodeSystem"/>
+  <title value="Argonaut Write Tag Code System"/>
+  <status value="active"/>
+  <date value="2021-12-03T21:52:00-08:00"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="Used to tag patient submitted resources for writing and searching from EHRs"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="uploaded-data"/>
+    <display value="Uploaded Data"/>
+    <definition value="Data is supplied by a client facing app. For example, patient generated or mediated data that is supplied by patient or other patient designee (such as a parent or spouse) rather than by a healthcare provider."/>
+  </concept>
+</CodeSystem>
