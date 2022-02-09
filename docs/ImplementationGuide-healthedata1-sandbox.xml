@@ -11,7 +11,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2021-12-03T21:52:00-08:00"/>
+  <date value="2022-02-08T13:05:33-08:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -23,26 +23,6 @@
   <packageId value="healthedata1-sandbox"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
-  <dependsOn id="hl7_fhir_us_core">
-    <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
-    <packageId value="hl7.fhir.us.core"/>
-    <version value="4.0.0"/>
-  </dependsOn>
-  <dependsOn id="hl7_fhir_uv_bulkdata">
-    <uri value="http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata"/>
-    <packageId value="hl7.fhir.uv.bulkdata"/>
-    <version value="2.0.0"/>
-  </dependsOn>
-  <dependsOn id="hl7_fhir_uv_smart_app_launch">
-    <uri value="http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch"/>
-    <packageId value="hl7.fhir.uv.smart-app-launch"/>
-    <version value="2.0.0"/>
-  </dependsOn>
-  <dependsOn id="vsac">
-    <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
-    <packageId value="us.nlm.vsac"/>
-    <version value="0.3.0"/>
-  </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
@@ -262,68 +242,13 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/patientlistquestionnaire"/>
+        <reference value="StructureDefinition/us-core-condition"/>
       </reference>
-      <name value="Argonaut Patient List Questionnaire"/>
-      <description value="A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/patientlistquestionnaireresponse"/>
-      </reference>
-      <name value="Argonaut Patient List QuestionnaireResponse"/>
-      <description value="A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/backport-heartbeat-period"/>
-      </reference>
-      <name value="Backport R5 Subscription Heartbeat Period"/>
-      <description value="Interval in seconds to send &#39;heartbeat&#39; notifications."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/backport-payload-content"/>
-      </reference>
-      <name value="Backport R5 Subscription Payload Content Information"/>
-      <description value="How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/backport-timeout"/>
-      </reference>
-      <name value="Backport R5 Subscription Timeout"/>
-      <description value="Timeout in seconds to attempt notification delivery."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:extension"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/backport-topic-canonical"/>
-      </reference>
-      <name value="Backport R5 Subscription Topic Canonical"/>
-      <description value="Canonical reference to the subscription topic being subscribed to."/>
+      <name value="US Core Condition Profile"/>
+      <description value="Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -331,10 +256,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/backport-subscription-notification"/>
+        <reference value="StructureDefinition/us-core-encounter-diagnosis"/>
       </reference>
-      <name value="Backported R5 Subscription Notification Bundle"/>
-      <description value="Profile on the R4 Bundle resource to enable R5-style topic-based subscription notifications in FHIR R4."/>
+      <name value="US Core Encounter Diagnosis Profile"/>
+      <description value="The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 &#39;Encounter Diagnosis&#39; requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -342,10 +267,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/backport-subscription-status"/>
+        <reference value="StructureDefinition/us-core-problems-and-health-concerns"/>
       </reference>
-      <name value="Backported R5 Subscription Notification Status"/>
-      <description value="Profile on the Parameters resource to enable R5-style topic-based subscription notifications in FHIR R4."/>
+      <name value="US Core Problems and Health Concerns Profile"/>
+      <description value="The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 &#39;Problems&#39; and &#39;Health Concerns&#39; requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -353,32 +278,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/backport-subscription"/>
+        <reference value="StructureDefinition/us-core-observation-sdoh-item-screening-response"/>
       </reference>
-      <name value="Backported R5 Subscription"/>
-      <description value="Profile on the R4 Subscription resource to enable R5-style topic-based subscriptions in FHIR R4."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/tags"/>
-      </reference>
-      <name value="Argonaut Write Tag Code System"/>
-      <description value="Used to tag patient submitted resources for writing and searching from EHRs"/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="OperationDefinition"/>
-      </extension>
-      <reference>
-        <reference value="OperationDefinition/attachment"/>
-      </reference>
-      <name value="Attachment Operation"/>
-      <description value="This operation is used to submit attachments for Claims or Prior Authorization. This operation accepts the clinical attachments and the necessary information needed to re-attach them to the claim or prior authorization, and returns a transaction layer http response.  This operation can be used by any HTTP end-point, not just FHIR RESTful servers.&#xA;&#xA;The input parameters are:&#xA;1. One or more Attachments as FHIR Resources&#xA;1. Data elements for reassociation to the Claim/Prior Authorization&#xA;    - Reason for Attachments:&#xA;      - Unsolicited claim&#xA;      - Solicited claim&#xA;      - Prior Authorization&#xA;    - A unique claim/prior authorization identifier (named &quot;TargetId&quot;)&#xA;    - One or more unique claim line item identifiers&#xA;    - A unique organization/location identifier (e.g., NPI)&#xA;    - A unique provider identifier (e.g., NPI)&#xA;    - A unique Patient member identifier&#xA;&#xA;There are no output parameters.&#xA;&#xA;Note that Unsolicited Claim implies that the *provider* assigns the claim identifier (in other words, a &quot;placer identifier&quot;) upon claim generation. Solicited Claim and Prior Authorization imply that the *payer* assigned the Claim/Prior Authorization identifier (in other words, a &quot;filler identifier&quot;) a upon receipt of a claim or prior authorization.&#xA;"/>
+      <name value="US Core Screening SDOH Item Response Observation Profile"/>
+      <description value="Profile for Observations that represent question and answer pairs derived from SDOH surveys/questionnaires."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -386,140 +289,44 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/us-core-diagnosticreport-note"/>
+        <reference value="StructureDefinition/us-core-observation-sdoh-panel-screening-response"/>
       </reference>
-      <name value="US Core DiagnosticReport Profile for Report and Note exchange"/>
-      <description value="Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient"/>
+      <name value="US Core Screening SDOH Panel Response Observation Profile"/>
+      <description value="Profile for Observations that represent panels derived from SDOH surveys/questionnaires."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="ValueSet/cdex-attachment-reason"/>
+        <reference value="StructureDefinition/us-core-sdoh-problems-and-health-concerns"/>
       </reference>
-      <name value="CDex Attachment Reason Value Set"/>
-      <description value="The set of codes is used in the [`$attachment`](http://build.fhir.org/ig/HL7/davinci-ecdx/todo.html) operation for identifying the reason for attachments"/>
+      <name value="US Core SDOH Problems and Health Concerns Profile"/>
+      <description value="The US SDOH Core Problems and Health Concerns Profile is based upon the US Core SDOH Problems and Health Concerns Profile and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH &#39;Problems/Health Concerns&#39; requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a Social Determinants of Health-related condition."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="ValueSet/tags"/>
+        <reference value="StructureDefinition/us-core-observation-simple-survey"/>
       </reference>
-      <name value="Argonaut Write Tag Value Set"/>
-      <description value="Used to tag patient submitted resources for writing and searching from EHRs"/>
+      <name value="US Core Screening Response2 Observation Profile"/>
+      <description value="Profile for observations that represent question and answer pairs from from surveys/questionnaires."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/backport-content-code-system"/>
+        <reference value="StructureDefinition/us-core-observation-screening-response"/>
       </reference>
-      <name value="Backported R5 Subscription Content Code System"/>
-      <description value="Codes to represent how much resource content to send in the notification payload."/>
+      <name value="US Core Screening Response Observation Profile"/>
+      <description value="Profile for observations that represent question and answer pairs from from surveys/questionnaires."/>
       <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
-      </extension>
-      <reference>
-        <reference value="CodeSystem/backport-notification-type-code-system"/>
-      </reference>
-      <name value="R5 Subscription Notification Type Code System"/>
-      <description value="Codes to represent types of notification bundles."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/backport-content-value-set"/>
-      </reference>
-      <name value="Backported R5 Subscription Content Value Set"/>
-      <description value="Codes to represent how much resource content to send in the notification payload."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/backport-notification-type-value-set"/>
-      </reference>
-      <name value="R5 Subscription Notification Type Value Set"/>
-      <description value="Codes to represent types of notification bundles."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/3945182f-d315-4dbf-9259-09d863c7e7da"/>
-      </reference>
-      <name value="3945182f-d315-4dbf-9259-09d863c7e7da"/>
-      <exampleCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/9601c07a-e34f-4945-93ca-6efb5394c995"/>
-      </reference>
-      <name value="9601c07a-e34f-4945-93ca-6efb5394c995"/>
-      <exampleCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Subscription"/>
-      </extension>
-      <reference>
-        <reference value="Subscription/admission"/>
-      </reference>
-      <name value="admission"/>
-      <exampleCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/test"/>
-      </reference>
-      <name value="FOO"/>
-      <description value="###FOO&#xA;- bar"/>
-      <exampleBoolean value="true"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Location"/>
-      </extension>
-      <reference>
-        <reference value="Location/hospital"/>
-      </reference>
-      <name value="Hospital Location"/>
-      <description value="This is an example hospital location for the *US Core Location Profile*."/>
-      <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Task"/>
-      </extension>
-      <reference>
-        <reference value="Task/cdex-example1-authorized-completed"/>
-      </reference>
-      <name value="Scenario 2 Completed Authorization Example"/>
-      <description value="Completed Task to seek a patient active conditions with a reference to a formal authorization."/>
-      <exampleBoolean value="true"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

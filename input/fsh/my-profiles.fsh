@@ -1,4 +1,5 @@
-/*
+/*  all commented out
+
 Alias: $USPatient = http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 Alias: $USPractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 Alias: $USOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization

@@ -1,0 +1,33 @@
+resourceType: StructureDefinition
+id: us-core-problems-and-health-concerns
+url: 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns'
+name: UsCoreProblemsHealthConcerns
+title: US Core Problems and Health Concerns Profile
+status: active
+experimental: false
+date: '2022-02-03'
+description: >-
+  The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern.
+kind: resource
+abstract: false
+type: Condition
+baseDefinition: 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-condition'
+derivation: constraint
+differential:
+  element:
+    - id: Condition
+      path: Condition
+      definition: >-
+        The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern.
+      short: Detailed information about Problems or Health Concerns
+    # - id: Condition.category
+    #   path: Condition.category
+    - id: 'Condition.category:us-core'
+      path: Condition.category
+      short: problem-list-item | health-concern
+      sliceName: us-core
+      min: 1
+      binding:
+        strength: required
+        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern'
+      mustSupport: true

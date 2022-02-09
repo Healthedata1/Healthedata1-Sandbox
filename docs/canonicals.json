@@ -1,54 +1,5 @@
 [
   {
-    "id": "us-core-diagnosticreport-note",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
-    "version": "0.1.0",
-    "name": "USCoreDiagnosticReportProfileNoteExchange"
-  },
-  {
-    "id": "attachment",
-    "type": "OperationDefinition",
-    "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/attachment",
-    "version": "0.1.0",
-    "name": "Attachment"
-  },
-  {
-    "id": "cdex-attachment-reason",
-    "type": "ValueSet",
-    "url": "http://hl7.org/fhir/us/davinci-cdex/ValueSet/cdex-attachment-reason",
-    "version": "0.1.0",
-    "name": "CDexAttachmentReasonValueSet"
-  },
-  {
-    "id": "tags",
-    "type": "CodeSystem",
-    "url": "http://www.fhir.org/guides/argonaut/argo-write/CodeSystem/tags",
-    "version": "0.1.0",
-    "name": "ArgonautWriteTagCodeSystem"
-  },
-  {
-    "id": "tags",
-    "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/argonaut/argo-write/ValueSet/tags",
-    "version": "0.1.0",
-    "name": "ArgonautWriteTagValueSet"
-  },
-  {
-    "id": "backport-content-code-system",
-    "type": "CodeSystem",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-content-code-system",
-    "version": "0.1.0",
-    "name": "BackportContentCodeSystem"
-  },
-  {
-    "id": "backport-notification-type-code-system",
-    "type": "CodeSystem",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/backport-notification-type-code-system",
-    "version": "0.1.0",
-    "name": "BackportNotificationTypeCodeSystem"
-  },
-  {
     "id": "healthedata1-sandbox",
     "type": "ImplementationGuide",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
@@ -56,80 +7,59 @@
     "name": "HealthEData_1Sandbox"
   },
   {
-    "id": "backport-heartbeat-period",
+    "id": "us-core-condition",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-heartbeat-period",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-condition",
     "version": "0.1.0",
-    "name": "BackportHeartbeatPeriod"
+    "name": "USCoreCondition"
   },
   {
-    "id": "backport-payload-content",
+    "id": "us-core-encounter-diagnosis",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-payload-content",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis",
     "version": "0.1.0",
-    "name": "BackportPayloadContent"
+    "name": "UsCoreEncounter Diagnosis"
   },
   {
-    "id": "backport-subscription",
+    "id": "us-core-observation-screening-response",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-screening-response",
     "version": "0.1.0",
-    "name": "BackportSubscription"
+    "name": "USCoreObservationScreeningResponse"
   },
   {
-    "id": "backport-subscription-notification",
+    "id": "us-core-observation-simple-survey",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-simple-survey",
     "version": "0.1.0",
-    "name": "BackportSubscriptionNotification"
+    "name": "USCoreObservationScreeningResponse2"
   },
   {
-    "id": "backport-subscription-status",
+    "id": "us-core-problems-and-health-concerns",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-status",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
     "version": "0.1.0",
-    "name": "BackportSubscriptionStatus"
+    "name": "UsCoreProblemsHealthConcerns"
   },
   {
-    "id": "backport-timeout",
+    "id": "us-core-observation-sdoh-item-screening-response",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-timeout",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-item-observation-screening-response",
     "version": "0.1.0",
-    "name": "BackportTimeout"
+    "name": "USCoreObservationSDOHItemScreeningResponse"
   },
   {
-    "id": "backport-topic-canonical",
+    "id": "us-core-observation-sdoh-panel-screening-response",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-topic-canonical",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-panel-observation-screening-response",
     "version": "0.1.0",
-    "name": "BackportTopicCanonical"
+    "name": "USCoreObservationSDOHPanelScreeningResponse"
   },
   {
-    "id": "patientlistquestionnaire",
+    "id": "us-core-sdoh-problems-and-health-concerns",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaire",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-problems-and-health-concerns",
     "version": "0.1.0",
-    "name": "PatientListQuestionnaire"
-  },
-  {
-    "id": "patientlistquestionnaireresponse",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/patientlistquestionnaireresponse",
-    "version": "0.1.0",
-    "name": "PatientListQuestionnaireResponse"
-  },
-  {
-    "id": "backport-content-value-set",
-    "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-content-value-set",
-    "version": "0.1.0",
-    "name": "BackportContentValueSet"
-  },
-  {
-    "id": "backport-notification-type-value-set",
-    "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/backport-notification-type-value-set",
-    "version": "0.1.0",
-    "name": "BackportNotificationTypeValueSet"
+    "name": "UsCoreSDOHProblemsHealthConcerns"
   }
 ]

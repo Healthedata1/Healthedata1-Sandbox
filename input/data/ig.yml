@@ -45,178 +45,67 @@ definition:
     -   code: excludeexample
         value: 'true'
     resource:
-    -   description: A reference to a form definition that is bound to certain types
-            of lists and defines each column for the purpose of providing additional
-            data for each member
+    -   description: Defines constraints and extensions on the Condition resource
+            for the minimal set of data to query and retrieve problems and health
+            concerns information.
         exampleBoolean: false
-        name: Argonaut Patient List Questionnaire
+        name: US Core Condition Profile
         reference:
-            reference: StructureDefinition/patientlistquestionnaire
-    -   description: A reference to a QuestionnaireResponse of prepopulated data based
-            on a Patient List Questionnaire that is bound to certain types of lists
-            and provides additional data for a Group.member
+            reference: StructureDefinition/us-core-condition
+    -   description: The US Core Encounter Diagnosis Profile is based upon the core
+            FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
+            (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints
+            and extensions on the Condition resource for the minimal set of data to
+            record, search, and fetch information about an encounter diagnosis.
         exampleBoolean: false
-        name: Argonaut Patient List QuestionnaireResponse
+        name: US Core Encounter Diagnosis Profile
         reference:
-            reference: StructureDefinition/patientlistquestionnaireresponse
-    -   description: Interval in seconds to send 'heartbeat' notifications.
+            reference: StructureDefinition/us-core-encounter-diagnosis
+    -   description: The US Core Problems and Health Concerns Profile is based upon
+            the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
+            (USCDI) v2 'Problems' and 'Health Concerns' requirements.  It defines
+            constraints and extensions on the Condition resource for the minimal set
+            of data to record, search, and fetch information about a condition, diagnosis,
+            or other event, situation, issue, or clinical concept that is documented
+            and categorized as a problem or health concern.
         exampleBoolean: false
-        name: Backport R5 Subscription Heartbeat Period
+        name: US Core Problems and Health Concerns Profile
         reference:
-            reference: StructureDefinition/backport-heartbeat-period
-    -   description: How much of the resource content to deliver in the notification
-            payload. The choices are an empty payload, only the resource id, or the
-            full resource content.
+            reference: StructureDefinition/us-core-problems-and-health-concerns
+    -   description: Profile for Observations that represent question and answer pairs
+            derived from SDOH surveys/questionnaires.
         exampleBoolean: false
-        name: Backport R5 Subscription Payload Content Information
+        name: US Core Screening SDOH Item Response Observation Profile
         reference:
-            reference: StructureDefinition/backport-payload-content
-    -   description: Timeout in seconds to attempt notification delivery.
+            reference: StructureDefinition/us-core-observation-sdoh-item-screening-response
+    -   description: Profile for Observations that represent panels derived from SDOH
+            surveys/questionnaires.
         exampleBoolean: false
-        name: Backport R5 Subscription Timeout
+        name: US Core Screening SDOH Panel Response Observation Profile
         reference:
-            reference: StructureDefinition/backport-timeout
-    -   description: Canonical reference to the subscription topic being subscribed
-            to.
+            reference: StructureDefinition/us-core-observation-sdoh-panel-screening-response
+    -   description: The US SDOH Core Problems and Health Concerns Profile is based
+            upon the US Core SDOH Problems and Health Concerns Profile and meets the  U.S.
+            Core Data for Interoperability (USCDI) v2 SDOH 'Problems/Health Concerns'
+            requirements.  It defines constraints and extensions on the Condition
+            resource for the minimal set of data to record, search, and fetch information
+            about a Social Determinants of Health-related condition.
         exampleBoolean: false
-        name: Backport R5 Subscription Topic Canonical
+        name: US Core SDOH Problems and Health Concerns Profile
         reference:
-            reference: StructureDefinition/backport-topic-canonical
-    -   description: Profile on the R4 Bundle resource to enable R5-style topic-based
-            subscription notifications in FHIR R4.
+            reference: StructureDefinition/us-core-sdoh-problems-and-health-concerns
+    -   description: Profile for observations that represent question and answer pairs
+            from from surveys/questionnaires.
         exampleBoolean: false
-        name: Backported R5 Subscription Notification Bundle
+        name: US Core Screening Response2 Observation Profile
         reference:
-            reference: StructureDefinition/backport-subscription-notification
-    -   description: Profile on the Parameters resource to enable R5-style topic-based
-            subscription notifications in FHIR R4.
+            reference: StructureDefinition/us-core-observation-simple-survey
+    -   description: Profile for observations that represent question and answer pairs
+            from from surveys/questionnaires.
         exampleBoolean: false
-        name: Backported R5 Subscription Notification Status
+        name: US Core Screening Response Observation Profile
         reference:
-            reference: StructureDefinition/backport-subscription-status
-    -   description: Profile on the R4 Subscription resource to enable R5-style topic-based
-            subscriptions in FHIR R4.
-        exampleBoolean: false
-        name: Backported R5 Subscription
-        reference:
-            reference: StructureDefinition/backport-subscription
-    -   description: Used to tag patient submitted resources for writing and searching
-            from EHRs
-        exampleBoolean: false
-        name: Argonaut Write Tag Code System
-        reference:
-            reference: CodeSystem/tags
-    -   description: "This operation is used to submit attachments for Claims or Prior\
-            \ Authorization. This operation accepts the clinical attachments and the\
-            \ necessary information needed to re-attach them to the claim or prior\
-            \ authorization, and returns a transaction layer http response.  This\
-            \ operation can be used by any HTTP end-point, not just FHIR RESTful servers.\n\
-            \nThe input parameters are:\n1. One or more Attachments as FHIR Resources\n\
-            1. Data elements for reassociation to the Claim/Prior Authorization\n\
-            \    - Reason for Attachments:\n      - Unsolicited claim\n      - Solicited\
-            \ claim\n      - Prior Authorization\n    - A unique claim/prior authorization\
-            \ identifier (named \"TargetId\")\n    - One or more unique claim line\
-            \ item identifiers\n    - A unique organization/location identifier (e.g.,\
-            \ NPI)\n    - A unique provider identifier (e.g., NPI)\n    - A unique\
-            \ Patient member identifier\n\nThere are no output parameters.\n\nNote\
-            \ that Unsolicited Claim implies that the *provider* assigns the claim\
-            \ identifier (in other words, a \"placer identifier\") upon claim generation.\
-            \ Solicited Claim and Prior Authorization imply that the *payer* assigned\
-            \ the Claim/Prior Authorization identifier (in other words, a \"filler\
-            \ identifier\") a upon receipt of a claim or prior authorization.\n"
-        exampleBoolean: false
-        name: Attachment Operation
-        reference:
-            reference: OperationDefinition/attachment
-    -   description: Defines constraints and extensions on the DiagnosticReport resource  for
-            the minimal set of data to query and retrieve diagnostic reports associated
-            with clinical notes for a patient
-        exampleBoolean: false
-        name: US Core DiagnosticReport Profile for Report and Note exchange
-        reference:
-            reference: StructureDefinition/us-core-diagnosticreport-note
-    -   description: The set of codes is used in the [`$attachment`](http://build.fhir.org/ig/HL7/davinci-ecdx/todo.html)
-            operation for identifying the reason for attachments
-        exampleBoolean: false
-        name: CDex Attachment Reason Value Set
-        reference:
-            reference: ValueSet/cdex-attachment-reason
-    -   description: Used to tag patient submitted resources for writing and searching
-            from EHRs
-        exampleBoolean: false
-        name: Argonaut Write Tag Value Set
-        reference:
-            reference: ValueSet/tags
-    -   description: Codes to represent how much resource content to send in the notification
-            payload.
-        exampleBoolean: false
-        name: Backported R5 Subscription Content Code System
-        reference:
-            reference: CodeSystem/backport-content-code-system
-    -   description: Codes to represent types of notification bundles.
-        exampleBoolean: false
-        name: R5 Subscription Notification Type Code System
-        reference:
-            reference: CodeSystem/backport-notification-type-code-system
-    -   description: Codes to represent how much resource content to send in the notification
-            payload.
-        exampleBoolean: false
-        name: Backported R5 Subscription Content Value Set
-        reference:
-            reference: ValueSet/backport-content-value-set
-    -   description: Codes to represent types of notification bundles.
-        exampleBoolean: false
-        name: R5 Subscription Notification Type Value Set
-        reference:
-            reference: ValueSet/backport-notification-type-value-set
-    -   exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification
-        name: 3945182f-d315-4dbf-9259-09d863c7e7da
-        reference:
-            reference: Bundle/3945182f-d315-4dbf-9259-09d863c7e7da
-    -   exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription-notification
-        name: 9601c07a-e34f-4945-93ca-6efb5394c995
-        reference:
-            reference: Bundle/9601c07a-e34f-4945-93ca-6efb5394c995
-    -   exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/backport-subscription
-        name: admission
-        reference:
-            reference: Subscription/admission
-    -   description: '###FOO
-
-            - bar'
-        exampleBoolean: true
-        name: FOO
-        reference:
-            reference: Observation/test
-    -   description: This is an example hospital location for the *US Core Location
-            Profile*.
-        exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
-        name: Hospital Location
-        reference:
-            reference: Location/hospital
-    -   description: Completed Task to seek a patient active conditions with a reference
-            to a formal authorization.
-        exampleBoolean: true
-        name: Scenario 2 Completed Authorization Example
-        reference:
-            reference: Task/cdex-example1-authorized-completed
-dependsOn:
--   id: hl7_fhir_us_core
-    packageId: hl7.fhir.us.core
-    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
-    version: 4.0.0
--   id: hl7_fhir_uv_bulkdata
-    packageId: hl7.fhir.uv.bulkdata
-    uri: http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata
-    version: 2.0.0
--   id: hl7_fhir_uv_smart_app_launch
-    packageId: hl7.fhir.uv.smart-app-launch
-    uri: http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch
-    version: 2.0.0
--   id: vsac
-    packageId: us.nlm.vsac
-    uri: http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac
-    version: 0.3.0
+            reference: StructureDefinition/us-core-observation-screening-response
 description: This is a Healthedata1 sandbox for creation of resources and examples
 fhirVersion:
 - 4.0.1

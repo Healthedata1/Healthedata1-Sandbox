@@ -25,14 +25,14 @@ contact:
 description: This is a Healthedata1 sandbox for creation of resources and examples
 license: CC0-1.0
 fhirVersion: 4.0.1
-dependencies:
-  hl7.fhir.us.core: 4.0.0
-  hl7.fhir.uv.bulkdata: 2.0.0
-  hl7.fhir.uv.smart-app-launch: 2.0.0
-  us.nlm.vsac:
-      uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-      version: 0.3.0
-      id: vsac
+# dependencies:
+#   hl7.fhir.us.core: 4.0.0
+#   hl7.fhir.uv.bulkdata: 2.0.0
+#   hl7.fhir.uv.smart-app-launch: 2.0.0
+#   us.nlm.vsac:
+#       uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
+#       version: 0.3.0
+#       id: vsac
 parameters:
   show-inherited-invariants: false
   usage-stats-opt-out: false

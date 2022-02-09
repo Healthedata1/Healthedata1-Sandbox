@@ -124,22 +124,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Behavior: Operation Definitions</a>
-      </li>
-      <li>
-         <a href="#2">Structures: Resource Profiles</a>
-      </li>
-      <li>
-         <a href="#3">Structures: Extension Definitions</a>
-      </li>
-      <li>
-         <a href="#4">Terminology: Value Sets</a>
-      </li>
-      <li>
-         <a href="#5">Terminology: Code Systems</a>
-      </li>
-      <li>
-         <a href="#6">Example: Example Instances</a>
+         <a href="#1">Structures: Resource Profiles</a>
       </li>
    </ul>
 </div>
@@ -148,52 +133,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
-   <h3>Behavior: Operation Definitions </h3>
-   <p>
-    <p>These are custom operations that can be supported by and/or invoked by systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="OperationDefinition-attachment.html"
-                     title="OperationDefinition/attachment">Attachment Operation</a>
-               </td>
-               <td>
-<p>This operation is used to submit attachments for Claims or Prior Authorization. This operation accepts the clinical attachments and the necessary information needed to re-attach them to the claim or prior authorization, and returns a transaction layer http response.  This operation can be used by any HTTP end-point, not just FHIR RESTful servers.</p>
-
-<p>The input parameters are:</p>
-<ol>
-  <li>One or more Attachments as FHIR Resources</li>
-  <li>Data elements for reassociation to the Claim/Prior Authorization
-    <ul>
-      <li>Reason for Attachments:
-        <ul>
-          <li>Unsolicited claim</li>
-          <li>Solicited claim</li>
-          <li>Prior Authorization</li>
-        </ul>
-      </li>
-      <li>A unique claim/prior authorization identifier (named “TargetId”)</li>
-      <li>One or more unique claim line item identifiers</li>
-      <li>A unique organization/location identifier (e.g., NPI)</li>
-      <li>A unique provider identifier (e.g., NPI)</li>
-      <li>A unique Patient member identifier</li>
-    </ul>
-  </li>
-</ol>
-
-<p>There are no output parameters.</p>
-
-<p>Note that Unsolicited Claim implies that the <em>provider</em> assigns the claim identifier (in other words, a “placer identifier”) upon claim generation. Solicited Claim and Prior Authorization imply that the <em>payer</em> assigned the Claim/Prior Authorization identifier (in other words, a “filler identifier”) a upon receipt of a claim or prior authorization.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="2"> </a>
    <h3>Structures: Resource Profiles </h3>
    <p>
     <p>These define constraints on FHIR resources for systems conforming to this implementation guide</p>
@@ -204,255 +143,74 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-subscription-notification.html"
-                     title="StructureDefinition/backport-subscription-notification">Backported R5 Subscription Notification Bundle</a>
+                  <a href="StructureDefinition-us-core-condition.html"
+                     title="StructureDefinition/us-core-condition">US Core Condition Profile</a>
                </td>
                <td>
-<p>Profile on the R4 Bundle resource to enable R5-style topic-based subscription notifications in FHIR R4.</p>
+<p>Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-subscription-status.html"
-                     title="StructureDefinition/backport-subscription-status">Backported R5 Subscription Notification Status</a>
+                  <a href="StructureDefinition-us-core-encounter-diagnosis.html"
+                     title="StructureDefinition/us-core-encounter-diagnosis">US Core Encounter Diagnosis Profile</a>
                </td>
                <td>
-<p>Profile on the Parameters resource to enable R5-style topic-based subscription notifications in FHIR R4.</p>
+<p>The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 ‘Encounter Diagnosis’ requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-subscription.html"
-                     title="StructureDefinition/backport-subscription">Backported R5 Subscription</a>
+                  <a href="StructureDefinition-us-core-problems-and-health-concerns.html"
+                     title="StructureDefinition/us-core-problems-and-health-concerns">US Core Problems and Health Concerns Profile</a>
                </td>
                <td>
-<p>Profile on the R4 Subscription resource to enable R5-style topic-based subscriptions in FHIR R4.</p>
+<p>The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 ‘Problems’ and ‘Health Concerns’ requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-us-core-diagnosticreport-note.html"
-                     title="StructureDefinition/us-core-diagnosticreport-note">US Core DiagnosticReport Profile for Report and Note exchange</a>
+                  <a href="StructureDefinition-us-core-observation-sdoh-item-screening-response.html"
+                     title="StructureDefinition/us-core-observation-sdoh-item-screening-response">US Core Screening SDOH Item Response Observation Profile</a>
                </td>
                <td>
-<p>Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with clinical notes for a patient</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="3"> </a>
-   <h3>Structures: Extension Definitions </h3>
-   <p>
-    <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-patientlistquestionnaire.html"
-                     title="StructureDefinition/patientlistquestionnaire">Argonaut Patient List Questionnaire</a>
-               </td>
-               <td>
-<p>A reference to a form definition that is bound to certain types of lists and defines each column for the purpose of providing additional data for each member</p>
+<p>Profile for Observations that represent question and answer pairs derived from SDOH surveys/questionnaires.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-patientlistquestionnaireresponse.html"
-                     title="StructureDefinition/patientlistquestionnaireresponse">Argonaut Patient List QuestionnaireResponse</a>
+                  <a href="StructureDefinition-us-core-observation-sdoh-panel-screening-response.html"
+                     title="StructureDefinition/us-core-observation-sdoh-panel-screening-response">US Core Screening SDOH Panel Response Observation Profile</a>
                </td>
                <td>
-<p>A reference to a QuestionnaireResponse of prepopulated data based on a Patient List Questionnaire that is bound to certain types of lists and provides additional data for a Group.member</p>
+<p>Profile for Observations that represent panels derived from SDOH surveys/questionnaires.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-heartbeat-period.html"
-                     title="StructureDefinition/backport-heartbeat-period">Backport R5 Subscription Heartbeat Period</a>
+                  <a href="StructureDefinition-us-core-sdoh-problems-and-health-concerns.html"
+                     title="StructureDefinition/us-core-sdoh-problems-and-health-concerns">US Core SDOH Problems and Health Concerns Profile</a>
                </td>
                <td>
-<p>Interval in seconds to send ‘heartbeat’ notifications.</p>
+<p>The US SDOH Core Problems and Health Concerns Profile is based upon the US Core SDOH Problems and Health Concerns Profile and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH ‘Problems/Health Concerns’ requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a Social Determinants of Health-related condition.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-payload-content.html"
-                     title="StructureDefinition/backport-payload-content">Backport R5 Subscription Payload Content Information</a>
+                  <a href="StructureDefinition-us-core-observation-simple-survey.html"
+                     title="StructureDefinition/us-core-observation-simple-survey">US Core Screening Response2 Observation Profile</a>
                </td>
                <td>
-<p>How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content.</p>
+<p>Profile for observations that represent question and answer pairs from from surveys/questionnaires.</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-timeout.html"
-                     title="StructureDefinition/backport-timeout">Backport R5 Subscription Timeout</a>
+                  <a href="StructureDefinition-us-core-observation-screening-response.html"
+                     title="StructureDefinition/us-core-observation-screening-response">US Core Screening Response Observation Profile</a>
                </td>
                <td>
-<p>Timeout in seconds to attempt notification delivery.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-backport-topic-canonical.html"
-                     title="StructureDefinition/backport-topic-canonical">Backport R5 Subscription Topic Canonical</a>
-               </td>
-               <td>
-<p>Canonical reference to the subscription topic being subscribed to.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="4"> </a>
-   <h3>Terminology: Value Sets </h3>
-   <p>
-    <p>These define sets of codes used by systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-cdex-attachment-reason.html"
-                     title="ValueSet/cdex-attachment-reason">CDex Attachment Reason Value Set</a>
-               </td>
-               <td>
-<p>The set of codes is used in the <a href="http://build.fhir.org/ig/HL7/davinci-ecdx/todo.html"><code class="highlighter-rouge">$attachment</code></a> operation for identifying the reason for attachments</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-tags.html" title="ValueSet/tags">Argonaut Write Tag Value Set</a>
-               </td>
-               <td>
-<p>Used to tag patient submitted resources for writing and searching from EHRs</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-backport-content-value-set.html"
-                     title="ValueSet/backport-content-value-set">Backported R5 Subscription Content Value Set</a>
-               </td>
-               <td>
-<p>Codes to represent how much resource content to send in the notification payload.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-backport-notification-type-value-set.html"
-                     title="ValueSet/backport-notification-type-value-set">R5 Subscription Notification Type Value Set</a>
-               </td>
-               <td>
-<p>Codes to represent types of notification bundles.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="5"> </a>
-   <h3>Terminology: Code Systems </h3>
-   <p>
-    <p>These define new code systems used by systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="CodeSystem-tags.html" title="CodeSystem/tags">Argonaut Write Tag Code System</a>
-               </td>
-               <td>
-<p>Used to tag patient submitted resources for writing and searching from EHRs</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="CodeSystem-backport-content-code-system.html"
-                     title="CodeSystem/backport-content-code-system">Backported R5 Subscription Content Code System</a>
-               </td>
-               <td>
-<p>Codes to represent how much resource content to send in the notification payload.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="CodeSystem-backport-notification-type-code-system.html"
-                     title="CodeSystem/backport-notification-type-code-system">R5 Subscription Notification Type Code System</a>
-               </td>
-               <td>
-<p>Codes to represent types of notification bundles.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="6"> </a>
-   <h3>Example: Example Instances </h3>
-   <p>
-    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Bundle-3945182f-d315-4dbf-9259-09d863c7e7da.html"
-                     title="Bundle/3945182f-d315-4dbf-9259-09d863c7e7da">3945182f-d315-4dbf-9259-09d863c7e7da</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Bundle-9601c07a-e34f-4945-93ca-6efb5394c995.html"
-                     title="Bundle/9601c07a-e34f-4945-93ca-6efb5394c995">9601c07a-e34f-4945-93ca-6efb5394c995</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Subscription-admission.html" title="Subscription/admission">admission</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-test.html" title="Observation/test">FOO</a>
-               </td>
-               <td>
-<p>###FOO</p>
-<ul>
-  <li>bar</li>
-</ul>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Location-hospital.html" title="Location/hospital">Hospital Location</a>
-               </td>
-               <td>
-<p>This is an example hospital location for the <em>US Core Location Profile</em>.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Task-cdex-example1-authorized-completed.html"
-                     title="Task/cdex-example1-authorized-completed">Scenario 2 Completed Authorization Example</a>
-               </td>
-               <td>
-<p>Completed Task to seek a patient active conditions with a reference to a formal authorization.</p>
+<p>Profile for observations that represent question and answer pairs from from surveys/questionnaires.</p>
 </td>
             </tr>
          </tbody>
@@ -482,7 +240,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Dec 3, 2021 21:52-0800">2021-12-03</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Feb 8, 2022 13:05-0800">2022-02-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

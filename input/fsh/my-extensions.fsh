@@ -1,4 +1,5 @@
-/*
+/*  all commented out
+
 Extension:   DEQMMeasureScoring
 Id:          extension-measureScoring
 Title:       "DEQM Measure Scoring Extension"
@@ -31,7 +32,7 @@ Id:          update-type
 Title:       "DEQM Update Type Value Set"
 Description: "Concepts for how a DEQM Consumer supports data exchange updates. The choices are snapshot or incremental updates"
 * codes from system DEQMUpdateTypeCodeSystem
-*/
+
 
 Extension:   PatientListQuestionnaire
 Id:          patientlistquestionnaire
@@ -51,7 +52,7 @@ Description: "A reference to a QuestionnaireResponse of prepopulated data based 
 * value[x] only Reference
 * valueReference only Reference(QuestionnaireResponse)
 
-/*
+
 Extension:   ResourceDescription
 Id:          resourcedescription
 Title:       "Resource Description"
