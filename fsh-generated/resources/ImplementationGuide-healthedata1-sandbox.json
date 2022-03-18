@@ -27,67 +27,35 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/us-core-condition"
-        },
-        "description": "Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information.",
-        "exampleBoolean": false,
-        "name": "US Core Condition Profile"
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/us-core-encounter-diagnosis"
         },
-        "description": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.",
+        "description": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.fhirVersion: 4.0.1",
         "exampleBoolean": false,
         "name": "US Core Encounter Diagnosis Profile"
       },
       {
         "reference": {
+          "reference": "StructureDefinition/us-core-observation-survey-item"
+        },
+        "description": "Profile for Observations that represent individual question and answer pairs resulting from a survey or questionnaire.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+        "exampleBoolean": false,
+        "name": "US Core Observation Survey Item Profile"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/us-core-observation-survey-panel"
+        },
+        "description": "Profile for Observations that represent panels derived surveys/questionnaires.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+        "exampleBoolean": false,
+        "name": "US Core Observation Survey Panel Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-problems-and-health-concerns"
         },
-        "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern.",
+        "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
         "exampleBoolean": false,
         "name": "US Core Problems and Health Concerns Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-sdoh-item-screening-response"
-        },
-        "description": "Profile for Observations that represent question and answer pairs derived from SDOH surveys/questionnaires.",
-        "exampleBoolean": false,
-        "name": "US Core Screening SDOH Item Response Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-sdoh-panel-screening-response"
-        },
-        "description": "Profile for Observations that represent panels derived from SDOH surveys/questionnaires.",
-        "exampleBoolean": false,
-        "name": "US Core Screening SDOH Panel Response Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-sdoh-problems-and-health-concerns"
-        },
-        "description": "The US SDOH Core Problems and Health Concerns Profile is based upon the US Core SDOH Problems and Health Concerns Profile and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a Social Determinants of Health-related condition.",
-        "exampleBoolean": false,
-        "name": "US Core SDOH Problems and Health Concerns Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-simple-survey"
-        },
-        "description": "Profile for observations that represent question and answer pairs from from surveys/questionnaires.",
-        "exampleBoolean": false,
-        "name": "US Core Screening Response2 Observation Profile"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-observation-screening-response"
-        },
-        "description": "Profile for observations that represent question and answer pairs from from surveys/questionnaires.",
-        "exampleBoolean": false,
-        "name": "US Core Screening Response Observation Profile"
       }
     ],
     "page": {

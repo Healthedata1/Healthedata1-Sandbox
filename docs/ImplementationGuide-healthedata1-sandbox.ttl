@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-02-08T13:05:33-08:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-03-17T23:26:21-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -359,23 +359,33 @@
          fhir:Extension.valueString [ fhir:value "true" ]
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ];
      fhir:ImplementationGuide.definition.resource [
        fhir:index 0;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-condition>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-condition" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Condition Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 1;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -386,10 +396,38 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-encounter-diagnosis" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Encounter Diagnosis Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.fhirVersion: 4.0.1" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-item>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-survey-item" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Observation Survey Item Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for Observations that represent individual question and answer pairs resulting from a survey or questionnaire.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-panel>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-survey-panel" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Observation Survey Panel Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for Observations that represent panels derived surveys/questionnaires.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 3;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -400,77 +438,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-problems-and-health-concerns" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Problems and Health Concerns Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-item-screening-response>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-sdoh-item-screening-response" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Screening SDOH Item Response Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for Observations that represent question and answer pairs derived from SDOH surveys/questionnaires." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-panel-screening-response>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-sdoh-panel-screening-response" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Screening SDOH Panel Response Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for Observations that represent panels derived from SDOH surveys/questionnaires." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 5;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-problems-and-health-concerns>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-sdoh-problems-and-health-concerns" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core SDOH Problems and Health Concerns Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US SDOH Core Problems and Health Concerns Profile is based upon the US Core SDOH Problems and Health Concerns Profile and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a Social Determinants of Health-related condition." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 6;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-simple-survey>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-simple-survey" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Screening Response2 Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for observations that represent question and answer pairs from from surveys/questionnaires." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 7;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-screening-response>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-screening-response" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Screening Response Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for observations that represent question and answer pairs from from surveys/questionnaires." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [

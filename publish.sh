@@ -2,7 +2,7 @@
 # exit when any command fails
 set -e
 NA='http://tx.fhir.org'
-while getopts twoplisu: option
+while getopts twoplisvqdu: option
 do
  case "${option}"
  in
@@ -14,6 +14,9 @@ do
  u) TEST_TEMPLATE=$OPTARG;;
  i) IG_PUBLISH=1;;
  s) SUSHI=1;;
+ v) VIEW_OUTPUT=1;;
+ q) VIEW_QA=1;;
+ d) IN_DOCS=1;;
  esac
 done
 echo "================================================================="
@@ -28,10 +31,13 @@ echo '-p parameter for downloading latest version of the igpublisher from source
 #echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
 echo '-i parameter for running only ig-publisher = ' $IG_PUBLISH
 echo '-s parameter for running only sushi = ' $SUSHI
+echo '-v view ig home page  in current browser = ./[output|docs]/index.html  = ' $VIEW_OUTPUT
+echo '-q view qa output in current browser = ./[output|docs]/qa.html  = ' $VIEW_QA
+echo '-d flag if output in "docs" folder = ' $IN_DOCS
 echo ' current directory =' $PWD
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
-find . -name '.DS_Store' -type f -delete
+find $PWD -name '.DS_Store' -type f -delete
 sleep 1
 
 inpath=input
@@ -125,7 +131,7 @@ if [[ $SUSHI ]]; then
   echo "================================================================="
   echo "start sushi ......................................................"
   rm -rf output docs
-  sushi fsh -o .
+  sushi .
   inpath=fsh-generated/resources
   echo "========================================================================"
   echo "convert ig.json to ig.yml and copy to input/data"
@@ -177,7 +183,7 @@ parameters:==="
     echo "================================================================="
     echo "start sushi ......................................................"
     rm -rf output docs
-    sushi fsh -o .
+    sushi .
     inpath=fsh-generated/resources
     echo "========================================================================"
     echo "convert ig.json to ig.yml and copy to input/data"
@@ -206,5 +212,24 @@ parameters:==="
 
   fi
 
+fi
 
+if [[ $VIEW_OUTPUT ]]; then
+  if [[ $IN_DOCS ]]; then
+    echo open $PWD/docs/index.html
+    open ./docs/index.html
+  else
+    echo open $PWD/output/index.html
+    open ./output/index.html
+  fi
+fi
+
+if [[ $VIEW_QA ]]; then
+  if [[ $IN_DOCS ]]; then
+    echo open $PWD/docs/qa.html
+    open ./docs/qa.html
+  else
+    echo open $PWD/output/qa.html
+    open ./output/qa.html
+  fi
 fi

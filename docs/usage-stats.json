@@ -6,18 +6,18 @@
   "profiles": {
     "Condition": [
       {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-problems-and-health-concerns",
-        "title": "US Core SDOH Problems and Health Concerns Profile"
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
+        "title": "US Core Problems and Health Concerns Profile"
       }
     ],
     "Observation": [
       {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-item-observation-screening-response",
-        "title": "US Core Screening SDOH Item Response Observation Profile"
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-item",
+        "title": "US Core Observation Survey Item Profile"
       },
       {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-panel-observation-screening-response",
-        "title": "US Core Screening SDOH Panel Response Observation Profile"
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-panel",
+        "title": "US Core Observation Survey Panel Profile"
       }
     ]
   },

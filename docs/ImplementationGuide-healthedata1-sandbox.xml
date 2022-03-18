@@ -11,7 +11,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2022-02-08T13:05:33-08:00"/>
+  <date value="2022-03-17T23:26:21-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -240,17 +240,22 @@
         <valueString value="true"/>
       </extension>
     </extension>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
       </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-condition"/>
-      </reference>
-      <name value="US Core Condition Profile"/>
-      <description value="Defines constraints and extensions on the Condition resource for the minimal set of data to query and retrieve problems and health concerns information."/>
-      <exampleBoolean value="false"/>
-    </resource>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
@@ -259,7 +264,29 @@
         <reference value="StructureDefinition/us-core-encounter-diagnosis"/>
       </reference>
       <name value="US Core Encounter Diagnosis Profile"/>
-      <description value="The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 &#39;Encounter Diagnosis&#39; requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis."/>
+      <description value="The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.fhirVersion: 4.0.1"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/us-core-observation-survey-item"/>
+      </reference>
+      <name value="US Core Observation Survey Item Profile"/>
+      <description value="Profile for Observations that represent individual question and answer pairs resulting from a survey or questionnaire.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/us-core-observation-survey-panel"/>
+      </reference>
+      <name value="US Core Observation Survey Panel Profile"/>
+      <description value="Profile for Observations that represent panels derived surveys/questionnaires.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -270,62 +297,7 @@
         <reference value="StructureDefinition/us-core-problems-and-health-concerns"/>
       </reference>
       <name value="US Core Problems and Health Concerns Profile"/>
-      <description value="The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 &#39;Problems&#39; and &#39;Health Concerns&#39; requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-observation-sdoh-item-screening-response"/>
-      </reference>
-      <name value="US Core Screening SDOH Item Response Observation Profile"/>
-      <description value="Profile for Observations that represent question and answer pairs derived from SDOH surveys/questionnaires."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-observation-sdoh-panel-screening-response"/>
-      </reference>
-      <name value="US Core Screening SDOH Panel Response Observation Profile"/>
-      <description value="Profile for Observations that represent panels derived from SDOH surveys/questionnaires."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-sdoh-problems-and-health-concerns"/>
-      </reference>
-      <name value="US Core SDOH Problems and Health Concerns Profile"/>
-      <description value="The US SDOH Core Problems and Health Concerns Profile is based upon the US Core SDOH Problems and Health Concerns Profile and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH &#39;Problems/Health Concerns&#39; requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a Social Determinants of Health-related condition."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-observation-simple-survey"/>
-      </reference>
-      <name value="US Core Screening Response2 Observation Profile"/>
-      <description value="Profile for observations that represent question and answer pairs from from surveys/questionnaires."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-observation-screening-response"/>
-      </reference>
-      <name value="US Core Screening Response Observation Profile"/>
-      <description value="Profile for observations that represent question and answer pairs from from surveys/questionnaires."/>
+      <description value="The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1"/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

@@ -7,59 +7,31 @@
     "name": "HealthEData_1Sandbox"
   },
   {
-    "id": "us-core-condition",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-condition",
-    "version": "0.1.0",
-    "name": "USCoreCondition"
-  },
-  {
     "id": "us-core-encounter-diagnosis",
     "type": "StructureDefinition",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis",
     "version": "0.1.0",
-    "name": "UsCoreEncounter Diagnosis"
+    "name": "UsCoreEncounterDiagnosis"
   },
   {
-    "id": "us-core-observation-screening-response",
+    "id": "us-core-observation-survey-item",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-screening-response",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-item",
     "version": "0.1.0",
-    "name": "USCoreObservationScreeningResponse"
+    "name": "USCoreObservationSurveyItemProfile"
   },
   {
-    "id": "us-core-observation-simple-survey",
+    "id": "us-core-observation-survey-panel",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-simple-survey",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-panel",
     "version": "0.1.0",
-    "name": "USCoreObservationScreeningResponse2"
+    "name": "USCoreObservationSurveyPanelProfile"
   },
   {
     "id": "us-core-problems-and-health-concerns",
     "type": "StructureDefinition",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
     "version": "0.1.0",
-    "name": "UsCoreProblemsHealthConcerns"
-  },
-  {
-    "id": "us-core-observation-sdoh-item-screening-response",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-item-observation-screening-response",
-    "version": "0.1.0",
-    "name": "USCoreObservationSDOHItemScreeningResponse"
-  },
-  {
-    "id": "us-core-observation-sdoh-panel-screening-response",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-panel-observation-screening-response",
-    "version": "0.1.0",
-    "name": "USCoreObservationSDOHPanelScreeningResponse"
-  },
-  {
-    "id": "us-core-sdoh-problems-and-health-concerns",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-sdoh-problems-and-health-concerns",
-    "version": "0.1.0",
-    "name": "UsCoreSDOHProblemsHealthConcerns"
+    "name": "USCoreProblemsHealthConcerns"
   }
 ]
