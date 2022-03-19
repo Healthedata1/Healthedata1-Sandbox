@@ -11,7 +11,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2022-03-17T23:26:21-07:00"/>
+  <date value="2022-03-18T18:03:52-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -272,21 +272,10 @@
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/us-core-observation-survey-item"/>
+        <reference value="StructureDefinition/us-core-observation-survey"/>
       </reference>
-      <name value="US Core Observation Survey Item Profile"/>
-      <description value="Profile for Observations that represent individual question and answer pairs resulting from a survey or questionnaire.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-observation-survey-panel"/>
-      </reference>
-      <name value="US Core Observation Survey Panel Profile"/>
-      <description value="Profile for Observations that represent panels derived surveys/questionnaires.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements."/>
+      <name value="US Core Observation Survey Profile"/>
+      <description value="Profile for Observations to record responses from  a survey or questionnaire.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions."/>
       <exampleBoolean value="false"/>
     </resource>
     <resource>
@@ -298,6 +287,17 @@
       </reference>
       <name value="US Core Problems and Health Concerns Profile"/>
       <description value="The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/us-core-observation-sdoh-assessment"/>
+      </reference>
+      <name value="US Core Observation SDOH Assessment Profile"/>
+      <description value="Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements."/>
       <exampleBoolean value="false"/>
     </resource>
     <page>

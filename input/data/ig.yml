@@ -55,23 +55,14 @@ definition:
         name: US Core Encounter Diagnosis Profile
         reference:
             reference: StructureDefinition/us-core-encounter-diagnosis
-    -   description: Profile for Observations that represent individual question and
-            answer pairs resulting from a survey or questionnaire.  This profile along
-            with the US Core Observation Survey Panel Profile is used represent SDOH
-            assessments and meets the  U.S. Core Data for Interoperability (USCDI)
-            v2 SDOH Assessments requirements.
+    -   description: "Profile for Observations to record responses from  a survey\
+            \ or questionnaire.  It can be used to represent individual responses,\
+            \ panels of multi-question surveys, and multi-select responses to \u201C\
+            check all that apply\u201D questions."
         exampleBoolean: false
-        name: US Core Observation Survey Item Profile
+        name: US Core Observation Survey Profile
         reference:
-            reference: StructureDefinition/us-core-observation-survey-item
-    -   description: Profile for Observations that represent panels derived surveys/questionnaires.  This
-            profile along with the US Core Observation Survey Panel Profile is used
-            represent SDOH assessments and meets the  U.S. Core Data for Interoperability
-            (USCDI) v2 SDOH Assessments requirements.
-        exampleBoolean: false
-        name: US Core Observation Survey Panel Profile
-        reference:
-            reference: StructureDefinition/us-core-observation-survey-panel
+            reference: StructureDefinition/us-core-observation-survey
     -   description: 'The US Core Problems and Health Concerns Profile is based upon
             the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
             (USCDI) v2 ''Problems'' and ''Health Concerns'' requirements and SDOH
@@ -85,6 +76,17 @@ definition:
         name: US Core Problems and Health Concerns Profile
         reference:
             reference: StructureDefinition/us-core-problems-and-health-concerns
+    -   description: "Profile for Observations to record responses derived from Social\
+            \ Determinants of Health (SDOH) assessment instruments.  It is derived\
+            \ from the US Core Observation Survey Profile and can be used to represent\
+            \ individual responses, panels of multi-question surveys, and multi-select\
+            \ responses to \u201Ccheck all that apply\u201D questions. This profile\
+            \  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments\
+            \ requirements."
+        exampleBoolean: false
+        name: US Core Observation SDOH Assessment Profile
+        reference:
+            reference: StructureDefinition/us-core-observation-sdoh-assessment
 description: This is a Healthedata1 sandbox for creation of resources and examples
 fhirVersion:
 - 4.0.1

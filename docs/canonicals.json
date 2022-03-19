@@ -14,18 +14,18 @@
     "name": "UsCoreEncounterDiagnosis"
   },
   {
-    "id": "us-core-observation-survey-item",
+    "id": "us-core-observation-sdoh-assessment",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-item",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment",
     "version": "0.1.0",
-    "name": "USCoreObservationSurveyItemProfile"
+    "name": "USCoreObservationSDOHAssessment"
   },
   {
-    "id": "us-core-observation-survey-panel",
+    "id": "us-core-observation-survey",
     "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-panel",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey",
     "version": "0.1.0",
-    "name": "USCoreObservationSurveyPanelProfile"
+    "name": "USCoreObservationSurveyProfile"
   },
   {
     "id": "us-core-problems-and-health-concerns",

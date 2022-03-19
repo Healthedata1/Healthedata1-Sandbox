@@ -12,12 +12,12 @@
     ],
     "Observation": [
       {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-item",
-        "title": "US Core Observation Survey Item Profile"
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment",
+        "title": "US Core Observation SDOH Assessment Profile"
       },
       {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey-panel",
-        "title": "US Core Observation Survey Panel Profile"
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey",
+        "title": "US Core Observation Survey Profile"
       }
     ]
   },

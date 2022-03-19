@@ -160,20 +160,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-us-core-observation-survey-item.html"
-                     title="StructureDefinition/us-core-observation-survey-item">US Core Observation Survey Item Profile</a>
+                  <a href="StructureDefinition-us-core-observation-survey.html"
+                     title="StructureDefinition/us-core-observation-survey">US Core Observation Survey Profile</a>
                </td>
                <td>
-<p>Profile for Observations that represent individual question and answer pairs resulting from a survey or questionnaire.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-us-core-observation-survey-panel.html"
-                     title="StructureDefinition/us-core-observation-survey-panel">US Core Observation Survey Panel Profile</a>
-               </td>
-               <td>
-<p>Profile for Observations that represent panels derived surveys/questionnaires.  This profile along with the US Core Observation Survey Panel Profile is used represent SDOH assessments and meets the  U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.</p>
+<p>Profile for Observations to record responses from  a survey or questionnaire.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.</p>
 </td>
             </tr>
             <tr>
@@ -183,6 +174,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 ‘Problems’ and ‘Health Concerns’ requirements and SDOH ‘Problems/Health Concerns’ requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-us-core-observation-sdoh-assessment.html"
+                     title="StructureDefinition/us-core-observation-sdoh-assessment">US Core Observation SDOH Assessment Profile</a>
+               </td>
+               <td>
+<p>Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.</p>
 </td>
             </tr>
          </tbody>
@@ -212,7 +212,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Mar 17, 2022 23:26-0700">2022-03-17</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 18, 2022 18:03-0700">2022-03-18</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
