@@ -53,9 +53,33 @@
         "reference": {
           "reference": "StructureDefinition/us-core-observation-sdoh-assessment"
         },
-        "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+        "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
         "exampleBoolean": false,
         "name": "US Core Observation SDOH Assessment Profile"
+      },
+      {
+        "reference": {
+          "reference": "Observation/prapare-multiselect-example-response1"
+        },
+        "description": "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*.",
+        "name": "Prapare Multiselect Example Response 1",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/prapare-multiselect-example-response2"
+        },
+        "description": "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*.",
+        "name": "Prapare Multiselect Example Response 2",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "reference": {
+          "reference": "Observation/prapare-multiselect-example"
+        },
+        "description": "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*.",
+        "name": "Prapare Multiselect Example",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
       }
     ],
     "page": {

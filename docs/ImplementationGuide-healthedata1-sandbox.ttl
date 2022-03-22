@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-03-18T18:03:52-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-03-21T17:27:45-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -438,8 +438,59 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-observation-sdoh-assessment" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Observation SDOH Assessment Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements." ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Observation/prapare-multiselect-example-response1>;
+         fhir:Reference.reference [ fhir:value "Observation/prapare-multiselect-example-response1" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Prapare Multiselect Example Response 1" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment";
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment>
+       ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Observation/prapare-multiselect-example-response2>;
+         fhir:Reference.reference [ fhir:value "Observation/prapare-multiselect-example-response2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Prapare Multiselect Example Response 2" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment";
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment>
+       ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Observation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Observation/prapare-multiselect-example>;
+         fhir:Reference.reference [ fhir:value "Observation/prapare-multiselect-example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Prapare Multiselect Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment";
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment>
+       ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];

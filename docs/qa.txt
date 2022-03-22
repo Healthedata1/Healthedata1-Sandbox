@@ -1,18 +1,42 @@
 ﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 54, warn = 69, info = 0
-IG Publisher Version: 1.1.112 Out of date - current version is 1.1.113
-Generated Fri Mar 18 18:04:07 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
- Build Errors : 0 / 0 / 0
+err = 63, warn = 71, info = 0
+IG Publisher Version: 1.1.113
+Generated Mon Mar 21 17:27:58 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 6 / 0 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-prapare-multiselect-example-response1 : 3 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-prapare-multiselect-example-response2 : 3 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observations-prapare-multiselect-example : 3 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-encounter-diagnosis : 6 / 9 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-observation-survey : 24 / 45 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-problems-and-health-concerns : 8 / 5 / 1
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-sdoh-assessment : 16 / 10 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-sdoh-assessment : 16 / 9 / 1
 </table>
 == n/a ==
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response1.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1251: The link 'Patient/example' for "Patient/example" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response1.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1370: The link 'Patient/example' for "Patient/example" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response2.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1251: The link 'Patient/example' for "Patient/example" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response2.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1370: The link 'Patient/example' for "Patient/example" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1241: The link 'Patient/example' for "Patient/example" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1360: The link 'Patient/example' for "Patient/example" cannot be resolved
 == fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json ==
+== input/examples/Observation-prapare-multiselect-example-response1.json ==
+ERROR: Observation/prapare-multiselect-example-response1: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+WARNING: Observation/prapare-multiselect-example-response1: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator
+ERROR: Observation/prapare-multiselect-example-response1: Observation.subject: Unable to resolve resource 'Patient/example'
+ERROR: Observation/prapare-multiselect-example-response1: Observation.performer[0]: Unable to resolve resource 'Patient/example'
+== input/examples/Observation-prapare-multiselect-example-response2.json ==
+ERROR: Observation/prapare-multiselect-example-response2: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+WARNING: Observation/prapare-multiselect-example-response2: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator
+ERROR: Observation/prapare-multiselect-example-response2: Observation.subject: Unable to resolve resource 'Patient/example'
+ERROR: Observation/prapare-multiselect-example-response2: Observation.performer[0]: Unable to resolve resource 'Patient/example'
+== input/examples/Observations-prapare-multiselect-example.json ==
+ERROR: Observation/prapare-multiselect-example: Observation.category[0].coding[0]: The code "LG41762-2" is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'
+WARNING: Observation/prapare-multiselect-example: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator
+ERROR: Observation/prapare-multiselect-example: Observation.subject: Unable to resolve resource 'Patient/example'
+ERROR: Observation/prapare-multiselect-example: Observation.performer[0]: Unable to resolve resource 'Patient/example'
 == input/resources/StructureDefinition-us-core-encounter-diagnosis.json ==
 WARNING: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis#Condition.subject: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known
 WARNING: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis#Condition.encounter: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter is valid constraint on the base because it is not known
@@ -139,4 +163,3 @@ WARNING: StructureDefinition/us-core-observation-sdoh-assessment: StructureDefin
 WARNING: StructureDefinition/us-core-observation-sdoh-assessment: StructureDefinition.snapshot.element[42].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-response
 WARNING: StructureDefinition/us-core-observation-sdoh-assessment: StructureDefinition.snapshot.element[42].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
 WARNING: StructureDefinition/us-core-observation-sdoh-assessment: StructureDefinition.snapshot.element[42].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference
-WARNING: StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment'): The Implementation Guide contains no examples for this profile

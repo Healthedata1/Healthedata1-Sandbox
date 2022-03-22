@@ -80,13 +80,30 @@ definition:
             \ Determinants of Health (SDOH) assessment instruments.  It is derived\
             \ from the US Core Observation Survey Profile and can be used to represent\
             \ individual responses, panels of multi-question surveys, and multi-select\
-            \ responses to \u201Ccheck all that apply\u201D questions. This profile\
-            \  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments\
-            \ requirements."
+            \ \u201Ccheck all that apply\u201D questions. This profile  meets the\
+            \ U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements."
         exampleBoolean: false
         name: US Core Observation SDOH Assessment Profile
         reference:
             reference: StructureDefinition/us-core-observation-sdoh-assessment
+    -   description: This is a Prapare Multiselect Example for the *US Core Screening
+            Response Observation Profile*.
+        exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment
+        name: Prapare Multiselect Example Response 1
+        reference:
+            reference: Observation/prapare-multiselect-example-response1
+    -   description: This is a Prapare Multiselect Example for the *US Core Screening
+            Response Observation Profile*.
+        exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment
+        name: Prapare Multiselect Example Response 2
+        reference:
+            reference: Observation/prapare-multiselect-example-response2
+    -   description: This is a Prapare Multiselect Example for the *US Core Screening
+            Response Observation Profile*.
+        exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment
+        name: Prapare Multiselect Example
+        reference:
+            reference: Observation/prapare-multiselect-example
 description: This is a Healthedata1 sandbox for creation of resources and examples
 fhirVersion:
 - 4.0.1

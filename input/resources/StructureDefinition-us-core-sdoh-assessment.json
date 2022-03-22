@@ -6,7 +6,7 @@
     "title": "US Core Observation SDOH Assessment Profile",
     "status": "active",
     "date": "2022-03-18",
-    "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to \u201ccheck all that apply\u201d questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+    "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select \u201ccheck all that apply\u201d questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
