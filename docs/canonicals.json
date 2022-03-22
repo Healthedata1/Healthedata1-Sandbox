@@ -1,5 +1,12 @@
 [
   {
+    "id": "us-core-survey-codes",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-survey-codes",
+    "version": "0.1.0",
+    "name": "USCoreSurveyCodes"
+  },
+  {
     "id": "healthedata1-sandbox",
     "type": "ImplementationGuide",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",

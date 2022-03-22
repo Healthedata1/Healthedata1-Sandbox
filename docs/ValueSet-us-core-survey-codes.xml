@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-survey-codes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <a href="http://loinc.org"><code>http://loinc.org</code></a> where CLASSTYPE  =  4</li></ul></div>
+  </text>
+  <url value="http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-survey-codes"/>
+  <version value="0.1.0"/>
+  <name value="USCoreSurveyCodes"/>
+  <title value="US Core Survey Codes"/>
+  <status value="active"/>
+  <date value="2022-03-21"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)"/>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="CLASSTYPE"/>
+        <op value="="/>
+        <value value="4"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -19,7 +19,7 @@ differential:
   element:
     - id: Observation
       path: Observation
-      short: Survey Item Observation
+      short: Survey Observation
       definition: >-
           Profile for Observations to record responses from  a survey or questionnaire.
       comment: >-
@@ -92,7 +92,7 @@ differential:
       mustSupport: true
       binding:
         strength: preferred
-        valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes'
+        valueSet: 'http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-survey-codes'
 
     - id: Observation.subject
       path: Observation.subject

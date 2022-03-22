@@ -18,7 +18,7 @@
             {
                 "id": "Observation",
                 "path": "Observation",
-                "short": "Survey Item Observation",
+                "short": "Survey Observation",
                 "definition": "Profile for Observations to record responses from  a survey or questionnaire.",
                 "comment": "This profile can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to \u201ccheck all that apply\u201d questions.",
                 "constraint": [
@@ -82,7 +82,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "preferred",
-                    "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-survey-codes"
+                    "valueSet": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-survey-codes"
                 }
             },
             {

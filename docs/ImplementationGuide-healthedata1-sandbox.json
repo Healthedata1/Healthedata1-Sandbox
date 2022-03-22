@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-03-21T17:27:45-07:00",
+  "date": "2022-03-21T19:14:17-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -463,6 +463,20 @@
         },
         "name": "US Core Observation SDOH Assessment Profile",
         "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/us-core-survey-codes"
+        },
+        "name": "US Core Survey Codes",
+        "description": "This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
         "exampleBoolean": false
       },
       {

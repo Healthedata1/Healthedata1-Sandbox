@@ -86,6 +86,13 @@ definition:
         name: US Core Observation SDOH Assessment Profile
         reference:
             reference: StructureDefinition/us-core-observation-sdoh-assessment
+    -   description: This value set includes all LOINC values whose CLASSTYPE is SURVEY
+            in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/)
+            of LOINC Users' Guide)
+        exampleBoolean: false
+        name: US Core Survey Codes
+        reference:
+            reference: ValueSet/us-core-survey-codes
     -   description: This is a Prapare Multiselect Example for the *US Core Screening
             Response Observation Profile*.
         exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment

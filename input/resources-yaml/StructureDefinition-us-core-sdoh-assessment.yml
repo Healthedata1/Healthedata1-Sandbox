@@ -37,6 +37,7 @@ differential:
     - id: Observation.code
       path: Observation.code
       binding:
+        strength: extensible
         valueSet: 'http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments'
     - id: Observation.hasMember
       path: Observation.hasMember
