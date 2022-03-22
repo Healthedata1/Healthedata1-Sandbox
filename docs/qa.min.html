@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 6, errors = 60, warn = 71, info = 0 -->
+<!-- broken links = 6, errors = 61, warn = 71, info = 0 -->
 <head>
   <title>HealthEData_1Sandbox : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for HealthEData_1Sandbox</h1>
- <p>Generated Mon Mar 21 19:14:30 PDT 2022, FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = <a href="http://www.fhir.org/guides/healthedata1-sandbox">http://www.fhir.org/guides/healthedata1-sandbox</a> (<a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/healthedata1-sandbox/docs/qa.html">Full QA Report</a></p>
+ <p>Generated Mon Mar 21 20:15:39 PDT 2022, FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = <a href="http://www.fhir.org/guides/healthedata1-sandbox">http://www.fhir.org/guides/healthedata1-sandbox</a> (<a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">history</a>)). See <a href="/users/ehaas/documents/fhir/healthedata1-sandbox/docs/qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.113</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = healthedata1-sandbox, Canonical = http://www.fhir.org/guides/healthedata1-sandbox</td></tr>
@@ -55,8 +55,8 @@
  <br/><br/>The copyrightYear parameter ('2020+') in the IG resource is good</td></tr>
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/healthedata1-sandbox (Problem #1 with package-list.json at http://www.fhir.org/guides/healthedata1-sandbox: Invalid HTTP response 404 from http://www.fhir.org/guides/healthedata1-sandbox/package-list.json?nocache=1647915256982 (Not Found) (content in /var/folders/q_/m2_r2plx69313_bzdypfs7440000gn/T/fhir-http-2.log))</td></tr>
- <tr><td>Summary:</td><td> broken links = 6, errors = 60, warn = 71, info = 0</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/healthedata1-sandbox (Problem #1 with package-list.json at http://www.fhir.org/guides/healthedata1-sandbox: Invalid HTTP response 404 from http://www.fhir.org/guides/healthedata1-sandbox/package-list.json?nocache=1647918925877 (Not Found) (content in /var/folders/q_/m2_r2plx69313_bzdypfs7440000gn/T/fhir-http-2.log))</td></tr>
+ <tr><td>Summary:</td><td> broken links = 6, errors = 61, warn = 71, info = 0</td></tr>
 </table>
  <table class="grid">
    <tr>
@@ -84,7 +84,7 @@
      <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-problems-and-health-concerns"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-problems-and-health-concerns</b></a></td><td><b>8</b></td><td><b>5</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-sdoh-assessment"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-sdoh-assessment</b></a></td><td><b>15</b></td><td><b>9</b></td><td><b>0</b></td>
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-sdoh-assessment"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-sdoh-assessment</b></a></td><td><b>16</b></td><td><b>9</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -541,6 +541,9 @@
      <td><b>StructureDefinition.differential.element[1].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td title="Terminology_PassThrough_TX_Message"><b>The code &quot;LG41762-2&quot; is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[2].binding</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ElementDefinition.binding.strength: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
      <td><b>StructureDefinition.differential.element[2].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments' does not resolve</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
@@ -779,6 +782,14 @@
    </tr>
    <tr style="background-color: #fff4ee">
      <td><a href="Observation-prapare-multiselect-example.html">input/examples/Observations-prapare-multiselect-example.json</a></td><td><b>ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Validation_VAL_Profile_Minimum"> </a>
+<h2>Validation_VAL_Profile_Minimum</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-observation-sdoh-assessment.html">input/resources/StructureDefinition-us-core-sdoh-assessment.json</a></td><td><b>ElementDefinition.binding.strength: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ElementDefinition)</b></td>
    </tr>
 </table>
 </body>
