@@ -1,14 +1,15 @@
 ﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 61, warn = 71, info = 0
+err = 65, warn = 91, info = 0
 IG Publisher Version: 1.1.113
-Generated Mon Mar 21 20:15:39 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
- Build Errors : 6 / 0 / 0
+Generated Fri Mar 25 16:15:44 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 6 / 1 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-prapare-multiselect-example-response1 : 3 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-prapare-multiselect-example-response2 : 3 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observations-prapare-multiselect-example : 3 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/QuestionnaireResponse-prapare-example : 4 / 19 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-encounter-diagnosis : 6 / 9 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-observation-survey : 22 / 45 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-problems-and-health-concerns : 8 / 5 / 1
@@ -16,6 +17,7 @@ Generated Mon Mar 21 20:15:39 PDT 2022. FHIR version 4.0.1 for healthedata1-sand
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-us-core-survey-codes : 0 / 0 / 1
 </table>
 == n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/5770620.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response1.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1251: The link 'Patient/example' for "Patient/example" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response1.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1370: The link 'Patient/example' for "Patient/example" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-prapare-multiselect-example-response2.html#/html/body/div/div/div/div/div/div/p/a at Line 170, column 1251: The link 'Patient/example' for "Patient/example" cannot be resolved
@@ -38,6 +40,30 @@ ERROR: Observation/prapare-multiselect-example: Observation.category[0].coding[0
 WARNING: Observation/prapare-multiselect-example: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator
 ERROR: Observation/prapare-multiselect-example: Observation.subject: Unable to resolve resource 'Patient/example'
 ERROR: Observation/prapare-multiselect-example: Observation.performer[0]: Unable to resolve resource 'Patient/example'
+== input/examples/QuestionnaireResponse-prapare-example.json ==
+ERROR: QuestionnaireResponse/5770620: QuestionnaireResponse.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7' does not resolve
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.meta.tag[0]: A code with no system has no defined meaning. A system should be provided
+ERROR: QuestionnaireResponse/5770620: QuestionnaireResponse.questionnaire: Canonical URLs must be absolute URLs if they are not fragment references (Questionnaire/93025-5)
+ERROR: QuestionnaireResponse/5770620: QuestionnaireResponse.subject: Unable to resolve resource 'Patient/pat-70279'
+ERROR: QuestionnaireResponse/5770620: QuestionnaireResponse.author: Unable to resolve resource 'Practitioner/smart-Practitioner-71482713'
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[0].item[0].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[0].item[1].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[0].item[2].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[0].item[3].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[0].item[4].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[1].item[1].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[1].item[2].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[2].item[0].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[2].item[1].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[2].item[2].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[2].item[3].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[2].item[4].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[3].item[0].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[3].item[1].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[3].item[2].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.item[3].item[3].answer[0].value.ofType(Coding): A code with no system has no defined meaning. A system should be provided
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse: The questionnaire 'Questionnaire/93025-5' could not be resolved, so no validation can be performed against the base questionnaire
+WARNING: QuestionnaireResponse/5770620: QuestionnaireResponse.meta.profile[0]: Profile reference 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse|2.7' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
 == input/resources/StructureDefinition-us-core-encounter-diagnosis.json ==
 WARNING: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis#Condition.subject: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known
 WARNING: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis#Condition.encounter: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter is valid constraint on the base because it is not known

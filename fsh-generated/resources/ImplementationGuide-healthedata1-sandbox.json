@@ -88,6 +88,13 @@
         "description": "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*.",
         "name": "Prapare Multiselect Example",
         "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/5770620"
+        },
+        "name": "5770620",
+        "exampleBoolean": true
       }
     ],
     "page": {

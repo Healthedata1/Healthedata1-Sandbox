@@ -70,6 +70,9 @@ tadaa...
 {: .grid}
 
 
+   test code block
+   {: style="color: red"}
+
 svg file:
 
 {% include my_plantuml.svg %}

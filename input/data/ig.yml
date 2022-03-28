@@ -111,6 +111,10 @@ definition:
         name: Prapare Multiselect Example
         reference:
             reference: Observation/prapare-multiselect-example
+    -   exampleBoolean: true
+        name: '5770620'
+        reference:
+            reference: QuestionnaireResponse/5770620
 description: This is a Healthedata1 sandbox for creation of resources and examples
 fhirVersion:
 - 4.0.1

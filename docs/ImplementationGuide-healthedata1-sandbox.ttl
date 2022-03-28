@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-03-21T20:15:26-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-03-25T16:15:25-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -505,6 +505,19 @@
          fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment";
          fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment>
        ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "QuestionnaireResponse" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/QuestionnaireResponse/5770620>;
+         fhir:Reference.reference [ fhir:value "QuestionnaireResponse/5770620" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "5770620" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];

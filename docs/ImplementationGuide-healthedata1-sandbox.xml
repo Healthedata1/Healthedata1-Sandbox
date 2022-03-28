@@ -11,7 +11,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2022-03-21T20:15:26-07:00"/>
+  <date value="2022-03-25T16:15:25-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -343,6 +343,16 @@
       <name value="Prapare Multiselect Example"/>
       <description value="This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*."/>
       <exampleCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="QuestionnaireResponse"/>
+      </extension>
+      <reference>
+        <reference value="QuestionnaireResponse/5770620"/>
+      </reference>
+      <name value="5770620"/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

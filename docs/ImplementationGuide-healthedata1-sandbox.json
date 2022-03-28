@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-03-21T20:15:26-07:00",
+  "date": "2022-03-25T16:15:25-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -520,6 +520,19 @@
         "name": "Prapare Multiselect Example",
         "description": "This is a Prapare Multiselect Example for the *US Core Screening Response Observation Profile*.",
         "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/5770620"
+        },
+        "name": "5770620",
+        "exampleBoolean": true
       }
     ],
     "page": {
