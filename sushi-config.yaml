@@ -25,8 +25,9 @@ contact:
 description: This is a Healthedata1 sandbox for creation of resources and examples
 license: CC0-1.0
 fhirVersion: 4.0.1
-# dependencies:
-#   hl7.fhir.us.core: 4.0.0
+dependencies:
+# hl7.fhir.us.core: 4.0.0
+  hl7.fhir.uv.sdc: 3.0.0
 #   hl7.fhir.uv.bulkdata: 2.0.0
 #   hl7.fhir.uv.smart-app-launch: 2.0.0
 #   us.nlm.vsac:

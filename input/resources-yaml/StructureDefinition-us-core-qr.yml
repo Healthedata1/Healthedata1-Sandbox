@@ -38,7 +38,7 @@ differential:
     - id: 'QuestionnaireResponse.meta.tag.code'
       path: 'QuestionnaireResponse.meta.tag.code'
       min: 1
-      mustSupport: true
+
     - id: 'QuestionnaireResponse.meta.tag:sdoh'
       path: QuestionnaireResponse.meta.tag
       sliceName: sdoh
@@ -59,10 +59,22 @@ differential:
       path: QuestionnaireResponse.questionnaire
       mustSupport: true
 
+    - id: 'QuestionnaireResponse.questionnaire.extension:url'
+      path: QuestionnaireResponse.questionnaire.extension
+      sliceName: url
+      min: 0
+      max: '1'
+      type:
+        - code: Extension
+          profile:
+            - 'http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/questionnaire-url'
+      mustSupport: true
+
 
     - id: QuestionnaireResponse.status
       path: QuestionnaireResponse.status
       mustSupport: true
+
 
     - id: QuestionnaireResponse.subject
       path: QuestionnaireResponse.subject
@@ -133,10 +145,10 @@ differential:
       max: '1'
       type:
         - code: boolean
-          extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
+          # extension:
+          #   - url: >-
+          #       http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          #     valueBoolean: true
 
         - code: date
         - code: dateTime
@@ -163,10 +175,10 @@ differential:
         - code: uri
         - code: Quantity
         - code: Attachment
-          extension:
-            - url: >-
-                http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
-              valueBoolean: true
+          # extension:
+          #   - url: >-
+          #       http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support
+          #     valueBoolean: true
 
         - code: Reference
       mustSupport: true

@@ -2,7 +2,15 @@
   "package": "healthedata1-sandbox",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
-  "extensions": [],
+  "extensions": [
+    {
+      "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/questionnaire-url",
+      "title": "Questionnaire URL Extension",
+      "types": [
+        "uri"
+      ]
+    }
+  ],
   "profiles": {
     "Condition": [
       {
@@ -19,11 +27,20 @@
         "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey",
         "title": "US Core Observation Survey Profile"
       }
+    ],
+    "QuestionnaireResponse": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse",
+        "title": "US Core Questionnaire Response Profile"
+      }
     ]
   },
   "usage": {
     "http://hl7.org/fhir/StructureDefinition/condition-assertedDate": [
       "Condition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/display": [
+      "QuestionnaireResponse.questionnaire"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
       "StructureDefinition.differential.element.constraint",
@@ -41,6 +58,9 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
       "StructureDefinition.differential.element.type",
       "StructureDefinition.differential.element.type.targetProfile",
@@ -48,10 +68,26 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
-      "Observation.meta"
+      "Observation.meta",
+      "QuestionnaireResponse.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
-      "Observation.meta"
+      "Observation.meta",
+      "QuestionnaireResponse.meta"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/ordinalValue": [
+      "Observation.valueCodeableConcept.coding",
+      "QuestionnaireResponse.item.answer"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-completionMode": [
+      "QuestionnaireResponse"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature": [
+      "QuestionnaireResponse",
+      "QuestionnaireResponse.item"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
@@ -67,6 +103,18 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia": [
+      "QuestionnaireResponse.item.answer"
+    ],
+    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia": [
+      "QuestionnaireResponse.item"
+    ],
+    "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/questionnaire-url": [
+      "QuestionnaireResponse.questionnaire"
+    ],
+    "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/questionnaire-url": [
+      "QuestionnaireResponse.questionnaire"
     ]
   }
 }

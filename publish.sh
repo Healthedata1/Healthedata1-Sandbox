@@ -2,7 +2,7 @@
 # exit when any command fails
 set -e
 NA='http://tx.fhir.org'
-while getopts twoplisvqdu: option
+while getopts twoplisvqdru: option
 do
  case "${option}"
  in
@@ -17,6 +17,7 @@ do
  v) VIEW_OUTPUT=1;;
  q) VIEW_QA=1;;
  d) IN_DOCS=1;;
+ r) CLEAR_JSON=1;;
  esac
 done
 echo "================================================================="
@@ -34,6 +35,7 @@ echo '-s parameter for running only sushi = ' $SUSHI
 echo '-v view ig home page  in current browser = ./[output|docs]/index.html  = ' $VIEW_OUTPUT
 echo '-q view qa output in current browser = ./[output|docs]/qa.html  = ' $VIEW_QA
 echo '-d flag if output in "docs" folder = ' $IN_DOCS
+echo '-r remove all generated json files = ' $CLEAR_JSON
 echo ' current directory =' $PWD
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
@@ -41,6 +43,12 @@ find $PWD -name '.DS_Store' -type f -delete
 sleep 1
 
 inpath=input
+
+if [[ $CLEAR_JSON ]]; then
+echo 'remove all generated files in /examples and /resources folders'
+rm  -f $inpath/resources/*.* $inpath/examples/*.*
+fi
+
 if ls $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in resources-yaml directory to json files"

@@ -1,5 +1,12 @@
 [
   {
+    "id": "questionnaire-url",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/questionnaire-url",
+    "version": "0.1.0",
+    "name": "QuestionnaireUrl"
+  },
+  {
     "id": "us-core-survey-codes",
     "type": "ValueSet",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-survey-codes",
@@ -40,5 +47,12 @@
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
     "version": "0.1.0",
     "name": "USCoreProblemsHealthConcerns"
+  },
+  {
+    "id": "us-core-questionnaireresponse",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse",
+    "version": "0.1.0",
+    "name": "USCoreQuestionnaireResponse"
   }
 ]

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="10-minute-apgar-score-panel"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="10 Minute Apgar Score Panel Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This example of a US Core Survey Observation Profile illustrates its use to directly capture surveys assessments as a panel of observations. It is not derived from a FHIR QuestionnaireResponse."/>
+    </extension>
+    <profile value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "10-minute-apgar-score-panel" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-observation-sdoh-assessment.html">US Core Observation SDOH Assessment Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Survey <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html">Observation Category Codes</a>#survey)</span></p><p><b>code</b>: 10 minute Apgar Score <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#9271-8; <a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#169922007 "Apgar at 10 minutes")</span></p><p><b>subject</b>: <a href="Patient/infant-example">Patient/infant-example</a></p><p><b>effective</b>: 2016-05-18 10:33:22+0000</p><p><b>performer</b>: <a href="Practitioner/practitioner-1">Practitioner/practitioner-1: Ronald Bone</a></p><p><b>hasMember</b>: </p><ul><li><a href="Observation-10-minute-apgar-score.html">Observation/10-minute-apgar-score</a></li><li><a href="Observation-10-minute-apgar-respiratory-effort.html">Observation/10-minute-apgar-respiratory-effort</a></li><li><a href="Observation-10-minute-apgar-muscle-tone.html">Observation/10-minute-apgar-muscle-tone</a></li><li><a href="Observation-10-minute-apgar-reflex-irritability.html">Observation/10-minute-apgar-reflex-irritability</a></li><li><a href="Observation-10-minute-apgar-color.html">Observation/10-minute-apgar-color</a></li><li><a href="Observation-10-minute-apgar-heart-rate.html">Observation/10-minute-apgar-heart-rate</a></li></ul></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="survey"/>
+      <display value="Survey"/>
+    </coding>
+    <text value="Survey"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="9271-8"/>
+      <display value="10 minute Apgar Score"/>
+    </coding>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="169922007"/>
+      <display value="Apgar at 10 minutes"/>
+    </coding>
+    <text value="10 minute Apgar Score"/>
+  </code>
+  <subject>
+    <reference value="Patient/infant-example"/>
+  </subject>
+  <effectiveDateTime value="2016-05-18T22:33:22Z"/>
+  <performer>
+    <reference value="Practitioner/practitioner-1"/>
+    <display value="Ronald Bone"/>
+  </performer>
+  <hasMember>
+    <reference value="Observation/10-minute-apgar-score"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/10-minute-apgar-respiratory-effort"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/10-minute-apgar-muscle-tone"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/10-minute-apgar-reflex-irritability"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/10-minute-apgar-color"/>
+  </hasMember>
+  <hasMember>
+    <reference value="Observation/10-minute-apgar-heart-rate"/>
+  </hasMember>
+</Observation>
