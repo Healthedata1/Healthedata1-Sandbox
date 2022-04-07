@@ -13,7 +13,7 @@
      fhir:Element.extension [
        fhir:index 0;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-name" ];
-       fhir:Extension.valueString [ fhir:value "Prapare Panel Example 93043-8" ]
+       fhir:Extension.valueString [ fhir:value "PRAPARE Panel Example 93043-8" ]
      ], [
        fhir:index 1;
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/instance-description" ];

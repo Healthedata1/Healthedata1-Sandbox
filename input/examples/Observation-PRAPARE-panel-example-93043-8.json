@@ -5,7 +5,7 @@
         "extension": [
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-name",
-                "valueString": "Prapare Panel Example 93043-8"
+                "valueString": "PRAPARE Panel Example 93043-8"
             },
             {
                 "url": "http://hl7.org/fhir/StructureDefinition/instance-description",

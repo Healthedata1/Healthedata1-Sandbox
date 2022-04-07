@@ -11,6 +11,9 @@ definition:
             nameUrl: index.html
             title: Home
         -   generation: markdown
+            nameUrl: changes.html
+            title: Changes
+        -   generation: markdown
             nameUrl: downloads.html
             title: Downloads
         -   generation: markdown
@@ -508,7 +511,7 @@ definition:
     -   description: This is a Prapare Panel Example 93043-8 (Personal characteristics)
             for the *US Core Screening Response Observation Profile*
         exampleCanonical: http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment
-        name: Prapare Panel Example 93043-8
+        name: PRAPARE Panel Example 93043-8
         reference:
             reference: Observation/PRAPARE-panel-example-93043-8
     -   description: '''An example of an SDC QuestionnaireResponse that represents

@@ -4,7 +4,7 @@
   <id value="PRAPARE-panel-example-93043-8"/>
   <meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
-      <valueString value="Prapare Panel Example 93043-8"/>
+      <valueString value="PRAPARE Panel Example 93043-8"/>
     </extension>
     <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
       <valueMarkdown value="This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Screening Response Observation Profile*"/>

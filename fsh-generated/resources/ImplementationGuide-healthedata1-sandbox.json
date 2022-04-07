@@ -550,7 +550,7 @@
           "reference": "Observation/PRAPARE-panel-example-93043-8"
         },
         "description": "This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Screening Response Observation Profile*",
-        "name": "Prapare Panel Example 93043-8",
+        "name": "PRAPARE Panel Example 93043-8",
         "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
       },
       {
@@ -594,6 +594,11 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changes",
           "generation": "markdown"
         },
         {

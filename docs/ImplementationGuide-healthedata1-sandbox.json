@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-03-29T19:31:41-07:00",
+  "date": "2022-04-07T00:12:06-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -407,6 +407,19 @@
           {
             "url": "code",
             "valueString": "propagate-status"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "excludelogbinaryformat"
           },
           {
             "url": "value",
@@ -1323,7 +1336,7 @@
         "reference": {
           "reference": "Observation/PRAPARE-panel-example-93043-8"
         },
-        "name": "Prapare Panel Example 93043-8",
+        "name": "PRAPARE Panel Example 93043-8",
         "description": "This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Screening Response Observation Profile*",
         "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
       },
@@ -1392,6 +1405,11 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changes",
           "generation": "markdown"
         },
         {

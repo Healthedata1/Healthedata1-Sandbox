@@ -174,14 +174,14 @@ parameters:==="
       echo "================================================================="
       echo === run most recent version of the igpublisher with watch on ===
       echo "================================================================="
-      java -Xmx2G -jar ${path} -ig ig.ini -watch -tx $NA
+      java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
 
     else
       echo "================================================================="
       echo "===run igpublisher just once \(no watch option\)==="
       echo "================================================================="
       echo java -jar ${path} -ig ig.ini -tx $NA
-      java -Xmx2G -jar ${path} -ig ig.ini -tx $NA
+      java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
 
     fi
 
@@ -208,14 +208,14 @@ parameters:==="
       echo "================================================================="
       echo === run most recent version of the igpublisher with watch on ===
       echo "================================================================="
-      java -Xmx2G -jar ${path} -ig ig.ini -watch -tx $NA
+      java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
 
     else
       echo "================================================================="
       echo "===run igpublisher just once \(no watch option\)==="
       echo "================================================================="
       echo java -jar ${path} -ig ig.ini -tx $NA
-      java -Xmx2G -jar ${path} -ig ig.ini -tx $NA
+      java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
     fi
 
   fi

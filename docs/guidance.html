@@ -39,8 +39,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"3"}
-    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
         <!-- Placeholder for child template header declarations -->
@@ -87,6 +87,9 @@
   </li>
   <li>
     <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
   </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
@@ -163,6 +166,106 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </code></pre></div></div>
 
 <ul><li>US Core Encounter Diagnosis Profile</li><li>US Core Observation SDOH Assessment Profile</li><li>US Core Observation Survey Profile</li><li>US Core Problems and Health Concerns Profile</li><li>US Core Questionnaire Response Profile</li></ul>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">types</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nv">types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">uniq</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="p">%}</span>
+  &lt;strong&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="p">}}</span>&lt;/strong&gt;
+  &lt;ul&gt;
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="p">%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">-%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">-%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash2</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">basename</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd2</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">%}</span>
+            <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">-%}</span>
+            <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd2</span><span class="p">.</span><span class="nv">basename</span><span class="p">%}</span>
+             <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">-%}</span>
+             <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+        <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="p">-%}</span>
+            &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="p">-%}</span>
+            &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>(Parent)&lt;/a&gt;
+                &lt;ul&gt;
+                <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash3</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+                  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+                  <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd3</span><span class="p">.</span><span class="nv">basename</span><span class="w"> </span><span class="p">%}</span>
+                    &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd3</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd3</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>(child)&lt;/a&gt;&lt;/li&gt;
+                  <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+                <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+                &lt;/ul&gt;
+            &lt;/li&gt;
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+  &lt;/ul&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+
+</code></pre></div></div>
+
+<p><strong></strong></p>
+<ul></ul>
+
+<p><strong>Condition</strong></p>
+<ul>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-encounter-diagnosis.html">US Core Encounter Diagnosis Profile</a></li>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-problems-and-health-concerns.html">US Core Problems and Health Concerns Profile</a></li></ul>
+
+<p><strong>Extension</strong></p>
+<ul>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-questionnaire-url.html">Questionnaire URL Extension</a></li></ul>
+
+<p><strong>Observation</strong></p>
+<ul>
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-observation-survey.html">US Core Observation Survey Profile(Parent)</a>
+                <ul>
+                
+                    <li><a href="StructureDefinition-us-core-observation-sdoh-assessment.html">US Core Observation SDOH Assessment Profile(child)</a></li>
+                  
+                
+                
+                
+                
+                
+                </ul>
+            </li></ul>
+
+<p><strong>QuestionnaireResponse</strong></p>
+<ul>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response Profile</a></li></ul>
 
 <h3 id="list-highlighting">List highlighting</h3>
 
@@ -271,7 +374,7 @@ Country: US
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Mar 29, 2022 19:31-0700">2022-03-29</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 7, 2022 00:12-0700">2022-04-07</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
