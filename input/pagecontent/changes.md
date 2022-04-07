@@ -18,3 +18,6 @@
  **The January 2022 Ballot**
 
 This Ballot addresses the following issues:
+
+ 1. foo
+ 1. bar
