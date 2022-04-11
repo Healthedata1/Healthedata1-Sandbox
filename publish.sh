@@ -52,7 +52,7 @@ fi
 if ls $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in resources-yaml directory to json files"
-echo "Python 3.7 and PyYAML, json and sys modules are required"
+echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
 for yaml_file in $inpath/resources-yaml/*.yml
 do
 echo $yaml_file
@@ -66,7 +66,7 @@ fi
 if ls $inpath/examples-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in examples-yaml directory to examples/json files"
-echo "Python 3.7 and PyYAML, json and sys modules are required"
+echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
 for yaml_file in $inpath/examples-yaml/*.yml
 do
 echo $yaml_file
@@ -80,7 +80,7 @@ fi
 if ls $inpath/includes-yaml/*.yml; then
 echo "======================================================================="
 echo "convert all yml files in includes-yaml directory to json files"
-echo "Python 3.7 and PyYAML, json and sys modules are required"
+echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
 for yaml_file in $inpath/includes-yaml/*.yml
 do
 echo $yaml_file
@@ -143,12 +143,12 @@ if [[ $SUSHI ]]; then
   inpath=fsh-generated/resources
   echo "========================================================================"
   echo "convert ig.json to ig.yml and copy to input/data"
-  echo "Python 3.7 and PyYAML, json and sys modules are required"
+  echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
   for ig_json in $inpath/ImplementationGuide*.json
     do
     echo "========== ig_json = $ig_json =========="
     ig_yaml='input/data/ig.yml'
-    python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
+    python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $ig_json > $ig_yaml
     echo "========== ig_yaml = $ig_yaml =========="
     done
 
@@ -195,12 +195,12 @@ parameters:==="
     inpath=fsh-generated/resources
     echo "========================================================================"
     echo "convert ig.json to ig.yml and copy to input/data"
-    echo "Python 3.7 and PyYAML, json and sys modules are required"
+    echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
     for ig_json in $inpath/ImplementationGuide*.json
       do
       echo "========== ig_json = $ig_json =========="
       ig_yaml='input/data/ig.yml'
-      python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
+      python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $ig_json > $ig_yaml
       echo "========== ig_yaml = $ig_yaml =========="
       done
 
