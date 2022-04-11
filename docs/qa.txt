@@ -1,16 +1,16 @@
 ﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 349, warn = 204, info = 6
+err = 349, warn = 202, info = 6
 IG Publisher Version: 1.1.114
-Generated Thu Apr 07 00:12:26 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+Generated Mon Apr 11 13:14:53 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
  Build Errors : 113 / 0 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-color : 2 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-heart-rate : 2 / 1 / 1
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-muscle-tone : 4 / 2 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-muscle-tone : 4 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-reflex-irritability : 4 / 1 / 1
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-respiratory-effort : 4 / 2 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-respiratory-effort : 4 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-score : 3 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-10-minute-apgar-score-panel : 2 / 1 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/Observation-AHC-HRSN-item-example-44250-9 : 5 / 3 / 1
@@ -82,7 +82,7 @@ ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minu
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-heart-rate.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1002: The link 'Patient/infant-example' for "Patient/infant-example" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-heart-rate.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1135: The link 'Practitioner/practitioner-1' for "Practitioner/practitioner-1: Ronald Bone" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-muscle-tone.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1048: The link 'Practitioner/practitioner-1' for "Practitioner/practitioner-1: Ronald Bone" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-reflex-irritability.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1073: The link 'Practitioner/practitioner-1' for "Practitioner/practitioner-1: Ronald Bone" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-reflex-irritability.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1059: The link 'Practitioner/practitioner-1' for "Practitioner/practitioner-1: Ronald Bone" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-respiratory-effort.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1069: The link 'Practitioner/practitioner-1' for "Practitioner/practitioner-1: Ronald Bone" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-score-panel.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1054: The link 'Patient/infant-example' for "Patient/infant-example" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-10-minute-apgar-score-panel.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1187: The link 'Practitioner/practitioner-1' for "Practitioner/practitioner-1: Ronald Bone" cannot be resolved
@@ -205,7 +205,6 @@ ERROR: Observation: Unrecognised property '@reference'
 ERROR: Observation/10-minute-apgar-muscle-tone: Observation: Observation.subject: minimum required = 1, but only found 0 (from http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment)
 WARNING: Observation/10-minute-apgar-muscle-tone: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator
 ERROR: Observation/10-minute-apgar-muscle-tone: Observation.performer[0]: Unable to resolve resource 'Practitioner/practitioner-1'
-WARNING: Observation/10-minute-apgar-muscle-tone: Observation.value.ofType(CodeableConcept).coding[0].display: value should not start or finish with whitespace 'Active...motion '
 == input/examples/Observation-10-minute-apgar-reflex-irritability.json ==
 ERROR: Observation.subject: The property subject must be an Object, not null (at Observation.subject)
 ERROR: Observation: Unrecognised property '@reference'
@@ -218,7 +217,6 @@ ERROR: Observation: Unrecognised property '@reference'
 ERROR: Observation/10-minute-apgar-respiratory-effort: Observation: Observation.subject: minimum required = 1, but only found 0 (from http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment)
 WARNING: Observation/10-minute-apgar-respiratory-effort: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator
 ERROR: Observation/10-minute-apgar-respiratory-effort: Observation.performer[0]: Unable to resolve resource 'Practitioner/practitioner-1'
-WARNING: Observation/10-minute-apgar-respiratory-effort: Observation.value.ofType(CodeableConcept).coding[0].display: value should not start or finish with whitespace 'Good,...breathing    '
 == input/examples/Observation-10-minute-apgar-score.json ==
 ERROR: Observation.value[x].code: Error parsing JSON: the primitive value must be a string
 WARNING: Observation/10-minute-apgar-score: Observation.code: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-common-sdoh-assessments not found by validator

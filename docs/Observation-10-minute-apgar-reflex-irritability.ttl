@@ -27,7 +27,7 @@
   ];
   fhir:DomainResource.text [
      fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"10-minute-apgar-reflex-irritability\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-observation-sdoh-assessment.html\">US Core Observation SDOH Assessment Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Survey <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#survey)</span></p><p><b>code</b>: Apgar response to stimulus score <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#32404-6 \"10 minute Apgar Reflex Irritability\")</span></p><p><b>effective</b>: 2016-05-18 10:33:22+0000</p><p><b>performer</b>: <a href=\"Practitioner/practitioner-1\">Practitioner/practitioner-1: Ronald Bone</a></p><p><b>value</b>: 2. Grimace and pulling away, cough, or sneeze during suctioning <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA6721-0 \"Grimace and pulling away, cough, or sneeze during suctioning\")</span></p></div>"
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"10-minute-apgar-reflex-irritability\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-us-core-observation-sdoh-assessment.html\">US Core Observation SDOH Assessment Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Survey <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#survey)</span></p><p><b>code</b>: Apgar response to stimulus score <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#32404-6 \"10 minute Apgar Reflex Irritability\")</span></p><p><b>effective</b>: 2016-05-18</p><p><b>performer</b>: <a href=\"Practitioner/practitioner-1\">Practitioner/practitioner-1: Ronald Bone</a></p><p><b>value</b>: 2. Grimace and pulling away, cough, or sneeze during suctioning <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA6721-0 \"Grimace and pulling away, cough, or sneeze during suctioning\")</span></p></div>"
   ];
   fhir:Observation.status [ fhir:value "final"];
   fhir:Observation.category [
@@ -50,7 +50,7 @@
      ];
      fhir:CodeableConcept.text [ fhir:value "Apgar response to stimulus score" ]
   ];
-  fhir:Observation.effectiveDateTime [ fhir:value "2016-05-18T22:33:22Z"^^xsd:dateTime];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016-05-18"^^xsd:date];
   fhir:Observation.performer [
      fhir:index 0;
      fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Practitioner/practitioner-1>;

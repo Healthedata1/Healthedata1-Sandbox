@@ -54,7 +54,7 @@
      fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Patient/infant-example>;
      fhir:Reference.reference [ fhir:value "Patient/infant-example" ]
   ];
-  fhir:Observation.effectiveDateTime [ fhir:value "2016-05-18T22:33:22Z"^^xsd:dateTime];
+  fhir:Observation.effectiveDateTime [ fhir:value "2016-05-18T22:33:22+00:00"^^xsd:dateTime];
   fhir:Observation.performer [
      fhir:index 0;
      fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Practitioner/practitioner-1>;

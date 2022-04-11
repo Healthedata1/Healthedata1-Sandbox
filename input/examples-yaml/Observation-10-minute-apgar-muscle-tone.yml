@@ -31,7 +31,7 @@ valueCodeableConcept:
           valueDecimal: 2
       system: 'http://loinc.org'
       code: LA6715-2
-      display: 'Active motion '
+      display: 'Active motion'
   text: 2. Active motion
 subject: null
 reference: Patient/infant-example

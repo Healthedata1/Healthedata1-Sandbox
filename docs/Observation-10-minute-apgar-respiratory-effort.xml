@@ -12,7 +12,7 @@
     <profile value="http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "10-minute-apgar-respiratory-effort" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-observation-sdoh-assessment.html">US Core Observation SDOH Assessment Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Survey <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html">Observation Category Codes</a>#survey)</span></p><p><b>code</b>: Apgar respiratory effort score <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#32405-3 "10 minute Apgar Respiratory effort")</span></p><p><b>effective</b>: 2016-05-18 10:33:22+0000</p><p><b>performer</b>: <a href="Practitioner/practitioner-1">Practitioner/practitioner-1: Ronald Bone</a></p><p><b>value</b>: 2. Good, strong cry; normal rate and effort of breathing <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA6727-7 "Good, strong cry; normal rate and effort of breathing    ")</span></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "10-minute-apgar-respiratory-effort" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-observation-sdoh-assessment.html">US Core Observation SDOH Assessment Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Survey <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html">Observation Category Codes</a>#survey)</span></p><p><b>code</b>: Apgar respiratory effort score <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#32405-3 "10 minute Apgar Respiratory effort")</span></p><p><b>effective</b>: 2016-05-18 10:33:22+0000</p><p><b>performer</b>: <a href="Practitioner/practitioner-1">Practitioner/practitioner-1: Ronald Bone</a></p><p><b>value</b>: 2. Good, strong cry; normal rate and effort of breathing <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA6727-7 "Good, strong cry; normal rate and effort of breathing")</span></p></div>
   </text>
   <status value="final"/>
   <category>
@@ -43,7 +43,7 @@
       </extension>
       <system value="http://loinc.org"/>
       <code value="LA6727-7"/>
-      <display value="Good, strong cry; normal rate and effort of breathing    "/>
+      <display value="Good, strong cry; normal rate and effort of breathing"/>
     </coding>
     <text value="2. Good, strong cry; normal rate and effort of breathing"/>
   </valueCodeableConcept>
