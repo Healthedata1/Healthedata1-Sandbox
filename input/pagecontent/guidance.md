@@ -1,4 +1,25 @@
-### Creat Pretty List with Liquid
+### Create Pretty List with Liquid
+
+<!-- if site.users = "Tobi", "Laura", "Tetsuro", "Adam" -->
+
+### My new stuff
+
+
+{% for stuff in site.data.new_stuff %}
+  {%- for new in site.data.new_stuff -%}
+     {%- if stuff == new -%}
+     {%- assign new_stuff = true -%}
+     {%- break -%}
+     {%- endif -%}
+  {%- endfor -%}
+{%- if new_stuff -%}  
+- <span class="bg-success" markdown="1">"{{stuff}}"</span><!-- new-content -->
+{%- else -%}
+- {{ stuff }}
+{% endif %}
+{% endfor %}
+
+---
 
 {% raw %}
 ~~~liquid

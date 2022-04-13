@@ -83,6 +83,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/us-core-imaging-codes"
+        },
+        "description": "This value set includes all LOINC values whose CLASS is \"RAD\" in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
+        "exampleBoolean": false,
+        "name": "US Core Imaging Codes"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/us-core-survey-codes"
         },
         "description": "This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
@@ -607,6 +615,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "examples.html",
+          "title": "Examples",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "guidance.html",
           "title": "Guidance",
           "generation": "markdown"
@@ -624,7 +637,7 @@
       },
       {
         "code": "show-inherited-invariants",
-        "value": "false"
+        "value": "true"
       },
       {
         "code": "usage-stats-opt-out",

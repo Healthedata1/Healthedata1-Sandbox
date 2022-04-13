@@ -1,0 +1,1509 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "healthedata1-sandbox",
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HealthEData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a Healthedata1 sandbox for creation of resources and examples</p>\n</div></div>"
+  },
+  "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
+  "version": "0.1.0",
+  "name": "HealthEData_1Sandbox",
+  "title": "Health eData 1 Sandbox",
+  "status": "active",
+  "date": "2022-04-13T07:44:32-07:00",
+  "publisher": "Health eData Inc",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:ehaas@healthedatainc.com"
+        }
+      ]
+    }
+  ],
+  "description": "This is a Healthedata1 sandbox for creation of resources and examples",
+  "packageId": "healthedata1-sandbox",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "id": "hl7_fhir_uv_sdc",
+      "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
+      "packageId": "hl7.fhir.uv.sdc",
+      "version": "3.0.0"
+    }
+  ],
+  "definition": {
+    "extension": [
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "copyrightyear"
+          },
+          {
+            "url": "value",
+            "valueString": "2020+"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "releaselabel"
+          },
+          {
+            "url": "value",
+            "valueString": "CI Build"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "show-inherited-invariants"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "usage-stats-opt-out"
+          },
+          {
+            "url": "value",
+            "valueString": "false"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-output"
+          },
+          {
+            "url": "value",
+            "valueString": "docs"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "excludexml"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "escludejsn"
+          },
+          {
+            "url": "value",
+            "valueString": "false"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "excludettl"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "excludemap"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "excludeexample"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "autoload-resources"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-liquid"
+          },
+          {
+            "url": "value",
+            "valueString": "template/liquid"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-liquid"
+          },
+          {
+            "url": "value",
+            "valueString": "input/liquid"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-qa"
+          },
+          {
+            "url": "value",
+            "valueString": "temp/qa"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-temp"
+          },
+          {
+            "url": "value",
+            "valueString": "temp/pages"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-suppressed-warnings"
+          },
+          {
+            "url": "value",
+            "valueString": "input/ignoreWarnings.txt"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-history"
+          },
+          {
+            "url": "value",
+            "valueString": "http://www.fhir.org/guides/healthedata1-sandbox/history.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "template-html"
+          },
+          {
+            "url": "value",
+            "valueString": "template-page.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "template-md"
+          },
+          {
+            "url": "value",
+            "valueString": "template-page-md.html"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-contact"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-context"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-copyright"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-jurisdiction"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-license"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-publisher"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "apply-version"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "active-tables"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "fmm-definition"
+          },
+          {
+            "url": "value",
+            "valueString": "http://hl7.org/fhir/versions.html#maturity"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "propagate-status"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "excludelogbinaryformat"
+          },
+          {
+            "url": "value",
+            "valueString": "true"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      }
+    ],
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/questionnaire-url"
+        },
+        "name": "Questionnaire URL Extension",
+        "description": "The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR [Questionnaire](https://www.hl7.org/fhir/questionnaire.html), otherwise the [canonical url](https://www.hl7.org/fhir/references.html#canonical) for the FHIR Questionnaire is used.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/us-core-encounter-diagnosis"
+        },
+        "name": "US Core Encounter Diagnosis Profile",
+        "description": "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.fhirVersion: 4.0.1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/us-core-observation-survey"
+        },
+        "name": "US Core Observation Survey Profile",
+        "description": "Profile for Observations to record responses from  a survey or questionnaire.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/us-core-problems-and-health-concerns"
+        },
+        "name": "US Core Problems and Health Concerns Profile",
+        "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/us-core-questionnaireresponse"
+        },
+        "name": "US Core Questionnaire Response Profile",
+        "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:resource"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/us-core-observation-sdoh-assessment"
+        },
+        "name": "US Core Observation SDOH Assessment Profile",
+        "description": "Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/us-core-imaging-codes"
+        },
+        "name": "US Core Imaging Codes",
+        "description": "This value set includes all LOINC values whose CLASS is \"RAD\" in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "ValueSet"
+          }
+        ],
+        "reference": {
+          "reference": "ValueSet/us-core-survey-codes"
+        },
+        "name": "US Core Survey Codes",
+        "description": "This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-color"
+        },
+        "name": "10 minute Apgar Color Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-heart-rate"
+        },
+        "name": "10 minute Apgar Heart Rate Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-muscle-tone"
+        },
+        "name": "10 minute Apgar Muscle Tone Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-reflex-irritability"
+        },
+        "name": "10 minute Apgar Reflex Irritability Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse..",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-respiratory-effort"
+        },
+        "name": "10 minute Apgar Respiratory effort Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-score-panel"
+        },
+        "name": "10 Minute Apgar Score Panel Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture surveys assessments as a panel of observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/10-minute-apgar-score"
+        },
+        "name": "10 Minute Apgar Score Example",
+        "description": "This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-44250-9"
+        },
+        "name": "Ahc-Hrsn Item Example 44250-9",
+        "description": "This is a Ahc-Hrsn Item Example 44250-9 (Little interest or pleasure in doing things?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-44255-8"
+        },
+        "name": "Ahc-Hrsn Item Example 44255-8",
+        "description": "This is a Ahc-Hrsn Item Example 44255-8 (Feeling down, depressed, or hopeless?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-68516-4"
+        },
+        "name": "Ahc-Hrsn Item Example 68516-4",
+        "description": "This is a Ahc-Hrsn Item Example 68516-4 (On average, how many minutes did you usually spend exercising at this level on one of those days?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-68517-2"
+        },
+        "name": "Ahc-Hrsn Item Example 68517-2",
+        "description": "This is a Ahc-Hrsn Item Example 68517-2 (How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-68524-8"
+        },
+        "name": "Ahc-Hrsn Item Example 68524-8",
+        "description": "This is a Ahc-Hrsn Item Example 68524-8 (How many times in the past year have you used illegal drugs?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-69858-9"
+        },
+        "name": "Ahc-Hrsn Item Example 69858-9",
+        "description": "This is a Ahc-Hrsn Item Example 69858-9 (Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-69861-3"
+        },
+        "name": "Ahc-Hrsn Item Example 69861-3",
+        "description": "This is a Ahc-Hrsn Item Example 69861-3 (Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a physician's office or shopping?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-76513-1"
+        },
+        "name": "Ahc-Hrsn Item Example 76513-1",
+        "description": "This is a Ahc-Hrsn Item Example 76513-1 (How hard is it for you to pay for the very basics like food, housing, medical care, and heating?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-89555-7"
+        },
+        "name": "Ahc-Hrsn Item Example 89555-7",
+        "description": "This is a Ahc-Hrsn Item Example 89555-7 (In the last 30 days, other than the activities you did for work, on average, how many days per week did you engage in moderate exercise (like walking fast, running, jogging, dancing, swimming, biking, or other similar activities)?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-93038-8"
+        },
+        "name": "Ahc-Hrsn Item Example 93038-8",
+        "description": "This is a Ahc-Hrsn Item Example 93038-8 (Stress means a situation in which a person feels tense, restless, nervous, or anxious, or is unable to sleep at night because his or her mind is troubled all the time.  Do you feel this kind of stress these days?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-93159-2"
+        },
+        "name": "Ahc-Hrsn Item Example 93159-2",
+        "description": "This is a Ahc-Hrsn Item Example 93159-2 (How often do you feel lonely or isolated from those around you?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-95530-2"
+        },
+        "name": "Ahc-Hrsn Item Example 95530-2",
+        "description": "This is a Ahc-Hrsn Item Example 95530-2 (How many times in the past year have you used prescription drugs for non-medical reasons?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-96780-2"
+        },
+        "name": "Ahc-Hrsn Item Example 96780-2",
+        "description": "This is a Ahc-Hrsn Item Example 96780-2 (Do you want help finding or keeping work or a job?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-96781-0"
+        },
+        "name": "Ahc-Hrsn Item Example 96781-0",
+        "description": "This is a Ahc-Hrsn Item Example 96781-0 (If for any reason you need help with day-to-day activities such as bathing, preparing meals, shopping, managing finances, etc., do you get the help you need?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-96782-8"
+        },
+        "name": "Ahc-Hrsn Item Example 96782-8",
+        "description": "This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-96842-0"
+        },
+        "name": "Ahc-Hrsn Item Example 96842-0",
+        "description": "This is a Ahc-Hrsn Item Example 96842-0 (How often have you used any tobacco product in past 12 months?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-item-example-97027-7"
+        },
+        "name": "Ahc-Hrsn Item Example 97027-7",
+        "description": "This is a Ahc-Hrsn Item Example 97027-7 (Do you speak a language other than English at home?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/AHC-HRSN-panel-example-96777-8"
+        },
+        "name": "Ahc-Hrsn Panel Example 96777-8",
+        "description": "This is a Ahc-Hrsn Panel Example 96777-8 (Accountable health communities (AHC) health-related social needs screening (HRSN) tool) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/HVS-item-example-88122-7"
+        },
+        "name": "Hvs Item Example 88122-7",
+        "description": "This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/HVS-item-example-88123-5"
+        },
+        "name": "Hvs Item Example 88123-5",
+        "description": "This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn't last, and (I/we) didn't have money to get more.) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/HVS-item-example-88124-3"
+        },
+        "name": "Hvs Item Example 88124-3",
+        "description": "This is a Hvs Item Example 88124-3 (Food insecurity risk) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/HVS-panel-example-88121-9"
+        },
+        "name": "Hvs Panel Example 88121-9",
+        "description": "This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-54899-0"
+        },
+        "name": "Prapare Item Example 54899-0",
+        "description": "This is a Prapare Item Example 54899-0 (Preferred language) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-56051-6"
+        },
+        "name": "Prapare Item Example 56051-6",
+        "description": "This is a Prapare Item Example 56051-6 (Do you consider yourself Hispanic/Latino?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-56799-0"
+        },
+        "name": "Prapare Item Example 56799-0",
+        "description": "This is a Prapare Item Example 56799-0 (Address) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-63512-8"
+        },
+        "name": "Prapare Item Example 63512-8",
+        "description": "This is a Prapare Item Example 63512-8 (How many people are living or staying at this address?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-63586-2"
+        },
+        "name": "Prapare Item Example 63586-2",
+        "description": "This is a Prapare Item Example 63586-2 (What was your best estimate of the total income of all family members from all sources, before taxes, in last year?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-67875-5"
+        },
+        "name": "Prapare Item Example 67875-5",
+        "description": "This is a Prapare Item Example 67875-5 (Employment status current) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-71802-3"
+        },
+        "name": "Prapare Item Example 71802-3",
+        "description": "This is a Prapare Item Example 71802-3 (Housing status) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-76437-3"
+        },
+        "name": "Prapare Item Example 76437-3",
+        "description": "This is a Prapare Item Example 76437-3 (Primary insurance) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-76501-6"
+        },
+        "name": "Prapare Item Example 76501-6",
+        "description": "This is a Prapare Item Example 76501-6 (Within the last year, have you been afraid of your partner or ex-partner?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-82589-3"
+        },
+        "name": "Prapare Item Example 82589-3",
+        "description": "This is a Prapare Item Example 82589-3 (Highest level of educ) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93026-3"
+        },
+        "name": "Prapare Item Example 93026-3",
+        "description": "This is a Prapare Item Example 93026-3 (Do you feel physically and emotionally safe where you currently live?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93027-1"
+        },
+        "name": "Prapare Item Example 93027-1",
+        "description": "This is a Prapare Item Example 93027-1 (Are you a refugee?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93028-9"
+        },
+        "name": "Prapare Item Example 93028-9",
+        "description": "This is a Prapare Item Example 93028-9 (In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93029-7"
+        },
+        "name": "Prapare Item Example 93029-7",
+        "description": "This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93030-5"
+        },
+        "name": "Prapare Item Example 93030-5",
+        "description": "This is a Prapare Item Example 93030-5 (Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93033-9"
+        },
+        "name": "Prapare Item Example 93033-9",
+        "description": "This is a Prapare Item Example 93033-9 (Are you worried about losing your housing?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93034-7"
+        },
+        "name": "Prapare Item Example 93034-7",
+        "description": "This is a Prapare Item Example 93034-7 (Have you been discharged from the armed forces of the United States?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93035-4"
+        },
+        "name": "Prapare Item Example 93035-4",
+        "description": "This is a Prapare Item Example 93035-4 (At any point in the past 2 years, has season or migrant farm work been your or your family's main source of income?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-item-example-93038-8"
+        },
+        "name": "Prapare Item Example 93038-8",
+        "description": "This is a Prapare Item Example 93038-8 (Stress is when someone feels tense, nervous, anxious or can't sleep at night because their mind is troubled. How stressed are you?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer0"
+        },
+        "name": "Prapare Multiselect-Item Example 32624-9-Answer0",
+        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-32624-9-answer1"
+        },
+        "name": "Prapare Multiselect-Item Example 32624-9-Answer1",
+        "description": "This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer0"
+        },
+        "name": "Prapare Multiselect-Item Example 93031-3-Answer0",
+        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-multiselect-item-example-93031-3-answer1"
+        },
+        "name": "Prapare Multiselect-Item Example 93031-3-Answer1",
+        "description": "This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93025-5"
+        },
+        "name": "Prapare Panel Example 93025-5",
+        "description": "This is a Prapare Panel Example 93025-5 (Protocol for Responding to and Assessing Patients' Assets, Risks, and Experiences [PRAPARE]) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93039-6"
+        },
+        "name": "Prapare Panel Example 93039-6",
+        "description": "This is a Prapare Panel Example 93039-6 (Optional additional questions) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93040-4"
+        },
+        "name": "Prapare Panel Example 93040-4",
+        "description": "This is a Prapare Panel Example 93040-4 (Social and emotional health) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93041-2"
+        },
+        "name": "Prapare Panel Example 93041-2",
+        "description": "This is a Prapare Panel Example 93041-2 (Money and resources) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93042-0"
+        },
+        "name": "Prapare Panel Example 93042-0",
+        "description": "This is a Prapare Panel Example 93042-0 (Family and home) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Observation"
+          }
+        ],
+        "reference": {
+          "reference": "Observation/PRAPARE-panel-example-93043-8"
+        },
+        "name": "PRAPARE Panel Example 93043-8",
+        "description": "This is a Prapare Panel Example 93043-8 (Personal characteristics) for the *US Core Screening Response Observation Profile*",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/AHC-HRSN-screening-example"
+        },
+        "name": "AHC HRSN Screening Example",
+        "description": "'An example of an SDC QuestionnaireResponse that represents questions and selected answers from the Accountable health communities (AHC) health-related social needs screening (HRSN) tool in LOINC (code  96777-8). The example is generated using the LHC-Forms SDC Questionnaire App.'",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/PRAPARE-example"
+        },
+        "name": "PRAPARE Example",
+        "description": "'An example of an US Core QuestionnaireResponse that represents questions and selected answers from the PRAPARE questionnaire represented in LOINC (code 93025-5). The example is generated using the LHC-Forms SDC Questionnaire App.'",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/glascow-coma-score"
+        },
+        "name": "Glascow Coma Score Example",
+        "description": "'This example of a US Core QuestionnaireResponse illustrate using Questionnaire as a *stand alone* resource. It does not point to the definition of the questions in  a FHIR Questionnaire, but represents the answers from a non FHIR survey instrument (in this case a pdf).'",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "QuestionnaireResponse"
+          }
+        ],
+        "reference": {
+          "reference": "QuestionnaireResponse/hunger-vital-sign-example"
+        },
+        "name": "Hunger Vital Sign [HVS] Example",
+        "description": "'An example of an SDC QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire represented in LOINC (code 88122-7). The example is generated using the LHC-Forms SDC Questionnaire App.'",
+        "exampleCanonical": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changes",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "examples.html",
+          "title": "Examples",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "path-resource",
+        "value": "input/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "fsh-generated/resources"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/intro-notes"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/capabilities"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/examples"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/extensions"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/models"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/operations"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/profiles"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/testing"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/history"
+      },
+      {
+        "code": "path-pages",
+        "value": "template/config"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/images"
+      },
+      {
+        "code": "path-tx-cache",
+        "value": "input-cache/txcache"
+      }
+    ]
+  }
+}

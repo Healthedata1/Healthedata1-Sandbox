@@ -1,0 +1,65 @@
+[
+  {
+    "id": "questionnaire-url",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/argonaut/argo-write/StructureDefinition/questionnaire-url",
+    "version": "0.1.0",
+    "name": "QuestionnaireUrl"
+  },
+  {
+    "id": "us-core-imaging-codes",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-imaging-codes",
+    "version": "0.1.0",
+    "name": "USCoreImagingCodes"
+  },
+  {
+    "id": "us-core-survey-codes",
+    "type": "ValueSet",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-survey-codes",
+    "version": "0.1.0",
+    "name": "USCoreSurveyCodes"
+  },
+  {
+    "id": "healthedata1-sandbox",
+    "type": "ImplementationGuide",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
+    "version": "0.1.0",
+    "name": "HealthEData_1Sandbox"
+  },
+  {
+    "id": "us-core-encounter-diagnosis",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-encounter-diagnosis",
+    "version": "0.1.0",
+    "name": "UsCoreEncounterDiagnosis"
+  },
+  {
+    "id": "us-core-observation-sdoh-assessment",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-sdoh-assessment",
+    "version": "0.1.0",
+    "name": "USCoreObservationSDOHAssessment"
+  },
+  {
+    "id": "us-core-observation-survey",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-observation-survey",
+    "version": "0.1.0",
+    "name": "USCoreObservationSurveyProfile"
+  },
+  {
+    "id": "us-core-problems-and-health-concerns",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
+    "version": "0.1.0",
+    "name": "USCoreProblemsHealthConcerns"
+  },
+  {
+    "id": "us-core-questionnaireresponse",
+    "type": "StructureDefinition",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse",
+    "version": "0.1.0",
+    "name": "USCoreQuestionnaireResponse"
+  }
+]

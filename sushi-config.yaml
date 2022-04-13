@@ -35,7 +35,7 @@ dependencies:
 #       version: 0.3.0
 #       id: vsac
 parameters:
-  show-inherited-invariants: false
+  show-inherited-invariants: true
   usage-stats-opt-out: false
   path-output: docs #output #docs
   path-resource:
@@ -63,8 +63,11 @@ parameters:
   #   - 'StructureDefinition/*'
 copyrightYear: 2020+
 releaseLabel: CI Build
-
-
+version-comparison:
+  - 4.0.0
+  - 3.1.1
+  - 2.0.0
+  - 1.0.1
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

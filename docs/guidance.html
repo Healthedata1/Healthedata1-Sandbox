@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HEALTHEDATA1-SANDBOX\Guidance - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Health eData 1 Sandbox</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="guidance.html">General Guidance</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifact Index</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Guidance</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Health eData 1 Sandbox - Local Development build (v0.1.0). See the <a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Guidance</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#create-pretty-list-with-liquid" id="markdown-toc-create-pretty-list-with-liquid">Create Pretty List with Liquid</a></li>
+  <li><a href="#my-new-stuff" id="markdown-toc-my-new-stuff">My new stuff</a></li>
+  <li><a href="#list-highlighting" id="markdown-toc-list-highlighting">List highlighting</a></li>
+  <li><a href="#my-awesome-table" id="markdown-toc-my-awesome-table">My Awesome Table</a></li>
+</ul>
+
+</div>
+<h3 id="create-pretty-list-with-liquid">Create Pretty List with Liquid</h3>
+
+<!-- if site.users = "Tobi", "Laura", "Tetsuro", "Adam" -->
+
+<h3 id="my-new-stuff">My new stuff</h3>
+
+<ul>
+  <li><span class="bg-success">“USCoreClinicalTestCodesValueSet”</span><!-- new-content --></li>
+  <li><span class="bg-success">“USCoreObservationCategoryValueSet”</span><!-- new-content --></li>
+  <li><span class="bg-success">“USCoreSurveyCodes”</span><!-- new-content --></li>
+  <li><span class="bg-success">“UsCoreEncounterDiagnosis”</span><!-- new-content --></li>
+  <li><span class="bg-success">“USCoreProblemsHealthConcerns”</span><!-- new-content --></li>
+  <li><span class="bg-success">“USCoreQuestionnaireResponse”</span><!-- new-content --></li>
+  <li><span class="bg-success">“USCoreObservationSDOHAssessment”</span><!-- new-content --></li>
+  <li><span class="bg-success">“USCoreLocation”</span><!-- new-content --></li>
+  <li><span class="bg-success">“QuestionnaireUrl”</span><!-- new-content --></li>
+</ul>
+
+<hr />
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+<span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">black_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="s2">","</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">black_list</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="nv">sd</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">r_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.resources</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">r_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">r</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">-%}</span>
+         &lt;li&gt;<span class="p">{{</span><span class="nv">r</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/li&gt;
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<ul><li>US Core Encounter Diagnosis Profile</li><li>US Core Observation SDOH Assessment Profile</li><li>US Core Observation Survey Profile</li><li>US Core Problems and Health Concerns Profile</li><li>US Core Questionnaire Response Profile</li></ul>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">types</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nv">types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">uniq</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="p">%}</span>
+  &lt;strong&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="p">}}</span>&lt;/strong&gt;
+  &lt;ul&gt;
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="p">%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">-%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">-%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash2</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">basename</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd2</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">%}</span>
+            <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">-%}</span>
+            <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd2</span><span class="p">.</span><span class="nv">basename</span><span class="p">%}</span>
+             <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">-%}</span>
+             <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+        <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="p">-%}</span>
+            &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="p">-%}</span>
+            &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>(Parent)&lt;/a&gt;
+                &lt;ul&gt;
+                <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash3</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+                  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+                  <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd3</span><span class="p">.</span><span class="nv">basename</span><span class="w"> </span><span class="p">%}</span>
+                    &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd3</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd3</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>(child)&lt;/a&gt;&lt;/li&gt;
+                  <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+                <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+                &lt;/ul&gt;
+            &lt;/li&gt;
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+  &lt;/ul&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+
+</code></pre></div></div>
+
+<p><strong></strong></p>
+<ul></ul>
+
+<p><strong>Condition</strong></p>
+<ul>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-encounter-diagnosis.html">US Core Encounter Diagnosis Profile</a></li>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-problems-and-health-concerns.html">US Core Problems and Health Concerns Profile</a></li></ul>
+
+<p><strong>Extension</strong></p>
+<ul>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-questionnaire-url.html">Questionnaire URL Extension</a></li></ul>
+
+<p><strong>Observation</strong></p>
+<ul>
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-observation-survey.html">US Core Observation Survey Profile(Parent)</a>
+                <ul>
+                
+                    <li><a href="StructureDefinition-us-core-observation-sdoh-assessment.html">US Core Observation SDOH Assessment Profile(child)</a></li>
+                  
+                
+                
+                
+                
+                
+                </ul>
+            </li></ul>
+
+<p><strong>QuestionnaireResponse</strong></p>
+<ul>
+        
+        
+        
+        
+        
+        <li><a href="StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response Profile</a></li></ul>
+
+<h3 id="list-highlighting">List highlighting</h3>
+
+<ul>
+  <li class="new-content">floor</li>
+  <li>bar</li>
+  <li class="new-content">baz
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="my-awesome-table">My Awesome Table</h3>
+
+<p>from this…</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### My Awesome Table
+
+tadaa...
+
+| **Term** | **Definition** |
+| --- | --- |
+| **Batch File Format** | The file formats used to load data into PLR or receive distributions from PLR in bulk, on a delayed basis. &lt;br /&gt;&lt;br /&gt;See also Batch XML Format and Batch CSV Format. |
+| **Category** | A "super-role", a category of related Provider Role Types. &lt;br /&gt;&lt;br /&gt;For example, the category "Nurse" might contain many Provider Role Types such as "LPN", RN" and so on; the category "Doctors" might contain all Provider role types assigned to doctors, and so on. |
+{: .grid}
+</code></pre></div></div>
+
+<p>to this…</p>
+
+<p>tadaa…</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>Definition</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Batch File Format</strong></td>
+      <td>The file formats used to load data into PLR or receive distributions from PLR in bulk, on a delayed basis. <br /><br />See also Batch XML Format and Batch CSV Format.</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>A “super-role”, a category of related Provider Role Types. <br /><br />For example, the category “Nurse” might contain many Provider Role Types such as “LPN”, RN” and so on; the category “Doctors” might contain all Provider role types assigned to doctors, and so on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="color: red">test code block</p>
+
+<p>svg file:</p>
+
+<p>&lt;?xml version=”1.0” encoding=”UTF-8” standalone=”no”?&gt;<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="275px" preserveAspectRatio="none" style="width:542px;height:275px;background:#FFFFFF;" version="1.1" viewBox="0 0 542 275" width="542px" zoomAndPan="magnify"><defs><filter height="300%" id="f6nb99kiye4r7" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"></feGaussianBlur><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"></feColorMatrix><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"></feOffset><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"></feBlend></filter></defs><g><ellipse cx="272.5" cy="20" fill="#000000" filter="url(#f6nb99kiye4r7)" rx="10" ry="10" style="stroke:none;stroke-width:1.0;"></ellipse><polygon fill="#FEFECE" filter="url(#f6nb99kiye4r7)" points="32,50,95,50,107,62,95,74,32,74,20,62,32,50" style="stroke:#A80036;stroke-width:1.5;"></polygon><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="67.5" y="84.2104">yes</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="32" y="65.8081">condition A</text><rect fill="#FEFECE" filter="url(#f6nb99kiye4r7)" height="33.9688" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="57" x="35" y="105.7104"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="37" x="45" y="126.8491">Text 1</text><polygon fill="#FEFECE" filter="url(#f6nb99kiye4r7)" points="139,50,202,50,214,62,202,74,139,74,127,62,139,50" style="stroke:#A80036;stroke-width:1.5;"></polygon><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="174.5" y="84.2104">yes</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="139" y="65.8081">condition B</text><rect fill="#FEFECE" filter="url(#f6nb99kiye4r7)" height="33.9688" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="58" x="141.5" y="105.7104"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="151.5" y="126.8491">Text 2</text><ellipse cx="170.5" cy="185.6792" fill="#FFFFFF" filter="url(#f6nb99kiye4r7)" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="170.5" cy="185.6792" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"></ellipse><polygon fill="#FEFECE" filter="url(#f6nb99kiye4r7)" points="246,50,309,50,321,62,309,74,246,74,234,62,246,50" style="stroke:#A80036;stroke-width:1.5;"></polygon><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="281.5" y="84.2104">yes</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="246" y="65.8081">condition C</text><rect fill="#FEFECE" filter="url(#f6nb99kiye4r7)" height="33.9688" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="58" x="248.5" y="105.7104"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="258.5" y="126.8491">Text 3</text><polygon fill="#FEFECE" filter="url(#f6nb99kiye4r7)" points="353,50,417,50,429,62,417,74,353,74,341,62,353,50" style="stroke:#A80036;stroke-width:1.5;"></polygon><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="21" x="389" y="84.2104">yes</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="353" y="65.8081">condition D</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="429" y="59.4058">nothing</text><rect fill="#FEFECE" filter="url(#f6nb99kiye4r7)" height="33.9688" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="58" x="356" y="105.7104"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="38" x="366" y="126.8491">Text 4</text><rect fill="#FEFECE" filter="url(#f6nb99kiye4r7)" height="33.9688" rx="12.5" ry="12.5" style="stroke:#A80036;stroke-width:1.5;" width="76" x="449" y="130.8081"></rect><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="56" x="459" y="151.9468">Text else</text><ellipse cx="272.5" cy="247.6792" fill="#FFFFFF" filter="url(#f6nb99kiye4r7)" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;"></ellipse><ellipse cx="272.5" cy="247.6792" fill="#000000" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;"></ellipse><line style="stroke:#A80036;stroke-width:1.5;" x1="170.5" x2="170.5" y1="139.6792" y2="174.6792"></line><polygon fill="#A80036" points="166.5,164.6792,170.5,174.6792,174.5,164.6792,170.5,168.6792" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="63.5" x2="63.5" y1="74" y2="105.7104"></line><polygon fill="#A80036" points="59.5,95.7104,63.5,105.7104,67.5,95.7104,63.5,99.7104" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="63.5" x2="63.5" y1="139.6792" y2="216.6792"></line><polygon fill="#A80036" points="59.5,206.6792,63.5,216.6792,67.5,206.6792,63.5,210.6792" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="170.5" x2="170.5" y1="74" y2="105.7104"></line><polygon fill="#A80036" points="166.5,95.7104,170.5,105.7104,174.5,95.7104,170.5,99.7104" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="277.5" x2="277.5" y1="74" y2="105.7104"></line><polygon fill="#A80036" points="273.5,95.7104,277.5,105.7104,281.5,95.7104,277.5,99.7104" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="277.5" x2="277.5" y1="139.6792" y2="216.6792"></line><polygon fill="#A80036" points="273.5,206.6792,277.5,216.6792,281.5,206.6792,277.5,210.6792" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="385" x2="385" y1="74" y2="105.7104"></line><polygon fill="#A80036" points="381,95.7104,385,105.7104,389,95.7104,385,99.7104" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="385" x2="385" y1="139.6792" y2="216.6792"></line><polygon fill="#A80036" points="381,206.6792,385,216.6792,389,206.6792,385,210.6792" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="107" x2="127" y1="62" y2="62"></line><polygon fill="#A80036" points="117,58,127,62,117,66,121,62" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="214" x2="234" y1="62" y2="62"></line><polygon fill="#A80036" points="224,58,234,62,224,66,228,62" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="321" x2="341" y1="62" y2="62"></line><polygon fill="#A80036" points="331,58,341,62,331,66,335,62" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="272.5" x2="272.5" y1="30" y2="35"></line><line style="stroke:#A80036;stroke-width:1.5;" x1="272.5" x2="63.5" y1="35" y2="35"></line><line style="stroke:#A80036;stroke-width:1.5;" x1="63.5" x2="63.5" y1="35" y2="50"></line><polygon fill="#A80036" points="59.5,40,63.5,50,67.5,40,63.5,44" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="429" x2="487" y1="62" y2="62"></line><line style="stroke:#A80036;stroke-width:1.5;" x1="487" x2="487" y1="62" y2="130.8081"></line><polygon fill="#A80036" points="483,120.8081,487,130.8081,491,120.8081,487,124.8081" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="487" x2="487" y1="164.7769" y2="216.6792"></line><polygon fill="#A80036" points="483,206.6792,487,216.6792,491,206.6792,487,210.6792" style="stroke:#A80036;stroke-width:1.0;"></polygon><line style="stroke:#A80036;stroke-width:1.5;" x1="63.5" x2="487" y1="216.6792" y2="216.6792"></line><line style="stroke:#A80036;stroke-width:1.5;" x1="272.5" x2="272.5" y1="216.6792" y2="236.6792"></line><polygon fill="#A80036" points="268.5,226.6792,272.5,236.6792,276.5,226.6792,272.5,230.6792" style="stroke:#A80036;stroke-width:1.0;"></polygon>&lt;!--MD5=[bb912d9427ff8b649e9ce4d57f1ca285]
+@startuml
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+@enduml</g></svg></p>
+
+<p>PlantUML version 1.2021.10(Mon Aug 30 13:43:48 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+–&gt;&lt;/g&gt;&lt;/svg&gt;</p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 13, 2022 07:44-0700">2022-04-13</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)"></span>
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
