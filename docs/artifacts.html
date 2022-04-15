@@ -138,13 +138,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Structures: Resource Profiles</a>
       </li>
       <li>
-         <a href="#2">Structures: Extension Definitions</a>
+         <a href="#2">Terminology: Value Sets</a>
       </li>
       <li>
-         <a href="#3">Terminology: Value Sets</a>
-      </li>
-      <li>
-         <a href="#4">Example: Example Instances</a>
+         <a href="#3">Terminology: Code Systems</a>
       </li>
    </ul>
 </div>
@@ -172,15 +169,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-us-core-observation-survey.html"
-                     title="StructureDefinition/us-core-observation-survey">US Core Observation Survey Profile</a>
-               </td>
-               <td>
-<p>Profile for Observations to record responses from  a survey or questionnaire.  It can be used to represent individual responses, panels of multi-question surveys, and multi-select responses to “check all that apply” questions.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="StructureDefinition-us-core-problems-and-health-concerns.html"
                      title="StructureDefinition/us-core-problems-and-health-concerns">US Core Problems and Health Concerns Profile</a>
                </td>
@@ -197,40 +185,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]</p>
 </td>
             </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-us-core-observation-sdoh-assessment.html"
-                     title="StructureDefinition/us-core-observation-sdoh-assessment">US Core Observation SDOH Assessment Profile</a>
-               </td>
-               <td>
-<p>Profile for Observations to record responses derived from Social Determinants of Health (SDOH) assessment instruments.  It is derived from the US Core Observation Survey Profile and can be used to represent individual responses, panels of multi-question surveys, and multi-select “check all that apply” questions. This profile  meets the U.S. Core Data for Interoperability (USCDI) v2 SDOH Assessments requirements.</p>
-</td>
-            </tr>
          </tbody>
       </table>
    </p>
    <a name="2"> </a>
-   <h3>Structures: Extension Definitions </h3>
-   <p>
-    <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
-</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-questionnaire-url.html"
-                     title="StructureDefinition/questionnaire-url">Questionnaire URL Extension</a>
-               </td>
-               <td>
-<p>The location where a non-FHIR questionnaire/survey form can be found. This extension is used when the survey,form, or questionnaire which is being anwered is not a FHIR <a href="https://www.hl7.org/fhir/questionnaire.html">Questionnaire</a>, otherwise the <a href="https://www.hl7.org/fhir/references.html#canonical">canonical url</a> for the FHIR Questionnaire is used.</p>
-</td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="3"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>
     <p>These define sets of codes used by systems conforming to this implementation guide</p>
@@ -250,20 +208,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="ValueSet-us-core-survey-codes.html"
-                     title="ValueSet/us-core-survey-codes">US Core Survey Codes</a>
+                  <a href="ValueSet-us-core-tags.html" title="ValueSet/us-core-tags">US Core Tags Value Set</a>
                </td>
                <td>
-<p>This value set includes all LOINC values whose CLASSTYPE is SURVEY in the LOINC database (Refer to <a href="https://loinc.org/kb/users-guide/loinc-database-structure/">Appendix A</a> of LOINC Users’ Guide)</p>
+<p>Used to tag patient submitted resources for writing and searching from EHRs</p>
 </td>
             </tr>
          </tbody>
       </table>
    </p>
-   <a name="4"> </a>
-   <h3>Example: Example Instances </h3>
+   <a name="3"> </a>
+   <h3>Terminology: Code Systems </h3>
    <p>
-    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
+    <p>These define new code systems used by systems conforming to this implementation guide</p>
 </p>
    <p>
       <table class="grid">
@@ -271,560 +228,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-color.html"
-                     title="Observation/10-minute-apgar-color">10 minute Apgar Color Example</a>
+                  <a href="CodeSystem-us-core-tags.html" title="CodeSystem/us-core-tags">US Core Tags</a>
                </td>
                <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-heart-rate.html"
-                     title="Observation/10-minute-apgar-heart-rate">10 minute Apgar Heart Rate Example</a>
-               </td>
-               <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-muscle-tone.html"
-                     title="Observation/10-minute-apgar-muscle-tone">10 minute Apgar Muscle Tone Example</a>
-               </td>
-               <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-reflex-irritability.html"
-                     title="Observation/10-minute-apgar-reflex-irritability">10 minute Apgar Reflex Irritability Example</a>
-               </td>
-               <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse..</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-respiratory-effort.html"
-                     title="Observation/10-minute-apgar-respiratory-effort">10 minute Apgar Respiratory effort Example</a>
-               </td>
-               <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-score-panel.html"
-                     title="Observation/10-minute-apgar-score-panel">10 Minute Apgar Score Panel Example</a>
-               </td>
-               <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture surveys assessments as a panel of observations. It is not derived from a FHIR QuestionnaireResponse.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-10-minute-apgar-score.html"
-                     title="Observation/10-minute-apgar-score">10 Minute Apgar Score Example</a>
-               </td>
-               <td>
-<p>This example of a US Core Survey Observation Profile illustrates its use to directly capture individual surveys assessment items as an observations. It is not derived from a FHIR QuestionnaireResponse.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-44250-9.html"
-                     title="Observation/AHC-HRSN-item-example-44250-9">Ahc-Hrsn Item Example 44250-9</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 44250-9 (Little interest or pleasure in doing things?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-44255-8.html"
-                     title="Observation/AHC-HRSN-item-example-44255-8">Ahc-Hrsn Item Example 44255-8</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 44255-8 (Feeling down, depressed, or hopeless?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-68516-4.html"
-                     title="Observation/AHC-HRSN-item-example-68516-4">Ahc-Hrsn Item Example 68516-4</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 68516-4 (On average, how many minutes did you usually spend exercising at this level on one of those days?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-68517-2.html"
-                     title="Observation/AHC-HRSN-item-example-68517-2">Ahc-Hrsn Item Example 68517-2</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 68517-2 (How many times in the past 12 months have you had 5 or more drinks in a day (males) or 4 or more drinks in a day (females)?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-68524-8.html"
-                     title="Observation/AHC-HRSN-item-example-68524-8">Ahc-Hrsn Item Example 68524-8</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 68524-8 (How many times in the past year have you used illegal drugs?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-69858-9.html"
-                     title="Observation/AHC-HRSN-item-example-69858-9">Ahc-Hrsn Item Example 69858-9</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 69858-9 (Because of a physical, mental, or emotional condition, do you have serious difficulty concentrating, remembering, or making decisions?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-69861-3.html"
-                     title="Observation/AHC-HRSN-item-example-69861-3">Ahc-Hrsn Item Example 69861-3</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 69861-3 (Because of a physical, mental, or emotional condition, do you have difficulty doing errands alone such as visiting a physician’s office or shopping?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-76513-1.html"
-                     title="Observation/AHC-HRSN-item-example-76513-1">Ahc-Hrsn Item Example 76513-1</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 76513-1 (How hard is it for you to pay for the very basics like food, housing, medical care, and heating?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-89555-7.html"
-                     title="Observation/AHC-HRSN-item-example-89555-7">Ahc-Hrsn Item Example 89555-7</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 89555-7 (In the last 30 days, other than the activities you did for work, on average, how many days per week did you engage in moderate exercise (like walking fast, running, jogging, dancing, swimming, biking, or other similar activities)?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-93038-8.html"
-                     title="Observation/AHC-HRSN-item-example-93038-8">Ahc-Hrsn Item Example 93038-8</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 93038-8 (Stress means a situation in which a person feels tense, restless, nervous, or anxious, or is unable to sleep at night because his or her mind is troubled all the time.  Do you feel this kind of stress these days?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-93159-2.html"
-                     title="Observation/AHC-HRSN-item-example-93159-2">Ahc-Hrsn Item Example 93159-2</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 93159-2 (How often do you feel lonely or isolated from those around you?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-95530-2.html"
-                     title="Observation/AHC-HRSN-item-example-95530-2">Ahc-Hrsn Item Example 95530-2</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 95530-2 (How many times in the past year have you used prescription drugs for non-medical reasons?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-96780-2.html"
-                     title="Observation/AHC-HRSN-item-example-96780-2">Ahc-Hrsn Item Example 96780-2</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 96780-2 (Do you want help finding or keeping work or a job?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-96781-0.html"
-                     title="Observation/AHC-HRSN-item-example-96781-0">Ahc-Hrsn Item Example 96781-0</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 96781-0 (If for any reason you need help with day-to-day activities such as bathing, preparing meals, shopping, managing finances, etc., do you get the help you need?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-96782-8.html"
-                     title="Observation/AHC-HRSN-item-example-96782-8">Ahc-Hrsn Item Example 96782-8</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 96782-8 (Do you want help with school or training? For example, starting or completing job training or getting a high school diploma, GED or equivalent.) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-96842-0.html"
-                     title="Observation/AHC-HRSN-item-example-96842-0">Ahc-Hrsn Item Example 96842-0</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 96842-0 (How often have you used any tobacco product in past 12 months?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-item-example-97027-7.html"
-                     title="Observation/AHC-HRSN-item-example-97027-7">Ahc-Hrsn Item Example 97027-7</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Item Example 97027-7 (Do you speak a language other than English at home?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-AHC-HRSN-panel-example-96777-8.html"
-                     title="Observation/AHC-HRSN-panel-example-96777-8">Ahc-Hrsn Panel Example 96777-8</a>
-               </td>
-               <td>
-<p>This is a Ahc-Hrsn Panel Example 96777-8 (Accountable health communities (AHC) health-related social needs screening (HRSN) tool) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-HVS-item-example-88122-7.html"
-                     title="Observation/HVS-item-example-88122-7">Hvs Item Example 88122-7</a>
-               </td>
-               <td>
-<p>This is a Hvs Item Example 88122-7 ((I/We) worried whether (my/our) food would run out before (I/we) got money to buy more.) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-HVS-item-example-88123-5.html"
-                     title="Observation/HVS-item-example-88123-5">Hvs Item Example 88123-5</a>
-               </td>
-               <td>
-<p>This is a Hvs Item Example 88123-5 (The food that (I/we) bought just didn’t last, and (I/we) didn’t have money to get more.) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-HVS-item-example-88124-3.html"
-                     title="Observation/HVS-item-example-88124-3">Hvs Item Example 88124-3</a>
-               </td>
-               <td>
-<p>This is a Hvs Item Example 88124-3 (Food insecurity risk) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-HVS-panel-example-88121-9.html"
-                     title="Observation/HVS-panel-example-88121-9">Hvs Panel Example 88121-9</a>
-               </td>
-               <td>
-<p>This is a Hvs Panel Example 88121-9 (Hunger Vital Sign [HVS]) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-54899-0.html"
-                     title="Observation/PRAPARE-item-example-54899-0">Prapare Item Example 54899-0</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 54899-0 (Preferred language) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-56051-6.html"
-                     title="Observation/PRAPARE-item-example-56051-6">Prapare Item Example 56051-6</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 56051-6 (Do you consider yourself Hispanic/Latino?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-56799-0.html"
-                     title="Observation/PRAPARE-item-example-56799-0">Prapare Item Example 56799-0</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 56799-0 (Address) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-63512-8.html"
-                     title="Observation/PRAPARE-item-example-63512-8">Prapare Item Example 63512-8</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 63512-8 (How many people are living or staying at this address?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-63586-2.html"
-                     title="Observation/PRAPARE-item-example-63586-2">Prapare Item Example 63586-2</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 63586-2 (What was your best estimate of the total income of all family members from all sources, before taxes, in last year?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-67875-5.html"
-                     title="Observation/PRAPARE-item-example-67875-5">Prapare Item Example 67875-5</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 67875-5 (Employment status current) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-71802-3.html"
-                     title="Observation/PRAPARE-item-example-71802-3">Prapare Item Example 71802-3</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 71802-3 (Housing status) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-76437-3.html"
-                     title="Observation/PRAPARE-item-example-76437-3">Prapare Item Example 76437-3</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 76437-3 (Primary insurance) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-76501-6.html"
-                     title="Observation/PRAPARE-item-example-76501-6">Prapare Item Example 76501-6</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 76501-6 (Within the last year, have you been afraid of your partner or ex-partner?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-82589-3.html"
-                     title="Observation/PRAPARE-item-example-82589-3">Prapare Item Example 82589-3</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 82589-3 (Highest level of educ) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93026-3.html"
-                     title="Observation/PRAPARE-item-example-93026-3">Prapare Item Example 93026-3</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93026-3 (Do you feel physically and emotionally safe where you currently live?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93027-1.html"
-                     title="Observation/PRAPARE-item-example-93027-1">Prapare Item Example 93027-1</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93027-1 (Are you a refugee?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93028-9.html"
-                     title="Observation/PRAPARE-item-example-93028-9">Prapare Item Example 93028-9</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93028-9 (In the past year, have you spent more than 2 nights in a row in a jail, prison, detention center, or juvenile correctional facility?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93029-7.html"
-                     title="Observation/PRAPARE-item-example-93029-7">Prapare Item Example 93029-7</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93029-7 (How often do you see or talk to people that you care about and feel close to (For example: talking to friends on the phone, visiting friends or family, going to church or club meetings)?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93030-5.html"
-                     title="Observation/PRAPARE-item-example-93030-5">Prapare Item Example 93030-5</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93030-5 (Has lack of transportation kept you from medical appointments, meetings, work, or from getting things needed for daily living?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93033-9.html"
-                     title="Observation/PRAPARE-item-example-93033-9">Prapare Item Example 93033-9</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93033-9 (Are you worried about losing your housing?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93034-7.html"
-                     title="Observation/PRAPARE-item-example-93034-7">Prapare Item Example 93034-7</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93034-7 (Have you been discharged from the armed forces of the United States?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93035-4.html"
-                     title="Observation/PRAPARE-item-example-93035-4">Prapare Item Example 93035-4</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93035-4 (At any point in the past 2 years, has season or migrant farm work been your or your family’s main source of income?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-item-example-93038-8.html"
-                     title="Observation/PRAPARE-item-example-93038-8">Prapare Item Example 93038-8</a>
-               </td>
-               <td>
-<p>This is a Prapare Item Example 93038-8 (Stress is when someone feels tense, nervous, anxious or can’t sleep at night because their mind is troubled. How stressed are you?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-multiselect-item-example-32624-9-answer0.html"
-                     title="Observation/PRAPARE-multiselect-item-example-32624-9-answer0">Prapare Multiselect-Item Example 32624-9-Answer0</a>
-               </td>
-               <td>
-<p>This is a Prapare Multiselect-Item Example 32624-9-Answer0 (Race) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-multiselect-item-example-32624-9-answer1.html"
-                     title="Observation/PRAPARE-multiselect-item-example-32624-9-answer1">Prapare Multiselect-Item Example 32624-9-Answer1</a>
-               </td>
-               <td>
-<p>This is a Prapare Multiselect-Item Example 32624-9-Answer1 (Race) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-multiselect-item-example-93031-3-answer0.html"
-                     title="Observation/PRAPARE-multiselect-item-example-93031-3-answer0">Prapare Multiselect-Item Example 93031-3-Answer0</a>
-               </td>
-               <td>
-<p>This is a Prapare Multiselect-Item Example 93031-3-Answer0 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-multiselect-item-example-93031-3-answer1.html"
-                     title="Observation/PRAPARE-multiselect-item-example-93031-3-answer1">Prapare Multiselect-Item Example 93031-3-Answer1</a>
-               </td>
-               <td>
-<p>This is a Prapare Multiselect-Item Example 93031-3-Answer1 (In the past year, have you or any family members you live with been unable to get any of the following when it was really needed?) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-panel-example-93025-5.html"
-                     title="Observation/PRAPARE-panel-example-93025-5">Prapare Panel Example 93025-5</a>
-               </td>
-               <td>
-<p>This is a Prapare Panel Example 93025-5 (Protocol for Responding to and Assessing Patients’ Assets, Risks, and Experiences [PRAPARE]) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-panel-example-93039-6.html"
-                     title="Observation/PRAPARE-panel-example-93039-6">Prapare Panel Example 93039-6</a>
-               </td>
-               <td>
-<p>This is a Prapare Panel Example 93039-6 (Optional additional questions) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-panel-example-93040-4.html"
-                     title="Observation/PRAPARE-panel-example-93040-4">Prapare Panel Example 93040-4</a>
-               </td>
-               <td>
-<p>This is a Prapare Panel Example 93040-4 (Social and emotional health) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-panel-example-93041-2.html"
-                     title="Observation/PRAPARE-panel-example-93041-2">Prapare Panel Example 93041-2</a>
-               </td>
-               <td>
-<p>This is a Prapare Panel Example 93041-2 (Money and resources) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-panel-example-93042-0.html"
-                     title="Observation/PRAPARE-panel-example-93042-0">Prapare Panel Example 93042-0</a>
-               </td>
-               <td>
-<p>This is a Prapare Panel Example 93042-0 (Family and home) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-PRAPARE-panel-example-93043-8.html"
-                     title="Observation/PRAPARE-panel-example-93043-8">PRAPARE Panel Example 93043-8</a>
-               </td>
-               <td>
-<p>This is a Prapare Panel Example 93043-8 (Personal characteristics) for the <em>US Core Screening Response Observation Profile</em></p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="QuestionnaireResponse-AHC-HRSN-screening-example.html"
-                     title="QuestionnaireResponse/AHC-HRSN-screening-example">AHC HRSN Screening Example</a>
-               </td>
-               <td>
-<p>‘An example of an SDC QuestionnaireResponse that represents questions and selected answers from the Accountable health communities (AHC) health-related social needs screening (HRSN) tool in LOINC (code  96777-8). The example is generated using the LHC-Forms SDC Questionnaire App.’</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="QuestionnaireResponse-PRAPARE-example.html"
-                     title="QuestionnaireResponse/PRAPARE-example">PRAPARE Example</a>
-               </td>
-               <td>
-<p>‘An example of an US Core QuestionnaireResponse that represents questions and selected answers from the PRAPARE questionnaire represented in LOINC (code 93025-5). The example is generated using the LHC-Forms SDC Questionnaire App.’</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="QuestionnaireResponse-glascow-coma-score.html"
-                     title="QuestionnaireResponse/glascow-coma-score">Glascow Coma Score Example</a>
-               </td>
-               <td>
-<p>‘This example of a US Core QuestionnaireResponse illustrate using Questionnaire as a <em>stand alone</em> resource. It does not point to the definition of the questions in  a FHIR Questionnaire, but represents the answers from a non FHIR survey instrument (in this case a pdf).’</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="QuestionnaireResponse-hunger-vital-sign-example.html"
-                     title="QuestionnaireResponse/hunger-vital-sign-example">Hunger Vital Sign [HVS] Example</a>
-               </td>
-               <td>
-<p>‘An example of an SDC QuestionnaireResponse that represents questions and selected answers from the Hunger Vital Sign Example questionnaire represented in LOINC (code 88122-7). The example is generated using the LHC-Forms SDC Questionnaire App.’</p>
+<p>Tags code used in US Core <code class="language-plaintext highlighter-rouge">meta.tag</code> profiles. The are typically used when there is a need for categorization or workflow hints.</p>
 </td>
             </tr>
          </tbody>
@@ -854,7 +261,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Apr 13, 2022 08:18-0700">2022-04-13</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Apr 15, 2022 09:15-0700">2022-04-15</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

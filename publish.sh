@@ -20,29 +20,41 @@ do
  r) CLEAR_JSON=1;;
  esac
 done
+
+inpath=input
+if [[ $IN_DOCS ]]; then
+  outpath=docs
+else
+  outpath=output
+fi
+
+echo "================================================================="
+echo "-d flag if output in "docs" folder =  $IN_DOCS"
+echo "current directory = $PWD"
+echo "outpath=$outpath"
+echo "inpath=$inpath"
+echo "================================================================="
+
 echo "================================================================="
 echo === Publish $SOURCE IG!!! $(date -u) ===
-echo see 'local workflow.md' file for how to use
+echo "see local workflow.md file for how to use"
 echo "Optional Parameters"
-echo '-t parameter for no terminology server (run faster and offline)= ' $NA
-echo '-w parameter for using watch on igpublisher from source default is off = ' $WATCH
-echo '-o parameter for running previous version of the igpublisher= ' $PUB
-echo '-p parameter for downloading latest version of the igpublisher from source = ' $UPDATE
+echo "-t parameter for no terminology server (run faster and offline)= $NA"
+echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
+echo "-o parameter for running previous version of the igpublisher= $PUB"
+echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
 #echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
 #echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
-echo '-i parameter for running only ig-publisher = ' $IG_PUBLISH
-echo '-s parameter for running only sushi = ' $SUSHI
-echo '-v view ig home page  in current browser = ./[output|docs]/index.html  = ' $VIEW_OUTPUT
-echo '-q view qa output in current browser = ./[output|docs]/qa.html  = ' $VIEW_QA
-echo '-d flag if output in "docs" folder = ' $IN_DOCS
-echo '-r remove all generated json files = ' $CLEAR_JSON
-echo ' current directory =' $PWD
+echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
+echo "-s parameter for running only sushi = $SUSHI"
+echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
+echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
+echo "-d flag if output in "docs" folder = $IN_DOCS"
+echo "-r remove all generated json files = $CLEAR_JSON"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
-
-inpath=input
 
 if [[ $CLEAR_JSON ]]; then
 echo 'remove all generated files in /examples and /resources folders'
@@ -222,22 +234,19 @@ parameters:==="
 
 fi
 
+echo "================================================================="
+echo "===zip up schematrons and put in==="
+echo "===$outpath/input/images/schematrons.zip file for downloads==="
+echo "===zip -j input/images/schematrons.zip $outpath/*.sch==="
+echo "================================================================="
+zip -j input/images/schematrons.zip $outpath/*.sch
+
 if [[ $VIEW_OUTPUT ]]; then
-  if [[ $IN_DOCS ]]; then
     echo open $PWD/docs/index.html
-    open ./docs/index.html
-  else
-    echo open $PWD/output/index.html
-    open ./output/index.html
-  fi
+    open ./$outpath/index.html
 fi
 
 if [[ $VIEW_QA ]]; then
-  if [[ $IN_DOCS ]]; then
     echo open $PWD/docs/qa.html
-    open ./docs/qa.html
-  else
-    echo open $PWD/output/qa.html
-    open ./output/qa.html
-  fi
+    open ./$outpath/index.htm
 fi

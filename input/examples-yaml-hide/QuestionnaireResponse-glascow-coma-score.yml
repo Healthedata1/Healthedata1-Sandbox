@@ -1,9 +1,9 @@
 resourceType: QuestionnaireResponse
-id: glascow-coma-score
+id: glasgow-coma-score
 meta:
   extension:
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-name'
-      valueString: 'Glascow Coma Score Example'
+      valueString: 'Glasgow Coma Score Example'
     - url: 'http://hl7.org/fhir/StructureDefinition/instance-description'
       valueMarkdown: >-
         'This example of a US Core QuestionnaireResponse illustrate using Questionnaire as a *stand alone* resource. It does not point to the definition of the questions in  a FHIR Questionnaire, but represents the answers from a non FHIR survey instrument (in this case a pdf).'
