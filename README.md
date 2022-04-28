@@ -1,4 +1,4 @@
-# My SUSHI Sandbox
+# My IG Publisher Sandbox
 
 place to create resource instances and examples
 
