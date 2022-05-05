@@ -1,10 +1,10 @@
 ﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 30, warn = 39, info = 0
+err = 30, warn = 40, info = 0
 IG Publisher Version: 1.1.115
-Generated Fri Apr 15 09:16:08 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
- Build Errors : 2 / 0 / 0
+Generated Tue Apr 19 23:22:38 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 2 / 1 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/CodeSystem-us-core-tags : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-encounter-diagnosis : 6 / 9 / 1
@@ -14,6 +14,7 @@ Generated Fri Apr 15 09:16:08 PDT 2022. FHIR version 4.0.1 for healthedata1-sand
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-us-core-tags : 0 / 0 / 1
 </table>
 == n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource StructureDefinition/us-core-encounter-diagnosis.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: ?pkp-1?: The reference http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url could not be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/examples.html#/html/body/div/div/div/div/div/p/a at Line 146, column 106: The link 'downloads.html#examples' for "here" cannot be resolved (valid targets: [segment-header, publish-box, bottom, foo, segment-post-footer, ig-status, top, downloads, stripe, segment-footer, segment-navbar, segment-content, segment-breadcrumb])
 == fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json ==

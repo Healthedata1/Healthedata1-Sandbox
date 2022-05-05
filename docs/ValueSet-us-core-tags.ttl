@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "USCoreTagsValueSet"];
   fhir:ValueSet.title [ fhir:value "US Core Tags Value Set"];
   fhir:ValueSet.status [ fhir:value "active"];
-  fhir:ValueSet.date [ fhir:value "2022-04-15T09:15:52-07:00"^^xsd:dateTime];
+  fhir:ValueSet.date [ fhir:value "2022-04-19T23:22:25-07:00"^^xsd:dateTime];
   fhir:ValueSet.publisher [ fhir:value "Health eData Inc"];
   fhir:ValueSet.contact [
      fhir:index 0;

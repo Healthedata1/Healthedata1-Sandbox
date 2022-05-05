@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="01abc277-c871-430e-8cd5-991c912190c8"/>
+  <id value="0bda252e-3c61-4f97-b92d-e40608d5c4de"/>
   <meta>
-    <lastUpdated value="2022-04-15T09:15:52.620-07:00"/>
+    <lastUpdated value="2022-04-19T23:22:25.648-07:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -7052,8 +7052,8 @@
           <extension url="http://hl7.org/fhir/StructureDefinition/valueset-toocostly">
             <valueBoolean value="true"/>
           </extension>
-          <identifier value="urn:uuid:b2904867-c57d-4975-bda8-01b7ef1f9e8f"/>
-          <timestamp value="2022-04-15T09:16:01-07:00"/>
+          <identifier value="urn:uuid:cd1d8530-eaa6-4f65-9c49-0981787a4f95"/>
+          <timestamp value="2022-04-19T23:22:30-07:00"/>
           <total value="1000"/>
           <parameter>
             <name value="excludeNested"/>
@@ -12116,7 +12116,7 @@
         <name value="USCoreTagsValueSet"/>
         <title value="US Core Tags Value Set"/>
         <status value="active"/>
-        <date value="2022-04-15T09:15:52-07:00"/>
+        <date value="2022-04-19T23:22:25-07:00"/>
         <publisher value="Health eData Inc"/>
         <contact>
           <telecom>
@@ -12126,8 +12126,8 @@
         </contact>
         <description value="Used to tag patient submitted resources for writing and searching from EHRs"/>
         <expansion>
-          <identifier value="urn:uuid:7e1eeb57-292e-4c97-8463-1f502835a6d1"/>
-          <timestamp value="2022-04-15T09:16:02-07:00"/>
+          <identifier value="urn:uuid:56395120-4c8f-4d52-95b2-a112ec989620"/>
+          <timestamp value="2022-04-19T23:22:31-07:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>

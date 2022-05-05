@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-04-15T09:15:52-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-04-19T23:22:25-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -432,7 +432,6 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-encounter-diagnosis" ]
        ];
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Encounter Diagnosis Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Encounter Diagnosis Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Encounter Diagnosis' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about an encounter diagnosis.fhirVersion: 4.0.1" ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2;

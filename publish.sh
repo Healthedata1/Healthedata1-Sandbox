@@ -2,7 +2,7 @@
 # exit when any command fails
 set -e
 NA='http://tx.fhir.org'
-while getopts twoplisvqdru: option
+while getopts twoplisvqdryzmu: option
 do
  case "${option}"
  in
@@ -17,7 +17,10 @@ do
  v) VIEW_OUTPUT=1;;
  q) VIEW_QA=1;;
  d) IN_DOCS=1;;
+ y) YAML_JSON=1;;
+ z) ZIP_SCH=1;;
  r) CLEAR_JSON=1;;
+ m) MERGE_CSV=1;;
  esac
 done
 
@@ -51,6 +54,9 @@ echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW
 echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-r remove all generated json files = $CLEAR_JSON"
+echo "-y tranform all yaml to json files = $YAML_JSON"
+echo "-z zip up all schematrons = $ZIP_SCH"
+echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -61,7 +67,7 @@ echo 'remove all generated files in /examples and /resources folders'
 rm  -f $inpath/resources/*.* $inpath/examples/*.*
 fi
 
-if ls $inpath/resources-yaml/*.yml; then
+if [[ $YAML_JSON ]] && ls $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in resources-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
@@ -75,7 +81,7 @@ python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.std
 done
 fi
 
-if ls $inpath/examples-yaml/*.yml; then
+if [[ $YAML_JSON ]] && ls $inpath/examples-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in examples-yaml directory to examples/json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
@@ -89,7 +95,7 @@ python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.std
 done
 fi
 
-if ls $inpath/includes-yaml/*.yml; then
+if [[ $YAML_JSON ]] && ls $inpath/includes-yaml/*.yml; then
 echo "======================================================================="
 echo "convert all yml files in includes-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
@@ -155,7 +161,7 @@ if [[ $SUSHI ]]; then
   inpath=fsh-generated/resources
   echo "========================================================================"
   echo "convert ig.json to ig.yml and copy to input/data"
-  echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
+  echo "Python 3.7 and PyYAML, json and sys modules are required"
   for ig_json in $inpath/ImplementationGuide*.json
     do
     echo "========== ig_json = $ig_json =========="
@@ -234,12 +240,29 @@ parameters:==="
 
 fi
 
-echo "================================================================="
-echo "===zip up schematrons and put in==="
-echo "===$outpath/input/images/schematrons.zip file for downloads==="
-echo "===zip -j input/images/schematrons.zip $outpath/*.sch==="
-echo "================================================================="
-zip -j input/images/schematrons.zip $outpath/*.sch
+if [[ $ZIP_SCH ]]; then
+    echo "================================================================="
+    echo "===zip up schematrons and put in==="
+    echo "===$outpath/input/images/schematrons.zip file for downloads==="
+    echo "===zip -j input/images/schematrons.zip $outpath/*.sch==="
+    echo "================================================================="
+    zip -j input/images/schematrons.zip $outpath/*.sch
+fi
+
+if [[ $MERGE_CSV ]]; then
+    echo "================================================================="
+    echo "===merge all StructureDefinition CSV and output as Excel too  ==="
+    echo "Python 3.7 and pyexcel-cli, pyexcel, and pyexcel-xlsx are required"
+    echo "===require header file in $outpath/input/images-source/all_profiles.csv file ==="
+    echo "===creates $outpath/input/images/all_profiles.csv file ==="
+    echo "===creates $outpath/input/images/all_profiles.xlsx file ==="
+    echo "================================================================="
+    cp input/images-source/all_profiles.csv input/images/all_profiles.csv
+    echo "===find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv==="
+    find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv
+    echo "===pyexcel merge input/images/all_profiles.csv input/images all_profiles.xlsx==="
+    pyexcel merge input/images/all_profiles.csv input/images/all_profiles.xlsx
+fi
 
 if [[ $VIEW_OUTPUT ]]; then
     echo open $PWD/docs/index.html
@@ -248,5 +271,5 @@ fi
 
 if [[ $VIEW_QA ]]; then
     echo open $PWD/docs/qa.html
-    open ./$outpath/index.htm
+    open ./$outpath/index.html
 fi
