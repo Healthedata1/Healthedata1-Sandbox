@@ -271,5 +271,5 @@ fi
 
 if [[ $VIEW_QA ]]; then
     echo open $PWD/docs/qa.html
-    open ./$outpath/index.html
+    open ./$outpath/qa.html
 fi
