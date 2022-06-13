@@ -11,7 +11,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2022-04-19T23:22:25-07:00"/>
+  <date value="2022-06-13T15:54:52-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -23,6 +23,11 @@
   <packageId value="healthedata1-sandbox"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="3.1.0"/>
+  </dependsOn>
   <dependsOn id="hl7_fhir_uv_sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
     <packageId value="hl7.fhir.uv.sdc"/>
@@ -333,6 +338,25 @@
       <name value="US Core Tags Value Set"/>
       <description value="Used to tag patient submitted resources for writing and searching from EHRs"/>
       <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/request-attachment"/>
+      </reference>
+      <name value="Request Attachment Operation"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/submit-attachment"/>
+      </reference>
+      <name value="Submit Attachment Operation"/>
+      <description value="This operation is used to submit attachments (additional information) for Claims or Prior Authorization. This operation accepts the clinical/administrative attachments and the necessary information needed to re-associate them to the claim or prior authorization, and returns a transaction layer HTTP response.  The operation may be invoked *before, at the same time as, or after* the claim or pre-authorization has been supplied to the Payer.  This operation can be used by any HTTP endpoint, not just FHIR RESTful servers.&#xA;&#xA;The input parameters are:&#xA;1. One or more Attachments as FHIR Resources&#xA;1. Data elements for reassociation to the Claim/Prior Authorization&#xA;    - What is the documentation for:&#xA;      - Claim&#xA;      - Prior Authorization&#xA;    - Optionally, a unique payer identifier&#xA;    - A unique claim/prior authorization identifier  (referred to as the &quot;re-association tracking control numbers&quot;)*&#xA;    - Optionally, one or more unique claim line item identifiers&#xA;    - A unique organization/location identifier (e.g., NPI)&#xA;    - A unique provider identifier (e.g., NPI)&#xA;    - A unique Patient member identifier&#xA;    - Date of Service&#xA;&#xA;There are no output parameters."/>
     </resource>
     <page>
       <nameUrl value="toc.html"/>

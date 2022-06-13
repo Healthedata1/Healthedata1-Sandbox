@@ -21,6 +21,20 @@
     "name": "USCoreTagsValueSet"
   },
   {
+    "id": "request-attachment",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/request-attachment",
+    "version": "0.1.0",
+    "name": "RequestAttachment"
+  },
+  {
+    "id": "submit-attachment",
+    "type": "OperationDefinition",
+    "url": "http://hl7.org/fhir/us/davinci-cdex/OperationDefinition/submit-attachment",
+    "version": "0.1.0",
+    "name": "SubmitAttachment"
+  },
+  {
     "id": "us-core-imaging-codes",
     "type": "ValueSet",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-imaging-codes",
