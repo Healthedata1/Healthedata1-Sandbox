@@ -1,171 +1,160 @@
-{
-    "resourceType": "ImplementationGuide",
-    "id": "healthedata1-sandbox",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
-    "version": "0.1.0",
-    "name": "HealthEData_1Sandbox",
-    "title": "Health eData 1 Sandbox",
-    "status": "active",
-    "publisher": "Health eData Inc",
-    "contact": [
-        {
-            "telecom": [
-                {
-                    "system": "email",
-                    "value": "mailto:ehaas@healthedatainc.com"
-                }
-            ]
-        }
-    ],
-    "description": "This is a Healthedata1 sandbox for creation of resources and examples",
-    "packageId": "healthedata1-sandbox",
-    "license": "CC0-1.0",
-    "fhirVersion": [
-        "4.0.1"
-    ],
-    "dependsOn": [
-        {
-            "packageId": "hl7.fhir.uv.sdc",
-            "version": "3.0.0",
-            "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
-            "id": "hl7_fhir_uv_sdc"
-        }
-    ],
-    "definition": {
-        "resource": [
-            {
-                "reference": {
-                    "reference": "CodeSystem/us-core-tags"
-                },
-                "description": "Tags code used in US Core `meta.tag` profiles. The are typically used when there is a need for categorization or workflow hints.",
-                "exampleBoolean": false,
-                "name": "US Core Tags"
-            },
-            {
-                "reference": {
-                    "reference": "StructureDefinition/us-core-encounter-diagnosis"
-                },
-                "exampleBoolean": false,
-                "name": "US Core Encounter Diagnosis Profile"
-            },
-            {
-                "reference": {
-                    "reference": "StructureDefinition/us-core-problems-and-health-concerns"
-                },
-                "description": "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1",
-                "exampleBoolean": false,
-                "name": "US Core Problems and Health Concerns Profile"
-            },
-            {
-                "reference": {
-                    "reference": "StructureDefinition/us-core-questionnaireresponse"
-                },
-                "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]",
-                "exampleBoolean": false,
-                "name": "US Core Questionnaire Response Profile"
-            },
-            {
-                "reference": {
-                    "reference": "ValueSet/us-core-imaging-codes"
-                },
-                "description": "This value set includes all LOINC values whose CLASS is \"RAD\" in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)",
-                "exampleBoolean": false,
-                "name": "US Core Imaging Codes"
-            },
-            {
-                "reference": {
-                    "reference": "ValueSet/us-core-tags"
-                },
-                "description": "Used to tag patient submitted resources for writing and searching from EHRs",
-                "exampleBoolean": false,
-                "name": "US Core Tags Value Set"
-            }
-        ],
-        "page": {
-            "nameUrl": "toc.html",
-            "title": "Table of Contents",
-            "generation": "html",
-            "page": [
-                {
-                    "nameUrl": "index.html",
-                    "title": "Home",
-                    "generation": "markdown"
-                },
-                {
-                    "nameUrl": "changes.html",
-                    "title": "Changes",
-                    "generation": "markdown"
-                },
-                {
-                    "nameUrl": "downloads.html",
-                    "title": "Downloads",
-                    "generation": "markdown"
-                },
-                {
-                    "nameUrl": "examples.html",
-                    "title": "Examples",
-                    "generation": "markdown"
-                },
-                {
-                    "nameUrl": "guidance.html",
-                    "title": "Guidance",
-                    "generation": "markdown"
-                }
-            ]
-        },
-        "parameter": [
-            {
-                "code": "copyrightyear",
-                "value": "2020+"
-            },
-            {
-                "code": "releaselabel",
-                "value": "CI Build"
-            },
-            {
-                "code": "show-inherited-invariants",
-                "value": "true"
-            },
-            {
-                "code": "usage-stats-opt-out",
-                "value": "false"
-            },
-            {
-                "code": "path-output",
-                "value": "docs"
-            },
-            {
-                "code": "path-resource",
-                "value": "input/resources"
-            },
-            {
-                "code": "path-resource",
-                "value": "fsh-generated/resources"
-            },
-            {
-                "code": "path-resource",
-                "value": "input/intro-notes"
-            },
-            {
-                "code": "excludexml",
-                "value": "true"
-            },
-            {
-                "code": "escludejsn",
-                "value": "false"
-            },
-            {
-                "code": "excludettl",
-                "value": "true"
-            },
-            {
-                "code": "excludemap",
-                "value": "true"
-            },
-            {
-                "code": "excludeexample",
-                "value": "true"
-            }
-        ]
-    }
-}
+resourceType: ImplementationGuide
+id: healthedata1-sandbox
+url: http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox
+version: 0.1.0
+name: HealthEData_1Sandbox
+title: Health eData 1 Sandbox
+status: active
+publisher: Health eData Inc
+contact:
+- telecom:
+  - system: email
+    value: mailto:ehaas@healthedatainc.com
+description: This is a Healthedata1 sandbox for creation of resources and examples
+packageId: healthedata1-sandbox
+license: CC0-1.0
+fhirVersion:
+- 4.0.1
+dependsOn:
+- packageId: hl7.fhir.uv.sdc
+  version: 3.0.0
+  uri: http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc
+  id: hl7_fhir_uv_sdc
+definition:
+  resource:
+  - reference:
+      reference: CodeSystem/us-core-tags
+    description: Tags code used in US Core `meta.tag` profiles. The are typically
+      used when there is a need for categorization or workflow hints.
+    exampleBoolean: false
+    name: US Core Tags
+  - reference:
+      reference: OperationDefinition/request-attachment
+    exampleBoolean: false
+    name: Request Attachment Operation
+  - reference:
+      reference: OperationDefinition/submit-attachment
+    description: "This operation is used to submit attachments (additional information)\
+      \ for Claims or Prior Authorization. This operation accepts the clinical/administrative\
+      \ attachments and the necessary information needed to re-associate them to the\
+      \ claim or prior authorization, and returns a transaction layer HTTP response.\
+      \  The operation may be invoked *before, at the same time as, or after* the\
+      \ claim or pre-authorization has been supplied to the Payer.  This operation\
+      \ can be used by any HTTP endpoint, not just FHIR RESTful servers.\n\nThe input\
+      \ parameters are:\n1. One or more Attachments as FHIR Resources\n1. Data elements\
+      \ for reassociation to the Claim/Prior Authorization\n    - What is the documentation\
+      \ for:\n      - Claim\n      - Prior Authorization\n    - Optionally, a unique\
+      \ payer identifier\n    - A unique claim/prior authorization identifier  (referred\
+      \ to as the \"re-association tracking control numbers\")*\n    - Optionally,\
+      \ one or more unique claim line item identifiers\n    - A unique organization/location\
+      \ identifier (e.g., NPI)\n    - A unique provider identifier (e.g., NPI)\n \
+      \   - A unique Patient member identifier\n    - Date of Service\n\nThere are\
+      \ no output parameters."
+    exampleBoolean: false
+    name: Submit Attachment Operation
+  - reference:
+      reference: StructureDefinition/argo-write-observation
+    description: Defines a "mixin" profile which constrains and extends the Observation
+      resource for the minimal set of data to support to writing patient submitted
+      Observations to an EHR.  This profile is intended to be used in addition to
+      other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html).
+      When an application is creating content, it must create content that conforms
+      to both sets of profiles - that is, the intersection of the profiles. When an
+      application is consuming information, then it must be able to consume content
+      that conforms to either set of profiles - that is, the union of the profiles.
+      For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing)
+      in the FHIR specification.
+    exampleBoolean: false
+    name: Argo Write Observation Profile
+  - reference:
+      reference: StructureDefinition/us-core-encounter-diagnosis
+    exampleBoolean: false
+    name: US Core Encounter Diagnosis Profile
+  - reference:
+      reference: StructureDefinition/us-core-problems-and-health-concerns
+    description: 'The US Core Problems and Health Concerns Profile is based upon the
+      core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability
+      (USCDI) v2 ''Problems'' and ''Health Concerns'' requirements and SDOH ''Problems/Health
+      Concerns'' requirements.  It defines constraints and extensions on the Condition
+      resource for the minimal set of data to record, search, and fetch information
+      about a condition, diagnosis, or other event, situation, issue, or clinical
+      concept that is documented and categorized as a problem or health concern including
+      information about a Social Determinants of Health-related condition.fhirVersion:
+      4.0.1'
+    exampleBoolean: false
+    name: US Core Problems and Health Concerns Profile
+  - reference:
+      reference: StructureDefinition/us-core-questionnaireresponse
+    description: Defines how to represent answers from surveys/questionnaires.  This
+      profile is based on the [SDC Questionnaire Response]
+    exampleBoolean: false
+    name: US Core Questionnaire Response Profile
+  - reference:
+      reference: ValueSet/cdex-attachment-codes
+    description: This value set includes LOINC terms that can be sent by a payer as
+      part of an HL7 attachment request for additional information. This set includes
+      1) the preferred (generic) document codes that have clinically-relevant HL7
+      implementation guides, and 2) the HL7 Attachments Work Group -approved document
+      codes that don't yet have an implementation guide.
+    exampleBoolean: false
+    name: CDex Attachment Codes
+  - reference:
+      reference: ValueSet/us-core-imaging-codes
+    description: This value set includes all LOINC values whose CLASS is "RAD" in
+      the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/)
+      of LOINC Users' Guide)
+    exampleBoolean: false
+    name: US Core Imaging Codes
+  - reference:
+      reference: ValueSet/us-core-tags
+    description: Used to tag patient submitted resources for writing and searching
+      from EHRs
+    exampleBoolean: false
+    name: US Core Tags Value Set
+  page:
+    nameUrl: toc.html
+    title: Table of Contents
+    generation: html
+    page:
+    - nameUrl: index.html
+      title: Home
+      generation: markdown
+    - nameUrl: changes.html
+      title: Changes
+      generation: markdown
+    - nameUrl: downloads.html
+      title: Downloads
+      generation: markdown
+    - nameUrl: examples.html
+      title: Examples
+      generation: markdown
+    - nameUrl: guidance.html
+      title: Guidance
+      generation: markdown
+  parameter:
+  - code: copyrightyear
+    value: 2020+
+  - code: releaselabel
+    value: CI Build
+  - code: show-inherited-invariants
+    value: 'true'
+  - code: usage-stats-opt-out
+    value: 'false'
+  - code: path-output
+    value: docs
+  - code: path-resource
+    value: input/resources
+  - code: path-resource
+    value: fsh-generated/resources
+  - code: path-resource
+    value: input/intro-notes
+  - code: excludexml
+    value: 'true'
+  - code: escludejsn
+    value: 'false'
+  - code: excludettl
+    value: 'true'
+  - code: excludemap
+    value: 'true'
+  - code: excludeexample
+    value: 'true'

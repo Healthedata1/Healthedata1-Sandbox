@@ -1,0 +1,35 @@
+{
+    "resourceType": "ValueSet",
+    "id": "cdex-attachment-codes",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/cdex-attachment-codes",
+    "identifier": [
+        {
+            "system": "http://loinc.org",
+            "value": "valid-hl7-attachment-requests"
+        },
+        {
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:oid:1.3.6.1.4.1.12009.10.2.6"
+        }
+    ],
+    "name": "CDexAttachmentCodes",
+    "title": "CDex Attachment Codes",
+    "status": "active",
+    "experimental": false,
+    "description": "This value set includes LOINC terms that can be sent by a payer as part of an HL7 attachment request for additional information. This set includes 1) the preferred (generic) document codes that have clinically-relevant HL7 implementation guides, and 2) the HL7 Attachments Work Group -approved document codes that don't yet have an implementation guide.",
+    "copyright": "This material contains content from LOINC (http://loinc.org). LOINC is copyright \u00a9 1995-2022, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC\u00ae is a registered United States trademark of Regenstrief Institute, Inc.",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "filter": [
+                    {
+                        "property": "ValidHL7AttachmentRequest",
+                        "op": "=",
+                        "value": "Y"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -39,7 +39,8 @@
                         "identity": "argonaut-dq-dstu2",
                         "map": "Condition"
                     }
-                ]
+                ],
+                "comment": "`\\\"comment\\\":`"
             },
             {
                 "id": "Condition.extension:assertedDate",

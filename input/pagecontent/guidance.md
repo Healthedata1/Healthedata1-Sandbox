@@ -1,3 +1,5 @@
+{% raw %}{{ site.data.foo['fun/time']['description']}} {% endraw %}: {{ site.data.foo['fun/time']['description']}}
+
 ### Create Pretty List with Liquid
 
 <!-- if site.users = "Tobi", "Laura", "Tetsuro", "Adam" -->
@@ -192,3 +194,45 @@ tadaa...
 svg file:
 
 {% include my_plantuml.svg %}
+
+
+
+### Code Blocks
+
+```yaml
+1:  differential:
+2:    element:
+3:      - id: Observation
+4:        path: Observation
+5:      - id: 'Observation.meta'
+6:        path: 'Observation.meta'
+7:        min: 1
+8:        mustSupport: true
+```
+
+
+{% highlight yaml %}
+1:  differential:
+2:    element:
+3:      - id: Observation
+4:        path: Observation
+5:      - id: 'Observation.meta'
+6:        path: 'Observation.meta'
+7:        min: 1
+8:        mustSupport: true
+{% endhighlight %}
+
+
+<pre class="line-numbers">
+<code class="language-yaml">
+1:  differential:
+2:    element:
+3:      - id: Observation
+4:        path: Observation
+5:      - id: 'Observation.meta'
+6:        path: 'Observation.meta'
+7:        min: 1
+8:        mustSupport: true
+</code>
+</pre>
+

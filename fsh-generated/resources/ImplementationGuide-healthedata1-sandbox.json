@@ -43,6 +43,29 @@
       },
       {
         "reference": {
+          "reference": "OperationDefinition/request-attachment"
+        },
+        "exampleBoolean": false,
+        "name": "Request Attachment Operation"
+      },
+      {
+        "reference": {
+          "reference": "OperationDefinition/submit-attachment"
+        },
+        "description": "This operation is used to submit attachments (additional information) for Claims or Prior Authorization. This operation accepts the clinical/administrative attachments and the necessary information needed to re-associate them to the claim or prior authorization, and returns a transaction layer HTTP response.  The operation may be invoked *before, at the same time as, or after* the claim or pre-authorization has been supplied to the Payer.  This operation can be used by any HTTP endpoint, not just FHIR RESTful servers.\n\nThe input parameters are:\n1. One or more Attachments as FHIR Resources\n1. Data elements for reassociation to the Claim/Prior Authorization\n    - What is the documentation for:\n      - Claim\n      - Prior Authorization\n    - Optionally, a unique payer identifier\n    - A unique claim/prior authorization identifier  (referred to as the \"re-association tracking control numbers\")*\n    - Optionally, one or more unique claim line item identifiers\n    - A unique organization/location identifier (e.g., NPI)\n    - A unique provider identifier (e.g., NPI)\n    - A unique Patient member identifier\n    - Date of Service\n\nThere are no output parameters.",
+        "exampleBoolean": false,
+        "name": "Submit Attachment Operation"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/argo-write-observation"
+        },
+        "description": "Defines a \"mixin\" profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html). When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification.",
+        "exampleBoolean": false,
+        "name": "Argo Write Observation Profile"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/us-core-encounter-diagnosis"
         },
         "exampleBoolean": false,
@@ -63,6 +86,14 @@
         "description": "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]",
         "exampleBoolean": false,
         "name": "US Core Questionnaire Response Profile"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/cdex-attachment-codes"
+        },
+        "description": "This value set includes LOINC terms that can be sent by a payer as part of an HL7 attachment request for additional information. This set includes 1) the preferred (generic) document codes that have clinically-relevant HL7 implementation guides, and 2) the HL7 Attachments Work Group -approved document codes that don't yet have an implementation guide.",
+        "exampleBoolean": false,
+        "name": "CDex Attachment Codes"
       },
       {
         "reference": {
