@@ -166,7 +166,7 @@ if [[ $SUSHI ]]; then
     do
     echo "========== ig_json = $ig_json =========="
     ig_yaml='input/data/ig.yml'
-    python3.7 -c 'import sys, yaml, json; yaml.dump(json.load(sys.stdin), sys.stdout, sort_keys=False)' < $ig_json > $ig_yaml
+    python3.7 -c 'import sys, yaml, json; yaml.dump(json.load(sys.stdin), sys.stdout, sort_keys=False, indent=2,)' < $ig_json > $ig_yaml
     echo "========== ig_yaml = $ig_yaml =========="
     done
 
@@ -218,7 +218,7 @@ parameters:==="
       do
       echo "========== ig_json = $ig_json =========="
       ig_yaml='input/data/ig.yml'
-      python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $ig_json > $ig_yaml
+      python3.7 -c 'import sys, yaml, json, datetime; yaml.dump(json.load(sys.stdin), sys.stdout, indent=2, sort_keys=False)' < $ig_json > $ig_yaml
       echo "========== ig_yaml = $ig_yaml =========="
       done
 
