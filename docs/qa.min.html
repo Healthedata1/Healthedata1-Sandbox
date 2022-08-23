@@ -1,0 +1,1435 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = errors = 176, warn = 74, info = 0, 82 -->
+<head>
+  <title>HealthEData_1Sandbox : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+    span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
+    span.toggle  { font-size: 10px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+    function toggle(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Validation Information') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Validation Information';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Validation Information';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for HealthEData_1Sandbox</h1>
+ <p>Generated Tue Aug 23 10:34:59 PDT 2022, FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = <a href="http://www.fhir.org/guides/healthedata1-sandbox">http://www.fhir.org/guides/healthedata1-sandbox</a> (<a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.1.128</span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = healthedata1-sandbox, Canonical = http://www.fhir.org/guides/healthedata1-sandbox</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>0.1.0: <span stlye="color: marron; font-weight: bold">No entry in the package-list.json file for this version</span></td></tr>
+ <tr><td>Supressed Messages:</td><td>No Suppressed Issues
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> healthedata1-sandbox</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.1.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://www.fhir.org/guides/healthedata1-sandbox</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.terminology.r4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">3.1.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://terminology.hl7.org/3.1.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.sdc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">3.0.0 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: green" title="Latest Milestone Release">M</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc/STU3</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docsdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAJUlEQVR4Xu3IIQEAAAgDsHd9/w4EQIOamFnaBgAA4MMKAACAKwNp30CqZFfFmwAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.r4.examples</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1 <span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="Outdated Release">O</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/R4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Latest Release is 4.3.0</td></tr>
+</table><para>Templates: fhir.base.template#current</para></div></td></tr>
+ <tr><td>Dependent IGs:</td><td><a href="qa-dep.html">no references</a></td></tr>
+ <tr><td>Publication Rules:</td><td>Code = n/a. <ul>
+  <li>package-list.json: package-id is wrong - is 'healthedatainc.sushi-sandbox' should be 'healthedata1-sandbox'</li>
+  <li>package-list.json: canonical is wrong - is 'http://www.fhir.org/guides/healthedata1\-sandbox' should be 'http://www.fhir.org/guides/healthedata1-sandbox'</li>
+  <li>package-list.json: No category entry for the registry category (talk to FHIR product director on #IG Creation for assistance). Note: existing IGs already have a category in the <a href="http://www.fhir.org/guides/healthedata1-sandbox/package-list.json">existing package-list.json</a> - update your package-list.json from there</li>
+  <li>package-list.json: No entry found for version 0.1.0</li>
+</ul>
+ <br/><br/>The copyrightYear parameter ('2020+') in the IG resource is good</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/healthedata1-sandbox (Problem #1 with package-list.json at http://www.fhir.org/guides/healthedata1-sandbox: Invalid HTTP response 404 from http://www.fhir.org/guides/healthedata1-sandbox/package-list.json?nocache=1661276081208 (Not Found) (content in /var/folders/q_/m2_r2plx69313_bzdypfs7440000gn/T/fhir-http-2.log))</td></tr>
+ <tr><td>IPA Comparison:</td><td> n/a</td></tr>
+ <tr><td>Summary:</td><td> errors = 176, warn = 74, info = 0, broken links = 82</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>98</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_examples_allergy-list"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/allergy-list</b></a></td><td><b>4</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-capst"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-capst</b></a></td><td><b>132</b></td><td><b>33</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-recognized-profile"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-recognized-profile</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-search-combo"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-search-combo</b></a></td><td><b>0</b></td><td><b>2</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-test-obs"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs</b></a></td><td><b>0</b></td><td><b>3</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-problems-and-health-concerns"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-problems-and-health-concerns</b></a></td><td><b>8</b></td><td><b>9</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-questionnaireresponse"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-questionnaireresponse</b></a></td><td><b>15</b></td><td><b>25</b></td><td><b>0</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_ValueSet-cdex-attachment-codes"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-cdex-attachment-codes</b></a></td><td><b>1</b></td><td><b>0</b></td><td><b>0</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
+ <div style="border: 1px grey solid; display: none" id="v"></div>
+ <table class="grid">
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.document.mode</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.fhirVersion</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.format</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/capability-format-type could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.kind</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.messaging.supportedMessage.mode</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.interaction.code</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.mode</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.conditionalDelete</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.conditionalRead</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.interaction.code</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.referencePolicy</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.searchParam.type</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.type</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.rest.resource.versioning</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>CapabilityStatement.status</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource List/current-allergies.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>?pkp-1?</b></td><td><b>error</b></td><td title=""><b>The reference http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l1232">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 331, column 115</a></b></td><td><b>error</b></td><td><b>The link 'document-mode|5.0.0-cibuild.html' for &quot;document-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l1382">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 355, column 115</a></b></td><td><b>error</b></td><td><b>The link 'FHIR-version|5.0.0-cibuild.html' for &quot;FHIR-version|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l1444">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 365, column 115</a></b></td><td><b>error</b></td><td><b>The link 'capability-format-type.html' for &quot;capability-format-type&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l1873">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 426, column 115</a></b></td><td><b>error</b></td><td><b>The link 'capability-statement-kind|5.0.0-cibuild.html' for &quot;capability-statement-kind|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l2270">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 486, column 115</a></b></td><td><b>error</b></td><td><b>The link 'event-capability-mode|5.0.0-cibuild.html' for &quot;event-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l2708">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 555, column 115</a></b></td><td><b>error</b></td><td><b>The link 'system-restful-interaction|5.0.0-cibuild.html' for &quot;system-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l2793">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 568, column 115</a></b></td><td><b>error</b></td><td><b>The link 'restful-capability-mode|5.0.0-cibuild.html' for &quot;restful-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l2986">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 599, column 115</a></b></td><td><b>error</b></td><td><b>The link 'conditional-delete-status|5.0.0-cibuild.html' for &quot;conditional-delete-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l3042">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 609, column 115</a></b></td><td><b>error</b></td><td><b>The link 'conditional-read-status|5.0.0-cibuild.html' for &quot;conditional-read-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l3225">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 638, column 115</a></b></td><td><b>error</b></td><td><b>The link 'type-restful-interaction|5.0.0-cibuild.html' for &quot;type-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l3615">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 694, column 115</a></b></td><td><b>error</b></td><td><b>The link 'reference-handling-policy|5.0.0-cibuild.html' for &quot;reference-handling-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l3916">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 738, column 115</a></b></td><td><b>error</b></td><td><b>The link 'search-param-type|5.0.0-cibuild.html' for &quot;search-param-type|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l4075">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 762, column 115</a></b></td><td><b>error</b></td><td><b>The link 'resource-types|5.0.0-cibuild.html' for &quot;resource-types|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l4168">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 777, column 115</a></b></td><td><b>error</b></td><td><b>The link 'versioning-policy|5.0.0-cibuild.html' for &quot;versioning-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement-definitions.html#l4605">docs/StructureDefinition-CapabilityStatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 842, column 115</a></b></td><td><b>error</b></td><td><b>The link 'publication-status|5.0.0-cibuild.html' for &quot;publication-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l656">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 302, column 1851</a></b></td><td><b>error</b></td><td><b>The link 'document-mode|5.0.0-cibuild.html' for &quot;document-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l735">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 305, column 1865</a></b></td><td><b>error</b></td><td><b>The link 'FHIR-version|5.0.0-cibuild.html' for &quot;FHIR-version|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l767">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 306, column 1776</a></b></td><td><b>error</b></td><td><b>The link 'capability-format-type.html' for &quot;capability-format-type&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1020">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 315, column 2024</a></b></td><td><b>error</b></td><td><b>The link 'capability-statement-kind|5.0.0-cibuild.html' for &quot;capability-statement-kind|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1242">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 324, column 1971</a></b></td><td><b>error</b></td><td><b>The link 'event-capability-mode|5.0.0-cibuild.html' for &quot;event-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1464">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 333, column 1824</a></b></td><td><b>error</b></td><td><b>The link 'system-restful-interaction|5.0.0-cibuild.html' for &quot;system-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1518">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 335, column 1857</a></b></td><td><b>error</b></td><td><b>The link 'restful-capability-mode|5.0.0-cibuild.html' for &quot;restful-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1624">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 339, column 1880</a></b></td><td><b>error</b></td><td><b>The link 'conditional-delete-status|5.0.0-cibuild.html' for &quot;conditional-delete-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1656">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 340, column 1872</a></b></td><td><b>error</b></td><td><b>The link 'conditional-read-status|5.0.0-cibuild.html' for &quot;conditional-read-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1753">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 344, column 1994</a></b></td><td><b>error</b></td><td><b>The link 'type-restful-interaction|5.0.0-cibuild.html' for &quot;type-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l1953">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 352, column 1856</a></b></td><td><b>error</b></td><td><b>The link 'reference-handling-policy|5.0.0-cibuild.html' for &quot;reference-handling-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l2101">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1999</a></b></td><td><b>error</b></td><td><b>The link 'search-param-type|5.0.0-cibuild.html' for &quot;search-param-type|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l2185">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 361, column 1917</a></b></td><td><b>error</b></td><td><b>The link 'resource-types|5.0.0-cibuild.html' for &quot;resource-types|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l2238">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 363, column 2176</a></b></td><td><b>error</b></td><td><b>The link 'versioning-policy|5.0.0-cibuild.html' for &quot;versioning-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l2484">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 373, column 1879</a></b></td><td><b>error</b></td><td><b>The link 'publication-status|5.0.0-cibuild.html' for &quot;publication-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l2997">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 402, column 1839</a></b></td><td><b>error</b></td><td><b>The link 'document-mode|5.0.0-cibuild.html' for &quot;document-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3076">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 405, column 1881</a></b></td><td><b>error</b></td><td><b>The link 'FHIR-version|5.0.0-cibuild.html' for &quot;FHIR-version|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3108">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 406, column 1764</a></b></td><td><b>error</b></td><td><b>The link 'capability-format-type.html' for &quot;capability-format-type&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3361">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 415, column 2040</a></b></td><td><b>error</b></td><td><b>The link 'capability-statement-kind|5.0.0-cibuild.html' for &quot;capability-statement-kind|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3583">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 424, column 1959</a></b></td><td><b>error</b></td><td><b>The link 'event-capability-mode|5.0.0-cibuild.html' for &quot;event-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3805">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 433, column 1840</a></b></td><td><b>error</b></td><td><b>The link 'system-restful-interaction|5.0.0-cibuild.html' for &quot;system-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3859">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 435, column 1873</a></b></td><td><b>error</b></td><td><b>The link 'restful-capability-mode|5.0.0-cibuild.html' for &quot;restful-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3965">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 439, column 1896</a></b></td><td><b>error</b></td><td><b>The link 'conditional-delete-status|5.0.0-cibuild.html' for &quot;conditional-delete-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l3997">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 440, column 1860</a></b></td><td><b>error</b></td><td><b>The link 'conditional-read-status|5.0.0-cibuild.html' for &quot;conditional-read-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l4094">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 444, column 1982</a></b></td><td><b>error</b></td><td><b>The link 'type-restful-interaction|5.0.0-cibuild.html' for &quot;type-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l4294">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 452, column 1844</a></b></td><td><b>error</b></td><td><b>The link 'reference-handling-policy|5.0.0-cibuild.html' for &quot;reference-handling-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l4442">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 458, column 1987</a></b></td><td><b>error</b></td><td><b>The link 'search-param-type|5.0.0-cibuild.html' for &quot;search-param-type|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l4526">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 461, column 1933</a></b></td><td><b>error</b></td><td><b>The link 'resource-types|5.0.0-cibuild.html' for &quot;resource-types|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l4579">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 463, column 2192</a></b></td><td><b>error</b></td><td><b>The link 'versioning-policy|5.0.0-cibuild.html' for &quot;versioning-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l4825">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 473, column 1895</a></b></td><td><b>error</b></td><td><b>The link 'publication-status|5.0.0-cibuild.html' for &quot;publication-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l5295">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 638, column 1851</a></b></td><td><b>error</b></td><td><b>The link 'document-mode|5.0.0-cibuild.html' for &quot;document-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l5374">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 641, column 1865</a></b></td><td><b>error</b></td><td><b>The link 'FHIR-version|5.0.0-cibuild.html' for &quot;FHIR-version|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l5406">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 642, column 1776</a></b></td><td><b>error</b></td><td><b>The link 'capability-format-type.html' for &quot;capability-format-type&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l5659">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 651, column 2024</a></b></td><td><b>error</b></td><td><b>The link 'capability-statement-kind|5.0.0-cibuild.html' for &quot;capability-statement-kind|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l5881">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 660, column 1971</a></b></td><td><b>error</b></td><td><b>The link 'event-capability-mode|5.0.0-cibuild.html' for &quot;event-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6103">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 669, column 1824</a></b></td><td><b>error</b></td><td><b>The link 'system-restful-interaction|5.0.0-cibuild.html' for &quot;system-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6157">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 671, column 1857</a></b></td><td><b>error</b></td><td><b>The link 'restful-capability-mode|5.0.0-cibuild.html' for &quot;restful-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6263">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 675, column 1880</a></b></td><td><b>error</b></td><td><b>The link 'conditional-delete-status|5.0.0-cibuild.html' for &quot;conditional-delete-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6295">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 676, column 1872</a></b></td><td><b>error</b></td><td><b>The link 'conditional-read-status|5.0.0-cibuild.html' for &quot;conditional-read-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6392">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 680, column 1994</a></b></td><td><b>error</b></td><td><b>The link 'type-restful-interaction|5.0.0-cibuild.html' for &quot;type-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6592">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 688, column 1856</a></b></td><td><b>error</b></td><td><b>The link 'reference-handling-policy|5.0.0-cibuild.html' for &quot;reference-handling-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6740">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 694, column 1999</a></b></td><td><b>error</b></td><td><b>The link 'search-param-type|5.0.0-cibuild.html' for &quot;search-param-type|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6824">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 697, column 1917</a></b></td><td><b>error</b></td><td><b>The link 'resource-types|5.0.0-cibuild.html' for &quot;resource-types|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l6877">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 699, column 2176</a></b></td><td><b>error</b></td><td><b>The link 'versioning-policy|5.0.0-cibuild.html' for &quot;versioning-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l7123">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 709, column 1879</a></b></td><td><b>error</b></td><td><b>The link 'publication-status|5.0.0-cibuild.html' for &quot;publication-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l7636">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 738, column 1839</a></b></td><td><b>error</b></td><td><b>The link 'document-mode|5.0.0-cibuild.html' for &quot;document-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l7715">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 741, column 1881</a></b></td><td><b>error</b></td><td><b>The link 'FHIR-version|5.0.0-cibuild.html' for &quot;FHIR-version|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l7747">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 742, column 1764</a></b></td><td><b>error</b></td><td><b>The link 'capability-format-type.html' for &quot;capability-format-type&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8000">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 751, column 2040</a></b></td><td><b>error</b></td><td><b>The link 'capability-statement-kind|5.0.0-cibuild.html' for &quot;capability-statement-kind|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8222">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 760, column 1959</a></b></td><td><b>error</b></td><td><b>The link 'event-capability-mode|5.0.0-cibuild.html' for &quot;event-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8444">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 769, column 1840</a></b></td><td><b>error</b></td><td><b>The link 'system-restful-interaction|5.0.0-cibuild.html' for &quot;system-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8498">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 771, column 1873</a></b></td><td><b>error</b></td><td><b>The link 'restful-capability-mode|5.0.0-cibuild.html' for &quot;restful-capability-mode|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8604">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 775, column 1896</a></b></td><td><b>error</b></td><td><b>The link 'conditional-delete-status|5.0.0-cibuild.html' for &quot;conditional-delete-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8636">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 776, column 1860</a></b></td><td><b>error</b></td><td><b>The link 'conditional-read-status|5.0.0-cibuild.html' for &quot;conditional-read-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8733">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 780, column 1982</a></b></td><td><b>error</b></td><td><b>The link 'type-restful-interaction|5.0.0-cibuild.html' for &quot;type-restful-interaction|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l8933">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 788, column 1844</a></b></td><td><b>error</b></td><td><b>The link 'reference-handling-policy|5.0.0-cibuild.html' for &quot;reference-handling-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l9081">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 794, column 1987</a></b></td><td><b>error</b></td><td><b>The link 'search-param-type|5.0.0-cibuild.html' for &quot;search-param-type|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l9165">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 797, column 1933</a></b></td><td><b>error</b></td><td><b>The link 'resource-types|5.0.0-cibuild.html' for &quot;resource-types|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l9218">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 799, column 2192</a></b></td><td><b>error</b></td><td><b>The link 'versioning-policy|5.0.0-cibuild.html' for &quot;versioning-policy|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-CapabilityStatement.html#l9464">docs/StructureDefinition-CapabilityStatement.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 809, column 1895</a></b></td><td><b>error</b></td><td><b>The link 'publication-status|5.0.0-cibuild.html' for &quot;publication-status|5.0.0-cibuild&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-capabilitystatement-recognized-profile.html#l310">docs/StructureDefinition-capabilitystatement-recognized-profile.html#/html/body/div/div/div/div/div/p/a at Line 212, column 88</a></b></td><td><b>error</b></td><td><b>The link 'resource.html#profile-tags' for &quot;meta.profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-capabilitystatement-recognized-profile.html#l310">docs/StructureDefinition-capabilitystatement-recognized-profile.html#/html/body/div/div/div/div/div/p/a at Line 212, column 228</a></b></td><td><b>error</b></td><td><b>The link 'search.html#profile' for &quot;_profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#l400">docs/artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 221, column 88</a></b></td><td><b>error</b></td><td><b>The link 'resource.html#profile-tags' for &quot;meta.profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#l400">docs/artifacts.html#/html/body/div/div/div/div/div/div/p/table/tbody/tr/td/p/a at Line 221, column 228</a></b></td><td><b>error</b></td><td><b>The link 'search.html#profile' for &quot;_profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="changes.html#l264">docs/changes.html#/html/body/div/div/div/div/div/ul/li/a at Line 154, column 13</a></b></td><td><b>error</b></td><td><b>The link 'http://build.fhir.org/ig/HL7/US-Core' for &quot;http://build.fhir.org/ig/HL7/US-Core&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="examples.html#l250">docs/examples.html#/html/body/div/div/div/div/div/p/a at Line 149, column 106</a></b></td><td><b>error</b></td><td><b>The link 'downloads.html#examples' for &quot;here&quot; cannot be resolved (valid targets: [segment-header, publish-box, bottom, foo, segment-post-footer, ig-status, top, downloads, stripe, segment-footer, segment-navbar, segment-content, segment-breadcrumb])</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="examples.html#l271">docs/examples.html#/html/body/div/div/div/div/div/ul/li/a at Line 156, column 22</a></b></td><td><b>error</b></td><td><b>The link 'List-current-allergies' for &quot;current-allergies&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_examples_allergy-list"> </a>
+<h2><a href="List-current-allergies.html">input/examples/allergy-list.xml</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>List: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/list.html">List</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List.extension[0].value.ofType(Reference) (l5/c21)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Patient/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List.source (l38/c11)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'Patient/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List.entry[0].item (l48/c11)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'AllergyIntolerance/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>List.entry[1].item (l53/c11)</b></td><td><b>error</b></td><td title="Reference_REF_CantResolve"><b>Unable to resolve resource with reference 'AllergyIntolerance/medication'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-capst"> </a>
+<h2><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.description which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.format which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.implementationGuide which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.name which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.implementation which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.copyright which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.patchFormat which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.version which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.purpose which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.date which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.software which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.jurisdiction which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.imports which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.fhirVersion which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.kind which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.url which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.publisher which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.useContext which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.title which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.contact which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.instantiates which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.document which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.status which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.experimental which is not found in the in base DomainResource</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.document.mode which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.document.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.document.profile which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.implementation.custodian which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.implementation.url which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.implementation.description which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.endpoint which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.reliableCache which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.supportedMessage which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.endpoint.address which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.endpoint.protocol which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.supportedMessage.mode which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.messaging.supportedMessage.definition which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.interaction which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.mode which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.operation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.compartment which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.searchParam which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.security which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.interaction.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.interaction.code which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.conditionalCreate which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.supportedProfile which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.updateCreate which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.conditionalRead which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.versioning which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.conditionalUpdate which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.readHistory which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.conditionalDelete which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchRevInclude which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.interaction which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.operation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.referencePolicy which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.type which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchParam which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchInclude which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.profile which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.interaction.code which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.interaction.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.operation.definition which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.operation.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.operation.name which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchParam.documentation which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchParam.name which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchParam.definition which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.resource.searchParam.type which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.security.service which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.security.cors which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.rest.security.description which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.software.name which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.software.releaseDate which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>StructureDefinition profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement: Differential contains path CapabilityStatement.software.version which is not found in the in base profile http://hl7.org/fhir/StructureDefinition/CapabilityStatement</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>error</b></td><td title=""><b>The element CapabilityStatement.url is out of order (and maybe others after it)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : document-mode|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : FHIR-version|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : capability-statement-kind|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : event-capability-mode|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : system-restful-interaction|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : restful-capability-mode|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : conditional-delete-status|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : conditional-read-status|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : type-restful-interaction|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : reference-handling-policy|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : search-param-type|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : resource-types|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : versioning-policy|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.text.div</b></td><td><b>error</b></td><td title="XHTML_URL_INVALID"><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : publication-status|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.extension[1]</b></td><td><b>error</b></td><td title="Extension_EXT_Unknown_NotHere"><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-implements is unknown, and not allowed here</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.extension[1].url</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-implements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.extension[1].value.ofType(uri)</b></td><td><b>error</b></td><td title="Type_Specific_Checks_DT_URL_Resolve"><b>URL value 'http://hl7.org/fhir/StructureDefinition/CanonicalResource' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[15].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[18].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[19].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-format-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[28].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[37].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[39].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[46].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[48].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[52].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[53].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[57].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[65].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[71].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[74].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[76].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[86].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[7].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[10].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[11].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-format-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[20].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[29].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[31].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[38].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[40].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[44].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[45].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[49].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[57].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[63].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[66].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[68].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[78].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[7].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild on element CapabilityStatement.document.mode could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[10].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild on element CapabilityStatement.fhirVersion could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[11].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/capability-format-type on element CapabilityStatement.format could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[20].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild on element CapabilityStatement.kind could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[29].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild on element CapabilityStatement.messaging.supportedMessage.mode could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[31].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-cibuild on element CapabilityStatement.patchFormat could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[38].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild on element CapabilityStatement.rest.interaction.code could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[40].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild on element CapabilityStatement.rest.mode could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[44].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild on element CapabilityStatement.rest.resource.conditionalDelete could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[45].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild on element CapabilityStatement.rest.resource.conditionalRead could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[49].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild on element CapabilityStatement.rest.resource.interaction.code could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[57].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild on element CapabilityStatement.rest.resource.referencePolicy could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[63].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild on element CapabilityStatement.rest.resource.searchParam.type could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[66].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild on element CapabilityStatement.rest.resource.type could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[68].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild on element CapabilityStatement.rest.resource.versioning could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[78].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild on element CapabilityStatement.status could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[15].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild on element CapabilityStatement.document.mode could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[18].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild on element CapabilityStatement.fhirVersion could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[19].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/capability-format-type on element CapabilityStatement.format could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[28].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild on element CapabilityStatement.kind could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[37].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild on element CapabilityStatement.messaging.supportedMessage.mode could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[39].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-cibuild on element CapabilityStatement.patchFormat could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[46].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild on element CapabilityStatement.rest.interaction.code could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[48].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild on element CapabilityStatement.rest.mode could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[52].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild on element CapabilityStatement.rest.resource.conditionalDelete could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[53].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild on element CapabilityStatement.rest.resource.conditionalRead could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[57].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild on element CapabilityStatement.rest.resource.interaction.code could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[65].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild on element CapabilityStatement.rest.resource.referencePolicy could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[71].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild on element CapabilityStatement.rest.resource.searchParam.type could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[74].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild on element CapabilityStatement.rest.resource.type could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[76].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild on element CapabilityStatement.rest.resource.versioning could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[86].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild on element CapabilityStatement.status could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/CapabilityStatement')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-recognized-profile"> </a>
+<h2><a href="StructureDefinition-capabilitystatement-recognized-profile.html">input/resources/StructureDefinition-recognized-profile.json</a> <span id="svi3" class="toggle" onclick="toggle('vi3')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi3')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi3"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-recognized-profile')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-search-combo"> </a>
+<h2><a href="StructureDefinition-capabilitystatement-search-parameter-combination.html">input/resources/StructureDefinition-search-combo.json</a> <span id="svi4" class="toggle" onclick="toggle('vi4')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi4')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi4"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition</b></td><td><b>warning</b></td><td title="Rule sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed"><b>Rule sdf-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this extension</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-test-obs"> </a>
+<h2><a href="StructureDefinition-argo-write-observation.html">input/resources/StructureDefinition-test-obs.json</a> <span id="svi5" class="toggle" onclick="toggle('vi5')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi5')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi5"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[5].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://loinc.org/vs/valid-hl7-attachment-requests on element Observation.meta.tag could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[18].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://loinc.org/vs/valid-hl7-attachment-requests on element Observation.meta.tag could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-problems-and-health-concerns"> </a>
+<h2><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a> <span id="svi6" class="toggle" onclick="toggle('vi6')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi6')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi6"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns#Condition.subject</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[14].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[15].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td title="Terminology_PassThrough_TX_Message"><b>The code &quot;LG41762-2&quot; is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[17].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[19].type[0].targetProfile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[5].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[6].pattern.ofType(CodeableConcept).coding[0]</b></td><td><b>error</b></td><td title="Terminology_PassThrough_TX_Message"><b>The code &quot;LG41762-2&quot; is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[7].binding.valueSet</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[8].type[0].targetProfile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'Condition.subject')</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[5].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern on element Condition.category could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[7].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code on element Condition.code could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[8].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[14].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern on element Condition.category could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[17].binding</b></td><td><b>warning</b></td><td title=""><b>The valueSet reference http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code on element Condition.code could not be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[19].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_StructureDefinition-us-core-questionnaireresponse"> </a>
+<h2><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a> <span id="svi7" class="toggle" onclick="toggle('vi7')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi7')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi7"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse#QuestionnaireResponse.subject</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse#QuestionnaireResponse.author</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse#QuestionnaireResponse.author</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse#QuestionnaireResponse.author</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse#QuestionnaireResponse.author</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse#QuestionnaireResponse.questionnaire.extension:url</b></td><td><b>warning</b></td><td title=""><b>The type of profile http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url cannot be checked as the profile is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[41].type[0].profile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[44].type[0].targetProfile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[1]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[2]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[5]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[7].type[0].profile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[9].type[0].targetProfile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[0]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[1]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[2]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[5]</b></td><td><b>error</b></td><td title="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'QuestionnaireResponse.subject')</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'QuestionnaireResponse.author')</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'QuestionnaireResponse.author')</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'QuestionnaireResponse.author')</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'QuestionnaireResponse.author')</b></td><td><b>warning</b></td><td title=""><b>Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson is valid constraint on the base because it is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element.where(path = 'QuestionnaireResponse.questionnaire.extension:url')</b></td><td><b>warning</b></td><td title=""><b>The type of profile http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url cannot be checked as the profile is not known</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[7].type[0].profile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[9].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.differential.element[11].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[41].type[0].profile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[44].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.snapshot.element[47].type[0].targetProfile[0]</b></td><td><b>warning</b></td><td title=""><b>Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>us-core-questionnaireresponse</b></td><td><b>error</b></td><td title=""><b><a href="us-core-questionnaireresponse.html">us-core-questionnaireresponse</a>: Unable to find Extension 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' referenced at http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse differential QuestionnaireResponse.questionnaire.extension (url)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>us-core-questionnaireresponse</b></td><td><b>error</b></td><td title=""><b><a href="us-core-questionnaireresponse.html">us-core-questionnaireresponse</a>: Unable to find Extension 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' referenced at http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse snapshot QuestionnaireResponse.questionnaire.extension (url)</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>us-core-questionnaireresponse</b></td><td><b>error</b></td><td title=""><b><a href="us-core-questionnaireresponse.html">us-core-questionnaireresponse</a>: Unable to find Extension 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' referenced at http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse snapshot QuestionnaireResponse.questionnaire.extension (url)</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_ValueSet-cdex-attachment-codes"> </a>
+<h2><a href="ValueSet-cdex-attachment-codes.html">input/resources/ValueSet-cdex-attachment-codes.json</a> <span id="svi8" class="toggle" onclick="toggle('vi8')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi8')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi8"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
+</div>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>ValueSet.where(id = 'cdex-attachment-codes')</b></td><td><b>error</b></td><td title=""><b>Error from server: The filter &quot;ValidHL7AttachmentRequest = Y&quot; from the value set http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/cdex-attachment-codes was not understood in the context of http://loinc.org</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="Extension_EXT_Unknown_NotHere"> </a>
+<h2>Extension_EXT_Unknown_NotHere</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-implements is unknown, and not allowed here</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Reference_REF_CantResolve"> </a>
+<h2>Reference_REF_CantResolve</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="List-current-allergies.html">input/examples/allergy-list.xml</a></td><td><b>Unable to resolve resource with reference 'Patient/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="List-current-allergies.html">input/examples/allergy-list.xml</a></td><td><b>Unable to resolve resource with reference 'Patient/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="List-current-allergies.html">input/examples/allergy-list.xml</a></td><td><b>Unable to resolve resource with reference 'AllergyIntolerance/example'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="List-current-allergies.html">input/examples/allergy-list.xml</a></td><td><b>Unable to resolve resource with reference 'AllergyIntolerance/medication'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE"> </a>
+<h2>TYPE_SPECIFIC_CHECKS_DT_CANONICAL_RESOLVE</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-format-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/document-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/FHIR-version|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-format-type' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/capability-statement-kind|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/event-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/mimetypes|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/system-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/restful-capability-mode|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-delete-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/conditional-read-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/type-restful-interaction|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/reference-handling-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/search-param-type|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/resource-types|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/versioning-policy|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/ValueSet/publication-status|5.0.0-cibuild' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/problem-or-health-concern' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-code' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-questionnaireresponse.html">input/resources/StructureDefinition-us-core-questionnaireresponse.json</a></td><td><b>Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-relatedperson' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Terminology_PassThrough_TX_Message"> </a>
+<h2>Terminology_PassThrough_TX_Message</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>The code &quot;LG41762-2&quot; is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-us-core-problems-and-health-concerns.html">input/resources/StructureDefinition-us-core-problems-and-health-concerns.json</a></td><td><b>The code &quot;LG41762-2&quot; is not valid in the system http://loinc.org; The code provided (http://loinc.org#LG41762-2) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4) for 'http://loinc.org#LG41762-2'</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="Type_Specific_Checks_DT_URL_Resolve"> </a>
+<h2>Type_Specific_Checks_DT_URL_Resolve</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-implements' does not resolve</b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>URL value 'http://hl7.org/fhir/StructureDefinition/CanonicalResource' does not resolve</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="XHTML_URL_INVALID"> </a>
+<h2>XHTML_URL_INVALID</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : document-mode|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : FHIR-version|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : capability-statement-kind|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : event-capability-mode|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : system-restful-interaction|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : restful-capability-mode|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : conditional-delete-status|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : conditional-read-status|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : type-restful-interaction|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : reference-handling-policy|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : search-param-type|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : resource-types|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : versioning-policy|5.0.0-cibuild.html </b></td>
+   </tr>
+   <tr style="background-color: #ffeeee">
+     <td><a href="StructureDefinition-CapabilityStatement.html">input/resources/StructureDefinition-capst.json</a></td><td><b>The URL is not valid because '(URL contains Invalid Characters ([|]))' : publication-status|5.0.0-cibuild.html </b></td>
+   </tr>
+</table>
+</body>
+</html>

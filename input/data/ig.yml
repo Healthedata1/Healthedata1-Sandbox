@@ -23,35 +23,41 @@ dependsOn:
 definition:
   resource:
   - reference:
-      reference: CodeSystem/us-core-tags
-    description: Tags code used in US Core `meta.tag` profiles. The are typically
-      used when there is a need for categorization or workflow hints.
+      reference: StructureDefinition/CapabilityStatement
+    description: A Capability Statement documents a set of capabilities (behaviors)
+      of a FHIR Server for a particular version of FHIR that may be used as a statement
+      of actual server functionality or a statement of required or desired server
+      implementation.
     exampleBoolean: false
-    name: US Core Tags
+    name: CapabilityStatement
   - reference:
-      reference: OperationDefinition/request-attachment
+      reference: StructureDefinition/capabilitystatement-recognized-profile
+    description: This extension identifies a profile the system will recognize if
+      it is declared in [`meta.profile`](resource.html#profile-tags). If the system
+      supports the [`_profile`](search.html#profile) search parameter, it will be
+      capable of searching on the profile. The system may support validation against
+      the profile.
     exampleBoolean: false
-    name: Request Attachment Operation
+    name: Recognized Profile
   - reference:
-      reference: OperationDefinition/submit-attachment
-    description: "This operation is used to submit attachments (additional information)\
-      \ for Claims or Prior Authorization. This operation accepts the clinical/administrative\
-      \ attachments and the necessary information needed to re-associate them to the\
-      \ claim or prior authorization, and returns a transaction layer HTTP response.\
-      \  The operation may be invoked *before, at the same time as, or after* the\
-      \ claim or pre-authorization has been supplied to the Payer.  This operation\
-      \ can be used by any HTTP endpoint, not just FHIR RESTful servers.\n\nThe input\
-      \ parameters are:\n1. One or more Attachments as FHIR Resources\n1. Data elements\
-      \ for reassociation to the Claim/Prior Authorization\n    - What is the documentation\
-      \ for:\n      - Claim\n      - Prior Authorization\n    - Optionally, a unique\
-      \ payer identifier\n    - A unique claim/prior authorization identifier  (referred\
-      \ to as the \"re-association tracking control numbers\")*\n    - Optionally,\
-      \ one or more unique claim line item identifiers\n    - A unique organization/location\
-      \ identifier (e.g., NPI)\n    - A unique provider identifier (e.g., NPI)\n \
-      \   - A unique Patient member identifier\n    - Date of Service\n\nThere are\
-      \ no output parameters."
+      reference: StructureDefinition/capabilitystatement-search-parameter-combination
+    description: 'This extension defines a possible search parameter combination by
+      listing a set of search parameters and indicating whether they are required
+      or optional.
+
+      - If a search combination is specified, clients should expect that they must
+      submit a search that meets one of the required combinations or the search will
+      be unsuccessful.
+
+      - If multiple search parameter combinations are specified, a client may pick
+      between them, and supply the minimal required parameters for any of the combinations.
+
+      - If no parameters in the set of search parameters are listed as required, then
+      *at least one* of the listed optional parameters must be present.  This shorthand
+      method is the same as repeating the entire extension for each combination of
+      optional and required search parameters.'
     exampleBoolean: false
-    name: Submit Attachment Operation
+    name: Search Parameter Combination
   - reference:
       reference: StructureDefinition/argo-write-observation
     description: Defines a "mixin" profile which constrains and extends the Observation
@@ -66,10 +72,6 @@ definition:
       in the FHIR specification.
     exampleBoolean: false
     name: Argo Write Observation Profile
-  - reference:
-      reference: StructureDefinition/us-core-encounter-diagnosis
-    exampleBoolean: false
-    name: US Core Encounter Diagnosis Profile
   - reference:
       reference: StructureDefinition/us-core-problems-and-health-concerns
     description: 'The US Core Problems and Health Concerns Profile is based upon the
@@ -106,11 +108,14 @@ definition:
     exampleBoolean: false
     name: US Core Imaging Codes
   - reference:
-      reference: ValueSet/us-core-tags
-    description: Used to tag patient submitted resources for writing and searching
-      from EHRs
+      reference: StructureDefinition/list-for
+    description: Reference to the entity that this *List* is for.
     exampleBoolean: false
-    name: US Core Tags Value Set
+    name: List For Extension
+  - reference:
+      reference: List/current-allergies
+    name: current-allergies
+    exampleBoolean: true
   page:
     nameUrl: toc.html
     title: Table of Contents
@@ -130,6 +135,9 @@ definition:
       generation: markdown
     - nameUrl: guidance.html
       title: Guidance
+      generation: markdown
+    - nameUrl: help.html
+      title: Help
       generation: markdown
   parameter:
   - code: copyrightyear

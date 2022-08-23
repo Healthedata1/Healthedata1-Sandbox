@@ -1,0 +1,156 @@
+resourceType: StructureDefinition
+id: capabilitystatement-search-parameter-combination
+extension:
+    - 
+        url: 'http://hl7.org/fhir/StructureDefinition/structuredefinition-wg'
+        valueCode: fhir
+    - 
+        url: 'http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm'
+        valueInteger: 1
+url: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
+version: 5.0.0-cibuild
+name: search-parameter-combination
+title: Search Parameter Combination
+status: draft
+experimental: false
+date: '2014-04-12'
+publisher: 'Health Level Seven, Inc. - [WG Name] WG'
+contact:
+    - 
+        telecom:
+            - 
+                system: url
+                value: 'http://hl7.org/special/committees/fhir.htm'
+description: |-
+    This extension defines a possible search parameter combination by listing a set of search parameters and indicating whether they are required or optional.
+    - If a search combination is specified, clients should expect that they must submit a search that meets one of the required combinations or the search will be unsuccessful.
+    - If multiple search parameter combinations are specified, a client may pick between them, and supply the minimal required parameters for any of the combinations.
+    - If no parameters in the set of search parameters are listed as required, then *at least one* of the listed optional parameters must be present.  This shorthand method is the same as repeating the entire extension for each combination of optional and required search parameters.
+fhirVersion: 4.3.0
+mapping:
+    - 
+        identity: v2
+        uri: 'http://hl7.org/v2'
+        name: HL7 v2 Mapping
+    - 
+        identity: rim
+        uri: 'http://hl7.org/v3'
+        name: RIM Mapping
+kind: complex-type
+abstract: false
+context:
+    - 
+        type: element
+        expression: CapabilityStatement.rest.resource
+type: Extension
+baseDefinition: 'http://hl7.org/fhir/StructureDefinition/Extension'
+derivation: constraint
+
+differential:
+    element:
+        - 
+            id: Extension
+            path: Extension
+            short: An allowable parameter combination
+
+            definition: |-
+              This extension defines a possible search parameter combination by listing a set of search parameters and indicating whether they are required or optional.
+              - If a search combination is specified, clients should expect that they must submit a search that meets one of the required combinations or the search will be unsuccessful.
+              - If multiple search parameter combinations are specified, a client may pick between them, and supply the minimal required parameters for any of the combinations.
+              - If no parameters in the set of search parameters are listed as required, then *at least one* of the listed optional parameters must be present.  This shorthand method is the same as repeating the entire extension for each combination of optional and required search parameters.
+
+            comment: 'For example, on the Patient Resource  you could use this to state support for searching by Patient.name and Patient.gender is required.'
+            min: 0
+            max: '*'
+            isModifier: false
+            mapping:
+                - 
+                    identity: v2
+                    map: N/A
+                - 
+                    identity: rim
+                    map: N/A
+        - 
+            id: 'Extension.extension:required'
+            path: Extension.extension
+            sliceName: required
+            short: A required search parameter name
+            definition: A search parameter name in the combination which is required.
+            min: 0
+            max: '*'
+            type:
+                - 
+                    code: Extension
+            isModifier: false
+            mapping:
+                - 
+                    identity: v2
+                    map: N/A
+                - 
+                    identity: rim
+                    map: N/A
+        - 
+            id: 'Extension.extension:required.extension'
+            path: Extension.extension.extension
+            max: '0'
+        - 
+            id: 'Extension.extension:required.url'
+            path: Extension.extension.url
+            type:
+                - 
+                    code: uri
+            fixedUri: required
+        - 
+            id: 'Extension.extension:required.value[x]'
+            path: 'Extension.extension.value[x]'
+            min: 1
+            type:
+                - 
+                    code: string
+        - 
+            id: 'Extension.extension:optional'
+            path: Extension.extension
+            sliceName: optional
+            short: An optional search parameter name
+            definition: A search parameter name in the combination which is optional.
+            comment: 'If a defined parameter is not listed as a required or optional parameter, the implication is that the parameter is not supported with this combination. Servers may ignore It, though some may return an error if it is used.'
+            min: 0
+            max: '*'
+            type:
+                - 
+                    code: Extension
+            isModifier: false
+            mapping:
+                - 
+                    identity: v2
+                    map: N/A
+                - 
+                    identity: rim
+                    map: N/A
+        - 
+            id: 'Extension.extension:optional.extension'
+            path: Extension.extension.extension
+            max: '0'
+        - 
+            id: 'Extension.extension:optional.url'
+            path: Extension.extension.url
+            type:
+                - 
+                    code: uri
+            fixedUri: optional
+        - 
+            id: 'Extension.extension:optional.value[x]'
+            path: 'Extension.extension.value[x]'
+            min: 1
+            type:
+                - 
+                    code: string
+        - 
+            id: Extension.url
+            path: Extension.url
+            fixedUri: 'http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination'
+        - 
+            id: 'Extension.value[x]'
+            path: 'Extension.value[x]'
+            min: 0
+            max: '0'
