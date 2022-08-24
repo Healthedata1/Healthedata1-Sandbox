@@ -1,0 +1,22 @@
+resourceType: ValueSet
+id: us-core-pregnancy-status-observation-codes
+url: 'http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes'
+name: USCorePregnancyStatusObservationCodes
+title: US Core Pregnancy Status Observation Codes
+status: active
+date: '2022-08-24'
+description: >-
+  The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of
+  concepts to capture pregnancy status.
+copyright: >-
+  This material contains content from LOINC (http://loinc.org). LOINC is
+  copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation
+  Identifiers Names and Codes (LOINC) Committee and is available at no cost
+  under the license at http://loinc.org/license. LOINC® is a registered United
+  States trademark of Regenstrief Institute, Inc
+compose:
+  include:
+    - system: 'http://loinc.org'
+      concept:
+        - code: 82810-3
+          display: Pregnancy status

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pregnancy-status"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Pregnancy Status Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a pregnancy status example for the *US Core Pregnancy Status Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation "pregnancy-status" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-us-core-pregnancystatus.html">US Core Pregnancy Status Observation Profile</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: Pregnancy Status <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#82810-3 "Pregnancy status")</span></p><p><b>subject</b>: <a href="Patient/example">Patient/example: Amy Shaw</a></p><p><b>effective</b>: 2022-08-24 10:39:52+0000</p><p><b>value</b>: Pregnant <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#77386006)</span></p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="social-history"/>
+      <display value="Social History"/>
+    </coding>
+    <text value="Social History"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="82810-3"/>
+      <display value="Pregnancy status"/>
+    </coding>
+    <text value="Pregnancy Status"/>
+  </code>
+  <subject>
+    <reference value="Patient/example"/>
+    <display value="Amy Shaw"/>
+  </subject>
+  <effectiveDateTime value="2022-08-24T10:39:52Z"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="77386006"/>
+      <display value="Pregnant"/>
+    </coding>
+    <text value="Pregnant"/>
+  </valueCodeableConcept>
+</Observation>

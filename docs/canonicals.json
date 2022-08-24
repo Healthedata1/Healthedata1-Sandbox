@@ -1,45 +1,17 @@
 [
   {
-    "id": "CapabilityStatement",
+    "id": "us-core-pregnancystatus",
     "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/CapabilityStatement",
+    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus",
     "version": "0.1.0",
-    "name": "CapabilityStatement"
+    "name": "USCorePregnancyStatusProfile"
   },
   {
-    "id": "capabilitystatement-recognized-profile",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-recognized-profile",
-    "version": "0.1.0",
-    "name": "RecognizedProfile"
-  },
-  {
-    "id": "capabilitystatement-search-parameter-combination",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination",
-    "version": "0.1.0",
-    "name": "search-parameter-combination"
-  },
-  {
-    "id": "list-for",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/StructureDefinition/list-for",
-    "version": "0.1.0",
-    "name": "ListFor"
-  },
-  {
-    "id": "us-core-questionnaireresponse",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
-    "version": "0.1.0",
-    "name": "USCoreQuestionnaireResponse"
-  },
-  {
-    "id": "us-core-imaging-codes",
+    "id": "us-core-pregnancy-status-observation-codes",
     "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox//ValueSet/us-core-imaging-codes",
+    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes",
     "version": "0.1.0",
-    "name": "USCoreImagingCodes"
+    "name": "USCorePregnancyStatusObservationCodes"
   },
   {
     "id": "healthedata1-sandbox",
@@ -47,29 +19,5 @@
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
     "version": "0.1.0",
     "name": "HealthEData_1Sandbox"
-  },
-  {
-    "id": "argo-write-observation",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation",
-    "version": "0.1.0",
-    "name": "ArgoWriteObservationProfile"
-  },
-  {
-    "id": "us-core-problems-and-health-concerns",
-    "type": "StructureDefinition",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
-    "version": "0.1.0",
-    "name": "USCoreProblemsHealthConcerns"
-  },
-  {
-    "id": "cdex-attachment-codes",
-    "type": "ValueSet",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/cdex-attachment-codes",
-    "version": "0.1.0",
-    "name": "CDexAttachmentCodes",
-    "oids": [
-      "1.3.6.1.4.1.12009.10.2.6"
-    ]
   }
 ]

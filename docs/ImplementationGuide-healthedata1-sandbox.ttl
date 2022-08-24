@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-08-23T10:54:55-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-08-24T10:46:34-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -423,137 +423,43 @@
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/CapabilityStatement>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/CapabilityStatement" ]
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-pregnancystatus>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-pregnancystatus" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CapabilityStatement" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "A Capability Statement documents a set of capabilities (behaviors) of a FHIR Server for a particular version of FHIR that may be used as a statement of actual server functionality or a statement of required or desired server implementation." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Pregnancy Status Observation Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implementers the U.S. Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the \"state or condition of being pregnant or intent to become pregnant\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 1;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/capabilitystatement-recognized-profile>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/capabilitystatement-recognized-profile" ]
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-pregnancy-status-observation-codes>;
+         fhir:Reference.reference [ fhir:value "ValueSet/us-core-pregnancy-status-observation-codes" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Recognized Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension identifies a profile the system will recognize if it is declared in [`meta.profile`](resource.html#profile-tags). If the system supports the [`_profile`](search.html#profile) search parameter, it will be capable of searching on the profile. The system may support validation against the profile." ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Pregnancy Status Observation Codes" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of concepts to capture pregnancy status." ];
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+         fhir:Extension.valueString [ fhir:value "Observation" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/capabilitystatement-search-parameter-combination>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/capabilitystatement-search-parameter-combination" ]
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Observation/pregnancy-status>;
+         fhir:Reference.reference [ fhir:value "Observation/pregnancy-status" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Search Parameter Combination" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This extension defines a possible search parameter combination by listing a set of search parameters and indicating whether they are required or optional.\n- If a search combination is specified, clients should expect that they must submit a search that meets one of the required combinations or the search will be unsuccessful.\n- If multiple search parameter combinations are specified, a client may pick between them, and supply the minimal required parameters for any of the combinations.\n- If no parameters in the set of search parameters are listed as required, then *at least one* of the listed optional parameters must be present.  This shorthand method is the same as repeating the entire extension for each combination of optional and required search parameters." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 3;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/argo-write-observation" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Argo Write Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines a \"mixin\" profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html). When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 4;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-problems-and-health-concerns" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Problems and Health Concerns Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Problems and Health Concerns Profile is based upon the core FHIR Condition Resource and meets the  U.S. Core Data for Interoperability (USCDI) v2 'Problems' and 'Health Concerns' requirements and SDOH 'Problems/Health Concerns' requirements.  It defines constraints and extensions on the Condition resource for the minimal set of data to record, search, and fetch information about a condition, diagnosis, or other event, situation, issue, or clinical concept that is documented and categorized as a problem or health concern including information about a Social Determinants of Health-related condition.fhirVersion: 4.0.1" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 5;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-questionnaireresponse>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-questionnaireresponse" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Questionnaire Response Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Defines how to represent answers from surveys/questionnaires.  This profile is based on the [SDC Questionnaire Response]" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 6;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/cdex-attachment-codes>;
-         fhir:Reference.reference [ fhir:value "ValueSet/cdex-attachment-codes" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CDex Attachment Codes" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set includes LOINC terms that can be sent by a payer as part of an HL7 attachment request for additional information. This set includes 1) the preferred (generic) document codes that have clinically-relevant HL7 implementation guides, and 2) the HL7 Attachments Work Group -approved document codes that don't yet have an implementation guide." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 7;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-imaging-codes>;
-         fhir:Reference.reference [ fhir:value "ValueSet/us-core-imaging-codes" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Imaging Codes" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This value set includes all LOINC values whose CLASS is \"RAD\" in the LOINC database (Refer to [Appendix A](https://loinc.org/kb/users-guide/loinc-database-structure/) of LOINC Users' Guide)" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 8;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/list-for>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/list-for" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "List For Extension" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Reference to the entity that this *List* is for." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 9;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "List" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/List/current-allergies>;
-         fhir:Reference.reference [ fhir:value "List/current-allergies" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "current-allergies" ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Pregnancy Status Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a pregnancy status example for the *US Core Pregnancy Status Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus>
+       ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
@@ -583,11 +489,6 @@
          fhir:index 4;
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "guidance.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Guidance" ];
-         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
-       ], [
-         fhir:index 5;
-         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "help.html" ];
-         fhir:ImplementationGuide.definition.page.title [ fhir:value "Help" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ]
      ];

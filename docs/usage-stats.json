@@ -2,210 +2,52 @@
   "package": "healthedata1-sandbox",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
-  "extensions": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-recognized-profile",
-      "title": "Recognized Profile",
-      "types": [
-        "canonical"
-      ]
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination",
-      "title": "Search Parameter Combination",
-      "types": [
-        "string",
-        "string",
-        "base64Binary",
-        "boolean",
-        "canonical",
-        "code",
-        "date",
-        "dateTime",
-        "decimal",
-        "id",
-        "instant",
-        "integer",
-        "markdown",
-        "oid",
-        "positiveInt",
-        "string",
-        "time",
-        "unsignedInt",
-        "uri",
-        "url",
-        "uuid",
-        "Address",
-        "Age",
-        "Annotation",
-        "Attachment",
-        "CodeableConcept",
-        "Coding",
-        "ContactPoint",
-        "Count",
-        "Distance",
-        "Duration",
-        "HumanName",
-        "Identifier",
-        "Money",
-        "Period",
-        "Quantity",
-        "Range",
-        "Ratio",
-        "Reference",
-        "SampledData",
-        "Signature",
-        "Timing",
-        "ContactDetail",
-        "Contributor",
-        "DataRequirement",
-        "Expression",
-        "ParameterDefinition",
-        "RelatedArtifact",
-        "TriggerDefinition",
-        "UsageContext",
-        "Dosage",
-        "Meta"
-      ]
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/list-for",
-      "title": "List For Extension",
-      "types": [
-        "Reference"
-      ]
-    }
-  ],
+  "extensions": [],
   "profiles": {
-    "CapabilityStatement": [
-      {
-        "url": "http://hl7.org/fhir/StructureDefinition/CapabilityStatement",
-        "title": "CapabilityStatement"
-      }
-    ],
-    "QuestionnaireResponse": [
-      {
-        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-questionnaireresponse",
-        "title": "US Core Questionnaire Response Profile"
-      }
-    ],
     "Observation": [
       {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation",
-        "title": "Argo Write Observation Profile"
-      }
-    ],
-    "Condition": [
-      {
-        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-problems-and-health-concerns",
-        "title": "US Core Problems and Health Concerns Profile"
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus",
+        "title": "US Core Pregnancy Status Observation Profile"
       }
     ]
   },
   "usage": {
-    "http://hl7.org/fhir/StructureDefinition/condition-assertedDate": [
-      "Condition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/display": [
-      "QuestionnaireResponse.questionnaire"
-    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
-      "StructureDefinition.differential.element.constraint",
       "StructureDefinition.snapshot.element.constraint"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
       "StructureDefinition.snapshot.element.constraint"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
-      "StructureDefinition.differential.element.binding",
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
-      "StructureDefinition.differential.element.binding",
       "StructureDefinition.snapshot.element.binding"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.differential.element.binding",
       "StructureDefinition.snapshot.element.binding"
     ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
-      "StructureDefinition.snapshot.element"
+    "http://hl7.org/fhir/StructureDefinition/instance-description": [
+      "Observation.meta"
     ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
-      "StructureDefinition.differential.element.type",
-      "StructureDefinition.differential.element.type.targetProfile",
-      "StructureDefinition.snapshot.element.type",
-      "StructureDefinition.snapshot.element.type.targetProfile"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/list-for": [
-      "List"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/ordinalValue": [
-      "QuestionnaireResponse.item.answer"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-completionMode": [
-      "QuestionnaireResponse"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-signature": [
-      "QuestionnaireResponse",
-      "QuestionnaireResponse.item"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/regex": [
-      "StructureDefinition.snapshot.element.type"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
-      "StructureDefinition"
+    "http://hl7.org/fhir/StructureDefinition/instance-name": [
+      "Observation.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.snapshot.element"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
-      "StructureDefinition.differential.element",
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-implements": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category": [
-      "StructureDefinition"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
-      "StructureDefinition",
-      "StructureDefinition.differential.element",
       "StructureDefinition.snapshot.element"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
-      "StructureDefinition"
-    ],
-    "http://hl7.org/fhir/build/StructureDefinition/description": [
-      "List"
-    ],
-    "http://hl7.org/fhir/build/StructureDefinition/title": [
-      "List"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
       "ImplementationGuide.definition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/us/core/StructureDefinition/questionnaire-url": [
-      "QuestionnaireResponse.questionnaire"
-    ],
-    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemAnswerMedia": [
-      "QuestionnaireResponse.item.answer"
-    ],
-    "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-itemMedia": [
-      "QuestionnaireResponse.item"
     ]
   }
 }

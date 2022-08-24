@@ -91,9 +91,6 @@
   <li>
     <a href="changes.html">Change Log</a>
   </li>
-  <li>
-    <a href="help.html">Glossary</a>
-  </li>
 </ul>
             </div>  <!-- /.nav-collapse -->
           </div>  <!-- /.container -->
@@ -190,7 +187,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 &lt;/ul&gt;
 </code></pre></div></div>
 
-<ul><li>Argo Write Observation Profile</li><li></li><li>US Core Problems and Health Concerns Profile</li><li>US Core Questionnaire Response Profile</li><li></li></ul>
+<ul><li>US Core Pregnancy Status Observation Profile</li></ul>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
   <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
@@ -241,76 +238,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong></strong></p>
 <ul></ul>
 
-<p><strong>CapabilityStatement</strong></p>
-<ul>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-CapabilityStatement.html">CapabilityStatement</a></li></ul>
-
-<p><strong>Condition</strong></p>
-<ul>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-us-core-problems-and-health-concerns.html">US Core Problems and Health Concerns Profile</a></li></ul>
-
-<p><strong>Extension</strong></p>
-<ul>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-list-for.html">List For Extension</a></li>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-capabilitystatement-recognized-profile.html">Recognized Profile</a></li>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-capabilitystatement-search-parameter-combination.html">Search Parameter Combination</a></li></ul>
-
 <p><strong>Observation</strong></p>
 <ul>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-argo-write-observation.html">Argo Write Observation Profile</a></li></ul>
-
-<p><strong>QuestionnaireResponse</strong></p>
-<ul>
-        
-        
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-us-core-questionnaireresponse.html">US Core Questionnaire Response Profile</a></li></ul>
+        <li><a href="StructureDefinition-us-core-pregnancystatus.html">US Core Pregnancy Status Observation Profile</a></li></ul>
 
 <h3 id="list-highlighting">List highlighting</h3>
 
@@ -453,7 +383,7 @@ Country: US
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Aug 23, 2022 10:54-0700">2022-08-23</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 24, 2022 10:46-0700">2022-08-24</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
