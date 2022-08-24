@@ -1,3 +1,0 @@
-FHIR Glossary Content for Review...
-
-{% include FHIRGlossary.html %}
