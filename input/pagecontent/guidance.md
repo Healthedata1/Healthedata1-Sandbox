@@ -191,7 +191,7 @@ tadaa...
    test code block
    {: style="color: red"}
 
-svg file:
+### svg file
 
 {% include my_plantuml.svg %}
 
