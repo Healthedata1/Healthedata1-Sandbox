@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-08-24T10:46:34-07:00",
+  "date": "2022-09-14T13:58:07-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -34,6 +34,12 @@
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
       "version": "3.1.0"
+    },
+    {
+      "id": "hl7_fhir_us_core",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "packageId": "hl7.fhir.us.core",
+      "version": "5.0.1"
     },
     {
       "id": "hl7_fhir_uv_sdc",

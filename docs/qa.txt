@@ -1,42 +1,34 @@
 ﻿HealthEData_1Sandbox : Validation Results
 =========================================
 
-err = 9, warn = 12, info = 0
-IG Publisher Version: 1.1.128
-Generated Wed Aug 24 10:46:49 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
- Build Errors : 4 / 0 / 0
+err = 6, warn = 3, info = 0
+IG Publisher Version: 1.2.1
+Generated Wed Sep 14 13:58:40 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 8 / 0 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/observation-pregnancy-status : 1 / 2 / 1
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-pregnancystatus : 8 / 10 / 1
- /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-us-core-pregnancystatus-observation-codes : 0 / 0 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/observation-pregnancy-status : 0 / 1 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-pregnancystatus : 4 / 2 / 1
+ /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-us-core-pregnancy-status-observation-codes : 2 / 0 / 1
 </table>
 == n/a ==
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-pregnancy-status.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 998: The link 'Patient/example' for "Patient/example: Amy Shaw" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/Observation-pregnancy-status.html#/html/body/div/div/div/div/div/div/p/a at Line 175, column 1030: The link 'Patient-example.html' for "Patient/example: Amy Shaw" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/changes.html#/html/body/div/div/div/div/div/ul/li/a at Line 151, column 13: The link 'http://build.fhir.org/ig/HL7/US-Core' for "http://build.fhir.org/ig/HL7/US-Core" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/changes.html#/html/body/div/div/div/div/div/ul/li/a at Line 163, column 13: The link 'http://hl7.org/fhir/us/core/2022Jan' for "http://hl7.org/fhir/us/core/2022Jan" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/examples.html#/html/body/div/div/div/div/div/p/a at Line 146, column 106: The link 'downloads.html#examples' for "here" cannot be resolved (valid targets: [segment-header, publish-box, bottom, foo, segment-post-footer, ig-status, top, downloads, stripe, segment-footer, segment-navbar, segment-content, segment-breadcrumb])
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/examples.html#/html/body/div/div/div/div/div/ul/li/a at Line 153, column 22: The link 'Observation-pregnancy-status' for "Pregnancy Status Example" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/p/a at Line 192, column 5: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 211, column 8: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 234, column 12: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
 == fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json ==
 == input/examples/observation-pregnancy-status.json ==
-WARNING: Observation/pregnancy-status: Observation.status: ValueSet http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status not found by validator
-ERROR: Observation/pregnancy-status: Observation.subject: Unable to resolve resource with reference 'Patient/example'
 WARNING: Observation/pregnancy-status: Observation.value.ofType(CodeableConcept): ValueSet http://hl7.org/fhir/us/ecr/ValueSet/us-ph-pregnancy-status not found by validator
 == input/resources/StructureDefinition-us-core-pregnancystatus.json ==
-WARNING: US Core Pregnancy Status Observation Profile.Observation.status: Binding http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status could not be located
-WARNING: http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus#Observation.subject: Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known
-ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[12].binding.valueSet: Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status' does not resolve
-ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[16].type[0].targetProfile[0]: Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve
-ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[24].binding.extension[0].value.ofType(canonical): Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max' does not resolve
+ERROR: StructureDefinition.where(url = 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus'): Conformance resource /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-pregnancystatus.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-pregnancystatus) does not match the URL (http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus)
 ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[24].binding.valueSet: Canonical URL 'http://hl7.org/fhir/us/ecr/ValueSet/us-ph-pregnancy-status' does not resolve
-ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[1].binding.valueSet: Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status' does not resolve
-ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[5].type[0].targetProfile[0]: Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient' does not resolve
-ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[7].binding.extension[0].value.ofType(canonical): Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smokingstatus-max' does not resolve
 ERROR: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[7].binding.valueSet: Canonical URL 'http://hl7.org/fhir/us/ecr/ValueSet/us-ph-pregnancy-status' does not resolve
-WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition: Binding http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status could not be located
-WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element.where(path = 'Observation.subject'): Cannot check whether the target profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient is valid constraint on the base because it is not known
-WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[1].binding: The valueSet reference http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status on element Observation.status could not be resolved
-WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[5].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.differential.element[7].binding: The valueSet reference http://hl7.org/fhir/us/ecr/ValueSet/us-ph-pregnancy-status on element Observation.valueCodeableConcept could not be resolved
-WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[12].binding: The valueSet reference http://hl7.org/fhir/us/core/ValueSet/us-core-observation-smoking-status-status on element Observation.status could not be resolved
-WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[16].type[0].targetProfile[0]: Unable to resolve profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
 WARNING: StructureDefinition/us-core-pregnancystatus: StructureDefinition.snapshot.element[24].binding: The valueSet reference http://hl7.org/fhir/us/ecr/ValueSet/us-ph-pregnancy-status on element Observation.value[x] could not be resolved
-== input/resources/ValueSet-us-core-pregnancystatus-observation-codes.json ==
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-pregnancystatus: URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-pregnancystatus vs http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus
+== input/resources/ValueSet-us-core-pregnancy-status-observation-codes.json ==
+ERROR: ValueSet.where(url = 'http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes'): Conformance resource /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-us-core-pregnancy-status-observation-codes.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-pregnancy-status-observation-codes) does not match the URL (http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes)
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/ValueSet-us-core-pregnancy-status-observation-codes: URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-pregnancy-status-observation-codes vs http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes

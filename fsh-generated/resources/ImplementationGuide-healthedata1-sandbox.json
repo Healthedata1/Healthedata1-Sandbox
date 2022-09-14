@@ -25,6 +25,12 @@
   ],
   "dependsOn": [
     {
+      "packageId": "hl7.fhir.us.core",
+      "version": "5.0.1",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "id": "hl7_fhir_us_core"
+    },
+    {
       "packageId": "hl7.fhir.uv.sdc",
       "version": "3.0.0",
       "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",

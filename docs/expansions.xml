@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="2f9863bc-b791-447f-9461-f22456438a68"/>
+  <id value="09512532-5333-46b7-bc54-fd4300df1d3f"/>
   <meta>
-    <lastUpdated value="2022-08-24T10:46:34.527-07:00"/>
+    <lastUpdated value="2022-09-14T13:58:07.968-07:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -16,15 +16,13 @@
           <div xmlns="http://www.w3.org/1999/xhtml">
             <p>This value set contains 1 concepts</p>
             <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.73</p>
-            <p>All codes in this table are from the system 
-              <a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-loinc.html">
-                <code>http://loinc.org</code>
-              </a>
-            </p>
             <table class="codes">
               <tr>
                 <td style="white-space:nowrap">
                   <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
                 </td>
                 <td>
                   <b>Display</b>
@@ -35,6 +33,7 @@
                   <a name="http---loinc.org-82810-3"> </a>  
                   <a href="http://details.loinc.org/LOINC/82810-3.html">82810-3</a>
                 </td>
+                <td>http://loinc.org</td>
                 <td>Pregnancy status</td>
               </tr>
             </table>
@@ -56,8 +55,8 @@
         <description value="The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of concepts to capture pregnancy status."/>
         <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
         <expansion>
-          <identifier value="urn:uuid:1bb28f44-fef4-48e1-8a95-48cb7dc5019d"/>
-          <timestamp value="2022-08-24T10:46:44-07:00"/>
+          <identifier value="urn:uuid:c210b84a-2d53-4551-b9ef-f0e0b5721694"/>
+          <timestamp value="2022-09-14T13:58:25-07:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>
