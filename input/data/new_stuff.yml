@@ -5,11 +5,13 @@
 - USCoreObservationCategoryValueSet
 - USCoreSurveyCodes
 # Profiles
-- UsCoreEncounterDiagnosis
-- USCoreProblemsHealthConcerns
-- USCoreQuestionnaireResponse
-- USCoreObservationSDOHAssessment
-- USCoreLocation
+# - UsCoreEncounterDiagnosis
+# - USCoreProblemsHealthConcerns
+# - USCoreQuestionnaireResponse
+# - USCoreObservationSDOHAssessment
+# - USCoreLocation
+- USCoreOccupationProfile
+- USCorePregnancyStatusProfile
 # extensions
 - QuestionnaireUrl
 # OperationDefinition

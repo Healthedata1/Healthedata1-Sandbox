@@ -3,10 +3,10 @@
   "name": "HealthEData_1Sandbox",
   "package-id": "healthedata1-sandbox",
   "ig-ver": "0.1.0",
-  "date": "Wed, 14 Sep, 2022 13:58:07 -0700",
-  "errs": 6,
-  "warnings": 3,
-  "hints": 0,
+  "date": "Tue, 27 Sep, 2022 17:37:45 -0700",
+  "errs": 1,
+  "warnings": 1,
+  "hints": 2,
   "version": "4.0.1",
   "tool": "5.0.0-ballot (3)"
 }

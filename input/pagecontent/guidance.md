@@ -236,3 +236,119 @@ tadaa...
 </code>
 </pre>
 
+### Bootstrap Panels
+
+
+
+
+
+
+
+### Stacked Panels
+
+<style>
+
+.panel {
+    background: #0074bb;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 0px;
+    box-shadow: 1px 2px DarkGray;
+    }
+
+.panel-body {
+    padding-left: 15px;
+}
+
+.panel table, th, tr, td {
+    border: 0px !important;
+    padding-right: 20px;
+    font-weight: bold;
+    }
+
+ .panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    }
+
+ .icon-right {
+    float: right;
+    padding: 6px
+}
+
+</style>
+
+
+<div class="panel">
+  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+
+<div class="panel">
+  <div class="panel-body">
+    Panel content
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+
+    <div class="icon-right">
+    <img src="cat.jpg" class="media-object" style="width:60px">
+  </div>
+    Panel content
+
+<table class="table table-condensed">
+
+
+<tr>
+  <td>Jill</td>
+  <td>Smith</td>
+  <td>50</td>
+</tr>
+
+ <tr>
+  <td>Jill</td>
+  <td></td>
+  <td></td>
+</tr>
+  <td>Jill</td>
+  <td>Smith</td>
+  <td>50</td> 
+  
+  
+</table>
+  </div>
+</div>
+<div class="panel">
+
+  <div class="panel-body">
+ Panel content
+
+<table class="table table-condensed">
+
+
+<tr>
+  <td>Jill</td>
+  <td>Smith</td>
+  <td>50</td>
+</tr>
+
+ <tr>
+  <td>Jill</td>
+  <td></td>
+  <td></td>
+</tr>
+  <td>Jill</td>
+  <td><a href="#.html">Smith</a></td>
+  <td>50</td> 
+  
+  
+</table>
+  </div>
+</div>

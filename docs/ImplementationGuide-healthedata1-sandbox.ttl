@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-09-14T13:58:07-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-09-27T17:37:45-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -42,7 +42,7 @@
        fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ];
-     fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.1.0" ]
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.0" ]
   ], [
      fhir:index 1;
      fhir:Element.id [ fhir:value "hl7_fhir_us_core" ];
@@ -61,6 +61,24 @@
      ];
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.sdc" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.0.0" ]
+  ], [
+     fhir:index 3;
+     fhir:Element.id [ fhir:value "vsac" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac";
+       fhir:link <http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "us.nlm.vsac" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.3.0" ]
+  ], [
+     fhir:index 4;
+     fhir:Element.id [ fhir:value "uscdcphinvads" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads";
+       fhir:link <http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "us.cdc.phinvads" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.12.0" ]
   ];
   fhir:ImplementationGuide.definition [
      fhir:Element.extension [
@@ -92,6 +110,18 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-expansion-params" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "../../input/_resources/exp-params.json" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
          fhir:Extension.valueString [ fhir:value "show-inherited-invariants" ]
        ], [
          fhir:index 1;
@@ -100,7 +130,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 3;
+       fhir:index 4;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -112,7 +142,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 4;
+       fhir:index 5;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -124,7 +154,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 5;
+       fhir:index 6;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -136,7 +166,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 6;
+       fhir:index 7;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -148,7 +178,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 7;
+       fhir:index 8;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -160,7 +190,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 8;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -172,7 +202,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 9;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -184,7 +214,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 10;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -196,7 +226,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 11;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -208,7 +238,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 12;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -220,7 +250,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 13;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -232,7 +262,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 14;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -244,7 +274,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 15;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -256,7 +286,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 16;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -268,7 +298,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 17;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -280,7 +310,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 18;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -292,7 +322,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 19;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -304,7 +334,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 20;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -316,7 +346,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 21;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -328,7 +358,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 22;
+       fhir:index 23;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -340,7 +370,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 23;
+       fhir:index 24;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -352,7 +382,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 24;
+       fhir:index 25;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -364,7 +394,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 25;
+       fhir:index 26;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -376,7 +406,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 26;
+       fhir:index 27;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -388,7 +418,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 27;
+       fhir:index 28;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -400,7 +430,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 28;
+       fhir:index 29;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -412,7 +442,7 @@
        ];
        fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
      ], [
-       fhir:index 29;
+       fhir:index 30;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "code" ];
@@ -429,73 +459,72 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+         fhir:Extension.valueString [ fhir:value "Coverage" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-pregnancystatus>;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-pregnancystatus" ]
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Coverage/coverage-example>;
+         fhir:Reference.reference [ fhir:value "Coverage/coverage-example" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Pregnancy Status Observation Profile" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implementers the U.S. Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the \"state or condition of being pregnant or intent to become pregnant\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 1;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ValueSet" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-pregnancy-status-observation-codes>;
-         fhir:Reference.reference [ fhir:value "ValueSet/us-core-pregnancy-status-observation-codes" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Pregnancy Status Observation Codes" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of concepts to capture pregnancy status." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 2;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Observation" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Observation/pregnancy-status>;
-         fhir:Reference.reference [ fhir:value "Observation/pregnancy-status" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Pregnancy Status Example" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a pregnancy status example for the *US Core Pregnancy Status Profile*." ];
-       fhir:ImplementationGuide.definition.resource.exampleCanonical [
-         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus";
-         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus>
-       ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Coverage Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a coverage example for the *US Core Coverage Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
      ];
      fhir:ImplementationGuide.definition.page [
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+         fhir:Extension.valueUrl [ fhir:value "toc.html" ]
+       ];
        fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
        fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
        fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
        fhir:ImplementationGuide.definition.page.page [
          fhir:index 0;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "index.html" ]
+         ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Home" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 1;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "changes.html" ]
+         ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "changes.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Changes" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 2;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "downloads.html" ]
+         ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 3;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "examples.html" ]
+         ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "examples.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Examples" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
        ], [
          fhir:index 4;
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name" ];
+           fhir:Extension.valueUrl [ fhir:value "guidance.html" ]
+         ];
          fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "guidance.html" ];
          fhir:ImplementationGuide.definition.page.title [ fhir:value "Guidance" ];
          fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]

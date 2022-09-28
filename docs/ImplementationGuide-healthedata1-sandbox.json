@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-09-14T13:58:07-07:00",
+  "date": "2022-09-27T17:37:45-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -33,7 +33,7 @@
       "id": "hl7tx",
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "3.1.0"
+      "version": "4.0.0"
     },
     {
       "id": "hl7_fhir_us_core",
@@ -46,6 +46,18 @@
       "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
       "packageId": "hl7.fhir.uv.sdc",
       "version": "3.0.0"
+    },
+    {
+      "id": "vsac",
+      "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
+      "packageId": "us.nlm.vsac",
+      "version": "0.3.0"
+    },
+    {
+      "id": "uscdcphinvads",
+      "uri": "http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads",
+      "packageId": "us.cdc.phinvads",
+      "version": "0.12.0"
     }
   ],
   "definition": {
@@ -72,6 +84,19 @@
           {
             "url": "value",
             "valueString": "CI Build"
+          }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          {
+            "url": "code",
+            "valueString": "path-expansion-params"
+          },
+          {
+            "url": "value",
+            "valueString": "../../input/_resources/exp-params.json"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -446,71 +471,79 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
+            "valueString": "Coverage"
           }
         ],
         "reference": {
-          "reference": "StructureDefinition/us-core-pregnancystatus"
+          "reference": "Coverage/coverage-example"
         },
-        "name": "US Core Pregnancy Status Observation Profile",
-        "description": "The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implementers the U.S. Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the \"state or condition of being pregnant or intent to become pregnant\" associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ValueSet"
-          }
-        ],
-        "reference": {
-          "reference": "ValueSet/us-core-pregnancy-status-observation-codes"
-        },
-        "name": "US Core Pregnancy Status Observation Codes",
-        "description": "The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of concepts to capture pregnancy status.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Observation"
-          }
-        ],
-        "reference": {
-          "reference": "Observation/pregnancy-status"
-        },
-        "name": "Pregnancy Status Example",
-        "description": "This is a pregnancy status example for the *US Core Pregnancy Status Profile*.",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus"
+        "name": "Coverage Example",
+        "description": "This is a coverage example for the *US Core Coverage Profile*.",
+        "exampleBoolean": true
       }
     ],
     "page": {
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl": "toc.html"
+        }
+      ],
       "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
       "page": [
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "index.html"
+            }
+          ],
           "nameUrl": "index.html",
           "title": "Home",
           "generation": "markdown"
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "changes.html"
+            }
+          ],
           "nameUrl": "changes.html",
           "title": "Changes",
           "generation": "markdown"
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "downloads.html"
+            }
+          ],
           "nameUrl": "downloads.html",
           "title": "Downloads",
           "generation": "markdown"
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "examples.html"
+            }
+          ],
           "nameUrl": "examples.html",
           "title": "Examples",
           "generation": "markdown"
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+              "valueUrl": "guidance.html"
+            }
+          ],
           "nameUrl": "guidance.html",
           "title": "Guidance",
           "generation": "markdown"

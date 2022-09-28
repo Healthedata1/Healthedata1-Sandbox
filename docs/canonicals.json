@@ -1,19 +1,5 @@
 [
   {
-    "id": "us-core-pregnancystatus",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus",
-    "version": "0.1.0",
-    "name": "USCorePregnancyStatusProfile"
-  },
-  {
-    "id": "us-core-pregnancy-status-observation-codes",
-    "type": "ValueSet",
-    "url": "http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes",
-    "version": "0.1.0",
-    "name": "USCorePregnancyStatusObservationCodes"
-  },
-  {
     "id": "healthedata1-sandbox",
     "type": "ImplementationGuide",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",

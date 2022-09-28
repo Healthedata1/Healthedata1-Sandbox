@@ -1,82 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="09512532-5333-46b7-bc54-fd4300df1d3f"/>
+  <id value="410b7f4b-ac91-494c-8b6d-b916524ea510"/>
   <meta>
-    <lastUpdated value="2022-09-14T13:58:07.968-07:00"/>
+    <lastUpdated value="2022-09-27T17:37:45.536-07:00"/>
   </meta>
   <type value="collection"/>
-  <entry>
-    <fullUrl value="http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes"/>
-    <resource>
-      <ValueSet>
-        <id value="us-core-pregnancy-status-observation-codes"/>
-        <text>
-          <status value="generated"/>
-          <div xmlns="http://www.w3.org/1999/xhtml">
-            <p>This value set contains 1 concepts</p>
-            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.73</p>
-            <table class="codes">
-              <tr>
-                <td style="white-space:nowrap">
-                  <b>Code</b>
-                </td>
-                <td>
-                  <b>System</b>
-                </td>
-                <td>
-                  <b>Display</b>
-                </td>
-              </tr>
-              <tr>
-                <td style="white-space:nowrap">
-                  <a name="http---loinc.org-82810-3"> </a>  
-                  <a href="http://details.loinc.org/LOINC/82810-3.html">82810-3</a>
-                </td>
-                <td>http://loinc.org</td>
-                <td>Pregnancy status</td>
-              </tr>
-            </table>
-          </div>
-        </text>
-        <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-pregnancy-status-observation-codes"/>
-        <version value="0.1.0"/>
-        <name value="USCorePregnancyStatusObservationCodes"/>
-        <title value="US Core Pregnancy Status Observation Codes"/>
-        <status value="active"/>
-        <date value="2022-08-24"/>
-        <publisher value="Health eData Inc"/>
-        <contact>
-          <telecom>
-            <system value="email"/>
-            <value value="mailto:ehaas@healthedatainc.com"/>
-          </telecom>
-        </contact>
-        <description value="The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of concepts to capture pregnancy status."/>
-        <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
-        <expansion>
-          <identifier value="urn:uuid:c210b84a-2d53-4551-b9ef-f0e0b5721694"/>
-          <timestamp value="2022-09-14T13:58:25-07:00"/>
-          <total value="1"/>
-          <parameter>
-            <name value="excludeNested"/>
-            <valueBoolean value="false"/>
-          </parameter>
-          <parameter>
-            <name value="limitedExpansion"/>
-            <valueBoolean value="true"/>
-          </parameter>
-          <parameter>
-            <name value="version"/>
-            <valueUri value="http://loinc.org|2.73"/>
-          </parameter>
-          <contains>
-            <system value="http://loinc.org"/>
-            <code value="82810-3"/>
-            <display value="Pregnancy status"/>
-          </contains>
-        </expansion>
-      </ValueSet>
-    </resource>
-  </entry>
 </Bundle>

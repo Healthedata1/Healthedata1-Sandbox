@@ -11,7 +11,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2022-09-14T13:58:07-07:00"/>
+  <date value="2022-09-27T17:37:45-07:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -26,7 +26,7 @@
   <dependsOn id="hl7tx">
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="3.1.0"/>
+    <version value="4.0.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_us_core">
     <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
@@ -37,6 +37,16 @@
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc"/>
     <packageId value="hl7.fhir.uv.sdc"/>
     <version value="3.0.0"/>
+  </dependsOn>
+  <dependsOn id="vsac">
+    <uri value="http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac"/>
+    <packageId value="us.nlm.vsac"/>
+    <version value="0.3.0"/>
+  </dependsOn>
+  <dependsOn id="uscdcphinvads">
+    <uri value="http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads"/>
+    <packageId value="us.cdc.phinvads"/>
+    <version value="0.12.0"/>
   </dependsOn>
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -53,6 +63,14 @@
       </extension>
       <extension url="value">
         <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-expansion-params"/>
+      </extension>
+      <extension url="value">
+        <valueString value="../../input/_resources/exp-params.json"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -281,62 +299,58 @@
     </extension>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
+        <valueString value="Coverage"/>
       </extension>
       <reference>
-        <reference value="StructureDefinition/us-core-pregnancystatus"/>
+        <reference value="Coverage/coverage-example"/>
       </reference>
-      <name value="US Core Pregnancy Status Observation Profile"/>
-      <description value="The US Core Pregnancy Status Observation Profile is based upon the core FHIR Observation Resource and implementers the U.S. Core Data for Interoperability (USCDI) v3 Pregnancy status requirements. This profile sets minimum expectations for the Observation resource to record, search, and fetch the &quot;state or condition of being pregnant or intent to become pregnant&quot; associated with a patient to promote interoperability and adoption through common implementation. It identifies which core elements, extensions, vocabularies and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific uses cases."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ValueSet"/>
-      </extension>
-      <reference>
-        <reference value="ValueSet/us-core-pregnancy-status-observation-codes"/>
-      </reference>
-      <name value="US Core Pregnancy Status Observation Codes"/>
-      <description value="The US Core Pregnancy Status Observation Codes Value Set is a 'starter set' of concepts to capture pregnancy status."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Observation"/>
-      </extension>
-      <reference>
-        <reference value="Observation/pregnancy-status"/>
-      </reference>
-      <name value="Pregnancy Status Example"/>
-      <description value="This is a pregnancy status example for the *US Core Pregnancy Status Profile*."/>
-      <exampleCanonical value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-pregnancystatus"/>
+      <name value="Coverage Example"/>
+      <description value="This is a coverage example for the *US Core Coverage Profile*."/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
       <generation value="html"/>
       <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
         <nameUrl value="index.html"/>
         <title value="Home"/>
         <generation value="markdown"/>
       </page>
       <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="changes.html"/>
+        </extension>
         <nameUrl value="changes.html"/>
         <title value="Changes"/>
         <generation value="markdown"/>
       </page>
       <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
         <nameUrl value="downloads.html"/>
         <title value="Downloads"/>
         <generation value="markdown"/>
       </page>
       <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="examples.html"/>
+        </extension>
         <nameUrl value="examples.html"/>
         <title value="Examples"/>
         <generation value="markdown"/>
       </page>
       <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="guidance.html"/>
+        </extension>
         <nameUrl value="guidance.html"/>
         <title value="Guidance"/>
         <generation value="markdown"/>

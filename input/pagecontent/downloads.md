@@ -84,3 +84,13 @@ I put all my pages etc in input folder but that is not the right place it should
 ├── package-list.json
 └── package.json
 ~~~
+
+
+<!-- ### Cross Version Comparisons
+
+The table below summarizes the different profiles and resource types between Argonaut Data Query and major releases of US Core :
+
+{ % include dstu2-r4-table.md % } -->
+
+
+
