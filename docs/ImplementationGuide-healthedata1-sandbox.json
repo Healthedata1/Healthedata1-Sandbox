@@ -10,7 +10,7 @@
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-09-27T17:37:45-07:00",
+  "date": "2022-10-08T17:30:26-07:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -29,6 +29,12 @@
     "4.0.1"
   ],
   "dependsOn": [
+    {
+      "id": "higtools",
+      "uri": "http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools",
+      "packageId": "hl7.fhir.uv.tools",
+      "version": "current"
+    },
     {
       "id": "hl7tx",
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
@@ -471,15 +477,57 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Coverage"
+            "valueString": "StructureDefinition:resource"
           }
         ],
         "reference": {
-          "reference": "Coverage/coverage-example"
+          "reference": "StructureDefinition/us-core-patient"
         },
-        "name": "Coverage Example",
-        "description": "This is a coverage example for the *US Core Coverage Profile*.",
-        "exampleBoolean": true
+        "name": "US Core Patient Profile",
+        "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "StructureDefinition:extension"
+          }
+        ],
+        "reference": {
+          "reference": "StructureDefinition/us-core-tribal-affiliation"
+        },
+        "name": "US Core Tribal Affiliation Extension",
+        "description": "This Extension profile represents a tribe or band with which a person associates whether or not they are an enrolled member.",
+        "exampleBoolean": false
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/deceased-example"
+        },
+        "name": "Deceased Patient Example",
+        "description": "This is a deceased patient example for the *US Core Patient Profile*.",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Patient"
+          }
+        ],
+        "reference": {
+          "reference": "Patient/example"
+        },
+        "name": "Patient Example",
+        "description": "This is a patient example for the *US Core Patient Profile*.",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       }
     ],
     "page": {

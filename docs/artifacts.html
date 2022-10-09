@@ -135,7 +135,13 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
    <p>Contents:</p>
    <ul>
       <li>
-         <a href="#1">Example: Example Instances</a>
+         <a href="#1">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#2">Structures: Extension Definitions</a>
+      </li>
+      <li>
+         <a href="#3">Example: Example Instances</a>
       </li>
    </ul>
 </div>
@@ -144,6 +150,48 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
      xmlns:f="http://hl7.org/fhir">
    <p>This page provides a list of the FHIR artifacts defined as part of this implementation guide.</p>
    <a name="1"> </a>
+   <h3>Structures: Resource Profiles </h3>
+   <p>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-us-core-patient.html"
+                     title="StructureDefinition/us-core-patient">US Core Patient Profile</a>
+               </td>
+               <td>
+<p>The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 ‘Patient Demographics’ requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="2"> </a>
+   <h3>Structures: Extension Definitions </h3>
+   <p>
+    <p>These define constraints on FHIR data types for systems conforming to this implementation guide</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-us-core-tribal-affiliation.html"
+                     title="StructureDefinition/us-core-tribal-affiliation">US Core Tribal Affiliation Extension</a>
+               </td>
+               <td>
+<p>This Extension profile represents a tribe or band with which a person associates whether or not they are an enrolled member.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
    <h3>Example: Example Instances </h3>
    <p>
     <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like</p>
@@ -154,10 +202,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="Coverage-coverage-example.html" title="Coverage/coverage-example">Coverage Example</a>
+                  <a href="Patient-deceased-example.html" title="Patient/deceased-example">Deceased Patient Example</a>
                </td>
                <td>
-<p>This is a coverage example for the <em>US Core Coverage Profile</em>.</p>
+<p>This is a deceased patient example for the <em>US Core Patient Profile</em>.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Patient-example.html" title="Patient/example">Patient Example</a>
+               </td>
+               <td>
+<p>This is a patient example for the <em>US Core Patient Profile</em>.</p>
 </td>
             </tr>
          </tbody>
@@ -187,7 +243,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 27, 2022 17:37-0700">2022-09-27</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Oct 8, 2022 17:30-0700">2022-10-08</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)"></span>
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

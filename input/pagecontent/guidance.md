@@ -239,116 +239,115 @@ tadaa...
 ### Bootstrap Panels
 
 
-
-
-
-
-
 ### Stacked Panels
 
-<style>
+{% include uscdi-uscore-map.html %}
 
-.panel {
-    background: #0074bb;
-    color: white;
-    font-weight: bold;
-    margin-bottom: 3px;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 0px;
-    box-shadow: 1px 2px DarkGray;
-    }
+### Sorting using Liquid
 
-.panel-body {
-    padding-left: 15px;
-}
+original collection:
 
-.panel table, th, tr, td {
-    border: 0px !important;
-    padding-right: 20px;
-    font-weight: bold;
-    }
+{{ site.data.structuredefinitions }}
 
- .panel a {
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-    }
-
- .icon-right {
-    float: right;
-    padding: 6px
-}
-
-</style>
+sorted collection:
+{% comment %}{% raw %}<!--
+ {% assign sds = site.data.structuredefinitions  | sort: "title"%}  # does not work :-(
+ {% assign sorted =  sds | sort: "title" %}
+<ul>
+  {% for sd in sorted %}
+    <li>
+    {{sd[0]}}
+      
 
 
-<div class="panel">
-  <div class="panel-heading">Panel heading without title</div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
-
-<div class="panel">
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
-<div class="panel">
-  <div class="panel-body">
-
-    <div class="icon-right">
-    <img src="cat.jpg" class="media-object" style="width:60px">
-  </div>
-    Panel content
-
-<table class="table table-condensed">
+    </li>
+    <li>
+    {{sd[1]}}
+      
 
 
-<tr>
-  <td>Jill</td>
-  <td>Smith</td>
-  <td>50</td>
-</tr>
+    </li>
+    <li>
+    {sd[1].title}}
+      
 
- <tr>
-  <td>Jill</td>
-  <td></td>
-  <td></td>
-</tr>
-  <td>Jill</td>
-  <td>Smith</td>
-  <td>50</td> 
+
+    </li>
+
+  {% endfor %}
+-->{% endraw %}{% endcomment %}
+
+### include lines using helper file
+
+
+Includes the specified lines from another file. Typically this include is used for fragments of FHIR resources and therefore is wrapped in a code block.
+
+The helper file is place in the `input/images` folder not the 'input/include` file folder
+~~~
+├── examples
+│   ├── patient-deceased-example.json
+│   └── patient-example.json
+├── fsh
+│   ├── fsh
+│   ├── my-extensions.fsh
+│   └── my-profiles.fsh
+├── ignoreWarnings.txt
+├── images
+│   ├── cat.jpg
+│   ├── includelines  <<<< HERE
+├── includes  <<<< NOT HERE
+│   ├── DAR-exception.md
+│ 
+~~~
+
+Usage:
+  {% raw %}{% include_relative includelines filename=PATH start=INT|STR count=INT|STR %}{% endraw %}
+
+  - filename: path to file in temp/pages  (not under _includes )
+  - start: integer (only 1) or common separated string (> 1) of first line numbers to include, starting at 1
+  - count: integer (only 1) or common separated string (> 1) of number of lines to include
+
+The start and count item are aggregated into a (start, count) tuple and therefore need to be the same size.  If there are more than one start and count items, ellipses ("...") will be inserted between the line fragments. 
+The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
   
-  
-</table>
-  </div>
-</div>
-<div class="panel">
+#### Examples:
 
-  <div class="panel-body">
- Panel content
+**1. single fragment:**
 
-<table class="table table-condensed">
+\~~~
+
+{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start=10 count=5 %}{% endraw %}
+
+\~~~
+
+~~~
+{% include_relative includelines filename='patient-deceased-example.json' start=10 count=5 %}
+~~~
+
+ **2. multiple fragments separated by "...":**
+   
+\~~~
+
+{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}{% endraw %}
+
+\~~~
+
+~~~
+{% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}
+~~~
+
+**3. The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
+The following will result in a warning message because the start line (15) is less than the previous plus the number of lines (20)**
+
+\~~~
+
+{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}{% endraw %}
+
+\~~~
 
 
-<tr>
-  <td>Jill</td>
-  <td>Smith</td>
-  <td>50</td>
-</tr>
+~~~
+{% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}
+~~~
 
- <tr>
-  <td>Jill</td>
-  <td></td>
-  <td></td>
-</tr>
-  <td>Jill</td>
-  <td><a href="#.html">Smith</a></td>
-  <td>50</td> 
-  
-  
-</table>
-  </div>
-</div>
+---

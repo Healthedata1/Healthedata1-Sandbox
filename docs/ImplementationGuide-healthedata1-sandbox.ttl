@@ -17,7 +17,7 @@
   fhir:ImplementationGuide.name [ fhir:value "HealthEData_1Sandbox"];
   fhir:ImplementationGuide.title [ fhir:value "Health eData 1 Sandbox"];
   fhir:ImplementationGuide.status [ fhir:value "active"];
-  fhir:ImplementationGuide.date [ fhir:value "2022-09-27T17:37:45-07:00"^^xsd:dateTime];
+  fhir:ImplementationGuide.date [ fhir:value "2022-10-08T17:30:26-07:00"^^xsd:dateTime];
   fhir:ImplementationGuide.publisher [ fhir:value "Health eData Inc"];
   fhir:ImplementationGuide.contact [
      fhir:index 0;
@@ -36,6 +36,15 @@
   ];
   fhir:ImplementationGuide.dependsOn [
      fhir:index 0;
+     fhir:Element.id [ fhir:value "higtools" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools";
+       fhir:link <http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.tools" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "current" ]
+  ], [
+     fhir:index 1;
      fhir:Element.id [ fhir:value "hl7tx" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology";
@@ -44,7 +53,7 @@
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "4.0.0" ]
   ], [
-     fhir:index 1;
+     fhir:index 2;
      fhir:Element.id [ fhir:value "hl7_fhir_us_core" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core";
@@ -53,7 +62,7 @@
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.us.core" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "5.0.1" ]
   ], [
-     fhir:index 2;
+     fhir:index 3;
      fhir:Element.id [ fhir:value "hl7_fhir_uv_sdc" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc";
@@ -62,7 +71,7 @@
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.uv.sdc" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "3.0.0" ]
   ], [
-     fhir:index 3;
+     fhir:index 4;
      fhir:Element.id [ fhir:value "vsac" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac";
@@ -71,7 +80,7 @@
      fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "us.nlm.vsac" ];
      fhir:ImplementationGuide.dependsOn.version [ fhir:value "0.3.0" ]
   ], [
-     fhir:index 4;
+     fhir:index 5;
      fhir:Element.id [ fhir:value "uscdcphinvads" ];
      fhir:ImplementationGuide.dependsOn.uri [
        fhir:value "http://fhir.org/packages/us.cdc.phinvads/ImplementationGuide/us.cdc.phinvads";
@@ -459,15 +468,63 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Coverage" ]
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Coverage/coverage-example>;
-         fhir:Reference.reference [ fhir:value "Coverage/coverage-example" ]
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-patient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-patient" ]
        ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Coverage Example" ];
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a coverage example for the *US Core Coverage Profile*." ];
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "true"^^xsd:boolean ]
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Patient Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-tribal-affiliation>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/us-core-tribal-affiliation" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "US Core Tribal Affiliation Extension" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This Extension profile represents a tribe or band with which a person associates whether or not they are an enrolled member." ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Patient/deceased-example>;
+         fhir:Reference.reference [ fhir:value "Patient/deceased-example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Deceased Patient Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a deceased patient example for the *US Core Patient Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Patient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Patient/example>;
+         fhir:Reference.reference [ fhir:value "Patient/example" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient Example" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "This is a patient example for the *US Core Patient Profile*." ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+         fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+       ]
      ];
      fhir:ImplementationGuide.definition.page [
        fhir:Element.extension [
