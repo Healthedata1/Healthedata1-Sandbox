@@ -8,8 +8,8 @@
 
 {{ site.data.ig.description }}
 
-- [XML](ImplementationGuide-healthedata1-sandbox.json)
-- [JSON](ImplementationGuide-healthedata1-sandbox.xml)
+- [XML](ImplementationGuide-{{site.data.ig.id}}.xml)
+- [JSON](ImplementationGuide-{{site.data.ig.id}}.json)
 
 ### IG Dependencies
 

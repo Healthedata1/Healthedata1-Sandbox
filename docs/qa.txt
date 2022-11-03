@@ -3,7 +3,7 @@
 
 err = 18, warn = 0, info = 12
 IG Publisher Version: 1.2.12
-Generated Wed Nov 02 19:50:15 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+Generated Wed Nov 02 20:28:54 PDT 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
  Build Errors : 68 / 0 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/patient-deceased-example : 3 / 0 / 4
