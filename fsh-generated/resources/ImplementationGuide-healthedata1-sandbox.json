@@ -113,6 +113,11 @@
           "nameUrl": "guidance.html",
           "title": "Guidance",
           "generation": "markdown"
+        },
+        {
+          "nameUrl": "ig_template.html",
+          "title": "Ig Template",
+          "generation": "markdown"
         }
       ]
     },

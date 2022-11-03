@@ -26,6 +26,7 @@ using path variable
 
 using http:
 
+
 - [US Core](http://hl7.org/fhir/us/core/STU4/index.html)
 - [FHIR](http://hl7.org/fhir/)
 
@@ -51,3 +52,28 @@ using https:
 |[US Core](https://hl7.org/fhir/us/core/STU4/index.html)|
 |[FHIR](https://hl7.org/fhir/)|
 {:.grid}
+
+### Cross Version Analysis
+
+{% include cross-version-analysis.xhtml %}
+
+{% capture cross-version-analysis %}{% include cross-version-analysis.xhtml %}{% endcapture %}
+bar {{ cross-version-analysis | remove: '<p>' | remove: '</p>'}} foo
+
+### IG Dependencies
+
+This IG Contains the following dependencies on other IGs.
+
+{% include dependency-table.xhtml %}
+
+### Global Profiles
+
+{% include globals-table.xhtml %}
+
+### Copyrights
+{% capture ip-statement %}{% include ip-statements.xhtml %}{% endcapture %}
+~~~
+{{ ip-statement | remove: '<p>' | remove: '</p>'}}
+~~~
+
+{{ ip-statement | remove: '<p>' | remove: '</p>'}}
