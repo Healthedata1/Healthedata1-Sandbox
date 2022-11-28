@@ -1,19 +1,5 @@
 [
   {
-    "id": "us-core-patient",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
-    "version": "0.1.0",
-    "name": "USCorePatientProfile"
-  },
-  {
-    "id": "us-core-tribal-affiliation",
-    "type": "StructureDefinition",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-tribal-affiliation",
-    "version": "0.1.0",
-    "name": "USCoreTribalAffiliationExtension"
-  },
-  {
     "id": "healthedata1-sandbox",
     "type": "ImplementationGuide",
     "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",

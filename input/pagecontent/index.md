@@ -77,3 +77,22 @@ This IG Contains the following dependencies on other IGs.
 ~~~
 
 {{ ip-statement | remove: '<p>' | remove: '</p>'}}
+
+### using {%raw%}{{site.data.resources[resource_].description}}{%endraw%}
+
+
+
+by string
+
+{%raw%}{{site.data.resources['ImplementationGuide/healthedata1-sandbox'].description \| markdownify}}{%endraw%}
+
+with markdown filter
+
+{{site.data.resources['ImplementationGuide/healthedata1-sandbox'].description | markdownify}}
+
+without markdown filter
+
+{{site.data.resources['ImplementationGuide/healthedata1-sandbox'].description}}
+
+
+{% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}

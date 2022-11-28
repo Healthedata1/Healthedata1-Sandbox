@@ -1,3 +1,8 @@
+
+### Escape curly braces
+
+{% raw %}{{% endraw %}{{site.data.foo['fun/time']['description']}}}
+
 {% raw %}{{ site.data.foo['fun/time']['description']}} {% endraw %}: {{ site.data.foo['fun/time']['description']}}
 
 ### Create Pretty List with Liquid
@@ -57,6 +62,43 @@
 {%- endfor -%}
 </ul>
 
+----
+
+{% raw %}
+~~~liquid
+{%- assign black_list = "Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location" | split:"," -%}
+{% assign r_list = "" %}
+{%- for sd_hash in site.data.structuredefinitions -%}
+  {%- assign sd = sd_hash[1] -%}
+  {%- unless black_list contains sd.type -%}
+       {% capture r_list %}{{ r_list | append: sd.type | append: "," }}{% endcapture %}
+  {%- endunless -%}
+{%- endfor -%}
+{% assign ur_list = r_list | split: "," | uniq | sort %}
+<ul>
+{% for r in  ur_list %}
+    <li>{{r}}</li>
+{% endfor %}
+</ul>
+~~~
+{% endraw %}
+
+
+{%- assign black_list = "Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location" | split:"," -%}
+{% assign r_list = "" %}
+{%- for sd_hash in site.data.structuredefinitions -%}
+  {%- assign sd = sd_hash[1] -%}
+  {%- unless black_list contains sd.type -%}
+       {% capture r_list %}{{ r_list | append: sd.type | append: "," }}{% endcapture %}
+  {%- endunless -%}
+{%- endfor -%}
+{% assign ur_list = r_list | split: "," | uniq | sort %}
+<ul id="prov-white-list">
+{% for r in  ur_list %}
+    <li>{{r}}</li>
+{% endfor %}
+</ul>
+---
 
 {% raw %}
 ~~~liquid

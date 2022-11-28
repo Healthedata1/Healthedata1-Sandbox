@@ -2,7 +2,7 @@
 # exit when any command fails
 set -e
 NA='http://tx.fhir.org'
-while getopts twoplisvqdryzmu: option
+while getopts twoplisvqdrxyzmu: option
 do
  case "${option}"
  in
@@ -17,10 +17,12 @@ do
  v) VIEW_OUTPUT=1;;
  q) VIEW_QA=1;;
  d) IN_DOCS=1;;
+ x) RECENT_YAML=1;;
  y) YAML_JSON=1;;
  z) ZIP_SCH=1;;
  r) CLEAR_JSON=1;;
  m) MERGE_CSV=1;;
+ 
  esac
 done
 
@@ -29,6 +31,14 @@ if [[ $IN_DOCS ]]; then
   outpath=docs
 else
   outpath=output
+fi
+
+if [[ $RECENT_YAML ]]; then
+  YAML_JSON=1
+  days=1
+else
+  days=400
+  days=400 # 400 days is about 1 year
 fi
 
 echo "================================================================="
@@ -54,7 +64,8 @@ echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW
 echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-r remove all generated json files = $CLEAR_JSON"
-echo "-y tranform all yaml to json files = $YAML_JSON"
+echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
+echo "-y tranform all yaml that changed in the last year to json files = $YAML_JSON"
 echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
 echo "================================================================="
@@ -67,45 +78,45 @@ echo 'remove all generated files in /examples and /resources folders'
 rm  -f $inpath/resources/*.* $inpath/examples/*.*
 fi
 
-if [[ $YAML_JSON ]] && ls $inpath/resources-yaml/*.yml; then
+if [[ $YAML_JSON ]] && ls -U $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in resources-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $inpath/resources-yaml/*.yml
+for yaml_file in $(find $inpath/resources-yaml/*.yml -type f -mtime -$days)
 do
-echo $yaml_file
+echo convert $yaml_file to ...
 json_file=$inpath/resources/$(basename $yaml_file)
 json_file=${json_file%.*}.json
-echo $json_file
 python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
+echo $json_file
 done
 fi
 
-if [[ $YAML_JSON ]] && ls $inpath/examples-yaml/*.yml; then
+if [[ $YAML_JSON ]] && ls -U $inpath/examples-yaml/*.yml; then
 echo "========================================================================"
 echo "convert all yml files in examples-yaml directory to examples/json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $inpath/examples-yaml/*.yml
+for yaml_file in $(find $inpath/examples-yaml/*.yml -type f -mtime -$days)
 do
-echo $yaml_file
+echo convert $yaml_file to ...
 json_file=$inpath/examples/$(basename $yaml_file)
 json_file=${json_file%.*}.json
-echo $json_file
 python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
+echo $json_file
 done
 fi
 
-if [[ $YAML_JSON ]] && ls $inpath/includes-yaml/*.yml; then
+if [[ $YAML_JSON ]] && ls -U $inpath/includes-yaml/*.yml; then
 echo "======================================================================="
 echo "convert all yml files in includes-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $inpath/includes-yaml/*.yml
+for yaml_file in $(find $inpath/includes-yaml/*.yml -type f -mtime -$days)
 do
-echo $yaml_file
+echo convert $yaml_file to ...
 json_file=$inpath/includes/$(basename $yaml_file)
 json_file=${json_file%.*}.json
-echo $json_file
 python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
+echo $json_file
 done
 echo "========================================================================"
 fi

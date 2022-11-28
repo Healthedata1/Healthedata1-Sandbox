@@ -3,14 +3,14 @@
   "id": "healthedata1-sandbox",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HealthEData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a Healthedata1 sandbox for creation of resources and examples</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HealthEData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a <strong>Healthedata1</strong> sandbox for creation of resources and examples</p>\n</div></div>"
   },
   "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
   "version": "0.1.0",
   "name": "HealthEData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
-  "date": "2022-11-02T20:28:38-07:00",
+  "date": "2022-11-28T00:28:58-08:00",
   "publisher": "Health eData Inc",
   "contact": [
     {
@@ -22,7 +22,7 @@
       ]
     }
   ],
-  "description": "This is a Healthedata1 sandbox for creation of resources and examples",
+  "description": "This is a **Healthedata1** sandbox for creation of resources and examples",
   "packageId": "healthedata1-sandbox",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -31,9 +31,15 @@
   "dependsOn": [
     {
       "id": "hl7tx",
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+          "valueMarkdown": "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+        }
+      ],
       "uri": "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
       "packageId": "hl7.terminology.r4",
-      "version": "4.0.0"
+      "version": "5.0.0"
     },
     {
       "id": "hl7_fhir_us_core",
@@ -46,6 +52,18 @@
       "uri": "http://hl7.org/fhir/uv/sdc/ImplementationGuide/hl7.fhir.uv.sdc",
       "packageId": "hl7.fhir.uv.sdc",
       "version": "3.0.0"
+    },
+    {
+      "id": "hl7_fhir_uv_bulkdata",
+      "uri": "http://hl7.org/fhir/uv/bulkdata/ImplementationGuide/hl7.fhir.uv.bulkdata",
+      "packageId": "hl7.fhir.uv.bulkdata",
+      "version": "2.0.0"
+    },
+    {
+      "id": "hl7_fhir_uv_smart_app_launch",
+      "uri": "http://hl7.org/fhir/smart-app-launch/ImplementationGuide/hl7.fhir.uv.smart-app-launch",
+      "packageId": "hl7.fhir.uv.smart-app-launch",
+      "version": "2.0.0"
     },
     {
       "id": "vsac",
@@ -900,34 +918,6 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:resource"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/us-core-patient"
-        },
-        "name": "US Core Patient Profile",
-        "description": "The US Core Patient Profile meets the U.S. Core Data for Interoperability (USCDI) v3 'Patient Demographics' requirements. This profile sets minimum expectations for the Patient resource to record, search, and fetch basic demographics and other administrative information about an individual patient. It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "StructureDefinition:extension"
-          }
-        ],
-        "reference": {
-          "reference": "StructureDefinition/us-core-tribal-affiliation"
-        },
-        "name": "US Core Tribal Affiliation Extension",
-        "description": "This Extension profile represents a tribe or band with which a person associates whether or not they are an enrolled member.",
-        "exampleBoolean": false
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Patient"
           }
         ],
@@ -942,15 +932,15 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Patient"
+            "valueString": "Location"
           }
         ],
         "reference": {
-          "reference": "Patient/example"
+          "reference": "Location/hospital"
         },
-        "name": "Patient Example",
-        "description": "This is a patient example for the *US Core Patient Profile*.",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+        "name": "Hospital Location",
+        "description": "This is an example hospital location for the *US Core Location Profile*.",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
       }
     ],
     "page": {
@@ -1023,11 +1013,11 @@
           "extension": [
             {
               "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
-              "valueUrl": "ig_template.html"
+              "valueUrl": "ImplementationGuide-healthedata1-sandbox.html"
             }
           ],
-          "nameUrl": "ig_template.html",
-          "title": "Ig Template",
+          "nameUrl": "ImplementationGuide-healthedata1-sandbox.html",
+          "title": "Implementation Guide Healthedata 1 Sandbox",
           "generation": "markdown"
         }
       ]

@@ -27,10 +27,11 @@
         {%- if new -%}
           <li><a href="{{r.path}}"><span class="bg-success" markdown="1">{{r.title}}</span><!-- new-content --></a></li>
         {% else %}
-          <li><a href="{{r.path}}">{{r.title}}</a></li>
+          <li><a href="{{r.path}}">FOO{{r.title}}</a></li>
         {% endif %}
 
     {% endif %}
   {%- endfor -%}
 {% endfor %}
 </ul>
+

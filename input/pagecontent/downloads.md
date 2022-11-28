@@ -86,11 +86,11 @@ I put all my pages etc in input folder but that is not the right place it should
 ~~~
 
 
-<!-- ### Cross Version Comparisons
+### Implementation Guide Details
 
-The table below summarizes the different profiles and resource types between Argonaut Data Query and major releases of US Core :
+Technical details about the [ImplementationGuide]({{site.data.fhir.path}}implementationguide.html) resource that define this specification, including dependencies and implementation guide publishing parameter settings.
 
-{ % include dstu2-r4-table.md % } -->
+- [IPA ImplementationGuide Resource](ImplementationGuide-healthedata1-sandbox.html)
 
 
 
