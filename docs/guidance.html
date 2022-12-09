@@ -1,0 +1,1918 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>HEALTHEDATA1-SANDBOX\Guidance - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Health eData 1 Sandbox</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - CI Build
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">IG Home</a>
+  </li>
+  <li>
+    <a href="guidance.html">General Guidance</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifact Index</a>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+  <li>
+    <a href="ImplementationGuide-healthedata1-sandbox.html">IG Page</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Guidance</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Health eData 1 Sandbox - Local Development build (v0.1.0). See the <a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Guidance</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#escape-curly-braces" id="markdown-toc-escape-curly-braces">Escape curly braces</a></li>
+  <li><a href="#create-pretty-list-with-liquid" id="markdown-toc-create-pretty-list-with-liquid">Create Pretty List with Liquid</a></li>
+  <li><a href="#my-new-stuff" id="markdown-toc-my-new-stuff">My new stuff</a></li>
+  <li><a href="#list-highlighting" id="markdown-toc-list-highlighting">List highlighting</a></li>
+  <li><a href="#my-awesome-table" id="markdown-toc-my-awesome-table">My Awesome Table</a></li>
+  <li><a href="#svg-file" id="markdown-toc-svg-file">svg file</a></li>
+  <li><a href="#code-blocks" id="markdown-toc-code-blocks">Code Blocks</a></li>
+  <li><a href="#bootstrap-panels" id="markdown-toc-bootstrap-panels">Bootstrap Panels</a></li>
+  <li><a href="#stacked-panels" id="markdown-toc-stacked-panels">Stacked Panels</a></li>
+  <li><a href="#sorting-using-liquid" id="markdown-toc-sorting-using-liquid">Sorting using Liquid</a></li>
+  <li><a href="#include-lines-using-helper-file" id="markdown-toc-include-lines-using-helper-file">include lines using helper file</a></li>
+  <li><a href="#example-button" id="markdown-toc-example-button">Example button</a></li>
+</ul>
+
+</div>
+
+<h3 id="escape-curly-braces">Escape curly braces</h3>
+
+<p>{This is really fun}</p>
+
+<p>{{ site.data.foo[‘fun/time’][‘description’]}} : This is really fun</p>
+
+<h3 id="create-pretty-list-with-liquid">Create Pretty List with Liquid</h3>
+
+  <!-- if site.users = "Tobi", "Laura", "Tetsuro", "Adam" -->
+
+<h3 id="my-new-stuff">My new stuff</h3>
+
+<ul>
+  <li><span class="bg-success">“USCoreNonLaboratoryCodes”</span>  <!-- new-content --></li>
+  <li><span class="bg-success">“USCoreObservationCategoryValueSet”</span>  <!-- new-content --></li>
+  <li><span class="bg-success">“USCoreSurveyCodes”</span>  <!-- new-content --></li>
+  <li><span class="bg-success">“USCoreOccupationProfile”</span>  <!-- new-content --></li>
+  <li><span class="bg-success">“USCorePregnancyStatusProfile”</span>  <!-- new-content --></li>
+  <li><span class="bg-success">“QuestionnaireUrl”</span>  <!-- new-content --></li>
+</ul>
+
+<hr/>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+<span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">black_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="s2">","</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">black_list</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="nv">sd</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">r_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.resources</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">r_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">r</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">-%}</span>
+         &lt;li&gt;<span class="p">{{</span><span class="nv">r</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/li&gt;
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<ul><li>US Core Observation Screening Assessment Profile</li></ul>
+
+<hr/>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">black_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Extension,Provenance,Medication,Organization,Practitioner,PractitionerRole,Location"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="s2">","</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">r_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">black_list</span><span class="w"> </span><span class="ow">contains</span><span class="w"> </span><span class="nv">sd</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">-%}</span>
+       <span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">r_list</span><span class="w"> </span><span class="p">%}{{</span><span class="w"> </span><span class="nv">r_list</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">sd</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">}}{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">ur_list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">r_list</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">uniq</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="p">%}</span>
+&lt;ul&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">r</span><span class="w"> </span><span class="nt">in</span><span class="w">  </span><span class="nv">ur_list</span><span class="w"> </span><span class="p">%}</span>
+    &lt;li&gt;<span class="p">{{</span><span class="nv">r</span><span class="p">}}</span>&lt;/li&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<ul id="prov-white-list">
+
+    <li>Observation</li>
+
+</ul>
+<hr/>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">types</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="nv">types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">append</span><span class="p">:</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">split</span><span class="p">:</span><span class="w"> </span><span class="s2">","</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">uniq</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">my_types</span><span class="w"> </span><span class="p">%}</span>
+  &lt;strong&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="p">}}</span>&lt;/strong&gt;
+  &lt;ul&gt;
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="p">%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">-%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">-%}</span>
+        <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash2</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">basename</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd2</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="p">%}</span>
+            <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">-%}</span>
+            <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd2</span><span class="p">.</span><span class="nv">basename</span><span class="p">%}</span>
+             <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">-%}</span>
+             <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+        <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="nv">child</span><span class="w"> </span><span class="p">-%}</span>
+            &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/a&gt;&lt;/li&gt;
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">-%}</span>
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">parent</span><span class="w"> </span><span class="p">-%}</span>
+            &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd1</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>(Parent)&lt;/a&gt;
+                &lt;ul&gt;
+                <span class="p">{%-</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">sd_hash3</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.data.structuredefinitions</span><span class="w"> </span><span class="p">-%}</span>
+                  <span class="p">{%-</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">sd3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">sd_hash3</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="p">-%}</span>
+                  <span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">sd1</span><span class="p">.</span><span class="nv">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">sd3</span><span class="p">.</span><span class="nv">basename</span><span class="w"> </span><span class="p">%}</span>
+                    &lt;li&gt;&lt;a href="<span class="p">{{</span><span class="nv">sd3</span><span class="p">.</span><span class="nv">path</span><span class="p">}}</span>"&gt;<span class="p">{{</span><span class="nv">sd3</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>(child)&lt;/a&gt;&lt;/li&gt;
+                  <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+                <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+                &lt;/ul&gt;
+            &lt;/li&gt;
+          <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+      <span class="p">{%-</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">-%}</span>
+    <span class="p">{%-</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">-%}</span>
+  &lt;/ul&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+
+</code></pre></div></div>
+
+<p><strong></strong></p>
+<ul></ul>
+
+<p><strong>Observation</strong></p>
+<ul>
+        
+        <li><a href="StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></li></ul>
+
+<p><strong>Provenance</strong></p>
+<ul>
+        
+        <li><a href="StructureDefinition-us-core-provenance.html">US Core Provenance Profile</a></li></ul>
+
+<h3 id="list-highlighting">List highlighting</h3>
+
+<ul>
+  <li class="new-content">floor</li>
+  <li>bar</li>
+  <li class="new-content">baz
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="my-awesome-table">My Awesome Table</h3>
+
+<p>from this…</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### My Awesome Table
+
+tadaa...
+
+| **Term** | **Definition** |
+| --- | --- |
+| **Batch File Format** | The file formats used to load data into PLR or receive distributions from PLR in bulk, on a delayed basis. &lt;br /&gt;&lt;br /&gt;See also Batch XML Format and Batch CSV Format. |
+| **Category** | A "super-role", a category of related Provider Role Types. &lt;br /&gt;&lt;br /&gt;For example, the category "Nurse" might contain many Provider Role Types such as "LPN", RN" and so on; the category "Doctors" might contain all Provider role types assigned to doctors, and so on. |
+{: .grid}
+</code></pre></div></div>
+
+<p>to this…</p>
+
+<p>tadaa…</p>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th><strong>Term</strong></th>
+      <th><strong>Definition</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Batch File Format</strong></td>
+      <td>The file formats used to load data into PLR or receive distributions from PLR in bulk, on a delayed basis. <br/><br/>See also Batch XML Format and Batch CSV Format.</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>A “super-role”, a category of related Provider Role Types. <br/><br/>For example, the category “Nurse” might contain many Provider Role Types such as “LPN”, RN” and so on; the category “Doctors” might contain all Provider role types assigned to doctors, and so on.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="color: red">test code block</p>
+
+<h3 id="svg-file">svg file</h3>
+
+<p>&lt;?xml version=”1.0” encoding=”UTF-8” standalone=”no”?&gt;<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 542 275" zoomAndPan="magnify" preserveAspectRatio="none" width="542px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:542px;height:275px;background:#FFFFFF;" contentScriptType="application/ecmascript" version="1.1" height="275px"><defs><filter width="300%" x="-1" y="-1" id="f6nb99kiye4r7" height="300%"><feGaussianBlur result="blurOut" stdDeviation="2.0"></feGaussianBlur><feColorMatrix result="blurOut2" in="blurOut" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" type="matrix"></feColorMatrix><feOffset result="blurOut3" dx="4.0" dy="4.0" in="blurOut2"></feOffset><feBlend mode="normal" in="SourceGraphic" in2="blurOut3"></feBlend></filter></defs><g><ellipse filter="url(#f6nb99kiye4r7)" cx="272.5" cy="20" rx="10" ry="10" style="stroke:none;stroke-width:1.0;" fill="#000000"></ellipse><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="32,50,95,50,107,62,95,74,32,74,20,62,32,50"></polygon><text lengthAdjust="spacing" x="67.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="32" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition A</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="57" x="35" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="45" font-size="12" textLength="37" y="126.8491" font-family="sans-serif" fill="#000000">Text 1</text><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="139,50,202,50,214,62,202,74,139,74,127,62,139,50"></polygon><text lengthAdjust="spacing" x="174.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="139" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition B</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="141.5" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="151.5" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 2</text><ellipse filter="url(#f6nb99kiye4r7)" cx="170.5" cy="185.6792" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" fill="#FFFFFF"></ellipse><ellipse cx="170.5" cy="185.6792" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;" fill="#000000"></ellipse><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="246,50,309,50,321,62,309,74,246,74,234,62,246,50"></polygon><text lengthAdjust="spacing" x="281.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="246" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition C</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="248.5" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="258.5" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 3</text><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="353,50,417,50,429,62,417,74,353,74,341,62,353,50"></polygon><text lengthAdjust="spacing" x="389" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="353" font-size="11" textLength="64" y="65.8081" font-family="sans-serif" fill="#000000">condition D</text><text lengthAdjust="spacing" x="429" font-size="11" textLength="42" y="59.4058" font-family="sans-serif" fill="#000000">nothing</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="356" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="366" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 4</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="76" x="449" y="130.8081" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="459" font-size="12" textLength="56" y="151.9468" font-family="sans-serif" fill="#000000">Text else</text><ellipse filter="url(#f6nb99kiye4r7)" cx="272.5" cy="247.6792" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" fill="#FFFFFF"></ellipse><ellipse cx="272.5" cy="247.6792" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;" fill="#000000"></ellipse><line y1="139.6792" x1="170.5" y2="174.6792" style="stroke:#A80036;stroke-width:1.5;" x2="170.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="166.5,164.6792,170.5,174.6792,174.5,164.6792,170.5,168.6792"></polygon><line y1="74" x1="63.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,95.7104,63.5,105.7104,67.5,95.7104,63.5,99.7104"></polygon><line y1="139.6792" x1="63.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,206.6792,63.5,216.6792,67.5,206.6792,63.5,210.6792"></polygon><line y1="74" x1="170.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="170.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="166.5,95.7104,170.5,105.7104,174.5,95.7104,170.5,99.7104"></polygon><line y1="74" x1="277.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="277.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="273.5,95.7104,277.5,105.7104,281.5,95.7104,277.5,99.7104"></polygon><line y1="139.6792" x1="277.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="277.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="273.5,206.6792,277.5,216.6792,281.5,206.6792,277.5,210.6792"></polygon><line y1="74" x1="385" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="385"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="381,95.7104,385,105.7104,389,95.7104,385,99.7104"></polygon><line y1="139.6792" x1="385" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="385"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="381,206.6792,385,216.6792,389,206.6792,385,210.6792"></polygon><line y1="62" x1="107" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="127"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="117,58,127,62,117,66,121,62"></polygon><line y1="62" x1="214" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="234"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="224,58,234,62,224,66,228,62"></polygon><line y1="62" x1="321" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="341"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="331,58,341,62,331,66,335,62"></polygon><line y1="30" x1="272.5" y2="35" style="stroke:#A80036;stroke-width:1.5;" x2="272.5"></line><line y1="35" x1="272.5" y2="35" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><line y1="35" x1="63.5" y2="50" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,40,63.5,50,67.5,40,63.5,44"></polygon><line y1="62" x1="429" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><line y1="62" x1="487" y2="130.8081" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="483,120.8081,487,130.8081,491,120.8081,487,124.8081"></polygon><line y1="164.7769" x1="487" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="483,206.6792,487,216.6792,491,206.6792,487,210.6792"></polygon><line y1="216.6792" x1="63.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><line y1="216.6792" x1="272.5" y2="236.6792" style="stroke:#A80036;stroke-width:1.5;" x2="272.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="268.5,226.6792,272.5,236.6792,276.5,226.6792,272.5,230.6792"></polygon>&lt;!--MD5=[bb912d9427ff8b649e9ce4d57f1ca285]
+@startuml
+start
+if (condition A) then (yes)
+  :Text 1;
+elseif (condition B) then (yes)
+  :Text 2;
+  stop
+elseif (condition C) then (yes)
+  :Text 3;
+elseif (condition D) then (yes)
+  :Text 4;
+else (nothing)
+  :Text else;
+endif
+stop
+@enduml</g></svg></p>
+
+<p>PlantUML version 1.2021.10(Mon Aug 30 13:43:48 UTC 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+–&gt;&lt;/g&gt;&lt;/svg&gt;</p>
+
+<h3 id="code-blocks">Code Blocks</h3>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">1</span><span class="pi">:</span>  <span class="na">differential</span><span class="pi">:</span>
+<span class="na">2</span><span class="pi">:</span>    <span class="na">element</span><span class="pi">:</span>
+<span class="na">3</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s">Observation</span>
+<span class="na">4</span><span class="pi">:</span>        <span class="na">path</span><span class="pi">:</span> <span class="s">Observation</span>
+<span class="na">5</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
+<span class="na">6</span><span class="pi">:</span>        <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
+<span class="na">7</span><span class="pi">:</span>        <span class="na">min</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">8</span><span class="pi">:</span>        <span class="na">mustSupport</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<figure class="highlight"><pre><code data-lang="yaml" class="language-yaml"><span class="na">1</span><span class="pi">:</span>  <span class="na">differential</span><span class="pi">:</span>
+<span class="na">2</span><span class="pi">:</span>    <span class="na">element</span><span class="pi">:</span>
+<span class="na">3</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s">Observation</span>
+<span class="na">4</span><span class="pi">:</span>        <span class="na">path</span><span class="pi">:</span> <span class="s">Observation</span>
+<span class="na">5</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
+<span class="na">6</span><span class="pi">:</span>        <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
+<span class="na">7</span><span class="pi">:</span>        <span class="na">min</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">8</span><span class="pi">:</span>        <span class="na">mustSupport</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
+
+<pre class="line-numbers">
+<code class="language-yaml">
+1:  differential:
+2:    element:
+3:      - id: Observation
+4:        path: Observation
+5:      - id: 'Observation.meta'
+6:        path: 'Observation.meta'
+7:        min: 1
+8:        mustSupport: true
+</code>
+</pre>
+
+<h3 id="bootstrap-panels">Bootstrap Panels</h3>
+
+<h3 id="stacked-panels">Stacked Panels</h3>
+
+  <!-- Source = {in_path}. This file is generated by USCDI-USCore_mappingpage_maker.ipynb Do not edit directly. -->
+
+<style>
+
+.panel {
+    background: #0074bb;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 0px;
+    box-shadow: 1px 2px DarkGray;
+    }
+
+.panel-body {
+    padding-left: 15px;
+}
+
+.panel table {
+    /* table-layout: fixed;
+    word-wrap: break-word;
+    width: auto; */
+    border: 0px !important;
+    padding-right: 20px;
+    }
+
+.panel th, td {
+    font-weight: bold;
+    text-align: left;
+    font-size: 1.2em;
+    }
+
+ .panel a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    }
+
+ .icon-right {
+    float: right;
+    padding: 6px
+}
+
+</style>
+
+<div>
+<div class="icon-right">
+<img src="USCDI.png" alt="USCDI Logo" style="width: 60%;" class="pull-right img-responsive"/>
+</div>
+<p style="font-size: 300%; font-weight: bold;" class="text-center">US Core Data for Interoperability USCD V3</p>
+</div>
+
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="allergies-and-intolerances.png" alt="Allergies and Intolerances" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Allergies and Intolerances</th>
+        <th class="col-sm-4"><a name="l2237">​</a><a href="StructureDefinition-us-core-allergyintolerance.html" target="_blank">US Core AllergyIntolerance Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Substance (Medication)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Substance (Drug Class)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reaction</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="assessment-and-plan-of-treatment.png" alt="Assessment and Plan of Treatment" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Assessment and Plan of Treatment</th>
+        <th class="col-sm-4"></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Assessment and Plan of Treatment</td>
+        <td><a name="l2312">​</a><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Assessment</td>
+        <td><a name="l2324">​</a><a href="StructureDefinition-us-core-observation-sdoh-assessment.html" target="_blank">US Core Observation SDOH Assessment Profile</a><br/><a href="StructureDefinition-us-core-observation-social-history.html" target="_blank">US Core Observation Social History Profile</a><br/><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></td>
+        <td><a name="l2334">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="care-team-members.png" alt="Care Team Members" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Care Team Members</th>
+        <th class="col-sm-4"><a name="l2361">​</a><a href="StructureDefinition-us-core-careteam.html" target="_blank">US Core CareTeam Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Name</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Identifier</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Location</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Telecom</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Role</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="clinical-notes.png" alt="Clinical Notes" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Clinical Notes</th>
+        <th class="col-sm-4"><a name="l2443">​</a><a href="StructureDefinition-us-core-documentreference.html" target="_blank">US Core DocumentReference Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Consultation Note</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Discharge Summary Note</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•History &amp; Physical</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Imaging Narrative</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Laboratory Report Narrative</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pathology Report Narrative</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedure Note</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Progress Note</td>
+        <td></td>
+        <td><a name="l2533">​</a><a href="clinical-notes.html" target="_blank">See Clinical Notes Guidance</a></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="clinical-tests.png" alt="Clinical Tests" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Clinical Tests</th>
+        <th class="col-sm-4"><a name="l2560">​</a><a href="StructureDefinition-us-core-observation-clinical-test.html" target="_blank">US Core Observation Clinical Test Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Clinical Test</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Clinical Test Result/Report</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="diagnostic-imaging.png" alt="Diagnostic Imaging" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Diagnostic Imaging</th>
+        <th class="col-sm-4"><a name="l2615">​</a><a href="StructureDefinition-us-core-observation-imaging.html" target="_blank">US Core Observation Imaging Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Test</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Result/Report</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="encounter.png" alt="Encounter" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Encounter</th>
+        <th class="col-sm-4"><a name="l2670">​</a><a href="StructureDefinition-us-core-encounter.html" target="_blank">US Core Encounter Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Type</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis</td>
+        <td><a name="l2695">​</a><a href="StructureDefinition-us-core-condition-encounter-diagnosis.html" target="_blank">US Core Condition Encounter Diagnosis Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Time</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Location</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Disposition</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right"><a name="l2740">​</a>
+    <img src="foo.png" alt="Foo" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Foo</th>
+        <th class="col-sm-4">US Core Foo Profile</th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Bar</td>
+        <td>US Core Foo Profile</td>
+        <td>Bar</td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="goals.png" alt="Goals" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Goals</th>
+        <th class="col-sm-4"></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Patient Goals</td>
+        <td><a name="l2810">​</a><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Goals</td>
+        <td></td>
+        <td><a name="l2824">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="health-insurance-information.png" alt="Health Insurance Information" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Health Insurance Information</th>
+        <th class="col-sm-4"><a name="l2851">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Coverage Status</td>
+        <td><a name="l2866">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Coverage Type</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Relationship to Subscriber</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Member Identifier</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Subscriber Identifier</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Group Number</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Payer Identifier</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="health-status-assessments.png" alt="Health Status/Assessments" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Health Status/Assessments</th>
+        <th class="col-sm-4"></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Health Concerns</td>
+        <td><a name="l2968">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Functional Status</td>
+        <td>TODO</td>
+        <td><a name="l2983">​</a><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Disability Status</td>
+        <td>TODO</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Mental/Cognitive Status</td>
+        <td>TODO</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pregnancy Status</td>
+        <td><a name="l3015">​</a><a href="StructureDefinition-us-core-observation-pregnancystatus.html" target="_blank">US Core Observation Pregnancy Status Profile</a><br/><a href="StructureDefinition-us-core-observation-pregnancyintent.html" target="_blank">US Core Observation Pregnancy Intent Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Smoking Status</td>
+        <td><a name="l3030">​</a><a href="StructureDefinition-us-core-smokingstatus.html" target="_blank">US Core Smoking Status Observation Profile</a></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="immunizations.png" alt="Immunizations" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Immunizations</th>
+        <th class="col-sm-4"><a name="l3059">​</a><a href="StructureDefinition-us-core-immunization.html" target="_blank">US Core Immunization Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="laboratory.png" alt="Laboratory" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Laboratory</th>
+        <th class="col-sm-4"><a name="l3101">​</a><a href="StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Observation Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-lab.html" target="_blank">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Tests</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Values/Results</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Specimen Type</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Result Status</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="medications.png" alt="Medications" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Medications</th>
+        <th class="col-sm-4"><a name="l3176">​</a><a href="StructureDefinition-us-core-medicationrequest.html" target="_blank">US Core MedicationRequest Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Medications</td>
+        <td></td>
+        <td><a name="l3193">​</a><a href="medication-list.html" target="_blank">See Medication List Guidance</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Dose</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Dose Unit of Measure</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Indication</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Fill Status</td>
+        <td><a name="l3233">​</a><a href="StructureDefinition-us-core-medicationdispense.html" target="_blank">US Core MedicationDispense Profile</a></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="patient-demographics.png" alt="Patient Demographics" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Patient Demographics</th>
+        <th class="col-sm-4"><a name="l3262">​</a><a href="StructureDefinition-us-core-patient.html" target="_blank">US Core Patient Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•First Name</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Last Name</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Previous Name</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Middle Name (including middle initial)</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Suffix</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Birth Sex</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Birth</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Death</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Race</td>
+        <td><a name="l3357">​</a><a href="StructureDefinition-us-core-race.html" target="_blank">US Core Race Extension</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Ethnicity</td>
+        <td><a name="l3369">​</a><a href="StructureDefinition-us-core-ethnicity.html" target="_blank">US Core Ethnicity Extension</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Tribal Affiliation</td>
+        <td><a name="l3381">​</a><a href="StructureDefinition-us-core-tribal-affiliation.html" target="_blank">US Core Tribal Affiliation Extension</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Gender Identity</td>
+        <td><a name="l3393">​</a><a href="StructureDefinition-us-core-genderIdentity.html" target="_blank">US Core Gender Identity Extension</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Sexual Orientation</td>
+        <td><a name="l3405">​</a><a href="StructureDefinition-us-core-observation-sexual-orientation.html" target="_blank">US Core Observation Sexual Orientation Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Preferred Language</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Address</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Previous Address</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Email</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Phone Number</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person’s Name</td>
+        <td><a name="l3467">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person’s Relationship</td>
+        <td><a name="l3479">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation</td>
+        <td><a name="l3491">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation Industry</td>
+        <td><a name="l3503">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="problems.png" alt="Problems" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Problems</th>
+        <th class="col-sm-4"><a name="l3532">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Resolution</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Diagnosis</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Problems/Health Concerns</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="procedures.png" alt="Procedures" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Procedures</th>
+        <th class="col-sm-4"><a name="l3594">​</a><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedure</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reason for Referral</td>
+        <td><a name="l3619">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Interventions</td>
+        <td><a name="l3631">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a><br/><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></td>
+        <td><a name="l3638">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="provenance.png" alt="Provenance" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Provenance</th>
+        <th class="col-sm-4"><a href="StructureDefinition-us-core-provenance.html" target="_blank">US Core Provenance Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Author Time Stamp</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Author Organization</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="unique-device-identifier(s).png" alt="Unique Device Identifier(s)" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Unique Device Identifier(s)</th>
+        <th class="col-sm-4"><a name="l3717">​</a><a href="StructureDefinition-us-core-implantable-device.html" target="_blank">US Core Implantable Device Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Unique Device Identifier(s) for a Patient’s Implantable Device(s)</td>
+        <td></td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="panel">
+  <div class="panel-body">
+    <div class="icon-right">
+    <img src="vital-signs.png" alt="Vital Signs" style="width:60px" class="media-object"/>
+  </div>
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th class="col-sm-4">Vital Signs</th>
+        <th class="col-sm-4"><a name="l3759">​</a><a href="StructureDefinition-us-core-vital-signs.html" target="_blank">US Core Vital Signs Profile</a></th>
+        <th class="col-sm-2"></th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diastolic blood pressure</td>
+        <td><a name="l3774">​</a><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Systolic blood pressure</td>
+        <td><a name="l3786">​</a><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body height</td>
+        <td><a name="l3798">​</a><a href="StructureDefinition-us-core-body-height.html" target="_blank">US Core Body Height Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body weight</td>
+        <td><a name="l3810">​</a><a href="StructureDefinition-us-core-body-weight.html" target="_blank">US Core Body Weight Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Heart rate</td>
+        <td><a name="l3822">​</a><a href="StructureDefinition-us-core-heart-rate.html" target="_blank">US Core Heart Rate Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Respiratory rate</td>
+        <td><a name="l3834">​</a><a href="StructureDefinition-us-core-respiratory-rate.html" target="_blank">US Core Respiratory Rate Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body temperature</td>
+        <td><a name="l3846">​</a><a href="StructureDefinition-us-core-body-temperature.html" target="_blank">US Core Body Temperature Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pulse oximetry</td>
+        <td><a name="l3858">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Inhaled oxygen concentration</td>
+        <td><a name="l3870">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•BMI Percentile (2-20 years old)</td>
+        <td><a name="l3882">​</a><a href="StructureDefinition-pediatric-bmi-for-age.html" target="_blank">US Core Pediatric BMI for Age Observation Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Weight-for-length Percentile (Birth - 36 months)</td>
+        <td><a name="l3894">​</a><a href="StructureDefinition-pediatric-weight-for-height.html" target="_blank">US Core Pediatric Weight for Height Observation Profile</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occipital-frontal Head Circumference Percentile (Birth - 36 months)</td>
+        <td>US Core Pediatric Head Occipital Frontal Circumference Observation Profile </td>
+        <td></td>
+      </tr>
+ 
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<h3 id="sorting-using-liquid">Sorting using Liquid</h3>
+
+<p>original collection:</p>
+
+<p>{“us-core-provenance”=&gt;{“index”=&gt;0, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance”, “name”=&gt;”USCoreProvenance”, “title”=&gt;”US Core Provenance Profile”, “path”=&gt;”StructureDefinition-us-core-provenance.html”, “kind”=&gt;”resource”, “type”=&gt;”Provenance”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Provenance”, “basename”=&gt;”Provenance”, “basepath”=&gt;”http://hl7.org/fhir/R4/provenance.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 PDT 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;””, “description”=&gt;”This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.”}, “us-core-observation-screening-assessment”=&gt;{“index”=&gt;1, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment”, “name”=&gt;”USCoreObservationScreeningAssessmentProfile”, “title”=&gt;”US Core Observation Screening Assessment Profile”, “path”=&gt;”StructureDefinition-us-core-observation-screening-assessment.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Observation”, “basename”=&gt;”Observation”, “basepath”=&gt;”http://hl7.org/fhir/R4/observation.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 PDT 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;””, “description”=&gt;”The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, the US Core Observation Screening Assessment Profile sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient’s cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile. It provides the floor for standards development for specific use cases.”}}</p>
+
+<p>sorted collection:</p>
+
+<h3 id="include-lines-using-helper-file">include lines using helper file</h3>
+
+<p>Includes the specified lines from another file. Typically this include is used for fragments of FHIR resources and therefore is wrapped in a code block.</p>
+
+<p>The helper file is place in the <code class="language-plaintext highlighter-rouge">input/images</code> folder not the ‘input/include` file folder</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── examples
+│&nbsp;&nbsp; ├── patient-deceased-example.json
+│&nbsp;&nbsp; └── patient-example.json
+├── fsh
+│&nbsp;&nbsp; ├── fsh
+│&nbsp;&nbsp; ├── my-extensions.fsh
+│&nbsp;&nbsp; └── my-profiles.fsh
+├── ignoreWarnings.txt
+├── images
+│&nbsp;&nbsp; ├── cat.jpg
+│&nbsp;&nbsp; ├── includelines  &lt;&lt;&lt;&lt; HERE
+├── includes  &lt;&lt;&lt;&lt; NOT HERE
+│&nbsp;&nbsp; ├── DAR-exception.md
+│&nbsp;
+</code></pre></div></div>
+
+<p>Usage:
+  {% include_relative includelines filename=PATH start=INT|STR count=INT|STR %}</p>
+
+<ul>
+  <li>filename: path to file in temp/pages  (not under _includes )</li>
+  <li>start: integer (only 1) or common separated string (&gt; 1) of first line numbers to include, starting at 1</li>
+  <li>count: integer (only 1) or common separated string (&gt; 1) of number of lines to include</li>
+</ul>
+
+<p>The start and count item are aggregated into a (start, count) tuple and therefore need to be the same size.  If there are more than one start and count items, ellipses (“…”) will be inserted between the line fragments. 
+The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.</p>
+
+<h4 id="examples">Examples:</h4>
+
+<p><strong>1. single fragment:</strong></p>
+
+<p>~~~</p>
+
+<p>{% include_relative includelines filename=’patient-deceased-example.json’ start=10 count=5 %}</p>
+
+<p>~~~</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
+    }],
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+  },
+  "text" : {
+
+</code></pre></div></div>
+
+<p><strong>2. multiple fragments separated by “…”:</strong></p>
+
+<p>~~~</p>
+
+<p>{% include_relative includelines filename=’patient-deceased-example.json’ start = “10,20,30” count=”5,5,5” %}</p>
+
+<p>~~~</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
+    }],
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+  },
+  "text" : {
+...
+      "url" : "ombCategory",
+      "valueCoding" : {
+        "system" : "urn:oid:2.16.840.1.113883.6.238",
+        "code" : "2106-3",
+        "display" : "White"
+...
+        "system" : "urn:oid:2.16.840.1.113883.6.238",
+        "code" : "2028-9",
+        "display" : "Asian"
+      }
+    },
+
+</code></pre></div></div>
+
+<p><strong>3. The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
+The following will result in a warning message because the start line (15) is less than the previous plus the number of lines (20)</strong></p>
+
+<p>~~~</p>
+
+<p>{% include_relative includelines filename=’patient-deceased-example.json’ start = “10,15,30” count=”10,5,5” %}</p>
+
+<p>~~~</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
+    }],
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"&gt;&lt;b&gt;Mary A. Shaw &lt;/b&gt; female, DoB: 1937-10-21 ( Medical Record Number:&nbsp;55555555&nbsp;(use:&nbsp;USUAL))&lt;/p&gt;&lt;hr/&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td style=\"background-color: #f3f5da\" title=\"Record is active\"&gt;Active:&lt;/td&gt;&lt;td&gt;true&lt;/td&gt;&lt;td style=\"background-color: #f3f5da\" title=\"Known status of Patient\"&gt;Deceased:&lt;/td&gt;&lt;td colspan=\"3\"&gt;2022-07-22&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\"&gt;Contact Details:&lt;/td&gt;&lt;td colspan=\"3\"&gt;&lt;ul&gt;&lt;li&gt;ph: 555-555-5555(HOME)&lt;/li&gt;&lt;li&gt;&lt;a href=\"mailto:mary.shaw@example.com\"&gt;mary.shaw@example.com&lt;/a&gt;&lt;/li&gt;&lt;li&gt;49 Meadow St Mounds OK 74047 US &lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The ethnicity codes used to represent these concepts are based upon the [CDC ethnicity and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 43 reference ethnicity.  The ethnicity concepts are grouped by and pre-mapped to the 2 OMB ethnicity categories: - Hispanic or Latino - Not Hispanic or Latino.\"&gt;US Core Ethnicity Extension:&lt;/td&gt;&lt;td colspan=\"3\"&gt;&lt;ul&gt;&lt;li&gt;ombCategory: &lt;a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-CDCREC.html#CDCREC-2186-5\"&gt;CDC Race and Ethnicity&lt;/a&gt; 2186-5: Not Hispanic or Latino&lt;/li&gt;&lt;li&gt;text: Not Hispanic or Latino&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=\"background-color: #f3f5da\" title=\"Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.  The race codes used to represent these concepts are based upon the [CDC Race and Ethnicity Code Set Version 1.0](http://www.cdc.gov/phin/resources/vocabulary/index.html) which includes over 900 concepts for representing race and ethnicity of which 921 reference race.  The race concepts are grouped by and pre-mapped to the 5 OMB race categories:\n\n - American Indian or Alaska Native\n - Asian\n - Black or African American\n - Native Hawaiian or Other Pacific Islander\n - White.\"&gt;US Core Race Extension:&lt;/td&gt;&lt;td colspan=\"3\"&gt;&lt;ul&gt;&lt;li&gt;ombCategory: &lt;a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-CDCREC.html#CDCREC-2106-3\"&gt;CDC Race and Ethnicity&lt;/a&gt; 2106-3: White&lt;/li&gt;&lt;li&gt;ombCategory: &lt;a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-CDCREC.html#CDCREC-2028-9\"&gt;CDC Race and Ethnicity&lt;/a&gt; 2028-9: Asian&lt;/li&gt;&lt;li&gt;text: Mixed&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  },
+  "extension" : [{
+    "extension" : [{
+...!!!INCLUDELINES HELPER FILE WARNING OVERLAPPING LINES next startline = 15 &lt;= previous fragment end = 20 - CHECK YOUR SOURCE FILE!!!
+</code></pre></div></div>
+
+<hr/>
+
+<h3 id="example-button">Example button</h3>
+
+<h4 id="mandatory-operation">Mandatory Operation:</h4>
+
+<ol>
+  <li>
+    <p><strong>SHALL</strong> support fetching documents using the $docref operation.</p>
+
+    <p>This [$docref operation] is used to request a server <em>generate</em> a document based on the specified parameters. This operation is invoked on a FHIR Server’s DocumentReference endpoint (e.g., <code class="language-plaintext highlighter-rouge">[base]/DocumentReference/$docref</code>) and operates across all DocumentReference instances returning a Bundle of DocumentReference resources. See the [$docref operation] definition for detailed documentation.</p>
+
+    <ul>
+      <li>
+        <p>The operation can be invoked using the GET Syntax if the complex type parameter is omitted:</p>
+
+        <p><code class="language-plaintext highlighter-rouge">GET [base]/DocumentReference/$docref?{parameters}</code></p>
+      </li>
+      <li>
+        <p>Otherwise the POST transaction with used as follows:</p>
+
+        <p><code class="language-plaintext highlighter-rouge">POST [base]/DocumentReference/$docref</code></p>
+
+        <p>The body of the POST contains the [Parameters] resource with the [$docref operation] input parameters.</p>
+      </li>
+    </ul>
+
+    <p><strong>Example 1: Request the latest CCD</strong></p>
+  </li>
+</ol>
+
+<p>
+  <button data-target="#docref-example1" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
+    Click Here To See Example
+  </button>
+</p>
+
+<div id="docref-example1" class="collapse">
+  <div style="border:1px solid;border-color:#cccccc;padding:10px" class="card card-body">
+
+      <!-- includes/docref-example1.md -->
+      <!-- Example 1 : Request the latest CCD -->
+
+    <p><strong>Request the latest CCD for a patient using <code class="language-plaintext highlighter-rouge">GET</code> syntax</strong></p>
+
+    <p><code class="language-plaintext highlighter-rouge">GET [base]/DocumentReference/$docref?patient=123</code></p>
+
+    <p><strong>Request the latest CCD for a patient using <code class="language-plaintext highlighter-rouge">POST</code> syntax</strong></p>
+
+    <p><code class="language-plaintext highlighter-rouge">POST [base]/DocumentReference/$docref}</code></p>
+
+    <p><strong>POST request body:</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {
+      "resourceType": "Parameters",
+      "id": "get-ccd123",
+      "parameter": [
+        {
+          "name": "patient",
+          "valueId" : "123"
+        }
+      ]
+    }
+</code></pre></div>    </div>
+
+    <p><strong>Response</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div>    </div>
+
+    <p><strong>Response body</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    {
+      "resourceType": "Bundle",
+      "id": "get-ccd123-response",
+      "type": "searchset",
+      "total": 1,
+      "entry": [{
+        "fullUrl": "http://server/path/DocumentReference/get-ccd123",
+        "resource":{
+        "resourceType" : "DocumentReference",
+        "id" : "get-ccd123",
+        "meta" : {
+          "profile" : [
+            "http://fhir.org/guides/argonaut/StructureDefinition/argo-documentreference"
+          ]
+        },
+        "identifier" : [
+          {
+            "system" : "urn:ietf:rfc:3986",
+            "value" : "urn:oid:2.16.840.1.113883.19.5.99999.1"
+          }
+        ],
+        "status" : "current",
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://loinc.org",
+              "code" : "34133-9",
+              "display" : "Summary of episode note"
+            }
+          ],
+          "text" : "CCD Document"
+        },
+        "subject" : {
+          "reference" : "Patient/example",
+          "display" : "Amy Shaw"
+        },
+        "created" : "2006-09-01",
+        "indexed" : "2016-03-09T15:29:46Z",
+        "author" : [
+          {
+            "reference" : "Practitioner/practitioner-1",
+            "display" : "Ronald Bone, MD"
+          }
+        ],
+        "description" : "Pulmonology clinic acute visit",
+        "content" : [
+          {
+            "attachment" : {
+              "contentType" : "text/plain",
+              "url" : "/Binary/1-note",
+              "title" : "Uri where the data can be found: [base]/Binary/1-note"
+            },
+            "format" : {
+              "system" : "urn:oid:1.3.6.1.4.1.19376.1.2.3",
+              "code" : "urn:hl7-org:sdwg:ccda-structuredBody:2.1",
+              "display" : "Documents following C-CDA constraints using a structured body"
+            }
+          }
+        ],
+        "context" : {
+          "period" : {
+            "start" : "2004-12-23T08:00:00+11:00",
+            "end" : "2004-12-23T08:01:00+11:00"
+          }
+        }
+      }
+      }
+      ]
+    }
+</code></pre></div>    </div>
+
+  </div>
+</div>
+<p><br/></p>
+
+<p><strong>Example 2: Request Procedure Notes and Discharge Summaries for 2019</strong></p>
+
+<p>
+  <button data-target="#docref-example2" data-toggle="collapse" aria-controls="collapseExample" aria-expanded="false" type="button" title="Click to Open or Close Example" class="btn btn-info btn-lg btn-block">
+    Click Here To See Example
+  </button>
+</p>
+<div id="docref-example2" class="collapse">
+  <div class="card card-body">
+
+      <!-- includes/docref-example2 -->
+      <!-- Example 2: Request Procedure Notes and Discharge Summaries for 2019 -->
+
+    <p><strong>Request procedure notes and discharge summaries for 2019 using <code class="language-plaintext highlighter-rouge">POST</code> syntax</strong></p>
+
+    <p><code class="language-plaintext highlighter-rouge">POST [base]/DocumentReference/$docref}</code></p>
+
+    <p><strong>POST request body:</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Parameters",
+    "id": "get-docs",
+    "parameter": [
+        {
+            "name": "patient",
+            "valueId": "123"
+        },
+        {
+            "name": "start",
+            "valueDateTime": "2019-01-01"
+        },
+        {
+            "name": "end",
+            "valueDateTime": "2019-12-31"
+        },
+        {
+            "name": "type",
+            "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/c80-doc-typecodes",
+                "code": "18842-5",
+                "display": "Discharge summary"
+            }
+        },
+        {
+            "name": "type",
+            "valueCoding": {
+                "system": "http://terminology.hl7.org/CodeSystem/c80-doc-typecodes",
+                "code": "28570-0",
+                "display": "Procedures Note"
+            }
+        },
+        {
+            "name": "on-demand",
+            "valueBoolean": true
+        }
+    ]
+}
+</code></pre></div>    </div>
+
+    <p><strong>Response</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP/1.1 200 OK
+[other headers]
+</code></pre></div>    </div>
+
+    <p><strong>Response body</strong></p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "resourceType": "Bundle",
+    "id": "get-docs-response",
+    "type": "searchset",
+    "total": 3,
+    "entry": [
+        {
+            "fullUrl": "http://server/path/DocumentReference/procedure-note123",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "procedure-note123",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:2.16.840.1.113883.19.5.99999.1"
+                    }
+                ],
+                "status": "current",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                                "code": "clinical-note",
+                                "display": "Clinical Note"
+                            }
+                        ],
+                        "text": "Clinical Note"
+                    }
+                ],
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "28570-0",
+                            "display": "Procedure Note"
+                        }
+                    ],
+                    "text": "Procedure Note"
+                },
+                "subject": {
+                    "reference": "Patient/example",
+                    "display": "Amy Shaw"
+                },
+                "date": "2022-11-18T20:45:05Z",
+                "author": [
+                    {
+                        "reference": "Practitioner/practitioner-1",
+                        "display": "Ronald Bone, MD"
+                    }
+                ],
+                "description": "Ureteroscopy",
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "application/pdf",
+                            "url": "/Binary/procedure-note123.pdf"
+                        }
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2019-03-01",
+                        "end": "2019-03-02"
+                    }
+                }
+            }
+        },
+        {
+            "fullUrl": "http://server/path/DocumentReference/procedure-note456",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "procedure-note456",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+                    ]
+                },
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "28570-0",
+                            "display": "Procedure Note"
+                        }
+                    ],
+                    "text": "Procedure Note"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                                "code": "clinical-note",
+                                "display": "Clinical Note"
+                            }
+                        ],
+                        "text": "Clinical Note"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/example",
+                    "display": "Amy Shaw"
+                },
+                "date": "2022-11-18T20:45:05Z",
+                "author": [
+                    {
+                        "reference": "Practitioner/practitioner-1",
+                        "display": "Ronald Bone, MD"
+                    }
+                ],
+                "description": "Ureteroscopy",
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "application/pdf",
+                            "url": "/Binary/procedure-note456.pdf"
+                        }
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2019-06-01",
+                        "end": "2019-06-01"
+                    }
+                }
+            }
+        },
+        {
+            "fullUrl": "http://server/path/DocumentReference/discharge-summary789",
+            "resource": {
+                "resourceType": "DocumentReference",
+                "id": "discharge",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
+                    ]
+                },
+                "status": "current",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "18842-5",
+                            "display": "Discharge Summary"
+                        }
+                    ],
+                    "text": "Discharge Summary"
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category",
+                                "code": "clinical-note",
+                                "display": "Clinical Note"
+                            }
+                        ],
+                        "text": "Clinical Note"
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/example",
+                    "display": "Amy Shaw"
+                },
+                "date": "2022-11-18T20:45:05Z",
+                "author": [
+                    {
+                        "reference": "Practitioner/practitioner-1",
+                        "display": "Ronald Bone, MD"
+                    }
+                ],
+                "description": "Ureteroscopy",
+                "content": [
+                    {
+                        "attachment": {
+                            "contentType": "application/pdf",
+                            "url": "/Binary/discharge-summary789.pdf"
+                        }
+                    }
+                ],
+                "context": {
+                    "period": {
+                        "start": "2019-03-01",
+                        "end": "2019-03-03"
+                    }
+                }
+            }
+        }
+    ]
+}
+</code></pre></div>    </div>
+
+  </div>
+</div>
+<p><br/></p>
+
+<p>&lt;/div&gt;  <!-- new-content --></p>
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 8, 2022 22:58-0800">2022-12-08</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
+
+
+
+  <!-- / feedback form -->
+
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

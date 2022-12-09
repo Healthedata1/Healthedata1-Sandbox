@@ -66,13 +66,17 @@ parameters:
   # no-validate:
   #   - '*/*'  # does not seems to work
   #   - 'StructureDefinition/*'
+  # version-comparison:
+  #   - 4.0.0
+  #   - 3.1.1
+  #   - 2.0.0
+  #   - 1.0.1
+  # ipa-comparison:
+  #   - '{current}'
 copyrightYear: 2020+
 releaseLabel: CI Build
-version-comparison:
-  - 4.0.0
-  - 3.1.1
-  - 2.0.0
-  - 1.0.1
+
+
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯

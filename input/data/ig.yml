@@ -87,56 +87,89 @@ definition:
     name: US Core Assessment Category
   - reference:
       reference: Observation/PHQ9-item-example-44250-9
-    name: PHQ9-item-example-44250-9
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44250-9 (Little interest or pleasure
+      in doing things in last 2 weeks) for the *US Core Observation Screening Assessment
+      Profile*
+    name: Phq9 Item Example 44250-9
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44251-7
-    name: PHQ9-item-example-44251-7
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44251-7 (Poor appetite or overeating)
+      for the *US Core Observation Screening Assessment Profile*
+    name: Phq9 Item Example 44251-7
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44252-5
-    name: PHQ9-item-example-44252-5
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44252-5 (Trouble concentrating on things,
+      such as reading the newspaper or watching television) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Phq9 Item Example 44252-5
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44253-3
-    name: PHQ9-item-example-44253-3
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44253-3 (Moving or speaking so slowly
+      that other people could have noticed. Or the opposite-being so fidgety or restless
+      that you have been moving around a lot more than usual) for the *US Core Observation
+      Screening Assessment Profile*
+    name: Phq9 Item Example 44253-3
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44254-1
-    name: PHQ9-item-example-44254-1
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44254-1 (Feeling tired or having little
+      energy) for the *US Core Observation Screening Assessment Profile*
+    name: Phq9 Item Example 44254-1
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44255-8
-    name: PHQ9-item-example-44255-8
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44255-8 (Feeling down, depressed, or
+      hopeless in last 2 weeks) for the *US Core Observation Screening Assessment
+      Profile*
+    name: Phq9 Item Example 44255-8
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44258-2
-    name: PHQ9-item-example-44258-2
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44258-2 (Feeling bad about yourself-or
+      that you are a failure or have let yourself or your family down) for the *US
+      Core Observation Screening Assessment Profile*
+    name: Phq9 Item Example 44258-2
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44259-0
-    name: PHQ9-item-example-44259-0
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44259-0 (Trouble falling or staying asleep,
+      or sleeping too much) for the *US Core Observation Screening Assessment Profile*
+    name: Phq9 Item Example 44259-0
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44260-8
-    name: PHQ9-item-example-44260-8
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44260-8 (Thoughts that you would be better
+      off dead, or of hurting yourself in some way) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Phq9 Item Example 44260-8
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-44261-6
-    name: PHQ9-item-example-44261-6
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 44261-6 (Patient Health Questionnaire
+      9 item (PHQ-9) total score [Reported]) for the *US Core Observation Screening
+      Assessment Profile*
+    name: Phq9 Item Example 44261-6
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-item-example-69722-7
-    name: PHQ9-item-example-69722-7
-    exampleBoolean: true
+    description: This is a Phq9 Item Example 69722-7 (How difficult have these problems
+      made it for you to do your work, take care of things at home, or get along with
+      other people?) for the *US Core Observation Screening Assessment Profile*
+    name: Phq9 Item Example 69722-7
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: Observation/PHQ9-panel-example-44249-1
-    name: PHQ9-panel-example-44249-1
-    exampleBoolean: true
+    description: This is a Phq9 Panel Example 44249-1 (PHQ-9 quick depression assessment
+      panel [Reported.PHQ]) for the *US Core Observation Screening Assessment Profile*
+    name: Phq9 Panel Example 44249-1
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment
   - reference:
       reference: QuestionnaireResponse/5774968
     name: '5774968'
-    exampleBoolean: true
+    exampleCanonical: http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse
   - reference:
       reference: Patient/deceased-example
     description: This is a deceased patient example for the *US Core Patient Profile*.
@@ -199,3 +232,5 @@ definition:
     value: 'true'
   - code: excludeexample
     value: 'true'
+  - code: ipa-comparison
+    value: '{current}'

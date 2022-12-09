@@ -39,7 +39,6 @@ if ! [[ $SUSHI ]]; then
 echo "================================================================="
 echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
 echo "================================================================="
-trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
 [[ -d input/fsh ]] && mv input/fsh input/_fsh
 fi
 
