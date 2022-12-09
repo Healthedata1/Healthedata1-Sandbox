@@ -1,7 +1,7 @@
 #!/bin/bash
 # exit when any command fails
 set -e
-tmp=$(mktemp -d -d ./input/_examples) 
+tmp=$(mktemp -d -d ./input/_examples) echo 'done!'
 function finish {
   # Your cleanup code here
   echo '=== clean up - rename the input/_fsh folder to input/fsh  ==='
@@ -39,6 +39,7 @@ if ! [[ $SUSHI ]]; then
 echo "================================================================="
 echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
 echo "================================================================="
+trap finish EXIT
 [[ -d input/fsh ]] && mv input/fsh input/_fsh
 fi
 
@@ -46,6 +47,7 @@ if [[ $NO_META ]]; then
 echo "================================================================="
 echo "===remove the meta element from all the examples==="
 echo "================================================================="
+trap finish EXIT
 cp ./input/examples/*.json $tmp
 for file in $tmp/*.json
   do
@@ -65,12 +67,13 @@ echo "==================== you typed '$var1' ============================"
 echo "================================================================="
 
 if [ $var1 == "c" ]; then
+  trap finish EXIT
   git commit -a
   git push
 elif [ $var1 == "a" ]; then
+  trap finish EXIT
   git add .
   git commit
   git push
 fi
-
 trap finish EXIT
