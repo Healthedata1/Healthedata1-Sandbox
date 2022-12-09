@@ -79,8 +79,6 @@ entry:
                 display: Author
           who:
             reference: Organization/saint-luke-w-endpoint
-          # onBehalfOf:
-          #   reference: Organization/saint-luke-w-endpoint
         -  type:
               coding:
                 - system: >-
@@ -88,8 +86,8 @@ entry:
                   code: author
                   display: Author
            who:
-            reference: Practitioner/practitioner-2
-           onBehalfOf:
-            reference: Organization/saint-luke-w-endpoint
+            reference: Patient/deceased-example
+          #  onBehalfOf:
+          #   reference: Organization/saint-luke-w-endpoint
     search:
       mode: include

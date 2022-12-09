@@ -1,18 +1,30 @@
 #!/bin/bash
 # exit when any command fails
 set -e
+tmp=$(mktemp -d -d ./input/_examples) 
+function finish {
+  # Your cleanup code here
+  echo '=== clean up - rename the input/_fsh folder to input/fsh  ==='
+  mv input/_fsh input/fsh && echo 'done!'
+  echo '====clean up - copy tmp files to examples folder to restore meta elements ===='
+  cp -f "$tmp"/*.json ./input/examples && echo 'done!'
+  echo '====clean up - remove tmp files  ===='
+  rm -rf "$tmp" && echo 'done!'
+}
 
-while getopts s option
+while getopts sm option
 do
  case "${option}"
  in
- s) SUSHI=1;;
+ s) SUSHI=true;;
+ m) NO_META=true;;
  esac
 done
 
 echo "================================================================="
 echo "=== commit and load to github for autopublisher ==="
-echo "-s parameter for enabling sushi in ig-publisher = $SUSHI"
+echo "-s parameter for enabling sushi in autopublisher = $SUSHI (default is false)"
+echo "-m parameter for enabling meta in autopublisher = $NO_META (default is false)"
 echo "================================================================="
 
 echo "================================================================="
@@ -31,7 +43,16 @@ trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh i
 [[ -d input/fsh ]] && mv input/fsh input/_fsh
 fi
 
-git status
+if [[ $NO_META ]]; then
+echo "================================================================="
+echo "===remove the meta element from all the examples==="
+echo "================================================================="
+cp ./input/examples/*.json $tmp
+for file in $tmp/*.json
+  do
+    jq 'del(.meta)' < $file > ./input/examples/$(basename $file)
+  done
+fi
 
 echo "================================================================="
 echo "=== hit 'a' to commit and push all including untracked files ===="
@@ -52,3 +73,5 @@ elif [ $var1 == "a" ]; then
   git commit
   git push
 fi
+
+trap finish EXIT

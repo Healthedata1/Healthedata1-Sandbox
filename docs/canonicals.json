@@ -1,9 +1,0 @@
-[
-  {
-    "id": "healthedata1-sandbox",
-    "type": "ImplementationGuide",
-    "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
-    "version": "0.1.0",
-    "name": "HealthEData_1Sandbox"
-  }
-]

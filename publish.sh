@@ -2,7 +2,7 @@
 # exit when any command fails
 set -e
 NA='http://tx.fhir.org'
-while getopts twoplisvqdrxyzmu: option
+while getopts twoplisvqdrxyzmnu: option
 do
  case "${option}"
  in
@@ -22,6 +22,7 @@ do
  z) ZIP_SCH=1;;
  r) CLEAR_JSON=1;;
  m) MERGE_CSV=1;;
+ n) NO_META=1;;
  
  esac
 done
@@ -35,11 +36,13 @@ fi
 
 if [[ $RECENT_YAML ]]; then
   YAML_JSON=1
+  All_YAML=0
   days=1
-else
-  days=400
+elif [[ $YAML_JSON ]]; then
+  All_YAML=1
   days=400 # 400 days is about 1 year
 fi
+
 
 echo "================================================================="
 echo "-d flag if output in "docs" folder =  $IN_DOCS"
@@ -53,7 +56,7 @@ echo === Publish $SOURCE IG!!! $(date -u) ===
 echo "see local workflow.md file for how to use"
 echo "Optional Parameters"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
-echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
+# echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
 #echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
@@ -65,9 +68,10 @@ echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
-echo "-y tranform all yaml that changed in the last year to json files = $YAML_JSON"
+echo "-y tranform all yaml that changed in the last year to json files = $All_YAML"
 echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
+echo "-n remove the meta elements from all the examples = $NO_META"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -183,73 +187,93 @@ if [[ $SUSHI ]]; then
 
   echo "================================================================="
 
-else
+fi
 
-  if [[ $IG_PUBLISH ]]; then
+if [[ $NO_META ]]; then
     echo "================================================================="
-    echo "=== run the just the igpublisher ==="
-    echo "==To run in command line mode, run the IG Publisher like this:=="
-    echo "===java -jar publisher.jar -ig [source] (-tx [url]) (-packages [directory]) (-watch)
-parameters:==="
+    echo "===remove the meta element from all the examples==="
     echo "================================================================="
-
-    echo "================================================================="
-    echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
-    echo "================================================================="
-    trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
-    [[ -d input/fsh ]] && mv input/fsh input/_fsh
-
-    if [[ $WATCH ]]; then
-      echo "================================================================="
-      echo === run most recent version of the igpublisher with watch on ===
-      echo "================================================================="
-      java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
-
-    else
-      echo "================================================================="
-      echo "===run igpublisher just once \(no watch option\)==="
-      echo "================================================================="
-      echo java -jar ${path} -ig ig.ini -tx $NA
-      java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
-
-    fi
-
-  else
-    echo "================================================================="
-    echo "=== run sushi and igpublisher (default) ===="
-    echo "================================================================="
-    echo "start sushi ......................................................"
-    rm -rf output docs
-    sushi .
-    inpath=fsh-generated/resources
-    echo "========================================================================"
-    echo "convert ig.json to ig.yml and copy to input/data"
-    echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-    for ig_json in $inpath/ImplementationGuide*.json
+    examples=./input/examples
+    echo "======== example folder is $examples ==========="
+    tmp=$(mktemp -d -d ./input/_examples)
+    # echo "========= tmp is $tmp ==========="
+    for file in $examples/*.json
       do
-      echo "========== ig_json = $ig_json =========="
-      ig_yaml='input/data/ig.yml'
-      python3.7 -c 'import sys, yaml, json, datetime; yaml.dump(json.load(sys.stdin), sys.stdout, indent=2, sort_keys=False)' < $ig_json > $ig_yaml
-      echo "========== ig_yaml = $ig_yaml =========="
+        # echo "file is $file"
+        # echo "basename is $(basename $file)"
+        jq 'del(.meta)' < $file > $tmp/$(basename $file)
       done
+    mv -f $tmp/*.json $examples
+    rm -rf $tmp
+fi
 
-    if [[ $WATCH ]]; then
-      echo "================================================================="
-      echo === run most recent version of the igpublisher with watch on ===
-      echo "================================================================="
-      java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
+if [[ $IG_PUBLISH ]]; then
+  echo "================================================================="
+  echo "=== run the just the igpublisher ==="
+  echo "==To run in command line mode, run the IG Publisher like this:=="
+  echo "===java -jar publisher.jar -ig [source] (-tx [url]) (-packages [directory]) (-watch)
+parameters:==="
+  echo "================================================================="
 
-    else
-      echo "================================================================="
-      echo "===run igpublisher just once \(no watch option\)==="
-      echo "================================================================="
-      echo java -jar ${path} -ig ig.ini -tx $NA
-      java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
-    fi
+  echo "================================================================="
+  echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
+  echo "================================================================="
+  trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
+  [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
-  fi
+  # if [[ $WATCH ]]; then
+  #   echo "================================================================="
+  #   echo === run most recent version of the igpublisher with watch on ===
+  #   echo "================================================================="
+  #   java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
+
+  # else
+    echo "================================================================="
+    echo "===run igpublisher just once \(no watch option\)==="
+    echo "================================================================="
+    echo java -jar ${path} -ig ig.ini -tx $NA
+    java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
 
 fi
+
+  # else
+  #   echo "================================================================="
+  #   echo "=== run sushi and igpublisher (default) ===="
+  #   echo "================================================================="
+  #   echo "start sushi ......................................................"
+  #   rm -rf output docs
+  #   sushi .
+  #   inpath=fsh-generated/resources
+  #   echo "========================================================================"
+  #   echo "convert ig.json to ig.yml and copy to input/data"
+  #   echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
+  #   for ig_json in $inpath/ImplementationGuide*.json
+  #     do
+  #     echo "========== ig_json = $ig_json =========="
+  #     ig_yaml='input/data/ig.yml'
+  #     python3.7 -c 'import sys, yaml, json, datetime; yaml.dump(json.load(sys.stdin), sys.stdout, indent=2, sort_keys=False)' < $ig_json > $ig_yaml
+  #     echo "========== ig_yaml = $ig_yaml =========="
+  #     done
+
+  #   if [[ $WATCH ]]; then
+  #     echo "================================================================="
+  #     echo === run most recent version of the igpublisher with watch on ===
+  #     echo "================================================================="
+  #     java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
+
+  #   else
+  #     echo "================================================================="
+  #     echo "===run igpublisher just once \(no watch option\)==="
+  #     echo "================================================================="
+  #     echo java -jar ${path} -ig ig.ini -tx $NA
+  #     java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
+  #   fi
+
+  # fi
+
+# fi
+
+
 
 if [[ $ZIP_SCH ]]; then
     echo "================================================================="
@@ -276,11 +300,15 @@ if [[ $MERGE_CSV ]]; then
 fi
 
 if [[ $VIEW_OUTPUT ]]; then
-    echo open $PWD/docs/index.html
+    echo "=============== open $PWD/$outpath/index.html ================"
     open ./$outpath/index.html
 fi
 
 if [[ $VIEW_QA ]]; then
-    echo open $PWD/docs/qa.html
+    echo "============ open $PWD/$outpath/qa.html ============"
     open ./$outpath/qa.html
 fi
+
+echo "================================================================="
+echo "===done==="
+echo "================================================================="

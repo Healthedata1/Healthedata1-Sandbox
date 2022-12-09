@@ -90,7 +90,7 @@ entry:
                   display: Author
            who:
             reference: Practitioner/practitioner-2
-           onBehalfOf:
-            reference: Organization/saint-luke-w-endpoint
+          #  onBehalfOf:
+          #   reference: Organization/saint-luke-w-endpoint
     search:
       mode: include
