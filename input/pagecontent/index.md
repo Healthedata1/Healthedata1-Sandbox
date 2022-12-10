@@ -95,4 +95,9 @@ without markdown filter
 {{site.data.resources['ImplementationGuide/healthedata1-sandbox'].description}}
 
 
-{% include observation_guidance_1.md category="laboratory" example1=" such as 'chemistry'" example2=" (for example, a 24-Hour Urine Collection test)" %}
+{% assign beatles = "John, Paul, George, Ringo" | split: ", " %}
+
+{% for member in beatles %}
+  {{forloop.index0}}: {{ member }}
+{% endfor %}
+

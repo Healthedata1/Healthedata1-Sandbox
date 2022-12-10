@@ -240,7 +240,7 @@ tadaa...
 
 
 ### Code Blocks
-
+manually added linenow
 ```yaml
 1:  differential:
 2:    element:
@@ -251,19 +251,21 @@ tadaa...
 7:        min: 1
 8:        mustSupport: true
 ```
+linenos with liquid/Jekyll
 
-
-{% highlight yaml %}
-1:  differential:
-2:    element:
-3:      - id: Observation
-4:        path: Observation
-5:      - id: 'Observation.meta'
-6:        path: 'Observation.meta'
-7:        min: 1
-8:        mustSupport: true
+{% highlight yaml linenos %}
+  differential:
+    element:
+      - id: Observation
+       path: Observation
+      - id: 'Observation.meta'
+        path: 'Observation.meta'
+        min: 1
+        mustSupport: true
 {% endhighlight %}
 
+
+using classses
 
 <pre class="line-numbers">
 <code class="language-yaml">
@@ -322,9 +324,9 @@ sorted collection:
 ### include lines using helper file
 
 
-Includes the specified lines from another file. Typically this include is used for fragments of FHIR resources and therefore is wrapped in a code block.
+Includes the specified lines from another file.  Typically this include is used for fragments of FHIR resources and therefore is wrapped in a code block. It also optionally displays the line number of the included fragment.  The line number is the line number in the source file, not the line number in the output file.
 
-The helper file is place in the `input/images` folder not the 'input/include` file folder
+this helper lives in the input/images folder not the include file folder
 ~~~
 ├── examples
 │   ├── patient-deceased-example.json
@@ -345,9 +347,10 @@ The helper file is place in the `input/images` folder not the 'input/include` fi
 Usage:
   {% raw %}{% include_relative includelines filename=PATH start=INT|STR count=INT|STR %}{% endraw %}
 
-  - filename: path to file in temp/pages  (not under _includes )
+  - filename: path to file in temp/pages  (use  _include/file.ext for includes files ) NOTE MARKDOWN IS RENDERED IN THE INCLUDED FILE :-(
   - start: integer (only 1) or common separated string (> 1) of first line numbers to include, starting at 1
   - count: integer (only 1) or common separated string (> 1) of number of lines to include
+  - linenumber: optional boolean to display line number (default is false)
 
 The start and count item are aggregated into a (start, count) tuple and therefore need to be the same size.  If there are more than one start and count items, ellipses ("...") will be inserted between the line fragments. 
 The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
@@ -358,12 +361,12 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 
 \~~~
 
-{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start=10 count=5 %}{% endraw %}
+{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}{% endraw %}
 
 \~~~
 
-~~~
-{% include_relative includelines filename='patient-deceased-example.json' start=10 count=5 %}
+~~~json
+{% include_relative includelines filename='patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}
 ~~~
 
  **2. multiple fragments separated by "...":**
@@ -375,7 +378,7 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 \~~~
 
 ~~~
-{% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}
+{% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" rel=true linenumber=true %}
 ~~~
 
 **3. The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
@@ -389,8 +392,9 @@ The following will result in a warning message because the start line (15) is le
 
 
 ~~~
-{% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}
+{% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" rel=true %}
 ~~~
+
 
 ---
 

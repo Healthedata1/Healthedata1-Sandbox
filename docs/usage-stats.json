@@ -4,12 +4,6 @@
   "fhirVersion": "4.0.1",
   "extensions": [],
   "profiles": {
-    "Observation": [
-      {
-        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment",
-        "title": "US Core Observation Screening Assessment Profile"
-      }
-    ],
     "Provenance": [
       {
         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
@@ -37,29 +31,17 @@
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
-      "StructureDefinition.differential.element.type",
       "StructureDefinition.differential.element.type.targetProfile",
-      "StructureDefinition.snapshot.element.type",
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
-      "Location.meta",
-      "Observation.meta",
       "Patient.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
-      "Location.meta",
-      "Observation.meta",
       "Patient.meta"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
-    ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
-      "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",

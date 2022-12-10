@@ -199,7 +199,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 &lt;/ul&gt;
 </code></pre></div></div>
 
-<ul><li>US Core Observation Screening Assessment Profile</li></ul>
+<ul></ul>
 
 <hr/>
 
@@ -220,8 +220,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </code></pre></div></div>
 
 <ul id="prov-white-list">
-
-    <li>Observation</li>
 
 </ul>
 <hr/>
@@ -275,14 +273,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong></strong></p>
 <ul></ul>
 
-<p><strong>Observation</strong></p>
-<ul>
-        
-        <li><a href="StructureDefinition-us-core-observation-screening-assessment.html">US Core Observation Screening Assessment Profile</a></li></ul>
-
 <p><strong>Provenance</strong></p>
 <ul>
-        
         <li><a href="StructureDefinition-us-core-provenance.html">US Core Provenance Profile</a></li></ul>
 
 <h3 id="list-highlighting">List highlighting</h3>
@@ -368,7 +360,7 @@ Country: US
 –&gt;&lt;/g&gt;&lt;/svg&gt;</p>
 
 <h3 id="code-blocks">Code Blocks</h3>
-
+<p>manually added linenow</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">1</span><span class="pi">:</span>  <span class="na">differential</span><span class="pi">:</span>
 <span class="na">2</span><span class="pi">:</span>    <span class="na">element</span><span class="pi">:</span>
 <span class="na">3</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s">Observation</span>
@@ -378,15 +370,27 @@ Country: US
 <span class="na">7</span><span class="pi">:</span>        <span class="na">min</span><span class="pi">:</span> <span class="m">1</span>
 <span class="na">8</span><span class="pi">:</span>        <span class="na">mustSupport</span><span class="pi">:</span> <span class="no">true</span>
 </code></pre></div></div>
+<p>linenos with liquid/Jekyll</p>
 
-<figure class="highlight"><pre><code data-lang="yaml" class="language-yaml"><span class="na">1</span><span class="pi">:</span>  <span class="na">differential</span><span class="pi">:</span>
-<span class="na">2</span><span class="pi">:</span>    <span class="na">element</span><span class="pi">:</span>
-<span class="na">3</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s">Observation</span>
-<span class="na">4</span><span class="pi">:</span>        <span class="na">path</span><span class="pi">:</span> <span class="s">Observation</span>
-<span class="na">5</span><span class="pi">:</span>      <span class="na">- id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
-<span class="na">6</span><span class="pi">:</span>        <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
-<span class="na">7</span><span class="pi">:</span>        <span class="na">min</span><span class="pi">:</span> <span class="m">1</span>
-<span class="na">8</span><span class="pi">:</span>        <span class="na">mustSupport</span><span class="pi">:</span> <span class="no">true</span></code></pre></figure>
+<figure class="highlight"><pre><code data-lang="yaml" class="language-yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>  <span class="na">differential</span><span class="pi">:</span>
+    <span class="na">element</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s">Observation</span>
+       <span class="na">path</span><span class="pi">:</span> <span class="s">Observation</span>
+      <span class="pi">-</span> <span class="na">id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
+        <span class="na">path</span><span class="pi">:</span> <span class="s1">'</span><span class="s">Observation.meta'</span>
+        <span class="na">min</span><span class="pi">:</span> <span class="m">1</span>
+        <span class="na">mustSupport</span><span class="pi">:</span> <span class="no">true</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>using classses</p>
 
 <pre class="line-numbers">
 <code class="language-yaml">
@@ -467,7 +471,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Allergies and Intolerances</th>
-        <th class="col-sm-4"><a name="l2237">​</a><a href="StructureDefinition-us-core-allergyintolerance.html" target="_blank">US Core AllergyIntolerance Profile</a></th>
+        <th class="col-sm-4"><a name="l2207">​</a><a href="StructureDefinition-us-core-allergyintolerance.html" target="_blank">US Core AllergyIntolerance Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -508,13 +512,13 @@ Country: US
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Assessment and Plan of Treatment</td>
-        <td><a name="l2312">​</a><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a></td>
+        <td><a name="l2282">​</a><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Assessment</td>
-        <td><a name="l2324">​</a><a href="StructureDefinition-us-core-observation-sdoh-assessment.html" target="_blank">US Core Observation SDOH Assessment Profile</a><br/><a href="StructureDefinition-us-core-observation-social-history.html" target="_blank">US Core Observation Social History Profile</a><br/><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></td>
-        <td><a name="l2334">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+        <td><a name="l2294">​</a><a href="StructureDefinition-us-core-observation-sdoh-assessment.html" target="_blank">US Core Observation SDOH Assessment Profile</a><br/><a href="StructureDefinition-us-core-observation-social-history.html" target="_blank">US Core Observation Social History Profile</a><br/><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></td>
+        <td><a name="l2304">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
       </tr>
  
     </tbody>
@@ -530,7 +534,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Care Team Members</th>
-        <th class="col-sm-4"><a name="l2361">​</a><a href="StructureDefinition-us-core-careteam.html" target="_blank">US Core CareTeam Profile</a></th>
+        <th class="col-sm-4"><a name="l2331">​</a><a href="StructureDefinition-us-core-careteam.html" target="_blank">US Core CareTeam Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -574,7 +578,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Clinical Notes</th>
-        <th class="col-sm-4"><a name="l2443">​</a><a href="StructureDefinition-us-core-documentreference.html" target="_blank">US Core DocumentReference Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-4"><a name="l2413">​</a><a href="StructureDefinition-us-core-documentreference.html" target="_blank">US Core DocumentReference Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -617,7 +621,7 @@ Country: US
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Progress Note</td>
         <td></td>
-        <td><a name="l2533">​</a><a href="clinical-notes.html" target="_blank">See Clinical Notes Guidance</a></td>
+        <td><a name="l2503">​</a><a href="clinical-notes.html" target="_blank">See Clinical Notes Guidance</a></td>
       </tr>
  
     </tbody>
@@ -633,7 +637,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Clinical Tests</th>
-        <th class="col-sm-4"><a name="l2560">​</a><a href="StructureDefinition-us-core-observation-clinical-test.html" target="_blank">US Core Observation Clinical Test Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-4"><a name="l2530">​</a><a href="StructureDefinition-us-core-observation-clinical-test.html" target="_blank">US Core Observation Clinical Test Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -662,7 +666,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Diagnostic Imaging</th>
-        <th class="col-sm-4"><a name="l2615">​</a><a href="StructureDefinition-us-core-observation-imaging.html" target="_blank">US Core Observation Imaging Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-4"><a name="l2585">​</a><a href="StructureDefinition-us-core-observation-imaging.html" target="_blank">US Core Observation Imaging Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -691,7 +695,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Encounter</th>
-        <th class="col-sm-4"><a name="l2670">​</a><a href="StructureDefinition-us-core-encounter.html" target="_blank">US Core Encounter Profile</a></th>
+        <th class="col-sm-4"><a name="l2640">​</a><a href="StructureDefinition-us-core-encounter.html" target="_blank">US Core Encounter Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -703,7 +707,7 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis</td>
-        <td><a name="l2695">​</a><a href="StructureDefinition-us-core-condition-encounter-diagnosis.html" target="_blank">US Core Condition Encounter Diagnosis Profile</a></td>
+        <td><a name="l2665">​</a><a href="StructureDefinition-us-core-condition-encounter-diagnosis.html" target="_blank">US Core Condition Encounter Diagnosis Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -728,7 +732,7 @@ Country: US
 </div>
 <div class="panel">
   <div class="panel-body">
-    <div class="icon-right"><a name="l2740">​</a>
+    <div class="icon-right"><a name="l2710">​</a>
     <img src="foo.png" alt="Foo" style="width:60px" class="media-object"/>
   </div>
   <table class="table table-condensed">
@@ -766,13 +770,13 @@ Country: US
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Patient Goals</td>
-        <td><a name="l2810">​</a><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></td>
+        <td><a name="l2780">​</a><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Goals</td>
         <td></td>
-        <td><a name="l2824">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+        <td><a name="l2794">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
       </tr>
  
     </tbody>
@@ -788,14 +792,14 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Health Insurance Information</th>
-        <th class="col-sm-4"><a name="l2851">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></th>
+        <th class="col-sm-4"><a name="l2821">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Coverage Status</td>
-        <td><a name="l2866">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></td>
+        <td><a name="l2836">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -849,13 +853,13 @@ Country: US
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Health Concerns</td>
-        <td><a name="l2968">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></td>
+        <td><a name="l2938">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Functional Status</td>
         <td>TODO</td>
-        <td><a name="l2983">​</a><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
+        <td><a name="l2953">​</a><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Disability Status</td>
@@ -869,12 +873,12 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pregnancy Status</td>
-        <td><a name="l3015">​</a><a href="StructureDefinition-us-core-observation-pregnancystatus.html" target="_blank">US Core Observation Pregnancy Status Profile</a><br/><a href="StructureDefinition-us-core-observation-pregnancyintent.html" target="_blank">US Core Observation Pregnancy Intent Profile</a></td>
+        <td><a name="l2985">​</a><a href="StructureDefinition-us-core-observation-pregnancystatus.html" target="_blank">US Core Observation Pregnancy Status Profile</a><br/><a href="StructureDefinition-us-core-observation-pregnancyintent.html" target="_blank">US Core Observation Pregnancy Intent Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Smoking Status</td>
-        <td><a name="l3030">​</a><a href="StructureDefinition-us-core-smokingstatus.html" target="_blank">US Core Smoking Status Observation Profile</a></td>
+        <td><a name="l3000">​</a><a href="StructureDefinition-us-core-smokingstatus.html" target="_blank">US Core Smoking Status Observation Profile</a></td>
         <td></td>
       </tr>
  
@@ -891,7 +895,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Immunizations</th>
-        <th class="col-sm-4"><a name="l3059">​</a><a href="StructureDefinition-us-core-immunization.html" target="_blank">US Core Immunization Profile</a></th>
+        <th class="col-sm-4"><a name="l3029">​</a><a href="StructureDefinition-us-core-immunization.html" target="_blank">US Core Immunization Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -915,7 +919,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Laboratory</th>
-        <th class="col-sm-4"><a name="l3101">​</a><a href="StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Observation Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-lab.html" target="_blank">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></th>
+        <th class="col-sm-4"><a name="l3071">​</a><a href="StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Observation Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-lab.html" target="_blank">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -954,7 +958,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Medications</th>
-        <th class="col-sm-4"><a name="l3176">​</a><a href="StructureDefinition-us-core-medicationrequest.html" target="_blank">US Core MedicationRequest Profile</a></th>
+        <th class="col-sm-4"><a name="l3146">​</a><a href="StructureDefinition-us-core-medicationrequest.html" target="_blank">US Core MedicationRequest Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -962,7 +966,7 @@ Country: US
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Medications</td>
         <td></td>
-        <td><a name="l3193">​</a><a href="medication-list.html" target="_blank">See Medication List Guidance</a></td>
+        <td><a name="l3163">​</a><a href="medication-list.html" target="_blank">See Medication List Guidance</a></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Dose</td>
@@ -981,7 +985,7 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Fill Status</td>
-        <td><a name="l3233">​</a><a href="StructureDefinition-us-core-medicationdispense.html" target="_blank">US Core MedicationDispense Profile</a></td>
+        <td><a name="l3203">​</a><a href="StructureDefinition-us-core-medicationdispense.html" target="_blank">US Core MedicationDispense Profile</a></td>
         <td></td>
       </tr>
  
@@ -998,7 +1002,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Patient Demographics</th>
-        <th class="col-sm-4"><a name="l3262">​</a><a href="StructureDefinition-us-core-patient.html" target="_blank">US Core Patient Profile</a></th>
+        <th class="col-sm-4"><a name="l3232">​</a><a href="StructureDefinition-us-core-patient.html" target="_blank">US Core Patient Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1045,27 +1049,27 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Race</td>
-        <td><a name="l3357">​</a><a href="StructureDefinition-us-core-race.html" target="_blank">US Core Race Extension</a></td>
+        <td><a name="l3327">​</a><a href="StructureDefinition-us-core-race.html" target="_blank">US Core Race Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Ethnicity</td>
-        <td><a name="l3369">​</a><a href="StructureDefinition-us-core-ethnicity.html" target="_blank">US Core Ethnicity Extension</a></td>
+        <td><a name="l3339">​</a><a href="StructureDefinition-us-core-ethnicity.html" target="_blank">US Core Ethnicity Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Tribal Affiliation</td>
-        <td><a name="l3381">​</a><a href="StructureDefinition-us-core-tribal-affiliation.html" target="_blank">US Core Tribal Affiliation Extension</a></td>
+        <td><a name="l3351">​</a><a href="StructureDefinition-us-core-tribal-affiliation.html" target="_blank">US Core Tribal Affiliation Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Gender Identity</td>
-        <td><a name="l3393">​</a><a href="StructureDefinition-us-core-genderIdentity.html" target="_blank">US Core Gender Identity Extension</a></td>
+        <td><a name="l3363">​</a><a href="StructureDefinition-us-core-genderIdentity.html" target="_blank">US Core Gender Identity Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Sexual Orientation</td>
-        <td><a name="l3405">​</a><a href="StructureDefinition-us-core-observation-sexual-orientation.html" target="_blank">US Core Observation Sexual Orientation Profile</a></td>
+        <td><a name="l3375">​</a><a href="StructureDefinition-us-core-observation-sexual-orientation.html" target="_blank">US Core Observation Sexual Orientation Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -1095,22 +1099,22 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person’s Name</td>
-        <td><a name="l3467">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td><a name="l3437">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person’s Relationship</td>
-        <td><a name="l3479">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td><a name="l3449">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation</td>
-        <td><a name="l3491">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td><a name="l3461">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation Industry</td>
-        <td><a name="l3503">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td><a name="l3473">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
         <td></td>
       </tr>
  
@@ -1127,7 +1131,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Problems</th>
-        <th class="col-sm-4"><a name="l3532">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></th>
+        <th class="col-sm-4"><a name="l3502">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1161,7 +1165,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Procedures</th>
-        <th class="col-sm-4"><a name="l3594">​</a><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></th>
+        <th class="col-sm-4"><a name="l3564">​</a><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1173,13 +1177,13 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reason for Referral</td>
-        <td><a name="l3619">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a></td>
+        <td><a name="l3589">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Interventions</td>
-        <td><a name="l3631">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a><br/><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></td>
-        <td><a name="l3638">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+        <td><a name="l3601">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a><br/><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></td>
+        <td><a name="l3608">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
       </tr>
  
     </tbody>
@@ -1224,7 +1228,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Unique Device Identifier(s)</th>
-        <th class="col-sm-4"><a name="l3717">​</a><a href="StructureDefinition-us-core-implantable-device.html" target="_blank">US Core Implantable Device Profile</a></th>
+        <th class="col-sm-4"><a name="l3687">​</a><a href="StructureDefinition-us-core-implantable-device.html" target="_blank">US Core Implantable Device Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1248,64 +1252,64 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Vital Signs</th>
-        <th class="col-sm-4"><a name="l3759">​</a><a href="StructureDefinition-us-core-vital-signs.html" target="_blank">US Core Vital Signs Profile</a></th>
+        <th class="col-sm-4"><a name="l3729">​</a><a href="StructureDefinition-us-core-vital-signs.html" target="_blank">US Core Vital Signs Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diastolic blood pressure</td>
-        <td><a name="l3774">​</a><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
+        <td><a name="l3744">​</a><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Systolic blood pressure</td>
-        <td><a name="l3786">​</a><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
+        <td><a name="l3756">​</a><a href="StructureDefinition-us-core-blood-pressure.html" target="_blank">US Core Blood Pressure Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body height</td>
-        <td><a name="l3798">​</a><a href="StructureDefinition-us-core-body-height.html" target="_blank">US Core Body Height Profile</a></td>
+        <td><a name="l3768">​</a><a href="StructureDefinition-us-core-body-height.html" target="_blank">US Core Body Height Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body weight</td>
-        <td><a name="l3810">​</a><a href="StructureDefinition-us-core-body-weight.html" target="_blank">US Core Body Weight Profile</a></td>
+        <td><a name="l3780">​</a><a href="StructureDefinition-us-core-body-weight.html" target="_blank">US Core Body Weight Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Heart rate</td>
-        <td><a name="l3822">​</a><a href="StructureDefinition-us-core-heart-rate.html" target="_blank">US Core Heart Rate Profile</a></td>
+        <td><a name="l3792">​</a><a href="StructureDefinition-us-core-heart-rate.html" target="_blank">US Core Heart Rate Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Respiratory rate</td>
-        <td><a name="l3834">​</a><a href="StructureDefinition-us-core-respiratory-rate.html" target="_blank">US Core Respiratory Rate Profile</a></td>
+        <td><a name="l3804">​</a><a href="StructureDefinition-us-core-respiratory-rate.html" target="_blank">US Core Respiratory Rate Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body temperature</td>
-        <td><a name="l3846">​</a><a href="StructureDefinition-us-core-body-temperature.html" target="_blank">US Core Body Temperature Profile</a></td>
+        <td><a name="l3816">​</a><a href="StructureDefinition-us-core-body-temperature.html" target="_blank">US Core Body Temperature Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pulse oximetry</td>
-        <td><a name="l3858">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td><a name="l3828">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Inhaled oxygen concentration</td>
-        <td><a name="l3870">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td><a name="l3840">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•BMI Percentile (2-20 years old)</td>
-        <td><a name="l3882">​</a><a href="StructureDefinition-pediatric-bmi-for-age.html" target="_blank">US Core Pediatric BMI for Age Observation Profile</a></td>
+        <td><a name="l3852">​</a><a href="StructureDefinition-pediatric-bmi-for-age.html" target="_blank">US Core Pediatric BMI for Age Observation Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Weight-for-length Percentile (Birth - 36 months)</td>
-        <td><a name="l3894">​</a><a href="StructureDefinition-pediatric-weight-for-height.html" target="_blank">US Core Pediatric Weight for Height Observation Profile</a></td>
+        <td><a name="l3864">​</a><a href="StructureDefinition-pediatric-weight-for-height.html" target="_blank">US Core Pediatric Weight for Height Observation Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -1323,15 +1327,15 @@ Country: US
 
 <p>original collection:</p>
 
-<p>{“us-core-provenance”=&gt;{“index”=&gt;0, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance”, “name”=&gt;”USCoreProvenance”, “title”=&gt;”US Core Provenance Profile”, “path”=&gt;”StructureDefinition-us-core-provenance.html”, “kind”=&gt;”resource”, “type”=&gt;”Provenance”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Provenance”, “basename”=&gt;”Provenance”, “basepath”=&gt;”http://hl7.org/fhir/R4/provenance.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 PDT 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;””, “description”=&gt;”This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.”}, “us-core-observation-screening-assessment”=&gt;{“index”=&gt;1, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment”, “name”=&gt;”USCoreObservationScreeningAssessmentProfile”, “title”=&gt;”US Core Observation Screening Assessment Profile”, “path”=&gt;”StructureDefinition-us-core-observation-screening-assessment.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Observation”, “basename”=&gt;”Observation”, “basepath”=&gt;”http://hl7.org/fhir/R4/observation.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 PDT 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;””, “description”=&gt;”The US Core Simple Observation Profile meets the requirements of the US Core Data for Interoperability (USCDI) Assessments. To promote interoperability and adoption through common implementation, the US Core Observation Screening Assessment Profile sets the minimum expectations for the Observation Resource to record, search, and fetch observations representing the questions and responses to surveys and screening and assessment tools. For example, a social history status such as education or food insecurity or an assessment of the patient’s cognitive, functional, or disability status. It can represent a single response, multiple responses, and multi-select "check all that apply" type questions. It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile. It provides the floor for standards development for specific use cases.”}}</p>
+<p>{“us-core-provenance”=&gt;{“index”=&gt;0, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance”, “name”=&gt;”USCoreProvenance”, “title”=&gt;”US Core Provenance Profile”, “path”=&gt;”StructureDefinition-us-core-provenance.html”, “kind”=&gt;”resource”, “type”=&gt;”Provenance”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Provenance”, “basename”=&gt;”Provenance”, “basepath”=&gt;”http://hl7.org/fhir/R4/provenance.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 PDT 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;””, “description”=&gt;”This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.”}}</p>
 
 <p>sorted collection:</p>
 
 <h3 id="include-lines-using-helper-file">include lines using helper file</h3>
 
-<p>Includes the specified lines from another file. Typically this include is used for fragments of FHIR resources and therefore is wrapped in a code block.</p>
+<p>Includes the specified lines from another file.  Typically this include is used for fragments of FHIR resources and therefore is wrapped in a code block. It also optionally displays the line number of the included fragment.  The line number is the line number in the source file, not the line number in the output file.</p>
 
-<p>The helper file is place in the <code class="language-plaintext highlighter-rouge">input/images</code> folder not the ‘input/include` file folder</p>
+<p>this helper lives in the input/images folder not the include file folder</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── examples
 │&nbsp;&nbsp; ├── patient-deceased-example.json
 │&nbsp;&nbsp; └── patient-example.json
@@ -1352,9 +1356,10 @@ Country: US
   {% include_relative includelines filename=PATH start=INT|STR count=INT|STR %}</p>
 
 <ul>
-  <li>filename: path to file in temp/pages  (not under _includes )</li>
+  <li>filename: path to file in temp/pages  (use  _include/file.ext for includes files ) NOTE MARKDOWN IS RENDERED IN THE INCLUDED FILE :-(</li>
   <li>start: integer (only 1) or common separated string (&gt; 1) of first line numbers to include, starting at 1</li>
   <li>count: integer (only 1) or common separated string (&gt; 1) of number of lines to include</li>
+  <li>linenumber: optional boolean to display line number (default is false)</li>
 </ul>
 
 <p>The start and count item are aggregated into a (start, count) tuple and therefore need to be the same size.  If there are more than one start and count items, ellipses (“…”) will be inserted between the line fragments. 
@@ -1366,18 +1371,27 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 
 <p>~~~</p>
 
-<p>{% include_relative includelines filename=’patient-deceased-example.json’ start=10 count=5 %}</p>
+<p>{% include_relative includelines filename=’patient-deceased-example.json’ start=1 count=15 linenumber=true rel=true %}</p>
 
 <p>~~~</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
-    }],
-    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
-  },
-  "text" : {
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">1</span><span class="w">    </span><span class="nl">"resourceType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient"</span><span class="err">,</span><span class="w">
+</span><span class="mi">2</span><span class="w">    </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"deceased-example"</span><span class="err">,</span><span class="w">
+</span><span class="mi">3</span><span class="w">    </span><span class="nl">"meta"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="mi">4</span><span class="w">      </span><span class="nl">"extension"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+</span><span class="mi">5</span><span class="w">        </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/instance-name"</span><span class="p">,</span><span class="w">
+</span><span class="mi">6</span><span class="w">        </span><span class="nl">"valueString"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Deceased Patient Example"</span><span class="w">
+</span><span class="mi">7</span><span class="w">      </span><span class="p">},</span><span class="w">
+</span><span class="mi">8</span><span class="w">      </span><span class="p">{</span><span class="w">
+</span><span class="mi">9</span><span class="w">        </span><span class="nl">"url"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/StructureDefinition/instance-description"</span><span class="p">,</span><span class="w">
+</span><span class="mi">10</span><span class="w">        </span><span class="nl">"valueMarkdown"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"This is a deceased patient example for the *US Core Patient Profile*."</span><span class="w">
+</span><span class="mi">11</span><span class="w">      </span><span class="p">}],</span><span class="w">
+</span><span class="mi">12</span><span class="w">      </span><span class="nl">"profile"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"</span><span class="p">]</span><span class="w">
+</span><span class="mi">13</span><span class="w">    </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="mi">14</span><span class="w">    </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span><span class="mi">15</span><span class="w">      </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"generated"</span><span class="p">,</span><span class="w">
 
-</code></pre></div></div>
+</span></code></pre></div></div>
 
 <p><strong>2. multiple fragments separated by “…”:</strong></p>
 
@@ -1387,24 +1401,23 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 
 <p>~~~</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
-    }],
-    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
-  },
-  "text" : {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10        "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
+11      }],
+12      "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+13    },
+14    "text" : {
 ...
-      "url" : "ombCategory",
-      "valueCoding" : {
-        "system" : "urn:oid:2.16.840.1.113883.6.238",
-        "code" : "2106-3",
-        "display" : "White"
+20        "url" : "ombCategory",
+21        "valueCoding" : {
+22          "system" : "urn:oid:2.16.840.1.113883.6.238",
+23          "code" : "2106-3",
+24          "display" : "White"
 ...
-        "system" : "urn:oid:2.16.840.1.113883.6.238",
-        "code" : "2028-9",
-        "display" : "Asian"
-      }
-    },
+30          "system" : "urn:oid:2.16.840.1.113883.6.238",
+31          "code" : "2028-9",
+32          "display" : "Asian"
+33        }
+34      },
 
 </code></pre></div></div>
 
@@ -1417,8 +1430,7 @@ The following will result in a warning message because the start line (15) is le
 
 <p>~~~</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
     }],
     "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
   },
@@ -1428,7 +1440,8 @@ The following will result in a warning message because the start line (15) is le
   },
   "extension" : [{
     "extension" : [{
-...!!!INCLUDELINES HELPER FILE WARNING OVERLAPPING LINES next startline = 15 &lt;= previous fragment end = 20 - CHECK YOUR SOURCE FILE!!!
+...
+!!!INCLUDELINES HELPER FILE WARNING OVERLAPPING LINES next startline = 15 &lt;= previous fragment end = 20 - CHECK YOUR SOURCE FILE!!!
 </code></pre></div></div>
 
 <hr/>
@@ -1875,7 +1888,7 @@ The following will result in a warning message because the start line (15) is le
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 8, 2022 22:58-0800">2022-12-08</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Dec 10, 2022 01:40-0800">2022-12-10</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

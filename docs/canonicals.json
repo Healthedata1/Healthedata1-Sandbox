@@ -7,25 +7,11 @@
     "name" : "USCoreCategory"
   },
   {
-    "id" : "us-core-observation-screening-assessment",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-screening-assessment",
-    "version" : "0.1.0",
-    "name" : "USCoreObservationScreeningAssessmentProfile"
-  },
-  {
     "id" : "us-core-provenance",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
     "version" : "0.1.0",
     "name" : "USCoreProvenance"
-  },
-  {
-    "id" : "us-core-assessment-category",
-    "type" : "ValueSet",
-    "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-assessment-category",
-    "version" : "0.1.0",
-    "name" : "USCoreAssessmentCategory"
   },
   {
     "id" : "healthedata1-sandbox",
