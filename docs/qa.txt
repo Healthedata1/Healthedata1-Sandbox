@@ -3,7 +3,7 @@
 
 err = 4, warn = 3, info = 3
 IG Publisher Version: 1.2.22 Out of date - current version is 1.2.23
-Generated Sat Dec 10 01:40:57 PST 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+Generated Sat Dec 10 09:50:52 PST 2022. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
  Build Errors : 69 / 1 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/QuestionnaireResponse-5774968 : 0 / 1 / 1

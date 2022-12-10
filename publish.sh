@@ -1,6 +1,8 @@
 #!/bin/bash
 # exit when any command fails
 set -e
+trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
+trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
 NA='http://tx.fhir.org'
 while getopts twoplisvqdrxyzmnu: option
 do
@@ -218,7 +220,6 @@ parameters:==="
   echo "================================================================="
   echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
   echo "================================================================="
-  trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
   [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
   # if [[ $WATCH ]]; then
