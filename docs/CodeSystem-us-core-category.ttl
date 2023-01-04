@@ -12,6 +12,35 @@
      fhir:Narrative.status [ fhir:value "generated" ];
      fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7.org/fhir/us/core/CodeSystem/us-core-category</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">sdoh<a name=\"us-core-category-sdoh\"> </a></td><td>SDOH</td><td>Social Determinants of Health category</td></tr><tr><td style=\"white-space:nowrap\">functional-status<a name=\"us-core-category-functional-status\"> </a></td><td>Functional Status</td><td>Functional Status category</td></tr><tr><td style=\"white-space:nowrap\">disability-status<a name=\"us-core-category-disability-status\"> </a></td><td>Disability Status</td><td>Disability Status category</td></tr><tr><td style=\"white-space:nowrap\">cognitive-status<a name=\"us-core-category-cognitive-status\"> </a></td><td>Cognitive Status</td><td>Cognitive Status category</td></tr></table></div>"
   ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ];
+     fhir:Extension.valueInteger [
+       fhir:value "2"^^xsd:integer;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ];
+         fhir:Extension.valueCanonical [
+           fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox";
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+     fhir:Extension.valueCode [
+       fhir:value "trial-use";
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ];
+         fhir:Extension.valueCanonical [
+           fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox";
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ]
+     ]
+  ]; # 
   fhir:CodeSystem.url [ fhir:value "http://hl7.org/fhir/us/core/CodeSystem/us-core-category"]; # 
   fhir:CodeSystem.version [ fhir:value "0.1.0"]; # 
   fhir:CodeSystem.name [ fhir:value "USCoreCategory"]; # 

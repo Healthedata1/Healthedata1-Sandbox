@@ -1,7 +1,7 @@
 {
     "resourceType": "StructureDefinition",
     "id": "us-core-provenance",
-    "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-provenance",
     "name": "USCoreProvenance",
     "title": "US Core Provenance Profile",
     "status": "active",

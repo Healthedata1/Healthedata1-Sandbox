@@ -6,7 +6,7 @@
   "profiles": {
     "Provenance": [
       {
-        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-provenance",
         "title": "US Core Provenance Profile"
       }
     ]
@@ -35,13 +35,27 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
+      "Bundle.meta",
       "Patient.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
+      "Bundle.meta",
       "Patient.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
       "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "CodeSystem",
+      "ImplementationGuide",
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "CodeSystem",
+      "ImplementationGuide",
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "StructureDefinition"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",

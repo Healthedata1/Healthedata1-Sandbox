@@ -7,17 +7,17 @@
     "name" : "USCoreCategory"
   },
   {
-    "id" : "us-core-provenance",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance",
-    "version" : "0.1.0",
-    "name" : "USCoreProvenance"
-  },
-  {
     "id" : "healthedata1-sandbox",
     "type" : "ImplementationGuide",
     "url" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
     "version" : "0.1.0",
     "name" : "HealthEData_1Sandbox"
+  },
+  {
+    "id" : "us-core-provenance",
+    "type" : "StructureDefinition",
+    "url" : "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-provenance",
+    "version" : "0.1.0",
+    "name" : "USCoreProvenance"
   }
 ]

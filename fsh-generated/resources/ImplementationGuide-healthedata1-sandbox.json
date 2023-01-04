@@ -1,6 +1,16 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "healthedata1-sandbox",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "trial-use"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+      "valueInteger": 2
+    }
+  ],
   "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
   "version": "0.1.0",
   "name": "HealthEData_1Sandbox",
@@ -62,6 +72,13 @@
     }
   ],
   "definition": {
+    "grouping": [
+      {
+        "id": "TestExamples",
+        "name": "Test Examples",
+        "description": "Examples for Testing Stuff Out!!!"
+      }
+    ],
     "resource": [
       {
         "reference": {
@@ -88,11 +105,20 @@
       },
       {
         "reference": {
+          "reference": "Bundle/good-provenance-example"
+        },
+        "description": "This is a allergyintolerance provenance example for the *Bundle Profile*.",
+        "name": "AllergyIntolerance Provenance Example GOOD",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "Patient/deceased-example"
         },
         "description": "This is a deceased patient example for the *US Core Patient Profile*.",
         "name": "Deceased Patient Example",
-        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
+        "groupingId": "TestExamples"
       }
     ],
     "page": {
@@ -103,11 +129,17 @@
         {
           "nameUrl": "index.html",
           "title": "Home",
-          "generation": "markdown"
+          "generation": "markdown",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+              "valueCode": "draft"
+            }
+          ]
         },
         {
-          "nameUrl": "changes.html",
-          "title": "Changes",
+          "nameUrl": "guidance.html",
+          "title": "Guidance",
           "generation": "markdown"
         },
         {
@@ -116,18 +148,13 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "examples.html",
-          "title": "Examples",
-          "generation": "markdown"
-        },
-        {
-          "nameUrl": "guidance.html",
-          "title": "Guidance",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "ImplementationGuide-healthedata1-sandbox.html",
-          "title": "Implementation Guide Healthedata 1 Sandbox",
+          "title": "CDex ImplementationGuide Resource",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Change Log",
           "generation": "markdown"
         }
       ]
@@ -187,6 +214,10 @@
       },
       {
         "code": "excludeexample",
+        "value": "true"
+      },
+      {
+        "code": "propagate-status",
         "value": "true"
       }
     ]
