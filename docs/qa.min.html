@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = errors = 2, warn = 2, info = 4, 71 -->
+<!-- broken links = 67, errors = 2, warn = 2, info = 3-->
 <head>
   <title>HealthEData_1Sandbox : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,9 +36,9 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for HealthEData_1Sandbox</h1>
- <p>Generated Fri Dec 30 23:35:34 PST 2022, FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = <a href="http://www.fhir.org/guides/healthedata1-sandbox">http://www.fhir.org/guides/healthedata1-sandbox</a> (<a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Mon Feb 06 19:16:30 PST 2023, FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = <a href="http://www.fhir.org/guides/healthedata1-sandbox">http://www.fhir.org/guides/healthedata1-sandbox</a> (<a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
- <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.2.25</span></td></tr>
+ <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.2.31, which is out of date. The current version is v1.2.34 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = healthedata1-sandbox, Canonical = http://www.fhir.org/guides/healthedata1-sandbox</td></tr>
  <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
  <tr><td>Publication Request:</td><td><ul><li>The file package-list.json should not exist in the root folder <img src="icon-error.gif" height="16px" width="16px"/></li>
@@ -67,22 +67,19 @@
  <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
  <tr><td>R5 Dependencies:</td><td><span style="color: grey">(none)</span></td></tr>
  <tr><td>Modifier Extensions:</td><td><span style="color: grey">(none)</span></td></tr>
- <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/healthedata1-sandbox (Problem #1 with package-list.json at http://www.fhir.org/guides/healthedata1-sandbox: Invalid HTTP response 404 from http://www.fhir.org/guides/healthedata1-sandbox/package-list.json?nocache=1672472089406 (Not Found) (content in /var/folders/q_/m2_r2plx69313_bzdypfs7440000gn/T/fhir-http-2.log))</td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://www.fhir.org/guides/healthedata1-sandbox (Problem #1 with package-list.json at http://www.fhir.org/guides/healthedata1-sandbox: Invalid HTTP response 404 from http://www.fhir.org/guides/healthedata1-sandbox/package-list.json?nocache=1675739733710 (Not Found) (content in /var/folders/q_/m2_r2plx69313_bzdypfs7440000gn/T/fhir-http-2.log))</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 2, warn = 2, info = 4, broken links = 71</td></tr>
+ <tr><td>Summary:</td><td> errors = 2, warn = 2, info = 3, broken links = 67</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>71</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>67</b></td><td><b>0</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_cs1"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/cs1</b></a></td><td><b>2</b></td><td><b>0</b></td><td><b>0</b></td>
-   </tr>
-   <tr style="background-color: #EFFFEF">
-     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_test"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/test</b></a></td><td><b>0</b></td><td><b>1</b></td><td><b>0</b></td>
+     <td><a href="#_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_valueset-us-core-source-of-payment"><b>/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment</b></a></td><td><b>2</b></td><td><b>2</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -90,24 +87,6 @@
 <h2><a href="">n/a</a> <span id="sv" class="toggle" onclick="toggle('v')">Show Validation Information</span> <span class="vcount" onclick="toggle('v')"></span></h2>
  <div style="border: 1px grey solid; display: none" id="v"></div>
  <table class="grid">
-   <tr style="background-color: #ffebcc">
-     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource QuestionnaireResponse/5774968.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="Bundle-good-provenance-example.html#l349">docs/Bundle-good-provenance-example.html#/html/body/div/div/div/div/div/div/blockquote/p/p/a at Line 179, column 1830</a></b></td><td><b>error</b></td><td><b>The link 'Patient-example.html' for &quot;Patient/example&quot; cannot be resolved</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="Bundle-good-provenance-example.html#l426">docs/Bundle-good-provenance-example.html#/html/body/div/div/div/div/div/div/blockquote/p/table/tr/td/a at Line 179, column 2931</a></b></td><td><b>error</b></td><td><b>The link 'Practitioner-practitioner-1.html' for &quot;Practitioner/practitioner-1&quot; cannot be resolved</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="Bundle-good-provenance-example.html#l429">docs/Bundle-good-provenance-example.html#/html/body/div/div/div/div/div/div/blockquote/p/table/tr/td/a at Line 179, column 3014</a></b></td><td><b>error</b></td><td><b>The link 'Organization-saint-luke-w-endpoint.html' for &quot;Organization/saint-luke-w-endpoint&quot; cannot be resolved</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="Bundle-good-provenance-example.html#l436">docs/Bundle-good-provenance-example.html#/html/body/div/div/div/div/div/div/blockquote/p/table/tr/td/a at Line 179, column 3238</a></b></td><td><b>error</b></td><td><b>The link 'Practitioner-practitioner-2.html' for &quot;Practitioner/practitioner-2&quot; cannot be resolved</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b><a href="Bundle-good-provenance-example.html#l439">docs/Bundle-good-provenance-example.html#/html/body/div/div/div/div/div/div/blockquote/p/table/tr/td/a at Line 179, column 3321</a></b></td><td><b>error</b></td><td><b>The link 'Organization-saint-luke-w-endpoint.html' for &quot;Organization/saint-luke-w-endpoint&quot; cannot be resolved</b></td>
-   </tr>
    <tr style="background-color: #ffcccc">
      <td><b><a href="changes.html#l279">docs/changes.html#/html/body/div/div/div/div/div/ul/li/a at Line 166, column 13</a></b></td><td><b>error</b></td><td><b>The link 'http://build.fhir.org/ig/HL7/US-Core' for &quot;http://build.fhir.org/ig/HL7/US-Core&quot; cannot be resolved</b></td>
    </tr>
@@ -115,187 +94,190 @@
      <td><b><a href="changes.html#l306">docs/changes.html#/html/body/div/div/div/div/div/ul/li/a at Line 178, column 13</a></b></td><td><b>error</b></td><td><b>The link 'http://hl7.org/fhir/us/core/2022Jan' for &quot;http://hl7.org/fhir/us/core/2022Jan&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2225">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 487, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-allergyintolerance.html' for &quot;US Core AllergyIntolerance Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2209">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 479, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-allergyintolerance.html' for &quot;US Core AllergyIntolerance Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2300">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 528, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-careplan.html' for &quot;US Core CarePlan Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2284">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 520, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-careplan.html' for &quot;US Core CarePlan Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2312">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 533, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-sdoh-assessment.html' for &quot;US Core Observation SDOH Assessment Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2296">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 525, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-sdoh-assessment.html' for &quot;US Core Observation SDOH Assessment Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2312">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 533, column 154</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-social-history.html' for &quot;US Core Observation Social History Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2296">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 525, column 154</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-social-history.html' for &quot;US Core Observation Social History Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2312">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 533, column 292</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-questionnaireresponse.html' for &quot;US Core QuestionnaireResponse Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2296">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 525, column 292</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-questionnaireresponse.html' for &quot;US Core QuestionnaireResponse Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2322">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 534, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See SDOH Guidance&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2306">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 526, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See SDOH Guidance&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2349">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 550, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-careteam.html' for &quot;US Core CareTeam Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2333">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 542, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-careteam.html' for &quot;US Core CareTeam Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2431">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 594, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-documentreference.html' for &quot;US Core DocumentReference Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2415">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 586, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-documentreference.html' for &quot;US Core DocumentReference Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2431">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 594, column 151</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-note.html' for &quot;US Core DiagnosticReport Profile for Report and Note Exchange&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2415">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 586, column 151</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-note.html' for &quot;US Core DiagnosticReport Profile for Report and Note Exchange&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2521">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 637, column 14</a></b></td><td><b>error</b></td><td><b>The link 'clinical-notes.html' for &quot;See Clinical Notes Guidance&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2505">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 629, column 14</a></b></td><td><b>error</b></td><td><b>The link 'clinical-notes.html' for &quot;See Clinical Notes Guidance&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2548">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 653, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-clinical-test.html' for &quot;US Core Observation Clinical Test Result Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2532">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 645, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-clinical-test.html' for &quot;US Core Observation Clinical Test Result Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2548">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 653, column 174</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-note.html' for &quot;US Core DiagnosticReport Profile for Report and Note Exchange&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2532">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 645, column 174</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-note.html' for &quot;US Core DiagnosticReport Profile for Report and Note Exchange&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2603">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 682, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-imaging.html' for &quot;US Core Observation Imaging Result Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2587">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 674, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-imaging.html' for &quot;US Core Observation Imaging Result Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2603">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 682, column 162</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-note.html' for &quot;US Core DiagnosticReport Profile for Report and Note Exchange&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2587">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 674, column 162</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-note.html' for &quot;US Core DiagnosticReport Profile for Report and Note Exchange&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2658">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 711, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-encounter.html' for &quot;US Core Encounter Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2642">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 703, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-encounter.html' for &quot;US Core Encounter Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2683">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 723, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-condition-encounter-diagnosis.html' for &quot;US Core Condition Encounter Diagnosis Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2667">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 715, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-condition-encounter-diagnosis.html' for &quot;US Core Condition Encounter Diagnosis Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/guidance.html#l2728">docs/guidance.html#/html/body/div/div/div/div/div/div/div/div/img at Line 749, column 6</a></b></td><td><b>error</b></td><td><b>The image source 'foo.png' cannot be resolved</b></td>
+     <td><b><a href="/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/guidance.html#l2712">docs/guidance.html#/html/body/div/div/div/div/div/div/div/div/img at Line 741, column 6</a></b></td><td><b>error</b></td><td><b>The image source 'foo.png' cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2798">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 786, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-goal.html' for &quot;US Core Goal Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2782">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 778, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-goal.html' for &quot;US Core Goal Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2812">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 792, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See SDOH Guidance&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2796">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 784, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See SDOH Guidance&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2839">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 808, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-coverage.html' for &quot;US Core Coverage Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2823">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 800, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-coverage.html' for &quot;US Core Coverage Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2854">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 815, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-coverage.html' for &quot;US Core Coverage Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2838">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 807, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-coverage.html' for &quot;US Core Coverage Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2956">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 869, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-condition-problems-health-concerns.html' for &quot;US Core Condition Problems and Health Concerns Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2940">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 861, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-condition-problems-health-concerns.html' for &quot;US Core Condition Problems and Health Concerns Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l2971">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 875, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See Assessments Guidance&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2955">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 867, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See Assessments Guidance&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3003">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 889, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-pregnancystatus.html' for &quot;US Core Observation Pregnancy Status Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2987">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 881, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-pregnancystatus.html' for &quot;US Core Observation Pregnancy Status Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3003">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 889, column 155</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-pregnancyintent.html' for &quot;US Core Observation Pregnancy Intent Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l2987">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 881, column 155</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-pregnancyintent.html' for &quot;US Core Observation Pregnancy Intent Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3018">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 894, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-smokingstatus.html' for &quot;US Core Smoking Status Observation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3002">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 886, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-smokingstatus.html' for &quot;US Core Smoking Status Observation Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3047">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 911, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-immunization.html' for &quot;US Core Immunization Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3031">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 903, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-immunization.html' for &quot;US Core Immunization Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3089">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 935, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-lab.html' for &quot;US Core Laboratory Result Observation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3073">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 927, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-lab.html' for &quot;US Core Laboratory Result Observation Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3089">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 935, column 161</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-lab.html' for &quot;US Core DiagnosticReport Profile for Laboratory Results Reporting&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3073">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 927, column 161</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-diagnosticreport-lab.html' for &quot;US Core DiagnosticReport Profile for Laboratory Results Reporting&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3164">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 974, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-medicationrequest.html' for &quot;US Core MedicationRequest Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3148">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 966, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-medicationrequest.html' for &quot;US Core MedicationRequest Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3181">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 982, column 14</a></b></td><td><b>error</b></td><td><b>The link 'medication-list.html' for &quot;See Medication List Guidance&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3165">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 974, column 14</a></b></td><td><b>error</b></td><td><b>The link 'medication-list.html' for &quot;See Medication List Guidance&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3221">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1001, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-medicationdispense.html' for &quot;US Core MedicationDispense Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3205">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 993, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-medicationdispense.html' for &quot;US Core MedicationDispense Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3250">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1018, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-patient.html' for &quot;US Core Patient Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3234">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1010, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-patient.html' for &quot;US Core Patient Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3345">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1065, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-race.html' for &quot;US Core Race Extension&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3329">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1057, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-race.html' for &quot;US Core Race Extension&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3357">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1070, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-ethnicity.html' for &quot;US Core Ethnicity Extension&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3341">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1062, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-ethnicity.html' for &quot;US Core Ethnicity Extension&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3369">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1075, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-tribal-affiliation.html' for &quot;US Core Tribal Affiliation Extension&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3353">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1067, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-tribal-affiliation.html' for &quot;US Core Tribal Affiliation Extension&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3381">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1080, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-genderIdentity.html' for &quot;US Core Gender Identity Extension&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3365">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1072, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-genderIdentity.html' for &quot;US Core Gender Identity Extension&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3393">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1085, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-sexual-orientation.html' for &quot;US Core Observation Sexual Orientation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3377">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1077, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-sexual-orientation.html' for &quot;US Core Observation Sexual Orientation Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3455">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1115, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-relatedperson.html' for &quot;US Core RelatedPerson Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3439">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1107, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-relatedperson.html' for &quot;US Core RelatedPerson Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3467">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1120, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-relatedperson.html' for &quot;US Core RelatedPerson Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3451">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1112, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-relatedperson.html' for &quot;US Core RelatedPerson Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3479">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1125, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-occupation.html' for &quot;US Core Observation Occupation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3463">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1117, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-occupation.html' for &quot;US Core Observation Occupation Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3491">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1130, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-occupation.html' for &quot;US Core Observation Occupation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3475">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1122, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-observation-occupation.html' for &quot;US Core Observation Occupation Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3520">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1147, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-condition-problems-health-concerns.html' for &quot;US Core Condition Problems and Health Concerns Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3504">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1139, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-condition-problems-health-concerns.html' for &quot;US Core Condition Problems and Health Concerns Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3582">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1181, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-procedure.html' for &quot;US Core Procedure Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3566">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1173, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-procedure.html' for &quot;US Core Procedure Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3607">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1193, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-servicerequest.html' for &quot;US Core ServiceRequest Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3591">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1185, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-servicerequest.html' for &quot;US Core ServiceRequest Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3619">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1198, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-servicerequest.html' for &quot;US Core ServiceRequest Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3603">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1190, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-servicerequest.html' for &quot;US Core ServiceRequest Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3619">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1198, column 128</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-procedure.html' for &quot;US Core Procedure Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3603">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1190, column 128</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-procedure.html' for &quot;US Core Procedure Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3626">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1199, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See SDOH Guidance&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3610">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1191, column 14</a></b></td><td><b>error</b></td><td><b>The link 'screening-and-assessments.html' for &quot;See SDOH Guidance&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3705">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1244, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-implantable-device.html' for &quot;US Core Implantable Device Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3637">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1207, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-provenance.html' for &quot;US Core Provenance Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3747">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1268, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-vital-signs.html' for &quot;US Core Vital Signs Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3689">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1236, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-implantable-device.html' for &quot;US Core Implantable Device Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3762">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1275, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-blood-pressure.html' for &quot;US Core Blood Pressure Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3731">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1260, column 31</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-vital-signs.html' for &quot;US Core Vital Signs Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3774">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1280, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-blood-pressure.html' for &quot;US Core Blood Pressure Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3746">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1267, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-blood-pressure.html' for &quot;US Core Blood Pressure Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3786">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1285, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-body-height.html' for &quot;US Core Body Height Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3758">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1272, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-blood-pressure.html' for &quot;US Core Blood Pressure Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3798">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1290, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-body-weight.html' for &quot;US Core Body Weight Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3770">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1277, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-body-height.html' for &quot;US Core Body Height Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3810">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1295, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-heart-rate.html' for &quot;US Core Heart Rate Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3782">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1282, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-body-weight.html' for &quot;US Core Body Weight Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3822">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1300, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-respiratory-rate.html' for &quot;US Core Respiratory Rate Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3794">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1287, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-heart-rate.html' for &quot;US Core Heart Rate Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3834">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1305, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-body-temperature.html' for &quot;US Core Body Temperature Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3806">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1292, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-respiratory-rate.html' for &quot;US Core Respiratory Rate Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3846">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1310, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-pulse-oximetry.html' for &quot;US Core Pulse Oximetry Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3818">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1297, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-body-temperature.html' for &quot;US Core Body Temperature Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3858">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1315, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-pulse-oximetry.html' for &quot;US Core Pulse Oximetry Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3830">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1302, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-pulse-oximetry.html' for &quot;US Core Pulse Oximetry Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3870">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1320, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-pediatric-bmi-for-age.html' for &quot;US Core Pediatric BMI for Age Observation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3842">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1307, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-us-core-pulse-oximetry.html' for &quot;US Core Pulse Oximetry Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="guidance.html#l3882">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1325, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-pediatric-weight-for-height.html' for &quot;US Core Pediatric Weight for Height Observation Profile&quot; cannot be resolved</b></td>
+     <td><b><a href="guidance.html#l3854">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1312, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-pediatric-bmi-for-age.html' for &quot;US Core Pediatric BMI for Age Observation Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="guidance.html#l3866">docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1317, column 14</a></b></td><td><b>error</b></td><td><b>The link 'StructureDefinition-pediatric-weight-for-height.html' for &quot;US Core Pediatric Weight for Height Observation Profile&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b><a href="index.html#l351">docs/index.html#/html/body/div/div/div/div/div/p/a at Line 223, column 5</a></b></td><td><b>error</b></td><td><b>The link 'http://hl7.org/fhir/us/core/STU4/index.html' for &quot;US Core&quot; cannot be resolved</b></td>
@@ -308,32 +290,25 @@
    </tr>
 </table>
 <hr/>
-<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_cs1"> </a>
-<h2><a href="CodeSystem-us-core-category.html">input/resources/cs1.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>CodeSystem: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/codesystem.html">CodeSystem</a></li></ul>
+<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_valueset-us-core-source-of-payment"> </a>
+<h2><a href="ValueSet-us-core-source-of-payment.html">input/resources/valueset-us-core-source-of-payment.json</a> <span id="svi1" class="toggle" onclick="toggle('vi1')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi1')">(1)</span></h2>
+ <div style="border: 1px grey solid; display: none" id="vi1"><ul style="font-size: 7px"><li>ValueSet: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/valueset.html">ValueSet</a></li></ul>
 </div>
  <table class="grid">
    <tr>
      <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>CodeSystem.where(url = 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/cs1.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/us-core-category) does not match the URL (http://hl7.org/fhir/us/core/CodeSystem/us-core-category)</b></td>
-   </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>input/resources/cs1</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/us-core-category vs http://hl7.org/fhir/us/core/CodeSystem/us-core-category</b></td>
-   </tr>
-</table>
-<hr/>
-<a name="_Users_ehaas_Documents_FHIR_Healthedata1-Sandbox_input_resources_test"> </a>
-<h2><a href="StructureDefinition-us-core-provenance.html">input/resources/test.json</a> <span id="svi2" class="toggle" onclick="toggle('vi2')">Show Validation Information</span> <span class="vcount" onclick="toggle('vi2')">(1)</span></h2>
- <div style="border: 1px grey solid; display: none" id="vi2"><ul style="font-size: 7px"><li>StructureDefinition: Validated against <a href="http://hl7.org/fhir">fhir</a>.<a href="http://hl7.org/fhir/R4/structuredefinition.html">StructureDefinition</a></li></ul>
-</div>
- <table class="grid">
-   <tr>
-     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+     <td><b>ValueSet.where(url = 'http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment) does not match the URL (http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment)</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>StructureDefinition.where(url = 'http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-provenance')</b></td><td><b>warning</b></td><td title=""><b>The Implementation Guide contains no examples for this profile</b></td>
+     <td><b>ValueSet.compose[0].exclude[0]</b></td><td><b>warning</b></td><td title=""><b>Unknown System 'https://nahdo.org/sopt' specified, so Concepts and Filters can't be checked (Details: Local Error: Resolved system https://nahdo.org/sopt (v1.0.0), but the definition is not complete. Server Error: The code system 'https://nahdo.org/sopt' is not known (encountered paired with code = '1111'); The code provided (https://nahdo.org/sopt#1111) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>ValueSet.where(id = 'us-core-source-of-payment')</b></td><td><b>warning</b></td><td title=""><b>Error from server: Unable to provide support for code system https://nahdo.org/sopt</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>input/resources/valueset-us-core-source-of-payment</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment vs http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment</b></td>
    </tr>
 </table>
 <a name="suppressed"> </a>
@@ -341,19 +316,11 @@
 <p>No suppressed messsages</p><a name="sorted"> </a>
 <p><b>Errors sorted by type</b></p>
 <hr/>
-<a name="Questionnaire_QR_Q_NotFound"> </a>
-<h2>Questionnaire_QR_Q_NotFound</h2>
- <table class="grid">
-   <tr style="background-color: #fffff2">
-     <td><a href="QuestionnaireResponse-5774968.html">input/examples/QuestionnaireResponse-5774968.json</a></td><td><b>The questionnaire 'https://example.org/fhir/Questionnaire/44249-1-x' could not be resolved, so no validation can be performed against the base questionnaire</b></td>
-   </tr>
-</table>
-<hr/>
 <a name="RESOURCE_CANONICAL_MISMATCH"> </a>
 <h2>RESOURCE_CANONICAL_MISMATCH</h2>
  <table class="grid">
    <tr style="background-color: #ffeeee">
-     <td><a href="CodeSystem-us-core-category.html">input/resources/cs1.json</a></td><td><b>Conformance resource /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/cs1.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/CodeSystem/us-core-category) does not match the URL (http://hl7.org/fhir/us/core/CodeSystem/us-core-category)</b></td>
+     <td><a href="ValueSet-us-core-source-of-payment.html">input/resources/valueset-us-core-source-of-payment.json</a></td><td><b>Conformance resource /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment) does not match the URL (http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment)</b></td>
    </tr>
 </table>
 <hr/>

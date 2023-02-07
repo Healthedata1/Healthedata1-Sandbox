@@ -1,0 +1,232 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "us-core-source-of-payment",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion\">http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-SOPT.html\"><code>https://nahdo.org/sopt</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1111</td><td>Medicare Chronic Condition Special Needs Plan (C-SNP)</td></tr><tr><td>1112</td><td>Medicare Institutional Special Needs Plan (I-SNP)</td></tr><tr><td>3111</td><td>TRICARE Prime--HMO</td></tr><tr><td>3112</td><td>TRICARE Extra--PPO</td></tr><tr><td>3113</td><td>TRICARE Standard - Fee For Service</td></tr><tr><td>3114</td><td>TRICARE For Life--Medicare Supplement</td></tr><tr><td>3115</td><td>TRICARE Reserve Select</td></tr><tr><td>3116</td><td>Uniformed Services Family Health Plan (USFHP) -- HMO</td></tr><tr><td>3119</td><td>Department of Defense - (other)</td></tr><tr><td>3121</td><td>Enrolled Prime--HMO</td></tr><tr><td>3122</td><td>Non-enrolled Space Available</td></tr><tr><td>3123</td><td>TRICARE For Life (TFL)</td></tr><tr><td>3211</td><td>Direct Care-Care provided in VA facilities</td></tr><tr><td>3212</td><td>Indirect Care-Care provided outside VA facilities</td></tr><tr><td>32121</td><td>Fee Basis</td></tr><tr><td>32122</td><td>Foreign Fee/Foreign Medical Program (FMP)</td></tr><tr><td>32123</td><td>Contract Nursing Home/Community Nursing Home</td></tr><tr><td>32124</td><td>State Veterans Home</td></tr><tr><td>32125</td><td>Sharing Agreements</td></tr><tr><td>32126</td><td>Other Federal Agency</td></tr><tr><td>32127</td><td>Dental Care</td></tr><tr><td>32128</td><td>Vision Care</td></tr><tr><td>3221</td><td>Civilian Health and Medical Program for the VA (CHAMPVA)</td></tr><tr><td>3222</td><td>Spina Bifida Health Care Program (SB)</td></tr><tr><td>3223</td><td>Children of Women Vietnam Veterans (CWVV)</td></tr><tr><td>3229</td><td>Other non-veteran care</td></tr><tr><td>3711</td><td>HMO</td></tr><tr><td>3712</td><td>PPO</td></tr><tr><td>3713</td><td>POS</td></tr><tr><td>3811</td><td>Federal, State, Local not specified - HMO</td></tr><tr><td>3812</td><td>Federal, State, Local not specified - PPO</td></tr><tr><td>3813</td><td>Federal, State, Local not specified - POS</td></tr><tr><td>3819</td><td>Federal, State, Local not specified - not specified managed care</td></tr><tr><td>6</td><td>BLUE CROSS/BLUE SHIELD</td></tr><tr><td>61</td><td>BC Managed Care</td></tr><tr><td>611</td><td>BC Managed Care - HMO</td></tr><tr><td>612</td><td>BC Managed Care - PPO</td></tr><tr><td>613</td><td>BC Managed Care - POS</td></tr><tr><td>614</td><td>BC Managed Care - Dental</td></tr><tr><td>619</td><td>BC Managed Care - Other</td></tr><tr><td>62</td><td>BC Insurance Indemnity</td></tr><tr><td>621</td><td>BC Indemnity</td></tr><tr><td>622</td><td>BC Self-insured (ERISA) Administrative Services Only (ASO)Plan</td></tr><tr><td>623</td><td>BC Medicare Supplemental Plan</td></tr><tr><td>629</td><td>BC Indemnity - Dental</td></tr></table></li></ul></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
+    "valueInteger" : 2,
+    "_valueInteger" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"
+      }]
+    }
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+    "valueCode" : "trial-use",
+    "_valueCode" : {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom",
+        "valueCanonical" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"
+      }]
+    }
+  }],
+  "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment",
+  "version" : "0.1.0",
+  "name" : "USCoreSourceofPaymentValueSet",
+  "title" : "US Core Source of Payment Value Set",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2022-09-29",
+  "publisher" : "Health eData Inc",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "email",
+      "value" : "mailto:ehaas@healthedatainc.com"
+    }]
+  }],
+  "description" : "[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories.",
+  "copyright" : "The Source of Payment Typology is freely available for use and modification.",
+  "compose" : {
+    "include" : [{
+      "valueSet" : ["http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591"]
+    }],
+    "exclude" : [{
+      "system" : "https://nahdo.org/sopt",
+      "concept" : [{
+        "code" : "1111",
+        "display" : "Medicare Chronic Condition Special Needs Plan (C-SNP)"
+      },
+      {
+        "code" : "1112",
+        "display" : "Medicare Institutional Special Needs Plan (I-SNP)"
+      },
+      {
+        "code" : "3111",
+        "display" : "TRICARE Prime--HMO"
+      },
+      {
+        "code" : "3112",
+        "display" : "TRICARE Extra--PPO"
+      },
+      {
+        "code" : "3113",
+        "display" : "TRICARE Standard - Fee For Service"
+      },
+      {
+        "code" : "3114",
+        "display" : "TRICARE For Life--Medicare Supplement"
+      },
+      {
+        "code" : "3115",
+        "display" : "TRICARE Reserve Select"
+      },
+      {
+        "code" : "3116",
+        "display" : "Uniformed Services Family Health Plan (USFHP) -- HMO"
+      },
+      {
+        "code" : "3119",
+        "display" : "Department of Defense - (other)"
+      },
+      {
+        "code" : "3121",
+        "display" : "Enrolled Prime--HMO"
+      },
+      {
+        "code" : "3122",
+        "display" : "Non-enrolled Space Available"
+      },
+      {
+        "code" : "3123",
+        "display" : "TRICARE For Life (TFL)"
+      },
+      {
+        "code" : "3211",
+        "display" : "Direct Care-Care provided in VA facilities"
+      },
+      {
+        "code" : "3212",
+        "display" : "Indirect Care-Care provided outside VA facilities"
+      },
+      {
+        "code" : "32121",
+        "display" : "Fee Basis"
+      },
+      {
+        "code" : "32122",
+        "display" : "Foreign Fee/Foreign Medical Program (FMP)"
+      },
+      {
+        "code" : "32123",
+        "display" : "Contract Nursing Home/Community Nursing Home"
+      },
+      {
+        "code" : "32124",
+        "display" : "State Veterans Home"
+      },
+      {
+        "code" : "32125",
+        "display" : "Sharing Agreements"
+      },
+      {
+        "code" : "32126",
+        "display" : "Other Federal Agency"
+      },
+      {
+        "code" : "32127",
+        "display" : "Dental Care"
+      },
+      {
+        "code" : "32128",
+        "display" : "Vision Care"
+      },
+      {
+        "code" : "3221",
+        "display" : "Civilian Health and Medical Program for the VA (CHAMPVA)"
+      },
+      {
+        "code" : "3222",
+        "display" : "Spina Bifida Health Care Program (SB)"
+      },
+      {
+        "code" : "3223",
+        "display" : "Children of Women Vietnam Veterans (CWVV)"
+      },
+      {
+        "code" : "3229",
+        "display" : "Other non-veteran care"
+      },
+      {
+        "code" : "3711",
+        "display" : "HMO"
+      },
+      {
+        "code" : "3712",
+        "display" : "PPO"
+      },
+      {
+        "code" : "3713",
+        "display" : "POS"
+      },
+      {
+        "code" : "3811",
+        "display" : "Federal, State, Local not specified - HMO"
+      },
+      {
+        "code" : "3812",
+        "display" : "Federal, State, Local not specified - PPO"
+      },
+      {
+        "code" : "3813",
+        "display" : "Federal, State, Local not specified - POS"
+      },
+      {
+        "code" : "3819",
+        "display" : "Federal, State, Local not specified - not specified managed care"
+      },
+      {
+        "code" : "6",
+        "display" : "BLUE CROSS/BLUE SHIELD"
+      },
+      {
+        "code" : "61",
+        "display" : "BC Managed Care"
+      },
+      {
+        "code" : "611",
+        "display" : "BC Managed Care - HMO"
+      },
+      {
+        "code" : "612",
+        "display" : "BC Managed Care - PPO"
+      },
+      {
+        "code" : "613",
+        "display" : "BC Managed Care - POS"
+      },
+      {
+        "code" : "614",
+        "display" : "BC Managed Care - Dental"
+      },
+      {
+        "code" : "619",
+        "display" : "BC Managed Care - Other"
+      },
+      {
+        "code" : "62",
+        "display" : "BC Insurance Indemnity"
+      },
+      {
+        "code" : "621",
+        "display" : "BC Indemnity"
+      },
+      {
+        "code" : "622",
+        "display" : "BC Self-insured (ERISA) Administrative Services Only (ASO)Plan"
+      },
+      {
+        "code" : "623",
+        "display" : "BC Medicare Supplemental Plan"
+      },
+      {
+        "code" : "629",
+        "display" : "BC Indemnity - Dental"
+      }]
+    }]
+  }
+}

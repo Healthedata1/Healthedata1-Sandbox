@@ -82,34 +82,11 @@
     "resource": [
       {
         "reference": {
-          "reference": "CodeSystem/us-core-category"
+          "reference": "ValueSet/us-core-source-of-payment"
         },
-        "description": "Codes used in US Core *category* profiles such as the US Core Simple Observation Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints.",
+        "description": "US Public Health Data Consortium Source of Payment Codes excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories.",
         "exampleBoolean": false,
-        "name": "US Core Category"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-provenance"
-        },
-        "description": "This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource.",
-        "exampleBoolean": false,
-        "name": "US Core Provenance Profile"
-      },
-      {
-        "reference": {
-          "reference": "QuestionnaireResponse/5774968"
-        },
-        "name": "5774968",
-        "exampleCanonical": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/good-provenance-example"
-        },
-        "description": "This is a allergyintolerance provenance example for the *Bundle Profile*.",
-        "name": "AllergyIntolerance Provenance Example GOOD",
-        "exampleBoolean": true
+        "name": "US Core Source of Payment Value Set"
       },
       {
         "reference": {
@@ -195,6 +172,10 @@
       {
         "code": "path-resource",
         "value": "input/intro-notes"
+      },
+      {
+        "code": "path-liquid",
+        "value": "input/images/liquid"
       },
       {
         "code": "excludexml",

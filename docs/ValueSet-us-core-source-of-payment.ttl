@@ -1,0 +1,264 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "us-core-source-of-payment"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion\">http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-SOPT.html\"><code>https://nahdo.org/sopt</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1111</td><td>Medicare Chronic Condition Special Needs Plan (C-SNP)</td></tr><tr><td>1112</td><td>Medicare Institutional Special Needs Plan (I-SNP)</td></tr><tr><td>3111</td><td>TRICARE Prime--HMO</td></tr><tr><td>3112</td><td>TRICARE Extra--PPO</td></tr><tr><td>3113</td><td>TRICARE Standard - Fee For Service</td></tr><tr><td>3114</td><td>TRICARE For Life--Medicare Supplement</td></tr><tr><td>3115</td><td>TRICARE Reserve Select</td></tr><tr><td>3116</td><td>Uniformed Services Family Health Plan (USFHP) -- HMO</td></tr><tr><td>3119</td><td>Department of Defense - (other)</td></tr><tr><td>3121</td><td>Enrolled Prime--HMO</td></tr><tr><td>3122</td><td>Non-enrolled Space Available</td></tr><tr><td>3123</td><td>TRICARE For Life (TFL)</td></tr><tr><td>3211</td><td>Direct Care-Care provided in VA facilities</td></tr><tr><td>3212</td><td>Indirect Care-Care provided outside VA facilities</td></tr><tr><td>32121</td><td>Fee Basis</td></tr><tr><td>32122</td><td>Foreign Fee/Foreign Medical Program (FMP)</td></tr><tr><td>32123</td><td>Contract Nursing Home/Community Nursing Home</td></tr><tr><td>32124</td><td>State Veterans Home</td></tr><tr><td>32125</td><td>Sharing Agreements</td></tr><tr><td>32126</td><td>Other Federal Agency</td></tr><tr><td>32127</td><td>Dental Care</td></tr><tr><td>32128</td><td>Vision Care</td></tr><tr><td>3221</td><td>Civilian Health and Medical Program for the VA (CHAMPVA)</td></tr><tr><td>3222</td><td>Spina Bifida Health Care Program (SB)</td></tr><tr><td>3223</td><td>Children of Women Vietnam Veterans (CWVV)</td></tr><tr><td>3229</td><td>Other non-veteran care</td></tr><tr><td>3711</td><td>HMO</td></tr><tr><td>3712</td><td>PPO</td></tr><tr><td>3713</td><td>POS</td></tr><tr><td>3811</td><td>Federal, State, Local not specified - HMO</td></tr><tr><td>3812</td><td>Federal, State, Local not specified - PPO</td></tr><tr><td>3813</td><td>Federal, State, Local not specified - POS</td></tr><tr><td>3819</td><td>Federal, State, Local not specified - not specified managed care</td></tr><tr><td>6</td><td>BLUE CROSS/BLUE SHIELD</td></tr><tr><td>61</td><td>BC Managed Care</td></tr><tr><td>611</td><td>BC Managed Care - HMO</td></tr><tr><td>612</td><td>BC Managed Care - PPO</td></tr><tr><td>613</td><td>BC Managed Care - POS</td></tr><tr><td>614</td><td>BC Managed Care - Dental</td></tr><tr><td>619</td><td>BC Managed Care - Other</td></tr><tr><td>62</td><td>BC Insurance Indemnity</td></tr><tr><td>621</td><td>BC Indemnity</td></tr><tr><td>622</td><td>BC Self-insured (ERISA) Administrative Services Only (ASO)Plan</td></tr><tr><td>623</td><td>BC Medicare Supplemental Plan</td></tr><tr><td>629</td><td>BC Indemnity - Dental</td></tr></table></li></ul></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm" ];
+     fhir:Extension.valueInteger [
+       fhir:value "2"^^xsd:integer;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ];
+         fhir:Extension.valueCanonical [
+           fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox";
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status" ];
+     fhir:Extension.valueCode [
+       fhir:value "trial-use";
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom" ];
+         fhir:Extension.valueCanonical [
+           fhir:value "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox";
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ]
+     ]
+  ]; # 
+  fhir:ValueSet.url [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment"]; # 
+  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
+  fhir:ValueSet.name [ fhir:value "USCoreSourceofPaymentValueSet"]; # 
+  fhir:ValueSet.title [ fhir:value "US Core Source of Payment Value Set"]; # 
+  fhir:ValueSet.status [ fhir:value "active"]; # 
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean]; # 
+  fhir:ValueSet.date [ fhir:value "2022-09-29"^^xsd:date]; # 
+  fhir:ValueSet.publisher [ fhir:value "Health eData Inc"]; # 
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "mailto:ehaas@healthedatainc.com" ]
+     ]
+  ]; # 
+  fhir:ValueSet.description [ fhir:value "[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories."]; # 
+  fhir:ValueSet.copyright [ fhir:value "The Source of Payment Typology is freely available for use and modification."]; # 
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.valueSet [
+         fhir:value "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591";
+         fhir:index 0;
+         fhir:link <http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591>
+       ]
+     ];
+     fhir:ValueSet.compose.exclude [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://nahdo.org/sopt" ];
+       fhir:ValueSet.compose.include.concept [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1111" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medicare Chronic Condition Special Needs Plan (C-SNP)" ]
+       ], [
+         fhir:index 1;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "1112" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Medicare Institutional Special Needs Plan (I-SNP)" ]
+       ], [
+         fhir:index 2;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3111" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TRICARE Prime--HMO" ]
+       ], [
+         fhir:index 3;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3112" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TRICARE Extra--PPO" ]
+       ], [
+         fhir:index 4;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3113" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TRICARE Standard - Fee For Service" ]
+       ], [
+         fhir:index 5;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3114" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TRICARE For Life--Medicare Supplement" ]
+       ], [
+         fhir:index 6;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3115" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TRICARE Reserve Select" ]
+       ], [
+         fhir:index 7;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3116" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Uniformed Services Family Health Plan (USFHP) -- HMO" ]
+       ], [
+         fhir:index 8;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3119" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Department of Defense - (other)" ]
+       ], [
+         fhir:index 9;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3121" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Enrolled Prime--HMO" ]
+       ], [
+         fhir:index 10;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3122" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Non-enrolled Space Available" ]
+       ], [
+         fhir:index 11;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3123" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "TRICARE For Life (TFL)" ]
+       ], [
+         fhir:index 12;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3211" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Direct Care-Care provided in VA facilities" ]
+       ], [
+         fhir:index 13;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3212" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Indirect Care-Care provided outside VA facilities" ]
+       ], [
+         fhir:index 14;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32121" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Fee Basis" ]
+       ], [
+         fhir:index 15;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32122" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Foreign Fee/Foreign Medical Program (FMP)" ]
+       ], [
+         fhir:index 16;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32123" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Contract Nursing Home/Community Nursing Home" ]
+       ], [
+         fhir:index 17;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32124" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "State Veterans Home" ]
+       ], [
+         fhir:index 18;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32125" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Sharing Agreements" ]
+       ], [
+         fhir:index 19;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32126" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other Federal Agency" ]
+       ], [
+         fhir:index 20;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32127" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Dental Care" ]
+       ], [
+         fhir:index 21;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "32128" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Vision Care" ]
+       ], [
+         fhir:index 22;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3221" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Civilian Health and Medical Program for the VA (CHAMPVA)" ]
+       ], [
+         fhir:index 23;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3222" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Spina Bifida Health Care Program (SB)" ]
+       ], [
+         fhir:index 24;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3223" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Children of Women Vietnam Veterans (CWVV)" ]
+       ], [
+         fhir:index 25;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3229" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Other non-veteran care" ]
+       ], [
+         fhir:index 26;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3711" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "HMO" ]
+       ], [
+         fhir:index 27;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3712" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "PPO" ]
+       ], [
+         fhir:index 28;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3713" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "POS" ]
+       ], [
+         fhir:index 29;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3811" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federal, State, Local not specified - HMO" ]
+       ], [
+         fhir:index 30;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3812" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federal, State, Local not specified - PPO" ]
+       ], [
+         fhir:index 31;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3813" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federal, State, Local not specified - POS" ]
+       ], [
+         fhir:index 32;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "3819" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "Federal, State, Local not specified - not specified managed care" ]
+       ], [
+         fhir:index 33;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "6" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BLUE CROSS/BLUE SHIELD" ]
+       ], [
+         fhir:index 34;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "61" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Managed Care" ]
+       ], [
+         fhir:index 35;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "611" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Managed Care - HMO" ]
+       ], [
+         fhir:index 36;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "612" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Managed Care - PPO" ]
+       ], [
+         fhir:index 37;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "613" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Managed Care - POS" ]
+       ], [
+         fhir:index 38;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "614" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Managed Care - Dental" ]
+       ], [
+         fhir:index 39;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "619" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Managed Care - Other" ]
+       ], [
+         fhir:index 40;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "62" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Insurance Indemnity" ]
+       ], [
+         fhir:index 41;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "621" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Indemnity" ]
+       ], [
+         fhir:index 42;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "622" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Self-insured (ERISA) Administrative Services Only (ASO)Plan" ]
+       ], [
+         fhir:index 43;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "623" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Medicare Supplemental Plan" ]
+       ], [
+         fhir:index 44;
+         fhir:ValueSet.compose.include.concept.code [ fhir:value "629" ];
+         fhir:ValueSet.compose.include.concept.display [ fhir:value "BC Indemnity - Dental" ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -73,7 +73,7 @@ echo "-x tranform all yaml that changed in the last day to json files  = $RECENT
 echo "-y tranform all yaml that changed in the last year to json files = $All_YAML"
 echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
-echo "-n remove the meta elements from all the examples = $NO_META"
+echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -193,7 +193,7 @@ fi
 
 if [[ $NO_META ]]; then
     echo "================================================================="
-    echo "===remove the meta element from all the examples==="
+    echo "===remove the meta extension element from all the examples==="
     echo "================================================================="
     examples=./input/examples
     echo "======== example folder is $examples ==========="
@@ -203,7 +203,8 @@ if [[ $NO_META ]]; then
       do
         # echo "file is $file"
         # echo "basename is $(basename $file)"
-        jq 'del(.meta)' < $file > $tmp/$(basename $file)
+                jq 'if .meta.profile then del(.meta.extension) else del(.meta) end' < $file > $tmp/$(basename $file)
+
       done
     mv -f $tmp/*.json $examples
     rm -rf $tmp

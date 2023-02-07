@@ -1,0 +1,53 @@
+resourceType: StructureDefinition
+id: cdex-sdc-questionnaireresponse
+
+url: 'http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-sdc-questionnaireresponse'
+name: CDEXSDCQuestionnaireResponse
+title: CDEX SDC QuestionnaireResponse Profile
+status: active
+date: '2023-01-15'
+
+description: >-
+  This extension is derived from the [SDC Questionnaire Response](http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse) profile and enforces the various elements of signature documented in the CDex guide to represent an enveloped signature. It adds the following constraints:
+
+  - The signature extensions use the CDex QuestionnaireResponse Signature Extension which uses CDex Signature Profile
+
+
+fhirVersion: 4.0.1
+
+kind: resource
+abstract: false
+type: QuestionnaireResponse
+baseDefinition: 'http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse'
+derivation: constraint
+
+differential:
+  element:
+
+    - id: 'QuestionnaireResponse.extension:signature'
+      path: QuestionnaireResponse.extension
+      # sliceName: signature
+      # min: 0
+      # max: '*'
+      type:
+        - code: Extension
+          profile:
+            - >-
+              http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-questionnaireresponse-signature
+      # mustSupport: false
+
+    - id: QuestionnaireResponse.item
+      path: QuestionnaireResponse.item
+      # mustSupport: true
+
+    - id: 'QuestionnaireResponse.item.extension:ItemSignature'
+      path: QuestionnaireResponse.item.extension
+      # sliceName: ItemSignature
+      # min: 0
+      # max: '*'
+      type:
+        - code: Extension
+          profile:
+            - >-
+              http://hl7.org/fhir/us/davinci-cdex/StructureDefinition/cdex-questionnaireresponse-signature
+      # mustSupport: false

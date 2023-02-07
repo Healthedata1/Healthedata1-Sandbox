@@ -17,7 +17,7 @@
   <name value="HealthEData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2022-12-30T23:34:49-08:00"/>
+  <date value="2023-02-06T19:15:33-08:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -114,6 +114,14 @@
       </extension>
       <extension url="value">
         <valueString value="docs"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/images/liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -370,6 +378,14 @@
       </extension>
       <extension url="value">
         <valueString value="docs"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/images/liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -586,46 +602,14 @@
     </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="CodeSystem"/>
+        <valueString value="ValueSet"/>
       </extension>
       <reference>
-        <reference value="CodeSystem/us-core-category"/>
+        <reference value="ValueSet/us-core-source-of-payment"/>
       </reference>
-      <name value="US Core Category"/>
-      <description value="Codes used in US Core *category* profiles such as the US Core Simple Observation Profile. The are typically used when there is a need for categorization for searching and finding resources or workflow hints."/>
+      <name value="US Core Source of Payment Value Set"/>
+      <description value="US Public Health Data Consortium Source of Payment Codes excluding specific payer organizations such as &quot;BLUE CROSS/BLUE SHIELD&quot; and  limited to main categories for classification, type of plan and additional subcategories."/>
       <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="StructureDefinition:resource"/>
-      </extension>
-      <reference>
-        <reference value="StructureDefinition/us-core-provenance"/>
-      </reference>
-      <name value="US Core Provenance Profile"/>
-      <description value="This profile sets minimum expectations for the Provenance resource to record, search, and fetch Provenance information associated with a record to promote interoperability and adoption through common implementation.  It identifies which core elements, extensions, vocabularies, and value sets **SHALL** be present in the resource when using this profile.  This FHIR Provenance profile here covers the minimal (basic) information to support lineage of information.  It provides the floor for standards development for specific use cases.  Prior to reviewing this profile, implementers are encouraged to read the Basic Provenance guidance page which documents several key use cases, specifically, what organization was responsible for the most recent action on the resource."/>
-      <exampleBoolean value="false"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="QuestionnaireResponse"/>
-      </extension>
-      <reference>
-        <reference value="QuestionnaireResponse/5774968"/>
-      </reference>
-      <name value="5774968"/>
-      <exampleCanonical value="http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse"/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Bundle"/>
-      </extension>
-      <reference>
-        <reference value="Bundle/good-provenance-example"/>
-      </reference>
-      <name value="AllergyIntolerance Provenance Example GOOD"/>
-      <description value="This is a allergyintolerance provenance example for the *Bundle Profile*."/>
-      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

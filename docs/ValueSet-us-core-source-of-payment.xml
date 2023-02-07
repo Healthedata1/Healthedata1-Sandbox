@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-source-of-payment"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion">http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591</a></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href="http://terminology.hl7.org/3.1.0/CodeSystem-SOPT.html"><code>https://nahdo.org/sopt</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1111</td><td>Medicare Chronic Condition Special Needs Plan (C-SNP)</td></tr><tr><td>1112</td><td>Medicare Institutional Special Needs Plan (I-SNP)</td></tr><tr><td>3111</td><td>TRICARE Prime--HMO</td></tr><tr><td>3112</td><td>TRICARE Extra--PPO</td></tr><tr><td>3113</td><td>TRICARE Standard - Fee For Service</td></tr><tr><td>3114</td><td>TRICARE For Life--Medicare Supplement</td></tr><tr><td>3115</td><td>TRICARE Reserve Select</td></tr><tr><td>3116</td><td>Uniformed Services Family Health Plan (USFHP) -- HMO</td></tr><tr><td>3119</td><td>Department of Defense - (other)</td></tr><tr><td>3121</td><td>Enrolled Prime--HMO</td></tr><tr><td>3122</td><td>Non-enrolled Space Available</td></tr><tr><td>3123</td><td>TRICARE For Life (TFL)</td></tr><tr><td>3211</td><td>Direct Care-Care provided in VA facilities</td></tr><tr><td>3212</td><td>Indirect Care-Care provided outside VA facilities</td></tr><tr><td>32121</td><td>Fee Basis</td></tr><tr><td>32122</td><td>Foreign Fee/Foreign Medical Program (FMP)</td></tr><tr><td>32123</td><td>Contract Nursing Home/Community Nursing Home</td></tr><tr><td>32124</td><td>State Veterans Home</td></tr><tr><td>32125</td><td>Sharing Agreements</td></tr><tr><td>32126</td><td>Other Federal Agency</td></tr><tr><td>32127</td><td>Dental Care</td></tr><tr><td>32128</td><td>Vision Care</td></tr><tr><td>3221</td><td>Civilian Health and Medical Program for the VA (CHAMPVA)</td></tr><tr><td>3222</td><td>Spina Bifida Health Care Program (SB)</td></tr><tr><td>3223</td><td>Children of Women Vietnam Veterans (CWVV)</td></tr><tr><td>3229</td><td>Other non-veteran care</td></tr><tr><td>3711</td><td>HMO</td></tr><tr><td>3712</td><td>PPO</td></tr><tr><td>3713</td><td>POS</td></tr><tr><td>3811</td><td>Federal, State, Local not specified - HMO</td></tr><tr><td>3812</td><td>Federal, State, Local not specified - PPO</td></tr><tr><td>3813</td><td>Federal, State, Local not specified - POS</td></tr><tr><td>3819</td><td>Federal, State, Local not specified - not specified managed care</td></tr><tr><td>6</td><td>BLUE CROSS/BLUE SHIELD</td></tr><tr><td>61</td><td>BC Managed Care</td></tr><tr><td>611</td><td>BC Managed Care - HMO</td></tr><tr><td>612</td><td>BC Managed Care - PPO</td></tr><tr><td>613</td><td>BC Managed Care - POS</td></tr><tr><td>614</td><td>BC Managed Care - Dental</td></tr><tr><td>619</td><td>BC Managed Care - Other</td></tr><tr><td>62</td><td>BC Insurance Indemnity</td></tr><tr><td>621</td><td>BC Indemnity</td></tr><tr><td>622</td><td>BC Self-insured (ERISA) Administrative Services Only (ASO)Plan</td></tr><tr><td>623</td><td>BC Medicare Supplemental Plan</td></tr><tr><td>629</td><td>BC Indemnity - Dental</td></tr></table></li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment"/>
+  <version value="0.1.0"/>
+  <name value="USCoreSourceofPaymentValueSet"/>
+  <title value="US Core Source of Payment Value Set"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-09-29"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as &quot;BLUE CROSS/BLUE SHIELD&quot; and  limited to main categories for classification, type of plan and additional subcategories."/>
+  <copyright value="The Source of Payment Typology is freely available for use and modification."/>
+  <compose>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591"/>
+    </include>
+    <exclude>
+      <system value="https://nahdo.org/sopt"/>
+      <concept>
+        <code value="1111"/>
+        <display value="Medicare Chronic Condition Special Needs Plan (C-SNP)"/>
+      </concept>
+      <concept>
+        <code value="1112"/>
+        <display value="Medicare Institutional Special Needs Plan (I-SNP)"/>
+      </concept>
+      <concept>
+        <code value="3111"/>
+        <display value="TRICARE Prime--HMO"/>
+      </concept>
+      <concept>
+        <code value="3112"/>
+        <display value="TRICARE Extra--PPO"/>
+      </concept>
+      <concept>
+        <code value="3113"/>
+        <display value="TRICARE Standard - Fee For Service"/>
+      </concept>
+      <concept>
+        <code value="3114"/>
+        <display value="TRICARE For Life--Medicare Supplement"/>
+      </concept>
+      <concept>
+        <code value="3115"/>
+        <display value="TRICARE Reserve Select"/>
+      </concept>
+      <concept>
+        <code value="3116"/>
+        <display value="Uniformed Services Family Health Plan (USFHP) -- HMO"/>
+      </concept>
+      <concept>
+        <code value="3119"/>
+        <display value="Department of Defense - (other)"/>
+      </concept>
+      <concept>
+        <code value="3121"/>
+        <display value="Enrolled Prime--HMO"/>
+      </concept>
+      <concept>
+        <code value="3122"/>
+        <display value="Non-enrolled Space Available"/>
+      </concept>
+      <concept>
+        <code value="3123"/>
+        <display value="TRICARE For Life (TFL)"/>
+      </concept>
+      <concept>
+        <code value="3211"/>
+        <display value="Direct Care-Care provided in VA facilities"/>
+      </concept>
+      <concept>
+        <code value="3212"/>
+        <display value="Indirect Care-Care provided outside VA facilities"/>
+      </concept>
+      <concept>
+        <code value="32121"/>
+        <display value="Fee Basis"/>
+      </concept>
+      <concept>
+        <code value="32122"/>
+        <display value="Foreign Fee/Foreign Medical Program (FMP)"/>
+      </concept>
+      <concept>
+        <code value="32123"/>
+        <display value="Contract Nursing Home/Community Nursing Home"/>
+      </concept>
+      <concept>
+        <code value="32124"/>
+        <display value="State Veterans Home"/>
+      </concept>
+      <concept>
+        <code value="32125"/>
+        <display value="Sharing Agreements"/>
+      </concept>
+      <concept>
+        <code value="32126"/>
+        <display value="Other Federal Agency"/>
+      </concept>
+      <concept>
+        <code value="32127"/>
+        <display value="Dental Care"/>
+      </concept>
+      <concept>
+        <code value="32128"/>
+        <display value="Vision Care"/>
+      </concept>
+      <concept>
+        <code value="3221"/>
+        <display value="Civilian Health and Medical Program for the VA (CHAMPVA)"/>
+      </concept>
+      <concept>
+        <code value="3222"/>
+        <display value="Spina Bifida Health Care Program (SB)"/>
+      </concept>
+      <concept>
+        <code value="3223"/>
+        <display value="Children of Women Vietnam Veterans (CWVV)"/>
+      </concept>
+      <concept>
+        <code value="3229"/>
+        <display value="Other non-veteran care"/>
+      </concept>
+      <concept>
+        <code value="3711"/>
+        <display value="HMO"/>
+      </concept>
+      <concept>
+        <code value="3712"/>
+        <display value="PPO"/>
+      </concept>
+      <concept>
+        <code value="3713"/>
+        <display value="POS"/>
+      </concept>
+      <concept>
+        <code value="3811"/>
+        <display value="Federal, State, Local not specified - HMO"/>
+      </concept>
+      <concept>
+        <code value="3812"/>
+        <display value="Federal, State, Local not specified - PPO"/>
+      </concept>
+      <concept>
+        <code value="3813"/>
+        <display value="Federal, State, Local not specified - POS"/>
+      </concept>
+      <concept>
+        <code value="3819"/>
+        <display value="Federal, State, Local not specified - not specified managed care"/>
+      </concept>
+      <concept>
+        <code value="6"/>
+        <display value="BLUE CROSS/BLUE SHIELD"/>
+      </concept>
+      <concept>
+        <code value="61"/>
+        <display value="BC Managed Care"/>
+      </concept>
+      <concept>
+        <code value="611"/>
+        <display value="BC Managed Care - HMO"/>
+      </concept>
+      <concept>
+        <code value="612"/>
+        <display value="BC Managed Care - PPO"/>
+      </concept>
+      <concept>
+        <code value="613"/>
+        <display value="BC Managed Care - POS"/>
+      </concept>
+      <concept>
+        <code value="614"/>
+        <display value="BC Managed Care - Dental"/>
+      </concept>
+      <concept>
+        <code value="619"/>
+        <display value="BC Managed Care - Other"/>
+      </concept>
+      <concept>
+        <code value="62"/>
+        <display value="BC Insurance Indemnity"/>
+      </concept>
+      <concept>
+        <code value="621"/>
+        <display value="BC Indemnity"/>
+      </concept>
+      <concept>
+        <code value="622"/>
+        <display value="BC Self-insured (ERISA) Administrative Services Only (ASO)Plan"/>
+      </concept>
+      <concept>
+        <code value="623"/>
+        <display value="BC Medicare Supplemental Plan"/>
+      </concept>
+      <concept>
+        <code value="629"/>
+        <display value="BC Indemnity - Dental"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>
