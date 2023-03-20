@@ -4,7 +4,7 @@ set -e
 trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
 trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
 NA='http://tx.fhir.org'
-while getopts twoplisvqdrxyzmnu: option
+while getopts twoplisvqdrxyzmnku: option
 do
  case "${option}"
  in
@@ -25,8 +25,9 @@ do
  r) CLEAR_JSON=1;;
  m) MERGE_CSV=1;;
  n) NO_META=1;;
- 
+ k) NO_PROFILE=1;;
  esac
+ 
 done
 
 inpath=input
@@ -74,6 +75,7 @@ echo "-y tranform all yaml that changed in the last year to json files = $All_YA
 echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
+echo "-n remove the meta.profile elements from all the examples = $NO_PROFILE"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -203,7 +205,26 @@ if [[ $NO_META ]]; then
       do
         # echo "file is $file"
         # echo "basename is $(basename $file)"
-                jq 'if .meta.profile then del(.meta.extension) else del(.meta) end' < $file > $tmp/$(basename $file)
+                jq 'if (.meta.profile or .meta.lastUpdated) then del(.meta.extension) else del(.meta) end' < $file > $tmp/$(basename $file)
+
+      done
+    mv -f $tmp/*.json $examples
+    rm -rf $tmp
+fi
+
+if [[ $NO_PROFILE ]]; then
+    echo "================================================================="
+    echo "===remove the meta profile element from all the examples==="
+    echo "================================================================="
+    examples=./input/examples
+    echo "======== example folder is $examples ==========="
+    tmp=$(mktemp -d -d ./input/_examples)
+    # echo "========= tmp is $tmp ==========="
+    for file in $examples/*.json
+      do
+        # echo "file is $file"
+        # echo "basename is $(basename $file)"
+                jq 'if (.meta.extension or .meta.lastUpdated) then del(.meta.profile) else del(.meta) end' < $file > $tmp/$(basename $file)
 
       done
     mv -f $tmp/*.json $examples

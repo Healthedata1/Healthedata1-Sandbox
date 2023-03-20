@@ -141,7 +141,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Test Examples</a>
       </li>
       <li>
-         <a href="#2">Terminology: Value Sets</a>
+         <a href="#2">Structures: Resource Profiles</a>
+      </li>
+      <li>
+         <a href="#3">Terminology: Value Sets</a>
       </li>
    </ul>
 </div>
@@ -170,6 +173,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </table>
    </p>
    <a name="2"> </a>
+   <h3>Structures: Resource Profiles </h3>
+   <p>
+    <p>These define constraints on FHIR resources for systems conforming to this implementation guide.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-my-diagnosticreport.html"
+                     title="StructureDefinition/my-diagnosticreport">My Diagnostic Report</a>
+               </td>
+               <td>
+<p>test</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="StructureDefinition-us-core-heart-rate.html"
+                     title="StructureDefinition/us-core-heart-rate">US Core Heart Rate Profile</a>
+               </td>
+               <td>
+<p>To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="3"> </a>
    <h3>Terminology: Value Sets </h3>
    <p>
     <p>These define sets of codes used by systems conforming to this implementation guide.</p>
@@ -184,7 +217,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                      title="ValueSet/us-core-source-of-payment">US Core Source of Payment Value Set</a>
                </td>
                <td>
-<p>US Public Health Data Consortium Source of Payment Codes excluding specific payer organizations such as “BLUE CROSS/BLUE SHIELD” and  limited to main categories for classification, type of plan and additional subcategories.</p>
+<p><a href="https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf">US Public Health Data Consortium Source of Payment Codes</a> excluding specific payer organizations such as “BLUE CROSS/BLUE SHIELD” and  limited to main categories for classification, type of plan and additional subcategories.</p>
 </td>
             </tr>
          </tbody>
@@ -214,7 +247,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Feb 6, 2023 19:15-0800">2023-02-06</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 22, 2023 13:10-0800">2023-02-22</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

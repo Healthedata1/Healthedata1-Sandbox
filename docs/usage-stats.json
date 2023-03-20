@@ -3,22 +3,66 @@
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "extensions": [],
-  "profiles": {},
+  "profiles": {
+    "Observation": [
+      {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate",
+        "title": "US Core Heart Rate Profile"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/my-diagnosticreport",
+        "title": "My Diagnostic Report"
+      }
+    ]
+  },
   "usage": {
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.snapshot.element.type",
+      "StructureDefinition.snapshot.element.type.targetProfile"
+    ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
       "Patient.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
       "Patient.meta"
     ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
       "ImplementationGuide",
+      "StructureDefinition",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
       "ImplementationGuide",
       "ImplementationGuide.definition.page",
       "ImplementationGuide.definition.page.page",
+      "StructureDefinition",
+      "StructureDefinition.snapshot.element",
       "ValueSet"
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [

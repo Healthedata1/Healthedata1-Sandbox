@@ -18,7 +18,7 @@
   "name" : "HealthEData_1Sandbox",
   "title" : "Health eData 1 Sandbox",
   "status" : "active",
-  "date" : "2023-02-06T19:15:33-08:00",
+  "date" : "2023-02-22T13:10:01-08:00",
   "publisher" : "Health eData Inc",
   "contact" : [{
     "telecom" : [{
@@ -811,13 +811,37 @@
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/my-diagnosticreport"
+      },
+      "name" : "My Diagnostic Report",
+      "description" : "test",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/us-core-heart-rate"
+      },
+      "name" : "US Core Heart Rate Profile",
+      "description" : "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
       }],
       "reference" : {
         "reference" : "ValueSet/us-core-source-of-payment"
       },
       "name" : "US Core Source of Payment Value Set",
-      "description" : "US Public Health Data Consortium Source of Payment Codes excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories.",
+      "description" : "[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories.",
       "exampleBoolean" : false
     },
     {

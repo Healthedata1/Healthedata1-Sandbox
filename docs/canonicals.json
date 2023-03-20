@@ -1,5 +1,12 @@
 [
   {
+    "id" : "us-core-heart-rate",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate",
+    "version" : "0.1.0",
+    "name" : "USCoreHeartRateProfile"
+  },
+  {
     "id" : "us-core-source-of-payment",
     "type" : "ValueSet",
     "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment",
@@ -12,5 +19,12 @@
     "url" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
     "version" : "0.1.0",
     "name" : "HealthEData_1Sandbox"
+  },
+  {
+    "id" : "my-diagnosticreport",
+    "type" : "StructureDefinition",
+    "url" : "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/my-diagnosticreport",
+    "version" : "0.1.0",
+    "name" : "MyDiagnosticReport"
   }
 ]

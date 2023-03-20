@@ -52,10 +52,26 @@ definition:
     description: Examples for Testing Stuff Out!!!
   resource:
   - reference:
+      reference: StructureDefinition/my-diagnosticreport
+    description: test
+    exampleBoolean: false
+    name: My Diagnostic Report
+  - reference:
+      reference: StructureDefinition/us-core-heart-rate
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch heart rate observations with a standard LOINC code and UCUM
+      units of measure. It is based on the US Core Vital Signs Profile and identifies
+      the *additional* mandatory core elements, extensions, vocabularies and value
+      sets which **SHALL** be present in the Observation resource when using this
+      profile. It provides the floor for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Heart Rate Profile
+  - reference:
       reference: ValueSet/us-core-source-of-payment
-    description: US Public Health Data Consortium Source of Payment Codes excluding
-      specific payer organizations such as "BLUE CROSS/BLUE SHIELD" and  limited to
-      main categories for classification, type of plan and additional subcategories.
+    description: '[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf)
+      excluding specific payer organizations such as "BLUE CROSS/BLUE SHIELD" and  limited
+      to main categories for classification, type of plan and additional subcategories.'
     exampleBoolean: false
     name: US Core Source of Payment Value Set
   - reference:
