@@ -41,10 +41,12 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
-      "Patient.meta"
+      "Patient.meta",
+      "Provenance.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
-      "Patient.meta"
+      "Patient.meta",
+      "Provenance.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
@@ -65,6 +67,9 @@
       "StructureDefinition.snapshot.element",
       "ValueSet"
     ],
+    "http://hl7.org/fhir/StructureDefinition/targetElement": [
+      "Provenance.target"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",
       "ImplementationGuide.definition.page.page"
@@ -78,7 +83,13 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
+      "Patient"
+    ],
     "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-genderIdentity": [
       "Patient"
     ],
     "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race": [

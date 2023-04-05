@@ -1,0 +1,82 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "my-diagnosticreport",
+    "url": "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/my-diagnosticreport",
+    "name": "MyDiagnosticReport",
+    "title": "My Diagnostic Report",
+    "status": "active",
+    "date": "2022-04-20",
+    "description": "test",
+    "fhirVersion": "4.0.1",
+    "kind": "resource",
+    "abstract": false,
+    "type": "DiagnosticReport",
+    "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+    "mapping": [
+        {
+            "identity": "foo",
+            "uri": "http://foo.org/bar",
+            "name": "FOOBAR MAPPING",
+            "comment": "testing"
+        }
+    ],
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "DiagnosticReport",
+                "path": "DiagnosticReport",
+                "short": "testing",
+                "definition": "testing"
+            },
+            {
+                "id": "DiagnosticReport.identifier",
+                "path": "DiagnosticReport.identifier",
+                "short": "testing",
+                "definition": "testing",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Identifier"
+                    }
+                ],
+                "mapping": [
+                    {
+                        "identity": "foo",
+                        "map": "bar"
+                    }
+                ]
+            },
+            {
+                "id": "DiagnosticReport.identifier.system",
+                "path": "DiagnosticReport.identifier.system",
+                "short": "testing",
+                "definition": "testing",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ]
+            },
+            {
+                "id": "DiagnosticReport.identifier.value",
+                "path": "DiagnosticReport.identifier.value",
+                "short": "testing",
+                "definition": "testing",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ]
+            }
+        ]
+    }
+}

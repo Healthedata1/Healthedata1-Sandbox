@@ -75,11 +75,25 @@ definition:
     exampleBoolean: false
     name: US Core Source of Payment Value Set
   - reference:
+      reference: Provenance/example-targeted-provenance
+    description: This is a provenance example for the *US Core Provenance Profile*
+      to demonstrate how Provenance can be used to document the source of individual
+      elements such as Race and Ethnicity (R/E), gender identity.
+    name: Targeted Provenance Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
+  - reference:
       reference: Patient/deceased-example
     description: This is a deceased patient example for the *US Core Patient Profile*.
     name: Deceased Patient Example
     exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
     groupingId: TestExamples
+  - reference:
+      reference: Patient/example-targeted-provenance
+    description: This is a patient example for the *US Core Patient Profile* to demonstrate
+      how Provenance can be used to document the source of individual elements such
+      as Race and Ethnicity (R/E), gender identity.
+    name: Targeted Provenance Patient Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   page:
     nameUrl: toc.html
     title: Table of Contents
