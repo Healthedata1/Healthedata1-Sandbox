@@ -1,12 +1,5 @@
 [
   {
-    "id" : "us-core-heart-rate",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-heart-rate",
-    "version" : "0.1.0",
-    "name" : "USCoreHeartRateProfile"
-  },
-  {
     "id" : "us-core-source-of-payment",
     "type" : "ValueSet",
     "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment",
@@ -18,13 +11,13 @@
     "type" : "ImplementationGuide",
     "url" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
     "version" : "0.1.0",
-    "name" : "HealthEData_1Sandbox"
+    "name" : "HealtheData_1Sandbox"
   },
   {
-    "id" : "my-diagnosticreport",
+    "id" : "argo-write-observation",
     "type" : "StructureDefinition",
-    "url" : "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/my-diagnosticreport",
+    "url" : "http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation",
     "version" : "0.1.0",
-    "name" : "MyDiagnosticReport"
+    "name" : "ArgoWriteObservationProfile"
   }
 ]

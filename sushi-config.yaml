@@ -38,7 +38,7 @@ dependencies:
   hl7.fhir.uv.smart-app-launch: 2.0.0
   us.nlm.vsac:
       uri: 'http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac'
-      version: 0.3.0
+      version: 0.9.0
       id: vsac
   us.cdc.phinvads:
     id: uscdcphinvads
@@ -96,10 +96,10 @@ parameters:
   #  value: #path #A relative path that contains liquid templates for generating narrative
   path-liquid: input/images/liquid
   excludexml: true
-  escludejsn: false
+  excludejson: false
   excludettl: true
   excludemap: true
-  excludeexample: true
+  # excludeexample: true
   # custom parameter also possible too
   #foo: bar
   # no-narrative:
@@ -116,6 +116,7 @@ parameters:
   # ipa-comparison:
   #   - '{current}'
   propagate-status: true
+  tabbed-snapshots: false
 copyrightYear: 2020+
 releaseLabel: CI Build
 

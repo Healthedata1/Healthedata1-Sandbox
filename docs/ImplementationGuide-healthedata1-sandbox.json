@@ -3,7 +3,7 @@
   "id" : "healthedata1-sandbox",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HealthEData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a <strong>Healthedata1</strong> sandbox for creation of resources and examples</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>HealtheData_1Sandbox</h2><p>The official URL for this implementation guide is: </p><pre>http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox</pre><div><p>This is a <strong>Healthedata1</strong> sandbox for creation of resources and examples</p>\n</div></div>"
   },
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -15,10 +15,10 @@
   }],
   "url" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
   "version" : "0.1.0",
-  "name" : "HealthEData_1Sandbox",
+  "name" : "HealtheData_1Sandbox",
   "title" : "Health eData 1 Sandbox",
   "status" : "active",
-  "date" : "2023-02-22T13:10:01-08:00",
+  "date" : "2023-04-13T16:15:51-07:00",
   "publisher" : "Health eData Inc",
   "contact" : [{
     "telecom" : [{
@@ -68,7 +68,7 @@
     "id" : "vsac",
     "uri" : "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
     "packageId" : "us.nlm.vsac",
-    "version" : "0.3.0"
+    "version" : "0.9.0"
   },
   {
     "id" : "uscdcphinvads",
@@ -168,7 +168,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "escludejsn"
+        "valueString" : "excludejson"
       },
       {
         "url" : "value",
@@ -201,7 +201,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludeexample"
+        "valueString" : "propagate-status"
       },
       {
         "url" : "value",
@@ -212,11 +212,11 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "propagate-status"
+        "valueString" : "tabbed-snapshots"
       },
       {
         "url" : "value",
-        "valueString" : "true"
+        "valueString" : "false"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -432,18 +432,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "tabbed-snapshots"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "copyrightyear"
+        "valueCode" : "copyrightyear"
       },
       {
         "url" : "value",
@@ -454,7 +443,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "releaselabel"
+        "valueCode" : "releaselabel"
       },
       {
         "url" : "value",
@@ -465,7 +454,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-expansion-params"
+        "valueCode" : "path-expansion-params"
       },
       {
         "url" : "value",
@@ -476,7 +465,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "show-inherited-invariants"
+        "valueCode" : "show-inherited-invariants"
       },
       {
         "url" : "value",
@@ -487,7 +476,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "usage-stats-opt-out"
+        "valueCode" : "usage-stats-opt-out"
       },
       {
         "url" : "value",
@@ -498,7 +487,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-output"
+        "valueCode" : "path-output"
       },
       {
         "url" : "value",
@@ -509,7 +498,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -520,7 +509,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludexml"
+        "valueCode" : "excludexml"
       },
       {
         "url" : "value",
@@ -531,7 +520,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "escludejsn"
+        "valueCode" : "excludejson"
       },
       {
         "url" : "value",
@@ -542,7 +531,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludettl"
+        "valueCode" : "excludettl"
       },
       {
         "url" : "value",
@@ -553,7 +542,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludemap"
+        "valueCode" : "excludemap"
       },
       {
         "url" : "value",
@@ -564,7 +553,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludeexample"
+        "valueCode" : "propagate-status"
       },
       {
         "url" : "value",
@@ -575,7 +564,18 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "propagate-status"
+        "valueCode" : "tabbed-snapshots"
+      },
+      {
+        "url" : "value",
+        "valueString" : "false"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueCode" : "autoload-resources"
       },
       {
         "url" : "value",
@@ -586,18 +586,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "autoload-resources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -608,7 +597,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-liquid"
+        "valueCode" : "path-liquid"
       },
       {
         "url" : "value",
@@ -619,7 +608,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-qa"
+        "valueCode" : "path-qa"
       },
       {
         "url" : "value",
@@ -630,7 +619,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-temp"
+        "valueCode" : "path-temp"
       },
       {
         "url" : "value",
@@ -641,7 +630,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-suppressed-warnings"
+        "valueCode" : "path-suppressed-warnings"
       },
       {
         "url" : "value",
@@ -652,7 +641,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "path-history"
+        "valueCode" : "path-history"
       },
       {
         "url" : "value",
@@ -663,7 +652,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "template-html"
+        "valueCode" : "template-html"
       },
       {
         "url" : "value",
@@ -674,7 +663,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "template-md"
+        "valueCode" : "template-md"
       },
       {
         "url" : "value",
@@ -685,7 +674,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-contact"
+        "valueCode" : "apply-contact"
       },
       {
         "url" : "value",
@@ -696,7 +685,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-context"
+        "valueCode" : "apply-context"
       },
       {
         "url" : "value",
@@ -707,7 +696,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-copyright"
+        "valueCode" : "apply-copyright"
       },
       {
         "url" : "value",
@@ -718,7 +707,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-jurisdiction"
+        "valueCode" : "apply-jurisdiction"
       },
       {
         "url" : "value",
@@ -729,7 +718,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-license"
+        "valueCode" : "apply-license"
       },
       {
         "url" : "value",
@@ -740,7 +729,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-publisher"
+        "valueCode" : "apply-publisher"
       },
       {
         "url" : "value",
@@ -751,7 +740,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "apply-version"
+        "valueCode" : "apply-version"
       },
       {
         "url" : "value",
@@ -762,7 +751,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "active-tables"
+        "valueCode" : "active-tables"
       },
       {
         "url" : "value",
@@ -773,7 +762,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "fmm-definition"
+        "valueCode" : "fmm-definition"
       },
       {
         "url" : "value",
@@ -784,18 +773,7 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueString" : "excludelogbinaryformat"
-      },
-      {
-        "url" : "value",
-        "valueString" : "true"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "tabbed-snapshots"
+        "valueCode" : "excludelogbinaryformat"
       },
       {
         "url" : "value",
@@ -814,22 +792,10 @@
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
-        "reference" : "StructureDefinition/my-diagnosticreport"
+        "reference" : "StructureDefinition/argo-write-observation"
       },
-      "name" : "My Diagnostic Report",
-      "description" : "test",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/us-core-heart-rate"
-      },
-      "name" : "US Core Heart Rate Profile",
-      "description" : "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
+      "name" : "Argo Write Observation Profile",
+      "description" : "Defines a \"mixin\" profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html). When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification.",
       "exampleBoolean" : false
     },
     {
@@ -847,6 +813,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Provenance"
+      }],
+      "reference" : {
+        "reference" : "Provenance/example-targeted-provenance"
+      },
+      "name" : "Targeted Provenance Example",
+      "description" : "This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
       }],
       "reference" : {
@@ -856,6 +834,18 @@
       "description" : "This is a deceased patient example for the *US Core Patient Profile*.",
       "exampleCanonical" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
       "groupingId" : "TestExamples"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/example-targeted-provenance"
+      },
+      "name" : "Targeted Provenance Patient Example",
+      "description" : "This is a patient example for the *US Core Patient Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
+      "exampleCanonical" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
     }],
     "page" : {
       "extension" : [{

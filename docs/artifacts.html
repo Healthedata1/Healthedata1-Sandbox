@@ -146,6 +146,9 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       <li>
          <a href="#3">Terminology: Value Sets</a>
       </li>
+      <li>
+         <a href="#4">Example: Example Instances</a>
+      </li>
    </ul>
 </div>
 <div xmlns:html="http://www.w3.org/1999/xhtml"
@@ -183,20 +186,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="StructureDefinition-my-diagnosticreport.html"
-                     title="StructureDefinition/my-diagnosticreport">My Diagnostic Report</a>
+                  <a href="StructureDefinition-argo-write-observation.html"
+                     title="StructureDefinition/argo-write-observation">Argo Write Observation Profile</a>
                </td>
                <td>
-<p>test</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-us-core-heart-rate.html"
-                     title="StructureDefinition/us-core-heart-rate">US Core Heart Rate Profile</a>
-               </td>
-               <td>
-<p>To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the <em>additional</em> mandatory core elements, extensions, vocabularies and value sets which <strong>SHALL</strong> be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.</p>
+<p>Defines a “mixin” profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the <a href="http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html">US Core Body Weight Profile</a>. When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see <a href="http://hl7.org/fhir/profiling.html#mixing">Supporting Multiple Profiles</a> in the FHIR specification.</p>
 </td>
             </tr>
          </tbody>
@@ -218,6 +212,36 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p><a href="https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf">US Public Health Data Consortium Source of Payment Codes</a> excluding specific payer organizations such as “BLUE CROSS/BLUE SHIELD” and  limited to main categories for classification, type of plan and additional subcategories.</p>
+</td>
+            </tr>
+         </tbody>
+      </table>
+   </p>
+   <a name="4"> </a>
+   <h3>Example: Example Instances </h3>
+   <p>
+    <p>These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like.</p>
+</p>
+   <p>
+      <table class="grid">
+         <col style="width:20%"/>
+         <tbody>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Provenance-example-targeted-provenance.html"
+                     title="Provenance/example-targeted-provenance">Targeted Provenance Example</a>
+               </td>
+               <td>
+<p>This is a provenance example for the <em>US Core Provenance Profile</em> to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Patient-example-targeted-provenance.html"
+                     title="Patient/example-targeted-provenance">Targeted Provenance Patient Example</a>
+               </td>
+               <td>
+<p>This is a patient example for the <em>US Core Patient Profile</em> to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.</p>
 </td>
             </tr>
          </tbody>
@@ -247,7 +271,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 22, 2023 13:10-0800">2023-02-22</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 13, 2023 16:15-0700">2023-04-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

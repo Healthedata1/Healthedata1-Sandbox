@@ -101,3 +101,21 @@ without markdown filter
   {{forloop.index0}}: {{ member }}
 {% endfor %}
 
+
+<div class="bg-success" markdown="1">
+
+#### Complete list of Code System URIs used in US Core
+
+The value set used in the US Core Profiles includes codes from following Code Systems URIs:
+
+{% for cs in site.data.codesystems -%}
+1. {% unless cs contains 'urn:' %}<{{ cs }}>{% else %}{{ cs }}{% endunless %}
+{% endfor %}
+
+
+{% for cs in site.data.codesystems -%}
+1. {{ cs }}
+{% endfor %}
+
+</div><!-- new-content -->
+

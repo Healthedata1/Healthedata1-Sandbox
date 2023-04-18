@@ -13,7 +13,7 @@
   ],
   "url": "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
   "version": "0.1.0",
-  "name": "HealthEData_1Sandbox",
+  "name": "HealtheData_1Sandbox",
   "title": "Health eData 1 Sandbox",
   "status": "active",
   "publisher": "Health eData Inc",
@@ -62,7 +62,7 @@
       "id": "vsac",
       "packageId": "us.nlm.vsac",
       "uri": "http://fhir.org/packages/us.nlm.vsac/ImplementationGuide/us.nlm.vsac",
-      "version": "0.3.0"
+      "version": "0.9.0"
     },
     {
       "id": "uscdcphinvads",
@@ -82,19 +82,11 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/my-diagnosticreport"
+          "reference": "StructureDefinition/argo-write-observation"
         },
-        "description": "test",
+        "description": "Defines a \"mixin\" profile which constrains and extends the Observation resource for the minimal set of data to support to writing patient submitted Observations to an EHR.  This profile is intended to be used in addition to other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html). When an application is creating content, it must create content that conforms to both sets of profiles - that is, the intersection of the profiles. When an application is consuming information, then it must be able to consume content that conforms to either set of profiles - that is, the union of the profiles. For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing) in the FHIR specification.",
         "exampleBoolean": false,
-        "name": "My Diagnostic Report"
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/us-core-heart-rate"
-        },
-        "description": "To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch heart rate observations with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies the *additional* mandatory core elements, extensions, vocabularies and value sets which **SHALL** be present in the Observation resource when using this profile. It provides the floor for standards development for specific use cases.",
-        "exampleBoolean": false,
-        "name": "US Core Heart Rate Profile"
+        "name": "Argo Write Observation Profile"
       },
       {
         "reference": {
@@ -106,12 +98,28 @@
       },
       {
         "reference": {
+          "reference": "Provenance/example-targeted-provenance"
+        },
+        "description": "This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
+        "name": "Targeted Provenance Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"
+      },
+      {
+        "reference": {
           "reference": "Patient/deceased-example"
         },
         "description": "This is a deceased patient example for the *US Core Patient Profile*.",
         "name": "Deceased Patient Example",
         "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient",
         "groupingId": "TestExamples"
+      },
+      {
+        "reference": {
+          "reference": "Patient/example-targeted-provenance"
+        },
+        "description": "This is a patient example for the *US Core Patient Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity.",
+        "name": "Targeted Provenance Patient Example",
+        "exampleCanonical": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
       }
     ],
     "page": {
@@ -198,7 +206,7 @@
         "value": "true"
       },
       {
-        "code": "escludejsn",
+        "code": "excludejson",
         "value": "false"
       },
       {
@@ -210,12 +218,12 @@
         "value": "true"
       },
       {
-        "code": "excludeexample",
+        "code": "propagate-status",
         "value": "true"
       },
       {
-        "code": "propagate-status",
-        "value": "true"
+        "code": "tabbed-snapshots",
+        "value": "false"
       }
     ]
   }

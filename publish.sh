@@ -75,7 +75,7 @@ echo "-y tranform all yaml that changed in the last year to json files = $All_YA
 echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
-echo "-n remove the meta.profile elements from all the examples = $NO_PROFILE"
+echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete

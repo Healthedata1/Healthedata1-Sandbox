@@ -425,3 +425,41 @@ The following will result in a warning message because the start line (15) is le
          {% include examplebutton.html example="docref-example2" b_title = "Click Here To See Example" %}
 
 </div><!-- new-content -->
+
+
+#### Create Markdown Table from a csv file in the input/data folder Using Liquid Syntax
+
+{% assign rows = site.data.additional-uscdi-requirements %}
+
+{% for row in rows -%}
+{% if forloop.first -%}
+| {% for pair in row %}{{ pair[0] }} | {% endfor %}
+| {% for pair in row %} --- |{% endfor %}
+{% else -%}
+| {% for pair in row %}{{ pair[1] }}|{% endfor %}
+{% endif -%}
+{% if forloop.last %}{:.grid}{% endif -%}
+{% endfor %}
+
+
+a html table is done this way ...
+
+
+
+  <table class="grid">
+      {% for row in rows %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
