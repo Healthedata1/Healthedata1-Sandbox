@@ -4,7 +4,7 @@ set -e
 trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
 trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
 NA='http://tx.fhir.org'
-while getopts twoplisvqdrxyzmnku: option
+while getopts twoplisvqdrxyzmnkcu: option
 do
  case "${option}"
  in
@@ -26,6 +26,7 @@ do
  m) MERGE_CSV=1;;
  n) NO_META=1;;
  k) NO_PROFILE=1;;
+ c) COPY_CSV=1;;
  esac
  
 done
@@ -76,10 +77,22 @@ echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
+echo "-c copy data csv files to the image folder (currently only input/data/uscdi-table.csv) = $COPY_CSV"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
+
+if [[ $COPY_CSV ]]; then
+echo "================================================================="
+echo cp input/data/uscdi-table.csv input/images/uscdi-table.csv
+echo "================================================================="
+cp input/data/uscdi-table.csv input/images/uscdi-table.csv
+echo "================================================================="
+echo convert input/data/uscdi-table.csv to excel and copy to input/images/uscdi-table.xlsx
+echo "================================================================="
+pyexcel transcode input/data/uscdi-table.csv input/images/uscdi-table.xlsx
+fi
 
 if [[ $CLEAR_JSON ]]; then
 echo 'remove all generated files in /examples and /resources folders'

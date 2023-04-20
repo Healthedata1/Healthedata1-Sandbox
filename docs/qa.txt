@@ -3,8 +3,8 @@
 
 err = 7, warn = 5, info = 7
 IG Publisher Version: 1.3.4
-Generated Thu Apr 13 16:16:54 PDT 2023. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
- Build Errors : 68 / 0 / 0
+Generated Thu Apr 20 00:21:26 PDT 2023. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+ Build Errors : 258 / 0 / 0
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox : 0 / 0 / 1
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/example-targeted-provenance : 1 / 0 / 3
  /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/input/examples/patient-deceased-example : 0 / 0 / 4
@@ -76,11 +76,366 @@ ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/guidance.html#/html
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1317, column 14: The link 'StructureDefinition-us-core-pulse-oximetry.html' for "US Core Pulse Oximetry Profile" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1322, column 14: The link 'StructureDefinition-pediatric-bmi-for-age.html' for "US Core Pediatric BMI for Age Observation Profile" cannot be resolved
 ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/guidance.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1327, column 14: The link 'StructureDefinition-pediatric-weight-for-height.html' for "US Core Pediatric Weight for Height Observation Profile" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/p/a at Line 223, column 5: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 242, column 8: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 265, column 12: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/ol/li/a at Line 460, column 10: The link 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category' for "http://hl7.org/fhir/us/core/CodeSystem/us-core-category" cannot be resolved
-ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/ol/li/a at Line 474, column 10: The link 'http://terminology.hl7.org/CodeSystem/medicationdispense-status' for "http://terminology.hl7.org/CodeSystem/medicationdispense-status" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/p/a at Line 222, column 5: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 240, column 8: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 263, column 12: The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/p/a at Line 479, column 6: The link 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category' for "http://hl7.org/fhir/us/core/CodeSystem/us-core-category" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 625, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 634, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core AllergyIntolerance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 654, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core AllergyIntolerance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 676, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core AllergyIntolerance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 698, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core AllergyIntolerance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 718, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 727, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CarePlan Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 733, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Simple Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 739, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Screening Assessment Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 745, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core QuestionnaireResponse Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 765, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CarePlan Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 787, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Simple Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 793, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 799, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Screening Assessment Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 805, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core QuestionnaireResponse Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 812, column 2: The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 825, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 834, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CareTeam Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 854, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CareTeam Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 876, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CareTeam Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 898, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CareTeam Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 920, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CareTeam Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 942, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core CareTeam Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 962, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 971, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 977, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 997, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1019, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1041, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1063, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1069, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1091, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1097, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1119, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1125, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1147, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1153, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1175, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DocumentReference Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1182, column 2: The link 'clinical-notes.html' for "See Clinical Notes Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1195, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1204, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Clinical Result Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1210, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1230, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Clinical Result Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1236, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1258, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Clinical Result Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1264, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1284, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1293, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Clinical Result Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1299, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1319, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Clinical Result Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1325, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1347, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Clinical Result Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1353, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1373, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1382, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Encounter Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1402, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Encounter Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1424, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Encounter Diagnosis Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1446, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Encounter Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1468, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Encounter Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1490, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Encounter Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1510, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1519, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Goal Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1539, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Goal Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1561, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Goal Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1568, column 2: The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1581, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1590, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1610, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1632, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1654, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1676, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1698, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1720, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1742, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Coverage Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1762, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1771, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Simple Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1777, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1783, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Screening Assessment Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 1789, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core QuestionnaireResponse Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1809, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1831, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Simple Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1837, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1843, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Screening Assessment Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1849, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core QuestionnaireResponse Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1856, column 2: The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1871, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Simple Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1877, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1883, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Screening Assessment Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1889, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core QuestionnaireResponse Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1911, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Simple Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1917, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1923, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Screening Assessment Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1929, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core QuestionnaireResponse Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1951, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Pregnancy Status Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1957, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Pregnancy Intent Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 1979, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Smoking Status Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 1999, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2008, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Immunization Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2028, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Immunization Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 2048, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2057, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Laboratory Result Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2063, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2069, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Specimen Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2089, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Laboratory Result Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2095, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2117, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Laboratory Result Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2123, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2145, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Laboratory Result Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2151, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Specimen Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2173, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Laboratory Result Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2179, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 2199, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2208, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core MedicationRequest Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2214, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core MedicationDispense Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2220, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2240, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2246, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Request Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2253, column 2: The link 'medication-list.html' for "See Medication List Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2268, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Request Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2290, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Request Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2312, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Request Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2334, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Medication Dispense Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 2354, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2363, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2369, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2375, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2381, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2387, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Occupation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2407, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2429, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2451, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2473, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2495, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2517, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2523, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Birth Sex Extension" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2545, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2551, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Birth Sex Extension" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2573, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2595, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2617, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Race Extension" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2639, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2645, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Ethnicity Extension" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2667, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2673, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Tribal Affiliation Extension" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2695, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2701, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Gender Identity Extension" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2723, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2745, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2767, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2789, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2811, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2833, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Patient Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2855, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core RelatedPerson Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2877, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core RelatedPerson Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2899, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Occupation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2921, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Observation Occupation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 2941, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 2950, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2970, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 2992, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3014, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3021, column 2: The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 3034, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 3043, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Procedure Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 3049, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core ServiceRequest Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3069, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Procedure Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3091, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core ServiceRequest Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3113, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core ServiceRequest Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3119, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Procedure Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3126, column 2: The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 3139, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 3148, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Provenance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3168, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Provenance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3190, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Provenance Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 3210, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 3219, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Implantable Device Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3239, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Implantable Device Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/div/img at Line 3259, column 2: The image source '.png' cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/thead/tr/th/a at Line 3268, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Vital Signs Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3288, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Blood Pressure Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3310, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Blood Pressure Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3332, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Body Height Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3354, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Body Weight Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3376, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Heart Rate Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3398, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Respiratory Rate Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3420, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Body Temperature Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3442, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Pulse Oximetry Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3464, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Pulse Oximetry Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3486, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Pediatric BMI for Age Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3508, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Pediatric Weight for Height Observation Profile" cannot be resolved
+ERROR: /Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/docs/index.html#/html/body/div/div/div/div/div/div/div/table/tbody/tr/td/a at Line 3530, column 2: The link 'StructureDefinition-argo-write-observation.html
+' for "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile" cannot be resolved
 == fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json ==
 == input/examples/example-targeted-provenance.json ==
 INFORMATION: Provenance/example-targeted-provenance: Provenance.agent[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|5.0.1
