@@ -329,7 +329,7 @@ Includes the specified lines from another file.  Typically this include is used 
 this helper lives in the input/images folder not the include file folder
 ~~~
 ├── examples
-│   ├── patient-deceased-example.json
+│   ├── Patient-deceased-example.json
 │   └── patient-example.json
 ├── fsh
 │   ├── fsh
@@ -361,24 +361,24 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 
 \~~~
 
-{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}{% endraw %}
+{% raw %}{% include_relative includelines filename='Patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}{% endraw %}
 
 \~~~
 
 ~~~json
-{% include_relative includelines filename='patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}
+{% include_relative includelines filename='Patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}
 ~~~
 
  **2. multiple fragments separated by "...":**
    
 \~~~
 
-{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}{% endraw %}
+{% raw %}{% include_relative includelines filename='Patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}{% endraw %}
 
 \~~~
 
 ~~~
-{% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" rel=true linenumber=true %}
+{% include_relative includelines filename='Patient-deceased-example.json' start = "10,20,30" count="5,5,5" rel=true linenumber=true %}
 ~~~
 
 **3. The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
@@ -386,13 +386,13 @@ The following will result in a warning message because the start line (15) is le
 
 \~~~
 
-{% raw %}{% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}{% endraw %}
+{% raw %}{% include_relative includelines filename='Patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}{% endraw %}
 
 \~~~
 
 
 ~~~
-{% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" rel=true %}
+{% include_relative includelines filename='Patient-deceased-example.json' start = "10,15,30" count="10,5,5" rel=true %}
 ~~~
 
 

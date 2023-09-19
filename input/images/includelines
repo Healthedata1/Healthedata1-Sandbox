@@ -4,7 +4,7 @@ It also optionally displays the line number of the included fragment.  The line 
 this helper lives in the input/images folder not the include file folder
 
 ├── examples
-│   ├── patient-deceased-example.json
+│   ├── Patient-deceased-example.json
 │   └── patient-example.json
 ├── fsh
 │   ├── fsh
@@ -33,16 +33,16 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 Example:
 1. single snippet:
 
-  {% include_relative includelines filename='patient-deceased-example.json' start=10 count=5 linenumber=true %}
+  {% include_relative includelines filename='Patient-deceased-example.json' start=10 count=5 linenumber=true %}
 
 2. multiple snippets separated by "...": 
   
-  {% include_relative includelines filename='patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}
+  {% include_relative includelines filename='Patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}
 
 3. The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.
 The following will result in a warning message because the start line (15) is less than the previous plus the number of lines (20)
 
-   {% include_relative includelines filename='patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}
+   {% include_relative includelines filename='Patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}
   
 -->{% endraw %}{% endcomment -%}
 
