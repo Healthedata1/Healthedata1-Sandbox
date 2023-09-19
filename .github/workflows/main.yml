@@ -35,3 +35,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
           folder: output # deploy from the prior step
+
+    # then github will deploy to the GH Page using the page-build-deployment action bot
