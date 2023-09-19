@@ -87,7 +87,7 @@ parameters:
   path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
   show-inherited-invariants: true
   usage-stats-opt-out: false
-  path-output: docs #output #docs
+  path-output: output #docs
   path-resource:
     - input/resources
     - fsh-generated/resources
