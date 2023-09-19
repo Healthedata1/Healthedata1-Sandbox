@@ -51,7 +51,7 @@ groups:
     name: Test Examples 
     description: Examples for Testing Stuff Out!!!
     resources:
-      - Patient/deceased-example
+      # - Patient/deceased-example
 
 
 
