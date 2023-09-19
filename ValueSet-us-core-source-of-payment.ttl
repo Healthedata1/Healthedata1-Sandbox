@@ -1,0 +1,205 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "us-core-source-of-payment"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "2"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"^^xsd:anyURI ;
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"^^xsd:anyURI ;
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "USCoreSourceofPaymentValueSet"] ; # 
+  fhir:title [ fhir:v "US Core Source of Payment Value Set"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2022-09-29"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Health eData Inc"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "mailto:ehaas@healthedatainc.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories."] ; # 
+  fhir:copyright [ fhir:v "The Source of Payment Typology is freely available for use and modification."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:valueSet ( [
+         fhir:v "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591"^^xsd:anyURI ;
+         fhir:link <http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591>
+       ] )
+     ] ) ;
+     fhir:exclude ( [
+       fhir:system [ fhir:v "https://nahdo.org/sopt"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "1111" ] ;
+         fhir:display [ fhir:v "Medicare Chronic Condition Special Needs Plan (C-SNP)" ]
+       ] [
+         fhir:code [ fhir:v "1112" ] ;
+         fhir:display [ fhir:v "Medicare Institutional Special Needs Plan (I-SNP)" ]
+       ] [
+         fhir:code [ fhir:v "3111" ] ;
+         fhir:display [ fhir:v "TRICARE Prime--HMO" ]
+       ] [
+         fhir:code [ fhir:v "3112" ] ;
+         fhir:display [ fhir:v "TRICARE Extra--PPO" ]
+       ] [
+         fhir:code [ fhir:v "3113" ] ;
+         fhir:display [ fhir:v "TRICARE Standard - Fee For Service" ]
+       ] [
+         fhir:code [ fhir:v "3114" ] ;
+         fhir:display [ fhir:v "TRICARE For Life--Medicare Supplement" ]
+       ] [
+         fhir:code [ fhir:v "3115" ] ;
+         fhir:display [ fhir:v "TRICARE Reserve Select" ]
+       ] [
+         fhir:code [ fhir:v "3116" ] ;
+         fhir:display [ fhir:v "Uniformed Services Family Health Plan (USFHP) -- HMO" ]
+       ] [
+         fhir:code [ fhir:v "3119" ] ;
+         fhir:display [ fhir:v "Department of Defense - (other)" ]
+       ] [
+         fhir:code [ fhir:v "3121" ] ;
+         fhir:display [ fhir:v "Enrolled Prime--HMO" ]
+       ] [
+         fhir:code [ fhir:v "3122" ] ;
+         fhir:display [ fhir:v "Non-enrolled Space Available" ]
+       ] [
+         fhir:code [ fhir:v "3123" ] ;
+         fhir:display [ fhir:v "TRICARE For Life (TFL)" ]
+       ] [
+         fhir:code [ fhir:v "3211" ] ;
+         fhir:display [ fhir:v "Direct Care-Care provided in VA facilities" ]
+       ] [
+         fhir:code [ fhir:v "3212" ] ;
+         fhir:display [ fhir:v "Indirect Care-Care provided outside VA facilities" ]
+       ] [
+         fhir:code [ fhir:v "32121" ] ;
+         fhir:display [ fhir:v "Fee Basis" ]
+       ] [
+         fhir:code [ fhir:v "32122" ] ;
+         fhir:display [ fhir:v "Foreign Fee/Foreign Medical Program (FMP)" ]
+       ] [
+         fhir:code [ fhir:v "32123" ] ;
+         fhir:display [ fhir:v "Contract Nursing Home/Community Nursing Home" ]
+       ] [
+         fhir:code [ fhir:v "32124" ] ;
+         fhir:display [ fhir:v "State Veterans Home" ]
+       ] [
+         fhir:code [ fhir:v "32125" ] ;
+         fhir:display [ fhir:v "Sharing Agreements" ]
+       ] [
+         fhir:code [ fhir:v "32126" ] ;
+         fhir:display [ fhir:v "Other Federal Agency" ]
+       ] [
+         fhir:code [ fhir:v "32127" ] ;
+         fhir:display [ fhir:v "Dental Care" ]
+       ] [
+         fhir:code [ fhir:v "32128" ] ;
+         fhir:display [ fhir:v "Vision Care" ]
+       ] [
+         fhir:code [ fhir:v "3221" ] ;
+         fhir:display [ fhir:v "Civilian Health and Medical Program for the VA (CHAMPVA)" ]
+       ] [
+         fhir:code [ fhir:v "3222" ] ;
+         fhir:display [ fhir:v "Spina Bifida Health Care Program (SB)" ]
+       ] [
+         fhir:code [ fhir:v "3223" ] ;
+         fhir:display [ fhir:v "Children of Women Vietnam Veterans (CWVV)" ]
+       ] [
+         fhir:code [ fhir:v "3229" ] ;
+         fhir:display [ fhir:v "Other non-veteran care" ]
+       ] [
+         fhir:code [ fhir:v "3711" ] ;
+         fhir:display [ fhir:v "HMO" ]
+       ] [
+         fhir:code [ fhir:v "3712" ] ;
+         fhir:display [ fhir:v "PPO" ]
+       ] [
+         fhir:code [ fhir:v "3713" ] ;
+         fhir:display [ fhir:v "POS" ]
+       ] [
+         fhir:code [ fhir:v "3811" ] ;
+         fhir:display [ fhir:v "Federal, State, Local not specified - HMO" ]
+       ] [
+         fhir:code [ fhir:v "3812" ] ;
+         fhir:display [ fhir:v "Federal, State, Local not specified - PPO" ]
+       ] [
+         fhir:code [ fhir:v "3813" ] ;
+         fhir:display [ fhir:v "Federal, State, Local not specified - POS" ]
+       ] [
+         fhir:code [ fhir:v "3819" ] ;
+         fhir:display [ fhir:v "Federal, State, Local not specified - not specified managed care" ]
+       ] [
+         fhir:code [ fhir:v "6" ] ;
+         fhir:display [ fhir:v "BLUE CROSS/BLUE SHIELD" ]
+       ] [
+         fhir:code [ fhir:v "61" ] ;
+         fhir:display [ fhir:v "BC Managed Care" ]
+       ] [
+         fhir:code [ fhir:v "611" ] ;
+         fhir:display [ fhir:v "BC Managed Care - HMO" ]
+       ] [
+         fhir:code [ fhir:v "612" ] ;
+         fhir:display [ fhir:v "BC Managed Care - PPO" ]
+       ] [
+         fhir:code [ fhir:v "613" ] ;
+         fhir:display [ fhir:v "BC Managed Care - POS" ]
+       ] [
+         fhir:code [ fhir:v "614" ] ;
+         fhir:display [ fhir:v "BC Managed Care - Dental" ]
+       ] [
+         fhir:code [ fhir:v "619" ] ;
+         fhir:display [ fhir:v "BC Managed Care - Other" ]
+       ] [
+         fhir:code [ fhir:v "62" ] ;
+         fhir:display [ fhir:v "BC Insurance Indemnity" ]
+       ] [
+         fhir:code [ fhir:v "621" ] ;
+         fhir:display [ fhir:v "BC Indemnity" ]
+       ] [
+         fhir:code [ fhir:v "622" ] ;
+         fhir:display [ fhir:v "BC Self-insured (ERISA) Administrative Services Only (ASO)Plan" ]
+       ] [
+         fhir:code [ fhir:v "623" ] ;
+         fhir:display [ fhir:v "BC Medicare Supplemental Plan" ]
+       ] [
+         fhir:code [ fhir:v "629" ] ;
+         fhir:display [ fhir:v "BC Indemnity - Dental" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

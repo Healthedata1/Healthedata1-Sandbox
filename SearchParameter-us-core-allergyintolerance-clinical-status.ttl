@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/us-core-allergyintolerance-clinical-status> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "us-core-allergyintolerance-clinical-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">Placeholder</div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "2"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"^^xsd:anyURI ;
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"^^xsd:anyURI ;
+           fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "USCoreAllergyintoleranceClinicalStatus"] ; # 
+  fhir:derivedFrom [
+     fhir:v "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status"^^xsd:anyURI ;
+     fhir:link <http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status>
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2022-04-14"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Health eData Inc"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "mailto:ehaas@healthedatainc.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "**active | inactive | resolved**  \n**NOTE**: This US Core SearchParameter definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"] ; # 
+  fhir:code [ fhir:v "clinical-status"] ; # 
+  fhir:base ( [ fhir:v "AllergyIntolerance"] ) ; # 
+  fhir:type [ fhir:v "token"] ; # 
+  fhir:expression [ fhir:v "AllergyIntolerance.clinicalStatus"] ; # 
+  fhir:xpathUsage [ fhir:v "normal"] ; # 
+  fhir:multipleOr [
+     fhir:v "true"^^xsd:boolean ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "MAY" ]
+     ] )
+  ] ; # 
+  fhir:multipleAnd [
+     fhir:v "true"^^xsd:boolean ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "MAY" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

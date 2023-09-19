@@ -1,0 +1,72 @@
+[
+  {
+    "id" : "us-core-allergyintolerance-clinical-status",
+    "type" : "SearchParameter",
+    "url" : "http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status",
+    "version" : "0.1.0",
+    "name" : "USCoreAllergyintoleranceClinicalStatus"
+  },
+  {
+    "id" : "pediatric-bmi-for-age",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age",
+    "version" : "0.1.0",
+    "name" : "USCorePediatricBMIforAgeObservationProfile"
+  },
+  {
+    "id" : "pediatric-weight-for-height",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height",
+    "version" : "0.1.0",
+    "name" : "USCorePediatricWeightForHeightObservationProfile"
+  },
+  {
+    "id" : "us-core-allergyintolerance",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance",
+    "version" : "0.1.0",
+    "name" : "USCoreAllergyIntolerance"
+  },
+  {
+    "id" : "us-core-birthsex",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+    "version" : "0.1.0",
+    "name" : "USCoreBirthSexExtension"
+  },
+  {
+    "id" : "us-core-blood-pressure",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure",
+    "version" : "0.1.0",
+    "name" : "USCoreBloodPressureProfile"
+  },
+  {
+    "id" : "us-core-simple-observation",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
+    "version" : "0.1.0",
+    "name" : "USCoreSimpleObservationProfile"
+  },
+  {
+    "id" : "us-core-vital-signs",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs",
+    "version" : "0.1.0",
+    "name" : "USCoreVitalSignsProfile"
+  },
+  {
+    "id" : "us-core-source-of-payment",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment",
+    "version" : "0.1.0",
+    "name" : "USCoreSourceofPaymentValueSet"
+  },
+  {
+    "id" : "healthedata1-sandbox",
+    "type" : "ImplementationGuide",
+    "url" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
+    "version" : "0.1.0",
+    "name" : "HealtheData_1Sandbox"
+  }
+]

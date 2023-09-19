@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="us-core-source-of-payment"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment"/>
+  <version value="0.1.0"/>
+  <name value="USCoreSourceofPaymentValueSet"/>
+  <title value="US Core Source of Payment Value Set"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-09-29"/>
+  <publisher value="Health eData Inc"/>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="mailto:ehaas@healthedatainc.com"/>
+    </telecom>
+  </contact>
+  <description value="[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as &quot;BLUE CROSS/BLUE SHIELD&quot; and  limited to main categories for classification, type of plan and additional subcategories."/>
+  <copyright value="The Source of Payment Typology is freely available for use and modification."/>
+  <compose>
+    <include>
+      <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591"/>
+    </include>
+    <exclude>
+      <system value="https://nahdo.org/sopt"/>
+      <concept>
+        <code value="1111"/>
+        <display value="Medicare Chronic Condition Special Needs Plan (C-SNP)"/>
+      </concept>
+      <concept>
+        <code value="1112"/>
+        <display value="Medicare Institutional Special Needs Plan (I-SNP)"/>
+      </concept>
+      <concept>
+        <code value="3111"/>
+        <display value="TRICARE Prime--HMO"/>
+      </concept>
+      <concept>
+        <code value="3112"/>
+        <display value="TRICARE Extra--PPO"/>
+      </concept>
+      <concept>
+        <code value="3113"/>
+        <display value="TRICARE Standard - Fee For Service"/>
+      </concept>
+      <concept>
+        <code value="3114"/>
+        <display value="TRICARE For Life--Medicare Supplement"/>
+      </concept>
+      <concept>
+        <code value="3115"/>
+        <display value="TRICARE Reserve Select"/>
+      </concept>
+      <concept>
+        <code value="3116"/>
+        <display value="Uniformed Services Family Health Plan (USFHP) -- HMO"/>
+      </concept>
+      <concept>
+        <code value="3119"/>
+        <display value="Department of Defense - (other)"/>
+      </concept>
+      <concept>
+        <code value="3121"/>
+        <display value="Enrolled Prime--HMO"/>
+      </concept>
+      <concept>
+        <code value="3122"/>
+        <display value="Non-enrolled Space Available"/>
+      </concept>
+      <concept>
+        <code value="3123"/>
+        <display value="TRICARE For Life (TFL)"/>
+      </concept>
+      <concept>
+        <code value="3211"/>
+        <display value="Direct Care-Care provided in VA facilities"/>
+      </concept>
+      <concept>
+        <code value="3212"/>
+        <display value="Indirect Care-Care provided outside VA facilities"/>
+      </concept>
+      <concept>
+        <code value="32121"/>
+        <display value="Fee Basis"/>
+      </concept>
+      <concept>
+        <code value="32122"/>
+        <display value="Foreign Fee/Foreign Medical Program (FMP)"/>
+      </concept>
+      <concept>
+        <code value="32123"/>
+        <display value="Contract Nursing Home/Community Nursing Home"/>
+      </concept>
+      <concept>
+        <code value="32124"/>
+        <display value="State Veterans Home"/>
+      </concept>
+      <concept>
+        <code value="32125"/>
+        <display value="Sharing Agreements"/>
+      </concept>
+      <concept>
+        <code value="32126"/>
+        <display value="Other Federal Agency"/>
+      </concept>
+      <concept>
+        <code value="32127"/>
+        <display value="Dental Care"/>
+      </concept>
+      <concept>
+        <code value="32128"/>
+        <display value="Vision Care"/>
+      </concept>
+      <concept>
+        <code value="3221"/>
+        <display value="Civilian Health and Medical Program for the VA (CHAMPVA)"/>
+      </concept>
+      <concept>
+        <code value="3222"/>
+        <display value="Spina Bifida Health Care Program (SB)"/>
+      </concept>
+      <concept>
+        <code value="3223"/>
+        <display value="Children of Women Vietnam Veterans (CWVV)"/>
+      </concept>
+      <concept>
+        <code value="3229"/>
+        <display value="Other non-veteran care"/>
+      </concept>
+      <concept>
+        <code value="3711"/>
+        <display value="HMO"/>
+      </concept>
+      <concept>
+        <code value="3712"/>
+        <display value="PPO"/>
+      </concept>
+      <concept>
+        <code value="3713"/>
+        <display value="POS"/>
+      </concept>
+      <concept>
+        <code value="3811"/>
+        <display value="Federal, State, Local not specified - HMO"/>
+      </concept>
+      <concept>
+        <code value="3812"/>
+        <display value="Federal, State, Local not specified - PPO"/>
+      </concept>
+      <concept>
+        <code value="3813"/>
+        <display value="Federal, State, Local not specified - POS"/>
+      </concept>
+      <concept>
+        <code value="3819"/>
+        <display value="Federal, State, Local not specified - not specified managed care"/>
+      </concept>
+      <concept>
+        <code value="6"/>
+        <display value="BLUE CROSS/BLUE SHIELD"/>
+      </concept>
+      <concept>
+        <code value="61"/>
+        <display value="BC Managed Care"/>
+      </concept>
+      <concept>
+        <code value="611"/>
+        <display value="BC Managed Care - HMO"/>
+      </concept>
+      <concept>
+        <code value="612"/>
+        <display value="BC Managed Care - PPO"/>
+      </concept>
+      <concept>
+        <code value="613"/>
+        <display value="BC Managed Care - POS"/>
+      </concept>
+      <concept>
+        <code value="614"/>
+        <display value="BC Managed Care - Dental"/>
+      </concept>
+      <concept>
+        <code value="619"/>
+        <display value="BC Managed Care - Other"/>
+      </concept>
+      <concept>
+        <code value="62"/>
+        <display value="BC Insurance Indemnity"/>
+      </concept>
+      <concept>
+        <code value="621"/>
+        <display value="BC Indemnity"/>
+      </concept>
+      <concept>
+        <code value="622"/>
+        <display value="BC Self-insured (ERISA) Administrative Services Only (ASO)Plan"/>
+      </concept>
+      <concept>
+        <code value="623"/>
+        <display value="BC Medicare Supplemental Plan"/>
+      </concept>
+      <concept>
+        <code value="629"/>
+        <display value="BC Indemnity - Dental"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

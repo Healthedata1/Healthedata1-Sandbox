@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="deceased-example"/>
+  <meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
+      <valueString value="Deceased Patient Example"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
+      <valueMarkdown value="This is a deceased patient example for the *US Core Patient Profile*."/>
+    </extension>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+
+  <p>
+    <strong>resourceType:</strong>
+    </p>
+  <p>
+    <strong>id:</strong>
+    deceased-example</p>
+
+</div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2106-3"/>
+        <display value="White"/>
+      </valueCoding>
+    </extension>
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2028-9"/>
+        <display value="Asian"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Mixed"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2186-5"/>
+        <display value="Not Hispanic or Latino"/>
+      </valueCoding>
+    </extension>
+    <extension url="text">
+      <valueString value="Not Hispanic or Latino"/>
+    </extension>
+  </extension>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical Record Number"/>
+      </coding>
+      <text value="Medical Record Number"/>
+    </type>
+    <system value="http://hospital.smarthealthit.org"/>
+    <value value="55555555"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="Shaw"/>
+    <given value="Mary"/>
+    <given value="A."/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="555-555-5555"/>
+    <use value="home"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="mary.shaw@example.com"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="1937-10-21"/>
+  <deceasedDateTime value="2022-07-22"/>
+  <address>
+    <line value="49 Meadow St"/>
+    <city value="Mounds"/>
+    <state value="OK"/>
+    <postalCode value="74047"/>
+    <country value="US"/>
+    <period>
+      <start value="2016-12-06"/>
+    </period>
+  </address>
+</Patient>
