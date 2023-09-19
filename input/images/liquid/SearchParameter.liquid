@@ -1,0 +1,107 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <!--  <p>
+  <strong>NOTE</strong>
+  : This US Core SearchParameter definition extends the usage context of the
+  <a href="http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html">Conformance expectation
+  extension</a>
+  </p>
+  <ul>
+  <li>multipleAnd</li>
+  <li>multipleOr</li>
+  <li>comparator</li>
+  <li>modifier</li>
+  <li>chain</li>
+  </ul> --><p>
+    <b>id</b>
+    : {{ SearchParameter.id }}
+    <!-- us-core-specimen-id -->
+  </p>
+  <!-- <p>
+  <b>url</b>
+  :
+  <b>http://hl7.org/fhir/us/core/SearchParameter/us-core-specimen-id</b>
+  </p> --><!-- <p>
+  <b>version</b>
+  : 4.0.1
+  </p> --><!-- <p>
+  <b>name</b>
+  : USCoreSpecimenId
+  </p> -->
+    <p>
+      <b>
+    derivedFrom
+    </b>
+    :
+  {{ SearchParameter.derivedFrom }}
+    <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->
+  </p>
+  <!-- <p>
+  <b>status</b>
+  : active
+  </p>
+  <p>
+  <b>date</b>
+  : 04/13/2023
+  </p> --><p>
+    <b>publisher</b>
+    :
+    <a href="{{SearchParameter.contact[0].telecom[0].value}}">{{ SearchParameter.publisher }}</a>
+    <!--HL7 International - Cross-Group Projects-->
+  </p>
+  <!-- <p>
+  <b> useContext</b> : </p> --><!-- <p>
+  <b>jurisdiction</b>
+  : United States of America (the)
+  <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+  States of America (the)'})</span>
+  </p> --><!-- <p>
+  <b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+  and matching as part of a chain</p> -->
+    <p>
+      <b>
+    code
+    </b>
+    :
+      <code>
+    {{ SearchParameter.code }}
+  </code>
+    <!-- _id -->
+  </p>
+  <p>
+    <b>base</b>
+    : {{ SearchParameter.base[0] }}
+    <!-- :Specimen -->
+  </p>
+  <p>
+    <b>type</b>
+    : {{ SearchParameter.type }}
+    <!-- : token -->
+  </p>
+  <p>
+    <b>expression</b>
+    :
+    <code>{{ SearchParameter.expression }}</code>
+    <!-- Specimen.id -->
+  </p>
+  <p>
+    <b>xpath</b>
+    :
+    <code>{{ SearchParameter.xpath }}</code>
+    <!-- f:Specimen/f:id -->
+  </p>
+  <p>
+    <b>xpathUsage</b>
+    : {{ SearchParameter.xpathUsage }}
+    <!-- : normal -->
+  </p>
+  <p>
+    <b>multipleOr</b>
+    : {{ SearchParameter.multipleOr }} (Conformance Expectation = {{ SearchParameter.multipleAnd.extension.value.ofType(code) }})
+    <!-- : True (Conformance Expectation = MAY) -->
+  </p>
+  <p>
+    <b>multipleAnd</b>
+    : {{ SearchParameter.multipleAnd }} (Conformance Expectation = {{ SearchParameter.multipleAnd.extension.value.ofType(code) }})
+    <!-- : True ( Conformance Expectation = MAY) -->
+  </p>
+</div>

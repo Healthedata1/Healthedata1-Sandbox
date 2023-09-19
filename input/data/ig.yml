@@ -52,19 +52,95 @@ definition:
     description: Examples for Testing Stuff Out!!!
   resource:
   - reference:
-      reference: StructureDefinition/argo-write-observation
-    description: Defines a "mixin" profile which constrains and extends the Observation
-      resource for the minimal set of data to support to writing patient submitted
-      Observations to an EHR.  This profile is intended to be used in addition to
-      other Observation Profiles such as the [US Core Body Weight Profile](http://hl7.org/fhir/us/core/StructureDefinition-us-core-body-weight.html).
-      When an application is creating content, it must create content that conforms
-      to both sets of profiles - that is, the intersection of the profiles. When an
-      application is consuming information, then it must be able to consume content
-      that conforms to either set of profiles - that is, the union of the profiles.
-      For additional guidance see [Supporting Multiple Profiles](http://hl7.org/fhir/profiling.html#mixing)
-      in the FHIR specification.
+      reference: StructureDefinition/pediatric-bmi-for-age
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch pediatric body mass index (BMI) percentile per age and sex
+      for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units
+      of measure. It is based on the US Core Vital Signs Profile and identifies which
+      *additional* core elements, extensions, vocabularies, and value sets **SHALL**
+      be present and constrains the way the elements are used when using the profile.
+      It provides the floor for standards development for specific use cases.
     exampleBoolean: false
-    name: Argo Write Observation Profile
+    name: US Core Pediatric BMI for Age Observation Profile
+  - reference:
+      reference: StructureDefinition/pediatric-weight-for-height
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch  pediatric weight-for-length per age and gender observations
+      in FHIR with a standard LOINC code and UCUM units of measure. It is based on
+      the US Core Vital Signs Profile and identifies which *additional* core elements,
+      extensions, vocabularies, and value sets **SHALL** be present and constrains
+      the way the elements are used when using the profile. It provides the floor
+      for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core Pediatric Weight for Height Observation Profile
+  - reference:
+      reference: StructureDefinition/us-core-simple-observation
+    description: "This US Core FHIR Profile is meant to capture any \u201Csimple\u201D\
+      \ observations that are not otherwise covered by other US Core Observation profiles.\
+      \ It represents any type of observation that is not classified as vital signs,\
+      \ laboratory, imaging, or other more specific observation types. This profile\
+      \ promotes interoperability and adoption through common implementation by setting\
+      \ minimum expectations for the Observation resource to record, search, and retrieve\
+      \ observations such as a clinical observation or assertion about a patient's\
+      \ health status or other general observations. This profile identifies which\
+      \ core elements, extensions, vocabularies, and value sets **SHALL** be present\
+      \ in the resource and constrains the way the elements are used when using this\
+      \ profile. It provides the floor for standards development for specific use\
+      \ cases."
+    exampleBoolean: false
+    name: US Core Simple Observation Profile
+  - reference:
+      reference: StructureDefinition/us-core-allergyintolerance
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the AllergyIntolerance resource to
+      record, search, and fetch allergies/adverse reactions associated with a patient.  It
+      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
+      be present and constrains the way the elements are used when using the profile.
+      It provides the floor for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core AllergyIntolerance Profile
+  - reference:
+      reference: StructureDefinition/us-core-birthsex
+    description: A code classifying the person's sex assigned at birth  as specified
+      by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
+      This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).
+      This extension is no longer a *USCDI Requirement* with the introduction of the
+      US Core Sex Extension in version 6.1.0.
+    exampleBoolean: false
+    name: US Core Birth Sex Extension
+  - reference:
+      reference: StructureDefinition/us-core-blood-pressure
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch diastolic and systolic blood pressure observations with standard
+      LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs
+      Profile and identifies which *additional* core elements, extensions, vocabularies,
+      and value sets **SHALL** be present and constrains the way the elements are
+      used when using the profile. It provides the floor for standards development
+      for specific use cases.
+    exampleBoolean: false
+    name: US Core Blood Pressure Profile
+  - reference:
+      reference: StructureDefinition/us-core-vital-signs
+    description: To promote interoperability and adoption through common implementation,
+      this profile is based on the base [FHIR Vital Signs Profile](http://hl7.org/fhir/R4/observation-vitalsigns.html)
+      and defines *additional* constraints on the Observation resource to represent
+      vital signs observations. It identifies which core elements, extensions, vocabularies,
+      and value sets **SHALL** be present in the resource and constrains the way the
+      elements are used when using this profile. It provides the floor for standards
+      development for specific use cases.  This US Core profiles that are derived
+      from this profile are listed below.
+    exampleBoolean: false
+    name: US Core Vital Signs Profile
+  - reference:
+      reference: SearchParameter/us-core-allergyintolerance-clinical-status
+    description: "**active | inactive | resolved**  \n**NOTE**: This US Core SearchParameter\
+      \ definition extends the usage context of the\n[Conformance expectation extension](http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html)\n\
+      \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
+    exampleBoolean: false
+    name: USCoreAllergyintoleranceClinicalStatus
   - reference:
       reference: ValueSet/us-core-source-of-payment
     description: '[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf)
@@ -114,6 +190,9 @@ definition:
       generation: markdown
     - nameUrl: changes.html
       title: Change Log
+      generation: markdown
+    - nameUrl: examples.html
+      title: Examples
       generation: markdown
   parameter:
   - code: copyrightyear

@@ -79,6 +79,9 @@ pages:
   changes.md:
     title: Change Log
 
+  examples.md:
+    title: Examples
+
 
 parameters:
   path-expansion-params: '../../input/_resources/exp-params.json'  # for using US ed of SNOMED
@@ -132,3 +135,4 @@ menu:
   Downloads: downloads.html
   Change Log: changes.html
   IG Page: 'ImplementationGuide-healthedata1-sandbox.html'
+  Examples: examples.html

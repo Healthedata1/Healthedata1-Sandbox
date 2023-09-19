@@ -1,6 +1,0 @@
-REM Ensure use of UTF-8 for files.
-SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-REM Configure JAVA from JAVA_HOME folder
-SET JAVAEXE="%JAVA_HOME%\bin\java.exe" %JAVA_TOOL_OPTIONS% %JVM_OPTIONS%
-REM Set location of Fish tank infput folder
-SET LOC=fsh\ig-data\input

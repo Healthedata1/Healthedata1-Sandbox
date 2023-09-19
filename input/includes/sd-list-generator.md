@@ -1,3 +1,6 @@
+
+<!-- Use for sorting profiles by type alphabetically - allows for highlighting new stuff using include parameter}-->
+
 {%- for sd_hash in site.data.structuredefinitions -%}
   {%- assign sd1= sd_hash[1] -%}
   {%- unless sd1.type == "Extension" -%}
@@ -9,13 +12,13 @@
 {% for i in my_types offset:1 %}
   <h4>{{ i }}</h4>
   <ul>
-    {%- for sd_hash in site.data.structuredefinitions -%}
+    {%- for sd_hash in site.data.structuredefinitions | sort -%}
       {%- assign sd1 = sd_hash[1] -%}
       {%- if sd1.type == i %}
         {%- assign new = false -%}
         {%- assign parent = false -%}
         {%- assign child = false -%}
-        {%- for sd_hash2 in site.data.structuredefinitions -%}
+        {%- for sd_hash2 in site.data.structuredefinitions | sort -%}
           {%- assign sd2 = sd_hash2[1] -%}
           {% if sd1.basename == sd2.name %}
             {%- assign child = true -%}
@@ -42,6 +45,7 @@
             {% endif %}
           {%- endunless -%}
 
+
           {%- if parent -%}
             {%- if new -%}
               <li><a href="{{sd1.path}}"><span class="bg-success" markdown="1">{{sd1.title}}</span><!-- new-content --></a>
@@ -49,7 +53,7 @@
               <li><a href="{{sd1.path}}">{{sd1.title}}</a>
             {% endif %}
                 <ul>
-                {%- for sd_hash3 in site.data.structuredefinitions -%}
+                {%- for sd_hash3 in site.data.structuredefinitions | sort -%}
                   {%- assign sd3 = sd_hash3[1] -%}
                   {% if sd1.name == sd3.basename %}
                     {%- assign new = false -%}
@@ -70,7 +74,7 @@
                   {% endif %}
                 {% endfor %}
                 </ul>
-            </li>
+              </li>
           {%- endif -%}
       {%- endif -%}
     {%- endfor -%}

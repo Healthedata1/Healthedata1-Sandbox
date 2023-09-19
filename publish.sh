@@ -4,29 +4,30 @@ set -e
 trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
 trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
 NA='http://tx.fhir.org'
-while getopts twoplisvqdrxyzmnkcu: option
+while getopts acdiklmnopqrstvwxyzu: option
 do
  case "${option}"
  in
- t) NA='N/A';;
- w) WATCH=1;;
+ a) COPY_SPS=1;;
+ c) COPY_CSV=1;;
+ d) IN_DOCS=1;;
+ i) IG_PUBLISH=1;;
+ k) NO_PROFILE=1;;
+ l) LOAD_TEMPLATE=1;;
+ m) MERGE_CSV=1;;
+ n) NO_META=1;;
  o) PUB=1;;
  p) UPDATE=1;;
- l) LOAD_TEMPLATE=1;;
- u) TEST_TEMPLATE=$OPTARG;;
- i) IG_PUBLISH=1;;
- s) SUSHI=1;;
- v) VIEW_OUTPUT=1;;
  q) VIEW_QA=1;;
- d) IN_DOCS=1;;
+ r) CLEAR_JSON=1;;
+ s) SUSHI=1;;
+ t) NA='N/A';;
+ u) TEST_TEMPLATE=$OPTARG;;
+ v) VIEW_OUTPUT=1;;
+ w) WATCH=1;;
  x) RECENT_YAML=1;;
  y) YAML_JSON=1;;
  z) ZIP_SCH=1;;
- r) CLEAR_JSON=1;;
- m) MERGE_CSV=1;;
- n) NO_META=1;;
- k) NO_PROFILE=1;;
- c) COPY_CSV=1;;
  esac
  
 done
@@ -77,7 +78,8 @@ echo "-z zip up all schematrons = $ZIP_SCH"
 echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
-echo "-c copy data csv files to the image folder (currently only input/data/uscdi-table.csv) = $COPY_CSV"
+echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv) = $COPY_CSV"
+echo "-d copy searchparameter excel sheet to data folder as csv file for creating SP artifacts = $COPY_SPS"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -92,6 +94,28 @@ echo "================================================================="
 echo convert input/data/uscdi-table.csv to excel and copy to input/images/uscdi-table.xlsx
 echo "================================================================="
 pyexcel transcode input/data/uscdi-table.csv input/images/uscdi-table.xlsx
+fi
+
+if [[ $COPY_SPS ]]; then
+echo "================================================================="
+echo copy searchparameter excel sheet to data folder as csv file for creating SP artifacts
+echo MAKE SURE THE SP SHEET IS UNFILTERED IN EXCEL BEFORE RUNNING THIS COMMAND
+echo "================================================================="
+echo "================================================================="
+echo "=== hit 'Y' to confirm that the sheet is unfiltered ===="
+echo "=== else 'N' or ctrl-c to exit ==="
+echo "================================================================="
+
+read var1
+
+echo "================================================================="
+echo "==================== you typed '$var1' ============================"
+echo "================================================================="
+if [ $var1 == "Y" ]; then
+echo "================================================================="
+echo "=== pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv ==="
+pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv
+fi
 fi
 
 if [[ $CLEAR_JSON ]]; then
