@@ -1,14 +1,14 @@
 Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json	12997	-	0	0	0	0	0	0	7	563	0	0	0	0	0	0	0	2	0	0	177	196	0	0	0	3	0	1
-input/resources/StructureDefinition-pediatric-bmi-for-age.json	5901	138	0	0	1	0	0	2759	1	1346	0	0	1	0	0	0	0	3	0	0	432	4000	0	0	0	10	0	1
-input/resources/StructureDefinition-us-core-birthsex.json	2799	54	0	0	0	0	0	141	0	144	0	0	0	0	0	0	0	0	0	0	31	278	0	0	0	2	0	0
-input/resources/valueset-us-core-source-of-payment.json	7977	16	1	0	0	0	0	0	0	245	0	0	0	0	0	0	0	0	0	0	21	65250	0	0	0	1	0	0
-input/resources/StructureDefinition-us-core-allergyintolerance.json	6445	117	0	0	0	0	0	789	0	736	0	0	0	0	0	0	0	0	0	0	178	1492	0	0	0	5	1	0
-input/resources/StructureDefinition-us-core-vital-signs.json	15342	254	0	0	0	0	0	0	0	1407	0	0	0	0	0	0	0	1	0	0	311	2341	0	0	0	12	0	1
-input/resources/StructureDefinition-us-core-blood-pressure.json	13064	278	0	0	0	0	0	1905	1	1883	0	0	2	0	0	0	0	1	0	0	450	2936	0	0	0	14	0	1
-input/resources/StructureDefinition-pediatric-weight-for-height.json	5973	108	0	0	0	0	0	1307	0	1300	0	0	0	0	0	0	0	1	0	0	324	2133	0	0	0	14	0	0
-input/resources/StructureDefinition-test-obs.json	17296	184	0	0	0	0	0	1124	0	1101	0	0	0	0	0	0	0	1	0	0	293	1785	0	0	0	11	0	0
-input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json	1787	12	1	0	0	0	0	0	0	43	0	0	0	0	0	0	0	0	0	0	26	33	0	0	0	1	0	0
-input/examples/example-targeted-provenance.json	2048	21	0	0	0	0	0	0	0	88	0	0	0	0	0	0	0	0	0	0	47	18	0	0	0	0	0	0
-input/examples/patient-deceased-example.json	3404	34	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	23	23	0	0	0	0	0	0
-input/examples/patient-example-targeted-provenance.json	3441	38	0	0	0	0	0	0	0	7	0	0	0	0	0	0	0	0	0	0	35	24	0	0	0	0	0	0
+/fsh-generated/resources/ImplementationGuide-healthedata1-sandbox.json	12997	-	0	0	0	0	0	0	4	722	0	0	0	0	0	0	0	1	0	0	285	261	0	0	1	4	0	0
+input/resources/StructureDefinition-pediatric-bmi-for-age.json	5901	144	0	0	0	0	0	3517	0	1690	0	0	0	0	0	0	0	2	0	0	442	5785	0	0	0	13	0	2
+input/resources/StructureDefinition-us-core-birthsex.json	2799	71	1	0	0	0	0	185	0	181	0	0	0	0	0	0	0	0	0	0	44	316	0	0	0	2	0	0
+input/resources/valueset-us-core-source-of-payment.json	7977	22	0	0	0	0	0	0	1	729	0	0	0	0	0	0	0	0	0	0	24	79808	0	0	0	1	0	0
+input/resources/StructureDefinition-us-core-allergyintolerance.json	6445	167	0	0	0	0	0	1091	0	974	0	0	1	0	0	0	0	0	0	0	205	1779	0	0	0	6	0	0
+input/resources/StructureDefinition-us-core-vital-signs.json	15342	368	0	0	0	0	0	0	0	1794	0	0	0	0	0	0	0	1	0	0	371	3417	0	0	0	14	0	2
+input/resources/StructureDefinition-us-core-blood-pressure.json	13064	339	0	0	0	0	0	2538	0	2492	0	0	0	0	0	0	0	1	0	0	547	3485	0	0	0	16	1	10
+input/resources/StructureDefinition-pediatric-weight-for-height.json	5973	139	0	0	0	0	0	1696	0	1760	0	0	0	0	0	0	0	1	0	0	388	2542	0	0	0	12	0	1
+input/resources/StructureDefinition-test-obs.json	17296	267	1	0	0	0	0	1411	0	1454	0	0	0	0	0	0	0	1	0	0	334	2399	0	0	0	11	0	0
+input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json	1787	15	0	0	0	0	0	0	0	66	0	0	0	0	0	0	0	0	0	0	12	55	0	0	0	1	0	0
+input/examples/example-targeted-provenance.json	2048	25	0	0	0	0	0	0	0	107	0	0	0	0	0	0	0	0	0	0	14	50	0	0	0	0	0	0
+input/examples/patient-deceased-example.json	3404	42	0	0	0	0	0	0	1	10	0	0	0	0	0	0	0	0	0	0	15	28	0	0	0	0	0	0
+input/examples/patient-example-targeted-provenance.json	3441	55	0	0	0	0	0	0	0	9	0	0	0	0	0	0	0	0	0	0	15	40	0	0	0	0	0	0
