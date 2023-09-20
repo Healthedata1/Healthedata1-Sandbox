@@ -1,16 +1,22 @@
 #!/bin/bash
 # exit when any command fails
 set -e
-trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
-trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
+trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
+trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
+# trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
+# trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
 NA='http://tx.fhir.org'
-while getopts acdiklmnopqrstvwxyzu: option
+GEN_OFF=''
+VAL_OFF=''
+while getopts acdghiklmnopqrstvwxyzu: option
 do
  case "${option}"
  in
  a) COPY_SPS=1;;
  c) COPY_CSV=1;;
  d) IN_DOCS=1;;
+ g) GEN_OFF='-generation-off';;
+ h) VAL_OFF='-validation-off';;
  i) IG_PUBLISH=1;;
  k) NO_PROFILE=1;;
  l) LOAD_TEMPLATE=1;;
@@ -58,28 +64,31 @@ echo "================================================================="
 
 echo "================================================================="
 echo === Publish $SOURCE IG!!! $(date -u) ===
-echo "see local workflow.md file for how to use"
+echo "================================================================="
 echo "Optional Parameters"
-echo "-t parameter for no terminology server (run faster and offline)= $NA"
-# echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
+echo "================================================================="
+echo "-a copy searchparameter excel sheet to data folder as csv file for creating SP artifacts = $COPY_SPS"
+echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv) = $COPY_CSV"
+echo "-d flag if output in "docs" folder = $IN_DOCS"
+echo "-g flag to turn off narrative generation to speed up build times = $GEN_OFF"
+echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
+echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
+echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
+echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
+echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
-#echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
-#echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
-echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
-echo "-s parameter for running only sushi = $SUSHI"
-echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
 echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
-echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-r remove all generated json files = $CLEAR_JSON"
+echo "-s parameter for running only sushi = $SUSHI"
+echo "-t parameter for no terminology server (run faster and offline)= $NA"
+echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
 echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
 echo "-y tranform all yaml that changed in the last year to json files = $All_YAML"
 echo "-z zip up all schematrons = $ZIP_SCH"
-echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
-echo "-n remove the meta.extension elements from all the examples = $NO_META"
-echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
-echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv) = $COPY_CSV"
-echo "-d copy searchparameter excel sheet to data folder as csv file for creating SP artifacts = $COPY_SPS"
+#echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
+#echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
+#echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -272,28 +281,18 @@ if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
   echo "==To run in command line mode, run the IG Publisher like this:=="
-  echo "===java -jar publisher.jar -ig [source] (-tx [url]) (-packages [directory]) (-watch)
+  echo "===java -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
+(-validation-off)
 parameters:==="
   echo "================================================================="
 
-  echo "================================================================="
-  echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
-  echo "================================================================="
-  [[ -d input/fsh ]] && mv input/fsh input/_fsh
+  # echo "================================================================="
+  # echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
+  # echo "================================================================="
+  # [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
-  # if [[ $WATCH ]]; then
-  #   echo "================================================================="
-  #   echo === run most recent version of the igpublisher with watch on ===
-  #   echo "================================================================="
-  #   java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
-
-  # else
-    echo "================================================================="
-    echo "===run igpublisher just once \(no watch option\)==="
-    echo "================================================================="
-    echo java -jar ${path} -ig ig.ini -tx $NA
-    java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
-
+    echo java -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF
+    java -Xmx4G -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF
 fi
 
   # else
@@ -368,7 +367,3 @@ if [[ $VIEW_QA ]]; then
     echo "============ open $PWD/$outpath/qa.html ============"
     open ./$outpath/qa.html
 fi
-
-echo "================================================================="
-echo "===done==="
-echo "================================================================="
