@@ -188,9 +188,9 @@ a simple csv in data  to a fancy table in html
 <div class="panel-body">
 <div class="icon-right">
 <img
-src="{{row.data_class | downcase | replace: " ", "-" | replace: "/", "-" }}.png"
+src="{{item.data_class | downcase | replace: " ", "-" | replace: "/", "-" }}.png"
 class="media-object"
-alt="{{row.data_class}}"
+alt="{{item.data_class}}"
 style="width:60px">
 </div>
 <table class="table table-condensed">
@@ -206,7 +206,7 @@ style="width:60px">
 {% endunless %}
 {% endfor %}
 </th>
-<th class="col-sm-2"></th>
+<th class="col-sm-2"><a href="{{ item.comment_link }}">{{ item.comment }}</a></th>
 </tr>
 </thead>
 <tbody>

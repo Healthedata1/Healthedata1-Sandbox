@@ -52,6 +52,61 @@ definition:
     description: Examples for Testing Stuff Out!!!
   resource:
   - reference:
+      reference: Patient/deceased-example
+    description: This is a deceased patient example for the *US Core Patient Profile*.
+    name: Deceased Patient Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: Location/hl7east
+    description: This is a HL7East example for the *US Core Location Profile*.
+    name: HL7East Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-location
+  - reference:
+      reference: Provenance/example-targeted-provenance
+    description: This is a provenance example for the *US Core Provenance Profile*
+      to demonstrate how Provenance can be used to document the source of individual
+      elements such as Race and Ethnicity (R/E), gender identity.
+    name: Targeted Provenance Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
+  - reference:
+      reference: Patient/example-targeted-provenance
+    description: This is a patient example for the *US Core Patient Profile* to demonstrate
+      how Provenance can be used to document the source of individual elements such
+      as Race and Ethnicity (R/E), gender identity.
+    name: Targeted Provenance Patient Example
+    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
+  - reference:
+      reference: StructureDefinition/us-core-allergyintolerance
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the AllergyIntolerance resource to
+      record, search, and fetch allergies/adverse reactions associated with a patient.  It
+      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
+      be present and constrains the way the elements are used when using the profile.
+      It provides the floor for standards development for specific use cases.
+    exampleBoolean: false
+    name: US Core AllergyIntolerance Profile
+  - reference:
+      reference: StructureDefinition/us-core-birthsex
+    description: A code classifying the person's sex assigned at birth  as specified
+      by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
+      This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).
+      This extension is no longer a *USCDI Requirement* with the introduction of the
+      US Core Sex Extension in version 6.1.0.
+    exampleBoolean: false
+    name: US Core Birth Sex Extension
+  - reference:
+      reference: StructureDefinition/us-core-blood-pressure
+    description: To promote interoperability and adoption through common implementation,
+      this profile sets minimum expectations for the Observation resource to record,
+      search, and fetch diastolic and systolic blood pressure observations with standard
+      LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs
+      Profile and identifies which *additional* core elements, extensions, vocabularies,
+      and value sets **SHALL** be present and constrains the way the elements are
+      used when using the profile. It provides the floor for standards development
+      for specific use cases.
+    exampleBoolean: false
+    name: US Core Blood Pressure Profile
+  - reference:
       reference: StructureDefinition/pediatric-bmi-for-age
     description: To promote interoperability and adoption through common implementation,
       this profile sets minimum expectations for the Observation resource to record,
@@ -92,36 +147,12 @@ definition:
     exampleBoolean: false
     name: US Core Simple Observation Profile
   - reference:
-      reference: StructureDefinition/us-core-allergyintolerance
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the AllergyIntolerance resource to
-      record, search, and fetch allergies/adverse reactions associated with a patient.  It
-      identifies which core elements, extensions, vocabularies, and value sets **SHALL**
-      be present and constrains the way the elements are used when using the profile.
-      It provides the floor for standards development for specific use cases.
+      reference: ValueSet/us-core-source-of-payment
+    description: '[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf)
+      excluding specific payer organizations such as "BLUE CROSS/BLUE SHIELD" and  limited
+      to main categories for classification, type of plan and additional subcategories.'
     exampleBoolean: false
-    name: US Core AllergyIntolerance Profile
-  - reference:
-      reference: StructureDefinition/us-core-birthsex
-    description: A code classifying the person's sex assigned at birth  as specified
-      by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc).
-      This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9).
-      This extension is no longer a *USCDI Requirement* with the introduction of the
-      US Core Sex Extension in version 6.1.0.
-    exampleBoolean: false
-    name: US Core Birth Sex Extension
-  - reference:
-      reference: StructureDefinition/us-core-blood-pressure
-    description: To promote interoperability and adoption through common implementation,
-      this profile sets minimum expectations for the Observation resource to record,
-      search, and fetch diastolic and systolic blood pressure observations with standard
-      LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs
-      Profile and identifies which *additional* core elements, extensions, vocabularies,
-      and value sets **SHALL** be present and constrains the way the elements are
-      used when using the profile. It provides the floor for standards development
-      for specific use cases.
-    exampleBoolean: false
-    name: US Core Blood Pressure Profile
+    name: US Core Source of Payment Value Set
   - reference:
       reference: StructureDefinition/us-core-vital-signs
     description: To promote interoperability and adoption through common implementation,
@@ -141,33 +172,6 @@ definition:
       \ - multipleAnd\n - multipleOr\n - comparator\n - modifier\n - chain"
     exampleBoolean: false
     name: USCoreAllergyintoleranceClinicalStatus
-  - reference:
-      reference: ValueSet/us-core-source-of-payment
-    description: '[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf)
-      excluding specific payer organizations such as "BLUE CROSS/BLUE SHIELD" and  limited
-      to main categories for classification, type of plan and additional subcategories.'
-    exampleBoolean: false
-    name: US Core Source of Payment Value Set
-  - reference:
-      reference: Provenance/example-targeted-provenance
-    description: This is a provenance example for the *US Core Provenance Profile*
-      to demonstrate how Provenance can be used to document the source of individual
-      elements such as Race and Ethnicity (R/E), gender identity.
-    name: Targeted Provenance Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance
-  - reference:
-      reference: Patient/deceased-example
-    description: This is a deceased patient example for the *US Core Patient Profile*.
-    name: Deceased Patient Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
-    groupingId: TestExamples
-  - reference:
-      reference: Patient/example-targeted-provenance
-    description: This is a patient example for the *US Core Patient Profile* to demonstrate
-      how Provenance can be used to document the source of individual elements such
-      as Race and Ethnicity (R/E), gender identity.
-    name: Targeted Provenance Patient Example
-    exampleCanonical: http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient
   page:
     nameUrl: toc.html
     title: Table of Contents
@@ -206,7 +210,7 @@ definition:
   - code: usage-stats-opt-out
     value: 'false'
   - code: path-output
-    value: docs
+    value: output
   - code: path-resource
     value: input/resources
   - code: path-resource
@@ -227,3 +231,13 @@ definition:
     value: 'true'
   - code: tabbed-snapshots
     value: 'false'
+  - code: logging
+    value: tx
+  - code: logging
+    value: html
+  - code: logging
+    value: generate
+  - code: logging
+    value: init
+  - code: logging
+    value: progress

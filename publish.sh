@@ -8,18 +8,19 @@ trap "echo '================================================================='; 
 NA='http://tx.fhir.org'
 GEN_OFF=''
 VAL_OFF=''
-while getopts acdghiklmnopqrstvwxyzu: option
+while getopts abcdghikmnopqrstvxyz option;
 do
  case "${option}"
  in
  a) COPY_SPS=1;;
+ b) DEBUG_ON='-debug';;
  c) COPY_CSV=1;;
  d) IN_DOCS=1;;
  g) GEN_OFF='-generation-off';;
  h) VAL_OFF='-validation-off';;
  i) IG_PUBLISH=1;;
  k) NO_PROFILE=1;;
- l) LOAD_TEMPLATE=1;;
+#  l) LOAD_TEMPLATE=1;;
  m) MERGE_CSV=1;;
  n) NO_META=1;;
  o) PUB=1;;
@@ -28,9 +29,9 @@ do
  r) CLEAR_JSON=1;;
  s) SUSHI=1;;
  t) NA='N/A';;
- u) TEST_TEMPLATE=$OPTARG;;
+#  u) TEST_TEMPLATE=$OPTARG;;
  v) VIEW_OUTPUT=1;;
- w) WATCH=1;;
+#  w) WATCH=1;;
  x) RECENT_YAML=1;;
  y) YAML_JSON=1;;
  z) ZIP_SCH=1;;
@@ -68,7 +69,8 @@ echo "================================================================="
 echo "Optional Parameters"
 echo "================================================================="
 echo "-a copy searchparameter excel sheet to data folder as csv file for creating SP artifacts = $COPY_SPS"
-echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv) = $COPY_CSV"
+echo "-b Turns on debugging (this produces extra logging, and can be verbose) = $DEBUG_ON"
+echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv,assessments-valuesets.csv) = $COPY_CSV"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-g flag to turn off narrative generation to speed up build times = $GEN_OFF"
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
@@ -96,13 +98,20 @@ sleep 1
 
 if [[ $COPY_CSV ]]; then
 echo "================================================================="
-echo cp input/data/uscdi-table.csv input/images/uscdi-table.csv
+echo cp input/data/*.csv input/images/tables
 echo "================================================================="
-cp input/data/uscdi-table.csv input/images/uscdi-table.csv
+cp input/data/*.csv input/images/tables
 echo "================================================================="
-echo convert input/data/uscdi-table.csv to excel and copy to input/images/uscdi-table.xlsx
+echo convert input/data/*.csv to excel and move to input/images/tables
 echo "================================================================="
-pyexcel transcode input/data/uscdi-table.csv input/images/uscdi-table.xlsx
+for csv_file in $(find input/data/*.csv -type f)
+do
+echo convert $csv_file to ...
+excel_file=input/images/tables/$(basename $csv_file)
+excel_file=${excel_file%.*}.xlsx
+pyexcel transcode $csv_file $excel_file
+echo $excel_file
+done
 fi
 
 if [[ $COPY_SPS ]]; then
@@ -281,8 +290,8 @@ if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
   echo "==To run in command line mode, run the IG Publisher like this:=="
-  echo "===java -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
-(-validation-off)
+  echo "===java -Xmx4G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
+(-validation-off) (-debug)
 parameters:==="
   echo "================================================================="
 
@@ -291,8 +300,8 @@ parameters:==="
   # echo "================================================================="
   # [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
-    echo java -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF
-    java -Xmx4G -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF
+    echo java -Xmx4G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
+    java -Xmx4G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
 fi
 
   # else
