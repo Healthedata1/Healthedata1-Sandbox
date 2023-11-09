@@ -8,7 +8,7 @@ trap "echo '================================================================='; 
 NA='http://tx.fhir.org'
 GEN_OFF=''
 VAL_OFF=''
-while getopts abcdghikmnopqrstvxyz option;
+while getopts abcdeghikmnopqrstvxyz option;
 do
  case "${option}"
  in
@@ -16,6 +16,7 @@ do
  b) DEBUG_ON='-debug';;
  c) COPY_CSV=1;;
  d) IN_DOCS=1;;
+ e) APP_VERSION=1;;
  g) GEN_OFF='-generation-off';;
  h) VAL_OFF='-validation-off';;
  i) IG_PUBLISH=1;;
@@ -72,6 +73,7 @@ echo "-a copy searchparameter excel sheet to data folder as csv file for creatin
 echo "-b Turns on debugging (this produces extra logging, and can be verbose) = $DEBUG_ON"
 echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv,assessments-valuesets.csv) = $COPY_CSV"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
+echo "-e flag to add current profile version to all examples = $APP_VERSION"
 echo "-g flag to turn off narrative generation to speed up build times = $GEN_OFF"
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
@@ -280,6 +282,27 @@ if [[ $NO_PROFILE ]]; then
         # echo "file is $file"
         # echo "basename is $(basename $file)"
                 jq 'if (.meta.extension or .meta.lastUpdated) then del(.meta.profile) else del(.meta) end' < $file > $tmp/$(basename $file)
+
+      done
+    mv -f $tmp/*.json $examples
+    rm -rf $tmp
+fi
+
+if [[ $APP_VERSION ]]; then
+    echo "================================================================="
+    echo "===append current version to each json example file meta profiles==="
+    echo "================================================================="
+    examples=./input/examples
+    echo "======== example folder is $examples ==========="
+    tmp=$(mktemp -d -d ./input/_examples)
+    echo "========= tmp is $tmp ==========="
+    ver=$(jq -r '.version' fsh-generated/resources/ImplementationGuide*.json)
+    echo "========= current version is $ver ==========="
+    for file in $examples/*.json
+      do
+        # echo "file is $file"
+        # echo "basename is $(basename $file)"
+                jq --arg ver "$ver" '.meta.profile[0] = .meta.profile[0] + "|"+ $ver' < $file > $tmp/$(basename $file)
 
       done
     mv -f $tmp/*.json $examples
