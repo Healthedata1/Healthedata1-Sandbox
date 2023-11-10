@@ -297,12 +297,14 @@ if [[ $APP_VERSION ]]; then
     tmp=$(mktemp -d -d ./input/_examples)
     echo "========= tmp is $tmp ==========="
     ver=$(jq -r '.version' fsh-generated/resources/ImplementationGuide*.json)
+    canon=$(jq -r '.url | split("/ImplementationGuide/")[0]' fsh-generated/resources/ImplementationGuide-hl7.fhir.us.core.json)
+    echo "========= canon is $canon ==========="
     echo "========= current version is $ver ==========="
     for file in $examples/*.json
       do
         # echo "file is $file"
         # echo "basename is $(basename $file)"
-                jq --arg ver "$ver" 'if (.meta.profile) then .meta.profile[0] = .meta.profile[0] + "|"+ $ver else . end' < $file > $tmp/$(basename $file)
+                jq --arg ver "$ver" --arg canon "$canon" 'if (.meta.profile and (.meta.profile[0] | contains($canon)) ) then .meta.profile[0] = .meta.profile[0] + "|"+ $ver else . end' < $file > $tmp/$(basename $file)
 
       done
     mv -f $tmp/*.json $examples
