@@ -302,7 +302,7 @@ if [[ $APP_VERSION ]]; then
       do
         # echo "file is $file"
         # echo "basename is $(basename $file)"
-                jq --arg ver "$ver" '.meta.profile[0] = .meta.profile[0] + "|"+ $ver' < $file > $tmp/$(basename $file)
+                jq --arg ver "$ver" 'if (.meta.profile) then .meta.profile[0] = .meta.profile[0] + "|"+ $ver else . end' < $file > $tmp/$(basename $file)
 
       done
     mv -f $tmp/*.json $examples
