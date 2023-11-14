@@ -116,32 +116,47 @@ echo $excel_file
 done
 fi
 
-if [[ $COPY_SPS ]]; then
-echo "================================================================="
-echo copy searchparameter excel sheet to data folder as csv file for creating SP artifacts
-echo MAKE SURE THE SP SHEET IS UNFILTERED IN EXCEL BEFORE RUNNING THIS COMMAND
-echo "================================================================="
-echo "================================================================="
-echo "=== hit 'Y' to confirm that the sheet is unfiltered ===="
-echo "=== else 'N' or ctrl-c to exit ==="
-echo "================================================================="
+# if [[ $COPY_SPS ]]; then
+# echo "================================================================="
+# echo copy searchparameter excel sheet to data folder as csv file for creating SP artifacts
+# echo MAKE SURE THE SP SHEET IS UNFILTERED IN EXCEL BEFORE RUNNING THIS COMMAND
+# echo "================================================================="
+# echo "================================================================="
+# echo "=== hit 'Y' to confirm that the sheet is unfiltered ===="
+# echo "=== else 'N' or ctrl-c to exit ==="
+# echo "================================================================="
 
-read var1
+# read var1
 
-echo "================================================================="
-echo "==================== you typed '$var1' ============================"
-echo "================================================================="
-if [ $var1 == "Y" ]; then
-echo "================================================================="
-echo "=== pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv ==="
-pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv
-fi
-fi
+# echo "================================================================="
+# echo "==================== you typed '$var1' ============================"
+# echo "================================================================="
+# if [ $var1 == "Y" ]; then
+# echo "================================================================="
+# echo "=== pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv ==="
+# pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv
+# fi
+# fi
 
-if [[ $CLEAR_JSON ]]; then
-echo 'remove all generated files in /examples and /resources folders'
-rm  -f $inpath/resources/*.* $inpath/examples/*.*
-fi
+# if [[ $CLEAR_JSON ]]; then
+# echo "================================================================="
+# echo "remove all generated files in /examples and /resources folders"
+# echo "=====MAKE SURE YOU TO DO THIS BEFORE CONTINUING===="
+# echo "================================================================="
+# echo "================================================================="
+# echo "=== hit 'Y' to continue ===="
+# echo "=== else 'N' or ctrl-c to exit ==="
+# echo "================================================================="
+
+# read var1
+
+# echo "================================================================="
+# echo "==================== you typed '$var1' ============================"
+# echo "================================================================="
+# if [ $var1 == "Y" ]; then
+# rm  -f $inpath/resources/*.* $inpath/examples/*.*
+# fi
+# fi
 
 if [[ $YAML_JSON ]] && ls -U $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
@@ -290,26 +305,32 @@ fi
 
 if [[ $APP_VERSION ]]; then
     echo "================================================================="
-    echo "===append current version to each json example file meta profiles==="
+    echo "=== append current version to each json example file meta profiles ==="
+    echo "=== and update IG.json file exampleCanonicals to teh current version =="
     echo "================================================================="
-    examples=./input/examples
+    examples=$inpath/examples
     echo "======== example folder is $examples ==========="
-    tmp=$(mktemp -d -d ./input/_examples)
+    IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
+    echo "========= IGJSON is $IGJSON ==========="
+    tmp=$(mktemp -d -d $inpath/_examples)
     echo "========= tmp is $tmp ==========="
-    ver=$(jq -r '.version' fsh-generated/resources/ImplementationGuide*.json)
-    canon=$(jq -r '.url | split("/ImplementationGuide/")[0]' fsh-generated/resources/ImplementationGuide-hl7.fhir.us.core.json)
+    ver=$(jq -r '.version' $IGJSON)
+    canon=$(jq -r '.url | split("/ImplementationGuide/")[0]' $IGJSON)
     echo "========= canon is $canon ==========="
     echo "========= current version is $ver ==========="
     for file in $examples/*.json
       do
         # echo "file is $file"
         # echo "basename is $(basename $file)"
-                jq --arg ver "$ver" --arg canon "$canon" 'if (.meta.profile and (.meta.profile[0] | contains($canon)) ) then .meta.profile[0] = .meta.profile[0] + "|"+ $ver else . end' < $file > $tmp/$(basename $file)
-
+                jq --arg ver "$ver" --arg canon "$canon" 'if (.meta.profile and (.meta.profile[0] | contains($canon)) ) then .meta.profile[0] += "|"+ $ver else . end' < $file > $tmp/$(basename $file)
       done
     mv -f $tmp/*.json $examples
+    # update ig json file
+    jq --arg ver "$ver" --arg canon "$canon" '.definition.resource = [.definition.resource[] | if .exampleCanonical then if .exampleCanonical | contains($canon) then .exampleCanonical += "|" + $ver else . end else . end]' $IGJSON > $tmp/ig.json 
+    mv $tmp/ig.json $IGJSON
     rm -rf $tmp
 fi
+
 
 if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
