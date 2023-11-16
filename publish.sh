@@ -8,7 +8,7 @@ trap "echo '================================================================='; 
 NA='http://tx.fhir.org'
 GEN_OFF=''
 VAL_OFF=''
-while getopts abcdeghikmnopqrstvxyz option;
+while getopts abcdefghikmnopqrstvxyz option;
 do
  case "${option}"
  in
@@ -17,6 +17,7 @@ do
  c) COPY_CSV=1;;
  d) IN_DOCS=1;;
  e) APP_VERSION=1;;
+ f) TERMINOLOGY_TABLES=1;;
  g) GEN_OFF='-generation-off';;
  h) VAL_OFF='-validation-off';;
  i) IG_PUBLISH=1;;
@@ -74,6 +75,7 @@ echo "-b Turns on debugging (this produces extra logging, and can be verbose) = 
 echo "-c copy data csv files to the image folder and create excel file too (currently only input/data/uscdi-table.csv,assessments-valuesets.csv) = $COPY_CSV"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-e flag to add current profile version to all examples = $APP_VERSION"
+echo "-f flag to add valueset-ref-all-list.csv and valueset-ref-all-list.csv to data folders to process as tables = $TERMINOLOGY_TABLES"
 echo "-g flag to turn off narrative generation to speed up build times = $GEN_OFF"
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
@@ -387,7 +389,14 @@ fi
 
 # fi
 
-
+if [[ $TERMINOLOGY_TABLES ]]; then
+    echo "================================================================="
+    echo "======= cp $outpath/valueset-ref-all-list.csv $inpath/data ======"
+    echo "======= cp $outpath/codesystem-ref-all-list.csv $inpath/data ===="
+    echo "================================================================="
+    cp $outpath/valueset-ref-all-list.csv $inpath/data
+    cp $outpath/codesystem-ref-all-list.csv $inpath/data
+fi
 
 if [[ $ZIP_SCH ]]; then
     echo "================================================================="
