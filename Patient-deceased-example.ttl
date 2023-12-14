@@ -17,8 +17,8 @@
        fhir:value [ fhir:v "This is a deceased patient example for the *US Core Patient Profile*." ]
      ] ) ;
      fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0>
      ] )
   ] ; # 
   fhir:text [

@@ -1,0 +1,127 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1186.8",
+      "version" : "20210622",
+      "status" : "active",
+      "name" : "Common substances for allergy and intolerance documentation including refutations",
+      "title" : null,
+      "description" : null,
+      "systems" : [
+        "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-allergyintolerance.html" : "US Core AllergyIntolerance Profile"
+    },
+    {
+      "url" : "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591",
+      "version" : "20180718",
+      "status" : "active",
+      "name" : "Payer",
+      "title" : null,
+      "description" : null,
+      "systems" : ["https://nahdo.org/sopt"],
+      "uses" : {
+      },
+      "ValueSet-us-core-source-of-payment.html" : "US Core Source of Payment Value Set"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceClinicalStatusCodes",
+      "title" : "AllergyIntolerance Clinical Status Codes",
+      "description" : "Preferred value set for AllergyIntolerance Clinical Status.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1372"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1372"],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-allergyintolerance.html" : "US Core AllergyIntolerance Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-verification",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "AllergyIntoleranceVerificationStatusCodes",
+      "title" : "AllergyIntolerance Verification Status Codes",
+      "description" : "Preferred value set for AllergyIntolerance Verification Status.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.1370"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1370"],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-allergyintolerance.html" : "US Core AllergyIntolerance Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.232"],
+      "sources" : ["2.16.840.1.113883.4.642.3.232"],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-allergyintolerance.html" : "US Core AllergyIntolerance Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/ucum-vitals-common",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "VitalSignsUnits",
+      "title" : "Vital Signs Units",
+      "description" : "Common UCUM units for recording Vital Signs",
+      "systems" : ["http://unitsofmeasure.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.955"],
+      "sources" : ["2.16.840.1.113883.4.642.3.955"],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/ValueSet/birthsex",
+      "version" : "5.0.1",
+      "status" : "active",
+      "name" : "BirthSex",
+      "title" : "Birth Sex",
+      "description" : "Codes for assigning sex at birth as specified by the [Office of the National Coordinator for Health IT (ONC)](https://www.healthit.gov/newsroom/about-onc)",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-birthsex.html" : "US Core Birth Sex Extension"
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "USCoreSourceofPaymentValueSet",
+      "title" : "US Core Source of Payment Value Set",
+      "description" : "[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories.",
+      "systems" : ["https://nahdo.org/sopt"]
+    },
+    {
+      "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-vital-signs",
+      "version" : "5.0.1",
+      "status" : "active",
+      "name" : "UsCoreVitalSigns",
+      "title" : "US Core Vital Signs ValueSet",
+      "description" : "The vital sign codes from the base FHIR and US Core Vital Signs.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
+    }
+  ]
+}

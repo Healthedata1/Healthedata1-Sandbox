@@ -9,7 +9,7 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
       <valueMarkdown value="This is a patient example for the *US Core Patient Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity."/>
     </extension>
-    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"/>
   </meta>
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">

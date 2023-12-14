@@ -47,9 +47,6 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
       "StructureDefinition.snapshot.element.binding"
     ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding": [
-      "StructureDefinition.snapshot.element.binding"
-    ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
@@ -63,10 +60,12 @@
       "StructureDefinition.snapshot.element.type.targetProfile"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
+      "Location.meta",
       "Patient.meta",
       "Provenance.meta"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-name": [
+      "Location.meta",
       "Patient.meta",
       "Provenance.meta"
     ],
@@ -88,7 +87,6 @@
       "ImplementationGuide.definition.page.page",
       "SearchParameter",
       "StructureDefinition",
-      "StructureDefinition.snapshot.element",
       "ValueSet"
     ],
     "http://hl7.org/fhir/StructureDefinition/targetElement": [

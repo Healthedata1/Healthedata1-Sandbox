@@ -124,7 +124,7 @@
           <div class="inner-wrapper">
 
 <div style="counter-reset: section 7" class="col-12">
-<!--ReleaseHeader--><p id="publish-box">Health eData 1 Sandbox - Local Development build (v0.1.0). See the <a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+<!--ReleaseHeader--><p id="publish-box">Health eData 1 Sandbox - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://www.fhir.org/guides/healthedata1-sandbox/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
 
 
 
@@ -192,7 +192,113 @@
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;us-core-allergyintolerance-clinical-status&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;extensions&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;Placeholder&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+    &lt;!-- &lt;p&gt;
+  &lt;strong&gt;NOTE&lt;/strong&gt;
+  : This US Core SearchParameter definition extends the usage context of the
+  &lt;a href=&quot;http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html&quot;&gt;Conformance expectation
+  extension&lt;/a&gt;
+  &lt;/p&gt;
+  &lt;ul&gt;
+  &lt;li&gt;multipleAnd&lt;/li&gt;
+  &lt;li&gt;multipleOr&lt;/li&gt;
+  &lt;li&gt;comparator&lt;/li&gt;
+  &lt;li&gt;modifier&lt;/li&gt;
+  &lt;li&gt;chain&lt;/li&gt;
+  &lt;/ul&gt; --&gt;&lt;p&gt;
+    &lt;b&gt;id&lt;/b&gt;
+    : &lt;a href=&quot;SearchParameter-us-core-allergyintolerance-clinical-status.html&quot;&gt;USCoreAllergyintoleranceClinicalStatus&lt;/a&gt;
+      &lt;!-- us-core-specimen-id --&gt;
+  &lt;/p&gt;
+    &lt;!-- &lt;p&gt;
+  &lt;b&gt;url&lt;/b&gt;
+  :
+  &lt;b&gt;http://hl7.org/fhir/us/core/SearchParameter/us-core-specimen-id&lt;/b&gt;
+  &lt;/p&gt; --&gt;  &lt;!-- &lt;p&gt;
+  &lt;b&gt;version&lt;/b&gt;
+  : 4.0.1
+  &lt;/p&gt; --&gt;  &lt;!-- &lt;p&gt;
+  &lt;b&gt;name&lt;/b&gt;
+  : USCoreSpecimenId
+  &lt;/p&gt; --&gt;
+    &lt;p&gt;
+      &lt;b&gt;
+    derivedFrom
+    &lt;/b&gt;
+    :
+  &lt;a href=&quot;http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status&quot;&gt;http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status&lt;/a&gt;
+      &lt;!-- http://hl7.org/fhir/SearchParameter/Resource-id --&gt;
+  &lt;/p&gt;
+    &lt;!-- &lt;p&gt;
+  &lt;b&gt;status&lt;/b&gt;
+  : active
+  &lt;/p&gt;
+  &lt;p&gt;
+  &lt;b&gt;date&lt;/b&gt;
+  : 04/13/2023
+  &lt;/p&gt; --&gt;&lt;p&gt;
+    &lt;b&gt;publisher&lt;/b&gt;
+    :
+    &lt;a href=&quot;mailto:ehaas@healthedatainc.com&quot;&gt;Health eData Inc&lt;/a&gt;
+      &lt;!-- HL7 International - Cross-Group Projects --&gt;
+  &lt;/p&gt;
+    &lt;!-- &lt;p&gt;
+  &lt;b&gt; useContext&lt;/b&gt; : &lt;/p&gt; --&gt;  &lt;!-- &lt;p&gt;
+  &lt;b&gt;jurisdiction&lt;/b&gt;
+  : United States of America (the)
+  &lt;span&gt;(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+  States of America (the)'})&lt;/span&gt;
+  &lt;/p&gt; --&gt;  &lt;!-- &lt;p&gt;
+  &lt;b&gt; purpose&lt;/b&gt; : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+  and matching as part of a chain&lt;/p&gt; --&gt;
+    &lt;p&gt;
+      &lt;b&gt;
+    code
+    &lt;/b&gt;
+    :
+      &lt;code&gt;
+    clinical-status
+  &lt;/code&gt;
+      &lt;!-- _id --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;base&lt;/b&gt;
+    : AllergyIntolerance
+      &lt;!-- :Specimen --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;type&lt;/b&gt;
+    : token
+      &lt;!-- : token --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;expression&lt;/b&gt;
+    :
+    &lt;code&gt;AllergyIntolerance.clinicalStatus&lt;/code&gt;
+      &lt;!-- Specimen.id --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;xpath&lt;/b&gt;
+    :
+    &lt;code&gt;&lt;/code&gt;
+      &lt;!-- f:Specimen/f:id --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;xpathUsage&lt;/b&gt;
+    : 
+      &lt;!-- : normal --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;multipleOr&lt;/b&gt;
+    : true (Conformance Expectation = MAY)
+      &lt;!-- : True (Conformance Expectation = MAY) --&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;b&gt;multipleAnd&lt;/b&gt;
+    : true (Conformance Expectation = MAY)
+      &lt;!-- : True ( Conformance Expectation = MAY) --&gt;
+  &lt;/p&gt;
+&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/searchparameter.html#SearchParameter.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm&quot;&gt;
@@ -286,7 +392,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Sep 20, 2023 00:24+0000">2023-09-20</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Dec 14, 2023 04:35+0000">2023-12-14</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

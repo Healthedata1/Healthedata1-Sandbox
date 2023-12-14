@@ -3,7 +3,113 @@
 <SearchParameter xmlns="http://hl7.org/fhir">
   <id value="us-core-allergyintolerance-clinical-status"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">Placeholder</div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
+    <!-- <p>
+  <strong>NOTE</strong>
+  : This US Core SearchParameter definition extends the usage context of the
+  <a href="http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html">Conformance expectation
+  extension</a>
+  </p>
+  <ul>
+  <li>multipleAnd</li>
+  <li>multipleOr</li>
+  <li>comparator</li>
+  <li>modifier</li>
+  <li>chain</li>
+  </ul> --><p>
+    <b>id</b>
+    : <a href="SearchParameter-us-core-allergyintolerance-clinical-status.html">USCoreAllergyintoleranceClinicalStatus</a>
+      <!-- us-core-specimen-id -->
+  </p>
+    <!-- <p>
+  <b>url</b>
+  :
+  <b>http://hl7.org/fhir/us/core/SearchParameter/us-core-specimen-id</b>
+  </p> -->  <!-- <p>
+  <b>version</b>
+  : 4.0.1
+  </p> -->  <!-- <p>
+  <b>name</b>
+  : USCoreSpecimenId
+  </p> -->
+    <p>
+      <b>
+    derivedFrom
+    </b>
+    :
+  <a href="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status">http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status</a>
+      <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->
+  </p>
+    <!-- <p>
+  <b>status</b>
+  : active
+  </p>
+  <p>
+  <b>date</b>
+  : 04/13/2023
+  </p> --><p>
+    <b>publisher</b>
+    :
+    <a href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>
+      <!-- HL7 International - Cross-Group Projects -->
+  </p>
+    <!-- <p>
+  <b> useContext</b> : </p> -->  <!-- <p>
+  <b>jurisdiction</b>
+  : United States of America (the)
+  <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
+  States of America (the)'})</span>
+  </p> -->  <!-- <p>
+  <b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
+  and matching as part of a chain</p> -->
+    <p>
+      <b>
+    code
+    </b>
+    :
+      <code>
+    clinical-status
+  </code>
+      <!-- _id -->
+  </p>
+  <p>
+    <b>base</b>
+    : AllergyIntolerance
+      <!-- :Specimen -->
+  </p>
+  <p>
+    <b>type</b>
+    : token
+      <!-- : token -->
+  </p>
+  <p>
+    <b>expression</b>
+    :
+    <code>AllergyIntolerance.clinicalStatus</code>
+      <!-- Specimen.id -->
+  </p>
+  <p>
+    <b>xpath</b>
+    :
+    <code></code>
+      <!-- f:Specimen/f:id -->
+  </p>
+  <p>
+    <b>xpathUsage</b>
+    : 
+      <!-- : normal -->
+  </p>
+  <p>
+    <b>multipleOr</b>
+    : true (Conformance Expectation = MAY)
+      <!-- : True (Conformance Expectation = MAY) -->
+  </p>
+  <p>
+    <b>multipleAnd</b>
+    : true (Conformance Expectation = MAY)
+      <!-- : True ( Conformance Expectation = MAY) -->
+  </p>
+</div>
   </text>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="2">

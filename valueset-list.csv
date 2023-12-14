@@ -1,0 +1,2 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment,0.1.0,active,,USCoreSourceofPaymentValueSet,US Core Source of Payment Value Set,"[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as ""BLUE CROSS/BLUE SHIELD"" and  limited to main categories for classification, type of plan and additional subcategories.",,

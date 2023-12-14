@@ -10,7 +10,7 @@
       "url" : "http://hl7.org/fhir/StructureDefinition/instance-description",
       "valueMarkdown" : "This is a patient example for the *US Core Patient Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity."
     }],
-    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
   },
   "text" : {
     "status" : "extensions",
