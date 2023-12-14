@@ -365,7 +365,8 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 
 \~~~
 
-~~~json
+
+~~~
 {% include_relative includelines filename='Patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}
 ~~~
 

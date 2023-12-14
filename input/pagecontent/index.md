@@ -1,6 +1,22 @@
 ### Health eData Sandbox
 testbed for ideas....
 
+#### Example bar
+
+showing JSON example from examples folder. Note that the narrative section renders poorly and should not be used if displaying inline examples. Use the `no-narrative` IG parameter to do this.
+
+<!-- {% raw %} {% include examplebutton_default.html example='Patient-deceased-example.json' %} {% endraw %} -->
+
+{% include examplebutton_default.html example='Patient-deceased-example.json' %}
+
+showing XML example in images sub-folder `images/inline_examples` . Note that the file name is used as an id parameter in the html so they must be unique within a page.:
+
+<!-- {% raw %} {% include examplebutton_default.html example='inline_examples/Patient-deceased-example2.xml' %} {% endraw %} -->
+
+{% include examplebutton_default.html example='inline_examples/Patient-deceased-example2.xml' %}
+  
+See the [guidance page](guidance.html) for how to render code snippets from examples
+
 #### FOO
 
 using http:
@@ -102,7 +118,7 @@ without markdown filter
 
 <div class="bg-success" markdown="1">
 
-  #### Complete list of Code System URIs used in US Core
+#### Complete list of Code System URIs used in US Core
   The value set used in the US Core Profiles includes codes from following Code Systems URIs:
 
   {% for cs in site.data.codesystems -%}
