@@ -8,7 +8,7 @@ trap "echo '================================================================='; 
 NA='http://tx.fhir.org'
 GEN_OFF=''
 VAL_OFF=''
-while getopts abcdefghikmnopqrstvxyz option;
+while getopts abcdefghiknopqrstuvxy option;
 do
  case "${option}"
  in
@@ -23,7 +23,7 @@ do
  i) IG_PUBLISH=1;;
  k) NO_PROFILE=1;;
 #  l) LOAD_TEMPLATE=1;;
- m) MERGE_CSV=1;;
+#  m) MERGE_CSV=1;;
  n) NO_META=1;;
  o) PUB=1;;
  p) UPDATE=1;;
@@ -31,12 +31,12 @@ do
  r) CLEAR_JSON=1;;
  s) SUSHI=1;;
  t) NA='N/A';;
-#  u) TEST_TEMPLATE=$OPTARG;;
+ u) UPDATE_IGJSON=1;;
  v) VIEW_OUTPUT=1;;
 #  w) WATCH=1;;
  x) RECENT_YAML=1;;
  y) YAML_JSON=1;;
- z) ZIP_SCH=1;;
+#  z) ZIP_SCH=1;;
  esac
  
 done
@@ -48,14 +48,14 @@ else
   outpath=output
 fi
 
-if [[ $RECENT_YAML ]]; then
-  YAML_JSON=1
-  All_YAML=0
-  days=1
-elif [[ $YAML_JSON ]]; then
-  All_YAML=1
-  days=400 # 400 days is about 1 year
-fi
+# if [[ $RECENT_YAML ]]; then
+#   YAML_JSON=1
+#   All_YAML=0
+#   days=1
+# elif [[ $YAML_JSON ]]; then
+#   All_YAML=1
+#   days=400 # 400 days is about 1 year
+# fi
 
 
 echo "================================================================="
@@ -80,7 +80,7 @@ echo "-g flag to turn off narrative generation to speed up build times = $GEN_OF
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
-echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"
+# echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"  # no longer this needed?
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
@@ -88,10 +88,11 @@ echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-s parameter for running only sushi = $SUSHI"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
+echo "-u parameter for updating ig.json file (until SUSHI catches up)= $UPDATE_IGJSON"
 echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
-echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
-echo "-y tranform all yaml that changed in the last year to json files = $All_YAML"
-echo "-z zip up all schematrons = $ZIP_SCH"
+# echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
+echo "-y delete all json files and tranform all yaml files to json files = $All_YAML"
+# echo "-z zip up all schematrons = $ZIP_SCH"   # no longer needed?
 #echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
 #echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
 #echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
@@ -162,9 +163,20 @@ fi
 
 if [[ $YAML_JSON ]] && ls -U $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
+echo "delete all yaml created json files is resources directory and"
 echo "convert all yml files in resources-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $(find $inpath/resources-yaml/*.yml -type f -mtime -$days)
+rm -f $inpath/resources/StructureDefinition*.json
+sleep 3
+rm -f $inpath/resources/OperationDefinition*.json
+sleep 3
+rm -f $inpath/resources/SearchParameter*.json
+sleep 3
+rm -f $inpath/resources/CodeSystem*.json
+sleep 3
+rm -f $inpath/resources/ValueSet*.json
+sleep 3
+for yaml_file in $(find $inpath/resources-yaml/*.yml -type f) # -mtime -$days)
 do
 echo convert $yaml_file to ...
 json_file=$inpath/resources/$(basename $yaml_file)
@@ -174,11 +186,14 @@ echo $json_file
 done
 fi
 
+
 if [[ $YAML_JSON ]] && ls -U $inpath/examples-yaml/*.yml; then
 echo "========================================================================"
+echo "delete all json files is examples directory and"
 echo "convert all yml files in examples-yaml directory to examples/json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $(find $inpath/examples-yaml/*.yml -type f -mtime -$days)
+rm -f $inpath/examples/*.json
+for yaml_file in $(find $inpath/examples-yaml/*.yml -type f) # -mtime -$days)
 do
 echo convert $yaml_file to ...
 json_file=$inpath/examples/$(basename $yaml_file)
@@ -190,9 +205,11 @@ fi
 
 if [[ $YAML_JSON ]] && ls -U $inpath/includes-yaml/*.yml; then
 echo "======================================================================="
+echo "delete all json files is includes directory and"
 echo "convert all yml files in includes-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-for yaml_file in $(find $inpath/includes-yaml/*.yml -type f -mtime -$days)
+rm -f $inpath/includes/*.json
+for yaml_file in $(find $inpath/includes-yaml/*.yml -type f) # -mtime -$days)
 do
 echo convert $yaml_file to ...
 json_file=$inpath/includes/$(basename $yaml_file)
@@ -262,10 +279,11 @@ if [[ $SUSHI ]]; then
     python3.7 -c 'import sys, yaml, json; yaml.dump(json.load(sys.stdin), sys.stdout, sort_keys=False, indent=2,)' < $ig_json > $ig_yaml
     echo "========== ig_yaml = $ig_yaml =========="
     done
-
   echo "================================================================="
-
 fi
+
+
+
 
 if [[ $NO_META ]]; then
     echo "================================================================="
@@ -328,9 +346,22 @@ if [[ $APP_VERSION ]]; then
       done
     mv -f $tmp/*.json $examples
     # update ig json file
-    jq --arg ver "$ver" --arg canon "$canon" '.definition.resource = [.definition.resource[] | if .exampleCanonical then if .exampleCanonical | contains($canon) then .exampleCanonical += "|" + $ver else . end else . end]' $IGJSON > $tmp/ig.json 
+    jq --arg ver "$ver" --arg canon "$canon" '.definition.resource = [.definition.resource[] | if .exampleCanonical then if .exampleCanonical | contains($canon) then .exampleCanonical += "|" + $ver else . end else . end]' $IGJSON > $tmp/ig.json
     mv $tmp/ig.json $IGJSON
     rm -rf $tmp
+fi
+
+if [[ $UPDATE_IGJSON ]]; then
+  echo "==============================================================================="
+  echo "================ move the ig-link-dependency extensions from ==================" 
+  echo "============ImplementationGuide to ImplementationGuide.definition ============="
+  echo "==============================================================================="
+  IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
+  echo "========= IGJSON is $IGJSON ==========="
+  tmp=$(mktemp -d -d $inpath/_examples)
+  jq --arg url "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency" '.definition += { "extension": [.extension[] | select(.url == $url)] }  | del(.extension[] | select(.url == $url))' $IGJSON > $tmp/ig.json
+  mv $tmp/ig.json $IGJSON
+  rm -rf $tmp
 fi
 
 
@@ -398,29 +429,29 @@ if [[ $TERMINOLOGY_TABLES ]]; then
     cp $outpath/codesystem-ref-all-list.csv $inpath/data
 fi
 
-if [[ $ZIP_SCH ]]; then
-    echo "================================================================="
-    echo "===zip up schematrons and put in==="
-    echo "===$outpath/input/images/schematrons.zip file for downloads==="
-    echo "===zip -j input/images/schematrons.zip $outpath/*.sch==="
-    echo "================================================================="
-    zip -j input/images/schematrons.zip $outpath/*.sch
-fi
+# if [[ $ZIP_SCH ]]; then
+#     echo "================================================================="
+#     echo "===zip up schematrons and put in==="
+#     echo "===$outpath/input/images/schematrons.zip file for downloads==="
+#     echo "===zip -j input/images/schematrons.zip $outpath/*.sch==="
+#     echo "================================================================="
+#     zip -j input/images/schematrons.zip $outpath/*.sch
+# fi
 
-if [[ $MERGE_CSV ]]; then
-    echo "================================================================="
-    echo "===merge all StructureDefinition CSV and output as Excel too  ==="
-    echo "Python 3.7 and pyexcel-cli, pyexcel, and pyexcel-xlsx are required"
-    echo "===require header file in $outpath/input/images-source/all_profiles.csv file ==="
-    echo "===creates $outpath/input/images/all_profiles.csv file ==="
-    echo "===creates $outpath/input/images/all_profiles.xlsx file ==="
-    echo "================================================================="
-    cp input/images-source/all_profiles.csv input/images/all_profiles.csv
-    echo "===find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv==="
-    find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv
-    echo "===pyexcel merge input/images/all_profiles.csv input/images all_profiles.xlsx==="
-    pyexcel merge input/images/all_profiles.csv input/images/all_profiles.xlsx
-fi
+# if [[ $MERGE_CSV ]]; then
+#     echo "================================================================="
+#     echo "===merge all StructureDefinition CSV and output as Excel too  ==="
+#     echo "Python 3.7 and pyexcel-cli, pyexcel, and pyexcel-xlsx are required"
+#     echo "===require header file in $outpath/input/images-source/all_profiles.csv file ==="
+#     echo "===creates $outpath/input/images/all_profiles.csv file ==="
+#     echo "===creates $outpath/input/images/all_profiles.xlsx file ==="
+#     echo "================================================================="
+#     cp input/images-source/all_profiles.csv input/images/all_profiles.csv
+#     echo "===find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv==="
+#     find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv
+#     echo "===pyexcel merge input/images/all_profiles.csv input/images all_profiles.xlsx==="
+#     pyexcel merge input/images/all_profiles.csv input/images/all_profiles.xlsx
+# fi
 
 if [[ $VIEW_OUTPUT ]]; then
     echo "=============== open $PWD/$outpath/index.html ================"
@@ -431,3 +462,4 @@ if [[ $VIEW_QA ]]; then
     echo "============ open $PWD/$outpath/qa.html ============"
     open ./$outpath/qa.html
 fi
+
