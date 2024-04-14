@@ -8,7 +8,7 @@ trap "echo '================================================================='; 
 NA='http://tx.fhir.org'
 GEN_OFF=''
 VAL_OFF=''
-while getopts abcdefghiknopqrstuvy option;
+while getopts abcdefghiknopqrstvy option;
 do
  case "${option}"
  in
@@ -31,7 +31,7 @@ do
  r) CLEAR_JSON=1;;
  s) SUSHI=1;;
  t) NA='N/A';;
- u) UPDATE_IGJSON=1;;
+#  u) UPDATE_IGJSON=1;;
  v) VIEW_OUTPUT=1;;
 #  w) WATCH=1;;
 #  x) RECENT_YAML=1;;
@@ -80,7 +80,7 @@ echo "-g flag to turn off narrative generation to speed up build times = $GEN_OF
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
-# echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"  # no longer this needed?
+# echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"  # no longer needed
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
@@ -88,11 +88,11 @@ echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-s parameter for running only sushi = $SUSHI"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
-echo "-u parameter for updating ig.json file (until SUSHI catches up)= $UPDATE_IGJSON"
+# echo "-u parameter for updating ig.json file (until SUSHI catches up)= $UPDATE_IGJSON"  # no longer needed
 echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
 # echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
 echo "-y delete all json files and tranform all yaml files to json files = $All_YAML"
-# echo "-z zip up all schematrons = $ZIP_SCH"   # no longer needed?
+# echo "-z zip up all schematrons = $ZIP_SCH"   # no longer needed
 #echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
 #echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
 #echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
@@ -351,18 +351,18 @@ if [[ $APP_VERSION ]]; then
     rm -rf $tmp
 fi
 
-if [[ $UPDATE_IGJSON ]]; then
-  echo "==============================================================================="
-  echo "================ move the ig-link-dependency extensions from ==================" 
-  echo "============ImplementationGuide to ImplementationGuide.definition ============="
-  echo "==============================================================================="
-  IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
-  echo "========= IGJSON is $IGJSON ==========="
-  tmp=$(mktemp -d -d $inpath/_examples)
-  jq --arg url "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency" '.definition += { "extension": [.extension[] | select(.url == $url)] }  | del(.extension[] | select(.url == $url))' $IGJSON > $tmp/ig.json
-  mv $tmp/ig.json $IGJSON
-  rm -rf $tmp
-fi
+# if [[ $UPDATE_IGJSON ]]; then
+#   echo "==============================================================================="
+#   echo "================ move the ig-link-dependency extensions from ==================" 
+#   echo "============ImplementationGuide to ImplementationGuide.definition ============="
+#   echo "==============================================================================="
+#   IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
+#   echo "========= IGJSON is $IGJSON ==========="
+#   tmp=$(mktemp -d -d $inpath/_examples)
+#   jq --arg url "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency" '.definition += { "extension": [.extension[] | select(.url == $url)] }  | del(.extension[] | select(.url == $url))' $IGJSON > $tmp/ig.json
+#   mv $tmp/ig.json $IGJSON
+#   rm -rf $tmp
+# fi
 
 
 if [[ $IG_PUBLISH ]]; then
