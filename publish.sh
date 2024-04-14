@@ -8,7 +8,7 @@ trap "echo '================================================================='; 
 NA='http://tx.fhir.org'
 GEN_OFF=''
 VAL_OFF=''
-while getopts abcdefghiknopqrstuvxy option;
+while getopts abcdefghiknopqrstuvy option;
 do
  case "${option}"
  in
@@ -34,7 +34,7 @@ do
  u) UPDATE_IGJSON=1;;
  v) VIEW_OUTPUT=1;;
 #  w) WATCH=1;;
- x) RECENT_YAML=1;;
+#  x) RECENT_YAML=1;;
  y) YAML_JSON=1;;
 #  z) ZIP_SCH=1;;
  esac
