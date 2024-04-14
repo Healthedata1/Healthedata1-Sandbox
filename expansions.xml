@@ -1,9 +1,1513 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="3754c8e8-e620-48b3-9b7e-a07bddd1d351"/>
+  <id value="8c6c17a6-52c7-4972-ae19-950f3191bcf6"/>
   <meta>
-    <lastUpdated value="2023-12-14T04:35:11.804+00:00"/>
+    <lastUpdated value="2024-04-14T00:16:35.879+00:00"/>
   </meta>
   <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on: </p>
+              <ul>
+                <li>codesystem https://nahdo.org/sopt version 9.2</li>
+                <li>
+                  <a href="https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion">valueset Payer v20180718 (ValueSet)</a>
+                </li>
+              </ul>
+            </div>
+            <p style="border: maroon 1px solid; background-color: #FFCCCC; font-weight: bold; padding: 8px">This value set has 162 codes in it. In order to keep the publication size manageable, only a selection (119 codes) of the whole set of codes is shown.</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-1"> </a>  1
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>MEDICARE</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-11"> </a>  11
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Managed Care (Includes Medicare Advantage Plans)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-111"> </a>  111
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare HMO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-112"> </a>  112
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare PPO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-113"> </a>  113
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare POS</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-119"> </a>  119
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Managed Care Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-12"> </a>  12
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare (Non-managed Care)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-121"> </a>  121
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare FFS</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-122"> </a>  122
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Drug Benefit</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-123"> </a>  123
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Medical Savings Account (MSA)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-129"> </a>  129
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Non-managed Care Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-13"> </a>  13
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Hospice</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-14"> </a>  14
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Dual Eligibility Medicare/Medicaid Organization</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-19"> </a>  19
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-191"> </a>  191
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare Pharmacy Benefit Manager</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-2"> </a>  2
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>MEDICAID</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-21"> </a>  21
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid (Managed Care)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-211"> </a>  211
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid HMO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-212"> </a>  212
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid PPO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-213"> </a>  213
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid PCCM (Primary Care Case Management)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-219"> </a>  219
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid Managed Care Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-22"> </a>  22
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid (Non-managed Care Plan)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-23"> </a>  23
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid/SCHIP</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-25"> </a>  25
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid - Out of State</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-26"> </a>  26
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid - Long Term Care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-29"> </a>  29
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-291"> </a>  291
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid Pharmacy Benefit Manager</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-299"> </a>  299
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicaid - Dental</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-3"> </a>  3
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>OTHER GOVERNMENT (Federal/State/Local) (excluding Department of Corrections)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-31"> </a>  31
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Department of Defense</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-311"> </a>  311
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>TRICARE (CHAMPUS)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-312"> </a>  312
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Military Treatment Facility</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-313"> </a>  313
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Dental --Stand Alone</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-32"> </a>  32
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Department of Veterans Affairs</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-321"> </a>  321
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Veteran care-Care provided to Veterans</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-322"> </a>  322
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Non-veteran care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-33"> </a>  33
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Indian Health Service or Tribe</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-331"> </a>  331
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Indian Health Service - Regular</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-332"> </a>  332
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Indian Health Service - Contract</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-333"> </a>  333
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Indian Health Service - Managed Care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-334"> </a>  334
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Indian Tribe - Sponsored Coverage</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-34"> </a>  34
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>HRSA Program</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-341"> </a>  341
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Title V (MCH Block Grant)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-342"> </a>  342
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Migrant Health Program</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-343"> </a>  343
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Ryan White Act</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-349"> </a>  349
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-35"> </a>  35
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Black Lung</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-36"> </a>  36
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>State Government</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-361"> </a>  361
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>State SCHIP program (codes for individual states)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-362"> </a>  362
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Specific state programs (list/ local code)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-369"> </a>  369
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>State, not otherwise specified (other state)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-37"> </a>  37
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Local Government</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-371"> </a>  371
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Local - Managed care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-372"> </a>  372
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>FFS/Indemnity</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-379"> </a>  379
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Local, not otherwise specified (other local, county)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-38"> </a>  38
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other Government (Federal, State, Local not specified)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-381"> </a>  381
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Federal, State, Local not specified managed care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-382"> </a>  382
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Federal, State, Local not specified - FFS</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-389"> </a>  389
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Federal, State, Local not specified - Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-39"> </a>  39
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other Federal</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-391"> </a>  391
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Federal Employee Health Plan - Use when known</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-4"> </a>  4
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>DEPARTMENTS OF CORRECTIONS</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-41"> </a>  41
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Corrections Federal</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-42"> </a>  42
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Corrections State</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-43"> </a>  43
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Corrections Local</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-44"> </a>  44
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Corrections Unknown Level</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-5"> </a>  5
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>PRIVATE HEALTH INSURANCE</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-51"> </a>  51
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Managed Care (Private)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-511"> </a>  511
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Commercial Managed Care - HMO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-512"> </a>  512
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Commercial Managed Care - PPO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-513"> </a>  513
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Commercial Managed Care - POS</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-514"> </a>  514
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Exclusive Provider Organization</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-515"> </a>  515
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Gatekeeper PPO (GPPO)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-516"> </a>  516
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Commercial Managed Care - Pharmacy Benefit Manager</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-517"> </a>  517
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Commercial Managed Care - Dental</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-519"> </a>  519
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Managed Care, Other (non HMO)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-52"> </a>  52
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Private Health Insurance - Indemnity</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-521"> </a>  521
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Commercial Indemnity</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-522"> </a>  522
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Self-insured (ERISA) Administrative Services Only (ASO) plan</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-523"> </a>  523
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Medicare supplemental policy (as second payer)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-524"> </a>  524
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Indemnity Insurance - Dental</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-529"> </a>  529
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Private health insurance--other commercial Indemnity</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-53"> </a>  53
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Managed Care (private) or private health insurance (indemnity), not otherwise specified</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-54"> </a>  54
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Organized Delivery System</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-55"> </a>  55
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Small Employer Purchasing Group</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-56"> </a>  56
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Specialized Stand-Alone Plan</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-561"> </a>  561
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Dental</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-562"> </a>  562
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Vision</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-59"> </a>  59
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other Private Insurance</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-7"> </a>  7
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>MANAGED CARE, UNSPECIFIED (to be used only if one can't distinguish public from private)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-71"> </a>  71
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>HMO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-72"> </a>  72
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>PPO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-73"> </a>  73
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>POS</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-79"> </a>  79
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other Managed Care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-8"> </a>  8
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>NO PAYMENT from an Organization/Agency/Program/Private Payer Listed</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-81"> </a>  81
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Self-pay (Includes applicants for insurance and Medicaid applicants)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-82"> </a>  82
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>No Charge</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-821"> </a>  821
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Charity</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-822"> </a>  822
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Professional Courtesy</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-823"> </a>  823
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Research/Clinical Trial</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-83"> </a>  83
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Refusal to Pay/Bad Debt</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-84"> </a>  84
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Hill Burton Free Care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-85"> </a>  85
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Research/Donor</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-89"> </a>  89
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>No Payment, Other</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-9"> </a>  9
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>MISCELLANEOUS/OTHER</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-91"> </a>  91
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Foreign National</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-92"> </a>  92
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other (Non-government)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-93"> </a>  93
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Disability Insurance</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-94"> </a>  94
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Long-term Care Insurance</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-95"> </a>  95
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Worker's Compensation</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-951"> </a>  951
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Worker's Comp HMO</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-953"> </a>  953
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Worker's Comp Fee-for-Service</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-954"> </a>  954
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Worker's Comp Other Managed Care</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-959"> </a>  959
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Worker's Comp, Other unspecified</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-96"> </a>  96
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Auto Insurance (includes no fault)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-97"> </a>  97
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Legal Liability / Liability Insurance</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-98"> </a>  98
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Other specified but not otherwise classifiable (includes Hospice - Unspecified plan)</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-99"> </a>  99
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>No Typology Code available for payment source</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---nahdo.org-sopt-9999"> </a>  9999
+                </td>
+                <td>https://nahdo.org/sopt</td>
+                <td>Unavailable / No Payer Specified / Blank</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment"/>
+        <version value="0.1.0"/>
+        <name value="USCoreSourceofPaymentValueSet"/>
+        <title value="US Core Source of Payment Value Set"/>
+        <status value="active"/>
+        <experimental value="false"/>
+        <date value="2022-09-29"/>
+        <expansion>
+          <identifier value="urn:uuid:7b221490-824f-4773-a76a-6c7772e9ca71"/>
+          <timestamp value="2024-04-14T00:17:17+00:00"/>
+          <total value="162"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591|20180718"/>
+          </parameter>
+          <parameter>
+            <name value="used-valueset"/>
+            <valueUri value="null"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="https://nahdo.org/sopt|9.2"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="https://nahdo.org/sopt|9.2"/>
+          </parameter>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="1"/>
+            <display value="MEDICARE"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="11"/>
+            <display value="Medicare Managed Care (Includes Medicare Advantage Plans)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="111"/>
+            <display value="Medicare HMO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="112"/>
+            <display value="Medicare PPO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="113"/>
+            <display value="Medicare POS"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="119"/>
+            <display value="Medicare Managed Care Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="12"/>
+            <display value="Medicare (Non-managed Care)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="121"/>
+            <display value="Medicare FFS"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="122"/>
+            <display value="Medicare Drug Benefit"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="123"/>
+            <display value="Medicare Medical Savings Account (MSA)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="129"/>
+            <display value="Medicare Non-managed Care Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="13"/>
+            <display value="Medicare Hospice"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="14"/>
+            <display value="Dual Eligibility Medicare/Medicaid Organization"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="19"/>
+            <display value="Medicare Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="191"/>
+            <display value="Medicare Pharmacy Benefit Manager"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="2"/>
+            <display value="MEDICAID"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="21"/>
+            <display value="Medicaid (Managed Care)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="211"/>
+            <display value="Medicaid HMO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="212"/>
+            <display value="Medicaid PPO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="213"/>
+            <display value="Medicaid PCCM (Primary Care Case Management)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="219"/>
+            <display value="Medicaid Managed Care Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="22"/>
+            <display value="Medicaid (Non-managed Care Plan)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="23"/>
+            <display value="Medicaid/SCHIP"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="25"/>
+            <display value="Medicaid - Out of State"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="26"/>
+            <display value="Medicaid - Long Term Care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="29"/>
+            <display value="Medicaid Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="291"/>
+            <display value="Medicaid Pharmacy Benefit Manager"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="299"/>
+            <display value="Medicaid - Dental"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="3"/>
+            <display value="OTHER GOVERNMENT (Federal/State/Local) (excluding Department of Corrections)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="31"/>
+            <display value="Department of Defense"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="311"/>
+            <display value="TRICARE (CHAMPUS)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="312"/>
+            <display value="Military Treatment Facility"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="313"/>
+            <display value="Dental --Stand Alone"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="32"/>
+            <display value="Department of Veterans Affairs"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="321"/>
+            <display value="Veteran care-Care provided to Veterans"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="322"/>
+            <display value="Non-veteran care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="33"/>
+            <display value="Indian Health Service or Tribe"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="331"/>
+            <display value="Indian Health Service - Regular"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="332"/>
+            <display value="Indian Health Service - Contract"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="333"/>
+            <display value="Indian Health Service - Managed Care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="334"/>
+            <display value="Indian Tribe - Sponsored Coverage"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="34"/>
+            <display value="HRSA Program"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="341"/>
+            <display value="Title V (MCH Block Grant)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="342"/>
+            <display value="Migrant Health Program"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="343"/>
+            <display value="Ryan White Act"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="349"/>
+            <display value="Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="35"/>
+            <display value="Black Lung"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="36"/>
+            <display value="State Government"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="361"/>
+            <display value="State SCHIP program (codes for individual states)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="362"/>
+            <display value="Specific state programs (list/ local code)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="369"/>
+            <display value="State, not otherwise specified (other state)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="37"/>
+            <display value="Local Government"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="371"/>
+            <display value="Local - Managed care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="372"/>
+            <display value="FFS/Indemnity"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="379"/>
+            <display value="Local, not otherwise specified (other local, county)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="38"/>
+            <display value="Other Government (Federal, State, Local not specified)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="381"/>
+            <display value="Federal, State, Local not specified managed care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="382"/>
+            <display value="Federal, State, Local not specified - FFS"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="389"/>
+            <display value="Federal, State, Local not specified - Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="39"/>
+            <display value="Other Federal"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="391"/>
+            <display value="Federal Employee Health Plan - Use when known"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="4"/>
+            <display value="DEPARTMENTS OF CORRECTIONS"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="41"/>
+            <display value="Corrections Federal"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="42"/>
+            <display value="Corrections State"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="43"/>
+            <display value="Corrections Local"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="44"/>
+            <display value="Corrections Unknown Level"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="5"/>
+            <display value="PRIVATE HEALTH INSURANCE"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="51"/>
+            <display value="Managed Care (Private)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="511"/>
+            <display value="Commercial Managed Care - HMO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="512"/>
+            <display value="Commercial Managed Care - PPO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="513"/>
+            <display value="Commercial Managed Care - POS"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="514"/>
+            <display value="Exclusive Provider Organization"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="515"/>
+            <display value="Gatekeeper PPO (GPPO)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="516"/>
+            <display value="Commercial Managed Care - Pharmacy Benefit Manager"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="517"/>
+            <display value="Commercial Managed Care - Dental"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="519"/>
+            <display value="Managed Care, Other (non HMO)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="52"/>
+            <display value="Private Health Insurance - Indemnity"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="521"/>
+            <display value="Commercial Indemnity"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="522"/>
+            <display value="Self-insured (ERISA) Administrative Services Only (ASO) plan"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="523"/>
+            <display value="Medicare supplemental policy (as second payer)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="524"/>
+            <display value="Indemnity Insurance - Dental"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="529"/>
+            <display value="Private health insurance--other commercial Indemnity"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="53"/>
+            <display value="Managed Care (private) or private health insurance (indemnity), not otherwise specified"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="54"/>
+            <display value="Organized Delivery System"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="55"/>
+            <display value="Small Employer Purchasing Group"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="56"/>
+            <display value="Specialized Stand-Alone Plan"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="561"/>
+            <display value="Dental"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="562"/>
+            <display value="Vision"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="59"/>
+            <display value="Other Private Insurance"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="7"/>
+            <display value="MANAGED CARE, UNSPECIFIED (to be used only if one can't distinguish public from private)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="71"/>
+            <display value="HMO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="72"/>
+            <display value="PPO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="73"/>
+            <display value="POS"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="79"/>
+            <display value="Other Managed Care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="8"/>
+            <display value="NO PAYMENT from an Organization/Agency/Program/Private Payer Listed"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="81"/>
+            <display value="Self-pay (Includes applicants for insurance and Medicaid applicants)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="82"/>
+            <display value="No Charge"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="821"/>
+            <display value="Charity"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="822"/>
+            <display value="Professional Courtesy"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="823"/>
+            <display value="Research/Clinical Trial"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="83"/>
+            <display value="Refusal to Pay/Bad Debt"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="84"/>
+            <display value="Hill Burton Free Care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="85"/>
+            <display value="Research/Donor"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="89"/>
+            <display value="No Payment, Other"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="9"/>
+            <display value="MISCELLANEOUS/OTHER"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="91"/>
+            <display value="Foreign National"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="92"/>
+            <display value="Other (Non-government)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="93"/>
+            <display value="Disability Insurance"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="94"/>
+            <display value="Long-term Care Insurance"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="95"/>
+            <display value="Worker's Compensation"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="951"/>
+            <display value="Worker's Comp HMO"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="953"/>
+            <display value="Worker's Comp Fee-for-Service"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="954"/>
+            <display value="Worker's Comp Other Managed Care"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="959"/>
+            <display value="Worker's Comp, Other unspecified"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="96"/>
+            <display value="Auto Insurance (includes no fault)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="97"/>
+            <display value="Legal Liability / Liability Insurance"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="98"/>
+            <display value="Other specified but not otherwise classifiable (includes Hospice - Unspecified plan)"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="99"/>
+            <display value="No Typology Code available for payment source"/>
+          </contains>
+          <contains>
+            <system value="https://nahdo.org/sopt"/>
+            <code value="9999"/>
+            <display value="Unavailable / No Payer Specified / Blank"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
 </Bundle>

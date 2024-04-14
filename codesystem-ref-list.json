@@ -49,6 +49,18 @@
       "http://hl7.org/fhir/R4/valueset-allergyintolerance-verification.html" : "AllergyIntolerance Verification Status Codes"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1125"],
+      "uses" : {
+      },
+      "http://tx.fhir.org/r4/ValueSet/us-core-simple-observation-category" : "US Core Simple Observation Category"
+    },
+    {
       "url" : "http://unitsofmeasure.org",
       "version" : "3.0.0",
       "status" : "active",

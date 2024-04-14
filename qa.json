@@ -1,13 +1,19 @@
 {
   "url" : "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox",
   "name" : "HealtheData_1Sandbox",
+  "title" : "Health eData 1 Sandbox",
+  "description" : "This is a **Healthedata1** sandbox for creation of resources and examples",
+  "status" : "active",
   "package-id" : "healthedata1-sandbox",
   "ig-ver" : "0.1.0",
-  "date" : "Thu, 14 Dec, 2023 04:35:11 +0000",
-  "errs" : 388,
-  "warnings" : 12,
-  "hints" : 10,
+  "date" : "Sun, 14 Apr, 2024 00:16:35 +0000",
+  "dateISO8601" : "2024-04-14T00:16:35+00:00",
+  "errs" : 386,
+  "warnings" : 10,
+  "hints" : 11,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 3879662440
+  "maxMemory" : 3861549048
 }

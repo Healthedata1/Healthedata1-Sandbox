@@ -1,8 +1,416 @@
-﻿/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 32, col 6, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|5.0.1 (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
+HealtheData_1Sandbox
+=========================================
+
+Generic: line 0, col 0, Error - The link 'http://hl7.org/fhir/us/core/2022Jan' for "http://hl7.org/fhir/us/core/2022Jan" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'Location-hl7east' for "HL7East Example" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'Patient-deceased-example' for "Deceased Patient Example" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'Patient-example-targeted-provenance' for "Targeted Provenance Patient Example" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'Provenance-example-targeted-provenance' for "Targeted Provenance Example" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '#.html' for "COMMENT" cannot be resolved (valid targets: 55 targets) (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-careplan.html' for "US Core CarePlan Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-sdoh-assessment.html' for "US Core Observation SDOH Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-social-history.html' for "US Core Observation Social History Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-questionnaireresponse.html' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See SDOH Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-careteam.html' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-documentreference.html' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-diagnosticreport-note.html' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'clinical-notes.html' for "See Clinical Notes Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-clinical-test.html' for "US Core Observation Clinical Test Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-diagnosticreport-note.html' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-imaging.html' for "US Core Observation Imaging Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-diagnosticreport-note.html' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-encounter.html' for "US Core Encounter Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-condition-encounter-diagnosis.html' for "US Core Condition Encounter Diagnosis Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The image source 'foo.png' cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-goal.html' for "US Core Goal Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See SDOH Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-coverage.html' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-coverage.html' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-condition-problems-health-concerns.html' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See Assessments Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-pregnancystatus.html' for "US Core Observation Pregnancy Status Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-pregnancyintent.html' for "US Core Observation Pregnancy Intent Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-smokingstatus.html' for "US Core Smoking Status Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-immunization.html' for "US Core Immunization Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-lab.html' for "US Core Laboratory Result Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-diagnosticreport-lab.html' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-medicationrequest.html' for "US Core MedicationRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'medication-list.html' for "See Medication List Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-medicationdispense.html' for "US Core MedicationDispense Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-patient.html' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-race.html' for "US Core Race Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-ethnicity.html' for "US Core Ethnicity Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-tribal-affiliation.html' for "US Core Tribal Affiliation Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-genderIdentity.html' for "US Core Gender Identity Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-sexual-orientation.html' for "US Core Observation Sexual Orientation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-relatedperson.html' for "US Core RelatedPerson Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-relatedperson.html' for "US Core RelatedPerson Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-occupation.html' for "US Core Observation Occupation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-observation-occupation.html' for "US Core Observation Occupation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-condition-problems-health-concerns.html' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-procedure.html' for "US Core Procedure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-servicerequest.html' for "US Core ServiceRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-servicerequest.html' for "US Core ServiceRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-procedure.html' for "US Core Procedure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See SDOH Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-provenance.html' for "US Core Provenance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-implantable-device.html' for "US Core Implantable Device Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-body-height.html' for "US Core Body Height Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-body-weight.html' for "US Core Body Weight Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-heart-rate.html' for "US Core Heart Rate Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-respiratory-rate.html' for "US Core Respiratory Rate Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-body-temperature.html' for "US Core Body Temperature Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-pulse-oximetry.html' for "US Core Pulse Oximetry Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'StructureDefinition-us-core-pulse-oximetry.html' for "US Core Pulse Oximetry Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'http://hl7.org/fhir/us/core/STU4/index.html' for "US Core" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'http://hl7.org/fhir/us/core/CodeSystem/us-core-category' for "http://hl7.org/fhir/us/core/CodeSystem/us-core-category" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core AllergyIntolerance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '#.html' for "See Foooooooooo Barrrrrr" cannot be resolved (valid targets: 55 targets) (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core AllergyIntolerance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core AllergyIntolerance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core AllergyIntolerance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CarePlan Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Simple Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Screening Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CarePlan Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Simple Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Screening Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core CareTeam Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DocumentReference Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'clinical-notes.html' for "See Clinical Notes Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Clinical Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Clinical Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Clinical Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Clinical Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Clinical Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Clinical Result Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Report and Note Exchange" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Encounter Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Encounter Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Encounter Diagnosis Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Encounter Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Encounter Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Encounter Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Goal Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Goal Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Goal Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Coverage Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Simple Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Screening Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Simple Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Screening Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Simple Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Screening Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Simple Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Screening Assessment Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core QuestionnaireResponse Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Pregnancy Status Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Pregnancy Intent Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Smoking Status Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Immunization Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Immunization Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Laboratory Result Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Specimen Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Laboratory Result Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Laboratory Result Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Laboratory Result Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Specimen Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Laboratory Result Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core DiagnosticReport Profile for Laboratory Results Reporting" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core MedicationRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core MedicationDispense Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Request Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'medication-list.html' for "See Medication List Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Request Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Request Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Request Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Medication Dispense Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Occupation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Birth Sex Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Birth Sex Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Race Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Ethnicity Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Tribal Affiliation Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Gender Identity Extension" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Sexual Orientation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Patient Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core RelatedPerson Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core RelatedPerson Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Occupation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Observation Occupation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Condition Problems and Health Concerns Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Procedure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core ServiceRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Procedure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core ServiceRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core ServiceRequest Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Procedure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'screening-and-assessments.html' for "See Screening and Assessments Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Provenance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'basic-provenance.html' for "See Basic Provenance Guidance" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Provenance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Provenance Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Implantable Device Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Implantable Device Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Vital Signs Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Blood Pressure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Blood Pressure Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Body Height Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Body Weight Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Heart Rate Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Respiratory Rate Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Body Temperature Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Pulse Oximetry Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Pulse Oximetry Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Pediatric BMI for Age Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Pediatric Weight for Height Observation Profile" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link '
+' for "US Core Pediatric Head Occipital Frontal Circumference Percentile Profile" cannot be resolved (NOTFOUND)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 32, col 6, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|5.0.1 (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 48, col 6, Info - This element does not match any known slice defined in the profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|5.0.1 (this may not be a problem, but you should check that it's not intended to match a slice) (INFORMATIONAL)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 16, col 81, Error - Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|0.1.0' does not resolve (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 32, col 6, Error - Constraint failed: provenance-1: 'onBehalfOf SHALL be present when Provenance.agent.who is a Practitioner or Device' (INVARIANT)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 49, col 8, Info - Reference to draft item http://terminology.hl7.org/CodeSystem/provenance-participant-type|0.1.0 (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 49, col 8, Info - Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|0.1.0 (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/example-targeted-provenance.json: line 1, col 2, Warning - Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|0.1.0' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles (STRUCTURE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/hl7east.json: line 6, col 79, Error - Canonical URL 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|0.1.0' does not resolve (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/examples/hl7east.json: line 1, col 2, Warning - Profile reference 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-location|0.1.0' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles (STRUCTURE)
@@ -142,81 +550,79 @@
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-simple-observation) does not match the URL (http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation) (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 0, col 0, Error - Duplicate Element id Observation.category (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 0, col 0, Error - Duplicate Element id Observation.category (BUSINESSRULE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 74250, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 74229, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 76031, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 76010, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 78946, Error - Duplicate id value 'Observation.category' (BUSINESSRULE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 79092, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 79071, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 80409, Error - Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 80712, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 80691, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 82150, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 82129, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 87322, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 87301, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 90191, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 90170, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 92557, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 92536, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 120145, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 120124, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137472, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137451, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137722, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137701, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138009, Error - Duplicate id value 'Observation.category' (BUSINESSRULE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138155, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138134, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138614, Error - Canonical URL 'http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138750, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138729, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139021, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139000, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139394, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139373, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 140152, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 140131, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 141610, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 141589, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 142537, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 142516, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 143997, Error - Constraint failed: sdf-16: 'All element definitions must have unique ids (snapshot)' (ids: Observation,Observation.id,Observation.meta,Observation.implicitRules,Observation.language,Observation.text,Observation.contained,Observation.extension,Observation.modifierExtension,Observation.identifier,Observation.basedOn,Observation.partOf,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.focus,Observation.encounter,Observation.effective[x],Observation.issued,Observation.performer,Observation.value[x],Observation.dataAbsentReason,Observation.interpretation,Observation.note,Observation.bodySite,Observation.method,Observation.specimen,Observation.device,Observation.referenceRange,Observation.referenceRange.id,Observation.referenceRange.extension,Observation.referenceRange.modifierExtension,Observation.referenceRange.low,Observation.referenceRange.high,Observation.referenceRange.type,Observation.referenceRange.appliesTo,Observation.referenceRange.age,Observation.referenceRange.text,Observation.hasMember,Observation.derivedFrom,Observation.component,Observation.component.id,Observation.component.extension,Observation.component.modifierExtension,Observation.component.code,Observation.component.value[x],Observation.component.dataAbsentReason,Observation.component.interpretation,Observation.component.referenceRange) (log:  (ids: Observation,Observation.id,Observation.meta,Observation.implicitRules,Observation.language,Observation.text,Observation.contained,Observation.extension,Observation.modifierExtension,Observation.identifier,Observation.basedOn,Observation.partOf,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.focus,Observation.encounter,Observation.effective[x],Observation.issued,Observation.performer,Observation.value[x],Observation.dataAbsentReason,Observation.interpretation,Observation.note,Observation.bodySite,Observation.method,Observation.specimen,Observation.device,Observation.referenceRange,Observation.referenceRange.id,Observation.referenceRange.extension,Observation.referenceRange.modifierExtension,Observation.referenceRange.low,Observation.referenceRange.high,Observation.referenceRange.type,Observation.referenceRange.appliesTo,Observation.referenceRange.age,Observation.referenceRange.text,Observation.hasMember,Observation.derivedFrom,Observation.component,Observation.component.id,Observation.component.extension,Observation.component.modifierExtension,Observation.component.code,Observation.component.value[x],Observation.component.dataAbsentReason,Observation.component.interpretation,Observation.component.referenceRange)) (INVARIANT)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 143997, Error - Constraint failed: sdf-17: 'All element definitions must have unique ids (diff)' (ids: Observation,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.effective[x],Observation.performer,Observation.value[x],Observation.derivedFrom) (log:  (ids: Observation,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.effective[x],Observation.performer,Observation.value[x],Observation.derivedFrom)) (INVARIANT)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 143997, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 74385, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 74364, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 76166, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 76145, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 79081, Error - Duplicate id value 'Observation.category' (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 79227, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 79206, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 80847, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 80826, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 82285, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 82264, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 87457, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 87436, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 90326, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 90305, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 92692, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 92671, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 120280, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 120259, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137607, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137586, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137857, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 137836, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138144, Error - Duplicate id value 'Observation.category' (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138290, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138269, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138885, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 138864, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139156, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139135, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139529, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 139508, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 140287, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 140266, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 141745, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 141724, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 142672, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 142651, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 144132, Error - Constraint failed: sdf-16: 'All element definitions must have unique ids (snapshot)' (ids: Observation,Observation.id,Observation.meta,Observation.implicitRules,Observation.language,Observation.text,Observation.contained,Observation.extension,Observation.modifierExtension,Observation.identifier,Observation.basedOn,Observation.partOf,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.focus,Observation.encounter,Observation.effective[x],Observation.issued,Observation.performer,Observation.value[x],Observation.dataAbsentReason,Observation.interpretation,Observation.note,Observation.bodySite,Observation.method,Observation.specimen,Observation.device,Observation.referenceRange,Observation.referenceRange.id,Observation.referenceRange.extension,Observation.referenceRange.modifierExtension,Observation.referenceRange.low,Observation.referenceRange.high,Observation.referenceRange.type,Observation.referenceRange.appliesTo,Observation.referenceRange.age,Observation.referenceRange.text,Observation.hasMember,Observation.derivedFrom,Observation.component,Observation.component.id,Observation.component.extension,Observation.component.modifierExtension,Observation.component.code,Observation.component.value[x],Observation.component.dataAbsentReason,Observation.component.interpretation,Observation.component.referenceRange) (log:  (ids: Observation,Observation.id,Observation.meta,Observation.implicitRules,Observation.language,Observation.text,Observation.contained,Observation.extension,Observation.modifierExtension,Observation.identifier,Observation.basedOn,Observation.partOf,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.focus,Observation.encounter,Observation.effective[x],Observation.issued,Observation.performer,Observation.value[x],Observation.dataAbsentReason,Observation.interpretation,Observation.note,Observation.bodySite,Observation.method,Observation.specimen,Observation.device,Observation.referenceRange,Observation.referenceRange.id,Observation.referenceRange.extension,Observation.referenceRange.modifierExtension,Observation.referenceRange.low,Observation.referenceRange.high,Observation.referenceRange.type,Observation.referenceRange.appliesTo,Observation.referenceRange.age,Observation.referenceRange.text,Observation.hasMember,Observation.derivedFrom,Observation.component,Observation.component.id,Observation.component.extension,Observation.component.modifierExtension,Observation.component.code,Observation.component.value[x],Observation.component.dataAbsentReason,Observation.component.interpretation,Observation.component.referenceRange)) (INVARIANT)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 144132, Error - Constraint failed: sdf-17: 'All element definitions must have unique ids (diff)' (ids: Observation,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.effective[x],Observation.performer,Observation.value[x],Observation.derivedFrom) (log:  (ids: Observation,Observation.status,Observation.category,Observation.category,Observation.category:us-core,Observation.code,Observation.subject,Observation.effective[x],Observation.performer,Observation.value[x],Observation.derivedFrom)) (INVARIANT)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 1, col 144132, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-test-obs.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-simple-observation vs http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-allergyintolerance) does not match the URL (http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance) (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 38385, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 38364, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 40084, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 40063, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 48236, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 48215, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 52132, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 52111, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 60217, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 60196, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 68757, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 68736, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76099, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76078, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76548, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76527, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77015, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76994, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77484, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77463, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77925, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77904, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78216, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78195, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78455, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 38694, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 38673, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 40393, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 40372, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 48545, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 48524, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 52441, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 52420, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 60526, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 60505, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 69066, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 69045, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76408, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76387, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76857, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 76836, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77324, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77303, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77793, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 77772, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78234, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78213, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78525, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78504, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 1, col 78764, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-allergyintolerance.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-allergyintolerance vs http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-birthsex.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-birthsex.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-birthsex) does not match the URL (http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex) (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-birthsex.json: line 1, col 17493, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-birthsex.json: line 1, col 17549, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-birthsex.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-birthsex vs http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-blood-pressure.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-blood-pressure.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-blood-pressure) does not match the URL (http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure) (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-blood-pressure.json: line 1, col 77840, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
@@ -334,84 +740,79 @@
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-blood-pressure.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-blood-pressure vs http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-vital-signs) does not match the URL (http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs) (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 0, col 0, Error - illegal attempt to change the binding on Observation.component.value[x] from required to extensible (BUSINESSRULE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 100567, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 100546, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 102275, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 102254, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 103988, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 103967, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 107959, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 107938, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 111749, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 111728, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 114491, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 114470, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 119765, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 119744, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 121353, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 121332, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 126522, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 126501, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 131204, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 131183, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 133281, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 133260, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 160145, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 160124, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 166729, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 166708, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 168181, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 168160, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 170454, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 170433, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 175854, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 175833, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 100817, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 100796, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 102525, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 102504, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 104238, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 104217, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 108209, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 108188, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 111999, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 111978, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 114741, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 114720, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 120015, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 119994, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 121603, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 121582, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 126772, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 126751, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 131454, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 131433, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 133531, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 133510, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 160395, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 160374, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 166979, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 166958, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 168431, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 168410, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 170704, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 170683, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176104, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176083, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176549, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176528, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176882, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176861, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177198, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177177, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177586, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177565, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177909, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177888, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178344, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178323, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178709, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178688, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 179125, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 179104, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 179951, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 179930, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180193, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180172, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180534, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180513, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180988, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180967, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 181940, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 181919, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 182066, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176354, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176333, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176799, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 176778, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177132, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177111, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177448, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177427, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177836, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 177815, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178159, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178138, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178594, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178573, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178959, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 178938, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 179375, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 179354, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180201, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180180, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180443, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180422, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180784, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 180763, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 181238, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 181217, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 182190, Error - The extension http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement could not be found so is not allowed here (STRUCTURE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 182169, Error - URL value 'http://hl7.org/fhir/us/core/StructureDefinition/uscdi-requirement' does not resolve (INVALID)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 1, col 182316, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 0, col 0, Info - The element Observation.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 0, col 0, Info - The element Observation.component.value[x] has a binding, and has multiple types subject to bindings ([dateTime, boolean, string, SampledData, Quantity, Period, Ratio, integer, time, Range, CodeableConcept]). The binding will apply to all the types (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/StructureDefinition-us-core-vital-signs.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/us-core-vital-signs vs http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/us-core-allergyintolerance-clinical-status) does not match the URL (http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status) (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/us-core-allergyintolerance-clinical-status) does not match the URL (http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status) (INVALID)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json: line 1, col 4655, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json: line 1, col 4649, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/searchparameter-us-core-allergyintolerance-clinical-status.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/SearchParameter/us-core-allergyintolerance-clinical-status vs http://hl7.org/fhir/us/core/SearchParameter/us-core-allergyintolerance-clinical-status (BUSINESSRULE)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json: line 0, col 0, Error - Conformance resource /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json - the canonical URL (http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment) does not match the URL (http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment) (INVALID)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json: line 1, col 7616, Error - When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension (BUSINESSRULE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json: line 0, col 0, Warning - Unknown System 'https://nahdo.org/sopt' specified, so Concepts and Filters can't be checked (Details: Resolved system https://nahdo.org/sopt (v1.0.0), but the definition is not complete) (BUSINESSRULE)
-/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json: line 0, col 0, Warning - Unable to expand imported value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.3591: Unable to expand imported value set: Error from http://tx.fhir.org/r4: Unable to provide support for code system https://nahdo.org/sopt version 9.2 (and Error from http://tx.fhir.org/r4: Unable to provide support for code system https://nahdo.org/sopt) (EXCEPTION)
+/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json: line 0, col 0, Info - The value set expansion is too large, and only a subset has been displayed (INFORMATIONAL)
 /home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/input/resources/valueset-us-core-source-of-payment.json: line 0, col 0, Error - URL Mismatch http://www.fhir.org/guides/healthedata1-sandbox/ValueSet/us-core-source-of-payment vs http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment (BUSINESSRULE)
 
-HealtheData_1Sandbox : Validation Results
-=========================================
-
-err = 388, warn = 12, info = 10
-IG Publisher Version: 1.5.6
-Generated Thu Dec 14 04:36:52 UTC 2023. FHIR version 4.0.1 for healthedata1-sandbox#0.1.0 (canonical = http://www.fhir.org/guides/healthedata1-sandbox)
+err = 386, warn = 10, info = 11
+IG Publisher Version: 1.6.4

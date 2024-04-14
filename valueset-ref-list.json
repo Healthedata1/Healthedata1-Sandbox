@@ -103,6 +103,21 @@
       "StructureDefinition-us-core-birthsex.html" : "US Core Birth Sex Extension"
     },
     {
+      "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-simple-observation-category",
+      "version" : "6.1.0",
+      "status" : "active",
+      "name" : "USCoreSimpleObservationCategory",
+      "title" : "US Core Simple Observation Category",
+      "description" : "Used to classify the context of a survey, screening or assessment for simple observations and may be used to assist with indexing and searching for appropriate instances.",
+      "systems" : [
+        "http://hl7.org/fhir/us/core/CodeSystem/us-core-category",
+        "http://terminology.hl7.org/CodeSystem/observation-category"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-us-core-simple-observation.html" : "US Core Simple Observation Profile"
+    },
+    {
       "url" : "http://hl7.org/fhir/us/core/ValueSet/us-core-source-of-payment",
       "version" : "0.1.0",
       "status" : "active",

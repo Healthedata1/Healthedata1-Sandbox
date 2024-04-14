@@ -17,7 +17,7 @@
   <name value="HealtheData_1Sandbox"/>
   <title value="Health eData 1 Sandbox"/>
   <status value="active"/>
-  <date value="2023-12-14T04:35:11+00:00"/>
+  <date value="2024-04-14T00:16:35+00:00"/>
   <publisher value="Health eData Inc"/>
   <contact>
     <telecom>
@@ -381,7 +381,7 @@
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-      <valueCode value="hl7.fhir.uv.tools#current"/>
+      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
