@@ -369,7 +369,7 @@ if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
   echo "==To run in command line mode, run the IG Publisher like this:=="
-  echo "===java -Xmx4G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
+  echo "===java -Xmx8G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
 (-validation-off) (-debug)
 parameters:==="
   echo "================================================================="
@@ -379,8 +379,8 @@ parameters:==="
   # echo "================================================================="
   # [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
-    echo java -Xmx6G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
-    java -Xmx6G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
+    echo java -Xmx8G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
+    java -Xmx8G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
 fi
 
   # else
@@ -406,14 +406,14 @@ fi
   #     echo "================================================================="
   #     echo === run most recent version of the igpublisher with watch on ===
   #     echo "================================================================="
-  #     java -Xmx4G -jar ${path} -ig ig.ini -watch -tx $NA
+  #     java -Xmx8G -jar ${path} -ig ig.ini -watch -tx $NA
 
   #   else
   #     echo "================================================================="
   #     echo "===run igpublisher just once \(no watch option\)==="
   #     echo "================================================================="
   #     echo java -jar ${path} -ig ig.ini -tx $NA
-  #     java -Xmx4G -jar ${path} -ig ig.ini -tx $NA
+  #     java -Xmx8G -jar ${path} -ig ig.ini -tx $NA
   #   fi
 
   # fi

@@ -523,3 +523,16 @@ currently using a bash script (/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/
 {% endunless %}
 {% endfor %}
 
+---
+
+### test issue
+
+|**Resource Type**|**Supported Profiles**|**Supported Searches**|**Supported**<br>\_includes|**Server**|
+| :-: | :-: | :-: | :-: | :-: |
+|[Patient](https://hl7.org/fhir/R4/patient.html)|ILCore Patient Profile|identifier<br/>_summary|-|קהילה|
+|[ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)|<p>LRC Lab Test Referral;</p><p>LRC Lab Test Referral Group</p>|identifier|-|בית חולים|
+|[Observation](https://hl7.org/fhir/R4/observation.html)|<p>LRC Test Result;</p><p>LRC Panel Lab Test Result</p>|identifier|-|בית חולים|
+|[DiagnosticReport](https://hl7.org/fhir/R4/diagnosticreport.html)|LRC Lab Test Report|identifier|<p>DiagnosticReport:based-on</p><p>DiagnosticReport:result</p>|בית חולים|
+{: .grid}
+
+
