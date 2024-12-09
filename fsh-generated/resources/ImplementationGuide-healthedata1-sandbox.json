@@ -255,6 +255,18 @@
       },
       {
         "code": "path-resource",
+        "value": "input/examples"
+      },
+      {
+        "code": "path-pages",
+        "value": "input/pagecontent"
+      },
+      {
+        "code": "path-pages",
+        "value": "fsh-generated/includes"
+      },
+      {
+        "code": "path-pages",
         "value": "input/intro-notes"
       },
       {

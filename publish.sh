@@ -5,10 +5,8 @@ trap "echo '================================================================='; 
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
 # trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
 # trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
-NA='http://tx.fhir.org'
-GEN_OFF=''
-VAL_OFF=''
-while getopts abcdefghiknopqrstvy option;
+
+while getopts abcdefghiklnopqrstvy option;
 do
  case "${option}"
  in
@@ -22,7 +20,7 @@ do
  h) VAL_OFF='-validation-off';;
  i) IG_PUBLISH=1;;
  k) NO_PROFILE=1;;
-#  l) LOAD_TEMPLATE=1;;
+ l) PAGE_LINKS=1;;
 #  m) MERGE_CSV=1;;
  n) NO_META=1;;
  o) PUB=1;;
@@ -41,12 +39,18 @@ do
  
 done
 
+# ========= Globals  =================
+NA='http://tx.fhir.org'
+GEN_OFF=''
+VAL_OFF=''
 inpath=input
+examples=$inpath/examples
 if [[ $IN_DOCS ]]; then
   outpath=docs
 else
   outpath=output
 fi
+# ===================================
 
 # if [[ $RECENT_YAML ]]; then
 #   YAML_JSON=1
@@ -80,6 +84,7 @@ echo "-g flag to turn off narrative generation to speed up build times = $GEN_OF
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
+echo "-l flag to add or update the page-link-list to the input/includes folder (run after successful build before new build) = $PAGE_LINKS"
 # echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"  # no longer needed
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
@@ -117,6 +122,15 @@ excel_file=${excel_file%.*}.xlsx
 pyexcel transcode $csv_file $excel_file
 echo $excel_file
 done
+fi
+
+if [[ $PAGE_LINKS ]]; then
+echo "================================================================="
+echo Add or update the page-link-list to the input/includes folder 
+echo SINCE IT READS THE PAGES DATA FILES, RUN AFTER SUCCESSFUL BUILD AND BEFORE SUSHI 
+echo "jq -r \'to_entries[] | \"[\(.value | .title)]: \(.key)\"\' temp/pages/_data/pages.json > input/includes/page-link-list.md"
+echo "================================================================="
+jq -r 'to_entries[] | "[\(.value | .title)]: \(.key)"' temp/pages/_data/pages.json > input/includes/page-link-list.md
 fi
 
 # if [[ $COPY_SPS ]]; then
@@ -166,16 +180,22 @@ echo "========================================================================"
 echo "delete all yaml created json files is resources directory and"
 echo "convert all yml files in resources-yaml directory to json files"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
+echo "rm -f $inpath/resources/StructureDefinition*.json"
+echo "rm -f $inpath/resources/OperationDefinition*.json"
+echo "rm -f $inpath/resources/CodeSystem*.json"
+echo "rm -f $inpath/resources/ValueSet*.json"
+echo "========================================================================"
+
 rm -f $inpath/resources/StructureDefinition*.json
-sleep 3
 rm -f $inpath/resources/OperationDefinition*.json
-sleep 3
-rm -f $inpath/resources/SearchParameter*.json
-sleep 3
 rm -f $inpath/resources/CodeSystem*.json
-sleep 3
 rm -f $inpath/resources/ValueSet*.json
-sleep 3
+
+rm  -f $inpath/resources/structuredefinition*.json
+rm  -f $inpath/resources/operationdefinition*.json
+rm  -f $inpath/resources/codesystem*.json
+rm  -f $inpath/resources/valueset*.json
+
 for yaml_file in $(find $inpath/resources-yaml/*.yml -type f) # -mtime -$days)
 do
 echo convert $yaml_file to ...
@@ -189,36 +209,39 @@ fi
 
 if [[ $YAML_JSON ]] && ls -U $inpath/examples-yaml/*.yml; then
 echo "========================================================================"
-echo "delete all json files is examples directory and"
-echo "convert all yml files in examples-yaml directory to examples/json files"
+echo "delete all json files in $examples and"
+echo "convert all yml files in examples-yaml directory to json files and move to $examples"
 echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-rm -f $inpath/examples/*.json
+echo "rm -f $examples/*.json"
+echo #========================================================================"
+
+rm -f $examples/*.json
 for yaml_file in $(find $inpath/examples-yaml/*.yml -type f) # -mtime -$days)
 do
 echo convert $yaml_file to ...
-json_file=$inpath/examples/$(basename $yaml_file)
+json_file=$examples/$(basename $yaml_file)
 json_file=${json_file%.*}.json
 python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
 echo $json_file
 done
 fi
 
-if [[ $YAML_JSON ]] && ls -U $inpath/includes-yaml/*.yml; then
-echo "======================================================================="
-echo "delete all json files is includes directory and"
-echo "convert all yml files in includes-yaml directory to json files"
-echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-rm -f $inpath/includes/*.json
-for yaml_file in $(find $inpath/includes-yaml/*.yml -type f) # -mtime -$days)
-do
-echo convert $yaml_file to ...
-json_file=$inpath/includes/$(basename $yaml_file)
-json_file=${json_file%.*}.json
-python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
-echo $json_file
-done
-echo "========================================================================"
-fi
+# if [[ $YAML_JSON ]] && ls -U $inpath/includes-yaml/*.yml; then
+# echo "======================================================================="
+# echo "delete all json files is includes directory and"
+# echo "convert all yml files in includes-yaml directory to json files"
+# echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
+# rm -f $inpath/includes/*.json
+# for yaml_file in $(find $inpath/includes-yaml/*.yml -type f) # -mtime -$days)
+# do
+# echo convert $yaml_file to ...
+# json_file=$inpath/includes/$(basename $yaml_file)
+# json_file=${json_file%.*}.json
+# python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
+# echo $json_file
+# done
+# echo "========================================================================"
+# fi
 
 if [[ $UPDATE ]]; then
 puburl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
@@ -236,12 +259,6 @@ curl -L $puburl -o $path1 || curl -L $puburl -o $path3
 echo "===========================   Done  ===================================="
 sleep 3
 fi
-
-# default is to use local my_framework as template
-#template=$PWD/my_framework
-#if [[ $LOAD_TEMPLATE ]]; then
-#template=hl7.fhir.template
-#fi
 
 #if [[ $TEST_TEMPLATE ]]; then
 #template=$TEST_TEMPLATE
@@ -282,15 +299,13 @@ if [[ $SUSHI ]]; then
   echo "================================================================="
 fi
 
-
-
-
-if [[ $NO_META ]]; then
+if [[ $NO_META ]]
+then
+  if compgen -G "$examples/*.json" = /dev/null
+  then
     echo "================================================================="
-    echo "===remove the meta extension element from all the examples==="
+    echo "===remove the meta extension element from all the examples in $examples==="
     echo "================================================================="
-    examples=./input/examples
-    echo "======== example folder is $examples ==========="
     tmp=$(mktemp -d -d ./input/_examples)
     # echo "========= tmp is $tmp ==========="
     for file in $examples/*.json
@@ -298,38 +313,51 @@ if [[ $NO_META ]]; then
         # echo "file is $file"
         # echo "basename is $(basename $file)"
                 jq 'if (.meta.profile or .meta.lastUpdated) then del(.meta.extension) else del(.meta) end' < $file > $tmp/$(basename $file)
-
       done
     mv -f $tmp/*.json $examples
     rm -rf $tmp
+  else
+      echo "================================================================="
+      echo "===no files in the $examples folder ==="
+      echo "================================================================="
+  fi
 fi
 
-if [[ $NO_PROFILE ]]; then
-    echo "================================================================="
-    echo "===remove the meta profile element from all the examples==="
-    echo "================================================================="
-    examples=./input/examples
-    echo "======== example folder is $examples ==========="
+if [[ $NO_PROFILE ]]
+then
+  if compgen -G "$examples/*.json" = /dev/null
+  then
+    echo "=========================================================================="
+    echo "===remove the meta profile element from all the examples in $examples ==="
+    echo "===side effect is removal of meta extension if no source or lastupdated?  ======"
+    echo "========================================================================="
     tmp=$(mktemp -d -d ./input/_examples)
     # echo "========= tmp is $tmp ==========="
     for file in $examples/*.json
       do
-        # echo "file is $file"
-        # echo "basename is $(basename $file)"
-                jq 'if (.meta.extension or .meta.lastUpdated) then del(.meta.profile) else del(.meta) end' < $file > $tmp/$(basename $file)
-
+      jq  'walk(if type=="object" and  (.source or .lastUpdated)
+        then del(.profile)
+        else if type=="object" and .meta.profile 
+        then del(.meta)
+        else . end
+         end)' < $file > $tmp/$(basename $file)
       done
     mv -f $tmp/*.json $examples
     rm -rf $tmp
+  else
+      echo "================================================================="
+      echo "=== no files in the $examples folder ==="
+      echo "================================================================="
+  fi
 fi
+
+
 
 if [[ $APP_VERSION ]]; then
     echo "================================================================="
-    echo "=== append current version to each json example file meta profiles ==="
-    echo "=== and update IG.json file exampleCanonicals to teh current version =="
+    echo "=== append current version to each json example file meta profiles is $examples ==="
+    echo "=== and update IG.json file example Canonicals to the current version =="
     echo "================================================================="
-    examples=$inpath/examples
-    echo "======== example folder is $examples ==========="
     IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
     echo "========= IGJSON is $IGJSON ==========="
     tmp=$(mktemp -d -d $inpath/_examples)
@@ -369,7 +397,7 @@ if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
   echo "==To run in command line mode, run the IG Publisher like this:=="
-  echo "===java -Xmx8G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
+  echo "===java -Xmx12G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
 (-validation-off) (-debug)
 parameters:==="
   echo "================================================================="
@@ -379,8 +407,8 @@ parameters:==="
   # echo "================================================================="
   # [[ -d input/fsh ]] && mv input/fsh input/_fsh
 
-    echo java -Xmx8G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
-    java -Xmx8G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
+    echo java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
+    java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
 fi
 
   # else
