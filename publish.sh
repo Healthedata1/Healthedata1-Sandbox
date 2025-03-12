@@ -3,10 +3,8 @@
 set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
-# trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" EXIT
-# trap "echo '=== rename the input/_fsh folder to input/fsh  ==='; mv input/_fsh input/fsh" ERR
 
-while getopts abcdefghiklnopqrstvy option;
+while getopts abcdefghiklnopqrstvxy option;
 do
  case "${option}"
  in
@@ -21,7 +19,6 @@ do
  i) IG_PUBLISH=1;;
  k) NO_PROFILE=1;;
  l) PAGE_LINKS=1;;
-#  m) MERGE_CSV=1;;
  n) NO_META=1;;
  o) PUB=1;;
  p) UPDATE=1;;
@@ -29,12 +26,10 @@ do
  r) CLEAR_JSON=1;;
  s) SUSHI=1;;
  t) NA='N/A';;
-#  u) UPDATE_IGJSON=1;;
  v) VIEW_OUTPUT=1;;
-#  w) WATCH=1;;
-#  x) RECENT_YAML=1;;
+ x) REM_HIGHLIGHT=1;;
  y) YAML_JSON=1;;
-#  z) ZIP_SCH=1;;
+
  esac
  
 done
@@ -50,17 +45,14 @@ if [[ $IN_DOCS ]]; then
 else
   outpath=output
 fi
+# Defines the strings to remove
+my_strings=(
+    '<span class="bg-success" markdown="1">'
+    '</span><!-- new-content -->'
+    '<div class="bg-success" markdown="1">'
+    '</div><!-- new-content -->'
+)
 # ===================================
-
-# if [[ $RECENT_YAML ]]; then
-#   YAML_JSON=1
-#   All_YAML=0
-#   days=1
-# elif [[ $YAML_JSON ]]; then
-#   All_YAML=1
-#   days=400 # 400 days is about 1 year
-# fi
-
 
 echo "================================================================="
 echo "-d flag if output in "docs" folder =  $IN_DOCS"
@@ -85,22 +77,17 @@ echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
 echo "-l flag to add or update the page-link-list to the input/includes folder (run after successful build before new build) = $PAGE_LINKS"
-# echo "-m merge all StructureDefinition csv files with single header = $MERGE_CSV"  # no longer needed
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
-echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
+echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"pig
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-s parameter for running only sushi = $SUSHI"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
-# echo "-u parameter for updating ig.json file (until SUSHI catches up)= $UPDATE_IGJSON"  # no longer needed
 echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
-# echo "-x tranform all yaml that changed in the last day to json files  = $RECENT_YAML"
+echo "-x remove change highlighting from all markdown files =  $REM_HIGHLIGHT"
 echo "-y delete all json files and tranform all yaml files to json files = $All_YAML"
-# echo "-z zip up all schematrons = $ZIP_SCH"   # no longer needed
-#echo "-w parameter for using watch on igpublisher from source default is off = $WATCH"
-#echo '-l parameter for downloading HL7 ig template from source = ' $LOAD_TEMPLATE
-#echo '-u parameter for downloading test ig template from source or file= ' $TEST_TEMPLATE
+
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
@@ -124,6 +111,34 @@ echo $excel_file
 done
 fi
 
+if [[ $REM_HIGHLIGHT ]]; then
+echo "================================================================="
+echo "remove change highlighting from all markdown files"
+echo "================================================================="
+find "$inpath" -type f -name "*.md" | while read -r file_path; do
+    # Skip files with "generator" or "tabler" in their names
+    if [[ "$file_path" == *"generator"* || "$file_path" == *"tabler"* ]]; then
+        echo "Skipping file: $file_path"
+        continue
+    fi
+
+    # Process each file
+    temp_file=$(mktemp)
+    cp "$file_path" "$temp_file"
+    for string_to_remove in "${my_strings[@]}"; do
+        # Use sed to remove the string from the file (macOS-compatible)
+        sed -i '' "s|$string_to_remove||g" "$file_path"
+    done
+    if ! cmp -s "$file_path" "$temp_file"; then
+        echo "Tags removed successfully from file: $file_path!"
+    fi
+done
+echo "================================================================="
+echo "Tags removed successfully. Check for any remaining tags manually"
+echo " and clear the new stuff file..."
+echo "================================================================="
+fi
+
 if [[ $PAGE_LINKS ]]; then
 echo "================================================================="
 echo Add or update the page-link-list to the input/includes folder 
@@ -132,48 +147,6 @@ echo "jq -r \'to_entries[] | \"[\(.value | .title)]: \(.key)\"\' temp/pages/_dat
 echo "================================================================="
 jq -r 'to_entries[] | "[\(.value | .title)]: \(.key)"' temp/pages/_data/pages.json > input/includes/page-link-list.md
 fi
-
-# if [[ $COPY_SPS ]]; then
-# echo "================================================================="
-# echo copy searchparameter excel sheet to data folder as csv file for creating SP artifacts
-# echo MAKE SURE THE SP SHEET IS UNFILTERED IN EXCEL BEFORE RUNNING THIS COMMAND
-# echo "================================================================="
-# echo "================================================================="
-# echo "=== hit 'Y' to confirm that the sheet is unfiltered ===="
-# echo "=== else 'N' or ctrl-c to exit ==="
-# echo "================================================================="
-
-# read var1
-
-# echo "================================================================="
-# echo "==================== you typed '$var1' ============================"
-# echo "================================================================="
-# if [ $var1 == "Y" ]; then
-# echo "================================================================="
-# echo "=== pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv ==="
-# pyexcel transcode --sheet-name sps input/resources_spreadsheets/uscore-server.xlsx input/data/uscore-sps.csv
-# fi
-# fi
-
-# if [[ $CLEAR_JSON ]]; then
-# echo "================================================================="
-# echo "remove all generated files in /examples and /resources folders"
-# echo "=====MAKE SURE YOU TO DO THIS BEFORE CONTINUING===="
-# echo "================================================================="
-# echo "================================================================="
-# echo "=== hit 'Y' to continue ===="
-# echo "=== else 'N' or ctrl-c to exit ==="
-# echo "================================================================="
-
-# read var1
-
-# echo "================================================================="
-# echo "==================== you typed '$var1' ============================"
-# echo "================================================================="
-# if [ $var1 == "Y" ]; then
-# rm  -f $inpath/resources/*.* $inpath/examples/*.*
-# fi
-# fi
 
 if [[ $YAML_JSON ]] && ls -U $inpath/resources-yaml/*.yml; then
 echo "========================================================================"
@@ -226,23 +199,6 @@ echo $json_file
 done
 fi
 
-# if [[ $YAML_JSON ]] && ls -U $inpath/includes-yaml/*.yml; then
-# echo "======================================================================="
-# echo "delete all json files is includes directory and"
-# echo "convert all yml files in includes-yaml directory to json files"
-# echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-# rm -f $inpath/includes/*.json
-# for yaml_file in $(find $inpath/includes-yaml/*.yml -type f) # -mtime -$days)
-# do
-# echo convert $yaml_file to ...
-# json_file=$inpath/includes/$(basename $yaml_file)
-# json_file=${json_file%.*}.json
-# python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
-# echo $json_file
-# done
-# echo "========================================================================"
-# fi
-
 if [[ $UPDATE ]]; then
 puburl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 path1=~/Downloads/org.hl7.fhir.igpublisher.jar
@@ -259,17 +215,6 @@ curl -L $puburl -o $path1 || curl -L $puburl -o $path3
 echo "===========================   Done  ===================================="
 sleep 3
 fi
-
-#if [[ $TEST_TEMPLATE ]]; then
-#template=$TEST_TEMPLATE
-#fi
-
-#echo "================================================================="
-#echo === load the hl7 template by setting $PWD/ig.ini ===
-#echo === template parameter to .................................... ===
-#echo === $template ===
-#echo "================================================================="
-#sed -i'.bak' -e "s|^template = .*|template = ${template}|" $PWD/ig.ini
 
 echo "================================================================="
 echo getting path = ...................................................
@@ -379,20 +324,6 @@ if [[ $APP_VERSION ]]; then
     rm -rf $tmp
 fi
 
-# if [[ $UPDATE_IGJSON ]]; then
-#   echo "==============================================================================="
-#   echo "================ move the ig-link-dependency extensions from ==================" 
-#   echo "============ImplementationGuide to ImplementationGuide.definition ============="
-#   echo "==============================================================================="
-#   IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
-#   echo "========= IGJSON is $IGJSON ==========="
-#   tmp=$(mktemp -d -d $inpath/_examples)
-#   jq --arg url "http://hl7.org/fhir/tools/StructureDefinition/ig-link-dependency" '.definition += { "extension": [.extension[] | select(.url == $url)] }  | del(.extension[] | select(.url == $url))' $IGJSON > $tmp/ig.json
-#   mv $tmp/ig.json $IGJSON
-#   rm -rf $tmp
-# fi
-
-
 if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
@@ -402,51 +333,10 @@ if [[ $IG_PUBLISH ]]; then
 parameters:==="
   echo "================================================================="
 
-  # echo "================================================================="
-  # echo "=== rename the 'input/fsh' folder to 'input/_fsh'  ==="
-  # echo "================================================================="
-  # [[ -d input/fsh ]] && mv input/fsh input/_fsh
-
     echo java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
     java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
 fi
 
-  # else
-  #   echo "================================================================="
-  #   echo "=== run sushi and igpublisher (default) ===="
-  #   echo "================================================================="
-  #   echo "start sushi ......................................................"
-  #   rm -rf output docs
-  #   sushi .
-  #   inpath=fsh-generated/resources
-  #   echo "========================================================================"
-  #   echo "convert ig.json to ig.yml and copy to input/data"
-  #   echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-  #   for ig_json in $inpath/ImplementationGuide*.json
-  #     do
-  #     echo "========== ig_json = $ig_json =========="
-  #     ig_yaml='input/data/ig.yml'
-  #     python3.7 -c 'import sys, yaml, json, datetime; yaml.dump(json.load(sys.stdin), sys.stdout, indent=2, sort_keys=False)' < $ig_json > $ig_yaml
-  #     echo "========== ig_yaml = $ig_yaml =========="
-  #     done
-
-  #   if [[ $WATCH ]]; then
-  #     echo "================================================================="
-  #     echo === run most recent version of the igpublisher with watch on ===
-  #     echo "================================================================="
-  #     java -Xmx8G -jar ${path} -ig ig.ini -watch -tx $NA
-
-  #   else
-  #     echo "================================================================="
-  #     echo "===run igpublisher just once \(no watch option\)==="
-  #     echo "================================================================="
-  #     echo java -jar ${path} -ig ig.ini -tx $NA
-  #     java -Xmx8G -jar ${path} -ig ig.ini -tx $NA
-  #   fi
-
-  # fi
-
-# fi
 
 if [[ $TERMINOLOGY_TABLES ]]; then
     echo "================================================================="
@@ -456,30 +346,6 @@ if [[ $TERMINOLOGY_TABLES ]]; then
     cp $outpath/valueset-ref-all-list.csv $inpath/data
     cp $outpath/codesystem-ref-all-list.csv $inpath/data
 fi
-
-# if [[ $ZIP_SCH ]]; then
-#     echo "================================================================="
-#     echo "===zip up schematrons and put in==="
-#     echo "===$outpath/input/images/schematrons.zip file for downloads==="
-#     echo "===zip -j input/images/schematrons.zip $outpath/*.sch==="
-#     echo "================================================================="
-#     zip -j input/images/schematrons.zip $outpath/*.sch
-# fi
-
-# if [[ $MERGE_CSV ]]; then
-#     echo "================================================================="
-#     echo "===merge all StructureDefinition CSV and output as Excel too  ==="
-#     echo "Python 3.7 and pyexcel-cli, pyexcel, and pyexcel-xlsx are required"
-#     echo "===require header file in $outpath/input/images-source/all_profiles.csv file ==="
-#     echo "===creates $outpath/input/images/all_profiles.csv file ==="
-#     echo "===creates $outpath/input/images/all_profiles.xlsx file ==="
-#     echo "================================================================="
-#     cp input/images-source/all_profiles.csv input/images/all_profiles.csv
-#     echo "===find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv==="
-#     find $outpath -name StructureDefinition-*.csv -exec tail -qn +2 {} + >> input/images/all_profiles.csv
-#     echo "===pyexcel merge input/images/all_profiles.csv input/images all_profiles.xlsx==="
-#     pyexcel merge input/images/all_profiles.csv input/images/all_profiles.xlsx
-# fi
 
 if [[ $VIEW_OUTPUT ]]; then
     echo "=============== open $PWD/$outpath/index.html ================"
