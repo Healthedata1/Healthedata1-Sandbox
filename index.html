@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
   	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
       <!-- Placeholder for child template CSS declarations -->
 
     <script src="fhir-table-scripts.js" type="text/javascript"> </script>
@@ -38,11 +39,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
+
           <!-- Placeholder for child template header declarations -->
 
 
@@ -235,7 +238,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       "url" : "http://hl7.org/fhir/StructureDefinition/instance-description",
       "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
     }],
-    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
   },
   "text" : {
     "status" : "extensions",
@@ -450,7 +453,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>using http:</p>
 
-<p><a name="l425">​</a><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core</a></p>
+<p><a name="l431">​</a><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core</a></p>
 
 <p><a href="http://hl7.org/fhir/">FHIR</a></p>
 
@@ -468,7 +471,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p>using http:</p>
 
 <ul>
-  <li><a name="l459">​</a><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core</a></li>
+  <li><a name="l465">​</a><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core</a></li>
   <li><a href="http://hl7.org/fhir/">FHIR</a></li>
 </ul>
 
@@ -491,7 +494,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </thead>
   <tbody>
     <tr>
-      <td><a name="l503">​</a><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core</a></td>
+      <td><a name="l509">​</a><a href="http://hl7.org/fhir/us/core/STU4/index.html">US Core</a></td>
     </tr>
     <tr>
       <td><a href="http://hl7.org/fhir/">FHIR</a></td>
@@ -525,26 +528,23 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <!-- $$2$$ --> foo</p>
 <h3 id="ig-dependencies">IG Dependencies</h3>
 
-<p>This IG Contains the following dependencies on other IGs.&lt;div&gt;&lt;table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"&gt;&lt;tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<span title="Implementation Guide Reference">IG</span>&lt;/th&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<span title="The NPM Package Id">Package</span>&lt;/th&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<span title="The version of FHIR that the package is based on">FHIR</span>&lt;/th&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<span title="Explains why this dependency exists">Comment</span>&lt;/th&gt;&lt;/tr&gt;&lt;tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"&gt;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <span title="Canonical: http://www.fhir.org/guides/healthedata1-sandbox">Health eData 1 Sandbox</span>&lt;/td&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<a href="https://simplifier.net/packages/healthedata1-sandbox/0.1.0">healthedata1-sandbox#0.1.0</a>&lt;/td&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<a href="http://hl7.org/fhir/R4">R4</a>&lt;/td&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;&lt;/td&gt;&lt;/tr&gt;</p>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://terminology.hl7.org/5.3.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/5.3.0">hl7.terminology.r4#5.3.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on HL7 Terminology</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/extensions/1.0.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/1.0.0">hl7.fhir.uv.extensions.r4#1.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on the HL7 Extension Pack</td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/us/core/STU5.0.1" title="Canonical: http://hl7.org/fhir/us/core">US Core Implementation Guide</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.us.core/5.0.1">hl7.fhir.us.core#5.0.1</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://terminology.hl7.org/3.1.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/3.1.0">hl7.terminology.r4#3.1.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/uv/bulkdata/STU2" title="Canonical: http://hl7.org/fhir/uv/bulkdata">Bulk Data Access IG</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.bulkdata/2.0.0">hl7.fhir.uv.bulkdata#2.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/smart-app-launch/STU2" title="Canonical: http://hl7.org/fhir/smart-app-launch">SMART App Launch</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.smart-app-launch/2.0.0">hl7.fhir.uv.smart-app-launch#2.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://fhir.org/packages/us.nlm.vsac" title="Canonical: http://fhir.org/packages/us.nlm.vsac"></a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/us.nlm.vsac/0.7.0">us.nlm.vsac#0.7.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/uv/sdc/STU3" title="Canonical: http://hl7.org/fhir/uv/sdc">Structured Data Capture</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.sdc/3.0.0">hl7.fhir.uv.sdc#3.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIZgEiYEgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAIElEQVQ4y2P8//8/AyWAiYFCMGrAqAGjBowaMGoAAgAALL0DKYQ0DPIAAAAASUVORK5CYII=" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/R4" title="Canonical: http://hl7.org/fhir">FHIR R4 package : Examples</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.r4.examples/4.0.1">hl7.fhir.r4.examples#4.0.1</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://fhir.org/packages/us.nlm.vsac" title="Canonical: http://fhir.org/packages/us.nlm.vsac"></a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/us.nlm.vsac/0.9.0">us.nlm.vsac#0.9.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://fhir.org/packages/us.cdc.phinvads" title="Canonical: http://fhir.org/packages/us.cdc.phinvads"></a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/us.cdc.phinvads/0.12.0">us.cdc.phinvads#0.12.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
-<p>&lt;/table&gt;&lt;/div&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;<b>Package hl7.fhir.uv.extensions.r4#1.0.0</b>&lt;/p&gt;</p>
-<p>This IG defines the global extensions - the ones defined for everyone. These extensions are always in scope wherever FHIR is being used (built Sun, Mar 26, 2023 08:46+1100+11:00)</p>
+<p>This IG Contains the following dependencies on other IGs.&lt;div&gt;&lt;table border="0" fhir="generated-heirarchy" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;" id="dep"&gt;&lt;tr fhir="generated-heirarchy" style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"&gt;<span title="Implementation Guide Reference">IG</span>&lt;/th&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"&gt;<span title="The NPM Package Id">Package</span>&lt;/th&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"&gt;<span title="The version of FHIR that the package is based on">FHIR</span>&lt;/th&gt;&lt;th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; padding-top: 3px; padding-bottom: 3px" class="hierarchy"&gt;<span title="Explains why this dependency exists">Comment</span>&lt;/th&gt;&lt;/tr&gt;&lt;tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="a"&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"&gt;<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <span title="Canonical: http://www.fhir.org/guides/healthedata1-sandbox">Health eData 1 Sandbox</span>&lt;/td&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<a href="https://simplifier.net/packages/healthedata1-sandbox/0.1.0">healthedata1-sandbox#0.1.0</a>&lt;/td&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;<a href="http://hl7.org/fhir/R4">R4</a>&lt;/td&gt;&lt;td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"&gt;&lt;/td&gt;&lt;/tr&gt;</p>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="aa"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://terminology.hl7.org/6.2.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/6.2.0">hl7.terminology.r4#6.2.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on HL7 Terminology</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ab"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/extensions/5.2.0" title="Canonical: http://hl7.org/fhir/extensions">FHIR Extensions Pack</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.extensions.r4/5.2.0">hl7.fhir.uv.extensions.r4#5.2.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Automatically added as a dependency - all IGs depend on the HL7 Extension Pack</td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ac"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxMAAAsTAQCanBgAAACwSURBVDhP7ZLBDsIwCIaLZz34xG3f2cQYo5UfYalJoY07ePFL4GcbpZSVWmvJgwifG+njkLDACgfVIehAQ5ffdMDvxSS2Dmqty62UUmS1rIWD8UuWd9xxVt1AnoaSGx6Buap+0G80K3BTtbtwhLPZQL0CSIA9OwUXON7dZkBeASTAThb3bffMjnCHGy00ZgUeqi5f3YOcsw01vsqYMrMljwgLrBDOwP53xL+D3R2k9ALHsmr3Yu73+gAAAABJRU5ErkJggg==" onclick="tableRowAction(this)" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/us/core/STU5.0.1" title="Canonical: http://hl7.org/fhir/us/core">US Core Implementation Guide</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.us.core/5.0.1">hl7.fhir.us.core#5.0.1</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="aca"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://terminology.hl7.org/3.1.0" title="Canonical: http://terminology.hl7.org">HL7 Terminology (THO)</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.terminology.r4/3.1.0">hl7.terminology.r4#3.1.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="acb"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/uv/bulkdata/STU2" title="Canonical: http://hl7.org/fhir/uv/bulkdata">Bulk Data Access IG</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.bulkdata/2.0.0">hl7.fhir.uv.bulkdata#2.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="acc"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/smart-app-launch/STU2" title="Canonical: http://hl7.org/fhir/smart-app-launch">SMART App Launch</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.smart-app-launch/2.0.0">hl7.fhir.uv.smart-app-launch#2.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="acd"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMUlEQVR4Xu3LsQ0AIAwDwezq/WcAaqhSoDRn6ZqXXEmq42zdrWP6DwAAzHkCAADALxtMUUAsbN3VPQAAAABJRU5ErkJggg==)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://fhir.org/packages/us.nlm.vsac" title="Canonical: http://fhir.org/packages/us.nlm.vsac">VSAC</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/us.nlm.vsac/0.7.0">us.nlm.vsac#0.7.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ace"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://hl7.org/fhir/uv/sdc/STU3" title="Canonical: http://hl7.org/fhir/uv/sdc">Structured Data Capture</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/hl7.fhir.uv.sdc/3.0.0">hl7.fhir.uv.sdc#3.0.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7" id="ad"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALUlEQVR4Xu3IoREAIAwEwfT6/ddA0GBAxO3NrLlKUj9263wAAAAvrgEAADClAVWFQIBRHMicAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://fhir.org/packages/us.nlm.vsac" title="Canonical: http://fhir.org/packages/us.nlm.vsac">VSAC</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/us.nlm.vsac/0.17.0">us.nlm.vsac#0.17.0</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr fhir="generated-heirarchy" style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white" id="ae"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/home/runner/work/Healthedata1-Sandbox/Healthedata1-Sandbox/temp/pagesdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAALElEQVR4Xu3IsQ0AIAwEsez6+89AqKGGJj7JzVWS+mm3zgcAAMxwDQAAgFcaYAVAgNGLTjgAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> <a href="http://fhir.org/packages/us.cdc.phinvads" title="Canonical: http://fhir.org/packages/us.cdc.phinvads">PHINVads</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://simplifier.net/packages/us.cdc.phinvads/0.12.0">us.cdc.phinvads#0.12.0</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4">R4</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<p>&lt;/table&gt;&lt;/div&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;<b>Package hl7.fhir.uv.extensions.r4#5.2.0</b>&lt;/p&gt;</p>
+<p>This IG defines the global extensions - the ones defined for everyone. These extensions are always in scope wherever FHIR is being used (built Mon, Feb 10, 2025 21:45+1100+11:00)</p>
 <p>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;<b>Package hl7.fhir.uv.bulkdata#2.0.0</b>&lt;/p&gt;</p>
 <p>FHIR based approach for exporting large data sets from a FHIR server to a client application (built Fri, Nov 26, 2021 05:56+1100+11:00)</p>
-<p>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;<b>Package hl7.fhir.r4.examples#4.0.1</b>&lt;/p&gt;</p>
-<p>Example resources in the R4 version of the FHIR standard</p>
 <p>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;<b>Package hl7.fhir.uv.sdc#3.0.0</b>&lt;/p&gt;</p>
-<p>The SDC specification provides an infrastructure to standardize the capture and expanded use of patient-level data collected within an EHR.<br/>This includes two components:<br/>* Support more sophisticated questionnaire/form use-cases such as those needed for research, oncology, pathology and other clinical domains.<br/>*Support pre-population and auto-population of EHR data into forms/questionnaires for uses outside direct clinical care (patient safety, adverse event reporting, public health reporting, etc.). (built Tue, Mar 8, 2022 18:32+0000+00:00)</p>
+<p>The SDC specification provides an infrastructure to standardize the capture and expanded use of patient-level data collected within an EHR.<br/>This includes two components:<br/>* Support more sophisticated questionnaire/form use-cases such as those needed for research, oncology, pathology and other clinical domains.<br/>*Support pre-population and auto-population of EHR data into forms/questionnaires for uses outside direct clinical care (patient safety, adverse event reporting, public health reporting, etc.). (built Tue, Mar 8, 2022 18:36+0000+00:00)</p>
 <p>&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;table class="grid"&gt;&lt;tr&gt;&lt;td&gt;&lt;p&gt;<b>Package hl7.fhir.us.core#5.0.1</b>&lt;/p&gt;</p>
 <p>The US Core Implementation Guide is based on FHIR Version R4 and defines the minimum conformance requirements for accessing patient data. The Argonaut pilot implementations, ONC 2015 Edition Common Clinical Data Set (CCDS), and ONC U.S. Core Data for Interoperability (USCDI) v1 provided the requirements for this guide. The prior Argonaut search and vocabulary requirements, based on FHIR DSTU2, are updated in this guide to support FHIR Version R4. This guide was used as the basis for further testing and guidance by the Argonaut Project Team to provide additional content and guidance specific to Data Query Access for purpose of ONC Certification testing. These profiles are the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by DAF-Research, QI-Core, and CIMI. Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
 These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the Office of the National Coordinator for Health Information Technology (ONC) sponsored Data Access Framework (DAF) project. For more information on how DAF became US Core see the US Core change notes. (built Wed, Jun 22, 2022 19:44+0000+00:00)</p>
@@ -560,37 +560,37 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
   This publication includes IP covered under the following statements.
 &lt;ul&gt;
-&lt;li&gt;Copyright HL7. Licensed under creative commons public domain&lt;div id="ipp_1" onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_1" style="display: none"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html"&gt;identifierType&lt;/a&gt;: &lt;a href="Patient-deceased-example.html"&gt;Patient/deceased-example&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;Most of the information on the CDC and ATSDR websites is not subject to copyright, is in the public domain, and may be freely used or reproduced without obtaining copyright permission.For information and exceptions regarding use of CDC material please see &lt;a href="https://www.cdc.gov/other/agencymaterials.html"&gt;https://www.cdc.gov/other/agencymaterials.html&lt;/a&gt;.&lt;div id="ipp_2" onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_2" style="display: none"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://terminology.hl7.org/3.1.0/CodeSystem-CDCREC.html"&gt;CDC Race and Ethnicity&lt;/a&gt;: &lt;a href="Patient-deceased-example.html"&gt;Patient/deceased-example&lt;/a&gt; and &lt;a href="Patient-example-targeted-provenance.html"&gt;Patient/example-targeted-provenance&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. &lt;a href="https://ucum.org/trac/wiki/TermsOfUse"&gt;https://ucum.org/trac/wiki/TermsOfUse&lt;/a&gt;&lt;div id="ipp_3" onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_3" style="display: none"&gt;
+&lt;li&gt;The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. &lt;a href="https://ucum.org/trac/wiki/TermsOfUse"&gt;https://ucum.org/trac/wiki/TermsOfUse&lt;/a&gt;&lt;div id="ipp_1" onClick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_1" style="display: none"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ucum.html"&gt;Unified Code for Units of Measure (UCUM)&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-vital-signs.html"&gt;USCoreVitalSignsProfile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright &amp;copy; 2011 by the National Electrical Manufacturers Association.&lt;div id="ipp_4" onClick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_4" style="display: none"&gt;
+&lt;li&gt;These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright &amp;copy; 2011 by the National Electrical Manufacturers Association.&lt;div id="ipp_2" onClick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_2" style="display: none"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://hl7.org/fhir/R4/codesystem-dicom-dcim.html"&gt;DICOM Controlled Terminology Definitions&lt;/a&gt;: &lt;a href="Provenance-example-targeted-provenance.html"&gt;Provenance/example-targeted-provenance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;This material contains content from &lt;a href="http://loinc.org"&gt;LOINC&lt;/a&gt;. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the &lt;a href="http://loinc.org/license"&gt;license&lt;/a&gt;. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.&lt;div id="ipp_5" onClick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_5" style="display: none"&gt;
+&lt;li&gt;This material contains content from &lt;a href="http://loinc.org"&gt;LOINC&lt;/a&gt;. LOINC is copyright &amp;copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the &lt;a href="http://loinc.org/license"&gt;license&lt;/a&gt;. LOINC&amp;reg; is a registered United States trademark of Regenstrief Institute, Inc.&lt;div id="ipp_3" onClick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_3" style="display: none"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-loinc.html"&gt;LOINC&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-blood-pressure.html"&gt;USCoreBloodPressureProfile&lt;/a&gt;, &lt;a href="StructureDefinition-pediatric-bmi-for-age.html"&gt;USCorePediatricBMIforAgeObservationProfile&lt;/a&gt;, &lt;a href="StructureDefinition-pediatric-weight-for-height.html"&gt;USCorePediatricWeightForHeightObservationProfile&lt;/a&gt; and &lt;a href="StructureDefinition-us-core-vital-signs.html"&gt;USCoreVitalSignsProfile&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-loinc.html"&gt;LOINC&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-blood-pressure.html"&gt;USCoreBloodPressureProfile&lt;/a&gt;, &lt;a href="StructureDefinition-pediatric-bmi-for-age.html"&gt;USCorePediatricBMIforAgeObservationProfile&lt;/a&gt;, &lt;a href="StructureDefinition-pediatric-weight-for-height.html"&gt;USCorePediatricWeightForHeightObservationProfile&lt;/a&gt; and &lt;a href="StructureDefinition-us-core-vital-signs.html"&gt;USCoreVitalSignsProfile&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact &lt;a href="https://www.snomed.org/get-snomed"&gt;https://www.snomed.org/get-snomed&lt;/a&gt; or &lt;a href="mailto:info@snomed.org"&gt;info@snomed.org&lt;/a&gt;.&lt;div id="ipp_6" onClick="if (document.getElementById('ipp2_6').innerHTML != '') {document.getElementById('ipp_6').innerHTML = document.getElementById('ipp2_6').innerHTML; document.getElementById('ipp2_6').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_6" style="display: none"&gt;
+&lt;li&gt;This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact &lt;a href="https://www.snomed.org/get-snomed"&gt;https://www.snomed.org/get-snomed&lt;/a&gt; or &lt;a href="mailto:info@snomed.org"&gt;info@snomed.org&lt;/a&gt;.&lt;div id="ipp_4" onClick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_4" style="display: none"&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://hl7.org/fhir/R4/codesystem-snomedct.html"&gt;SNOMED Clinical Terms&reg; (SNOMED CT&reg;)&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-allergyintolerance.html"&gt;USCoreAllergyIntolerance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://hl7.org/fhir/R4/codesystem-snomedct.html"&gt;SNOMED Clinical Terms&amp;amp;reg; (SNOMED CT&amp;amp;reg;)&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-allergyintolerance.html"&gt;USCoreAllergyIntolerance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;Using RxNorm codes of type SAB=RXNORM as this specification describes does not require  a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right.&lt;div id="ipp_7" onClick="if (document.getElementById('ipp2_7').innerHTML != '') {document.getElementById('ipp_7').innerHTML = document.getElementById('ipp2_7').innerHTML; document.getElementById('ipp2_7').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_7" style="display: none"&gt;
+&lt;li&gt;This material derives from the HL7 Terminology (THO). THO is copyright &amp;copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: &lt;a href="https://terminology.hl7.org/license.html"&gt;https://terminology.hl7.org/license.html&lt;/a&gt;&lt;div id="ipp_5" onClick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_5" style="display: none"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-allergyintolerance-clinical.html"&gt;AllergyIntolerance Clinical Status Codes&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-allergyintolerance.html"&gt;USCoreAllergyIntolerance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-allergyintolerance-verification.html"&gt;AllergyIntolerance Verification Status&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-allergyintolerance.html"&gt;USCoreAllergyIntolerance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-provenance-participant-type.html"&gt;Provenance participant type&lt;/a&gt;: &lt;a href="Provenance-example-targeted-provenance.html"&gt;Provenance/example-targeted-provenance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-v2-0203.html"&gt;identifierType&lt;/a&gt;: &lt;a href="Patient-deceased-example.html"&gt;Patient/deceased-example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-NullFlavor.html"&gt;NullFlavor&lt;/a&gt;: &lt;a href="Patient-example-targeted-provenance.html"&gt;Patient/example-targeted-provenance&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-RoleCode.html"&gt;RoleCode&lt;/a&gt;: &lt;a href="Location-hl7east.html"&gt;Health Level Seven International - Amherst&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Using RxNorm codes of type SAB=RXNORM as this specification describes does not require  a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right.&lt;div id="ipp_6" onClick="if (document.getElementById('ipp2_6').innerHTML != '') {document.getElementById('ipp_6').innerHTML = document.getElementById('ipp2_6').innerHTML; document.getElementById('ipp2_6').innerHTML = ''}"&gt; &lt;span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black"&gt;Show Usage&lt;/span&gt;&lt;/div&gt;&lt;div id="ipp2_6" style="display: none"&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-rxNorm.html"&gt;RxNorm&lt;/a&gt;: &lt;a href="StructureDefinition-us-core-allergyintolerance.html"&gt;USCoreAllergyIntolerance&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -601,37 +601,37 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 <p>This publication includes IP covered under the following statements.</p>
 <ul>
-<li>Copyright HL7. Licensed under creative commons public domain<div onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_1">
-<ul>
-<li><a href="http://terminology.hl7.org/5.3.0/CodeSystem-v2-0203.html">identifierType</a>: <a href="Patient-deceased-example.html">Patient/deceased-example</a></li>
-</ul>
-</div></li>
-<li>Most of the information on the CDC and ATSDR websites is not subject to copyright, is in the public domain, and may be freely used or reproduced without obtaining copyright permission.For information and exceptions regarding use of CDC material please see <a href="https://www.cdc.gov/other/agencymaterials.html">https://www.cdc.gov/other/agencymaterials.html</a>.<div onclick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_2">
-<ul>
-<li><a href="http://terminology.hl7.org/3.1.0/CodeSystem-CDCREC.html">CDC Race and Ethnicity</a>: <a href="Patient-deceased-example.html">Patient/deceased-example</a> and <a href="Patient-example-targeted-provenance.html">Patient/example-targeted-provenance</a></li>
-</ul>
-</div></li>
-<li>The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a><div onclick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_3">
+<li>The UCUM codes, UCUM table (regardless of format), and UCUM Specification are copyright 1999-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. <a href="https://ucum.org/trac/wiki/TermsOfUse">https://ucum.org/trac/wiki/TermsOfUse</a><div onclick="if (document.getElementById('ipp2_1').innerHTML != '') {document.getElementById('ipp_1').innerHTML = document.getElementById('ipp2_1').innerHTML; document.getElementById('ipp2_1').innerHTML = ''}" id="ipp_1"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_1">
 <ul>
 <li><a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-ucum.html">Unified Code for Units of Measure (UCUM)</a>: <a href="StructureDefinition-us-core-vital-signs.html">USCoreVitalSignsProfile</a></li>
 </ul>
 </div></li>
-<li>These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright &copy; 2011 by the National Electrical Manufacturers Association.<div onclick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}" id="ipp_4"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_4">
+<li>These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright &copy; 2011 by the National Electrical Manufacturers Association.<div onclick="if (document.getElementById('ipp2_2').innerHTML != '') {document.getElementById('ipp_2').innerHTML = document.getElementById('ipp2_2').innerHTML; document.getElementById('ipp2_2').innerHTML = ''}" id="ipp_2"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_2">
 <ul>
 <li><a href="http://hl7.org/fhir/R4/codesystem-dicom-dcim.html">DICOM Controlled Terminology Definitions</a>: <a href="Provenance-example-targeted-provenance.html">Provenance/example-targeted-provenance</a></li>
 </ul>
 </div></li>
-<li>This material contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the <a href="http://loinc.org/license">license</a>. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.<div onclick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}" id="ipp_5"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_5">
+<li>This material contains content from <a href="http://loinc.org">LOINC</a>. LOINC is copyright &copy; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the <a href="http://loinc.org/license">license</a>. LOINC&reg; is a registered United States trademark of Regenstrief Institute, Inc.<div onclick="if (document.getElementById('ipp2_3').innerHTML != '') {document.getElementById('ipp_3').innerHTML = document.getElementById('ipp2_3').innerHTML; document.getElementById('ipp2_3').innerHTML = ''}" id="ipp_3"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_3">
 <ul>
-<li><a href="http://terminology.hl7.org/5.3.0/CodeSystem-v3-loinc.html">LOINC</a>: <a href="StructureDefinition-us-core-blood-pressure.html">USCoreBloodPressureProfile</a>, <a href="StructureDefinition-pediatric-bmi-for-age.html">USCorePediatricBMIforAgeObservationProfile</a>, <a href="StructureDefinition-pediatric-weight-for-height.html">USCorePediatricWeightForHeightObservationProfile</a> and <a href="StructureDefinition-us-core-vital-signs.html">USCoreVitalSignsProfile</a></li>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-loinc.html">LOINC</a>: <a href="StructureDefinition-us-core-blood-pressure.html">USCoreBloodPressureProfile</a>, <a href="StructureDefinition-pediatric-bmi-for-age.html">USCorePediatricBMIforAgeObservationProfile</a>, <a href="StructureDefinition-pediatric-weight-for-height.html">USCorePediatricWeightForHeightObservationProfile</a> and <a href="StructureDefinition-us-core-vital-signs.html">USCoreVitalSignsProfile</a></li>
 </ul>
 </div></li>
-<li>This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a> or <a href="mailto:info@snomed.org">info@snomed.org</a>.<div onclick="if (document.getElementById('ipp2_6').innerHTML != '') {document.getElementById('ipp_6').innerHTML = document.getElementById('ipp2_6').innerHTML; document.getElementById('ipp2_6').innerHTML = ''}" id="ipp_6"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_6">
+<li>This material contains content that is copyright of SNOMED International. Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact <a href="https://www.snomed.org/get-snomed">https://www.snomed.org/get-snomed</a> or <a href="mailto:info@snomed.org">info@snomed.org</a>.<div onclick="if (document.getElementById('ipp2_4').innerHTML != '') {document.getElementById('ipp_4').innerHTML = document.getElementById('ipp2_4').innerHTML; document.getElementById('ipp2_4').innerHTML = ''}" id="ipp_4"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_4">
 <ul>
-<li><a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&reg; (SNOMED CT&reg;)</a>: <a href="StructureDefinition-us-core-allergyintolerance.html">USCoreAllergyIntolerance</a></li>
+<li><a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED Clinical Terms&amp;reg; (SNOMED CT&amp;reg;)</a>: <a href="StructureDefinition-us-core-allergyintolerance.html">USCoreAllergyIntolerance</a></li>
 </ul>
 </div></li>
-<li>Using RxNorm codes of type SAB=RXNORM as this specification describes does not require  a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right.<div onclick="if (document.getElementById('ipp2_7').innerHTML != '') {document.getElementById('ipp_7').innerHTML = document.getElementById('ipp2_7').innerHTML; document.getElementById('ipp2_7').innerHTML = ''}" id="ipp_7"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_7">
+<li>This material derives from the HL7 Terminology (THO). THO is copyright &copy;1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information see: <a href="https://terminology.hl7.org/license.html">https://terminology.hl7.org/license.html</a><div onclick="if (document.getElementById('ipp2_5').innerHTML != '') {document.getElementById('ipp_5').innerHTML = document.getElementById('ipp2_5').innerHTML; document.getElementById('ipp2_5').innerHTML = ''}" id="ipp_5"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_5">
+<ul>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-allergyintolerance-clinical.html">AllergyIntolerance Clinical Status Codes</a>: <a href="StructureDefinition-us-core-allergyintolerance.html">USCoreAllergyIntolerance</a></li>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-allergyintolerance-verification.html">AllergyIntolerance Verification Status</a>: <a href="StructureDefinition-us-core-allergyintolerance.html">USCoreAllergyIntolerance</a></li>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>: <a href="Provenance-example-targeted-provenance.html">Provenance/example-targeted-provenance</a></li>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-v2-0203.html">identifierType</a>: <a href="Patient-deceased-example.html">Patient/deceased-example</a></li>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-NullFlavor.html">NullFlavor</a>: <a href="Patient-example-targeted-provenance.html">Patient/example-targeted-provenance</a></li>
+<li><a href="http://terminology.hl7.org/6.2.0/CodeSystem-v3-RoleCode.html">RoleCode</a>: <a href="Location-hl7east.html">Health Level Seven International - Amherst</a></li>
+</ul>
+</div></li>
+<li>Using RxNorm codes of type SAB=RXNORM as this specification describes does not require  a UMLS license. Access to the full set of RxNorm definitions, and/or additional use of other RxNorm structures and information requires a UMLS license. The use of RxNorm in this specification is pursuant to HL7's status as a licensee of the NLM UMLS. HL7's license does not convey the right to use RxNorm to any users of this specification; implementers must acquire a license to use RxNorm in their own right.<div onclick="if (document.getElementById('ipp2_6').innerHTML != '') {document.getElementById('ipp_6').innerHTML = document.getElementById('ipp2_6').innerHTML; document.getElementById('ipp2_6').innerHTML = ''}" id="ipp_6"> <span style="cursor: pointer; border: 1px grey solid; background-color: #fcdcb3; padding-left: 3px; padding-right: 3px; color: black">Show Usage</span></div><div style="display: none" id="ipp2_6">
 <ul>
 <li><a href="http://terminology.hl7.org/3.1.0/CodeSystem-v3-rxNorm.html">RxNorm</a>: <a href="StructureDefinition-us-core-allergyintolerance.html">USCoreAllergyIntolerance</a></li>
 </ul>
@@ -648,7 +648,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <table>
   <tbody>
     <tr>
-      <td>{{ site.data.resources[‘ImplementationGuide/healthedata1-sandbox’].description \</td>
+      <td>{{ site.data.resources['ImplementationGuide/healthedata1-sandbox'].description \</td>
       <td>markdownify }}</td>
     </tr>
   </tbody>
@@ -675,7 +675,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
   <h4 id="complete-list-of-code-system-uris-used-in-us-core">Complete list of Code System URIs used in US Core</h4>
   <p>The value set used in the US Core Profiles includes codes from following Code Systems URIs:</p>
 
-  <p><a name="l1088">​</a>1.
+  <p><a name="l1082">​</a>1.
     <a href="http://hl7.org/fhir/codesystem-medicationrequest-intent.html">http://hl7.org/fhir/CodeSystem/medicationrequest-intent</a>
   1.
     <a href="http://hl7.org/fhir/codesystem-medicationdispense-status.html">http://terminology.hl7.org/CodeSystem/medicationdispense-status</a>
@@ -879,7 +879,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Allergies and Intolerances</th>
-<th class="col-sm-4"><a name="l1334">​</a>
+<th class="col-sm-4"><a name="l1328">​</a>
 
 
 <a href="
@@ -887,7 +887,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 
 </th>
-<th class="col-sm-2"><a name="l1340">​</a><a href="#.html">See Foooooooooo Barrrrrr</a></th>
+<th class="col-sm-2"><a name="l1334">​</a><a href="#.html">See Foooooooooo Barrrrrr</a></th>
 </tr>
 </thead>
 <tbody>
@@ -899,7 +899,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Substance (Medication)</td>
 
-<td><a name="l1353">​</a>
+<td><a name="l1347">​</a>
 
 
 <a href="
@@ -921,7 +921,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Substance (Drug Class)</td>
 
-<td><a name="l1370">​</a>
+<td><a name="l1364">​</a>
 
 
 <a href="
@@ -943,7 +943,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reaction</td>
 
-<td><a name="l1387">​</a>
+<td><a name="l1381">​</a>
 
 
 <a href="
@@ -972,7 +972,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Assessment and Plan of Treatment</th>
-<th class="col-sm-4"><a name="l1421">​</a>
+<th class="col-sm-4"><a name="l1415">​</a>
 
 
 <a href="
@@ -1010,7 +1010,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Assessment and Plan of Treatment</td>
 
-<td><a name="l1454">​</a>
+<td><a name="l1448">​</a>
 
 
 <a href="
@@ -1032,7 +1032,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Assessment</td>
 
-<td><a name="l1471">​</a>
+<td><a name="l1465">​</a>
 
 
 <a href="
@@ -1059,7 +1059,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l1492">​</a>
+<td><a name="l1486">​</a>
 <a href="screening-and-assessments.html">See Screening and Assessments Guidance</a>
 </td>
 </tr>
@@ -1079,7 +1079,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Care Team Members</th>
-<th class="col-sm-4"><a name="l1521">​</a>
+<th class="col-sm-4"><a name="l1515">​</a>
 
 
 <a href="
@@ -1099,7 +1099,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Name</td>
 
-<td><a name="l1539">​</a>
+<td><a name="l1533">​</a>
 
 
 <a href="
@@ -1121,7 +1121,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Identifier</td>
 
-<td><a name="l1556">​</a>
+<td><a name="l1550">​</a>
 
 
 <a href="
@@ -1143,7 +1143,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Location</td>
 
-<td><a name="l1573">​</a>
+<td><a name="l1567">​</a>
 
 
 <a href="
@@ -1165,7 +1165,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Telecom</td>
 
-<td><a name="l1590">​</a>
+<td><a name="l1584">​</a>
 
 
 <a href="
@@ -1187,7 +1187,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Role</td>
 
-<td><a name="l1607">​</a>
+<td><a name="l1601">​</a>
 
 
 <a href="
@@ -1216,7 +1216,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Clinical Notes</th>
-<th class="col-sm-4"><a name="l1641">​</a>
+<th class="col-sm-4"><a name="l1635">​</a>
 
 
 <a href="
@@ -1242,7 +1242,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Consultation Note</td>
 
-<td><a name="l1664">​</a>
+<td><a name="l1658">​</a>
 
 
 <a href="
@@ -1264,7 +1264,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Discharge Summary Note</td>
 
-<td><a name="l1681">​</a>
+<td><a name="l1675">​</a>
 
 
 <a href="
@@ -1286,7 +1286,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•History &amp; Physical</td>
 
-<td><a name="l1698">​</a>
+<td><a name="l1692">​</a>
 
 
 <a href="
@@ -1308,7 +1308,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Imaging Narrative</td>
 
-<td><a name="l1715">​</a>
+<td><a name="l1709">​</a>
 
 
 <a href="
@@ -1336,7 +1336,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Laboratory Report Narrative</td>
 
-<td><a name="l1737">​</a>
+<td><a name="l1731">​</a>
 
 
 <a href="
@@ -1364,7 +1364,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pathology Report Narrative</td>
 
-<td><a name="l1759">​</a>
+<td><a name="l1753">​</a>
 
 
 <a href="
@@ -1392,7 +1392,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedure Note</td>
 
-<td><a name="l1781">​</a>
+<td><a name="l1775">​</a>
 
 
 <a href="
@@ -1420,7 +1420,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Progress Note</td>
 
-<td><a name="l1803">​</a>
+<td><a name="l1797">​</a>
 
 
 <a href="
@@ -1429,7 +1429,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l1809">​</a>
+<td><a name="l1803">​</a>
 <a href="clinical-notes.html">See Clinical Notes Guidance</a>
 </td>
 </tr>
@@ -1449,7 +1449,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Clinical Tests</th>
-<th class="col-sm-4"><a name="l1838">​</a>
+<th class="col-sm-4"><a name="l1832">​</a>
 
 
 <a href="
@@ -1475,7 +1475,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Clinical Test</td>
 
-<td><a name="l1861">​</a>
+<td><a name="l1855">​</a>
 
 
 <a href="
@@ -1503,7 +1503,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Clinical Test Result/Report</td>
 
-<td><a name="l1883">​</a>
+<td><a name="l1877">​</a>
 
 
 <a href="
@@ -1538,7 +1538,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Diagnostic Imaging</th>
-<th class="col-sm-4"><a name="l1922">​</a>
+<th class="col-sm-4"><a name="l1916">​</a>
 
 
 <a href="
@@ -1564,7 +1564,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Test</td>
 
-<td><a name="l1945">​</a>
+<td><a name="l1939">​</a>
 
 
 <a href="
@@ -1592,7 +1592,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnostic Imaging Result/Report</td>
 
-<td><a name="l1967">​</a>
+<td><a name="l1961">​</a>
 
 
 <a href="
@@ -1627,7 +1627,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Encounter</th>
-<th class="col-sm-4"><a name="l2006">​</a>
+<th class="col-sm-4"><a name="l2000">​</a>
 
 
 <a href="
@@ -1647,7 +1647,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Type</td>
 
-<td><a name="l2024">​</a>
+<td><a name="l2018">​</a>
 
 
 <a href="
@@ -1669,7 +1669,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis</td>
 
-<td><a name="l2041">​</a>
+<td><a name="l2035">​</a>
 
 
 <a href="
@@ -1691,7 +1691,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Time</td>
 
-<td><a name="l2058">​</a>
+<td><a name="l2052">​</a>
 
 
 <a href="
@@ -1713,7 +1713,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Location</td>
 
-<td><a name="l2075">​</a>
+<td><a name="l2069">​</a>
 
 
 <a href="
@@ -1735,7 +1735,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Disposition</td>
 
-<td><a name="l2092">​</a>
+<td><a name="l2086">​</a>
 
 
 <a href="
@@ -1764,7 +1764,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Goals</th>
-<th class="col-sm-4"><a name="l2126">​</a>
+<th class="col-sm-4"><a name="l2120">​</a>
 
 
 <a href="
@@ -1784,7 +1784,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Patient Goals</td>
 
-<td><a name="l2144">​</a>
+<td><a name="l2138">​</a>
 
 
 <a href="
@@ -1806,7 +1806,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Goals</td>
 
-<td><a name="l2161">​</a>
+<td><a name="l2155">​</a>
 
 
 <a href="
@@ -1815,7 +1815,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l2167">​</a>
+<td><a name="l2161">​</a>
 <a href="screening-and-assessments.html">See Screening and Assessments Guidance</a>
 </td>
 </tr>
@@ -1835,7 +1835,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Health Insurance Information</th>
-<th class="col-sm-4"><a name="l2196">​</a>
+<th class="col-sm-4"><a name="l2190">​</a>
 
 
 <a href="
@@ -1855,7 +1855,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Coverage Status</td>
 
-<td><a name="l2214">​</a>
+<td><a name="l2208">​</a>
 
 
 <a href="
@@ -1877,7 +1877,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Coverage Type</td>
 
-<td><a name="l2231">​</a>
+<td><a name="l2225">​</a>
 
 
 <a href="
@@ -1899,7 +1899,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Relationship to Subscriber</td>
 
-<td><a name="l2248">​</a>
+<td><a name="l2242">​</a>
 
 
 <a href="
@@ -1921,7 +1921,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Member Identifier</td>
 
-<td><a name="l2265">​</a>
+<td><a name="l2259">​</a>
 
 
 <a href="
@@ -1943,7 +1943,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Subscriber Identifier</td>
 
-<td><a name="l2282">​</a>
+<td><a name="l2276">​</a>
 
 
 <a href="
@@ -1965,7 +1965,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Group Number</td>
 
-<td><a name="l2299">​</a>
+<td><a name="l2293">​</a>
 
 
 <a href="
@@ -1987,7 +1987,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Payer Identifier</td>
 
-<td><a name="l2316">​</a>
+<td><a name="l2310">​</a>
 
 
 <a href="
@@ -2016,7 +2016,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Health Status/Assessments</th>
-<th class="col-sm-4"><a name="l2350">​</a>
+<th class="col-sm-4"><a name="l2344">​</a>
 
 
 <a href="
@@ -2054,7 +2054,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Health Concerns</td>
 
-<td><a name="l2383">​</a>
+<td><a name="l2377">​</a>
 
 
 <a href="
@@ -2076,7 +2076,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Functional Status</td>
 
-<td><a name="l2400">​</a>
+<td><a name="l2394">​</a>
 
 
 <a href="
@@ -2103,7 +2103,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l2421">​</a>
+<td><a name="l2415">​</a>
 <a href="screening-and-assessments.html">See Screening and Assessments Guidance</a>
 </td>
 </tr>
@@ -2116,7 +2116,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Disability Status</td>
 
-<td><a name="l2433">​</a>
+<td><a name="l2427">​</a>
 
 
 <a href="
@@ -2156,7 +2156,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Mental/Cognitive Status</td>
 
-<td><a name="l2465">​</a>
+<td><a name="l2459">​</a>
 
 
 <a href="
@@ -2196,7 +2196,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pregnancy Status</td>
 
-<td><a name="l2497">​</a>
+<td><a name="l2491">​</a>
 
 
 <a href="
@@ -2224,7 +2224,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Smoking Status</td>
 
-<td><a name="l2519">​</a>
+<td><a name="l2513">​</a>
 
 
 <a href="
@@ -2253,7 +2253,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Immunizations</th>
-<th class="col-sm-4"><a name="l2553">​</a>
+<th class="col-sm-4"><a name="l2547">​</a>
 
 
 <a href="
@@ -2273,7 +2273,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•</td>
 
-<td><a name="l2571">​</a>
+<td><a name="l2565">​</a>
 
 
 <a href="
@@ -2302,7 +2302,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Laboratory</th>
-<th class="col-sm-4"><a name="l2605">​</a>
+<th class="col-sm-4"><a name="l2599">​</a>
 
 
 <a href="
@@ -2334,7 +2334,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Tests</td>
 
-<td><a name="l2633">​</a>
+<td><a name="l2627">​</a>
 
 
 <a href="
@@ -2362,7 +2362,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Values/Results</td>
 
-<td><a name="l2655">​</a>
+<td><a name="l2649">​</a>
 
 
 <a href="
@@ -2390,7 +2390,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Specimen Type</td>
 
-<td><a name="l2677">​</a>
+<td><a name="l2671">​</a>
 
 
 <a href="
@@ -2418,7 +2418,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Result Status</td>
 
-<td><a name="l2699">​</a>
+<td><a name="l2693">​</a>
 
 
 <a href="
@@ -2453,7 +2453,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Medications</th>
-<th class="col-sm-4"><a name="l2738">​</a>
+<th class="col-sm-4"><a name="l2732">​</a>
 
 
 <a href="
@@ -2485,7 +2485,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Medications</td>
 
-<td><a name="l2766">​</a>
+<td><a name="l2760">​</a>
 
 
 <a href="
@@ -2500,7 +2500,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l2777">​</a>
+<td><a name="l2771">​</a>
 <a href="medication-list.html">See Medication List Guidance</a>
 </td>
 </tr>
@@ -2513,7 +2513,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Dose</td>
 
-<td><a name="l2789">​</a>
+<td><a name="l2783">​</a>
 
 
 <a href="
@@ -2535,7 +2535,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Dose Unit of Measure</td>
 
-<td><a name="l2806">​</a>
+<td><a name="l2800">​</a>
 
 
 <a href="
@@ -2557,7 +2557,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Indication</td>
 
-<td><a name="l2823">​</a>
+<td><a name="l2817">​</a>
 
 
 <a href="
@@ -2579,7 +2579,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Fill Status</td>
 
-<td><a name="l2840">​</a>
+<td><a name="l2834">​</a>
 
 
 <a href="
@@ -2608,7 +2608,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Patient Demographics</th>
-<th class="col-sm-4"><a name="l2874">​</a>
+<th class="col-sm-4"><a name="l2868">​</a>
 
 
 <a href="
@@ -2652,7 +2652,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•First Name</td>
 
-<td><a name="l2912">​</a>
+<td><a name="l2906">​</a>
 
 
 <a href="
@@ -2674,7 +2674,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Last Name</td>
 
-<td><a name="l2929">​</a>
+<td><a name="l2923">​</a>
 
 
 <a href="
@@ -2696,7 +2696,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Previous Name</td>
 
-<td><a name="l2946">​</a>
+<td><a name="l2940">​</a>
 
 
 <a href="
@@ -2718,7 +2718,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Middle Name (including middle initial)</td>
 
-<td><a name="l2963">​</a>
+<td><a name="l2957">​</a>
 
 
 <a href="
@@ -2740,7 +2740,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Suffix</td>
 
-<td><a name="l2980">​</a>
+<td><a name="l2974">​</a>
 
 
 <a href="
@@ -2762,7 +2762,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Birth Sex</td>
 
-<td><a name="l2997">​</a>
+<td><a name="l2991">​</a>
 
 
 <a href="
@@ -2790,7 +2790,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Sex</td>
 
-<td><a name="l3019">​</a>
+<td><a name="l3013">​</a>
 
 
 <a href="
@@ -2818,7 +2818,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Birth</td>
 
-<td><a name="l3041">​</a>
+<td><a name="l3035">​</a>
 
 
 <a href="
@@ -2840,7 +2840,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Death</td>
 
-<td><a name="l3058">​</a>
+<td><a name="l3052">​</a>
 
 
 <a href="
@@ -2862,7 +2862,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Race</td>
 
-<td><a name="l3075">​</a>
+<td><a name="l3069">​</a>
 
 
 <a href="
@@ -2884,7 +2884,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Ethnicity</td>
 
-<td><a name="l3092">​</a>
+<td><a name="l3086">​</a>
 
 
 <a href="
@@ -2912,7 +2912,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Tribal Affiliation</td>
 
-<td><a name="l3114">​</a>
+<td><a name="l3108">​</a>
 
 
 <a href="
@@ -2940,7 +2940,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Gender Identity</td>
 
-<td><a name="l3136">​</a>
+<td><a name="l3130">​</a>
 
 
 <a href="
@@ -2968,7 +2968,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Sexual Orientation</td>
 
-<td><a name="l3158">​</a>
+<td><a name="l3152">​</a>
 
 
 <a href="
@@ -2990,7 +2990,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Preferred Language</td>
 
-<td><a name="l3175">​</a>
+<td><a name="l3169">​</a>
 
 
 <a href="
@@ -3012,7 +3012,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Address</td>
 
-<td><a name="l3192">​</a>
+<td><a name="l3186">​</a>
 
 
 <a href="
@@ -3034,7 +3034,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Previous Address</td>
 
-<td><a name="l3209">​</a>
+<td><a name="l3203">​</a>
 
 
 <a href="
@@ -3056,7 +3056,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Email</td>
 
-<td><a name="l3226">​</a>
+<td><a name="l3220">​</a>
 
 
 <a href="
@@ -3078,7 +3078,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Phone Number</td>
 
-<td><a name="l3243">​</a>
+<td><a name="l3237">​</a>
 
 
 <a href="
@@ -3100,7 +3100,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person's Name</td>
 
-<td><a name="l3260">​</a>
+<td><a name="l3254">​</a>
 
 
 <a href="
@@ -3122,7 +3122,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person's Relationship</td>
 
-<td><a name="l3277">​</a>
+<td><a name="l3271">​</a>
 
 
 <a href="
@@ -3144,7 +3144,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation</td>
 
-<td><a name="l3294">​</a>
+<td><a name="l3288">​</a>
 
 
 <a href="
@@ -3166,7 +3166,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation Industry</td>
 
-<td><a name="l3311">​</a>
+<td><a name="l3305">​</a>
 
 
 <a href="
@@ -3195,7 +3195,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Problems</th>
-<th class="col-sm-4"><a name="l3345">​</a>
+<th class="col-sm-4"><a name="l3339">​</a>
 
 
 <a href="
@@ -3215,7 +3215,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Resolution</td>
 
-<td><a name="l3363">​</a>
+<td><a name="l3357">​</a>
 
 
 <a href="
@@ -3237,7 +3237,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Date of Diagnosis</td>
 
-<td><a name="l3380">​</a>
+<td><a name="l3374">​</a>
 
 
 <a href="
@@ -3259,7 +3259,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Problems/Health Concerns</td>
 
-<td><a name="l3397">​</a>
+<td><a name="l3391">​</a>
 
 
 <a href="
@@ -3268,7 +3268,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l3403">​</a>
+<td><a name="l3397">​</a>
 <a href="screening-and-assessments.html">See Screening and Assessments Guidance</a>
 </td>
 </tr>
@@ -3288,7 +3288,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Procedures</th>
-<th class="col-sm-4"><a name="l3432">​</a>
+<th class="col-sm-4"><a name="l3426">​</a>
 
 
 <a href="
@@ -3314,7 +3314,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Procedure</td>
 
-<td><a name="l3455">​</a>
+<td><a name="l3449">​</a>
 
 
 <a href="
@@ -3336,7 +3336,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reason for Referral</td>
 
-<td><a name="l3472">​</a>
+<td><a name="l3466">​</a>
 
 
 <a href="
@@ -3358,7 +3358,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Interventions</td>
 
-<td><a name="l3489">​</a>
+<td><a name="l3483">​</a>
 
 
 <a href="
@@ -3373,7 +3373,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 </td>
 
-<td><a name="l3500">​</a>
+<td><a name="l3494">​</a>
 <a href="screening-and-assessments.html">See Screening and Assessments Guidance</a>
 </td>
 </tr>
@@ -3393,7 +3393,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Provenance</th>
-<th class="col-sm-4"><a name="l3529">​</a>
+<th class="col-sm-4"><a name="l3523">​</a>
 
 
 <a href="
@@ -3401,7 +3401,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 
 </th>
-<th class="col-sm-2"><a name="l3535">​</a><a href="basic-provenance.html">See Basic Provenance Guidance</a></th>
+<th class="col-sm-2"><a name="l3529">​</a><a href="basic-provenance.html">See Basic Provenance Guidance</a></th>
 </tr>
 </thead>
 <tbody>
@@ -3413,7 +3413,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Author Time Stamp</td>
 
-<td><a name="l3548">​</a>
+<td><a name="l3542">​</a>
 
 
 <a href="
@@ -3435,7 +3435,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Author Organization</td>
 
-<td><a name="l3565">​</a>
+<td><a name="l3559">​</a>
 
 
 <a href="
@@ -3464,7 +3464,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Unique Device Identifier(s)</th>
-<th class="col-sm-4"><a name="l3599">​</a>
+<th class="col-sm-4"><a name="l3593">​</a>
 
 
 <a href="
@@ -3484,7 +3484,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Unique Device Identifier(s) for a Patient's Implantable Device(s)</td>
 
-<td><a name="l3617">​</a>
+<td><a name="l3611">​</a>
 
 
 <a href="
@@ -3513,7 +3513,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <thead>
 <tr>
 <th class="col-sm-4">Vital Signs</th>
-<th class="col-sm-4"><a name="l3651">​</a>
+<th class="col-sm-4"><a name="l3645">​</a>
 
 
 <a href="
@@ -3533,7 +3533,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diastolic blood pressure</td>
 
-<td><a name="l3669">​</a>
+<td><a name="l3663">​</a>
 
 
 <a href="
@@ -3555,7 +3555,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Systolic blood pressure</td>
 
-<td><a name="l3686">​</a>
+<td><a name="l3680">​</a>
 
 
 <a href="
@@ -3577,7 +3577,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body height</td>
 
-<td><a name="l3703">​</a>
+<td><a name="l3697">​</a>
 
 
 <a href="
@@ -3599,7 +3599,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body weight</td>
 
-<td><a name="l3720">​</a>
+<td><a name="l3714">​</a>
 
 
 <a href="
@@ -3621,7 +3621,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Heart rate</td>
 
-<td><a name="l3737">​</a>
+<td><a name="l3731">​</a>
 
 
 <a href="
@@ -3643,7 +3643,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Respiratory rate</td>
 
-<td><a name="l3754">​</a>
+<td><a name="l3748">​</a>
 
 
 <a href="
@@ -3665,7 +3665,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body temperature</td>
 
-<td><a name="l3771">​</a>
+<td><a name="l3765">​</a>
 
 
 <a href="
@@ -3687,7 +3687,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pulse oximetry</td>
 
-<td><a name="l3788">​</a>
+<td><a name="l3782">​</a>
 
 
 <a href="
@@ -3709,7 +3709,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Inhaled oxygen concentration</td>
 
-<td><a name="l3805">​</a>
+<td><a name="l3799">​</a>
 
 
 <a href="
@@ -3731,7 +3731,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•BMI Percentile (2-20 years old)</td>
 
-<td><a name="l3822">​</a>
+<td><a name="l3816">​</a>
 
 
 <a href="
@@ -3753,7 +3753,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Weight-for-length Percentile (Birth - 36 months)</td>
 
-<td><a name="l3839">​</a>
+<td><a name="l3833">​</a>
 
 
 <a href="
@@ -3775,7 +3775,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
 <tr>
 <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occipital Frontal Head Circumference Percentile (Birth - 36 months)</td>
 
-<td><a name="l3856">​</a>
+<td><a name="l3850">​</a>
 
 
 <a href="
@@ -3799,9 +3799,9 @@ These requirements were originally developed, balloted, and published in FHIR DS
 
 <p>use <a href="http://hl7.org/fhir/R4/datatypes.html#url">url</a> to get the title an link for :</p>
 
-<p>profiles :  e.g., ‘ {{[http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation]}} ‘ =</p>
+<p>profiles :  e.g., ' {{[http://www.fhir.org/guides/healthedata1-sandbox/StructureDefinition/argo-write-observation]}} ' =</p>
 
-<p>what about terminology?:   e.g., ‘ <a href="ValueSet-us-core-source-of-payment.html">US Core Source of Payment Value Set</a> ‘ = <a href="ValueSet-us-core-source-of-payment.html">US Core Source of Payment Value Set</a></p>
+<p>what about terminology?:   e.g., ' <a href="ValueSet-us-core-source-of-payment.html">US Core Source of Payment Value Set</a> ' = <a href="ValueSet-us-core-source-of-payment.html">US Core Source of Payment Value Set</a></p>
 
 <h2 id="tabler">tabler</h2>
 
@@ -3819,20 +3819,14 @@ These requirements were originally developed, balloted, and published in FHIR DS
   <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
   <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Apr 14, 2024 00:18+0000">2024-04-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 01:21+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -3849,7 +3843,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
     <div class="container">    <!-- container -->
     </div>    <!-- /container -->
   </div>    <!-- /segment-post-footer -->
-  
+
     <!-- JS and analytics only. -->
     <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -3859,16 +3853,7 @@ These requirements were originally developed, balloted, and published in FHIR DS
   <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
   <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
   <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-  <!-- feedback form - Google forms -->
-  <!-- v0.1, 2021-01-09 -->
-
-
-
-  <!-- / feedback form -->
-
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
     <!-- Analytics Below
   ================================================== -->
   </body>

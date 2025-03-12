@@ -1,0 +1,12 @@
+[deceased-example]: Patient-deceased-example.html
+[hl7east]: Location-hl7east.html
+[example-targeted-provenance]: Provenance-example-targeted-provenance.html
+[example-targeted-provenance]: Patient-example-targeted-provenance.html
+[USCoreAllergyIntolerance]: StructureDefinition-us-core-allergyintolerance.html
+[USCoreBirthSexExtension]: StructureDefinition-us-core-birthsex.html
+[USCoreBloodPressureProfile]: StructureDefinition-us-core-blood-pressure.html
+[USCorePediatricBMIforAgeObservationProfile]: StructureDefinition-pediatric-bmi-for-age.html
+[USCorePediatricWeightForHeightObservationProfile]: StructureDefinition-pediatric-weight-for-height.html
+[USCoreSourceofPaymentValueSet]: ValueSet-us-core-source-of-payment.html
+[USCoreVitalSignsProfile]: StructureDefinition-us-core-vital-signs.html
+[USCoreAllergyintoleranceClinicalStatus]: SearchParameter-us-core-allergyintolerance-clinical-status.html

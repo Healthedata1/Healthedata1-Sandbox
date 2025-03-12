@@ -6,14 +6,14 @@
   "status" : "active",
   "package-id" : "healthedata1-sandbox",
   "ig-ver" : "0.1.0",
-  "date" : "Sun, 14 Apr, 2024 00:18:08 +0000",
-  "dateISO8601" : "2024-04-14T00:18:08+00:00",
-  "errs" : 386,
-  "warnings" : 10,
-  "hints" : 11,
+  "date" : "Wed, 12 Mar, 2025 01:21:27 +0000",
+  "dateISO8601" : "2025-03-12T01:21:27+00:00",
+  "errs" : 336,
+  "warnings" : 12,
+  "hints" : 7,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 3855049376
+  "maxMemory" : 4269471552
 }

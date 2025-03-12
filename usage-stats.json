@@ -18,10 +18,6 @@
         "title": "US Core Blood Pressure Profile"
       },
       {
-        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
-        "title": "US Core Simple Observation Profile"
-      },
-      {
         "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs",
         "title": "US Core Vital Signs Profile"
       }
@@ -55,9 +51,7 @@
     ],
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
       "StructureDefinition.differential.element.type",
-      "StructureDefinition.differential.element.type.targetProfile",
-      "StructureDefinition.snapshot.element.type",
-      "StructureDefinition.snapshot.element.type.targetProfile"
+      "StructureDefinition.snapshot.element.type"
     ],
     "http://hl7.org/fhir/StructureDefinition/instance-description": [
       "Location.meta",
@@ -107,6 +101,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
     ],
     "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
       "Patient"

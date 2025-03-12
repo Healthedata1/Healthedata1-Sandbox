@@ -20,6 +20,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -40,11 +41,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"7.9"}
-    h3,h4,h5,h6{--heading-prefix:"7.9"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"7.8"}
+    h3,h4,h5,h6{--heading-prefix:"7.8"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -186,13 +189,12 @@
 
 
 
-  <pre class="xml" style="white-space: pre; text-wrap: nowrap;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
-
+  <pre class="xml" style="white-space: pre; text-wrap: nowrap; width: auto;"><code class="language-xml" style="white-space: pre; text-wrap: nowrap;">
 &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">ValueSet</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;us-core-source-of-payment&quot;/&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.text">text</a>&gt;
     &lt;<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;generated&quot;/&gt;
-    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=&quot;https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion&quot;&gt;Payer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set excludes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Exclude these codes as defined in &lt;a href=&quot;http://terminology.hl7.org/3.1.0/CodeSystem-SOPT.html&quot;&gt;&lt;code&gt;https://nahdo.org/sopt&lt;/code&gt;&lt;/a&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1111&lt;/td&gt;&lt;td&gt;Medicare Chronic Condition Special Needs Plan (C-SNP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1112&lt;/td&gt;&lt;td&gt;Medicare Institutional Special Needs Plan (I-SNP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3111&lt;/td&gt;&lt;td&gt;TRICARE Prime--HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3112&lt;/td&gt;&lt;td&gt;TRICARE Extra--PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3113&lt;/td&gt;&lt;td&gt;TRICARE Standard - Fee For Service&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3114&lt;/td&gt;&lt;td&gt;TRICARE For Life--Medicare Supplement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3115&lt;/td&gt;&lt;td&gt;TRICARE Reserve Select&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3116&lt;/td&gt;&lt;td&gt;Uniformed Services Family Health Plan (USFHP) -- HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3119&lt;/td&gt;&lt;td&gt;Department of Defense - (other)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3121&lt;/td&gt;&lt;td&gt;Enrolled Prime--HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3122&lt;/td&gt;&lt;td&gt;Non-enrolled Space Available&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3123&lt;/td&gt;&lt;td&gt;TRICARE For Life (TFL)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3211&lt;/td&gt;&lt;td&gt;Direct Care-Care provided in VA facilities&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3212&lt;/td&gt;&lt;td&gt;Indirect Care-Care provided outside VA facilities&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32121&lt;/td&gt;&lt;td&gt;Fee Basis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32122&lt;/td&gt;&lt;td&gt;Foreign Fee/Foreign Medical Program (FMP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32123&lt;/td&gt;&lt;td&gt;Contract Nursing Home/Community Nursing Home&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32124&lt;/td&gt;&lt;td&gt;State Veterans Home&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32125&lt;/td&gt;&lt;td&gt;Sharing Agreements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32126&lt;/td&gt;&lt;td&gt;Other Federal Agency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32127&lt;/td&gt;&lt;td&gt;Dental Care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;32128&lt;/td&gt;&lt;td&gt;Vision Care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3221&lt;/td&gt;&lt;td&gt;Civilian Health and Medical Program for the VA (CHAMPVA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3222&lt;/td&gt;&lt;td&gt;Spina Bifida Health Care Program (SB)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3223&lt;/td&gt;&lt;td&gt;Children of Women Vietnam Veterans (CWVV)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3229&lt;/td&gt;&lt;td&gt;Other non-veteran care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3711&lt;/td&gt;&lt;td&gt;HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3712&lt;/td&gt;&lt;td&gt;PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3713&lt;/td&gt;&lt;td&gt;POS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3811&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3812&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3813&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - POS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3819&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - not specified managed care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;BLUE CROSS/BLUE SHIELD&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;61&lt;/td&gt;&lt;td&gt;BC Managed Care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;611&lt;/td&gt;&lt;td&gt;BC Managed Care - HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;612&lt;/td&gt;&lt;td&gt;BC Managed Care - PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;613&lt;/td&gt;&lt;td&gt;BC Managed Care - POS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;614&lt;/td&gt;&lt;td&gt;BC Managed Care - Dental&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;619&lt;/td&gt;&lt;td&gt;BC Managed Care - Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;62&lt;/td&gt;&lt;td&gt;BC Insurance Indemnity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;621&lt;/td&gt;&lt;td&gt;BC Indemnity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;622&lt;/td&gt;&lt;td&gt;BC Self-insured (ERISA) Administrative Services Only (ASO)Plan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;623&lt;/td&gt;&lt;td&gt;BC Medicare Supplemental Plan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;629&lt;/td&gt;&lt;td&gt;BC Indemnity - Dental&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
+    &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;&lt;p class=&quot;res-header-id&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet us-core-source-of-payment&lt;/b&gt;&lt;/p&gt;&lt;a name=&quot;us-core-source-of-payment&quot;&gt; &lt;/a&gt;&lt;a name=&quot;hcus-core-source-of-payment&quot;&gt; &lt;/a&gt;&lt;a name=&quot;us-core-source-of-payment-en-US&quot;&gt; &lt;/a&gt;&lt;p&gt;This value set includes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Import all the codes that are contained in &lt;a href=&quot;https://vsac.nlm.nih.gov/valueset/2.16.840.1.114222.4.11.3591/expansion&quot;&gt;Payer Type&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This value set excludes codes based on the following rules:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Exclude these codes as defined in &lt;code&gt;https://nahdo.org/sopt&lt;/code&gt;&lt;table class=&quot;none&quot;&gt;&lt;tr&gt;&lt;td style=&quot;white-space:nowrap&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;1111&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Medicare Chronic Condition Special Needs Plan (C-SNP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;1112&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Medicare Institutional Special Needs Plan (I-SNP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3111&lt;/code&gt;&lt;/td&gt;&lt;td&gt;TRICARE Prime--HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3112&lt;/code&gt;&lt;/td&gt;&lt;td&gt;TRICARE Extra--PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3113&lt;/code&gt;&lt;/td&gt;&lt;td&gt;TRICARE Standard - Fee For Service&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3114&lt;/code&gt;&lt;/td&gt;&lt;td&gt;TRICARE For Life--Medicare Supplement&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3115&lt;/code&gt;&lt;/td&gt;&lt;td&gt;TRICARE Reserve Select&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3116&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Uniformed Services Family Health Plan (USFHP) -- HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3119&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Department of Defense - (other)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3121&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Enrolled Prime--HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3122&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Non-enrolled Space Available&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3123&lt;/code&gt;&lt;/td&gt;&lt;td&gt;TRICARE For Life (TFL)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3211&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Direct Care-Care provided in VA facilities&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3212&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Indirect Care-Care provided outside VA facilities&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32121&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Fee Basis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32122&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Foreign Fee/Foreign Medical Program (FMP)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32123&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Contract Nursing Home/Community Nursing Home&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32124&lt;/code&gt;&lt;/td&gt;&lt;td&gt;State Veterans Home&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32125&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Sharing Agreements&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32126&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Other Federal Agency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32127&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Dental Care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;32128&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Vision Care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3221&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Civilian Health and Medical Program for the VA (CHAMPVA)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3222&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Spina Bifida Health Care Program (SB)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3223&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Children of Women Vietnam Veterans (CWVV)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3229&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Other non-veteran care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3711&lt;/code&gt;&lt;/td&gt;&lt;td&gt;HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3712&lt;/code&gt;&lt;/td&gt;&lt;td&gt;PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3713&lt;/code&gt;&lt;/td&gt;&lt;td&gt;POS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3811&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3812&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3813&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - POS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;3819&lt;/code&gt;&lt;/td&gt;&lt;td&gt;Federal, State, Local not specified - not specified managed care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;6&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BLUE CROSS/BLUE SHIELD&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;61&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Managed Care&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;611&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Managed Care - HMO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;612&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Managed Care - PPO&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;613&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Managed Care - POS&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;614&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Managed Care - Dental&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;619&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Managed Care - Other&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;62&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Insurance Indemnity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;621&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Indemnity&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;622&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Self-insured (ERISA) Administrative Services Only (ASO)Plan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;623&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Medicare Supplemental Plan&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;code&gt;629&lt;/code&gt;&lt;/td&gt;&lt;td&gt;BC Indemnity - Dental&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;<a name="end-xhtml"></a>
   &lt;/text&gt;
   &lt;<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.extension">extension</a>
              <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm&quot;&gt;
@@ -444,20 +446,14 @@
   <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Apr 14, 2024 00:18+0000">2024-04-14</span>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 01:21+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -474,7 +470,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -484,16 +480,7 @@
   <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-<!-- feedback form - Google forms -->
-<!-- v0.1, 2021-01-09 -->
-
-
-
-<!-- / feedback form  -->
-
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
   <!-- Analytics Below
   ================================================== -->
   </body>

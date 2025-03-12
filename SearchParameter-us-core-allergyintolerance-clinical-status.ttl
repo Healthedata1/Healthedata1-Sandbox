@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,15 +11,17 @@
   fhir:id [ fhir:v "us-core-allergyintolerance-clinical-status"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <!-- <p>\n  <strong>NOTE</strong>\n  : This US Core SearchParameter definition extends the usage context of the\n  <a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">Conformance expectation\n  extension</a>\n  </p>\n  <ul>\n  <li>multipleAnd</li>\n  <li>multipleOr</li>\n  <li>comparator</li>\n  <li>modifier</li>\n  <li>chain</li>\n  </ul> --><p>\n    <b>id</b>\n    : <a href=\"SearchParameter-us-core-allergyintolerance-clinical-status.html\">USCoreAllergyintoleranceClinicalStatus</a>\n      <!-- us-core-specimen-id -->\n  </p>\n    <!-- <p>\n  <b>url</b>\n  :\n  <b>http://hl7.org/fhir/us/core/SearchParameter/us-core-specimen-id</b>\n  </p> -->  <!-- <p>\n  <b>version</b>\n  : 4.0.1\n  </p> -->  <!-- <p>\n  <b>name</b>\n  : USCoreSpecimenId\n  </p> -->\n    <p>\n      <b>\n    derivedFrom\n    </b>\n    :\n  <a href=\"http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status\">http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status</a>\n      <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->\n  </p>\n    <!-- <p>\n  <b>status</b>\n  : active\n  </p>\n  <p>\n  <b>date</b>\n  : 04/13/2023\n  </p> --><p>\n    <b>publisher</b>\n    :\n    <a href=\"mailto:ehaas@healthedatainc.com\">Health eData Inc</a>\n      <!-- HL7 International - Cross-Group Projects -->\n  </p>\n    <!-- <p>\n  <b> useContext</b> : </p> -->  <!-- <p>\n  <b>jurisdiction</b>\n  : United States of America (the)\n  <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n  States of America (the)'})</span>\n  </p> -->  <!-- <p>\n  <b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n  and matching as part of a chain</p> -->\n    <p>\n      <b>\n    code\n    </b>\n    :\n      <code>\n    clinical-status\n  </code>\n      <!-- _id -->\n  </p>\n  <p>\n    <b>base</b>\n    : AllergyIntolerance\n      <!-- :Specimen -->\n  </p>\n  <p>\n    <b>type</b>\n    : token\n      <!-- : token -->\n  </p>\n  <p>\n    <b>expression</b>\n    :\n    <code>AllergyIntolerance.clinicalStatus</code>\n      <!-- Specimen.id -->\n  </p>\n  <p>\n    <b>xpath</b>\n    :\n    <code/>\n      <!-- f:Specimen/f:id -->\n  </p>\n  <p>\n    <b>xpathUsage</b>\n    : \n      <!-- : normal -->\n  </p>\n  <p>\n    <b>multipleOr</b>\n    : true (Conformance Expectation = MAY)\n      <!-- : True (Conformance Expectation = MAY) -->\n  </p>\n  <p>\n    <b>multipleAnd</b>\n    : true (Conformance Expectation = MAY)\n      <!-- : True ( Conformance Expectation = MAY) -->\n  </p>\n</div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n    <!-- <p>\n  <strong>NOTE</strong>\n  : This US Core SearchParameter definition extends the usage context of the\n  <a href=\"http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html\">Conformance expectation\n  extension</a>\n  </p>\n  <ul>\n  <li>multipleAnd</li>\n  <li>multipleOr</li>\n  <li>comparator</li>\n  <li>modifier</li>\n  <li>chain</li>\n  </ul> --><p>\n    <b>id</b>\n    : us-core-allergyintolerance-clinical-status\n      <!-- us-core-specimen-id -->\n  </p>\n    <!-- <p>\n  <b>url</b>\n  :\n  <b>http://hl7.org/fhir/us/core/SearchParameter/us-core-specimen-id</b>\n  </p> -->  <!-- <p>\n  <b>version</b>\n  : 4.0.1\n  </p> -->  <!-- <p>\n  <b>name</b>\n  : USCoreSpecimenId\n  </p> -->\n    <p>\n      <b>\n    derivedFrom\n    </b>\n    :\n  <a href=\"http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status\">clinical-status</a>\n      <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->\n  </p>\n    <!-- <p>\n  <b>status</b>\n  : active\n  </p>\n  <p>\n  <b>date</b>\n  : 04/13/2023\n  </p> --><p>\n    <b>publisher</b>\n    :\n    <a href=\"mailto:ehaas@healthedatainc.com\">Health eData Inc</a>\n      <!-- HL7 International - Cross-Group Projects -->\n  </p>\n    <!-- <p>\n  <b> useContext</b> : </p> -->  <!-- <p>\n  <b>jurisdiction</b>\n  : United States of America (the)\n  <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United\n  States of America (the)'})</span>\n  </p> -->  <!-- <p>\n  <b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,\n  and matching as part of a chain</p> -->\n    <p>\n      <b>\n    code\n    </b>\n    :\n      <code>\n    clinical-status\n  </code>\n      <!-- _id -->\n  </p>\n  <p>\n    <b>base</b>\n    : AllergyIntolerance\n      <!-- :Specimen -->\n  </p>\n  <p>\n    <b>type</b>\n    : Token\n      <!-- : token -->\n  </p>\n  <p>\n    <b>expression</b>\n    :\n    <code>AllergyIntolerance.clinicalStatus</code>\n      <!-- Specimen.id -->\n  </p>\n  <p>\n    <b>xpath</b>\n    :\n    <code/>\n      <!-- f:Specimen/f:id -->\n  </p>\n  <p>\n    <b>xpathUsage</b>\n    : \n      <!-- : normal -->\n  </p>\n  <p>\n    <b>multipleOr</b>\n    : true (Conformance Expectation = MAY)\n      <!-- : True (Conformance Expectation = MAY) -->\n  </p>\n  <p>\n    <b>multipleAnd</b>\n    : true (Conformance Expectation = MAY)\n      <!-- : True ( Conformance Expectation = MAY) -->\n  </p>\n</div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:extension ( [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
      fhir:value [
-       fhir:v "2"^^xsd:integer ;
+       a fhir:integer ;
+       fhir:v 2 ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
          fhir:value [
+           a fhir:canonical ;
            fhir:v "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"^^xsd:anyURI ;
            fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
          ]
@@ -27,10 +30,12 @@
   ] [
      fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
      fhir:value [
+       a fhir:code ;
        fhir:v "trial-use" ;
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
          fhir:value [
+           a fhir:canonical ;
            fhir:v "http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox"^^xsd:anyURI ;
            fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/ImplementationGuide/healthedata1-sandbox>
          ]
@@ -45,7 +50,7 @@
      fhir:link <http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status>
   ] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:experimental [ fhir:v false] ; # 
   fhir:date [ fhir:v "2022-04-14"^^xsd:date] ; # 
   fhir:publisher [ fhir:v "Health eData Inc"] ; # 
   fhir:contact ( [
@@ -61,17 +66,23 @@
   fhir:expression [ fhir:v "AllergyIntolerance.clinicalStatus"] ; # 
   fhir:xpathUsage [ fhir:v "normal"] ; # 
   fhir:multipleOr [
-     fhir:v "true"^^xsd:boolean ;
+     fhir:v true ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "MAY" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "MAY"
+       ]
      ] )
   ] ; # 
   fhir:multipleAnd [
-     fhir:v "true"^^xsd:boolean ;
+     fhir:v true ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "MAY" ]
+       fhir:value [
+         a fhir:code ;
+         fhir:v "MAY"
+       ]
      ] )
   ] . # 
 

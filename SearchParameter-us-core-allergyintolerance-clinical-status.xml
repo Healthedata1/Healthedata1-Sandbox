@@ -18,7 +18,7 @@
   <li>chain</li>
   </ul> --><p>
     <b>id</b>
-    : <a href="SearchParameter-us-core-allergyintolerance-clinical-status.html">USCoreAllergyintoleranceClinicalStatus</a>
+    : us-core-allergyintolerance-clinical-status
       <!-- us-core-specimen-id -->
   </p>
     <!-- <p>
@@ -37,7 +37,7 @@
     derivedFrom
     </b>
     :
-  <a href="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status">http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status</a>
+  <a href="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status">clinical-status</a>
       <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->
   </p>
     <!-- <p>
@@ -79,7 +79,7 @@
   </p>
   <p>
     <b>type</b>
-    : token
+    : Token
       <!-- : token -->
   </p>
   <p>

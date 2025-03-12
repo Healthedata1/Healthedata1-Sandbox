@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
     <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
   	<link rel="stylesheet" href="assets/css/prism.css"/>
+  	<link rel="stylesheet" href="assets/css/cqf.css"/>
       <!-- Placeholder for child template CSS declarations -->
 
     <script src="fhir-table-scripts.js" type="text/javascript"> </script>
@@ -38,11 +39,13 @@
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
+
           <!-- Placeholder for child template header declarations -->
 
 
@@ -175,6 +178,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#profiles" id="markdown-toc-profiles">Profiles</a></li>
   <li><a href="#extensions" id="markdown-toc-extensions">Extensions</a></li>
   <li><a href="#sps" id="markdown-toc-sps">SPS</a></li>
+  <li><a href="#test-issue" id="markdown-toc-test-issue">test issue</a></li>
 </ul>
 
 </div>
@@ -183,7 +187,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <p>{This is really fun}</p>
 
-<p>{{ site.data.foo[‘fun/time’][‘description’]}} : This is really fun</p>
+<p>{{ site.data.foo['fun/time']['description']}} : This is really fun</p>
 
 <h3 id="create-pretty-list-with-liquid">Create Pretty List with Liquid</h3>
 
@@ -192,12 +196,12 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <h3 id="my-new-stuff">My new stuff</h3>
 
 <ul>
-  <li><span class="bg-success">“USCoreNonLaboratoryCodes”</span>  <!-- new-content --></li>
-  <li><span class="bg-success">“USCoreObservationCategoryValueSet”</span>  <!-- new-content --></li>
-  <li><span class="bg-success">“USCoreSurveyCodes”</span>  <!-- new-content --></li>
-  <li><span class="bg-success">“USCoreOccupationProfile”</span>  <!-- new-content --></li>
-  <li><span class="bg-success">“USCorePregnancyStatusProfile”</span>  <!-- new-content --></li>
-  <li><span class="bg-success">“QuestionnaireUrl”</span>  <!-- new-content --></li>
+  <li><span class="bg-success">"USCoreNonLaboratoryCodes"</span>  <!-- new-content --></li>
+  <li><span class="bg-success">"USCoreObservationCategoryValueSet"</span>  <!-- new-content --></li>
+  <li><span class="bg-success">"USCoreSurveyCodes"</span>  <!-- new-content --></li>
+  <li><span class="bg-success">"USCoreOccupationProfile"</span>  <!-- new-content --></li>
+  <li><span class="bg-success">"USCorePregnancyStatusProfile"</span>  <!-- new-content --></li>
+  <li><span class="bg-success">"QuestionnaireUrl"</span>  <!-- new-content --></li>
 </ul>
 
 <hr/>
@@ -218,7 +222,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 &lt;/ul&gt;
 </code></pre></div></div>
 
-<ul><li>US Core Pediatric BMI for Age Observation Profile</li><li>US Core Pediatric Weight for Height Observation Profile</li><li>US Core Simple Observation Profile</li><li>US Core AllergyIntolerance Profile</li><li>US Core Blood Pressure Profile</li><li>US Core Vital Signs Profile</li><li></li><li></li><li></li><li></li></ul>
+<ul><li>US Core Pediatric BMI for Age Observation Profile</li><li>US Core Pediatric Weight for Height Observation Profile</li><li>US Core AllergyIntolerance Profile</li><li>US Core Blood Pressure Profile</li><li>US Core Vital Signs Profile</li><li></li><li></li><li></li><li></li></ul>
 
 <hr/>
 
@@ -304,12 +308,10 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
         
         
-        
         <li><a href="StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></li></ul>
 
 <p><strong>Extension</strong></p>
 <ul>
-        
         
         
         
@@ -334,17 +336,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
         
         
-        
-        
-        
-        
-        
-        <li><a href="StructureDefinition-us-core-simple-observation.html">US Core Simple Observation Profile</a></li>
-        
-        
-        
-        
-        
         <li><a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile(Parent)</a>
                 <ul>
                     <li><a href="StructureDefinition-pediatric-bmi-for-age.html">US Core Pediatric BMI for Age Observation Profile(child)</a></li>
@@ -352,7 +343,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                 
                     <li><a href="StructureDefinition-pediatric-weight-for-height.html">US Core Pediatric Weight for Height Observation Profile(child)</a></li>
                   
-                
                 
                 
                 
@@ -410,7 +400,7 @@ tadaa...
     </tr>
     <tr>
       <td><strong>Category</strong></td>
-      <td>A “super-role”, a category of related Provider Role Types. <br/><br/>For example, the category “Nurse” might contain many Provider Role Types such as “LPN”, RN” and so on; the category “Doctors” might contain all Provider role types assigned to doctors, and so on.</td>
+      <td>A "super-role", a category of related Provider Role Types. <br/><br/>For example, the category "Nurse" might contain many Provider Role Types such as "LPN", RN" and so on; the category "Doctors" might contain all Provider role types assigned to doctors, and so on.</td>
     </tr>
   </tbody>
 </table>
@@ -419,7 +409,7 @@ tadaa...
 
 <h3 id="svg-file">svg file</h3>
 
-<p>&lt;?xml version=”1.0” encoding=”UTF-8” standalone=”no”?&gt;<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 542 275" zoomAndPan="magnify" preserveAspectRatio="none" width="542px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:542px;height:275px;background:#FFFFFF;" contentScriptType="application/ecmascript" version="1.1" height="275px"><defs><filter width="300%" x="-1" y="-1" id="f6nb99kiye4r7" height="300%"><feGaussianBlur result="blurOut" stdDeviation="2.0"></feGaussianBlur><feColorMatrix result="blurOut2" in="blurOut" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" type="matrix"></feColorMatrix><feOffset result="blurOut3" dx="4.0" dy="4.0" in="blurOut2"></feOffset><feBlend mode="normal" in="SourceGraphic" in2="blurOut3"></feBlend></filter></defs><g><ellipse filter="url(#f6nb99kiye4r7)" cx="272.5" cy="20" rx="10" ry="10" style="stroke:none;stroke-width:1.0;" fill="#000000"></ellipse><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="32,50,95,50,107,62,95,74,32,74,20,62,32,50"></polygon><text lengthAdjust="spacing" x="67.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="32" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition A</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="57" x="35" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="45" font-size="12" textLength="37" y="126.8491" font-family="sans-serif" fill="#000000">Text 1</text><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="139,50,202,50,214,62,202,74,139,74,127,62,139,50"></polygon><text lengthAdjust="spacing" x="174.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="139" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition B</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="141.5" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="151.5" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 2</text><ellipse filter="url(#f6nb99kiye4r7)" cx="170.5" cy="185.6792" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" fill="#FFFFFF"></ellipse><ellipse cx="170.5" cy="185.6792" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;" fill="#000000"></ellipse><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="246,50,309,50,321,62,309,74,246,74,234,62,246,50"></polygon><text lengthAdjust="spacing" x="281.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="246" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition C</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="248.5" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="258.5" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 3</text><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="353,50,417,50,429,62,417,74,353,74,341,62,353,50"></polygon><text lengthAdjust="spacing" x="389" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="353" font-size="11" textLength="64" y="65.8081" font-family="sans-serif" fill="#000000">condition D</text><text lengthAdjust="spacing" x="429" font-size="11" textLength="42" y="59.4058" font-family="sans-serif" fill="#000000">nothing</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="356" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="366" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 4</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="76" x="449" y="130.8081" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="459" font-size="12" textLength="56" y="151.9468" font-family="sans-serif" fill="#000000">Text else</text><ellipse filter="url(#f6nb99kiye4r7)" cx="272.5" cy="247.6792" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" fill="#FFFFFF"></ellipse><ellipse cx="272.5" cy="247.6792" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;" fill="#000000"></ellipse><line y1="139.6792" x1="170.5" y2="174.6792" style="stroke:#A80036;stroke-width:1.5;" x2="170.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="166.5,164.6792,170.5,174.6792,174.5,164.6792,170.5,168.6792"></polygon><line y1="74" x1="63.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,95.7104,63.5,105.7104,67.5,95.7104,63.5,99.7104"></polygon><line y1="139.6792" x1="63.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,206.6792,63.5,216.6792,67.5,206.6792,63.5,210.6792"></polygon><line y1="74" x1="170.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="170.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="166.5,95.7104,170.5,105.7104,174.5,95.7104,170.5,99.7104"></polygon><line y1="74" x1="277.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="277.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="273.5,95.7104,277.5,105.7104,281.5,95.7104,277.5,99.7104"></polygon><line y1="139.6792" x1="277.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="277.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="273.5,206.6792,277.5,216.6792,281.5,206.6792,277.5,210.6792"></polygon><line y1="74" x1="385" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="385"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="381,95.7104,385,105.7104,389,95.7104,385,99.7104"></polygon><line y1="139.6792" x1="385" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="385"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="381,206.6792,385,216.6792,389,206.6792,385,210.6792"></polygon><line y1="62" x1="107" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="127"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="117,58,127,62,117,66,121,62"></polygon><line y1="62" x1="214" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="234"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="224,58,234,62,224,66,228,62"></polygon><line y1="62" x1="321" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="341"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="331,58,341,62,331,66,335,62"></polygon><line y1="30" x1="272.5" y2="35" style="stroke:#A80036;stroke-width:1.5;" x2="272.5"></line><line y1="35" x1="272.5" y2="35" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><line y1="35" x1="63.5" y2="50" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,40,63.5,50,67.5,40,63.5,44"></polygon><line y1="62" x1="429" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><line y1="62" x1="487" y2="130.8081" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="483,120.8081,487,130.8081,491,120.8081,487,124.8081"></polygon><line y1="164.7769" x1="487" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="483,206.6792,487,216.6792,491,206.6792,487,210.6792"></polygon><line y1="216.6792" x1="63.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><line y1="216.6792" x1="272.5" y2="236.6792" style="stroke:#A80036;stroke-width:1.5;" x2="272.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="268.5,226.6792,272.5,236.6792,276.5,226.6792,272.5,230.6792"></polygon>&lt;!--MD5=[bb912d9427ff8b649e9ce4d57f1ca285]
+<p>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 542 275" zoomAndPan="magnify" preserveAspectRatio="none" width="542px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:542px;height:275px;background:#FFFFFF;" contentScriptType="application/ecmascript" version="1.1" height="275px"><defs><filter width="300%" x="-1" y="-1" id="f6nb99kiye4r7" height="300%"><feGaussianBlur result="blurOut" stdDeviation="2.0"></feGaussianBlur><feColorMatrix result="blurOut2" in="blurOut" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0" type="matrix"></feColorMatrix><feOffset result="blurOut3" dx="4.0" dy="4.0" in="blurOut2"></feOffset><feBlend mode="normal" in="SourceGraphic" in2="blurOut3"></feBlend></filter></defs><g><ellipse filter="url(#f6nb99kiye4r7)" cx="272.5" cy="20" rx="10" ry="10" style="stroke:none;stroke-width:1.0;" fill="#000000"></ellipse><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="32,50,95,50,107,62,95,74,32,74,20,62,32,50"></polygon><text lengthAdjust="spacing" x="67.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="32" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition A</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="57" x="35" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="45" font-size="12" textLength="37" y="126.8491" font-family="sans-serif" fill="#000000">Text 1</text><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="139,50,202,50,214,62,202,74,139,74,127,62,139,50"></polygon><text lengthAdjust="spacing" x="174.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="139" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition B</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="141.5" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="151.5" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 2</text><ellipse filter="url(#f6nb99kiye4r7)" cx="170.5" cy="185.6792" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" fill="#FFFFFF"></ellipse><ellipse cx="170.5" cy="185.6792" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;" fill="#000000"></ellipse><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="246,50,309,50,321,62,309,74,246,74,234,62,246,50"></polygon><text lengthAdjust="spacing" x="281.5" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="246" font-size="11" textLength="63" y="65.8081" font-family="sans-serif" fill="#000000">condition C</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="248.5" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="258.5" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 3</text><polygon filter="url(#f6nb99kiye4r7)" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" points="353,50,417,50,429,62,417,74,353,74,341,62,353,50"></polygon><text lengthAdjust="spacing" x="389" font-size="11" textLength="21" y="84.2104" font-family="sans-serif" fill="#000000">yes</text><text lengthAdjust="spacing" x="353" font-size="11" textLength="64" y="65.8081" font-family="sans-serif" fill="#000000">condition D</text><text lengthAdjust="spacing" x="429" font-size="11" textLength="42" y="59.4058" font-family="sans-serif" fill="#000000">nothing</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="58" x="356" y="105.7104" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="366" font-size="12" textLength="38" y="126.8491" font-family="sans-serif" fill="#000000">Text 4</text><rect filter="url(#f6nb99kiye4r7)" rx="12.5" ry="12.5" width="76" x="449" y="130.8081" style="stroke:#A80036;stroke-width:1.5;" fill="#FEFECE" height="33.9688"></rect><text lengthAdjust="spacing" x="459" font-size="12" textLength="56" y="151.9468" font-family="sans-serif" fill="#000000">Text else</text><ellipse filter="url(#f6nb99kiye4r7)" cx="272.5" cy="247.6792" rx="11" ry="11" style="stroke:#000000;stroke-width:1.0;" fill="#FFFFFF"></ellipse><ellipse cx="272.5" cy="247.6792" rx="6" ry="6" style="stroke:#7F7F7F;stroke-width:1.0;" fill="#000000"></ellipse><line y1="139.6792" x1="170.5" y2="174.6792" style="stroke:#A80036;stroke-width:1.5;" x2="170.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="166.5,164.6792,170.5,174.6792,174.5,164.6792,170.5,168.6792"></polygon><line y1="74" x1="63.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,95.7104,63.5,105.7104,67.5,95.7104,63.5,99.7104"></polygon><line y1="139.6792" x1="63.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,206.6792,63.5,216.6792,67.5,206.6792,63.5,210.6792"></polygon><line y1="74" x1="170.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="170.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="166.5,95.7104,170.5,105.7104,174.5,95.7104,170.5,99.7104"></polygon><line y1="74" x1="277.5" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="277.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="273.5,95.7104,277.5,105.7104,281.5,95.7104,277.5,99.7104"></polygon><line y1="139.6792" x1="277.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="277.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="273.5,206.6792,277.5,216.6792,281.5,206.6792,277.5,210.6792"></polygon><line y1="74" x1="385" y2="105.7104" style="stroke:#A80036;stroke-width:1.5;" x2="385"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="381,95.7104,385,105.7104,389,95.7104,385,99.7104"></polygon><line y1="139.6792" x1="385" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="385"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="381,206.6792,385,216.6792,389,206.6792,385,210.6792"></polygon><line y1="62" x1="107" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="127"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="117,58,127,62,117,66,121,62"></polygon><line y1="62" x1="214" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="234"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="224,58,234,62,224,66,228,62"></polygon><line y1="62" x1="321" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="341"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="331,58,341,62,331,66,335,62"></polygon><line y1="30" x1="272.5" y2="35" style="stroke:#A80036;stroke-width:1.5;" x2="272.5"></line><line y1="35" x1="272.5" y2="35" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><line y1="35" x1="63.5" y2="50" style="stroke:#A80036;stroke-width:1.5;" x2="63.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="59.5,40,63.5,50,67.5,40,63.5,44"></polygon><line y1="62" x1="429" y2="62" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><line y1="62" x1="487" y2="130.8081" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="483,120.8081,487,130.8081,491,120.8081,487,124.8081"></polygon><line y1="164.7769" x1="487" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="483,206.6792,487,216.6792,491,206.6792,487,210.6792"></polygon><line y1="216.6792" x1="63.5" y2="216.6792" style="stroke:#A80036;stroke-width:1.5;" x2="487"></line><line y1="216.6792" x1="272.5" y2="236.6792" style="stroke:#A80036;stroke-width:1.5;" x2="272.5"></line><polygon style="stroke:#A80036;stroke-width:1.0;" fill="#A80036" points="268.5,226.6792,272.5,236.6792,276.5,226.6792,272.5,230.6792"></polygon>&lt;!--MD5=[bb912d9427ff8b649e9ce4d57f1ca285]
 @startuml
 start
 if (condition A) then (yes)
@@ -559,7 +549,7 @@ Country: US
       <tr>
         <th class="col-sm-4">Allergies and Intolerances</th>
         <th class="col-sm-4"><a href="StructureDefinition-us-core-allergyintolerance.html" target="_blank">US Core AllergyIntolerance Profile</a></th>
-        <th class="col-sm-2"><a name="l2326">​</a><a href="#.html">COMMENT</a></th> 
+        <th class="col-sm-2"><a name="l2330">​</a><a href="#.html">COMMENT</a></th> 
       </tr>
     </thead>
     <tbody>
@@ -599,13 +589,13 @@ Country: US
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Assessment and Plan of Treatment</td>
-        <td><a name="l2399">​</a><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a></td>
+        <td><a name="l2403">​</a><a href="StructureDefinition-us-core-careplan.html" target="_blank">US Core CarePlan Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Assessment</td>
-        <td><a name="l2411">​</a><a href="StructureDefinition-us-core-observation-sdoh-assessment.html" target="_blank">US Core Observation SDOH Assessment Profile</a><br/><a href="StructureDefinition-us-core-observation-social-history.html" target="_blank">US Core Observation Social History Profile</a><br/><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></td>
-        <td><a name="l2421">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+        <td><a name="l2415">​</a><a href="StructureDefinition-us-core-observation-sdoh-assessment.html" target="_blank">US Core Observation SDOH Assessment Profile</a><br/><a href="StructureDefinition-us-core-observation-social-history.html" target="_blank">US Core Observation Social History Profile</a><br/><a href="StructureDefinition-us-core-questionnaireresponse.html" target="_blank">US Core QuestionnaireResponse Profile</a></td>
+        <td><a name="l2425">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
       </tr>
  
     </tbody>
@@ -621,7 +611,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Care Team Members</th>
-        <th class="col-sm-4"><a name="l2448">​</a><a href="StructureDefinition-us-core-careteam.html" target="_blank">US Core CareTeam Profile</a></th>
+        <th class="col-sm-4"><a name="l2452">​</a><a href="StructureDefinition-us-core-careteam.html" target="_blank">US Core CareTeam Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -665,7 +655,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Clinical Notes</th>
-        <th class="col-sm-4"><a name="l2530">​</a><a href="StructureDefinition-us-core-documentreference.html" target="_blank">US Core DocumentReference Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-4"><a name="l2534">​</a><a href="StructureDefinition-us-core-documentreference.html" target="_blank">US Core DocumentReference Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -708,7 +698,7 @@ Country: US
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Progress Note</td>
         <td></td>
-        <td><a name="l2620">​</a><a href="clinical-notes.html" target="_blank">See Clinical Notes Guidance</a></td>
+        <td><a name="l2624">​</a><a href="clinical-notes.html" target="_blank">See Clinical Notes Guidance</a></td>
       </tr>
  
     </tbody>
@@ -724,7 +714,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Clinical Tests</th>
-        <th class="col-sm-4"><a name="l2647">​</a><a href="StructureDefinition-us-core-observation-clinical-test.html" target="_blank">US Core Observation Clinical Test Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-4"><a name="l2651">​</a><a href="StructureDefinition-us-core-observation-clinical-test.html" target="_blank">US Core Observation Clinical Test Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -753,7 +743,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Diagnostic Imaging</th>
-        <th class="col-sm-4"><a name="l2702">​</a><a href="StructureDefinition-us-core-observation-imaging.html" target="_blank">US Core Observation Imaging Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
+        <th class="col-sm-4"><a name="l2706">​</a><a href="StructureDefinition-us-core-observation-imaging.html" target="_blank">US Core Observation Imaging Result Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-note.html" target="_blank">US Core DiagnosticReport Profile for Report and Note Exchange</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -782,7 +772,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Encounter</th>
-        <th class="col-sm-4"><a name="l2757">​</a><a href="StructureDefinition-us-core-encounter.html" target="_blank">US Core Encounter Profile</a></th>
+        <th class="col-sm-4"><a name="l2761">​</a><a href="StructureDefinition-us-core-encounter.html" target="_blank">US Core Encounter Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -794,7 +784,7 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Diagnosis</td>
-        <td><a name="l2782">​</a><a href="StructureDefinition-us-core-condition-encounter-diagnosis.html" target="_blank">US Core Condition Encounter Diagnosis Profile</a></td>
+        <td><a name="l2786">​</a><a href="StructureDefinition-us-core-condition-encounter-diagnosis.html" target="_blank">US Core Condition Encounter Diagnosis Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -819,7 +809,7 @@ Country: US
 </div>
 <div class="panel">
   <div class="panel-body">
-    <div class="icon-right"><a name="l2827">​</a>
+    <div class="icon-right"><a name="l2831">​</a>
     <img src="foo.png" alt="Foo" style="width:60px" class="media-object"/>
   </div>
   <table class="table table-condensed">
@@ -857,13 +847,13 @@ Country: US
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Patient Goals</td>
-        <td><a name="l2897">​</a><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></td>
+        <td><a name="l2901">​</a><a href="StructureDefinition-us-core-goal.html" target="_blank">US Core Goal Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Goals</td>
         <td></td>
-        <td><a name="l2911">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+        <td><a name="l2915">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
       </tr>
  
     </tbody>
@@ -879,14 +869,14 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Health Insurance Information</th>
-        <th class="col-sm-4"><a name="l2938">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></th>
+        <th class="col-sm-4"><a name="l2942">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Coverage Status</td>
-        <td><a name="l2953">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></td>
+        <td><a name="l2957">​</a><a href="StructureDefinition-us-core-coverage.html" target="_blank">US Core Coverage Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -940,13 +930,13 @@ Country: US
     <tbody>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Health Concerns</td>
-        <td><a name="l3055">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></td>
+        <td><a name="l3059">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Functional Status</td>
         <td>TODO</td>
-        <td><a name="l3070">​</a><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
+        <td><a name="l3074">​</a><a href="screening-and-assessments.html" target="_blank">See Assessments Guidance</a></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Disability Status</td>
@@ -960,12 +950,12 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pregnancy Status</td>
-        <td><a name="l3102">​</a><a href="StructureDefinition-us-core-observation-pregnancystatus.html" target="_blank">US Core Observation Pregnancy Status Profile</a><br/><a href="StructureDefinition-us-core-observation-pregnancyintent.html" target="_blank">US Core Observation Pregnancy Intent Profile</a></td>
+        <td><a name="l3106">​</a><a href="StructureDefinition-us-core-observation-pregnancystatus.html" target="_blank">US Core Observation Pregnancy Status Profile</a><br/><a href="StructureDefinition-us-core-observation-pregnancyintent.html" target="_blank">US Core Observation Pregnancy Intent Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Smoking Status</td>
-        <td><a name="l3117">​</a><a href="StructureDefinition-us-core-smokingstatus.html" target="_blank">US Core Smoking Status Observation Profile</a></td>
+        <td><a name="l3121">​</a><a href="StructureDefinition-us-core-smokingstatus.html" target="_blank">US Core Smoking Status Observation Profile</a></td>
         <td></td>
       </tr>
  
@@ -982,7 +972,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Immunizations</th>
-        <th class="col-sm-4"><a name="l3146">​</a><a href="StructureDefinition-us-core-immunization.html" target="_blank">US Core Immunization Profile</a></th>
+        <th class="col-sm-4"><a name="l3150">​</a><a href="StructureDefinition-us-core-immunization.html" target="_blank">US Core Immunization Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1006,7 +996,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Laboratory</th>
-        <th class="col-sm-4"><a name="l3188">​</a><a href="StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Observation Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-lab.html" target="_blank">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></th>
+        <th class="col-sm-4"><a name="l3192">​</a><a href="StructureDefinition-us-core-observation-lab.html" target="_blank">US Core Laboratory Result Observation Profile</a><br/><a href="StructureDefinition-us-core-diagnosticreport-lab.html" target="_blank">US Core DiagnosticReport Profile for Laboratory Results Reporting</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1045,7 +1035,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Medications</th>
-        <th class="col-sm-4"><a name="l3263">​</a><a href="StructureDefinition-us-core-medicationrequest.html" target="_blank">US Core MedicationRequest Profile</a></th>
+        <th class="col-sm-4"><a name="l3267">​</a><a href="StructureDefinition-us-core-medicationrequest.html" target="_blank">US Core MedicationRequest Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1053,7 +1043,7 @@ Country: US
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Medications</td>
         <td></td>
-        <td><a name="l3280">​</a><a href="medication-list.html" target="_blank">See Medication List Guidance</a></td>
+        <td><a name="l3284">​</a><a href="medication-list.html" target="_blank">See Medication List Guidance</a></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Dose</td>
@@ -1072,7 +1062,7 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Fill Status</td>
-        <td><a name="l3320">​</a><a href="StructureDefinition-us-core-medicationdispense.html" target="_blank">US Core MedicationDispense Profile</a></td>
+        <td><a name="l3324">​</a><a href="StructureDefinition-us-core-medicationdispense.html" target="_blank">US Core MedicationDispense Profile</a></td>
         <td></td>
       </tr>
  
@@ -1089,7 +1079,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Patient Demographics</th>
-        <th class="col-sm-4"><a name="l3349">​</a><a href="StructureDefinition-us-core-patient.html" target="_blank">US Core Patient Profile</a></th>
+        <th class="col-sm-4"><a name="l3353">​</a><a href="StructureDefinition-us-core-patient.html" target="_blank">US Core Patient Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1136,27 +1126,27 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Race</td>
-        <td><a name="l3444">​</a><a href="StructureDefinition-us-core-race.html" target="_blank">US Core Race Extension</a></td>
+        <td><a name="l3448">​</a><a href="StructureDefinition-us-core-race.html" target="_blank">US Core Race Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Ethnicity</td>
-        <td><a name="l3456">​</a><a href="StructureDefinition-us-core-ethnicity.html" target="_blank">US Core Ethnicity Extension</a></td>
+        <td><a name="l3460">​</a><a href="StructureDefinition-us-core-ethnicity.html" target="_blank">US Core Ethnicity Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Tribal Affiliation</td>
-        <td><a name="l3468">​</a><a href="StructureDefinition-us-core-tribal-affiliation.html" target="_blank">US Core Tribal Affiliation Extension</a></td>
+        <td><a name="l3472">​</a><a href="StructureDefinition-us-core-tribal-affiliation.html" target="_blank">US Core Tribal Affiliation Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Gender Identity</td>
-        <td><a name="l3480">​</a><a href="StructureDefinition-us-core-genderIdentity.html" target="_blank">US Core Gender Identity Extension</a></td>
+        <td><a name="l3484">​</a><a href="StructureDefinition-us-core-genderIdentity.html" target="_blank">US Core Gender Identity Extension</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Sexual Orientation</td>
-        <td><a name="l3492">​</a><a href="StructureDefinition-us-core-observation-sexual-orientation.html" target="_blank">US Core Observation Sexual Orientation Profile</a></td>
+        <td><a name="l3496">​</a><a href="StructureDefinition-us-core-observation-sexual-orientation.html" target="_blank">US Core Observation Sexual Orientation Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -1186,22 +1176,22 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person’s Name</td>
-        <td><a name="l3554">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td><a name="l3558">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Related Person’s Relationship</td>
-        <td><a name="l3566">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
+        <td><a name="l3570">​</a><a href="StructureDefinition-us-core-relatedperson.html" target="_blank">US Core RelatedPerson Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation</td>
-        <td><a name="l3578">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td><a name="l3582">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Occupation Industry</td>
-        <td><a name="l3590">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
+        <td><a name="l3594">​</a><a href="StructureDefinition-us-core-observation-occupation.html" target="_blank">US Core Observation Occupation Profile</a></td>
         <td></td>
       </tr>
  
@@ -1218,7 +1208,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Problems</th>
-        <th class="col-sm-4"><a name="l3619">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></th>
+        <th class="col-sm-4"><a name="l3623">​</a><a href="StructureDefinition-us-core-condition-problems-health-concerns.html" target="_blank">US Core Condition Problems and Health Concerns Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1252,7 +1242,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Procedures</th>
-        <th class="col-sm-4"><a name="l3681">​</a><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></th>
+        <th class="col-sm-4"><a name="l3685">​</a><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1264,13 +1254,13 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Reason for Referral</td>
-        <td><a name="l3706">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a></td>
+        <td><a name="l3710">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•SDOH Interventions</td>
-        <td><a name="l3718">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a><br/><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></td>
-        <td><a name="l3725">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
+        <td><a name="l3722">​</a><a href="StructureDefinition-us-core-servicerequest.html" target="_blank">US Core ServiceRequest Profile</a><br/><a href="StructureDefinition-us-core-procedure.html" target="_blank">US Core Procedure Profile</a></td>
+        <td><a name="l3729">​</a><a href="screening-and-assessments.html" target="_blank">See SDOH Guidance</a></td>
       </tr>
  
     </tbody>
@@ -1286,7 +1276,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Provenance</th>
-        <th class="col-sm-4"><a name="l3752">​</a><a href="StructureDefinition-us-core-provenance.html" target="_blank">US Core Provenance Profile</a></th>
+        <th class="col-sm-4"><a name="l3756">​</a><a href="StructureDefinition-us-core-provenance.html" target="_blank">US Core Provenance Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1315,7 +1305,7 @@ Country: US
     <thead>
       <tr>
         <th class="col-sm-4">Unique Device Identifier(s)</th>
-        <th class="col-sm-4"><a name="l3804">​</a><a href="StructureDefinition-us-core-implantable-device.html" target="_blank">US Core Implantable Device Profile</a></th>
+        <th class="col-sm-4"><a name="l3808">​</a><a href="StructureDefinition-us-core-implantable-device.html" target="_blank">US Core Implantable Device Profile</a></th>
         <th class="col-sm-2"></th> 
       </tr>
     </thead>
@@ -1356,37 +1346,37 @@ Country: US
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body height</td>
-        <td><a name="l3885">​</a><a href="StructureDefinition-us-core-body-height.html" target="_blank">US Core Body Height Profile</a></td>
+        <td><a name="l3889">​</a><a href="StructureDefinition-us-core-body-height.html" target="_blank">US Core Body Height Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body weight</td>
-        <td><a name="l3897">​</a><a href="StructureDefinition-us-core-body-weight.html" target="_blank">US Core Body Weight Profile</a></td>
+        <td><a name="l3901">​</a><a href="StructureDefinition-us-core-body-weight.html" target="_blank">US Core Body Weight Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Heart rate</td>
-        <td><a name="l3909">​</a><a href="StructureDefinition-us-core-heart-rate.html" target="_blank">US Core Heart Rate Profile</a></td>
+        <td><a name="l3913">​</a><a href="StructureDefinition-us-core-heart-rate.html" target="_blank">US Core Heart Rate Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Respiratory rate</td>
-        <td><a name="l3921">​</a><a href="StructureDefinition-us-core-respiratory-rate.html" target="_blank">US Core Respiratory Rate Profile</a></td>
+        <td><a name="l3925">​</a><a href="StructureDefinition-us-core-respiratory-rate.html" target="_blank">US Core Respiratory Rate Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Body temperature</td>
-        <td><a name="l3933">​</a><a href="StructureDefinition-us-core-body-temperature.html" target="_blank">US Core Body Temperature Profile</a></td>
+        <td><a name="l3937">​</a><a href="StructureDefinition-us-core-body-temperature.html" target="_blank">US Core Body Temperature Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Pulse oximetry</td>
-        <td><a name="l3945">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td><a name="l3949">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
         <td></td>
       </tr>
       <tr>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;•Inhaled oxygen concentration</td>
-        <td><a name="l3957">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
+        <td><a name="l3961">​</a><a href="StructureDefinition-us-core-pulse-oximetry.html" target="_blank">US Core Pulse Oximetry Profile</a></td>
         <td></td>
       </tr>
       <tr>
@@ -1414,7 +1404,7 @@ Country: US
 
 <p>original collection:</p>
 
-<p>{“pediatric-bmi-for-age”=&gt;{“index”=&gt;0, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age”, “name”=&gt;”USCorePediatricBMIforAgeObservationProfile”, “title”=&gt;”US Core Pediatric BMI for Age Observation Profile”, “path”=&gt;”StructureDefinition-pediatric-bmi-for-age.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs”, “basename”=&gt;”USCoreVitalSignsProfile”, “basepath”=&gt;”http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-vital-signs.html”, “status”=&gt;”active”, “date”=&gt;”Wed Nov 18 00:00:00 UTC 2020”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;”Used by permission of HL7 International, all rights reserved Creative Commons License”, “description”=&gt;”To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which <em>additional</em> core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.”}, “pediatric-weight-for-height”=&gt;{“index”=&gt;1, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height”, “name”=&gt;”USCorePediatricWeightForHeightObservationProfile”, “title”=&gt;”US Core Pediatric Weight for Height Observation Profile”, “path”=&gt;”StructureDefinition-pediatric-weight-for-height.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs”, “basename”=&gt;”USCoreVitalSignsProfile”, “basepath”=&gt;”http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-vital-signs.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 UTC 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;”Used by permission of HL7 International, all rights reserved Creative Commons License”, “description”=&gt;”To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which <em>additional</em> core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.”}, “us-core-simple-observation”=&gt;{“index”=&gt;2, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation”, “name”=&gt;”USCoreSimpleObservationProfile”, “title”=&gt;”US Core Simple Observation Profile”, “path”=&gt;”StructureDefinition-us-core-simple-observation.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Observation”, “basename”=&gt;”Observation”, “basepath”=&gt;”http://hl7.org/fhir/R4/observation.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 UTC 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;nil, “description”=&gt;”This US Core FHIR Profile is meant to capture any “simple” observations that are not otherwise covered by other US Core Observation profiles. It represents any type of observation that is not classified as vital signs, laboratory, imaging, or other more specific observation types. This profile promotes interoperability and adoption through common implementation by setting minimum expectations for the Observation resource to record, search, and retrieve observations such as a clinical observation or assertion about a patient’s health status or other general observations. This profile identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.”}, “us-core-allergyintolerance”=&gt;{“index”=&gt;3, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance”, “name”=&gt;”USCoreAllergyIntolerance”, “title”=&gt;”US Core AllergyIntolerance Profile”, “path”=&gt;”StructureDefinition-us-core-allergyintolerance.html”, “kind”=&gt;”resource”, “type”=&gt;”AllergyIntolerance”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/AllergyIntolerance”, “basename”=&gt;”AllergyIntolerance”, “basepath”=&gt;”http://hl7.org/fhir/R4/allergyintolerance.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 UTC 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;nil, “description”=&gt;”To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient.  It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.”}, “us-core-birthsex”=&gt;{“index”=&gt;4, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex”, “name”=&gt;”USCoreBirthSexExtension”, “title”=&gt;”US Core Birth Sex Extension”, “path”=&gt;”StructureDefinition-us-core-birthsex.html”, “kind”=&gt;”complex-type”, “type”=&gt;”Extension”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/Extension”, “basename”=&gt;”Extension”, “basepath”=&gt;”http://hl7.org/fhir/R4/extensibility.html#Extension”, “status”=&gt;”active”, “date”=&gt;”Mon May 15 00:00:00 UTC 2023”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;nil, “description”=&gt;”A code classifying the person’s sex assigned at birth  as specified by the <a href="https://www.healthit.gov/newsroom/about-onc">Office of the National Coordinator for Health IT (ONC)</a>. This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9). This extension is no longer a <em>USCDI Requirement</em> with the introduction of the US Core Sex Extension in version 6.1.0.”, “contexts”=&gt;[{“type”=&gt;”Element ID”, “expression”=&gt;”Patient”}], “extension-contexts”=&gt;[“Patient”]}, “us-core-blood-pressure”=&gt;{“index”=&gt;5, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure”, “name”=&gt;”USCoreBloodPressureProfile”, “title”=&gt;”US Core Blood Pressure Profile”, “path”=&gt;”StructureDefinition-us-core-blood-pressure.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs”, “basename”=&gt;”USCoreVitalSignsProfile”, “basepath”=&gt;”http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-vital-signs.html”, “status”=&gt;”active”, “date”=&gt;”Wed Apr 20 00:00:00 UTC 2022”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;”Used by permission of HL7 International, all rights reserved Creative Commons License”, “description”=&gt;”To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which <em>additional</em> core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases.”}, “us-core-vital-signs”=&gt;{“index”=&gt;6, “url”=&gt;”http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs”, “name”=&gt;”USCoreVitalSignsProfile”, “title”=&gt;”US Core Vital Signs Profile”, “path”=&gt;”StructureDefinition-us-core-vital-signs.html”, “kind”=&gt;”resource”, “type”=&gt;”Observation”, “base”=&gt;”http://hl7.org/fhir/StructureDefinition/vitalsigns”, “basename”=&gt;”observation-vitalsigns”, “basepath”=&gt;”http://hl7.org/fhir/R4/vitalsigns.html”, “status”=&gt;”active”, “date”=&gt;”Tue Nov 17 00:00:00 UTC 2020”, “abstract”=&gt;false, “derivation”=&gt;”constraint”, “publisher”=&gt;”Health eData Inc”, “copyright”=&gt;”Used by permission of HL7 International, all rights reserved Creative Commons License”, “description”=&gt;”To promote interoperability and adoption through common implementation, this profile is based on the base <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html">FHIR Vital Signs Profile</a> and defines <em>additional</em> constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below.”}, “maturities”=&gt;{“ImplementationGuide-healthedata1-sandbox”=&gt;”2”, “StructureDefinition-pediatric-bmi-for-age”=&gt;”2”, “StructureDefinition-pediatric-weight-for-height”=&gt;”2”, “StructureDefinition-us-core-simple-observation”=&gt;”2”, “StructureDefinition-us-core-allergyintolerance”=&gt;”2”, “StructureDefinition-us-core-birthsex”=&gt;”2”, “StructureDefinition-us-core-blood-pressure”=&gt;”2”, “StructureDefinition-us-core-vital-signs”=&gt;”2”, “SearchParameter-us-core-allergyintolerance-clinical-status”=&gt;”2”, “ValueSet-us-core-source-of-payment”=&gt;”2”}}</p>
+<p>{"pediatric-bmi-for-age"=&gt;{"index"=&gt;0, "url"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/pediatric-bmi-for-age", "name"=&gt;"USCorePediatricBMIforAgeObservationProfile", "title"=&gt;"US Core Pediatric BMI for Age Observation Profile", "path"=&gt;"StructureDefinition-pediatric-bmi-for-age.html", "kind"=&gt;"resource", "type"=&gt;"Observation", "base"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs", "basename"=&gt;"USCoreVitalSignsProfile", "basepath"=&gt;"http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-vital-signs.html", "status"=&gt;"active", "date"=&gt;"Wed Nov 18 00:00:00 UTC 2020", "abstract"=&gt;false, "derivation"=&gt;"constraint", "publisher"=&gt;"Health eData Inc", "copyright"=&gt;"Used by permission of HL7 International, all rights reserved Creative Commons License", "description"=&gt;"To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch pediatric body mass index (BMI) percentile per age and sex for youth 2-20 observations in FHIR using a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which <em>additional</em> core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases."}, "pediatric-weight-for-height"=&gt;{"index"=&gt;1, "url"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/pediatric-weight-for-height", "name"=&gt;"USCorePediatricWeightForHeightObservationProfile", "title"=&gt;"US Core Pediatric Weight for Height Observation Profile", "path"=&gt;"StructureDefinition-pediatric-weight-for-height.html", "kind"=&gt;"resource", "type"=&gt;"Observation", "base"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs", "basename"=&gt;"USCoreVitalSignsProfile", "basepath"=&gt;"http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-vital-signs.html", "status"=&gt;"active", "date"=&gt;"Wed Apr 20 00:00:00 UTC 2022", "abstract"=&gt;false, "derivation"=&gt;"constraint", "publisher"=&gt;"Health eData Inc", "copyright"=&gt;"Used by permission of HL7 International, all rights reserved Creative Commons License", "description"=&gt;"To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch  pediatric weight-for-length per age and gender observations in FHIR with a standard LOINC code and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which <em>additional</em> core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases."}, "us-core-allergyintolerance"=&gt;{"index"=&gt;2, "url"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-allergyintolerance", "name"=&gt;"USCoreAllergyIntolerance", "title"=&gt;"US Core AllergyIntolerance Profile", "path"=&gt;"StructureDefinition-us-core-allergyintolerance.html", "kind"=&gt;"resource", "type"=&gt;"AllergyIntolerance", "base"=&gt;"http://hl7.org/fhir/StructureDefinition/AllergyIntolerance", "basename"=&gt;"AllergyIntolerance", "basepath"=&gt;"http://hl7.org/fhir/R4/allergyintolerance.html", "status"=&gt;"active", "date"=&gt;"Wed Apr 20 00:00:00 UTC 2022", "abstract"=&gt;false, "derivation"=&gt;"constraint", "publisher"=&gt;"Health eData Inc", "copyright"=&gt;nil, "description"=&gt;"To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the AllergyIntolerance resource to record, search, and fetch allergies/adverse reactions associated with a patient.  It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases."}, "us-core-birthsex"=&gt;{"index"=&gt;3, "url"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex", "name"=&gt;"USCoreBirthSexExtension", "title"=&gt;"US Core Birth Sex Extension", "path"=&gt;"StructureDefinition-us-core-birthsex.html", "kind"=&gt;"complex-type", "type"=&gt;"Extension", "base"=&gt;"http://hl7.org/fhir/StructureDefinition/Extension", "basename"=&gt;"Extension", "basepath"=&gt;"http://hl7.org/fhir/R4/extensibility.html#Extension", "status"=&gt;"active", "date"=&gt;"Mon May 15 00:00:00 UTC 2023", "abstract"=&gt;false, "derivation"=&gt;"constraint", "publisher"=&gt;"Health eData Inc", "copyright"=&gt;nil, "description"=&gt;"A code classifying the person's sex assigned at birth  as specified by the <a href="https://www.healthit.gov/newsroom/about-onc">Office of the National Coordinator for Health IT (ONC)</a>. This extension aligns with the C-CDA Birth Sex Observation (LOINC 76689-9). This extension is no longer a <em>USCDI Requirement</em> with the introduction of the US Core Sex Extension in version 6.1.0.", "contexts"=&gt;[{"type"=&gt;"Element ID", "expression"=&gt;"Patient"}], "extension-contexts"=&gt;["Patient"]}, "us-core-blood-pressure"=&gt;{"index"=&gt;4, "url"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-blood-pressure", "name"=&gt;"USCoreBloodPressureProfile", "title"=&gt;"US Core Blood Pressure Profile", "path"=&gt;"StructureDefinition-us-core-blood-pressure.html", "kind"=&gt;"resource", "type"=&gt;"Observation", "base"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs", "basename"=&gt;"USCoreVitalSignsProfile", "basepath"=&gt;"http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-vital-signs.html", "status"=&gt;"active", "date"=&gt;"Wed Apr 20 00:00:00 UTC 2022", "abstract"=&gt;false, "derivation"=&gt;"constraint", "publisher"=&gt;"Health eData Inc", "copyright"=&gt;"Used by permission of HL7 International, all rights reserved Creative Commons License", "description"=&gt;"To promote interoperability and adoption through common implementation, this profile sets minimum expectations for the Observation resource to record, search, and fetch diastolic and systolic blood pressure observations with standard LOINC codes and UCUM units of measure. It is based on the US Core Vital Signs Profile and identifies which <em>additional</em> core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present and constrains the way the elements are used when using the profile. It provides the floor for standards development for specific use cases."}, "us-core-vital-signs"=&gt;{"index"=&gt;5, "url"=&gt;"http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs", "name"=&gt;"USCoreVitalSignsProfile", "title"=&gt;"US Core Vital Signs Profile", "path"=&gt;"StructureDefinition-us-core-vital-signs.html", "kind"=&gt;"resource", "type"=&gt;"Observation", "base"=&gt;"http://hl7.org/fhir/StructureDefinition/vitalsigns", "basename"=&gt;"observation-vitalsigns", "basepath"=&gt;"http://hl7.org/fhir/R4/vitalsigns.html", "status"=&gt;"active", "date"=&gt;"Tue Nov 17 00:00:00 UTC 2020", "abstract"=&gt;false, "derivation"=&gt;"constraint", "publisher"=&gt;"Health eData Inc", "copyright"=&gt;"Used by permission of HL7 International, all rights reserved Creative Commons License", "description"=&gt;"To promote interoperability and adoption through common implementation, this profile is based on the base <a href="http://hl7.org/fhir/R4/observation-vitalsigns.html">FHIR Vital Signs Profile</a> and defines <em>additional</em> constraints on the Observation resource to represent vital signs observations. It identifies which core elements, extensions, vocabularies, and value sets <strong>SHALL</strong> be present in the resource and constrains the way the elements are used when using this profile. It provides the floor for standards development for specific use cases.  This US Core profiles that are derived from this profile are listed below."}, "maturities"=&gt;{"ImplementationGuide-healthedata1-sandbox"=&gt;"2", "StructureDefinition-pediatric-bmi-for-age"=&gt;"2", "StructureDefinition-pediatric-weight-for-height"=&gt;"2", "StructureDefinition-us-core-allergyintolerance"=&gt;"2", "StructureDefinition-us-core-birthsex"=&gt;"2", "StructureDefinition-us-core-blood-pressure"=&gt;"2", "StructureDefinition-us-core-vital-signs"=&gt;"2", "SearchParameter-us-core-allergyintolerance-clinical-status"=&gt;"2", "ValueSet-us-core-source-of-payment"=&gt;"2"}}</p>
 
 <p>sorted collection:</p>
 
@@ -1449,7 +1439,7 @@ Country: US
   <li>linenumber: optional boolean to display line number (default is false)</li>
 </ul>
 
-<p>The start and count item are aggregated into a (start, count) tuple and therefore need to be the same size.  If there are more than one start and count items, ellipses (“…”) will be inserted between the line fragments. 
+<p>The start and count item are aggregated into a (start, count) tuple and therefore need to be the same size.  If there are more than one start and count items, ellipses ("…") will be inserted between the line fragments. 
 The helper file checks if the line overlap.  If they do it will print a warning message instead of your intended output.</p>
 
 <h4 id="examples">Examples:</h4>
@@ -1458,7 +1448,7 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 
 <p>~~~</p>
 
-<p>{% include_relative includelines filename=’Patient-deceased-example.json’ start=1 count=15 linenumber=true rel=true %}</p>
+<p>{% include_relative includelines filename='Patient-deceased-example.json' start=1 count=15 linenumber=true rel=true %}</p>
 
 <p>~~~</p>
 
@@ -1473,24 +1463,24 @@ The helper file checks if the line overlap.  If they do it will print a warning 
 9        "url" : "http://hl7.org/fhir/StructureDefinition/instance-description",
 10        "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
 11      }],
-12      "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+12      "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
 13    },
 14    "text" : {
 15      "status" : "extensions",
 
 </code></pre></div></div>
 
-<p><strong>2. multiple fragments separated by “…”:</strong></p>
+<p><strong>2. multiple fragments separated by "…":</strong></p>
 
 <p>~~~</p>
 
-<p>{% include_relative includelines filename=’Patient-deceased-example.json’ start = “10,20,30” count=”5,5,5” %}</p>
+<p>{% include_relative includelines filename='Patient-deceased-example.json' start = "10,20,30" count="5,5,5" %}</p>
 
 <p>~~~</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>10        "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
 11      }],
-12      "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+12      "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
 13    },
 14    "text" : {
 ...
@@ -1513,13 +1503,13 @@ The following will result in a warning message because the start line (15) is le
 
 <p>~~~</p>
 
-<p>{% include_relative includelines filename=’Patient-deceased-example.json’ start = “10,15,30” count=”10,5,5” %}</p>
+<p>{% include_relative includelines filename='Patient-deceased-example.json' start = "10,15,30" count="10,5,5" %}</p>
 
 <p>~~~</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      "valueMarkdown" : "This is a deceased patient example for the *US Core Patient Profile*."
     }],
-    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient|0.1.0"]
+    "profile" : ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"]
   },
   "text" : {
     "status" : "extensions",
@@ -1541,7 +1531,7 @@ The following will result in a warning message because the start line (15) is le
   <li>
     <p><strong>SHALL</strong> support fetching documents using the $docref operation.</p>
 
-    <p>This [$docref operation] is used to request a server <em>generate</em> a document based on the specified parameters. This operation is invoked on a FHIR Server’s DocumentReference endpoint (e.g., <code class="language-plaintext highlighter-rouge">[base]/DocumentReference/$docref</code>) and operates across all DocumentReference instances returning a Bundle of DocumentReference resources. See the [$docref operation] definition for detailed documentation.</p>
+    <p>This [$docref operation] is used to request a server <em>generate</em> a document based on the specified parameters. This operation is invoked on a FHIR Server's DocumentReference endpoint (e.g., <code class="language-plaintext highlighter-rouge">[base]/DocumentReference/$docref</code>) and operates across all DocumentReference instances returning a Bundle of DocumentReference resources. See the [$docref operation] definition for detailed documentation.</p>
 
     <ul>
       <li>
@@ -2308,13 +2298,11 @@ The following will result in a warning message because the start line (15) is le
         
         
         
-        
               <li><a href="StructureDefinition-us-core-allergyintolerance.html">US Core AllergyIntolerance Profile</a></li>
             </ul>
 
 <h4>Extension</h4>
 <ul>
-        
         
         
         
@@ -2342,19 +2330,6 @@ The following will result in a warning message because the start line (15) is le
         
         
         
-        
-        
-        
-        
-        
-              <li><a href="StructureDefinition-us-core-simple-observation.html">US Core Simple Observation Profile</a></li>
-            
-        
-        
-        
-        
-        
-        
               <li><a href="StructureDefinition-us-core-vital-signs.html">US Core Vital Signs Profile</a>
             
                 <ul>
@@ -2367,7 +2342,6 @@ The following will result in a warning message because the start line (15) is le
                       
 
                   
-                
                 
                 
                 
@@ -2399,7 +2373,6 @@ The following will result in a warning message because the start line (15) is le
     
     
     
-    
           <li>
             <a href="StructureDefinition-us-core-birthsex.html">US Core Birth Sex Extension</a>
           </li>
@@ -2423,6 +2396,52 @@ The following will result in a warning message because the start line (15) is le
 where edits to the table contents are made. This excel file sheet is converted to input/data/uscore-sps.csv for the liquid to script below
 currently using a bash script (/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/publish.sh) to convert before publication. -->
 
+<hr/>
+
+<h3 id="test-issue">test issue</h3>
+
+<table class="grid">
+  <thead>
+    <tr>
+      <th style="text-align: center"><strong>Resource Type</strong></th>
+      <th style="text-align: center"><strong>Supported Profiles</strong></th>
+      <th style="text-align: center"><strong>Supported Searches</strong></th>
+      <th style="text-align: center"><strong>Supported</strong><br/>_includes</th>
+      <th style="text-align: center"><strong>Server</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="https://hl7.org/fhir/R4/patient.html">Patient</a></td>
+      <td style="text-align: center">ILCore Patient Profile</td>
+      <td style="text-align: center">identifier<br/>_summary</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">קהילה</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></td>
+      <td style="text-align: center">&lt;p&gt;LRC Lab Test Referral;&lt;/p&gt;&lt;p&gt;LRC Lab Test Referral Group&lt;/p&gt;</td>
+      <td style="text-align: center">identifier</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">בית חולים</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://hl7.org/fhir/R4/observation.html">Observation</a></td>
+      <td style="text-align: center">&lt;p&gt;LRC Test Result;&lt;/p&gt;&lt;p&gt;LRC Panel Lab Test Result&lt;/p&gt;</td>
+      <td style="text-align: center">identifier</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">בית חולים</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="https://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
+      <td style="text-align: center">LRC Lab Test Report</td>
+      <td style="text-align: center">identifier</td>
+      <td style="text-align: center">&lt;p&gt;DiagnosticReport:based-on&lt;/p&gt;&lt;p&gt;DiagnosticReport:result&lt;/p&gt;</td>
+      <td style="text-align: center">בית חולים</td>
+    </tr>
+  </tbody>
+</table>
+
 
 
 
@@ -2435,20 +2454,14 @@ currently using a bash script (/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/
   <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
   <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
   <a name="bottom"> </a>
   <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sun, Apr 14, 2024 00:18+0000">2024-04-14</span>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>.  Package healthedata1-sandbox#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Mar 12, 2025 01:21+0000">2025-03-12</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -2465,7 +2478,7 @@ currently using a bash script (/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/
     <div class="container">    <!-- container -->
     </div>    <!-- /container -->
   </div>    <!-- /segment-post-footer -->
-  
+
     <!-- JS and analytics only. -->
     <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -2475,16 +2488,7 @@ currently using a bash script (/Users/ehaas/Documents/FHIR/Healthedata1-Sandbox/
   <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
   <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
   <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
-  
-  <!-- feedback form - Google forms -->
-  <!-- v0.1, 2021-01-09 -->
-
-
-
-  <!-- / feedback form -->
-
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
     <!-- Analytics Below
   ================================================== -->
   </body>

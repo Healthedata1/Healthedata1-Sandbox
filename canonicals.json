@@ -42,13 +42,6 @@
     "name" : "USCoreBloodPressureProfile"
   },
   {
-    "id" : "us-core-simple-observation",
-    "type" : "StructureDefinition",
-    "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-simple-observation",
-    "version" : "0.1.0",
-    "name" : "USCoreSimpleObservationProfile"
-  },
-  {
     "id" : "us-core-vital-signs",
     "type" : "StructureDefinition",
     "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-vital-signs",

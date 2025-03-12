@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -11,25 +12,34 @@
   fhir:meta [
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/instance-name"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "Targeted Provenance Example" ]
+       fhir:value [
+         a fhir:string ;
+         fhir:v "Targeted Provenance Example"
+       ]
      ] [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/instance-description"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity." ]
+       fhir:value [
+         a fhir:markdown ;
+         fhir:v "This is a provenance example for the *US Core Provenance Profile* to demonstrate how Provenance can be used to document the source of individual elements such as Race and Ethnicity (R/E), gender identity."
+       ]
      ] ) ;
      fhir:profile ( [
-       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|0.1.0"^^xsd:anyURI ;
-       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|0.1.0>
+       fhir:v "http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance>
      ] )
   ] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"example-targeted-provenance\"> </a><a name=\"hcexample-targeted-provenance\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance &quot;example-targeted-provenance&quot; </p><p style=\"margin-bottom: 0px\">Profile: <code>http://hl7.org/fhir/us/core/StructureDefinition/us-core-provenance|0.1.0</code></p></div><p><b>target</b>: <a href=\"Patient-example-targeted-provenance.html\">Patient/example-targeted-provenance</a> &quot; SHAW&quot;(#race)</p><p><b>recorded</b>: Feb 28, 2023, 3:26:23 PM</p><blockquote><p><b>agent</b></p><p><b>role</b>: Application <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://hl7.org/fhir/R4/codesystem-dicom-dcim.html\">DICOM</a>#110150)</span></p><p><b>who</b>: <span>: My_Form</span></p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: Informant <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-provenance-participant-type.html\">Provenance participant type</a>#informant)</span></p><p><b>who</b>: <a href=\"Patient-example-targeted-provenance.html\">Patient/example-targeted-provenance</a> &quot; SHAW&quot;</p></blockquote></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Provenance example-targeted-provenance</b></p><a name=\"example-targeted-provenance\"> </a><a name=\"hcexample-targeted-provenance\"> </a><a name=\"example-targeted-provenance-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-provenance.html\">US Core Provenance Profile</a></p></div><p>Provenance for <a href=\"Patient-example-targeted-provenance.html\"/></p><p>Summary</p><table class=\"grid\"><tr><td>Recorded</td><td>2023-02-28 15:26:23+0000</td></tr></table><p><b>Agents</b></p><table class=\"grid\"><tr><td><b>Type</b></td><td><b>Role</b></td><td><b>who</b></td></tr><tr><td/><td/><td>My_Form</td></tr><tr><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/provenance-participant-type informant}\">Informant</span></td><td/><td><a href=\"Patient-example-targeted-provenance.html\"/></td></tr></table></div>"^^rdf:XMLLiteral
   ] ; # 
   fhir:target ( [
      fhir:link <http://www.fhir.org/guides/healthedata1-sandbox/Patient/example-targeted-provenance> ;
      fhir:extension ( [
        fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/targetElement"^^xsd:anyURI ] ;
-       fhir:value [ fhir:v "race"^^xsd:anyURI ]
+       fhir:value [
+         a fhir:uri ;
+         fhir:v "race"^^xsd:anyURI
+       ]
      ] ) ;
      fhir:reference [ fhir:v "Patient/example-targeted-provenance" ]
   ] ) ; # 
