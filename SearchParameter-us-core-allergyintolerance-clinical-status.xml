@@ -4,7 +4,7 @@
   <id value="us-core-allergyintolerance-clinical-status"/>
   <text>
     <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml">
-    <!-- <p>
+      <!-- <p>
   <strong>NOTE</strong>
   : This US Core SearchParameter definition extends the usage context of the
   <a href="http://hl7.org/fhir/R4/extension-capabilitystatement-expectation.html">Conformance expectation
@@ -19,16 +19,16 @@
   </ul> --><p>
     <b>id</b>
     : us-core-allergyintolerance-clinical-status
-      <!-- us-core-specimen-id -->
+        <!-- us-core-specimen-id -->
   </p>
-    <!-- <p>
+      <!-- <p>
   <b>url</b>
   :
   <b>http://hl7.org/fhir/us/core/SearchParameter/us-core-specimen-id</b>
-  </p> -->  <!-- <p>
+  </p> -->    <!-- <p>
   <b>version</b>
   : 4.0.1
-  </p> -->  <!-- <p>
+  </p> -->    <!-- <p>
   <b>name</b>
   : USCoreSpecimenId
   </p> -->
@@ -38,9 +38,9 @@
     </b>
     :
   <a href="http://hl7.org/fhir/SearchParameter/AllergyIntolerance-clinical-status">clinical-status</a>
-      <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->
+        <!-- http://hl7.org/fhir/SearchParameter/Resource-id -->
   </p>
-    <!-- <p>
+      <!-- <p>
   <b>status</b>
   : active
   </p>
@@ -51,15 +51,15 @@
     <b>publisher</b>
     :
     <a href="mailto:ehaas@healthedatainc.com">Health eData Inc</a>
-      <!-- HL7 International - Cross-Group Projects -->
+        <!-- HL7 International - Cross-Group Projects -->
   </p>
-    <!-- <p>
-  <b> useContext</b> : </p> -->  <!-- <p>
+      <!-- <p>
+  <b> useContext</b> : </p> -->    <!-- <p>
   <b>jurisdiction</b>
   : United States of America (the)
   <span>(Details : {urn:iso:std:iso:3166 code 'US' = 'United States of America', given as 'United
   States of America (the)'})</span>
-  </p> -->  <!-- <p>
+  </p> -->    <!-- <p>
   <b> purpose</b> : Need to search by identifier for various infrastructural cases - mainly retrieving packages,
   and matching as part of a chain</p> -->
     <p>
@@ -70,44 +70,44 @@
       <code>
     clinical-status
   </code>
-      <!-- _id -->
+        <!-- _id -->
   </p>
   <p>
     <b>base</b>
     : AllergyIntolerance
-      <!-- :Specimen -->
+        <!-- :Specimen -->
   </p>
   <p>
     <b>type</b>
     : Token
-      <!-- : token -->
+        <!-- : token -->
   </p>
   <p>
     <b>expression</b>
     :
     <code>AllergyIntolerance.clinicalStatus</code>
-      <!-- Specimen.id -->
+        <!-- Specimen.id -->
   </p>
   <p>
     <b>xpath</b>
     :
     <code/>
-      <!-- f:Specimen/f:id -->
+        <!-- f:Specimen/f:id -->
   </p>
   <p>
     <b>xpathUsage</b>
     : 
-      <!-- : normal -->
+        <!-- : normal -->
   </p>
   <p>
     <b>multipleOr</b>
     : true (Conformance Expectation = MAY)
-      <!-- : True (Conformance Expectation = MAY) -->
+        <!-- : True (Conformance Expectation = MAY) -->
   </p>
   <p>
     <b>multipleAnd</b>
     : true (Conformance Expectation = MAY)
-      <!-- : True ( Conformance Expectation = MAY) -->
+        <!-- : True ( Conformance Expectation = MAY) -->
   </p>
 </div>
   </text>

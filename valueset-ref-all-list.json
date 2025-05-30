@@ -118,9 +118,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -149,9 +149,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/languages",
@@ -165,11 +165,11 @@
       "sources" : ["2.16.840.1.113883.4.642.3.20"],
       "uses" : {
       },
-      "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
-      "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
       "StructureDefinition-us-core-allergyintolerance.html" : "US Core AllergyIntolerance Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
+      "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-category",
@@ -184,9 +184,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
@@ -203,9 +203,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
@@ -220,9 +220,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/observation-status",
@@ -237,9 +237,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
@@ -287,9 +287,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
@@ -306,9 +306,9 @@
       "uses" : {
       },
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/route-codes",
@@ -350,10 +350,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.955"],
       "uses" : {
       },
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     },
     {
       "url" : "http://hl7.org/fhir/us/core/ValueSet/birthsex",
@@ -389,10 +389,10 @@
       "systems" : ["http://loinc.org"],
       "uses" : {
       },
-      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile",
       "StructureDefinition-pediatric-bmi-for-age.html" : "US Core Pediatric BMI for Age Observation Profile",
       "StructureDefinition-pediatric-weight-for-height.html" : "US Core Pediatric Weight for Height Observation Profile",
-      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile"
+      "StructureDefinition-us-core-blood-pressure.html" : "US Core Blood Pressure Profile",
+      "StructureDefinition-us-core-vital-signs.html" : "US Core Vital Signs Profile"
     }
   ]
 }
