@@ -4,7 +4,7 @@ set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
 trap "echo '================================================================='; echo '=================== publish.sh ERROR! ==================='; echo '================================================================='" ERR
 
-while getopts abcdefghiklnopqrstvxy option;
+while getopts abcdefghijklmnopqrstuvwxyzC option;
 do
  case "${option}"
  in
@@ -17,6 +17,7 @@ do
  g) GEN_OFF='-generation-off';;
  h) VAL_OFF='-validation-off';;
  i) IG_PUBLISH=1;;
+ j) RAPIDO='-rapido';;
  k) NO_PROFILE=1;;
  l) PAGE_LINKS=1;;
  n) NO_META=1;;
@@ -29,15 +30,16 @@ do
  v) VIEW_OUTPUT=1;;
  x) REM_HIGHLIGHT=1;;
  y) YAML_JSON=1;;
-
+ z) DEL_TEMP=1;;
+ C) DEL_CACHE=1;;
  esac
- 
+
 done
 
 # ========= Globals  =================
 NA='http://tx.fhir.org'
-GEN_OFF=''
-VAL_OFF=''
+# GEN_OFF=''
+# VAL_OFF=''
 inpath=input
 examples=$inpath/examples
 if [[ $IN_DOCS ]]; then
@@ -71,10 +73,11 @@ echo "-b Turns on debugging (this produces extra logging, and can be verbose) = 
 echo "-c copy data csv files and created excel files to the image/tables folder = $COPY_CSV"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
 echo "-e flag to add current profile version to all examples = $APP_VERSION"
-echo "-f flag to add valueset-ref-all-list.csv and valueset-ref-all-list.csv to data folders to process as tables = $TERMINOLOGY_TABLES"
+echo "-f flag to add codesystem-ref-all-list.csv and valueset-ref-all-list.csv to data folders to process as tables = $TERMINOLOGY_TABLES"
 echo "-g flag to turn off narrative generation to speed up build times = $GEN_OFF"
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
 echo "-i parameter for running only ig-publisher = $IG_PUBLISH"
+echo "-j parameter for speeding up the build = $RAPIDO"
 echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
 echo "-l flag to add or update the page-link-list to the input/includes folder (run after successful build before new build) = $PAGE_LINKS"
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
@@ -87,11 +90,40 @@ echo "-t parameter for no terminology server (run faster and offline)= $NA"
 echo "-v view ig home page  in current browser = ./$outpath/index.html  =  $VIEW_OUTPUT"
 echo "-x remove change highlighting from all markdown files =  $REM_HIGHLIGHT"
 echo "-y delete all json files and tranform all yaml files to json files = $YAML_JSON"
-
+echo "-z delete the template and temp directories before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
+echo "-C delete the input-cache before publishing (slows build but needed when rename files and change templates)= $DEL_TEMP"
 echo "================================================================="
 echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
+
+if [[ $DEL_TEMP ]]; then
+echo "================================================================="
+echo rm -r template temp
+read -p "Do you want to continue? (y/N) " answer
+echo "================================================================="
+if [[ "$answer" == "y" ]]; then
+    echo "Continuing..."
+    rm -r template temp
+else
+    echo "Operation cancelled by user."
+    exit 1
+fi
+fi
+
+if [[ $DEL_CACHE ]]; then
+echo "================================================================="
+echo rm -r input-cache
+read -p "Do you want to continue? (y/N) " answer
+echo "================================================================="
+if [[ "$answer" == "y" ]]; then
+    echo "Continuing..."
+    rm -r input-cache
+else
+    echo "Operation cancelled by user."
+    exit 1
+fi
+fi
 
 if [[ $COPY_CSV ]]; then
 echo "================================================================="
@@ -145,7 +177,7 @@ if [[ $PAGE_LINKS ]]; then
   echo "SINCE IT READS THE PAGES DATA FILES, RUN AFTER SUCCESSFUL BUILD AND BEFORE SUSHI"
   echo "jq -r 'to_entries[] | \"[\(.value | .title)]: \(.key)\"' temp/pages/_data/pages.json > input/includes/page-link-list.md"
   echo "================================================================="
-  
+
   # Write boilerplate warning and jq output to the file
   {
     echo "<!--"
@@ -295,7 +327,7 @@ then
       do
       jq  'walk(if type=="object" and  (.source or .lastUpdated)
         then del(.profile)
-        else if type=="object" and .meta.profile 
+        else if type=="object" and .meta.profile
         then del(.meta)
         else . end
          end)' < $file > $tmp/$(basename $file)
@@ -341,13 +373,13 @@ if [[ $IG_PUBLISH ]]; then
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
   echo "==To run in command line mode, run the IG Publisher like this:=="
-  echo "===java -Xmx12G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off) 
+  echo "===java -Xmx12G -Dfile.encoding=UTF-8 -jar publisher.jar -ig [source] -no-sushi (-tx [url]) (-packages [directory]) (-generation-off)
 (-validation-off) (-debug)
 parameters:==="
   echo "================================================================="
 
-    echo java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
-    java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON
+    echo java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON $RAPIDO
+    java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON $RAPIDO
 fi
 
 
