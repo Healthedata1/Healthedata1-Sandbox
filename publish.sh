@@ -41,7 +41,8 @@ NA='http://tx.fhir.org'
 # GEN_OFF=''
 # VAL_OFF=''
 inpath=input
-examples=$inpath/examples
+examples="$inpath"/examples
+resources="$inpath"/resources
 if [[ $IN_DOCS ]]; then
   outpath=docs
 else
@@ -72,7 +73,7 @@ echo "-a copy searchparameter excel sheet to data folder as csv file for creatin
 echo "-b Turns on debugging (this produces extra logging, and can be verbose) = $DEBUG_ON"
 echo "-c copy data csv files and created excel files to the image/tables folder = $COPY_CSV"
 echo "-d flag if output in "docs" folder = $IN_DOCS"
-echo "-e flag to add current profile version to all examples = $APP_VERSION"
+echo "-e flag to add current version to canonicals 'meta.profile' in examples, 'exampleCanonical' in IG resources and 'definitions' and 'supportedProfiles' in CapStatements = $APP_VERSION"
 echo "-f flag to add codesystem-ref-all-list.csv and valueset-ref-all-list.csv to data folders to process as tables = $TERMINOLOGY_TABLES"
 echo "-g flag to turn off narrative generation to speed up build times = $GEN_OFF"
 echo "-h flag to turn off validation to speed up build times = $VAL_OFF"
@@ -341,32 +342,59 @@ then
   fi
 fi
 
-
-
 if [[ $APP_VERSION ]]; then
     echo "================================================================="
-    echo "=== append current version to each json example file meta profiles is $examples ==="
-    echo "=== and update IG.json file example Canonicals to the current version =="
+    echo "=== update example files meta profiles to the current version  ==="
+    echo "=== and update IG.yml file example Canonicals to the current version =="
+    echo "=== and update CapabilityStatement canonicals to the current version =="
     echo "================================================================="
     IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
     echo "========= IGJSON is $IGJSON ==========="
-    tmp=$(mktemp -d -d $inpath/_examples)
+    tmp=$(mktemp -d _examples)
     echo "========= tmp is $tmp ==========="
     ver=$(jq -r '.version' $IGJSON)
-    canon=$(jq -r '.url | split("/ImplementationGuide/")[0]' $IGJSON)
+    # canon=$(jq -r '.url | split("/ImplementationGuide/")[0]' $IGJSON)
+    canon=http://hl7.org/fhir/us/core/
     echo "========= canon is $canon ==========="
     echo "========= current version is $ver ==========="
     for file in $examples/*.json
       do
         # echo "file is $file"
         # echo "basename is $(basename $file)"
-                jq --arg ver "$ver" --arg canon "$canon" 'if (.meta.profile and (.meta.profile[0] | contains($canon)) ) then .meta.profile[0] += "|"+ $ver else . end' < $file > $tmp/$(basename $file)
-      done
-    mv -f $tmp/*.json $examples
+        jq --arg ver "$ver" --arg canon "$canon" '
+          if .meta.profile? then
+            .meta.profile |= map(
+              if contains($canon) then sub("(\\|[^|]*$)|$"; "|" + $ver) else . end
+            )
+          else . end
+          ' < "$file" > "$tmp/$(basename "$file")"
+        done
+    mv -f "$tmp"/*.json "$examples"
+    echo "========= example files meta.profile updated to $ver ==========="
     # update ig json file
-    jq --arg ver "$ver" --arg canon "$canon" '.definition.resource = [.definition.resource[] | if .exampleCanonical then if .exampleCanonical | contains($canon) then .exampleCanonical += "|" + $ver else . end else . end]' $IGJSON > $tmp/ig.json
-    mv $tmp/ig.json $IGJSON
-    rm -rf $tmp
+    jq --arg ver "$ver" --arg canon "$canon" '
+      .definition?.resource[].exampleCanonical? |=
+            if . != null and contains($canon) then
+              sub("(\\|[^|]*$)|$"; "|" + $ver)
+            else . end
+           ' "$IGJSON" > "$tmp/ig.json"
+    mv -f "$tmp"/*.json "$IGJSON"
+    echo "========= IG.json definition.resource.exampleCanonicals updated to $ver ==========="
+    # update capstatement supportedProfile[], operation[].definition  ,and searchParam[].definition
+    for file in input/resources/CapabilityStatement*.json
+      do
+        jq --arg ver "$ver" --arg canon "$canon" '
+          ( .rest[]?.resource[]?.operation[]?.definition,
+          .rest[]?.resource[]?.searchParam[]?.definition,
+          .rest[]?.resource[]?.supportedProfile[]? ) |=
+            if . != null and contains($canon) then
+              sub("(\\|[^|]*$)|$"; "|" + $ver)
+            else . end
+            ' < "$file" > "$tmp/$(basename "$file")"
+      done
+    mv -f "$tmp"/*.json "$resources"
+    echo "========= Cap Statement files canonicals updated to $ver ==========="
+    rm -rf "$tmp"
 fi
 
 if [[ $IG_PUBLISH ]]; then
