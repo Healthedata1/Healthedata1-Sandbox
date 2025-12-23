@@ -98,6 +98,22 @@ echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
 
+echo "# ================================================="
+echo "# ==== checking if All JSON files are valid.  ====="
+echo "# ================================================="
+
+for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
+do
+
+    if ! jq . "$file" > /dev/null; then
+        echo "ERROR: Invalid JSON in $file"
+        echo "jq says: $(jq . "$file" 2>&1 >/dev/null | sed 's/^/    /')"
+        exit 1
+    fi
+done
+echo "All JSON files are valid."
+sleep 1
+
 if [[ $DEL_TEMP ]]; then
 echo "================================================================="
 echo rm -r template temp
@@ -373,10 +389,10 @@ if [[ $APP_VERSION ]]; then
     echo "========= example files meta.profile updated to $ver ==========="
     # update ig json file
     jq --arg ver "$ver" --arg canon "$canon" '
-      .definition?.resource[].exampleCanonical? |=
-            if . != null and contains($canon) then
-              sub("(\\|[^|]*$)|$"; "|" + $ver)
-            else . end
+      .definition?.resource[] |=
+        if .exampleCanonical != null and (.exampleCanonical | contains($canon)) then
+         .exampleCanonical |= sub("(\\|[^|]*$)|$"; "|" + $ver)
+        else . end
            ' "$IGJSON" > "$tmp/ig.json"
     mv -f "$tmp"/*.json "$IGJSON"
     echo "========= IG.json definition.resource.exampleCanonicals updated to $ver ==========="
