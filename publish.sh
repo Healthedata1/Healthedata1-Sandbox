@@ -104,7 +104,7 @@ echo "# ================================================="
 
 for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
 do
-
+    [ -f "$file" ] || continue # Skip if the glob didn't match any files (the pattern itself is returned)
     if ! jq . "$file" > /dev/null; then
         echo "ERROR: Invalid JSON in $file"
         echo "jq says: $(jq . "$file" 2>&1 >/dev/null | sed 's/^/    /')"
@@ -367,6 +367,8 @@ if [[ $APP_VERSION ]]; then
     IGJSON=$(echo fsh-generated/resources/ImplementationGuide*.json)
     echo "========= IGJSON is $IGJSON ==========="
     tmp=$(mktemp -d _examples)
+
+    trap 'rm -rf "$tmp"' EXIT # Clean up on exit
     echo "========= tmp is $tmp ==========="
     ver=$(jq -r '.version' $IGJSON)
     # canon=$(jq -r '.url | split("/ImplementationGuide/")[0]' $IGJSON)
@@ -375,8 +377,7 @@ if [[ $APP_VERSION ]]; then
     echo "========= current version is $ver ==========="
     for file in $examples/*.json
       do
-        # echo "file is $file"
-        # echo "basename is $(basename $file)"
+        [ -f "$file" ] || continue     # Skip if the glob didn't match any files (the pattern itself is returned)
         jq --arg ver "$ver" --arg canon "$canon" '
           if .meta.profile? then
             .meta.profile |= map(
@@ -385,7 +386,9 @@ if [[ $APP_VERSION ]]; then
           else . end
           ' < "$file" > "$tmp/$(basename "$file")"
         done
-    mv -f "$tmp"/*.json "$examples"
+    if ls "$tmp"/*.json >/dev/null 2>&1; then  # Skip if glob didn't match (no examples)
+        mv -f "$tmp"/*.json "$examples"
+    fi
     echo "========= example files meta.profile updated to $ver ==========="
     # update ig json file
     jq --arg ver "$ver" --arg canon "$canon" '
@@ -399,6 +402,7 @@ if [[ $APP_VERSION ]]; then
     # update capstatement supportedProfile[], operation[].definition  ,and searchParam[].definition
     for file in input/resources/CapabilityStatement*.json
       do
+        [ -f "$file" ] || continue     # Skip if the glob didn't match any files (the pattern itself is returned)
         jq --arg ver "$ver" --arg canon "$canon" '
           ( .rest[]?.resource[]?.operation[]?.definition,
           .rest[]?.resource[]?.searchParam[]?.definition,
@@ -408,9 +412,11 @@ if [[ $APP_VERSION ]]; then
             else . end
             ' < "$file" > "$tmp/$(basename "$file")"
       done
-    mv -f "$tmp"/*.json "$resources"
+    if ls "$tmp"/*.json >/dev/null 2>&1; then  # Skip if glob didn't match (no capstatements)
+        mv -f "$tmp"/*.json "$resources"
+    fi
     echo "========= Cap Statement files canonicals updated to $ver ==========="
-    rm -rf "$tmp"
+    # rm -rf "$tmp"
 fi
 
 if [[ $IG_PUBLISH ]]; then
