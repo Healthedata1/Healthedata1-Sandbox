@@ -114,6 +114,23 @@ done
 echo "All JSON files are valid."
 sleep 1
 
+echo "# ================================================="
+echo "# ==== checking for nulls in JSON files.  ====="
+echo "# ================================================="
+
+for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
+do
+    [ -f "$file" ] || continue # Skip if the glob didn't match any files (the pattern itself is returned)
+    path=$(jq -r 'paths(type == "null" or (type == "array" and length == 0)) | join(".")' "$file" 2>/dev/null | head -1)
+    if [ -n "$path" ]; then
+        # Found something bad
+        echo "Error: Found null or empty array in $file at: $path"
+        exit 1
+    fi
+done
+   echo "No null values or empty arrays."
+sleep 1
+
 if [[ $DEL_TEMP ]]; then
 echo "================================================================="
 echo rm -r template temp
