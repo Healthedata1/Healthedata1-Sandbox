@@ -43,6 +43,7 @@ NA='http://tx.fhir.org'
 inpath=input
 examples="$inpath"/examples
 resources="$inpath"/resources
+
 if [[ $IN_DOCS ]]; then
   outpath=docs
 else
@@ -84,7 +85,7 @@ echo "-l flag to add or update the page-link-list to the input/includes folder (
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
 echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
-echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"pig
+echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-s parameter for running only sushi = $SUSHI"
 echo "-t parameter for no terminology server (run faster and offline)= $NA"
@@ -130,6 +131,27 @@ do
 done
    echo "No null values or empty arrays."
 sleep 1
+
+CSV_FILE="input/data/profile_metadata.csv"
+if [ -f "$CSV_FILE" ]; then
+  echo ""
+  echo "===================================================================="
+  echo "Checking for missing resources in $CSV_FILE..."
+  missing_count=0
+  for filepath in "$resources"/StructureDefinition-*.json; do
+      resource_id=$(jq -r '.id' "$filepath")
+      if ! awk -F',' -v id="$resource_id" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+          echo "❌ Missing: $resource_id (from $(basename "$filepath"))"
+          ((missing_count++))
+      fi
+  done
+  echo ""
+  [ $missing_count -eq 0 ] && echo "✅ All resource IDs are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+  echo "====================================================================="
+  echo ""
+  sleep 1
+fi
+
 
 if [[ $DEL_TEMP ]]; then
 echo "================================================================="
