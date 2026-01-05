@@ -22,7 +22,7 @@ do
  l) PAGE_LINKS=1;;
  n) NO_META=1;;
  o) PUB=1;;
- p) UPDATE=1;;
+ p) UPDATE_PUB=1;;
  q) VIEW_QA=1;;
  r) CLEAR_JSON=1;;
  s) SUSHI=1;;
@@ -43,6 +43,7 @@ NA='http://tx.fhir.org'
 inpath=input
 examples="$inpath"/examples
 resources="$inpath"/resources
+fsh_resources="fsh-generated/resources"
 
 if [[ $IN_DOCS ]]; then
   outpath=docs
@@ -84,7 +85,7 @@ echo "-k remove the meta.profile elements from all the examples = $NO_PROFILE"
 echo "-l flag to add or update the page-link-list to the input/includes folder (run after successful build before new build) = $PAGE_LINKS"
 echo "-n remove the meta.extension elements from all the examples = $NO_META"
 echo "-o parameter for running previous version of the igpublisher= $PUB"
-echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE"
+echo "-p parameter for downloading latest version of the igpublisher from source = $UPDATE_PUB"
 echo "-q view qa output in current browser = ./$outpath/qa.html  =  $VIEW_QA"
 echo "-r remove all generated json files = $CLEAR_JSON"
 echo "-s parameter for running only sushi = $SUSHI"
@@ -99,44 +100,12 @@ echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
 
-echo "# ================================================="
-echo "# ==== checking if All JSON files are valid.  ====="
-echo "# ================================================="
-
-for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
-do
-    [ -f "$file" ] || continue # Skip if the glob didn't match any files (the pattern itself is returned)
-    if ! jq . "$file" > /dev/null; then
-        echo "ERROR: Invalid JSON in $file"
-        echo "jq says: $(jq . "$file" 2>&1 >/dev/null | sed 's/^/    /')"
-        exit 1
-    fi
-done
-echo "All JSON files are valid."
-sleep 1
-
-echo "# ================================================="
-echo "# ==== checking for nulls in JSON files.  ====="
-echo "# ================================================="
-
-for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
-do
-    [ -f "$file" ] || continue # Skip if the glob didn't match any files (the pattern itself is returned)
-    path=$(jq -r 'paths(type == "null" or (type == "array" and length == 0)) | join(".")' "$file" 2>/dev/null | head -1)
-    if [ -n "$path" ]; then
-        # Found something bad
-        echo "Error: Found null or empty array in $file at: $path"
-        exit 1
-    fi
-done
-   echo "No null values or empty arrays."
-sleep 1
-
 CSV_FILE="input/data/profile_metadata.csv"
 if [ -f "$CSV_FILE" ]; then
   echo ""
   echo "===================================================================="
   echo "Checking for missing resources in $CSV_FILE..."
+  echo ""
   missing_count=0
   for filepath in "$resources"/StructureDefinition-*.json; do
       resource_id=$(jq -r '.id' "$filepath")
@@ -145,13 +114,110 @@ if [ -f "$CSV_FILE" ]; then
           ((missing_count++))
       fi
   done
-  echo ""
   [ $missing_count -eq 0 ] && echo "✅ All resource IDs are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
   echo "====================================================================="
   echo ""
   sleep 1
 fi
 
+CSV_FILE="input/data/provenance-elements.csv"
+if [ -f "$CSV_FILE" ]; then
+  echo ""
+  echo "===================================================================="
+  echo "Checking for missing profiles in $CSV_FILE..."
+  echo ""
+  missing_count=0
+  for filepath in "$resources"/StructureDefinition-*.json; do
+      resource_url=$(jq -r '.url' "$filepath")
+      resource_title=$(jq -r '.title' "$filepath")
+      if ! awk -F',' -v id="$resource_url" '$8 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+          echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
+          ((missing_count++))
+      fi
+  done
+  [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+  echo "====================================================================="
+  echo ""
+  sleep 1
+fi
+
+CSV_FILE="input/data/uscdi-table.csv"
+if [ -f "$CSV_FILE" ]; then
+  echo ""
+  echo "===================================================================="
+  echo "Checking for missing profiles in $CSV_FILE..."
+  echo ""
+  missing_count=0
+  for filepath in "$resources"/StructureDefinition-*.json; do
+      resource_url=$(jq -r '.url' "$filepath")
+      resource_title=$(jq -r '.title' "$filepath")
+      if ! awk -F',' -v id="$resource_title" '(index($3, id) || index($6, id)) {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+          echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
+          ((missing_count++))
+      fi
+  done
+  [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+  echo "====================================================================="
+  echo ""
+  sleep 1
+fi
+
+CSV_FILE="input/data/search_requirements.csv"
+if [ -f "$CSV_FILE" ]; then
+  echo ""
+  echo "===================================================================="
+  echo "Checking for missing resources in $CSV_FILE..."
+  echo ""
+  missing_count=0
+  for filepath in "$resources"/StructureDefinition-*.json; do
+       resource_type=$(jq -r '.type' "$filepath")
+      if ! awk -F',' -v id="$resource_type" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+          echo "❌ Missing Resource Type: $resource_type (from $(basename "$filepath"))"
+          ((missing_count++))
+      fi
+  done
+  [ $missing_count -eq 0 ] && echo "✅ All resource Types are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+  echo "====================================================================="
+  echo ""
+  sleep 1
+fi
+
+FILES=$(ls "$resources"/CapabilityStatement*.json 2>/dev/null)
+if [ "$FILES" ]; then
+  echo ""
+  echo "===================================================================="
+  echo "Checking resource types in $FILES..."
+  echo ""
+FOUND_DIFF=false
+
+for fileA in $FILES; do
+    nameA=$(basename "$fileA" .json)
+    typesA=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileA" 2>/dev/null | sort -u)
+
+    for fileB in $FILES; do
+        [ "$fileA" \< "$fileB" ] || continue  # Only compare each pair once
+        nameB=$(basename "$fileB" .json)
+        typesB=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileB" 2>/dev/null | sort -u)
+
+        # Types in A but not in B
+        while read -r type; do
+            [ -n "$type" ] && echo "❌ [$type] in [$nameA] missing from [$nameB]" && FOUND_DIFF=true
+        done < <(comm -23 <(echo "$typesA") <(echo "$typesB"))
+
+        # Types in B but not in A
+        while read -r type; do
+            [ -n "$type" ] && echo "❌ [$type] in [$nameB] missing from [$nameA]" && FOUND_DIFF=true
+        done < <(comm -13 <(echo "$typesA") <(echo "$typesB"))
+    done
+done
+
+if ! $FOUND_DIFF; then
+    echo "✅ Types are the same in all CapabilityStatements"
+fi
+echo "===================================================================="
+echo ""
+sleep 1
+fi
 
 if [[ $DEL_TEMP ]]; then
 echo "================================================================="
@@ -300,7 +366,7 @@ echo $json_file
 done
 fi
 
-if [[ $UPDATE ]]; then
+if [[ $UPDATE_PUB ]]; then
 puburl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
 path1=~/Downloads/org.hl7.fhir.igpublisher.jar
 path2=~/Downloads/org.hl7.fhir.igpublisher-old.jar
@@ -317,14 +383,6 @@ echo "===========================   Done  ===================================="
 sleep 3
 fi
 
-echo "================================================================="
-echo getting path = ...................................................
-path=~/Downloads/org.hl7.fhir.igpublisher.jar
-if [[ $PUB ]]; then
-path=~/Downloads/org.hl7.fhir.igpublisher-old.jar
-fi
-echo $path
-echo "================================================================="
 
 if [[ $SUSHI ]]; then
   echo "================================================================="
@@ -459,6 +517,78 @@ if [[ $APP_VERSION ]]; then
 fi
 
 if [[ $IG_PUBLISH ]]; then
+
+  echo "# ================================================="
+  echo "# ==== checking if All JSON files are valid.  ====="
+  echo "# ================================================="
+
+  for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
+  do
+      [ -f "$file" ] || continue # Skip if the glob didn't match any files (the pattern itself is returned)
+      if ! jq . "$file" > /dev/null; then
+          echo "❌ ERROR: Invalid JSON in $file"
+          echo "jq says: $(jq . "$file" 2>&1 >/dev/null | sed 's/^/    /')"
+          exit 1
+      fi
+  done
+  echo "✅ All JSON files are valid."
+  sleep 1
+
+  echo "# ================================================="
+  echo "# ==== checking for duplicate resource ids in JSON files.  ====="
+  echo "# ================================================="
+
+  output=$(jq -n -r '
+    [inputs | {resourceType, id, file: input_filename}] |
+    group_by({resourceType, id}) |
+    map(select(length > 1)) |
+    if length == 0 then
+      "✅ No duplicates resource ids found"
+    else
+      "❌ Duplicates resource ids found:\n" + (
+        map(
+          "\n🔄 Resource: \(.[0].resourceType)/\(.[0].id) (\(length) copies)" +
+          "\n  📁 Files:" +
+          (map("\n    - \(.file)") | join(""))
+        ) | join("")
+      )
+    end
+  ' "$resources"/*.json "$fsh_resources"/*.json)
+
+  echo "$output"
+
+  # Exit with error code if duplicates found
+  if [[ "$output" == *"❌"* ]]; then
+    exit 1
+  fi
+  sleep 1
+
+  echo "# ================================================="
+  echo "# ==== checking for nulls in JSON files.  ====="
+  echo "# ================================================="
+
+  for file in "$examples"/*.json "$resources"/*.json fsh-generated/resources/*.json
+  do
+      [ -f "$file" ] || continue # Skip if the glob didn't match any files (the pattern itself is returned)
+      path=$(jq -r 'paths(type == "null" or (type == "array" and length == 0)) | join(".")' "$file" 2>/dev/null | head -1)
+      if [ -n "$path" ]; then
+          # Found something bad
+          echo "❌ Error: Found null or empty array in $file at: $path"
+          exit 1
+      fi
+  done
+    echo "✅ No null values or empty arrays."
+  sleep 1
+
+echo "================================================================="
+echo getting path = ...................................................
+path=~/Downloads/org.hl7.fhir.igpublisher.jar
+if [[ $PUB ]]; then
+path=~/Downloads/org.hl7.fhir.igpublisher-old.jar
+fi
+echo $path
+echo "================================================================="
+
   echo "================================================================="
   echo "=== run the just the igpublisher ==="
   echo "==To run in command line mode, run the IG Publisher like this:=="
@@ -466,7 +596,6 @@ if [[ $IG_PUBLISH ]]; then
 (-validation-off) (-debug)
 parameters:==="
   echo "================================================================="
-
     echo java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON $RAPIDO
     java -Xmx12G -Dfile.encoding=UTF-8 -jar ${path} -ig ig.ini -tx $NA -no-sushi $GEN_OFF $VAL_OFF $DEBUG_ON $RAPIDO
 fi
