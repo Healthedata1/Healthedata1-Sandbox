@@ -101,6 +101,7 @@ find $PWD -name '.DS_Store' -type f -delete
 sleep 1
 
 CSV_FILE="input/data/profile_metadata.csv"
+echo "CSV = $CSV_FILE"
 if [ -f "$CSV_FILE" ]; then
   echo ""
   echo "===================================================================="
@@ -121,6 +122,7 @@ if [ -f "$CSV_FILE" ]; then
 fi
 
 CSV_FILE="input/data/provenance-elements.csv"
+echo "CSV = $CSV_FILE"
 if [ -f "$CSV_FILE" ]; then
   echo ""
   echo "===================================================================="
@@ -142,6 +144,7 @@ if [ -f "$CSV_FILE" ]; then
 fi
 
 CSV_FILE="input/data/uscdi-table.csv"
+echo "CSV = $CSV_FILE"
 if [ -f "$CSV_FILE" ]; then
   echo ""
   echo "===================================================================="
@@ -163,6 +166,7 @@ if [ -f "$CSV_FILE" ]; then
 fi
 
 CSV_FILE="input/data/search_requirements.csv"
+echo "CSV = $CSV_FILE"
 if [ -f "$CSV_FILE" ]; then
   echo ""
   echo "===================================================================="
@@ -182,41 +186,44 @@ if [ -f "$CSV_FILE" ]; then
   sleep 1
 fi
 
-FILES=$(ls "$resources"/CapabilityStatement*.json 2>/dev/null)
+for f in "$resources"/CapabilityStatement*.json; do
+    [ -e "$f" ] || continue  # skip if glob didn't match anything
+    echo "$f"
+done
 if [ "$FILES" ]; then
   echo ""
   echo "===================================================================="
   echo "Checking resource types in $FILES..."
   echo ""
-FOUND_DIFF=false
+  FOUND_DIFF=false
 
-for fileA in $FILES; do
-    nameA=$(basename "$fileA" .json)
-    typesA=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileA" 2>/dev/null | sort -u)
+  for fileA in $FILES; do
+      nameA=$(basename "$fileA" .json)
+      typesA=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileA" 2>/dev/null | sort -u)
 
-    for fileB in $FILES; do
-        [ "$fileA" \< "$fileB" ] || continue  # Only compare each pair once
-        nameB=$(basename "$fileB" .json)
-        typesB=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileB" 2>/dev/null | sort -u)
+      for fileB in $FILES; do
+          [ "$fileA" \< "$fileB" ] || continue  # Only compare each pair once
+          nameB=$(basename "$fileB" .json)
+          typesB=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileB" 2>/dev/null | sort -u)
 
-        # Types in A but not in B
-        while read -r type; do
-            [ -n "$type" ] && echo "❌ [$type] in [$nameA] missing from [$nameB]" && FOUND_DIFF=true
-        done < <(comm -23 <(echo "$typesA") <(echo "$typesB"))
+          # Types in A but not in B
+          while read -r type; do
+              [ -n "$type" ] && echo "❌ [$type] in [$nameA] missing from [$nameB]" && FOUND_DIFF=true
+          done < <(comm -23 <(echo "$typesA") <(echo "$typesB"))
 
-        # Types in B but not in A
-        while read -r type; do
-            [ -n "$type" ] && echo "❌ [$type] in [$nameB] missing from [$nameA]" && FOUND_DIFF=true
-        done < <(comm -13 <(echo "$typesA") <(echo "$typesB"))
-    done
-done
+          # Types in B but not in A
+          while read -r type; do
+              [ -n "$type" ] && echo "❌ [$type] in [$nameB] missing from [$nameA]" && FOUND_DIFF=true
+          done < <(comm -13 <(echo "$typesA") <(echo "$typesB"))
+      done
+  done
 
-if ! $FOUND_DIFF; then
-    echo "✅ Types are the same in all CapabilityStatements"
-fi
-echo "===================================================================="
-echo ""
-sleep 1
+  if ! $FOUND_DIFF; then
+      echo "✅ Types are the same in all CapabilityStatements"
+  fi
+  echo "===================================================================="
+  echo ""
+  sleep 1
 fi
 
 if [[ $DEL_TEMP ]]; then
