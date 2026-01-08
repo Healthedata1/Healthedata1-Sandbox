@@ -7,7 +7,7 @@
     "description": "[US Public Health Data Consortium Source of Payment Codes](https://www.nahdo.org/sites/default/files/2020-12/SourceofPaymentTypologyUsersGuideVersion9.2December2020.pdf) excluding specific payer organizations such as \"BLUE CROSS/BLUE SHIELD\" and  limited to main categories for classification, type of plan and additional subcategories.",
     "status": "active",
     "experimental": false,
-    "date": "2022-09-29",
+    "date": "2026-01-07",
     "copyright": "The Source of Payment Typology is freely available for use and modification.",
     "compose": {
         "include": [

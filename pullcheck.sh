@@ -13,7 +13,18 @@ echo "=== git diff --name-status ...origin -- input/resources -- input/examples 
 echo "================================================================="
 
 git fetch
-git diff --name-status ...origin
+# git diff --name-status ...origin
+changed_files=$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)
+
+for file in $changed_files; do
+
+if file == input/resources/*.json then
+    if ! echo "$changed_files" | grep -q "^${file%.json}.yaml"; then
+        echo "⚠️  $file was edited directly! convert to YAML and overwrite the YAML in resources-yaml"
+    else echo "changed file = $file"
+    fi
+done
+
 
 echo "================================================================="
 echo "=== hit 'y' to pull ===="
