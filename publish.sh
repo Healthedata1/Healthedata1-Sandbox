@@ -1,4 +1,18 @@
 #!/bin/bash
+
+#=====================================================================================
+# This version of publish uses yq to convert yaml to json but it does handle the
+#  "UTF-16 surrogate pairs" — two escape sequences that together represent
+#   one character outside the Basic Multilingual Plane.
+#
+# for ADDITIONAL USCDI (bolded) in the short.
+#
+# Options:
+#  1. No change, use pyyaml parser
+#  2. switch to yq and use ALL CAPS
+#  3. extension? does not work - tried http://hl7.org/fhir/StructureDefinition/rendering-markdown and http://hl7.org/fhir/StructureDefinition/rendering-xhtml
+#
+#=====================================================================================
 # exit when any command fails
 set -e
 trap "echo '================================================================='; echo '=================== publish.sh DONE! ==================='; echo '================================================================='" EXIT
@@ -100,131 +114,131 @@ echo getting rid of .DS_Store files since they gum up the igpublisher....
 find $PWD -name '.DS_Store' -type f -delete
 sleep 1
 
-CSV_FILE="input/data/profile_metadata.csv"
-echo "CSV = $CSV_FILE"
-if [ -f "$CSV_FILE" ]; then
-  echo ""
-  echo "===================================================================="
-  echo "Checking for missing resources in $CSV_FILE..."
-  echo ""
-  missing_count=0
-  for filepath in "$resources"/StructureDefinition-*.json; do
-      resource_id=$(jq -r '.id' "$filepath")
-      if ! awk -F',' -v id="$resource_id" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
-          echo "❌ Missing: $resource_id (from $(basename "$filepath"))"
-          ((missing_count++))
-      fi
-  done
-  [ $missing_count -eq 0 ] && echo "✅ All resource IDs are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
-  echo "====================================================================="
-  echo ""
-  sleep 1
-fi
+if [[ $# >  0 ]]; then # check CSV Files
 
-CSV_FILE="input/data/provenance-elements.csv"
-echo "CSV = $CSV_FILE"
-if [ -f "$CSV_FILE" ]; then
-  echo ""
-  echo "===================================================================="
-  echo "Checking for missing profiles in $CSV_FILE..."
-  echo ""
-  missing_count=0
-  for filepath in "$resources"/StructureDefinition-*.json; do
-      resource_url=$(jq -r '.url' "$filepath")
-      resource_title=$(jq -r '.title' "$filepath")
-      if ! awk -F',' -v id="$resource_url" '$8 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
-          echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
-          ((missing_count++))
-      fi
-  done
-  [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
-  echo "====================================================================="
-  echo ""
-  sleep 1
-fi
-
-CSV_FILE="input/data/uscdi-table.csv"
-echo "CSV = $CSV_FILE"
-if [ -f "$CSV_FILE" ]; then
-  echo ""
-  echo "===================================================================="
-  echo "Checking for missing profiles in $CSV_FILE..."
-  echo ""
-  missing_count=0
-  for filepath in "$resources"/StructureDefinition-*.json; do
-      resource_url=$(jq -r '.url' "$filepath")
-      resource_title=$(jq -r '.title' "$filepath")
-      if ! awk -F',' -v id="$resource_title" '(index($3, id) || index($6, id)) {found=1; exit} END {exit !found}' "$CSV_FILE"; then
-          echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
-          ((missing_count++))
-      fi
-  done
-  [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
-  echo "====================================================================="
-  echo ""
-  sleep 1
-fi
-
-CSV_FILE="input/data/search_requirements.csv"
-echo "CSV = $CSV_FILE"
-if [ -f "$CSV_FILE" ]; then
-  echo ""
-  echo "===================================================================="
-  echo "Checking for missing resources in $CSV_FILE..."
-  echo ""
-  missing_count=0
-  for filepath in "$resources"/StructureDefinition-*.json; do
-       resource_type=$(jq -r '.type' "$filepath")
-      if ! awk -F',' -v id="$resource_type" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
-          echo "❌ Missing Resource Type: $resource_type (from $(basename "$filepath"))"
-          ((missing_count++))
-      fi
-  done
-  [ $missing_count -eq 0 ] && echo "✅ All resource Types are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
-  echo "====================================================================="
-  echo ""
-  sleep 1
-fi
-
-for f in "$resources"/CapabilityStatement*.json; do
-    [ -e "$f" ] || continue  # skip if glob didn't match anything
-    echo "$f"
-done
-if [ "$FILES" ]; then
-  echo ""
-  echo "===================================================================="
-  echo "Checking resource types in $FILES..."
-  echo ""
-  FOUND_DIFF=false
-
-  for fileA in $FILES; do
-      nameA=$(basename "$fileA" .json)
-      typesA=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileA" 2>/dev/null | sort -u)
-
-      for fileB in $FILES; do
-          [ "$fileA" \< "$fileB" ] || continue  # Only compare each pair once
-          nameB=$(basename "$fileB" .json)
-          typesB=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileB" 2>/dev/null | sort -u)
-
-          # Types in A but not in B
-          while read -r type; do
-              [ -n "$type" ] && echo "❌ [$type] in [$nameA] missing from [$nameB]" && FOUND_DIFF=true
-          done < <(comm -23 <(echo "$typesA") <(echo "$typesB"))
-
-          # Types in B but not in A
-          while read -r type; do
-              [ -n "$type" ] && echo "❌ [$type] in [$nameB] missing from [$nameA]" && FOUND_DIFF=true
-          done < <(comm -13 <(echo "$typesA") <(echo "$typesB"))
-      done
-  done
-
-  if ! $FOUND_DIFF; then
-      echo "✅ Types are the same in all CapabilityStatements"
+  CSV_FILE="input/data/profile_metadata.csv"
+  echo "CSV = $CSV_FILE"
+  if [ -f "$CSV_FILE" ]; then
+    echo ""
+    echo "===================================================================="
+    echo "Checking for missing resources in $CSV_FILE..."
+    echo ""
+    missing_count=0
+    for filepath in "$resources"/StructureDefinition-*.json; do
+        resource_id=$(jq -r '.id' "$filepath")
+        if ! awk -F',' -v id="$resource_id" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+            echo "❌ Missing: $resource_id (from $(basename "$filepath"))"
+            ((missing_count++))
+        fi
+    done
+    [ $missing_count -eq 0 ] && echo "✅ All resource IDs are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+    echo "====================================================================="
+    echo ""
+    sleep 1
   fi
-  echo "===================================================================="
-  echo ""
-  sleep 1
+
+  CSV_FILE="input/data/provenance-elements.csv"
+  echo "CSV = $CSV_FILE"
+  if [ -f "$CSV_FILE" ]; then
+    echo ""
+    echo "===================================================================="
+    echo "Checking for missing profiles in $CSV_FILE..."
+    echo ""
+    missing_count=0
+    for filepath in "$resources"/StructureDefinition-*.json; do
+        resource_url=$(jq -r '.url' "$filepath")
+        resource_title=$(jq -r '.title' "$filepath")
+        if ! awk -F',' -v id="$resource_url" '$8 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+            echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
+            ((missing_count++))
+        fi
+    done
+    [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+    echo "====================================================================="
+    echo ""
+    sleep 1
+  fi
+
+  CSV_FILE="input/data/uscdi-table.csv"
+  echo "CSV = $CSV_FILE"
+  if [ -f "$CSV_FILE" ]; then
+    echo ""
+    echo "===================================================================="
+    echo "Checking for missing profiles in $CSV_FILE..."
+    echo ""
+    missing_count=0
+    for filepath in "$resources"/StructureDefinition-*.json; do
+        resource_url=$(jq -r '.url' "$filepath")
+        resource_title=$(jq -r '.title' "$filepath")
+        if ! awk -F',' -v id="$resource_title" '(index($3, id) || index($6, id)) {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+            echo "❌ Missing: $resource_title (from $(basename "$filepath"))"
+            ((missing_count++))
+        fi
+    done
+    [ $missing_count -eq 0 ] && echo "✅ All profiles are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+    echo "====================================================================="
+    echo ""
+    sleep 1
+  fi
+
+  CSV_FILE="input/data/search_requirements.csv"
+  echo "CSV = $CSV_FILE"
+  if [ -f "$CSV_FILE" ]; then
+    echo ""
+    echo "===================================================================="
+    echo "Checking for missing resources in $CSV_FILE..."
+    echo ""
+    missing_count=0
+    for filepath in "$resources"/StructureDefinition-*.json; do
+        resource_type=$(jq -r '.type' "$filepath")
+        if ! awk -F',' -v id="$resource_type" '$2 == id {found=1; exit} END {exit !found}' "$CSV_FILE"; then
+            echo "❌ Missing Resource Type: $resource_type (from $(basename "$filepath"))"
+            ((missing_count++))
+        fi
+    done
+    [ $missing_count -eq 0 ] && echo "✅ All resource Types are present in the CSV_FILE!" || echo "⚠️  Found $missing_count resource(s) missing from CSV_FILE"
+    echo "====================================================================="
+    echo ""
+    sleep 1
+  fi
 fi
+
+# TODO .. complete this script to compare CapabilityStatements
+# if [ "$FILES" ]; then
+#   echo ""
+#   echo "===================================================================="
+#   echo "Checking resource types in $FILES..."
+#   echo ""
+#   FOUND_DIFF=false
+
+#   for fileA in $FILES; do
+#       nameA=$(basename "$fileA" .json)
+#       typesA=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileA" 2>/dev/null | sort -u)
+
+#       for fileB in $FILES; do
+#           [ "$fileA" \< "$fileB" ] || continue  # Only compare each pair once
+#           nameB=$(basename "$fileB" .json)
+#           typesB=$(jq -r '.rest[]?.resource[]?.type // empty' "$fileB" 2>/dev/null | sort -u)
+
+#           # Types in A but not in B
+#           while read -r type; do
+#               [ -n "$type" ] && echo "❌ [$type] in [$nameA] missing from [$nameB]" && FOUND_DIFF=true
+#           done < <(comm -23 <(echo "$typesA") <(echo "$typesB"))
+
+#           # Types in B but not in A
+#           while read -r type; do
+#               [ -n "$type" ] && echo "❌ [$type] in [$nameB] missing from [$nameA]" && FOUND_DIFF=true
+#           done < <(comm -13 <(echo "$typesA") <(echo "$typesB"))
+#       done
+#   done
+#
+#   if ! $FOUND_DIFF; then
+#       echo "✅ Types are the same in all CapabilityStatements"
+#   fi
+#   echo "===================================================================="
+#   echo ""
+#   sleep 1
+# fi
 
 if [[ $DEL_TEMP ]]; then
 echo "================================================================="
@@ -322,56 +336,51 @@ if [[ $PAGE_LINKS ]]; then
   } > input/includes/page-link-list.md
 fi
 
-if [[ $YAML_JSON ]] && test -d  $inpath/resources-yaml; then
-echo "========================================================================"
-echo "delete all yaml created json files is resources directory and"
-echo "convert all yml files in resources-yaml directory to json files"
-echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-echo "rm -f $inpath/resources/StructureDefinition*.json"
-echo "rm -f $inpath/resources/OperationDefinition*.json"
-echo "rm -f $inpath/resources/CodeSystem*.json"
-echo "rm -f $inpath/resources/ValueSet*.json"
-echo "========================================================================"
+if [[ $YAML_JSON ]]; then
 
-rm -f $inpath/resources/StructureDefinition*.json
-rm -f $inpath/resources/OperationDefinition*.json
-rm -f $inpath/resources/CodeSystem*.json
-rm -f $inpath/resources/ValueSet*.json
+  for dir in resources examples; do
 
-rm  -f $inpath/resources/structuredefinition*.json
-rm  -f $inpath/resources/operationdefinition*.json
-rm  -f $inpath/resources/codesystem*.json
-rm  -f $inpath/resources/valueset*.json
+    if test -d $inpath/$dir-yaml; then
 
-for yaml_file in $(find $inpath/resources-yaml/*.yml -type f) # -mtime -$days)
-do
-echo convert $yaml_file to ...
-json_file=$inpath/resources/$(basename $yaml_file)
-json_file=${json_file%.*}.json
-python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
-echo $json_file
-done
-fi
+    echo ""
+    echo "========================================================================"
+    echo "Check for any $dir JSON files commited after $dir YAML files "
+    echo "if not, overwrite all yaml created json files in $dirs directory with"
+    echo "the yaml files from the $dirs-yaml directory"
+    echo "using yq see https://github.com/mikefarah/yq"
+    echo "========================================================================"
+    echo ""
 
+    for json_file in $inpath/$dir/*.json; do
+        base=$(basename "$json_file" .json)
+        yaml_file="$inpath/$dir-yaml/${base}.yaml"
 
-if [[ $YAML_JSON ]] && test -d $inpath/examples-yaml; then
-echo "========================================================================"
-echo "delete all json files in $examples and"
-echo "convert all yml files in examples-yaml directory to json files and move to $examples"
-echo "outgoingPython 3.7 and PyYAML, json and sys modules are required"
-echo "rm -f $examples/*.json"
-echo #========================================================================"
+        [[ ! -f "$yaml_file" ]] && continue
 
-rm -f $examples/*.json
-for yaml_file in $(find $inpath/examples-yaml/*.yml -type f) # -mtime -$days)
-do
-echo convert $yaml_file to ...
-json_file=$examples/$(basename $yaml_file)
-json_file=${json_file%.*}.json
-python3.7 -c 'import sys, yaml, json, datetime; json.dump(yaml.full_load(sys.stdin), sys.stdout, indent=4, default = lambda self:(self.isoformat() if isinstance(self, (datetime.datetime, datetime.date)) else f"YAML to JSON for {self} not serializable"))' < $yaml_file > $json_file
-echo $json_file
-done
-fi
+        json_time=$(git log -1 --format="%ct" -- "$json_file" 2>/dev/null || echo 0)
+        yaml_time=$(git log -1 --format="%ct" -- "$yaml_file" 2>/dev/null || echo 0)
+
+    # Check for committed changes (staged or unstaged)
+        if [[ "$json_time" -gt "$yaml_time" ]]; then
+            echo "⚠️  $json_file was committed MORE RECENTLY than $yaml_file"
+            echo "   JSON: $(git log -1 --format='%ci %s' -- "$json_file")"
+            echo "   YAML: $(git log -1 --format='%ci %s' -- "$yaml_file")"
+            echo ""
+            echo "❌ Aborting! Reconcile this file before regenerating."
+            exit 1
+        fi
+    done
+
+      for yaml_file in $(find $inpath/$dir-yaml/*.yml -type f) # -mtime -$days)
+      do
+          base=$(basename "$yaml_file" .yml)
+          json_file="$inpath/$dir/${base}.json"
+          echo "Converting $yaml_file → $json_file"
+          yq -o=json < $yaml_file > $json_file
+      done
+    fi
+    done
+  fi
 
 if [[ $UPDATE_PUB ]]; then
 puburl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar
@@ -397,17 +406,17 @@ if [[ $SUSHI ]]; then
   rm -rf output docs
   sushi .
   inpath=fsh-generated/resources
-  echo "========================================================================"
-  echo "convert ig.json to ig.yml and copy to input/data"
-  echo "Python 3.7 and PyYAML, json and sys modules are required"
+
   for ig_json in fsh-generated/resources/ImplementationGuide*.json
     do
-    echo "========== ig_json = $ig_json =========="
     ig_yaml='input/data/ig.yml'
-    python3.7 -c 'import sys, yaml, json; yaml.dump(json.load(sys.stdin), sys.stdout, sort_keys=False, indent=2,)' < $ig_json > $ig_yaml
-    echo "========== ig_yaml = $ig_yaml =========="
+    echo ""
+    echo "========================================================================"
+    echo " Using yq convert $ig_json and copy to $ig_yaml ..."
+    yq -o=json < $ig_json > $ig_yaml
     done
-  echo "================================================================="
+  echo "======================= ... done =========================================="
+  echo ""
 fi
 
 if [[ $NO_META ]]
@@ -560,7 +569,7 @@ if [[ $IG_PUBLISH ]]; then
         ) | join("")
       )
     end
-  ' "$resources"/*.json "$fsh_resources"/*.json)
+  ' "$resources"/*.json "$fsh_resources"/*.json $examples/*.json)
 
   echo "$output"
 
